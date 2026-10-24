@@ -1,21 +1,9 @@
 # Architecture and boundaries
 
-## Domains
-- FELOH / DonFeloh — Glory / Author: human authorship and expression.
-- NAKEBUSEN — Grace / Crown: loc care, craft, livelihood and customer contact.
-- WARENA — Grit / Enable: GNU/Linux, reproducible/local-first computing and infrastructure.
-- IKAI — Mirror / Reflect: reflexive-compute research and embodied interaction.
-- GENJE / GENJE ZA WARENA — Wave / Embody: AfroTech, Genge, live coding, movement and choreohacking.
+FELOH / DonFeloh is Glory / Author: human authorship and expression. NAKEBUSEN is Grace / Crown: loc care, craft, livelihood and customer contact. WARENA is Grit / Enable: GNU/Linux, reproducible/local-first computing and infrastructure. IKAI is Mirror / Reflect: reflexive-compute research and embodied interaction. GENJE / GENJE ZA WARENA is Wave / Embody: AfroTech, Genge, live coding, movement and choreohacking.
 
 Canonical formula: FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
 
-## Transaction boundary
-ONLY NAKEBUSEN TRANSACTS. This site can show enquiry routes and service descriptions but does not confirm appointments, process payments, store customer histories or guarantee availability.
+ONLY NAKEBUSEN TRANSACTS. This site shows enquiries and service descriptions but does not confirm appointments, process payments, store customer histories or guarantee availability. The implementation is static HTML with embedded CSS and no build system. Minimise dependencies and network calls, use Git history for provenance, and avoid telemetry or hidden data collection.
 
-## Implementation
-A static HTML document with embedded CSS; no JavaScript runtime or build system is required. GitHub Pages can serve root index.html.
-
-## Principles
-Local-first and inspectable where applicable; minimise dependencies and network calls; use Git history for provenance and rollback; avoid telemetry, DRM, hidden data collection and unsupported claims.
-
-Evidence stages: proposed, researched, designed, prototyped, tested, deployed. State limitations. Do not claim a system is deployed without observable evidence.
+Evidence stages: proposed, researched, designed, prototyped, tested, deployed. State limitations and never claim deployment without evidence.
