@@ -6,14 +6,14 @@
 
 ## Repository inventory
 
-| Repository | Role | Verified state | Next action |
+| Repository | Role | Current evidence | Next action |
 |---|---|---|---|
-| [donfelohke.github.io](https://github.com/donfelohke/donfelohke.github.io) | Public portfolio and website | Public repository; README, governance, contribution, security, and bootstrap runbook files are present on `main`. Prior runbook records successful workflow evidence for a specific earlier commit. | Review open dependency PRs; verify current CI, Pages settings, live URL, mobile layout, and repository controls. |
-| [feloh-corpus](https://github.com/donfelohke/feloh-corpus) | Canonical FELOH documentation and governance corpus | Public repository; README and GPL-3.0 licence are on `main`. Governance baseline is proposed in PR #1 and is not to be treated as merged until verified. | Review PR #1; reconcile governance documents with the canonical README and verify the resulting default branch. |
-| [WARENA](https://github.com/donfelohke/WARENA) | GNU/Linux, RDE, reproducible infrastructure, networking, and recovery | Public repository exists; current README is a minimal heading and the project remains incompletely bootstrapped. | Add project charter, governance and security guidance, architecture, reproducibility plan, and evidence-backed first test. |
-| [Genje](https://github.com/donfelohke/Genje) | Genge practice, livecoding, compositions, performance, and choreohacking | Public repository exists; current README is a minimal heading and the project remains incompletely bootstrapped. | Document creative scope, asset rights and attribution, reproducible performance setup, and workshop/performance records. |
-| [Ikai](https://github.com/donfelohke/Ikai) | Reflexive-compute research, mirror-compute prototypes, and privacy constraints | Public repository exists; current README is a minimal heading and the project remains incompletely bootstrapped. | Define research status, consent and data lifecycle, threat model, experiment protocols, and explicit non-goals before expanding prototypes. |
-| [NAKEBUSEN](https://github.com/donfelohke/NAKEBUSEN) | Locs/beauty craft, approved service catalogue, customer-facing assets, and business workflows | Public repository exists; current README is a minimal heading and the project remains incompletely bootstrapped. | Establish approved public service information, privacy boundaries, operational handover, and brand-asset provenance. |
+| [donfelohke.github.io](https://github.com/donfelohke/donfelohke.github.io) | Public portfolio and website | README, governance, contribution, security, and bootstrap runbook files exist on `main`. The register update is proposed in this PR. The runbook records successful workflow evidence for an earlier specific commit, not a current full audit. | Review dependency PRs #4–#7; verify current CI, Pages settings, live URL, mobile layout, and repository controls. |
+| [feloh-corpus](https://github.com/donfelohke/feloh-corpus) | Canonical FELOH documentation and governance corpus | README has been committed to `main` at `afa29de4f8935946991b32b04c0eccf17a954d37`. Governance baseline remains proposed in [PR #1](https://github.com/donfelohke/feloh-corpus/pull/1). | Review PR #1; verify terminology and governance docs before merging. |
+| [WARENA](https://github.com/donfelohke/WARENA) | GNU/Linux, RDE, reproducible infrastructure, networking, and recovery | Initial seven-file baseline proposed in [PR #1](https://github.com/donfelohke/WARENA/pull/1). Not merged. No combined status checks were reported for its head commit at time of update. | Review documentation, validate workflow, then develop a real reproducibility test. |
+| [Genje](https://github.com/donfelohke/Genje) | Genge practice, livecoding, compositions, performance, and choreohacking | Initial seven-file baseline proposed in [PR #1](https://github.com/donfelohke/Genje/pull/1). Not merged. No combined status checks were reported for its head commit at time of update. | Review creative scope, rights/consent guidance and workflow; add project-specific evidence. |
+| [Ikai](https://github.com/donfelohke/Ikai) | Reflexive-compute research, mirror-compute prototypes, and privacy constraints | Initial seven-file baseline proposed in [PR #1](https://github.com/donfelohke/Ikai/pull/1). Not merged. No combined status checks were reported for its head commit at time of update. | Review privacy boundaries and workflow; test real data-flow and deletion behaviour when a prototype exists. |
+| [NAKEBUSEN](https://github.com/donfelohke/NAKEBUSEN) | Locs/beauty craft, approved service catalogue, customer-facing assets and business workflows | Initial seven-file baseline proposed in [PR #1](https://github.com/donfelohke/NAKEBUSEN/pull/1). Not merged. Service prices are explicitly marked as needing current confirmation. No combined status checks were reported for its head commit at time of update. | Review business and privacy boundaries; confirm public service details before publication. |
 
 ## Canonical relationships
 
@@ -29,13 +29,13 @@ The FELOH corpus is the source of record for shared terminology, architecture, g
 
 ## Setup sequence
 
-1. **FELOH Corpus:** review and resolve governance PR #1; verify which governance files are merged to the default branch.
-2. **Public site:** review dependency PRs #4–#7 and the repository-register PR; check current workflows, Pages configuration, published output, accessibility, and links.
-3. **WARENA:** establish the project charter, repository structure, reproducibility scope, and first tested configuration.
-4. **GENJE:** establish creative-work inventory, asset rights and credits, performance setup, and reproducibility records.
-5. **IKAI:** establish research questions, privacy model, prohibited uses, data lifecycle, and validation plan.
-6. **NAKEBUSEN:** establish the approved service catalogue, public brand materials, customer-data boundary, and operational handover.
-7. **Cross-repository review:** reconcile links, licences, project status, stewardship, and evidence.
+1. Review and resolve FELOH Corpus governance PR #1.
+2. Review this register PR and the public site's dependency PRs #4–#7; verify current publishing and repository controls.
+3. Review WARENA baseline PR #1, then define and run the first real reproducibility test.
+4. Review GENJE baseline PR #1, then add a project-specific performance or asset validation record.
+5. Review IKAI baseline PR #1, then define prototype-specific privacy tests before collecting real data.
+6. Review NAKEBUSEN baseline PR #1, confirm current service information, and preserve the private-data boundary.
+7. Reconcile links, licences, maturity labels, stewardship, and evidence across all repositories.
 
 ## Evidence and status rules
 
@@ -45,6 +45,7 @@ The FELOH corpus is the source of record for shared terminology, architecture, g
 - Status labels: **LIVE / PROTOTYPE / RESEARCH / CONCEPT / HISTORICAL / SUPERSEDED / UNKNOWN**.
 - **ATTESTATION SPECIFIED ≠ EXECUTED.**
 - Record branch, commit SHA, relevant workflow run, observed outcome, and any outstanding limitation.
+- An empty combined-status response means no combined status checks were reported by that endpoint; it does not prove that a workflow is correctly configured or has run.
 - Mark inaccessible or uninspected settings as **NOT VERIFIED** rather than assuming they are enabled or disabled.
 
 ## Completion criteria
