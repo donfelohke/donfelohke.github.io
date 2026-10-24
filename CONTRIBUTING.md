@@ -1,0 +1,3 @@
+# Contributing
+
+Read README.md, AGENTS.md, GOVERNANCE.md and relevant docs. Create a descriptive branch, keep changes focused, explain the need and acceptance criteria, run checks, and open a pull request with evidence and limitations. Review visual changes on mobile and desktop. Do not invent facts, testimonials, service guarantees, prices or deployment status. Keep the site accessible and dependency-light. Never commit secrets or private customer data. Preserve the existing GPL-3.0 LICENSE.
