@@ -1,0 +1,36 @@
+name: Static HTML checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify required files
+        run: |
+          test -f index.html
+          test -f README.md
+          test -f LICENSE
+      - name: Parse HTML
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          class Check(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.tags = []
+              def handle_starttag(self, tag, attrs):
+                  self.tags.append(tag)
+          p = Check()
+          p.feed(Path('index.html').read_text(encoding='utf-8'))
+          p.close()
+          assert p.tags.count('html') == 1, 'Expected one html root'
+          assert p.tags.count('body') == 1, 'Expected one body'
+          assert p.tags.count('title') == 1, 'Expected one title'
+          print('HTML parser checks passed')
+          PY
