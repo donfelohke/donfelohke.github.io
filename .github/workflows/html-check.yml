@@ -15,22 +15,12 @@ jobs:
           test -f index.html
           test -f README.md
           test -f LICENSE
-      - name: Parse HTML
-        run: |
-          python3 - <<'PY'
-          from html.parser import HTMLParser
-          from pathlib import Path
-          class Check(HTMLParser):
-              def __init__(self):
-                  super().__init__()
-                  self.tags = []
-              def handle_starttag(self, tag, attrs):
-                  self.tags.append(tag)
-          p = Check()
-          p.feed(Path('index.html').read_text(encoding='utf-8'))
-          p.close()
-          assert p.tags.count('html') == 1, 'Expected one html root'
-          assert p.tags.count('body') == 1, 'Expected one body'
-          assert p.tags.count('title') == 1, 'Expected one title'
-          print('HTML parser checks passed')
-          PY
+          test -f assets/favicon.svg
+          test -f sitemap.xml
+          test -f robots.txt
+          test -f tests/test_site.py
+          test -f tests/theme-toggle.test.cjs
+      - name: Parse and validate HTML, internal links, metadata and service catalogue
+        run: python3 tests/test_site.py
+      - name: Test theme toggle preference behavior
+        run: node tests/theme-toggle.test.cjs
