@@ -1,0 +1,7 @@
+# Human author/maintainer for review routing.
+# This file routes review requests; it does not itself enforce branch protection.
+* @donfelohke
+/.github/ @donfelohke
+/GOVERNANCE.md @donfelohke
+/SECURITY.md @donfelohke
+/LICENSE @donfelohke
