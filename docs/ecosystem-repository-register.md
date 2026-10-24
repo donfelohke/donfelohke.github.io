@@ -1,45 +1,54 @@
 # FELOH Ecosystem Repository Register
 
-**Purpose:** Track repository setup one repository at a time without confusing planned repositories with repositories that actually exist.
+**Purpose:** Track repository setup one repository at a time without confusing repository existence with implementation completeness.
 
 **Canonical rule:** ONE CORPUS → MANY VIEWS → ONE PRACTICE.
 
-## Verified repositories
+## Repository inventory
 
-| Repository | Role | Current verified state | Next action |
+| Repository | Role | Verified state | Next action |
 |---|---|---|---|
-| [donfelohke.github.io](https://github.com/donfelohke/donfelohke.github.io) | Public portfolio and website | Existing public repository; README, governance, contribution, security, and bootstrap runbook files are present on `main`. | Continue verifying deployment, CI, repository settings, and links. |
-| [feloh-corpus](https://github.com/donfelohke/feloh-corpus) | Canonical FELOH documentation and governance corpus | Public repository exists. Governance baseline has been proposed in pull request #1; do not treat it as merged until verified. | Review and merge [PR #1](https://github.com/donfelohke/feloh-corpus/pull/1), then verify the default branch. |
+| [donfelohke.github.io](https://github.com/donfelohke/donfelohke.github.io) | Public portfolio and website | Public repository; README, governance, contribution, security, and bootstrap runbook files are present on `main`. Prior runbook records successful workflow evidence for a specific earlier commit. | Review open dependency PRs; verify current CI, Pages settings, live URL, mobile layout, and repository controls. |
+| [feloh-corpus](https://github.com/donfelohke/feloh-corpus) | Canonical FELOH documentation and governance corpus | Public repository; README and GPL-3.0 licence are on `main`. Governance baseline is proposed in PR #1 and is not to be treated as merged until verified. | Review PR #1; reconcile governance documents with the canonical README and verify the resulting default branch. |
+| [WARENA](https://github.com/donfelohke/WARENA) | GNU/Linux, RDE, reproducible infrastructure, networking, and recovery | Public repository exists; current README is a minimal heading and the project remains incompletely bootstrapped. | Add project charter, governance and security guidance, architecture, reproducibility plan, and evidence-backed first test. |
+| [Genje](https://github.com/donfelohke/Genje) | Genge practice, livecoding, compositions, performance, and choreohacking | Public repository exists; current README is a minimal heading and the project remains incompletely bootstrapped. | Document creative scope, asset rights and attribution, reproducible performance setup, and workshop/performance records. |
+| [Ikai](https://github.com/donfelohke/Ikai) | Reflexive-compute research, mirror-compute prototypes, and privacy constraints | Public repository exists; current README is a minimal heading and the project remains incompletely bootstrapped. | Define research status, consent and data lifecycle, threat model, experiment protocols, and explicit non-goals before expanding prototypes. |
+| [NAKEBUSEN](https://github.com/donfelohke/NAKEBUSEN) | Locs/beauty craft, approved service catalogue, customer-facing assets, and business workflows | Public repository exists; current README is a minimal heading and the project remains incompletely bootstrapped. | Establish approved public service information, privacy boundaries, operational handover, and brand-asset provenance. |
 
-## Planned repositories — not yet verified as created
+## Canonical relationships
 
-These names describe intended separation of concerns. They must not be presented as existing until GitHub confirms them.
+- **FELOH / DonFeloh** — human authorship and expression.
+- **NAKEBUSEN** — beauty craft, livelihood, customer relationships, and transaction boundary.
+- **WARENA** — reproducible and maintainable computing and infrastructure.
+- **IKAI** — reflexive-compute research; a mirror, not a judge.
+- **GENJE / GENJE ZA WARENA** — Genge, livecoding, movement, and choreohacking.
 
-| Planned repository | Intended responsibility | Bootstrap contents |
-|---|---|---|
-| `warena` | GNU/Linux, RDE, reproducible infrastructure, networking, recovery, deployment evidence | README, governance/contribution/security, architecture and hardware inventory, reproducible setup, recovery runbooks, verification workflows |
-| `genje` | Genge practice, livecoding, compositions, performance, choreohacking, workshops | README, licensing and attribution, source/media structure, performance setup, workshop notes, safety/accessibility practices |
-| `ikai` | Reflexive compute research, mirror-compute prototypes, privacy constraints, experiments | README, research status, consent and data lifecycle, threat model, experiment protocols, explicit non-goals |
-| `nakebusen` | Locs/beauty operations, approved service catalogue, customer-facing assets and business workflows | README, approved services/pricing source, privacy and transaction boundaries, booking workflow, asset provenance and operational handover |
+**Transaction boundary: ONLY NAKEBUSEN TRANSACTS.**
+
+The FELOH corpus is the source of record for shared terminology, architecture, governance, decisions, and provenance. Specialist repositories should link to it rather than independently redefining the same canon.
 
 ## Setup sequence
 
-1. **feloh-corpus** — finish the governance PR and verify its resulting default-branch state.
-2. **donfelohke.github.io** — verify CI, deployment, accessibility, broken links, and repository settings; record evidence.
-3. **warena** — create the repository in GitHub, then bootstrap it and verify each write.
-4. **genje** — create the repository in GitHub, then bootstrap it and verify each write.
-5. **ikai** — create the repository in GitHub, then bootstrap it and verify each write.
-6. **nakebusen** — create the repository in GitHub, then bootstrap it and verify each write.
-7. Reconcile cross-repository links and ensure the corpus remains the source of record.
-
-The connected GitHub tools currently expose listing, reading, branch creation, file writes, and pull-request creation. They do not expose a repository-creation action in this session. Therefore, the four planned repositories require creation through GitHub's repository UI (or a separately authorized repository-creation tool) before their contents can be committed. No repository creation is implied by this register.
+1. **FELOH Corpus:** review and resolve governance PR #1; verify which governance files are merged to the default branch.
+2. **Public site:** review dependency PRs #4–#7 and the repository-register PR; check current workflows, Pages configuration, published output, accessibility, and links.
+3. **WARENA:** establish the project charter, repository structure, reproducibility scope, and first tested configuration.
+4. **GENJE:** establish creative-work inventory, asset rights and credits, performance setup, and reproducibility records.
+5. **IKAI:** establish research questions, privacy model, prohibited uses, data lifecycle, and validation plan.
+6. **NAKEBUSEN:** establish the approved service catalogue, public brand materials, customer-data boundary, and operational handover.
+7. **Cross-repository review:** reconcile links, licences, project status, stewardship, and evidence.
 
 ## Evidence and status rules
 
-- Repository existence and permissions must be checked from GitHub, not inferred from a planned name.
-- A branch or pull request is not the same as a merged change.
+- Repository existence, default branch, access, and permissions must be checked in GitHub.
+- A branch or pull request is not a merged change.
 - A committed file proves that the file was committed; it does not prove the described system works.
 - Status labels: **LIVE / PROTOTYPE / RESEARCH / CONCEPT / HISTORICAL / SUPERSEDED / UNKNOWN**.
 - **ATTESTATION SPECIFIED ≠ EXECUTED.**
+- Record branch, commit SHA, relevant workflow run, observed outcome, and any outstanding limitation.
+- Mark inaccessible or uninspected settings as **NOT VERIFIED** rather than assuming they are enabled or disabled.
+
+## Completion criteria
+
+A repository is considered bootstrapped only when its purpose and scope are documented, appropriate licence and contribution/security guidance are present, relevant workflows and controls are inspected, project-specific acceptance checks have evidence, and unresolved gaps are recorded. The existence of a README or a green workflow alone is insufficient.
 
 Last checked: 2026-10-24. Re-check GitHub state before relying on this register.
