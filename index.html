@@ -6,16 +6,18 @@
 <meta name="description" content="NAKEBUSEN — loc care, WARENA systems, GENJE creative practice. Eldoret and Lodwar, Kenya. Feloh Warena @donfelohke.">
 <link rel="canonical" href="https://donfelohke.github.io/">
 <meta property="og:title" content="NAKEBUSEN — Grace · Grit · Glory">
+<meta property="og:description" content="Loc care, practical digital systems, and creative practice in Kenya. Enquire with NAKEBUSEN and Feloh Warena.">
 <meta property="og:url" content="https://donfelohke.github.io/">
 <meta name="twitter:card" content="summary">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"NAKEBUSEN","url":"https://donfelohke.github.io/","telephone":"+254719635415","sameAs":["https://x.com/donfelohke","https://www.instagram.com/donfelohke/","https://www.tiktok.com/@donfelohke","https://github.com/donfelohke","https://www.facebook.com/p/Nakebusen-023-Beauty-Lounge-61558789500287/"]}
+{"@context":"https://schema.org","@type": "Organization","name":"NAKEBUSEN","url":"https://donfelohke.github.io/","telephone":"+254719635415","sameAs":["https://x.com/donfelohke","https://www.instagram.com/donfelohke/","https://www.tiktok.com/@donfelohke","https://github.com/donfelohke","https://www.facebook.com/p/Nakebusen-023-Beauty-Lounge-61558789500287/"]}
 </script>
 <title>NAKEBUSEN — Grace · Grit · Glory</title>
 <style>
-:root{--paper:#F2EFEA;--ink:#111;--gold:#D4AF37;--muted:#625F59;--serif:Georgia,serif;--sans:system-ui,sans-serif}
+:root{color-scheme:light;--paper:#F2EFEA;--ink:#111;--gold:#D4AF37;--muted:#625F59;--serif:Georgia,serif;--sans:system-ui,sans-serif}
+:root[data-theme="dark"]{color-scheme:dark;--paper:#111;--ink:#F2EFEA;--gold:#D4AF37;--muted:#D0CCC5}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 var(--sans)}
-.wrap{width:min(100% - 2rem,720px);margin:0 auto;padding:2rem 0 4rem}a{color:inherit}
+.wrap{width:min(100% - 2rem,720px);margin:0 auto;padding:2rem 0 4rem}main.wrap{padding-top:5rem}a{color:inherit}
 h1{font:2.5rem/1.15 var(--serif);margin:0 0 1rem}h2{font:1.6rem var(--serif);margin:2.5rem 0 1rem}
 .eyebrow{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .lead{font-size:1.15rem;max-width:36em}.muted{color:var(--muted)}
@@ -24,9 +26,15 @@ h1{font:2.5rem/1.15 var(--serif);margin:0 0 1rem}h2{font:1.6rem var(--serif);mar
 ul{padding-left:1.2rem}li{margin:.4rem 0}
 .footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(0,0,0,.2);font-size:.9rem;color:var(--muted)}
 .footer a{margin-right:.6rem}
+.theme-toggle{position:fixed;top:1rem;right:1rem;z-index:10;min-width:4.5rem;min-height:44px;padding:.55rem .8rem;border:1px solid var(--ink);background:var(--paper);color:var(--ink);font:700 .9rem var(--sans);cursor:pointer}
+.theme-toggle:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 </style>
+<script>
+(()=>{const root=document.documentElement;const key="nakebusen-theme";const media=window.matchMedia("(prefers-color-scheme: dark)");let preference="system";try{const saved=localStorage.getItem(key);if(saved==="light"||saved==="dark")preference=saved}catch(_){}function apply(){const dark=preference==="dark"||(preference==="system"&&media.matches);if(preference==="system")root.removeAttribute("data-theme");else root.setAttribute("data-theme",preference);const button=document.getElementById("theme-toggle");if(button){button.textContent=dark?"Light":"Dark";button.setAttribute("aria-label",dark?"Switch to light theme":"Switch to dark theme");button.setAttribute("aria-pressed",String(dark))}}function init(){const button=document.getElementById("theme-toggle");if(!button)return;apply();button.addEventListener("click",()=>{const dark=preference==="dark"||(preference==="system"&&media.matches);preference=dark?"light":"dark";apply();try{localStorage.setItem(key,preference)}catch(_){}})}apply();if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init,{once:true});else init();const onChange=()=>{if(preference==="system")apply()};if(media.addEventListener)media.addEventListener("change",onChange);else if(media.addListener)media.addListener(onChange)})();
+</script>
 </head>
 <body>
+<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">Dark</button>
 <main class="wrap">
 <p class="eyebrow">NAKEBUSEN · GENJE ZA WARENA</p>
 <h1>Grace · Grit · Glory</h1>
@@ -36,9 +44,9 @@ ul{padding-left:1.2rem}li{margin:.4rem 0}
 <h2>GRACE — Locs &amp; beauty</h2>
 <p>Nakebusen 023 Beauty Lounge · Kanamkemer / Lodwar · Salon · Home · Call · M-Pesa</p>
 <ul>
-<li>Retouch &amp; styling — from KES 700</li>
-<li>Sisterlocs retie — from KES 1,500</li>
-<li>Artificial locs installation — from KES 3,500</li>
+<li>Retouch & Styling — From KES 700</li>
+<li>Sisterlocs Retie — From KES 1,500</li>
+<li>Artificial Locs Installation — From KES 3,500</li>
 </ul>
 <p class="muted">Starting prices. Final quote before work. Enquiry is not a booking.</p>
 
