@@ -1,38 +1,44 @@
-# Website visual assets — crème de la crème standard
+# Website asset policy — text-first, graphic-free
 
-## Publication rule
+## Non-negotiable website rule
 
-Only assets that pass every quality, provenance, rights, consent, brand-fit, and technical review may ship on the public NAKEBUSEN website. A visually attractive file is not automatically approved. “Found in the Library,” “generated,” “selectable,” and “approved for a different use” do not mean approved for website publication.
+The public NAKEBUSEN webpage is text-only. Do not add or link any asset in a way that renders it as a graphic on the webpage. This excludes:
 
-**Current status:** no client/service photography or technical/creative portfolio image in this repository has a verified approval record. Therefore, do not add unverified Library images, stock images, or generated artwork as live portfolio evidence. Keep the site editorial and typographic until eligible assets pass review.
+- HTML image, picture, SVG, canvas, video, iframe, object, or embed elements.
+- CSS image backgrounds, CSS `url(...)` image assets, and data-URI artwork.
+- Graphic favicons.
+- Open Graph or Twitter image metadata.
+- Decorative icon fonts, emoji-as-artwork, or elaborate CSS illustrations.
 
-## Asset acceptance gate
+The website may link to the separate [Gallery repository](https://github.com/donfelohke/Gallery) using descriptive text links. Gallery files must not be copied into the website repository or rendered inline on the webpage.
 
-Every proposed file must have a manifest entry recording:
-- Asset ID, exact filename, version, and checksum.
-- Creator / source and provenance.
-- Rights holder, license, attribution requirements, and commercial-use permission.
-- Subject consent and intended publication scope, where people are identifiable.
-- Brand owner approval and permitted placement (website, portfolio, campaign, social preview).
-- Technical quality review: resolution, crop flexibility, color/exposure, compression, and accessibility text.
-- Status: `PROPOSED`, `REVIEW_REQUIRED`, or `APPROVED`. Only `APPROVED` assets may ship.
+## Where assets belong
 
-## Selection priorities
+Gallery is the separate destination for curated brand, beauty, technology, and creative materials. Its `ASSET-MANIFEST.md` records provenance, rights, approval status, intended use, and restrictions. A file is not approved merely because it exists in the repository or has been proposed in a pull request.
 
-1. **Canonical identity:** use the verified canonical NAKEBUSEN primary logo (`NKB-LOGO-PRIMARY-001`) only after the actual source file and version are confirmed.
-2. **Hero / craft evidence:** exceptional, authentic loc-care photography of actual work, with documented consent and commercial website permission.
-3. **Service portfolio:** a small curated set of technically excellent images showing distinct, genuine styles; no filler or repetitive near-duplicates.
-4. **WARDENA / GENJE sections:** only approved, authentic technical artefacts and creative documentation, each in its correct context.
-5. **Social preview:** a deliberate 1200×630 composition made exclusively from approved assets and approved brand typography.
+Only publish assets in Gallery after checking, as applicable:
 
-## Integrity and privacy
+- Exact filename/version and checksum.
+- Creator, original source, copyright holder, licence, attribution and redistribution permission.
+- Consent and permitted publication scope for identifiable people.
+- Brand/domain, intended use, restrictions, and review date.
+- Quality, integrity, and privacy risks.
 
-- Never represent AI-generated or stock imagery as genuine client results, service delivery, testimonials, or live performance evidence.
-- Do not publish identifiable client imagery without consent covering the specific intended use; for minors, require appropriate guardian consent and a clear lawful basis.
-- Do not expose customer records, private device/network details, credentials, or location metadata.
-- Do not use an image merely because it appears in an internal conversation or Library.
-- If no asset meets the bar, use no photograph rather than lowering the standard.
+Use the approval states documented in the Gallery contribution guide. Approval for one use does not automatically permit another use.
 
-## Technical delivery
+## Current status
 
-Prefer optimized WebP/JPEG for photographic images and SVG for approved vector marks. Use descriptive filenames, responsive dimensions, meaningful alt text, and locally hosted assets. Keep decorative images empty-alt. Avoid external image CDNs and tracking.
+No approved service photography or technical/creative portfolio assets are established by this file. The Gallery manifest currently records that its inventory and approval are pending. Do not represent stock or generated imagery as genuine client work, service delivery, testimonials, or live technical evidence. Do not publish private customer material, credentials, device/network details, or unlicensed third-party work.
+
+If no asset meets the evidence and rights standard, publish no asset.
+
+## Release checks
+
+Before changing the website, run:
+
+- `python3 tests/test_site.py`
+- `node tests/theme-toggle.test.cjs`
+
+Review the diff for embedded graphics, image URLs, image social metadata, stale prices, unsupported claims, and accidental asset copies. A passing static test does not prove real-browser rendering or successful deployment; record those separately.
+
+The governing principle is: **the website links to Gallery; the website does not display Gallery graphics.**
