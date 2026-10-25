@@ -47,11 +47,11 @@ function boot({ stored = null, systemDark = false } = {}) {
 }
 
 const light = boot();
-assert.equal(light.button.textContent, "☾ Dark", "light system default offers dark mode");
+assert.equal(light.button.textContent, "Dark", "light system default offers dark mode");
 assert.equal(light.button.attrs["aria-pressed"], "false");
 light.listeners.click();
 assert.equal(light.attributes["data-theme"], "dark", "click switches to dark");
-assert.equal(light.button.textContent, "☀ Light");
+assert.equal(light.button.textContent, "Light");
 assert.equal(light.button.attrs["aria-pressed"], "true");
 assert.equal(light.values["nakebusen-theme"], "dark", "choice is persisted");
 
