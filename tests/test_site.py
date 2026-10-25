@@ -69,6 +69,7 @@ check("background-image" not in html.lower() and "url(" not in html.lower(), "Do
 check(not any(link.get("rel") == "icon" for link in p.links), "Custom graphic favicons are excluded by the no-graphics policy")
 check("application/ld+json" in html and '"@type": "Organization"' in html, "Missing Organization structured data")
 check("theme-toggle" in p.ids and "theme-toggle" in p.button_ids, "Missing theme toggle button")
+check("@media(max-width:760px)" in html and ".wordmark{max-width:calc(100% - 6.5rem)}" in html, "Mobile header must reserve horizontal space between wordmark and theme toggle")
 check("nakebusen-theme" in html and "localStorage" in html, "Theme preference persistence is missing")
 check(p.form_count == 0, "Do not add a fake booking form")
 check(all(img.get("alt") is not None for img in p.images), "Every content image needs an alt attribute")
