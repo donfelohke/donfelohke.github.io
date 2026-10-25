@@ -18,6 +18,8 @@ jobs:
           test -f sitemap.xml
           test -f robots.txt
           test -f tests/test_site.py
+          test -f tests/check-inline-js.cjs
+          test -f tests/theme-toggle.test.cjs
       - name: Parse and validate HTML, internal links, metadata and service catalogue
         run: python3 tests/test_site.py
       - name: Parse inline JavaScript without executing it
