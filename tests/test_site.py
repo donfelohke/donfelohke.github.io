@@ -81,6 +81,9 @@ for href in p.hrefs:
     elif not (href.startswith("https://") or href.startswith("http://") or href.startswith("tel:") or href.startswith("mailto:")):
         check(False, f"Unsupported or malformed link: {href}")
 
+check("https://wa.me/254719635415?text=Hello%20NAKEBUSEN%2C%20I%27d%20like%20to%20enquire%20about%20loc%20care." in html, "Loc care CTA must use its own WhatsApp enquiry message")
+check("https://wa.me/254719635415?text=Hello%20WARENA%2C%20I%27d%20like%20to%20enquire%20about%20digital%20systems." in html, "Digital services CTA must use its own WhatsApp enquiry message")
+
 for expected in ("Retouch & Styling", "From KES 700", "Sisterlocs Retie", "From KES 1,500", "Artificial Locs Installation", "From KES 3,500"):
     check(expected in html, f"Public service catalogue missing: {expected}")
 
