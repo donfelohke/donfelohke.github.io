@@ -31,14 +31,22 @@ Confirm availability, suitability, final price and timing directly. Do not inven
 ## Website and assets
 
 **Webpage rule: no graphics.** The public HTML page must not embed images, SVG artwork, video, canvas, CSS image backgrounds, graphic favicons, or social-preview images. Use typography, spacing, borders, colour, and accessible controls. Visual assets belong in the separate Gallery repository and may be linked as text destinations, never rendered inline on this page.
-- `index.html` — public website, theme toggle, SEO/social metadata and organization structured data.
+- `index.html` — Kiswahili-first public website with persistent English toggle, independent theme toggle, SEO/social metadata and organization structured data.
 - `assets/README.md` — asset policy and repository guidance. No graphic favicon is linked from the webpage.
 - `sitemap.xml` and `robots.txt` — basic crawl discovery.
 - `tests/test_site.py` — dependency-free HTML/content/link checks, including enforcement of the no-graphics policy.
 - `tests/theme-toggle.test.cjs` — Node-based theme preference behavior checks.
+- `tests/test_site.py` — also checks Kiswahili default language, both language-toggle placements, persistence hooks and bilingual service prices.
 - `.github/workflows/` — static checks and GitHub Pages deployment.
 
 **Photography status:** no approved client/service photos or approved technical/creative portfolio images were present in the repository at audit time. Do not present generated or stock imagery as real client work. Add only owner-approved assets with appropriate permission and useful alternative text.
+
+## Language and localisation
+
+- Kiswahili (`sw`) is the default language; English (`en`) is available through a persistent text-only toggle in both the header and footer.
+- The toggle changes the document language, visible copy, page title and key metadata; language preference is stored separately from the light/dark theme.
+- Keep service names understandable to Kenyan customers. Retain familiar technical terms where translation would be unclear, and have Kiswahili copy reviewed before release.
+- When adding or changing public copy, update both languages and add regression checks for both variants.
 
 ## Principles
 - Static HTML/CSS and Markdown by default; no build system required.
