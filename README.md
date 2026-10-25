@@ -4,7 +4,7 @@ Repository: donfelohke/donfelohke.github.io
 Public URL: https://donfelohke.github.io/  
 Stable branch: main
 
-FELOH is the public doorway into NAKEBUSEN Locs, WARENA systems, IKAI Reflexive Compute, GENJE creative technology and the FELOH corpus.
+FELOH / Don Feloh is the human author and public doorway into NAKEBUSEN Locs and beauty, WARENA-powered systems work, IKAI reflective-compute research, GENJE creative technology, and the FELOH corpus.
 
 > FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
 
@@ -22,11 +22,21 @@ All listed prices are starting prices in Kenyan shillings; final quotes depend o
 - Retouch & Styling — from KES 700.
 - Sisterlocs Retie — from KES 1,500.
 - Artificial Locs Installation — from KES 3,500.
-- Location phrase: Eldoret Town / Karibu Mdosi.
+- Current loc-care location: Eldoret Town / Karibu Mdosi. Other locations and on-site technical work require direct confirmation.
 - WhatsApp / telephone: 0719 635 415 — https://wa.me/254719635415
 - Handle: @donfelohke.
 
 Confirm availability, suitability, final price and timing directly. Do not invent testimonials, certifications, clients or service guarantees.
+
+## Public message hierarchy
+
+- **NAKEBUSEN:** customer-facing beauty, loc-care enquiries, quotes and appointment confirmation.
+- **WARENA:** the systems practice behind practical digital services; scope, feasibility, pricing and support are agreed before work begins.
+- **GENJE:** creative technology, cultural practice, sound, movement and live coding.
+- **IKAI:** reflective-compute research and development; not a released product and not a diagnostic or judgement system.
+- **FELOH / Don Feloh:** the human author and practitioner.
+
+Keep the public copy direct and service-led. Do not imply that every service is available in every location. Current loc-care location wording is **Eldoret Town / Karibu Mdosi**. Ask directly about availability before travel. Enquiries do not constitute bookings, quotes, payment, or confirmed project scope.
 
 ## Website and assets
 
