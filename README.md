@@ -29,10 +29,12 @@ All listed prices are starting prices in Kenyan shillings; final quotes depend o
 Confirm availability, suitability, final price and timing directly. Do not invent testimonials, certifications, clients or service guarantees.
 
 ## Website and assets
+
+**Webpage rule: no graphics.** The public HTML page must not embed images, SVG artwork, video, canvas, CSS image backgrounds, graphic favicons, or social-preview images. Use typography, spacing, borders, colour, and accessible controls. Visual assets belong in the separate Gallery repository and may be linked as text destinations, never rendered inline on this page.
 - `index.html` — public website, theme toggle, SEO/social metadata and organization structured data.
-- `assets/favicon.svg` — local vector favicon.
+- `assets/README.md` — asset policy and repository guidance. No graphic favicon is linked from the webpage.
 - `sitemap.xml` and `robots.txt` — basic crawl discovery.
-- `tests/test_site.py` — dependency-free HTML/content/link checks.
+- `tests/test_site.py` — dependency-free HTML/content/link checks, including enforcement of the no-graphics policy.
 - `tests/theme-toggle.test.cjs` — Node-based theme preference behavior checks.
 - `.github/workflows/` — static checks and GitHub Pages deployment.
 
