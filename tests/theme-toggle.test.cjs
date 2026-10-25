@@ -28,6 +28,8 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
   const descriptionMeta = { content: "" };
   const ogDescriptionMeta = { content: "" };
   const twitterDescriptionMeta = { content: "" };
+  const ogTitleMeta = { content: "" };
+  const twitterTitleMeta = { content: "" };
   const themeButton = makeButton();
   const headerLanguageButton = makeButton();
   const footerLanguageButton = makeButton();
@@ -48,6 +50,8 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
       if (selector === 'meta[name="description"]') return descriptionMeta;
       if (selector === 'meta[property="og:description"]') return ogDescriptionMeta;
       if (selector === 'meta[name="twitter:description"]') return twitterDescriptionMeta;
+      if (selector === 'meta[property="og:title"]') return ogTitleMeta;
+      if (selector === 'meta[name="twitter:title"]') return twitterTitleMeta;
       return null;
     },
     querySelectorAll(selector) {
@@ -80,7 +84,7 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
   };
   vm.runInNewContext(match[1], context);
   return {
-    attributes, root, themeMeta, descriptionMeta, ogDescriptionMeta, twitterDescriptionMeta, themeButton,
+    attributes, root, themeMeta, descriptionMeta, ogDescriptionMeta, twitterDescriptionMeta, ogTitleMeta, twitterTitleMeta, themeButton,
     headerLanguageButton, footerLanguageButton, values, media, mediaListeners,
   };
 }
@@ -108,22 +112,27 @@ system.mediaListeners.change();
 assert.equal(system.themeButton.textContent, "Dark", "system preference changes are reflected");
 
 const language = boot();
-assert.equal(language.root.lang, "sw", "Kiswahili is the default language");
-assert.match(language.twitterDescriptionMeta.content, /Huduma za loc/);
-assert.equal(language.headerLanguageButton.textContent, "English");
-language.headerLanguageButton.listeners.click();
-assert.equal(language.root.lang, "en", "header toggle switches to English");
-assert.equal(language.values["nakebusen-language"], "en", "language choice persists");
-assert.match(language.twitterDescriptionMeta.content, /Sisterlocs Retie from KES 1,500/);
-assert.match(language.twitterDescriptionMeta.content, /Artificial Locs Installation from KES 3,500/);
+assert.equal(language.root.lang, "en", "English is the default language");
+assert.match(language.twitterDescriptionMeta.content, /Loc care in Eldoret/);
+assert.match(language.ogTitleMeta.content, /Loc care in Eldoret/);
+assert.match(language.twitterTitleMeta.content, /Loc care in Eldoret/);
 assert.equal(language.headerLanguageButton.textContent, "Kiswahili");
-assert.equal(language.footerLanguageButton.textContent, "Kiswahili");
+language.headerLanguageButton.listeners.click();
+assert.equal(language.root.lang, "sw", "header toggle switches to Kiswahili");
+assert.equal(language.values["nakebusen-language"], "sw", "language choice persists");
+assert.match(language.twitterDescriptionMeta.content, /Huduma za loc/);
+assert.match(language.ogTitleMeta.content, /Huduma za loc/);
+assert.match(language.twitterTitleMeta.content, /Huduma za loc/);
+assert.equal(language.headerLanguageButton.textContent, "English");
+assert.equal(language.footerLanguageButton.textContent, "English");
 language.footerLanguageButton.listeners.click();
-assert.equal(language.root.lang, "sw", "footer toggle switches back to Kiswahili");
-assert.equal(language.values["nakebusen-language"], "sw");
+assert.equal(language.root.lang, "en", "footer toggle switches back to English");
+assert.equal(language.values["nakebusen-language"], "en");
 
+const restoredLanguage = boot({ storedLanguage: "sw" });
+assert.equal(restoredLanguage.root.lang, "sw", "saved language preference is restored");
 const noStorage = boot({ storageThrows: true });
-assert.equal(noStorage.root.lang, "sw", "page remains usable when storage is unavailable");
+assert.equal(noStorage.root.lang, "en", "page remains usable with English default when storage is unavailable");
 noStorage.themeButton.listeners.click();
 assert.equal(noStorage.attributes["data-theme"], "dark", "theme control works without storage");
 
