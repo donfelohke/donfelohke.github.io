@@ -19,11 +19,12 @@ Implement one concern per reviewable pull request. Preserve the existing page an
 
 ## 2. P0 — Theme toggle
 
-### Source finding
-The current source uses moon/sun Unicode symbols in the theme button and sets an accessible label describing the active theme rather than the action. An open PR, #17, proposes replacing symbols with plain text labels.
+### Source finding (refreshed 2026-10-25)
+The current `main` source uses plain-text `Dark` / `Light` labels, an action-oriented accessible name, an `aria-pressed` state, and system-preference handling with a stored user choice. The older moon/sun-symbol finding and PR #17 reference are stale and must not be treated as current main-branch defects. Website PR #23 proposes additional theme/metadata/workflow corrections; PR #27 proposes a separate Kiswahili-first language toggle. Both are reviewable proposals and must be checked at their current heads before merge.
 
 ### Recommendation
-- Review PR #17 first; avoid duplicating its changes.
+- Review the current PR #23 and PR #27 diffs against `main`; do not assume either branch contains the other branch's changes.
+- Keep visible text labels only (e.g. `Dark` / `Light`) and no decorative glyphs.
 - Use visible text labels only (e.g. `Dark` / `Light`) and no decorative glyphs.
 - Make the accessible name describe the action, such as “Switch to dark theme” or “Switch to light theme”; update it after every state change.
 - Keep `aria-pressed` semantics consistent with the documented meaning of the button. If it is a toggle button, expose a stable action/name and pressed state; if it is an action button with changing label, do not mix models.
