@@ -19,6 +19,8 @@ class SiteParser(HTMLParser):
         self.h1_count = 0
         self.form_count = 0
         self.button_ids = set()
+        self.button_labels = []
+        self.in_button = False
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -40,8 +42,18 @@ class SiteParser(HTMLParser):
             self.h1_count += 1
         if tag == "form":
             self.form_count += 1
-        if tag == "button" and attrs.get("id"):
-            self.button_ids.add(attrs["id"])
+        if tag == "button":
+            self.in_button = True
+            if attrs.get("id"):
+                self.button_ids.add(attrs["id"])
+
+    def handle_endtag(self, tag):
+        if tag == "button":
+            self.in_button = False
+
+    def handle_data(self, data):
+        if self.in_button and data.strip():
+            self.button_labels.append(data.strip())
 
 
 def check(condition, message):
@@ -69,6 +81,8 @@ check("background-image" not in html.lower() and "url(" not in html.lower(), "Do
 check(not any(link.get("rel") == "icon" for link in p.links), "Custom graphic favicons are excluded by the no-graphics policy")
 check("application/ld+json" in html and '"@type": "Organization"' in html, "Missing Organization structured data")
 check("theme-toggle" in p.ids and "theme-toggle" in p.button_ids, "Missing theme toggle button")
+check(p.button_labels == ["Dark"], f"Theme toggle must use a text-only initial label; found {p.button_labels}")
+check('textContent=dark?"Light":"Dark"' in html, "Theme toggle must use text-only labels in both states")
 check("nakebusen-theme" in html and "localStorage" in html, "Theme preference persistence is missing")
 check(p.form_count == 0, "Do not add a fake booking form")
 check(all(img.get("alt") is not None for img in p.images), "Every content image needs an alt attribute")
