@@ -47,11 +47,11 @@ function boot({ stored = null, systemDark = false } = {}) {
 }
 
 const light = boot();
-assert.equal(light.button.textContent, "☾ Dark", "light system default offers dark mode");
+assert.equal(light.button.textContent, "Dark", "light system default offers dark mode");
 assert.equal(light.button.attrs["aria-pressed"], "false");
 light.listeners.click();
 assert.equal(light.attributes["data-theme"], "dark", "click switches to dark");
-assert.equal(light.button.textContent, "☀ Light");
+assert.equal(light.button.textContent, "Light");
 assert.equal(light.button.attrs["aria-pressed"], "true");
 assert.equal(light.values["nakebusen-theme"], "dark", "choice is persisted");
 
@@ -60,9 +60,9 @@ assert.equal(restored.attributes["data-theme"], "dark", "saved theme is restored
 
 const system = boot({ systemDark: true });
 assert.equal(system.attributes["data-theme"], undefined, "system choice leaves explicit data-theme unset");
-assert.equal(system.button.textContent, "☀ Light", "system dark preference is reflected");
+assert.equal(system.button.textContent, "Light", "system dark preference is reflected");
 system.media.matches = false;
 system.mediaListeners.change();
-assert.equal(system.button.textContent, "☾ Dark", "system preference changes are reflected");
+assert.equal(system.button.textContent, "Dark", "system preference changes are reflected");
 
 console.log("PASS: theme toggle click, persistence, restore, and system preference.");
