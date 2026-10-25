@@ -34,9 +34,9 @@ Confirm availability, suitability, final price and timing directly. Do not inven
 - `index.html` — Kiswahili-first public website with persistent English toggle, independent theme toggle, SEO/social metadata and organization structured data.
 - `assets/README.md` — asset policy and repository guidance. No graphic favicon is linked from the webpage.
 - `sitemap.xml` and `robots.txt` — basic crawl discovery.
-- `tests/test_site.py` — dependency-free HTML/content/link checks, including enforcement of the no-graphics policy.
+- `tests/test_site.py` — dependency-free HTML/content/link checks, including the no-graphics policy, Kiswahili default, language-toggle controls, persistence hooks and bilingual service prices.
+- `tests/check-inline-js.cjs` — parses executable inline JavaScript without running it.
 - `tests/theme-toggle.test.cjs` — Node-based theme preference behavior checks.
-- `tests/test_site.py` — also checks Kiswahili default language, both language-toggle placements, persistence hooks and bilingual service prices.
 - `.github/workflows/` — static checks and GitHub Pages deployment.
 
 **Photography status:** no approved client/service photos or approved technical/creative portfolio images were present in the repository at audit time. Do not present generated or stock imagery as real client work. Add only owner-approved assets with appropriate permission and useful alternative text.
