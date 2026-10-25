@@ -36,6 +36,10 @@ The separate Gallery repository is the home for visual assets. The website may l
 
 - Treat the service catalogue as the authoritative public price source.
 - Current starting prices: Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Installation — KES 3,500.
+- Use **Eldoret Town / Karibu Mdosi** as the current primary loc-care location phrase. Mention other locations only where the service is currently offered or direct availability is confirmed.
+- Keep service prices as starting prices: Retouch & Styling — from KES 700; Sisterlocs Retie — from KES 1,500; Artificial Locs Installation — from KES 3,500.
+- Make clear that enquiries are not bookings; final prices, suitability, appointment times, technical scope and availability are confirmed directly.
+- Keep the hierarchy explicit: NAKEBUSEN is customer-facing and transacts; WARENA powers systems work; GENJE is creative/cultural practice; IKAI is research in progress; FELOH / Don Feloh is the human author.
 - Confirm public wording, contact links, location, and availability before release.
 - Never fabricate testimonials, qualifications, customer identities, or guarantees.
 - Do not commit customer records, private messages, payment references, or credentials.
