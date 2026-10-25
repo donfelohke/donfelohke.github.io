@@ -54,7 +54,7 @@ p.close()
 
 check(html.count("<html") == 1, "Expected one html root")
 check(html.count("<body") == 1, "Expected one body")
-check('<html lang="sw">' in html, "Kiswahili must be the default document language")
+check('<html lang="en">' in html, "English must be the default document language")
 check(p.id_values.count("language-toggle") == 1, "Expected one header language toggle")
 check(p.id_values.count("language-toggle-footer") == 1, "Expected one footer language toggle")
 check("nakebusen-language" in html and "localStorage.setItem(languageKey,language)" in html, "Language preference must persist")
