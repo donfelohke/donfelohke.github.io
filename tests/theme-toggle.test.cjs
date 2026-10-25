@@ -27,6 +27,7 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
   const themeMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
   const descriptionMeta = { content: "" };
   const ogDescriptionMeta = { content: "" };
+  const twitterDescriptionMeta = { content: "" };
   const themeButton = makeButton();
   const headerLanguageButton = makeButton();
   const footerLanguageButton = makeButton();
@@ -46,6 +47,7 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
       if (selector === 'meta[name="theme-color"]') return themeMeta;
       if (selector === 'meta[name="description"]') return descriptionMeta;
       if (selector === 'meta[property="og:description"]') return ogDescriptionMeta;
+      if (selector === 'meta[name="twitter:description"]') return twitterDescriptionMeta;
       return null;
     },
     querySelectorAll(selector) {
@@ -78,7 +80,7 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
   };
   vm.runInNewContext(match[1], context);
   return {
-    attributes, root, themeMeta, descriptionMeta, ogDescriptionMeta, themeButton,
+    attributes, root, themeMeta, descriptionMeta, ogDescriptionMeta, twitterDescriptionMeta, themeButton,
     headerLanguageButton, footerLanguageButton, values, media, mediaListeners,
   };
 }
@@ -107,10 +109,12 @@ assert.equal(system.themeButton.textContent, "Dark", "system preference changes 
 
 const language = boot();
 assert.equal(language.root.lang, "sw", "Kiswahili is the default language");
+assert.match(language.twitterDescriptionMeta.content, /Huduma za loc/);
 assert.equal(language.headerLanguageButton.textContent, "English");
 language.headerLanguageButton.listeners.click();
 assert.equal(language.root.lang, "en", "header toggle switches to English");
 assert.equal(language.values["nakebusen-language"], "en", "language choice persists");
+assert.match(language.twitterDescriptionMeta.content, /Retouch & Styling from KES 700/);
 assert.equal(language.headerLanguageButton.textContent, "Kiswahili");
 assert.equal(language.footerLanguageButton.textContent, "Kiswahili");
 language.footerLanguageButton.listeners.click();
