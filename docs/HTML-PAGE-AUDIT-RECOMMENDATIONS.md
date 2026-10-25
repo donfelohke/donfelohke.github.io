@@ -4,6 +4,18 @@ Status: proposal based on source inspection; live browser behavior is not yet ve
 Scope: `index.html`, inline CSS/JavaScript, accessibility, service conversion, metadata, links, tests, and deployment checks.
 Constraint: the public website remains text-only. Do not add embedded images, SVG, emoji/icon decoration, graphic favicons, CSS image backgrounds, external fonts, trackers, or social-preview images. Gallery is a separate linked destination.
 
+## Current evidence snapshot — 2026-10-25
+
+This document is a review plan, not a statement that all recommendations are implemented.
+
+- Current `main` has a text-only theme control and a multi-section, static HTML page. Do not describe the historical moon/sun-glyph issue as a confirmed current-main defect.
+- Website PR #23 proposes theme/metadata/workflow corrections; PR #27 proposes a Kiswahili-first page and persistent English toggle. Inspect each current head independently because open PRs do not automatically include one another's changes.
+- PR #27 was found during review to have a missing statement separator in its language-switch handler. A fix and an inline-JavaScript syntax check have been added to that PR branch; verify the latest CI run before considering the defect resolved.
+- Current static checks and recorded workflow runs do not establish live rendering, working language preference in a browser, mobile layout, search indexing, or deployed state.
+- The source-of-truth service catalogue remains Retouch & Styling (from KES 700), Sisterlocs Retie (from KES 1,500), and Artificial Locs Installation (from KES 3,500). Primary loc-care location wording: Eldoret Town / Karibu Mdosi. Enquiry is not a booking.
+- Branch protection and ruleset configuration were not readable in the earlier audit. Treat them as unknown until checked through an authorised route.
+
+
 ## 1. Executive order
 
 Implement one concern per reviewable pull request. Preserve the existing page and prices. Do not merge or deploy until checks pass and a human reviews the diff.
