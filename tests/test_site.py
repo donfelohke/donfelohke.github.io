@@ -11,6 +11,7 @@ class SiteParser(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.ids = set()
+        self.id_values = []
         self.hrefs = []
         self.images = []
         self.graphic_tags = []
@@ -23,6 +24,7 @@ class SiteParser(HTMLParser):
         attrs = dict(attrs)
         if attrs.get("id"):
             self.ids.add(attrs["id"])
+            self.id_values.append(attrs["id"])
         if tag == "a" and attrs.get("href"):
             self.hrefs.append(attrs["href"])
         if tag == "img":
@@ -52,6 +54,12 @@ p.close()
 
 check(html.count("<html") == 1, "Expected one html root")
 check(html.count("<body") == 1, "Expected one body")
+check('<html lang="sw">' in html, "Kiswahili must be the default document language")
+check(p.id_values.count("language-toggle") == 1, "Expected one header language toggle")
+check(p.id_values.count("language-toggle-footer") == 1, "Expected one footer language toggle")
+check("nakebusen-language" in html and "localStorage.setItem(languageKey,language)" in html, "Language preference must persist")
+check('data-i18n="bookingNote"' in html and 'data-i18n="digitalIntro"' in html, "Translate core service and technical copy")
+check('price700:"From KES 700"' in html and 'price1500:"From KES 1,500"' in html and 'price3500:"From KES 3,500"' in html, "English price translations must be present")
 check(p.h1_count == 1, f"Expected one h1, found {p.h1_count}")
 check("description" in p.metas and len(p.metas["description"]) >= 50, "Missing or too-short meta description")
 check(
