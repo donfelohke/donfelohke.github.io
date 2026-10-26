@@ -3,7 +3,7 @@
 **Status:** Proposed implementation blueprint  
 **Date:** 2026-10-25  
 **Applies to:** Public website and connected FELOH / NAKEBUSEN / WARENA / IKAI / GENJE project surfaces  
-**Decision boundary:** Customer-facing bookings and transactions are handled directly through NAKEBUSEN.
+**Decision boundary:** Keep the public site informational and route enquiries to the appropriate contact path.
 
 ## 1. Purpose
 
