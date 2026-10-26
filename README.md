@@ -7,9 +7,7 @@
 Public site: https://donfelohke.github.io/  
 Repository: `donfelohke/donfelohke.github.io` · branch `main`
 
-> FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
-
-This static site presents services and routes enquiries. It does **not** confirm appointments or process payments. **ONLY NAKEBUSEN TRANSACTS.**
+This static site presents services and routes enquiries. It does not confirm appointments or process payments; customers should confirm scope, price, availability and timing directly.
 
 ## Brand system
 
@@ -70,4 +68,3 @@ Use [BRAND-IMPLEMENTATION-CHECKLIST.md](docs/BRAND-IMPLEMENTATION-CHECKLIST.md).
 ---
 
 © Felix Lwova · Don Feloh  
-*The root becomes the runtime. The human remains the author.*
