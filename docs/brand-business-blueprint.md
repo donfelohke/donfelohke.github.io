@@ -12,7 +12,7 @@ Make the ecosystem understandable to first-time visitors while preserving the de
 ## 2. Brand architecture
 
 - **FELOH / Don Feloh:** human author, founder/CTO, integrator and creative practitioner.
-- **NAKEBUSEN:** human-facing care, craft, livelihood, customer relationship and sole commercial transaction boundary.
+- **NAKEBUSEN:** human-facing care, craft, livelihood and customer relationships.
 - **WARENA:** systems engineering, GNU/Linux, reproducible and local-first infrastructure, networking, storage, recovery and operational handover.
 - **IKAI:** reflective-compute R&D. Governing principle: mirror, not judge. Do not imply released product capability without evidence.
 - **GENJE:** creative and embodied practice spanning Genge, AfroTech, livecoding, movement and choreohacking.
@@ -70,7 +70,7 @@ Navigation should remain short and descriptive. Each page must answer: What is o
 - Semantic HTML, visible focus, skip link, readable line lengths and accessible controls.
 - The WARENA Flying-Wolf may be used in brand contexts after the canonical source is verified. Do not substitute an unverified generated concept for the master asset.
 
-## 7. Current service catalogue and transaction boundary
+## 7. Current service catalogue and enquiry process
 
 The existing README records these starting prices, subject to confirmation before release:
 - Retouch & Styling — from KES 700.
