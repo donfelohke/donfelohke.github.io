@@ -128,3 +128,7 @@ This repository is the public view, not the canonical knowledge base. The curren
 **Commercial rule: ONLY NAKEBUSEN TRANSACTS.** This site presents approved services and routes enquiries; an enquiry is not a booking. Preserve current Eldoret campaign prices: Retouch & Styling **KES 700** and Artificial Locs Installation **KES 3,500**. Do not advertise shaving or braiding. Do not present concepts as deployed products or generated/stock imagery as client evidence. The governing principle remains **“The root becomes the runtime.”** AI suggests; the human decides.
 
 For shared definitions and decision provenance, see the [FELOH Sovereign Corpus canonical architecture](https://github.com/donfelohke/feloh-corpus/blob/main/docs/canonical-architecture-2026-10-26.md).
+
+## Source corpus and extraction
+
+The structured inventory and reconciliation rules for the uploaded/generated HTML source set are documented in [docs/HTML-CORPUS-EXTRACTION-REGISTER.md](docs/HTML-CORPUS-EXTRACTION-REGISTER.md). It records the 41 standalone HTML files, current public facts, historical-price conflicts, duplicate-check risks, and ZIP packages still requiring member-level inspection. This register is an inventory and first-pass synthesis, not a claim that every embedded archive member or every prototype has been fully verified.
