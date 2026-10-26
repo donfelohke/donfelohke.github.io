@@ -9,7 +9,7 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Verify required files
         run: |
           test -f index.html
@@ -18,5 +18,17 @@ jobs:
           test -f sitemap.xml
           test -f robots.txt
           test -f tests/test_site.py
+          test -f tests/check-inline-js.cjs
+          test -f tests/theme-toggle.test.cjs
+          test -f tests/check-inline-js.cjs
+          test -f tests/theme-toggle.test.cjs
       - name: Parse and validate HTML, internal links, metadata and service catalogue
         run: python3 tests/test_site.py
+      - name: Parse inline JavaScript without executing it
+        run: node tests/check-inline-js.cjs
+      - name: Verify theme and language preference behavior
+        run: node tests/theme-toggle.test.cjs
+      - name: Parse inline JavaScript without executing it
+        run: node tests/check-inline-js.cjs
+      - name: Verify theme preference behavior
+        run: node tests/theme-toggle.test.cjs
