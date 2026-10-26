@@ -40,6 +40,6 @@
 ## Rules preserved
 
 - Text-first / no embedded graphics  
-- ONLY NAKEBUSEN TRANSACTS · enquiry ≠ booking  
+- Customer-facing bookings and transactions are handled directly through NAKEBUSEN · enquiry ≠ booking  
 - IKAI = WIP only  
 - Prices not silently changed  
