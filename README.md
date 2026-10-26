@@ -8,7 +8,7 @@ FELOH is the public doorway into NAKEBUSEN Locs, WARENA systems, IKAI Reflexive 
 
 > FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
 
-**Transaction boundary: ONLY NAKEBUSEN TRANSACTS.** This static website is an enquiry and portfolio surface, not a booking or payment processor.
+Customer-facing bookings and transactions are handled directly through NAKEBUSEN. This static website is an enquiry and portfolio surface, not a booking or payment processor.
 
 ## Canonical domains
 - FELOH / DonFeloh — GLORY / Author: human authorship and expression.
