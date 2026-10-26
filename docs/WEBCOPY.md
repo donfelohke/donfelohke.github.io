@@ -2,7 +2,13 @@
 
 **Status:** Approved copy direction for implementation; source and live rendering must still be verified before release.  
 **Language policy:** English is the default for the global audience. Kiswahili is available through a persistent, accessible language toggle.  
-**Canonical lockup (exact line order):**\n\n> NAKEBUSEN Locs • Digital  \n> Powered by WARENA  \n> @donfelohke · #HisGenjeness\n\n**Brand hierarchy:** NAKEBUSEN is the customer-facing brand. Its two primary paths are **Locs** and **Digital**. WARENA powers Digital; it is not a competing customer-facing brand. **@donfelohke** is the founder and contact identity.  
+**Canonical lockup (exact line order):**
+
+> NAKEBUSEN Locs • Digital  
+> Powered by WARENA  
+> @donfelohke · #HisGenjeness
+
+**Brand hierarchy:** NAKEBUSEN is the customer-facing brand. Its two primary paths are **Locs** and **Digital**. WARENA powers Digital; it is not a competing customer-facing brand. **@donfelohke** is the founder and contact identity.  
 **Commercial boundary:** Customer enquiries and bookings are handled through NAKEBUSEN. An enquiry is not a confirmed booking.
 
 ## 1. Homepage hero
