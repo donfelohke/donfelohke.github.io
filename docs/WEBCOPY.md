@@ -14,8 +14,8 @@
 ## 1. Homepage hero
 
 **Wordmark:** NAKEBUSEN  
-**Primary heading:** NAKEBUSEN Locs • Digital  
-**Supporting line:** Loc care. Practical technology.  
+**Primary heading:** Your beauty. Your way.  
+**Supporting line:** NAKEBUSEN Locs • Digital — loc care and practical technology.  
 **Primary paths:** Locs · Digital
 
 Keep the hero short. Do not lead with the founder's full biography, GRACE/GRIT/GLORY framework, GENJE, or IKAI. Those are supporting context, not competing entry points for customers.
@@ -113,3 +113,8 @@ Kiswahili metadata must accurately describe the same services and preserve the s
 - [ ] WARENA is positioned as powering Digital; IKAI remains work in progress.
 - [ ] Static checks pass; verify keyboard interaction and layouts at 320, 360, 390, 430 and 760 CSS pixels in a real browser.
 - [ ] Verify the deployed GitHub Pages output separately; do not infer live behavior from source tests alone.
+
+
+## Beauty-tech research alignment (2026-10)
+
+The detailed rationale, booking workflow, competitive research method, prioritised implementation plan, privacy boundaries and release acceptance checklist are maintained in [BEAUTY-TECH-RESEARCH.md](BEAUTY-TECH-RESEARCH.md). This research does not establish Eldoret market share, local willingness to pay, or conversion benchmarks; those require a dated local audit and customer research.
