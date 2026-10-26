@@ -4,6 +4,6 @@ FELOH / DonFeloh is Glory / Author: human authorship and expression. NAKEBUSEN i
 
 Canonical formula: FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
 
-Customer-facing bookings and transactions are handled directly through NAKEBUSEN. This site shows enquiries and service descriptions but does not confirm appointments, process payments, store customer histories or guarantee availability. The implementation is static HTML with embedded CSS and no build system. Minimise dependencies and network calls, use Git history for provenance, and avoid telemetry or hidden data collection.
+This site shows enquiries and service descriptions but does not confirm appointments, process payments, store customer histories or guarantee availability. The implementation is static HTML with embedded CSS and no build system. Minimise dependencies and network calls, use Git history for provenance, and avoid telemetry or hidden data collection.
 
 Evidence stages: proposed, researched, designed, prototyped, tested, deployed. State limitations and never claim deployment without evidence.
