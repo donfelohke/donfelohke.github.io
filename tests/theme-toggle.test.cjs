@@ -92,26 +92,26 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
 }
 
 const light = boot();
-assert.equal(light.themeButton.textContent, "Dark", "light theme offers dark mode");
+assert.equal(light.themeButton.textContent, "◐", "theme control uses a miniature neutral glyph");
 assert.equal(light.themeButton.attrs["aria-label"], "Switch to dark theme");
 assert.equal(light.themeButton.attrs["aria-pressed"], "false");
 light.themeButton.listeners.click();
 assert.equal(light.attributes["data-theme"], "dark", "click switches to dark");
-assert.equal(light.themeButton.textContent, "Light");
+assert.equal(light.themeButton.textContent, "◐");
 assert.equal(light.themeButton.attrs["aria-label"], "Switch to light theme");
 assert.equal(light.themeButton.attrs["aria-pressed"], "true");
 assert.equal(light.values["nakebusen-theme"], "dark", "choice is persisted");
 
 const restored = boot({ storedTheme: light.values["nakebusen-theme"] });
 assert.equal(restored.attributes["data-theme"], "dark", "saved theme is restored");
-assert.equal(restored.themeButton.textContent, "Light");
+assert.equal(restored.themeButton.textContent, "◐");
 
 const system = boot({ systemDark: true });
 assert.equal(system.attributes["data-theme"], undefined, "system choice leaves explicit data-theme unset");
-assert.equal(system.themeButton.textContent, "Light", "system dark preference is reflected");
+assert.equal(system.themeButton.textContent, "◐", "system dark preference is conveyed accessibly without changing the compact glyph");
 system.media.matches = false;
 system.mediaListeners.change();
-assert.equal(system.themeButton.textContent, "Dark", "system preference changes are reflected");
+assert.equal(system.themeButton.textContent, "◐", "system preference changes update the accessible action label");
 
 const language = boot();
 assert.equal(language.root.lang, "en", "English is the default language");
@@ -121,7 +121,7 @@ assert.match(language.twitterTitleMeta.content, /NAKEBUSEN Locs • Digital/);
 assert.match(language.ogTitleMeta.content, /Your beauty\. Your way\./);
 assert.match(language.twitterTitleMeta.content, /Your beauty\. Your way\./);
 assert.match(language.documentTitle, /Your beauty\. Your way\./);
-assert.equal(language.headerLanguageButton.textContent, "Kiswahili");
+assert.equal(language.headerLanguageButton.textContent, "EN", "header language control shows a compact current-language code");
 assert.equal(language.headerLanguageButton.attrs["aria-label"], "Switch language to Kiswahili", "English toggle announces its action in English");
 assert.match(language.whatsappLinks[0].href, /I%20am%20enquiring%20about%20loc%20care/, "English loc enquiry has an English prefilled message");
 language.headerLanguageButton.listeners.click();
@@ -136,7 +136,7 @@ assert.match(language.ogTitleMeta.content, /NAKEBUSEN Locs • Digital/);
 assert.match(language.twitterTitleMeta.content, /NAKEBUSEN Locs • Digital/);
 assert.match(language.ogTitleMeta.content, /Uzuri wako\. Mtindo wako\./);
 assert.match(language.twitterTitleMeta.content, /Uzuri wako\. Mtindo wako\./);
-assert.equal(language.headerLanguageButton.textContent, "English");
+assert.equal(language.headerLanguageButton.textContent, "SW", "header language code updates after switching to Kiswahili");
 assert.equal(language.footerLanguageButton.textContent, "English");
 language.footerLanguageButton.listeners.click();
 assert.equal(language.root.lang, "en", "footer toggle switches back to English");
