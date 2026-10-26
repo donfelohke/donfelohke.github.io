@@ -4,7 +4,13 @@ Repository: `donfelohke/donfelohke.github.io`
 Public URL: https://donfelohke.github.io/  
 Stable branch: `main`
 
-Canonical public brand lockup:\n\n> NAKEBUSEN Locs • Digital  \n> Powered by WARENA  \n> @donfelohke · #HisGenjeness\n\nFELOH / DonFeloh is the public portfolio of Felix Lwova: human author, systems engineer, loctician and creative technologist. It connects NAKEBUSEN Locs, WARENA systems engineering, IKAI reflective-compute research, GENJE creative technology and the FELOH corpus.
+Canonical public brand lockup:
+
+> NAKEBUSEN Locs • Digital  
+> Powered by WARENA  
+> @donfelohke · #HisGenjeness
+
+FELOH / DonFeloh is the public portfolio of Felix Lwova: human author, systems engineer, loctician and creative technologist. It connects NAKEBUSEN Locs, WARENA systems engineering, IKAI reflective-compute research, GENJE creative technology and the FELOH corpus.
 
 > FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
 
@@ -24,7 +30,9 @@ Language principles:
 - For research and technical documentation, preserve original-language quotations and source wording when relevant, alongside a clearly identified translation.
 - Keep source material, translation decisions and substantive revisions version-controlled.
 
-## Canonical domains\n\nUse the three-line lockup above consistently across the homepage hero/footer, README, approved webcopy, metadata and brand documentation. Keep the wording and line order exact; do not substitute “NAKEBUSEN Locs & Digital” or omit the WARENA attribution or creator signature in canonical brand placements.
+## Canonical domains
+
+Use the three-line lockup above consistently across the homepage hero/footer, README, approved webcopy, metadata and brand documentation. Keep the wording and line order exact; do not substitute “NAKEBUSEN Locs & Digital” or omit the WARENA attribution or creator signature in canonical brand placements.
 
 - **FELOH / DonFeloh — GLORY / Author:** human authorship, expression and creative practice.
 - **NAKEBUSEN — GRACE / Crown:** loc care, craft, livelihood and customer contact.
