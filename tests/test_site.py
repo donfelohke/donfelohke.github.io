@@ -54,6 +54,8 @@ p.close()
 
 check(html.count("<html") == 1, "Expected one html root")
 check(html.count("<body") == 1, "Expected one body")
+check("\\n@media(max-width:520px)" not in html, "Mobile scroll-margin media query must start on a real CSS line")
+check("@media(max-width:520px){section[id],.hero[id]{scroll-margin-top:9rem}}" in html, "Mobile anchor targets must clear the sticky header")
 check('<html lang="en">' in html, "English must be the default document language")
 check(p.id_values.count("language-toggle") == 1, "Expected one header language toggle")
 check(p.id_values.count("language-toggle-footer") == 1, "Expected one footer language toggle")
