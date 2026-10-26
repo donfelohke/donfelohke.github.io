@@ -97,6 +97,8 @@ for href in p.hrefs:
     ):
         check(False, f"Unsupported or malformed link: {href}")
 
+check("NAKEBUSEN Locs • Digital</strong><br>Powered by WARENA<br>@donfelohke · #HisGenjeness" in html, "Canonical three-line NAKEBUSEN brand lockup missing")
+
 for expected in ("KES 700", "KES 1,500", "KES 3,500", "Retouch", "Sisterlocs", "Artificial"):
     check(expected in html, f"Public service catalogue missing token: {expected}")
 
