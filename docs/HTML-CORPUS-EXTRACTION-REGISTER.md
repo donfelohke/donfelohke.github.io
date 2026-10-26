@@ -119,16 +119,41 @@ The library inventory contained **41 standalone HTML files**. The descriptions b
 - Charter status, signature strings, node counts, client counts, repeat-rate percentages, years of experience, product readiness and service availability require source/evidence verification before public use.
 - Design tokens seen across the corpus include ink `#111111`, paper `#F2EFEA`, brass `#D4AF37`, terracotta `#E2725B`, forest `#033500` and IKAI mineral teal `#79D7D2`. These are a shared design direction, not proof every artifact implements them consistently.
 
-## 6. Archive packages and completeness boundary
+## 6. Archive packages and member-level audit
 
-The library inventory also lists these ZIP packages:
+All four available ZIP packages were materialized and opened successfully. `ZipFile.testzip()` returned no corrupt member for any archive. Counts below distinguish regular files from directory entries; SHA-256 values identify the exact archive bytes inspected.
 
-- `FELOH-MERGED-SOURCE-PACKAGE-2026-10-18.zip`
-- `kinelab-warena.zip`
-- `feloh-github-update.zip`
-- `feloh-github-starter.zip`
+| Archive | ZIP entries | Regular files | Archive SHA-256 |
+|---|---:|---:|---|
+| `FELOH-MERGED-SOURCE-PACKAGE-2026-10-18.zip` | 16 | 16 | `ea7d2a5f310a37343978100a1ffb6fa3a72b40564ba70a51f6f1d795be6c5abe` |
+| `feloh-github-starter.zip` | 13 | 13 | `82441988960ade5e6b220b8036aea00e0bec2dc7d8de9e9ad0466f39481c92e8` |
+| `feloh-github-update.zip` | 13 | 13 | `b3f2c9ae8be60be937a7d964b1eb9037166529f68237b55086f1bbb3da06d880` |
+| `kinelab-warena.zip` | 13 | 7 | `b668592747785512c88188e8497893491471d11dd8cfc5da946707d465da5d45` |
+| **Total** | **55** | **49** | — |
 
-Their internal file trees, embedded HTML/assets, hashes and overlaps must be inventoried separately before claiming archive-level completeness. Do not overwrite or deduplicate any archive payload based only on filename.
+### Exact hash findings
+
+- The merged source package contains exact byte matches for Library copies of `F3L0H_HisGenjeness_Extended_Master_Corpus.html` / `FELOH-WEB-001-portal.html`, `FELOH_Sovereign_Corpus_Brand_Communication_Codex.html`, `FELOH-1DOC-CANONICAL-MASTER-REV007.html`, `FELOH-1DOC-CANONICAL-MASTER-REV008.md`, `crown_code_club_feloh_master_plan.html`, `FELOH_Single_Page_Web_Design_Research_Trends_2026.html`, `FELOH_Sovereign_System_Master_Corpus_2026-10-14.html`, `FELOH-Sovereign-Corpus-Webpage.html`, and the two manifest/consolidation files. These are confirmed content matches, not inferred from size.
+- `feloh-github-update.zip` contains an `index.html` byte-identical to Library `index(2).html` (8,422 bytes). It is an older page variant, not the current repository `main/index.html`.
+- `kinelab-warena.zip` contains `dist/index.html` byte-identical to the Library `index.html` and `index(1).html` pair (9,995 bytes). The two HTML files are exact duplicates.
+- Within `kinelab-warena.zip`, `data/research-record.template.json` and `dist/research-record.template.json` are byte-identical (SHA-256 `fcca20c8e6a01e848b7dae1ae295d4c179f5b10d51da2b904cd44883a4a18c3d`). Preserve the distribution copy until build intent is reviewed; duplication may be intentional.
+- Within the merged source package, `source_artifacts/F3L0H_HisGenjeness_Extended_Master_Corpus.html` and `source_artifacts/FELOH-WEB-001-portal.html` are byte-identical (SHA-256 `be4d8aa07801bdf0413e237b25204a215f38c05876235d9f626203def0da7385`).
+
+### Exact duplicate groups in the 41 standalone Library HTML files
+
+SHA-256 comparison confirms five duplicate groups (not just equal file sizes):
+
+1. `F3L0H_HisGenjeness_Extended_Master_Corpus.html` = `FELOH-WEB-001-portal.html`.
+2. `nakebusen_locs_warena_powered_canonical_corpus.html` = `nakebusen_locs_warena_powered_canonical_corpus(1).html`.
+3. `kanairaw.html` = `kompyuta.html`.
+4. `c0r3.html` = `c0r3(1).html`.
+5. `index.html` = `index(1).html` (the KineLab prototype, not the public GitHub Pages homepage).
+
+Do not delete or rename duplicates automatically. First identify whether each is an intentional mirror, a stale export or a filename collision, and preserve provenance.
+
+### Starter/update archive comparison
+
+The starter and update archives share eight logical paths. `.nojekyll` is identical; `.gitignore`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `README.md`, `SECURITY.md` and `index.html` differ by content. The starter contains `LICENSE`, `docs/ARCHITECTURE.md`, `docs/PROJECT_TEMPLATE.md` and issue/workflow templates at its root structure; the update adds `AGENTS.md` and puts its documentation/workflow files beneath `feloh-github-update/`. They are separate historical snapshots, not safe to overlay wholesale. No archive files were written into the repository by this audit.
 
 ## 7. Recommended integration sequence
 
@@ -142,4 +167,4 @@ Their internal file trees, embedded HTML/assets, hashes and overlaps must be inv
 
 ## 8. Evidence statement
 
-This register is a structured inventory and first-pass synthesis of the 41 HTML files visible in the Library, reconciled against the REV008 canonical master and current website documentation. It is **not** a verbatim extraction of every source paragraph, a completed ZIP-member audit, proof that prototypes run, or proof of live deployment. Keep these limitations visible until the remaining byte-level and claim-level checks are completed.
+This register inventories the 41 standalone Library HTML files and records the member-level integrity/hash audit of all four available ZIP packages (55 entries, 49 regular files). Exact duplicate groups are verified with SHA-256. It remains a structured inventory and first-pass synthesis, **not** a verbatim extraction of every source paragraph, a claim-level reconciliation of every archive document, proof that prototypes run, or proof of live deployment. Public and technical claims still require source-by-source review and evidence.
