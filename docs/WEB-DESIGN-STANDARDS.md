@@ -26,10 +26,10 @@ The separate Gallery repository is the home for visual assets. The website may l
 
 ## Language and localisation
 
-- Kiswahili (`sw`) is the default language on the public homepage; English (`en`) is available through a text-only language toggle in both the header and footer.
+- English (`en`) is the default language on the public homepage; Kiswahili (`sw`) is available through a clearly labelled text-only language toggle in both the header and footer.
 - Both controls must perform the same action and share one preference stored under `nakebusen-language`; do not duplicate language state or use duplicate HTML IDs.
 - Update `html lang`, visible navigation and page copy, page title, description and social description when the language changes.
-- Keep language preference independent of the light/dark theme preference. If storage is unavailable, the page must remain usable with Kiswahili as the default.
+- Keep language preference independent of the light/dark theme preference. If storage is unavailable, the page must remain usable with English as the default.
 - Every public content change must update both language dictionaries and preserve service prices, booking disclaimers, brand names and technical maturity labels.
 - Prefer natural Kenyan Kiswahili; keep well-understood service/technical terms where translation would reduce clarity. Treat human review as a release task.
 
@@ -66,3 +66,14 @@ The separate Gallery repository is the home for visual assets. The website may l
 6. Record repository evidence, automated test results, and live-browser verification as distinct statuses.
 
 A passing static test is not proof of live visual correctness. Do not claim browser testing or deployment verification without evidence.
+
+## Navigation and brand UX
+
+- Keep the global navigation short, descriptive and in the same order in both languages: **Loc Care, Digital, Culture, About, Contact** (Kiswahili: **Locs, Digital, Utamaduni, Kuhusu, Wasiliana**).
+- Navigation labels describe destinations, not internal brand shorthand. Preserve GENJE as the section identity while giving the destination a meaningful navigation label.
+- Keep the primary conversion action visually distinct: WhatsApp is the loc-care enquiry path; the hero and service section must retain the prices and the statement that an enquiry is not a confirmed booking.
+- Keep the canonical three-line brand lockup intact in the page content: **NAKEBUSEN Locs • Digital / Powered by WARENA / @donfelohke · #HisGenjeness**. Do not force the entire lockup into the narrow header if it causes wrapping or competes with the enquiry action.
+- Sticky-header anchor targets must leave the target heading visible after navigation, especially on narrow viewports.
+- Do not introduce a hamburger menu unless real content density requires it. For this single-page site, visible links are preferred because they keep destinations discoverable and avoid adding menu state.
+- Validate the actual header at 320, 360, 390, 430, 521, 760, 1024 and 1440 CSS pixels. Check wrapping, horizontal overflow, target spacing, keyboard focus, browser zoom to 200%, both languages and both theme modes.
+- English is the default and primary language across the homepage, README, design standards and tests. Kiswahili remains available through the language toggle. Preserve this policy unless an explicitly approved future decision changes it.

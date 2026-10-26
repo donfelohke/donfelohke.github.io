@@ -104,6 +104,8 @@ For language-toggle changes, verify:
 - Both languages are complete and usable at narrow mobile widths and with keyboard navigation.
 - The live deployed page matches the reviewed commit.
 
+- [Navigation and brand UI/UX research](docs/NAVIGATION-BRAND-UX-RESEARCH.md) — navigation hierarchy, bilingual labels, mobile viewport validation and release gates.
+
 ## Research, documentation and contribution
 
 Use English as the primary cross-project documentation language, with Kiswahili alongside it where local understanding, community participation or source fidelity benefits. Keep original sources linked and distinguish evidence from interpretation, recommendations and unknowns.
