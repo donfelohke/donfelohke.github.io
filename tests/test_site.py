@@ -99,6 +99,11 @@ for href in p.hrefs:
 
 check("NAKEBUSEN Locs • Digital</strong><br>Powered by WARENA<br>@donfelohke · #HisGenjeness" in html, "Canonical three-line NAKEBUSEN brand lockup missing")
 
+check("@media(max-width:640px)" in html, "Mobile navigation layout rules are required")
+check("overflow-x:auto" in html and "white-space:nowrap" in html, "Mobile navigation links must remain readable without wrapping")
+check("repeat(2,minmax(0,1fr))" in html, "Locs and Digital paths must use a balanced two-column desktop layout")
+check("@media(max-width:380px)" in html and ".svc{grid-template-columns:minmax(0,1fr);gap:.2rem}" in html, "Service prices must stack on very narrow screens")
+
 for expected in ("KES 700", "KES 1,500", "KES 3,500", "Retouch", "Sisterlocs", "Artificial"):
     check(expected in html, f"Public service catalogue missing token: {expected}")
 
