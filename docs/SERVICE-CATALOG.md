@@ -1,23 +1,40 @@
-# Service and capability catalogue
+# NAKEBUSEN — Service catalogue
 
-This catalogue is not a guarantee of availability or proof every concept is deployed.
+**Status:** LIVE · must match `index.html` and public ads  
+**Updated:** 26 October 2026  
+**Rule:** ONLY NAKEBUSEN TRANSACTS · enquiry ≠ confirmed booking
 
-## NAKEBUSEN Locs
-All prices below are **starting prices in KES**, not flat quotes:
-- Retouch & Styling — from KES 700.
-- Sisterlocs Retie — from KES 1,500.
-- Artificial Locs Installation — from KES 3,500.
-- Location phrase: Eldoret Town / Karibu Mdosi.
-- WhatsApp / telephone: 0719 635 415 — https://wa.me/254719635415.
-- Handle: @donfelohke.
+## Locs (primary commercial path)
 
-Final price depends on the client's locs, requested work, materials and agreed additional services. Confirm availability, timing, suitability and final quote directly before confirming. Home visits and any applicable travel fee are by arrangement and must be disclosed before confirmation. The website is not an automated booking or payment system.
+**Location phrase:** Eldoret Town / Karibu Mdosi  
+**Contact:** WhatsApp / tel +254 719 635 415
 
-## WARENA
-Possible technical categories include GNU/Linux installation/admin, hardening, reproducible environments, local-first computing, router/network configuration, Wi-Fi/LAN, VPNs, backups, offline-first services and lab infrastructure. Each engagement needs scope, compatibility review, budget, maintenance plan and acceptance criteria. This list does not assert all services are currently available.
+| Service | Starting price (KES) | Notes |
+|---------|----------------------|--------|
+| Retouch & Styling | **700** | Starting point; final depends on work and materials |
+| Sisterlocs Retie | **1,500** | Starting point |
+| Artificial Locs Installation | **3,500** | Starting point |
 
-## IKAI
-Reflexive compute, mirror-based interaction, embodied movement and meaning. Mirror, not judge: no face identification, diagnosis, scoring, covert surveillance or hidden profiling.
+Out of scope on current public site: braiding, shaving, unconfirmed home visits as a promise.
 
-## GENJE
-AfroTech, Genge, live coding, algorave, movement and choreohacking. Distinguish plan, rehearsal, prototype, performance and release.
+## Digital (powered by WARENA)
+
+Quoted per engagement after problem, outcome and scope are agreed.
+
+- GNU/Linux install, administration, troubleshooting  
+- Computer diagnostics, recovery, maintenance  
+- Networks, Wi-Fi, LAN  
+- Router / server / small-office infrastructure  
+- Lab, classroom, cybercafé systems  
+- Local-first / offline-capable environments  
+- Reproducible development setups  
+
+## Not sold as products
+
+- **IKAI** — research / WIP  
+- **GENJE** — creative practice identity  
+- **WARENA** — enables Digital; not a separate consumer checkout brand  
+
+## Change control
+
+Price or scope changes require coordinated updates to: this file · `docs/WEBCOPY.md` · `index.html` · README service section · any live ads. Prefer a single PR.

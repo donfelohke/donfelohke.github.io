@@ -1,120 +1,145 @@
-# NAKEBUSEN Website Copy
+# NAKEBUSEN — Canonical website copy
 
-**Status:** Approved copy direction for implementation; source and live rendering must still be verified before release.  
-**Language policy:** English is the default for the global audience. Kiswahili is available through a persistent, accessible language toggle.  
-**Canonical lockup (exact line order):**
+**Status:** LIVE direction aligned with `main` after PR #47 (26 Oct 2026)  
+**Language:** English default · Kiswahili via accessible toggle  
+**Presentation:** Text-first · no embedded graphics  
+**Transaction rule:** ONLY NAKEBUSEN TRANSACTS · enquiry is not a booking
 
-> NAKEBUSEN Locs • Digital  
-> Powered by WARENA  
-> @donfelohke · #HisGenjeness
+---
 
-**Brand hierarchy:** NAKEBUSEN is the customer-facing brand. Its two primary paths are **Locs** and **Digital**. WARENA powers Digital; it is not a competing customer-facing brand. **@donfelohke** is the founder and contact identity.  
-**Commercial boundary:** Customer enquiries and bookings are handled through NAKEBUSEN. An enquiry is not a confirmed booking.
+## Canonical lockup (exact order)
 
-## 1. Homepage hero
+```text
+NAKEBUSEN Locs • Digital
+Powered by WARENA
+@donfelohke · #HisGenjeness
+```
 
-**Wordmark:** NAKEBUSEN  
-**Primary heading:** Your beauty. Your way.  
-**Supporting line:** NAKEBUSEN Locs • Digital — loc care and practical technology.  
-**Primary paths:** Locs · Digital
+Do not substitute “Locs & Digital” in lockup placements that use the bullet form, or omit WARENA / @donfelohke.
 
-Keep the hero short. Do not lead with the founder's full biography, GRACE/GRIT/GLORY framework, GENJE, or IKAI. Those are supporting context, not competing entry points for customers.
+---
 
-### Locs path
+## Brand hierarchy (public)
 
-**Heading:** Locs  
-**Copy:** Loc care in Eldoret Town / Karibu Mdosi. Retouching, styling, Sisterlocs reties and artificial loc installation, with starting prices shown clearly.  
-**CTA:** Explore Locs  
-**Location:** Eldoret Town / Karibu Mdosi, Uasin Gishu, Kenya.
+| Layer | Role | Public line |
+|-------|------|-------------|
+| **NAKEBUSEN** | Customer-facing home · only transacting brand | Locs • Digital |
+| **LOCS** | GRACE · beauty · craft | Your beauty. Your way. |
+| **DIGITAL** | Practical systems · powered by **WARENA** | Freedom Is a System. |
+| **#HisGenjeness** | Human author · Felix Lwova · @donfelohke | The human remains the author. |
+| **IKAI** | Research only | Work in progress · not a product |
+| **GENJE** | Creative / cultural practice | Supporting context, not checkout |
 
-### Digital path
+Sequence: FELOH generates · NAKEBUSEN grounds · IKAI reflects · WARENA enables · GENJE embodies.
 
-**Heading:** Digital  
-**Copy:** Practical GNU/Linux, computer systems, networking and systems engineering for people, businesses and institutions. Work is scoped and confirmed case by case.  
-**Attribution:** NAKEBUSEN Digital · Powered by WARENA  
-**CTA:** Explore Digital
+---
 
-## 2. Connect
+## Hero (English)
 
-**Signature:** NAKEBUSEN Locs • Digital / Powered by WARENA / @donfelohke · #HisGenjeness (render as three separate lines, preserving the canonical lockup).
+**Eyebrow:** Loc care · Eldoret Town / Karibu Mdosi · Kenya  
+**H1:** Your beauty. Your way.  
+**Tagline:** Loc care. Practical technology.  
+**Lead:** Retouching, styling, Sisterlocs retightening and artificial loc installation — with clear starting prices and personal confirmation on WhatsApp.  
+**Boundary:** Founded by Felix Lwova — Don Feloh. Enquiry is not a booking.  
+**CTAs:** Enquire About Loc Care · View prices · Discuss Technology  
 
-- WhatsApp / phone: +254 719 635 415
-- Email: mela9ine@proton.me
-- GitHub: https://github.com/donfelohke
-- Source repository: https://github.com/donfelohke/donfelohke.github.io
+Attribution under hero: Powered by WARENA · @donfelohke · #HisGenjeness
 
-Use direct, text-only links. Do not invent availability or imply a booking is confirmed merely because an enquiry was sent.
+---
 
-## 3. Loc-care catalogue
+## Path cards
+
+1. **LOCS** — Your locs. Considered care. · From KES 700 · Loc-care details  
+2. **DIGITAL / SYSTEMS** — Freedom Is a System. · GNU/Linux, networks, repair, local-first · Technical projects  
+3. **ABOUT** — About Don Feloh (founder path; GENJE/IKAI stay supporting sections)
+
+---
+
+## NAKEBUSEN LOCS
+
+**Kicker:** 01 — CROWN | GRACE  
+**Title:** NAKEBUSEN LOCS  
+**Intro:** Loc care in Eldoret Town / Karibu Mdosi. Your locs are personal. Their care should be, too.
 
 | Service | Starting price |
-| --- | ---: |
-| Retouch & Styling | KES 700 |
-| Sisterlocs Retie | KES 1,500 |
-| Artificial Locs Install | KES 3,500 |
+|---------|----------------|
+| Retouch & Styling | From KES 700 |
+| Sisterlocs Retie | From KES 1,500 |
+| Artificial Locs Installation | From KES 3,500 |
 
-These are starting prices. Confirm the work required, materials, final quote and appointment timing directly. A request is not a confirmed booking. Do not advertise braiding. Do not promise home visits, same-day availability, fixed completion times, or free extras unless explicitly verified and approved.
+**Note:** Prices are starting points in KES. Final pricing depends on work, condition of locs and materials. Availability and appointment details are confirmed directly. Enquiry is not a booking.
 
-## 4. Digital service scope
+**Not advertised:** braiding, shaving, unverified home-visit promises, invented testimonials.
 
-Use concrete, scoped descriptions rather than guarantees:
+---
 
-- GNU/Linux installation, administration and troubleshooting.
-- Computer diagnostics and maintenance.
-- Wi-Fi, router and local-area network configuration.
-- Small-office systems, servers and network equipment.
-- Laboratory, classroom and cybercafé systems.
-- Local-first computing for environments with unreliable internet.
-- Reproducible development environments and systems engineering.
+## NAKEBUSEN DIGITAL
 
-The problem, environment, scope, cost and any ongoing support must be agreed before work begins. Do not claim security guarantees, uptime, performance outcomes, clients or credentials without evidence.
+**Kicker:** 02 — CODE | GRIT  
+**Title:** NAKEBUSEN DIGITAL  
+**Powered by WARENA**  
+**Line:** Freedom Is a System.
 
-**Powered by WARENA** explains the technical foundation. WARENA is the systems and engineering layer, not a second competing consumer-facing storefront.
+Practical technology for people and organisations that need systems they can understand, maintain and adapt.
 
-## 5. Supporting identity
+- GNU/Linux installation, administration and troubleshooting  
+- Computer diagnostics, recovery and system maintenance  
+- Network configuration, Wi-Fi and LAN  
+- Router, server and small-office infrastructure  
+- Laboratory, classroom and cybercafé systems  
+- Offline-capable and local-first environments  
+- Reproducible development environments and systems engineering  
 
-- **NAKEBUSEN:** the customer-facing Locs and Digital brand.
-- **WARENA:** technical enablement and systems engineering; powers NAKEBUSEN Digital.
-- **@donfelohke / Don Feloh:** founder, author and point of contact.
-- **GENJE:** creative and cultural practice; supporting context, not a primary service CTA.
-- **IKAI:** reflective-compute research in progress, not a released product.
+**Scope:** Start with the problem and the outcome. Scope, feasibility, deliverables, pricing and support are agreed before work begins.
 
-Canonical ecosystem statement: **FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.**
+**CTA:** Discuss a Technical Project
 
-## 6. Language and accessibility
+---
 
-- English is the default on first visit; Kiswahili is available through a persistent, text-only toggle.
-- The header and footer language controls must share one state and persist the visitor's explicit choice when browser storage is available.
-- Language preference must remain independent of the light/dark theme preference.
-- Switching language updates visible copy, navigation, document language, page title and supported description/social metadata.
-- If storage is unavailable, the page must remain usable.
-- Use natural Kenyan Kiswahili. Have customer-facing Kiswahili reviewed by a fluent speaker before release.
-- Keep the page text-only: no embedded images, SVG artwork, video, canvas, CSS image backgrounds, graphic favicons, or social-preview images. The separate Gallery may be linked as a text destination.
-- Preserve keyboard access, visible focus, readable contrast, semantic headings and mobile layout.
+## IKAI
 
-## 7. Search and social metadata
+IKAI — Reflective Compute. Research into reflective, local-first computing. **Not a released product. Work in progress.** No face-ID, diagnosis, scoring or covert profiling.
 
-English-first title direction: **NAKEBUSEN Locs • Digital — Powered by WARENA | @donfelohke #HisGenjeness**.
+---
 
-English description direction: **Loc care in Eldoret Town / Karibu Mdosi from KES 700, plus practical GNU/Linux, computer and networking services. NAKEBUSEN Locs • Digital — powered by WARENA. @donfelohke · #HisGenjeness.**
+## GENJE / founder
 
-Kiswahili metadata must accurately describe the same services and preserve the same prices, location, contact route and booking boundary. Keep canonical URL and Open Graph URL aligned with the verified production URL. Do not add social-preview images under the text-only policy.
+**GENJE ZA WARENA** — purpose and practice context (cultural identity, not a separate checkout brand).  
+**Founder:** Felix Lwova · Don Feloh · Loctician · nail technician · GNU/Linux practitioner · creative technologist.  
+**Line:** The human remains the author.
 
-## 8. Release checklist
+---
 
-- [ ] Hero presents **NAKEBUSEN Locs • Digital** with two clear paths: **Locs** and **Digital**.
-- [ ] Connect signature uses the exact three-line lockup: **NAKEBUSEN Locs • Digital / Powered by WARENA / @donfelohke · #HisGenjeness**.
-- [ ] English is the initial language; Kiswahili toggle is accessible and persistent.
-- [ ] Both language controls work and remain independent of theme selection.
-- [ ] All three starting prices and Eldoret location match the approved catalogue.
-- [ ] WhatsApp, phone, email and GitHub destinations are checked.
-- [ ] Enquiry-not-booking boundary remains clear.
-- [ ] No braiding or unverified home-visit/availability claims.
-- [ ] WARENA is positioned as powering Digital; IKAI remains work in progress.
-- [ ] Static checks pass; verify keyboard interaction and layouts at 320, 360, 390, 430 and 760 CSS pixels in a real browser.
-- [ ] Verify the deployed GitHub Pages output separately; do not infer live behavior from source tests alone.
+## Connect
 
+- Loc care → WhatsApp enquiry (confirm service, price, availability)  
+- Digital → describe system, problem, outcome  
+- Creative / research → contact Don Feloh  
 
-## Beauty-tech research alignment (2026-10)
+**WhatsApp / phone:** +254 719 635 415 · https://wa.me/254719635415  
+**Email:** mela9ine@proton.me  
+**Location:** Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya · other locations by arrangement  
+**GitHub:** @donfelohke  
 
-The detailed rationale, booking workflow, competitive research method, prioritised implementation plan, privacy boundaries and release acceptance checklist are maintained in [BEAUTY-TECH-RESEARCH.md](BEAUTY-TECH-RESEARCH.md). This research does not establish Eldoret market share, local willingness to pay, or conversion benchmarks; those require a dated local audit and customer research.
+Footer: GRACE · GRIT · GLORY · The root becomes the runtime. The human remains the author.
+
+---
+
+## Metadata (English)
+
+- **Title:** NAKEBUSEN Locs • Digital — Powered by WARENA | @donfelohke #HisGenjeness  
+- **Description:** NAKEBUSEN Locs • Digital. Your beauty, your way. Loc care in Eldoret from KES 700 and practical, local-first technology. Powered by WARENA.
+
+Initial HTML, `lang`, title and social tags must be English. Toggle may update visible copy and metadata after user choice.
+
+---
+
+## Voice rules
+
+- Lead with what the visitor can do; philosophy after the offer.  
+- Specific, grounded, Kenyan-rooted; no generic luxury or SaaS theatre.  
+- No invented clients, metrics, certifications or availability calendars.  
+- Prices, boundaries and contacts identical across EN and SW.  
+- Mark Kiswahili drafts for fluent review before treating them as final.
+
+See also: [SERVICE-CATALOG.md](./SERVICE-CATALOG.md) · [BEAUTY-TECH-RESEARCH.md](./BEAUTY-TECH-RESEARCH.md) · [WEB-DESIGN-STANDARDS.md](./WEB-DESIGN-STANDARDS.md) · [BRAND-CANON.md](./BRAND-CANON.md)

@@ -1,15 +1,28 @@
-# Brand canon
+# Site brand canon (public website)
 
-GRACE — The Crown / NAKEBUSEN: Your Crown. Your Craft. Loc care, craft, livelihood, dignity and direct customer contact.
+**Canonical deep constitution:** [feloh-corpus/BRAND-CONSTITUTION.md](https://github.com/donfelohke/feloh-corpus/blob/main/BRAND-CONSTITUTION.md)
 
-GRIT — The Code / WARENA: Freedom Is a System. Sovereign, inspectable, reproducible and maintainable computing.
+## Lockup
 
-GLORY — The Craft / FELOH / @donfelohke: Live the Code. Embody the Expression. Human authorship and expression.
+```text
+NAKEBUSEN Locs • Digital
+Powered by WARENA
+@donfelohke · #HisGenjeness
+```
 
-IKAI — Mirror / Reflect: a mirror, not a judge; no identity capture, diagnosis or scoring.
+## Pillars
 
-GENJE — Wave / Embody: AfroTech, Genge, live coding, movement and choreohacking.
+| Pillar | Entity | Public practice |
+|--------|--------|-----------------|
+| GRACE | NAKEBUSEN | LOCS |
+| GRIT | WARENA | DIGITAL (via NAKEBUSEN) |
+| GLORY | DON FELOH / #HisGenjeness | Authorship |
 
-Governing formula: FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies. DonFeloh remains the human author.
+## Non-negotiables
 
-Visual direction: editorial/documentary/terminal/archive, not generic SaaS. Core palette #111111, #F2EFEA, #D4AF37; optional accents #E2725B and #033500; reserve #79D7D2 for IKAI contexts. Prioritise legibility and meaningful artefacts over clutter.
+1. ONLY NAKEBUSEN TRANSACTS  
+2. English default · Kiswahili optional  
+3. Text-first page · Gallery linked only  
+4. IKAI = WIP  
+5. Starting prices 700 / 1,500 / 3,500 KES unless deliberately changed with evidence  
+6. Enquiry is not a booking  
