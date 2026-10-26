@@ -33,7 +33,7 @@ Reviewed the current `index.html`, `README.md`, `docs/WEB-DESIGN-STANDARDS.md`, 
    **Powered by WARENA**  
    **@donfelohke · #HisGenjeness**
 6. **Commercial hierarchy must remain unambiguous.** NAKEBUSEN handles customer enquiries. WARENA is the technical attribution; GENJE is creative/cultural practice; IKAI is research/WIP. Do not let the technical or cultural story displace the loc-care offer.
-7. **The language-default decision is unresolved across repository artefacts.** The live source currently declares English as its initial document language; the design standards currently describe Kiswahili as default, while the README says English is primary. This branch deliberately does not silently choose a policy. Align the homepage, README, standards and tests before release.
+7. **Language policy: English is the default.** The homepage declares `lang="en"`, the README names English as the default and primary language, and the design standards now align with that decision. Kiswahili remains available via the language toggle. The regression tests check English as the initial language and confirm English remains the fallback if storage is unavailable.
 
 ## Brand and conversion hierarchy
 
@@ -93,7 +93,7 @@ For each viewport, verify:
 ## Prioritised release issues
 
 ### P0 — Release blockers
-1. Resolve the English-default vs Kiswahili-default policy mismatch across homepage, README, standards and tests.
+1. Keep the English-default policy consistent across homepage, README, standards and tests; change it only through an explicit future decision.
 2. Perform actual viewport, keyboard, zoom and theme checks; static tests do not prove rendering.
 3. Verify WhatsApp handoff and deployed output.
 4. Confirm that all section links land with headings visible beneath the sticky header.
@@ -124,4 +124,4 @@ The public-site source and repository documents were inspected. The implementati
 
 ## Implementation record
 
-This branch updates `index.html` navigation labels and mobile anchor spacing, adds static checks for bilingual labels, and documents the design standard. Review the pull request and automated checks before deciding whether to merge. Do not deploy until the language policy and browser release gates are resolved.
+This branch updates `index.html` navigation labels and mobile anchor spacing, adds static checks for bilingual labels, and documents the design standard. English is the default; Kiswahili is available through the language toggle. Review the pull request and automated checks before deciding whether to merge. Do not deploy until the browser release gates are resolved.
