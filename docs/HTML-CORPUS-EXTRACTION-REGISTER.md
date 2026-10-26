@@ -121,7 +121,7 @@ The library inventory contained **41 standalone HTML files**. The descriptions b
 
 ## 6. Archive packages and member-level audit
 
-All four available ZIP packages were materialized and opened successfully. `ZipFile.testzip()` returned no corrupt member for any archive. Counts below distinguish regular files from directory entries; SHA-256 values identify the exact archive bytes inspected.
+All four available ZIP packages were materialized and opened successfully. `ZipFile.testzip()` returned no corrupt member for any archive. The per-member paths, byte sizes and SHA-256 digests are recorded in [`docs/ZIP-MEMBER-MANIFEST-2026-10-26.csv`](ZIP-MEMBER-MANIFEST-2026-10-26.csv). Counts below distinguish regular files from directory entries; SHA-256 values identify the exact archive bytes inspected.
 
 | Archive | ZIP entries | Regular files | Archive SHA-256 |
 |---|---:|---:|---|
