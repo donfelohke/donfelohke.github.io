@@ -22,6 +22,8 @@ jobs:
           test -f tests/theme-toggle.test.cjs
       - name: Parse and validate HTML, internal links, metadata and service catalogue
         run: python3 tests/test_site.py
+      - name: Check CSS source for escaped newlines between rules
+        run: python3 -c "from pathlib import Path; s=Path('index.html').read_text(); assert '\\\\n@media' not in s, 'Literal escaped newline found in CSS'"
       - name: Parse inline JavaScript without executing it
         run: node tests/check-inline-js.cjs
       - name: Verify theme and language preference behavior
