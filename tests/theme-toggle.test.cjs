@@ -33,6 +33,7 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
   const themeButton = makeButton();
   const headerLanguageButton = makeButton();
   const footerLanguageButton = makeButton();
+  const whatsappLinks = ["loc", "tech", "general"].map(purpose => ({ href: "", getAttribute(key) { return key === "data-wa-purpose" ? purpose : null; } }));
   const values = {};
   if (storedTheme !== null) values["nakebusen-theme"] = storedTheme;
   if (storedLanguage !== null) values["nakebusen-language"] = storedLanguage;
@@ -58,6 +59,7 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
       if (selector === "#language-toggle, #language-toggle-footer") {
         return [headerLanguageButton, footerLanguageButton];
       }
+      if (selector === "[data-wa-purpose]") return whatsappLinks;
       return [];
     },
     getElementById(id) {
@@ -85,7 +87,7 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
   vm.runInNewContext(match[1], context);
   return {
     attributes, root, themeMeta, descriptionMeta, ogDescriptionMeta, twitterDescriptionMeta, ogTitleMeta, twitterTitleMeta, themeButton,
-    headerLanguageButton, footerLanguageButton, values, media, mediaListeners, documentTitle: document.title,
+    headerLanguageButton, footerLanguageButton, whatsappLinks, values, media, mediaListeners, documentTitle: document.title,
   };
 }
 
@@ -120,8 +122,13 @@ assert.match(language.ogTitleMeta.content, /Powered by WARENA/);
 assert.match(language.twitterTitleMeta.content, /Powered by WARENA/);
 assert.match(language.documentTitle, /Powered by WARENA/);
 assert.equal(language.headerLanguageButton.textContent, "Kiswahili");
+assert.equal(language.headerLanguageButton.attrs["aria-label"], "Switch language to Kiswahili", "English toggle announces its action in English");
+assert.match(language.whatsappLinks[0].href, /I%20am%20enquiring%20about%20loc%20care/, "English loc enquiry has an English prefilled message");
 language.headerLanguageButton.listeners.click();
 assert.equal(language.root.lang, "sw", "header toggle switches to Kiswahili");
+assert.equal(language.headerLanguageButton.attrs["aria-label"], "Badili lugha iwe Kiingereza", "Kiswahili toggle announces its action in Kiswahili");
+assert.match(language.whatsappLinks[0].href, /naulizia%20huduma%20za%20loc/, "Kiswahili loc enquiry has a Kiswahili prefilled message");
+assert.match(language.whatsappLinks[1].href, /mradi%20wa%20teknolojia/, "Kiswahili technology enquiry has a Kiswahili prefilled message");
 assert.equal(language.values["nakebusen-language"], "sw", "language choice persists");
 assert.match(language.twitterDescriptionMeta.content, /Huduma za loc/);
 assert.match(language.twitterDescriptionMeta.content, /Huduma za loc/);
