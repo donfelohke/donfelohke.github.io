@@ -30,13 +30,12 @@ a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--cla
 .skip{position:absolute;left:1rem;top:-100px;z-index:50;padding:.6rem 1rem;background:var(--paper)}.skip:focus{top:1rem}
 .wrap{width:min(100% - 2rem,920px);margin-inline:auto}
 header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem;min-height:3.5rem;padding:.5rem 0}
-.brand{font:700 1.05rem/1.2 var(--serif);letter-spacing:.02em;text-decoration:none;max-width:min(100%,12rem)}
-.brand span{font-weight:400;color:var(--muted);font-size:.8rem}
-.nav-right{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem .55rem;margin-left:auto}
-.nav-links{display:flex;flex-wrap:wrap;gap:.1rem .55rem;font-size:.85rem}
+.nav{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:.45rem 1rem;padding:.65rem 0}
+.brand{display:flex;flex-direction:column;align-items:flex-start;gap:.1rem;text-decoration:none;line-height:1.2}.brand-name{font:700 1.05rem/1.2 var(--serif);letter-spacing:.02em}.brand .brand-sub{font-size:.72rem;color:var(--muted);font-weight:500}
+.nav-right{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:.35rem;margin-left:auto}
+.nav-links{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.1rem .85rem;font-size:.9rem;border-top:1px solid var(--line);padding-top:.25rem}
 .nav-links a{text-decoration:none;min-height:2.5rem;display:inline-flex;align-items:center}
-.nav-links a:hover{text-decoration:underline;text-underline-offset:4px}
+.nav-links a:hover{text-decoration:underline;text-underline-offset:4px}.nav-links a:focus-visible,.nav-cta:focus-visible,#theme-toggle:focus-visible,#language-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .nav-cta{display:inline-flex;align-items:center;min-height:2.5rem;padding:.35rem .75rem;border:1px solid var(--ink);background:var(--ink);color:var(--paper);font-weight:700;font-size:.8rem;text-decoration:none}
 #theme-toggle,#language-toggle{display:inline-flex;align-items:center;justify-content:center;min-height:2.5rem;padding:.35rem .65rem;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);font:700 .72rem var(--mono);cursor:pointer}
 #theme-toggle:hover,#language-toggle:hover{border-color:var(--gold)}
@@ -60,8 +59,9 @@ h3{font-size:1.02rem;margin:0 0 .35rem}.section-kicker{font:700 .7rem var(--mono
 footer{padding:2rem 0 3rem;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted)}
 .foot-links{display:flex;flex-wrap:wrap;gap:.35rem 1rem;margin:.75rem 0}.foot-links a{text-decoration:none}.foot-links a:hover{text-decoration:underline}
 .language-row{display:flex;align-items:center;gap:.5rem;margin:.8rem 0}
-@media(max-width:520px){.brand{max-width:7rem}.nav{align-items:flex-start;gap:.5rem}.nav-right{gap:.3rem;min-width:0;max-width:100%}.nav-links{order:3;width:100%;justify-content:flex-start;gap:.1rem .7rem}.nav-links a{min-height:2.25rem}.nav-cta{min-height:2.3rem}#theme-toggle,#language-toggle{min-height:2.3rem}}
-@media(min-width:521px){section[id],.hero[id]{scroll-margin-top:5rem}}\n@media(max-width:520px){section[id],.hero[id]{scroll-margin-top:9rem}}
+@media(max-width:520px){.nav{grid-template-columns:minmax(0,1fr);gap:.45rem}.nav-right{grid-row:2;grid-column:1;justify-content:flex-start;margin-left:0}.nav-links{grid-row:3;grid-column:1;width:100%;gap:.1rem .7rem}.nav-links a{min-height:2.5rem}.nav-cta{min-height:2.5rem}#theme-toggle,#language-toggle{min-height:2.5rem}}
+@media(min-width:521px){section[id],.hero[id]{scroll-margin-top:5rem}}
+@media(max-width:520px){section[id],.hero[id]{scroll-margin-top:9rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 <script>
@@ -101,15 +101,16 @@ applyTheme(theme);if(document.readyState==="loading")document.addEventListener("
 <body>
 <a class="skip" href="#main" data-i18n="skip">Ruka hadi kwenye maudhui</a>
 <header><div class="wrap nav">
-<a class="brand" href="#top">NAKEBUSEN <span>@donfelohke</span></a>
+<a class="brand" href="#top" aria-label="NAKEBUSEN home"><span class="brand-name">NAKEBUSEN</span><span class="brand-sub">Locs • Digital · @donfelohke</span></a>
 <div class="nav-right">
-<nav class="nav-links" aria-label="Menyu kuu" data-i18n-aria="navMain">
-<a href="#crown" data-i18n="navLocCare">Locs</a><a href="#code" data-i18n="navDigital">Digital</a><a href="#genje" data-i18n="navCulture">Utamaduni</a><a href="#founder" data-i18n="navAbout">Kuhusu</a><a href="#connect" data-i18n="navContact">Wasiliana</a>
-</nav>
 <a class="nav-cta" data-wa-purpose="loc" href="https://wa.me/254719635415?text=Hello%20NAKEBUSEN%20—%20loc%20care%20enquiry" data-i18n="whatsapp">WhatsApp</a>
 <button type="button" id="language-toggle" aria-label="Switch language to Kiswahili">English</button>
 <button type="button" id="theme-toggle" aria-label="Switch to dark theme" title="Dark theme" aria-pressed="false">Dark</button>
-</div></div></header>
+</div>
+<nav class="nav-links" aria-label="Main navigation" data-i18n-aria="navMain">
+<a href="#crown" data-i18n="navLocCare">Locs</a><a href="#code" data-i18n="navDigital">Digital</a><a href="#founder">@donfelohke</a>
+</nav>
+</div></header>
 <main id="main">
 <section class="hero" id="top"><div class="wrap">
 <p class="eyebrow" data-i18n="eyebrow">Huduma za loc · Eldoret Town / Karibu Mdosi · Kenya</p>
