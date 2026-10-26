@@ -85,7 +85,7 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
   vm.runInNewContext(match[1], context);
   return {
     attributes, root, themeMeta, descriptionMeta, ogDescriptionMeta, twitterDescriptionMeta, ogTitleMeta, twitterTitleMeta, themeButton,
-    headerLanguageButton, footerLanguageButton, values, media, mediaListeners,
+    headerLanguageButton, footerLanguageButton, values, media, mediaListeners, documentTitle: document.title,
   };
 }
 
@@ -116,6 +116,9 @@ assert.equal(language.root.lang, "en", "English is the default language");
 assert.match(language.twitterDescriptionMeta.content, /Loc care in Eldoret/);
 assert.match(language.ogTitleMeta.content, /NAKEBUSEN Locs • Digital/);
 assert.match(language.twitterTitleMeta.content, /NAKEBUSEN Locs • Digital/);
+assert.match(language.ogTitleMeta.content, /Powered by WARENA/);
+assert.match(language.twitterTitleMeta.content, /Powered by WARENA/);
+assert.match(language.documentTitle, /Powered by WARENA/);
 assert.equal(language.headerLanguageButton.textContent, "Kiswahili");
 language.headerLanguageButton.listeners.click();
 assert.equal(language.root.lang, "sw", "header toggle switches to Kiswahili");
@@ -124,6 +127,8 @@ assert.match(language.twitterDescriptionMeta.content, /Huduma za loc/);
 assert.match(language.twitterDescriptionMeta.content, /Huduma za loc/);
 assert.match(language.ogTitleMeta.content, /NAKEBUSEN Locs • Digital/);
 assert.match(language.twitterTitleMeta.content, /NAKEBUSEN Locs • Digital/);
+assert.match(language.ogTitleMeta.content, /Inaendeshwa na WARENA/);
+assert.match(language.twitterTitleMeta.content, /Inaendeshwa na WARENA/);
 assert.equal(language.headerLanguageButton.textContent, "English");
 assert.equal(language.footerLanguageButton.textContent, "English");
 language.footerLanguageButton.listeners.click();
