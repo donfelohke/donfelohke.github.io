@@ -144,3 +144,16 @@ This repository is the **Public website** domain in the FELOH ecosystem. Keep it
 - **Make changes reviewable.** Prefer focused branches and pull requests, document meaningful decisions, and report checks actually run. Do not claim tests, deployment, approval or release unless there is evidence.
 
 Canonical relationship: **FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.**
+
+
+## Beauty + technology strategy
+
+The public site serves two clear customer paths: **Locs** and **Digital**. NAKEBUSEN is the customer-facing brand; WARENA powers the technical practice; @donfelohke is the founder and point of contact. English is the default, with an accessible Kiswahili toggle. Enquiries are not confirmed bookings.
+
+- [Beauty + Technology research and implementation brief](docs/BEAUTY-TECH-RESEARCH.md)
+- [Canonical website copy](docs/WEBCOPY.md)
+- [Navigation, brand and UX research](docs/NAVIGATION-BRAND-UX-RESEARCH.md)
+- [Web design standards](docs/WEB-DESIGN-STANDARDS.md)
+- [Service catalogue](docs/SERVICE-CATALOG.md)
+
+Starting prices: Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Install — KES 3,500. Confirm final scope, pricing and appointment timing directly. The site is informational and does not provide live availability or automatically confirm appointments.
