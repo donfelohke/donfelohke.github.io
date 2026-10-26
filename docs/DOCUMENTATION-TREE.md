@@ -10,6 +10,6 @@ This website repository owns:
 - `docs/WEBCOPY.md`, `WEB-DESIGN-STANDARDS.md`, `SERVICE-CATALOG.md`
 - Deployment, recovery, audience research, PR reconciliation notes
 
-Shared brand rules and the transaction boundary remain defined in **feloh-corpus/BRAND-CONSTITUTION.md**.
+Shared brand rules remain defined in **feloh-corpus/BRAND-CONSTITUTION.md**.
 
 The public site routes visitors to relevant contact paths; booking requests require direct confirmation.
