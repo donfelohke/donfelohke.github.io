@@ -1,7 +1,7 @@
 # Instructions for contributors and coding agents
 
 - Canon: FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
-- Only NAKEBUSEN transacts.
+- Keep service enquiries on the relevant contact path; the public site is informational and does not confirm bookings.
 - DonFeloh remains the human author; automation assists but does not own decisions.
 - IKAI is a mirror, not a judge: do not add face identification, diagnosis, scoring, covert surveillance or hidden profiling.
 - Prefer static HTML/CSS/Markdown. No trackers, external fonts/CDNs, fake forms or fake dashboards.

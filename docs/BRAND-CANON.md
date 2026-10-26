@@ -10,6 +10,6 @@ IKAI — Mirror / Reflect: a mirror, not a judge; no identity capture, diagnosis
 
 GENJE — Wave / Embody: AfroTech, Genge, live coding, movement and choreohacking.
 
-Governing formula: FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies. DonFeloh remains the human author; only NAKEBUSEN transacts.
+Governing formula: FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies. DonFeloh remains the human author.
 
 Visual direction: editorial/documentary/terminal/archive, not generic SaaS. Core palette #111111, #F2EFEA, #D4AF37; optional accents #E2725B and #033500; reserve #79D7D2 for IKAI contexts. Prioritise legibility and meaningful artefacts over clutter.

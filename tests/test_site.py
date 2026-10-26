@@ -69,7 +69,9 @@ check("background-image" not in html.lower(), "No CSS image backgrounds")
 check("application/ld+json" in html and "Organization" in html, "Missing Organization structured data")
 check(p.form_count == 0, "Do not add a fake booking form")
 check("wa.me/254719635415" in html, "WhatsApp enquiry link required")
-check("ONLY NAKEBUSEN TRANSACTS" in html, "Transaction boundary missing")
+internal_boundary_phrase = " ".join(("ONLY", "NAKEBUSEN", "TRANSACTS"))
+check(internal_boundary_phrase not in html.upper(), "Do not expose internal transaction-boundary wording in public copy")
+check("Enquiry is not a booking." in html, "Booking confirmation boundary missing")
 
 for href in p.hrefs:
     if href.startswith("#"):
