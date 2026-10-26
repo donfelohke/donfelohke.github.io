@@ -9,7 +9,17 @@
 
 Make the ecosystem understandable to first-time visitors while preserving the deeper cultural, commercial, creative and technical architecture. The website is the public front door, not a substitute for a booking engine, payment processor, technical operations system, or complete private corpus.
 
-## 2. Brand architecture\n\n### Canonical public lockup\n\nUse this exact three-line signature on public-facing brand placements:\n\n> NAKEBUSEN Locs • Digital  \n> Powered by WARENA  \n> @donfelohke · #HisGenjeness\n\nKeep line order and spelling unchanged. The lockup identifies NAKEBUSEN as the customer-facing Locs and Digital brand, WARENA as the technology foundation, and @donfelohke · #HisGenjeness as the human creator signature.
+## 2. Brand architecture
+
+### Canonical public lockup
+
+Use this exact three-line signature on public-facing brand placements:
+
+> NAKEBUSEN Locs • Digital  
+> Powered by WARENA  
+> @donfelohke · #HisGenjeness
+
+Keep line order and spelling unchanged. The lockup identifies NAKEBUSEN as the customer-facing Locs and Digital brand, WARENA as the technology foundation, and @donfelohke · #HisGenjeness as the human creator signature.
 
 - **FELOH / Don Feloh:** human author, founder/CTO, integrator and creative practitioner.
 - **NAKEBUSEN:** human-facing care, craft, livelihood and customer relationships.
