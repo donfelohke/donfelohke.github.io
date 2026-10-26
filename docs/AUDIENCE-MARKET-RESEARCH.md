@@ -48,7 +48,7 @@ Reviewed the current `index.html` and `README.md` in this repository. Existing a
 - IKAI is research and development, not a released product.
 - Enquiries are not confirmed bookings; price, scope, timing and availability require direct agreement.
 - Brand relationship: **FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.**
-- Transaction boundary: **Customer-facing bookings and transactions are handled directly through NAKEBUSEN.**
+- Booking requests require direct confirmation; the public site is informational.
 
 ## Audience segments and messaging
 
