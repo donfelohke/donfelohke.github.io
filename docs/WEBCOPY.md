@@ -2,6 +2,12 @@
 
 **Status:** Approved copy direction for implementation; source and live rendering must still be verified before release.  
 **Language policy:** English is the default for the global audience. Kiswahili is available through a persistent, accessible language toggle.  
+**Canonical lockup (exact line order):**
+
+> NAKEBUSEN Locs • Digital  
+> Powered by WARENA  
+> @donfelohke · #HisGenjeness
+
 **Brand hierarchy:** NAKEBUSEN is the customer-facing brand. Its two primary paths are **Locs** and **Digital**. WARENA powers Digital; it is not a competing customer-facing brand. **@donfelohke** is the founder and contact identity.  
 **Commercial boundary:** Customer enquiries and bookings are handled through NAKEBUSEN. An enquiry is not a confirmed booking.
 
@@ -30,7 +36,7 @@ Keep the hero short. Do not lead with the founder's full biography, GRACE/GRIT/G
 
 ## 2. Connect
 
-**Signature:** NAKEBUSEN · @donfelohke · Powered by WARENA
+**Signature:** NAKEBUSEN Locs • Digital / Powered by WARENA / @donfelohke · #HisGenjeness (render as three separate lines, preserving the canonical lockup).
 
 - WhatsApp / phone: +254 719 635 415
 - Email: mela9ine@proton.me
@@ -88,16 +94,16 @@ Canonical ecosystem statement: **FELOH generates. NAKEBUSEN grounds. IKAI reflec
 
 ## 7. Search and social metadata
 
-English-first title direction: **NAKEBUSEN Locs & Digital | @donfelohke**.
+English-first title direction: **NAKEBUSEN Locs • Digital — Powered by WARENA | @donfelohke #HisGenjeness**.
 
-English description direction: **Loc care in Eldoret Town / Karibu Mdosi from KES 700, plus practical GNU/Linux, computer and networking services. NAKEBUSEN · @donfelohke · Powered by WARENA.**
+English description direction: **Loc care in Eldoret Town / Karibu Mdosi from KES 700, plus practical GNU/Linux, computer and networking services. NAKEBUSEN Locs • Digital — powered by WARENA. @donfelohke · #HisGenjeness.**
 
 Kiswahili metadata must accurately describe the same services and preserve the same prices, location, contact route and booking boundary. Keep canonical URL and Open Graph URL aligned with the verified production URL. Do not add social-preview images under the text-only policy.
 
 ## 8. Release checklist
 
 - [ ] Hero presents **NAKEBUSEN Locs • Digital** with two clear paths: **Locs** and **Digital**.
-- [ ] Connect signature reads **NAKEBUSEN · @donfelohke · Powered by WARENA**.
+- [ ] Connect signature uses the exact three-line lockup: **NAKEBUSEN Locs • Digital / Powered by WARENA / @donfelohke · #HisGenjeness**.
 - [ ] English is the initial language; Kiswahili toggle is accessible and persistent.
 - [ ] Both language controls work and remain independent of theme selection.
 - [ ] All three starting prices and Eldoret location match the approved catalogue.

@@ -1,68 +1,140 @@
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const vm = require("node:vm");
+
 const html = fs.readFileSync("index.html", "utf8");
 const match = html.match(/<script>\s*([\s\S]*?)<\/script>/);
-assert.ok(match, "inline theme script exists");
+assert.ok(match, "inline application script exists");
 
-function boot({ stored = null, systemDark = false } = {}) {
-  const attributes = {};
-  const listeners = {};
-  const mediaListeners = {};
-  const root = {
-    setAttribute: (key, value) => { attributes[key] = value; },
-    removeAttribute: (key) => { delete attributes[key]; },
-  };
-  const meta = { content: "", setAttribute(key, value) { this[key] = value; } };
-  const button = {
+function makeButton() {
+  return {
     textContent: "",
     attrs: {},
-    addEventListener: (event, fn) => { listeners[event] = fn; },
+    listeners: {},
+    addEventListener(event, fn) { this.listeners[event] = fn; },
     setAttribute(key, value) { this.attrs[key] = value; },
   };
+}
+
+function boot({ storedTheme = null, storedLanguage = null, systemDark = false, storageThrows = false } = {}) {
+  const attributes = {};
+  const mediaListeners = {};
+  const root = {
+    lang: "en",
+    setAttribute(key, value) { attributes[key] = value; },
+    removeAttribute(key) { delete attributes[key]; },
+  };
+  const themeMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
+  const descriptionMeta = { content: "" };
+  const ogDescriptionMeta = { content: "" };
+  const twitterDescriptionMeta = { content: "" };
+  const ogTitleMeta = { content: "" };
+  const twitterTitleMeta = { content: "" };
+  const themeButton = makeButton();
+  const headerLanguageButton = makeButton();
+  const footerLanguageButton = makeButton();
   const values = {};
-  if (stored !== null) values["nakebusen-theme"] = stored;
+  if (storedTheme !== null) values["nakebusen-theme"] = storedTheme;
+  if (storedLanguage !== null) values["nakebusen-language"] = storedLanguage;
   const media = {
     matches: systemDark,
-    addEventListener: (event, fn) => { mediaListeners[event] = fn; },
-    addListener: (fn) => { mediaListeners.change = fn; },
+    addEventListener(event, fn) { mediaListeners[event] = fn; },
+    addListener(fn) { mediaListeners.change = fn; },
   };
   const document = {
     documentElement: root,
     readyState: "complete",
-    querySelector: () => meta,
-    getElementById: (id) => id === "theme-toggle" ? button : null,
-    addEventListener: () => {},
+    title: "",
+    querySelector(selector) {
+      if (selector === 'meta[name="theme-color"]') return themeMeta;
+      if (selector === 'meta[name="description"]') return descriptionMeta;
+      if (selector === 'meta[property="og:description"]') return ogDescriptionMeta;
+      if (selector === 'meta[name="twitter:description"]') return twitterDescriptionMeta;
+      if (selector === 'meta[property="og:title"]') return ogTitleMeta;
+      if (selector === 'meta[name="twitter:title"]') return twitterTitleMeta;
+      return null;
+    },
+    querySelectorAll(selector) {
+      if (selector === "#language-toggle, #language-toggle-footer") {
+        return [headerLanguageButton, footerLanguageButton];
+      }
+      return [];
+    },
+    getElementById(id) {
+      if (id === "theme-toggle") return themeButton;
+      if (id === "language-toggle") return headerLanguageButton;
+      if (id === "language-toggle-footer") return footerLanguageButton;
+      return null;
+    },
+    addEventListener() {},
   };
   const context = {
     document,
     window: { matchMedia: () => media },
     localStorage: {
-      getItem: (key) => values[key] ?? null,
-      setItem: (key, value) => { values[key] = value; },
+      getItem(key) {
+        if (storageThrows) throw new Error("storage unavailable");
+        return values[key] ?? null;
+      },
+      setItem(key, value) {
+        if (storageThrows) throw new Error("storage unavailable");
+        values[key] = value;
+      },
     },
   };
   vm.runInNewContext(match[1], context);
-  return { attributes, meta, button, values, media, mediaListeners, listeners };
+  return {
+    attributes, root, themeMeta, descriptionMeta, ogDescriptionMeta, twitterDescriptionMeta, ogTitleMeta, twitterTitleMeta, themeButton,
+    headerLanguageButton, footerLanguageButton, values, media, mediaListeners,
+  };
 }
 
 const light = boot();
-assert.equal(light.button.textContent, "☾ Dark", "light system default offers dark mode");
-assert.equal(light.button.attrs["aria-pressed"], "false");
-light.listeners.click();
+assert.equal(light.themeButton.textContent, "Dark", "light theme offers dark mode");
+assert.equal(light.themeButton.attrs["aria-label"], "Switch to dark theme");
+assert.equal(light.themeButton.attrs["aria-pressed"], "false");
+light.themeButton.listeners.click();
 assert.equal(light.attributes["data-theme"], "dark", "click switches to dark");
-assert.equal(light.button.textContent, "☀ Light");
-assert.equal(light.button.attrs["aria-pressed"], "true");
+assert.equal(light.themeButton.textContent, "Light");
+assert.equal(light.themeButton.attrs["aria-label"], "Switch to light theme");
+assert.equal(light.themeButton.attrs["aria-pressed"], "true");
 assert.equal(light.values["nakebusen-theme"], "dark", "choice is persisted");
 
-const restored = boot({ stored: light.values["nakebusen-theme"] });
+const restored = boot({ storedTheme: light.values["nakebusen-theme"] });
 assert.equal(restored.attributes["data-theme"], "dark", "saved theme is restored");
+assert.equal(restored.themeButton.textContent, "Light");
 
 const system = boot({ systemDark: true });
 assert.equal(system.attributes["data-theme"], undefined, "system choice leaves explicit data-theme unset");
-assert.equal(system.button.textContent, "☀ Light", "system dark preference is reflected");
+assert.equal(system.themeButton.textContent, "Light", "system dark preference is reflected");
 system.media.matches = false;
 system.mediaListeners.change();
-assert.equal(system.button.textContent, "☾ Dark", "system preference changes are reflected");
+assert.equal(system.themeButton.textContent, "Dark", "system preference changes are reflected");
 
-console.log("PASS: theme toggle click, persistence, restore, and system preference.");
+const language = boot();
+assert.equal(language.root.lang, "en", "English is the default language");
+assert.match(language.twitterDescriptionMeta.content, /Loc care in Eldoret/);
+assert.match(language.ogTitleMeta.content, /NAKEBUSEN Locs • Digital/);
+assert.match(language.twitterTitleMeta.content, /NAKEBUSEN Locs • Digital/);
+assert.equal(language.headerLanguageButton.textContent, "Kiswahili");
+language.headerLanguageButton.listeners.click();
+assert.equal(language.root.lang, "sw", "header toggle switches to Kiswahili");
+assert.equal(language.values["nakebusen-language"], "sw", "language choice persists");
+assert.match(language.twitterDescriptionMeta.content, /Huduma za loc/);
+assert.match(language.twitterDescriptionMeta.content, /Huduma za loc/);
+assert.match(language.ogTitleMeta.content, /NAKEBUSEN Locs • Digital/);
+assert.match(language.twitterTitleMeta.content, /NAKEBUSEN Locs • Digital/);
+assert.equal(language.headerLanguageButton.textContent, "English");
+assert.equal(language.footerLanguageButton.textContent, "English");
+language.footerLanguageButton.listeners.click();
+assert.equal(language.root.lang, "en", "footer toggle switches back to English");
+assert.equal(language.values["nakebusen-language"], "en");
+
+const restoredLanguage = boot({ storedLanguage: "sw" });
+assert.equal(restoredLanguage.root.lang, "sw", "saved language preference is restored");
+const noStorage = boot({ storageThrows: true });
+assert.equal(noStorage.root.lang, "en", "page remains usable with English default when storage is unavailable");
+noStorage.themeButton.listeners.click();
+assert.equal(noStorage.attributes["data-theme"], "dark", "theme control works without storage");
+
+console.log("PASS: theme state, persistence, system preference, bilingual toggles, and storage fallback.");

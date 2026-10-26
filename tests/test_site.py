@@ -11,6 +11,7 @@ class SiteParser(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.ids = set()
+        self.id_values = []
         self.hrefs = []
         self.images = []
         self.graphic_tags = []
@@ -23,6 +24,7 @@ class SiteParser(HTMLParser):
         attrs = dict(attrs)
         if attrs.get("id"):
             self.ids.add(attrs["id"])
+            self.id_values.append(attrs["id"])
         if tag == "a" and attrs.get("href"):
             self.hrefs.append(attrs["href"])
         if tag == "img":
@@ -52,6 +54,12 @@ p.close()
 
 check(html.count("<html") == 1, "Expected one html root")
 check(html.count("<body") == 1, "Expected one body")
+check('<html lang="en">' in html, "English must be the default document language")
+check(p.id_values.count("language-toggle") == 1, "Expected one header language toggle")
+check(p.id_values.count("language-toggle-footer") == 1, "Expected one footer language toggle")
+check("nakebusen-language" in html and "localStorage.setItem(languageKey,language)" in html, "Language preference must persist")
+check('data-i18n="bookingNote"' in html and 'data-i18n="digitalIntro"' in html, "Translate core service and technical copy")
+check('price700:"From KES 700"' in html and 'price1500:"From KES 1,500"' in html and 'price3500:"From KES 3,500"' in html, "English price translations must be present")
 check(p.h1_count == 1, f"Expected one h1, found {p.h1_count}")
 check("description" in p.metas and len(p.metas["description"]) >= 50, "Missing or too-short meta description")
 check(
@@ -64,14 +72,17 @@ check(p.metas.get("og:url") == "https://donfelohke.github.io/", "Incorrect Open 
 check(p.metas.get("twitter:card") == "summary", "Missing Twitter summary card")
 check(not p.graphic_tags, f"Keep page text-first; found media tags: {p.graphic_tags}")
 check(not p.images, "Do not embed images; link Gallery repo instead")
+check(len(p.id_values) == len(p.ids), "Duplicate HTML id values are not allowed")
+check(not any(link.get("rel") == "icon" for link in p.links), "No graphic favicon under the text-only policy")
+check("☾" not in html and "☀" not in html, "Theme control must use text labels, not decorative glyphs")
+check("Eldoret Town / Karibu Mdosi" in html, "Primary loc-care location wording is required")
+check("From KES 700" in html and "From KES 1,500" in html and "From KES 3,500" in html, "All service prices must be labelled as starting prices")
 check(not any(key in p.metas for key in ("og:image", "twitter:image")), "No social-preview image meta")
 check("background-image" not in html.lower(), "No CSS image backgrounds")
 check("application/ld+json" in html and "Organization" in html, "Missing Organization structured data")
 check(p.form_count == 0, "Do not add a fake booking form")
 check("wa.me/254719635415" in html, "WhatsApp enquiry link required")
-internal_boundary_phrase = " ".join(("ONLY", "NAKEBUSEN", "TRANSACTS"))
-check(internal_boundary_phrase not in html.upper(), "Do not expose internal transaction-boundary wording in public copy")
-check("Enquiry is not a booking." in html, "Booking confirmation boundary missing")
+check("ONLY NAKEBUSEN TRANSACTS" not in html.upper(), "Internal transaction wording must not appear in public copy")
 
 for href in p.hrefs:
     if href.startswith("#"):
@@ -85,6 +96,8 @@ for href in p.hrefs:
         or href.startswith("mailto:")
     ):
         check(False, f"Unsupported or malformed link: {href}")
+
+check("NAKEBUSEN Locs • Digital</strong><br>Powered by WARENA<br>@donfelohke · #HisGenjeness" in html, "Canonical three-line NAKEBUSEN brand lockup missing")
 
 for expected in ("KES 700", "KES 1,500", "KES 3,500", "Retouch", "Sisterlocs", "Artificial"):
     check(expected in html, f"Public service catalogue missing token: {expected}")
