@@ -67,6 +67,8 @@ check('navLocCare:"Locs"' in html and 'navDigital:"Digital"' in html, "Kiswahili
 check('section[id],.hero[id]{scroll-margin-top:9rem}' in html, "Mobile section anchors must account for sticky header height")
 check('price700:"From KES 700"' in html and 'price1500:"From KES 1,500"' in html and 'price3500:"From KES 3,500"' in html, "English price translations must be present")
 check(p.h1_count == 1, f"Expected one h1, found {p.h1_count}")
+check('Your beauty. Your way.' in html, "Rebranded homepage headline must be present")
+check(html.count('<article class="pillar"') == 2, "Homepage must present exactly two primary service paths")
 check("description" in p.metas and len(p.metas["description"]) >= 50, "Missing or too-short meta description")
 check(
     any(link.get("rel") == "canonical" and link.get("href") == "https://donfelohke.github.io/" for link in p.links),
