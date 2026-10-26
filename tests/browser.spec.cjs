@@ -60,3 +60,21 @@ test("theme, language, and enquiry paths work in the browser", async ({ page }) 
   expect(techHref).toContain("wa.me/254719635415");
   expect(techHref).not.toBe(locHref);
 });
+
+test("deployed GitHub Pages homepage is reachable and readable on mobile", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const response = await page.goto("https://donfelohke.github.io/", {
+    waitUntil: "networkidle",
+    timeout: 45000,
+  });
+  expect(response, "GitHub Pages should return an HTTP response").toBeTruthy();
+  expect(response.status(), "GitHub Pages should return a successful response").toBeLessThan(400);
+  await expect(page.locator("header")).toBeVisible();
+  await expect(page.locator("h1")).toBeVisible();
+  const metrics = await page.evaluate(() => ({
+    viewport: document.documentElement.clientWidth,
+    document: document.documentElement.scrollWidth,
+  }));
+  expect(metrics.document, "deployed page should not overflow horizontally at 390px").toBeLessThanOrEqual(metrics.viewport);
+  await page.screenshot({ path: path.join(evidenceDir, "live-mobile-390.png"), fullPage: true });
+});
