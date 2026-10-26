@@ -60,7 +60,7 @@ h3{font-size:1.02rem;margin:0 0 .35rem}.section-kicker{font:700 .7rem var(--mono
 footer{padding:2rem 0 3rem;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted)}
 .foot-links{display:flex;flex-wrap:wrap;gap:.35rem 1rem;margin:.75rem 0}.foot-links a{text-decoration:none}.foot-links a:hover{text-decoration:underline}
 .language-row{display:flex;align-items:center;gap:.5rem;margin:.8rem 0}
-@media(max-width:520px){.brand{max-width:7rem}.nav{align-items:flex-start}.nav-right{gap:.3rem}.nav-links{order:3;width:100%;justify-content:space-between}.nav-links a{min-height:2rem}.nav-cta{min-height:2.3rem}#theme-toggle,#language-toggle{min-height:2.3rem}}
+@media(max-width:520px){.brand{max-width:7rem}.nav{align-items:flex-start;gap:.5rem}.nav-right{gap:.3rem;min-width:0;max-width:100%}.nav-links{order:3;width:100%;justify-content:flex-start;gap:.1rem .7rem}.nav-links a{min-height:2.25rem}.nav-cta{min-height:2.3rem}#theme-toggle,#language-toggle{min-height:2.3rem}}\n@media(min-width:521px){section[id],.hero[id]{scroll-margin-top:5rem}}\n@media(max-width:520px){section[id],.hero[id]{scroll-margin-top:9rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 <script>
@@ -70,7 +70,7 @@ function dark(){return theme==="dark"||(theme==="system"&&media.matches)}
 function applyTheme(value){theme=value;if(theme==="system")root.removeAttribute("data-theme");else root.setAttribute("data-theme",theme);if(meta)meta.setAttribute("content",dark()?"#171715":"#F2EFEA");const b=document.getElementById("theme-toggle");if(b){b.textContent=dark()?"Light":"Dark";b.setAttribute("aria-label",dark()?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",String(dark()))}}
 const copy={
 sw:{
-skip:"Ruka hadi kwenye maudhui",navMain:"Menyu kuu",locs:"Locs",systems:"Mifumo",genje:"GENJE",founder:"Mwanzilishi",contact:"Mawasiliano",whatsapp:"WhatsApp",
+skip:"Ruka hadi kwenye maudhui",navMain:"Menyu kuu",navLocCare:"Locs",navDigital:"Digital",navCulture:"Utamaduni",navAbout:"Kuhusu",navContact:"Wasiliana",locs:"Locs",systems:"Mifumo",genje:"GENJE",founder:"Mwanzilishi",contact:"Mawasiliano",whatsapp:"WhatsApp",
 eyebrow:"Huduma za loc · Eldoret Town / Karibu Mdosi · Kenya",heroTitle:"Huduma za loc Eldoret. Teknolojia ya vitendo.",tagline:"Retouch, styling na kufunga locs Eldoret.",locsCardTitle:"Huduma za loc",locQuote:"Loc zako. Utunzaji wa makini.",
 lead:"Retouch, styling, Sisterlocs retie na kufunga artificial locs — kwa bei za kuanzia zilizo wazi na uthibitisho wa miadi kupitia WhatsApp.",
 boundary:"Imeanzishwa na Felix Lwova — Don Feloh. Ombi si miadi iliyothibitishwa.",
@@ -81,7 +81,7 @@ genjeKicker:"03 — GENJE ZA WARENA",genjeTitle:"Penye NIA, Pana Njia.",genjeQuo
 craft:"UFUNDI | GLORY",founderTitle:"Felix Lwova · Don Feloh",author:"Binadamu hubaki kuwa mwandishi.",founderDesc:"Loctician, fundi wa kucha, mtaalamu wa mifumo ya GNU/Linux na mbunifu wa teknolojia.",connectKicker:"WASILIANA",connectTitle:"Tuanze kwa mazungumzo.",connectDesc:"Huduma za loc — omba miadi. Mifumo — eleza tatizo na matokeo unayohitaji. Utafiti au ubunifu — wasiliana na Don Feloh.",role:"Mwanzilishi · CTO · Loctician · Mbunifu wa Teknolojia",email:"Barua pepe",location:"Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya · maeneo mengine kwa makubaliano",footerLine:"Mzizi unakuwa mfumo unaofanya kazi. Binadamu hubaki kuwa mwandishi.",language:"Lugha",gallery:"Gallery",source:"Chanzo",skip:"Ruka hadi kwenye maudhui"
 },
 en:{
-skip:"Skip to content",navMain:"Main",locs:"Locs",systems:"Systems",genje:"GENJE",founder:"Founder",contact:"Contact",whatsapp:"WhatsApp",
+skip:"Skip to content",navMain:"Main navigation",navLocCare:"Loc Care",navDigital:"Digital",navCulture:"Culture",navAbout:"About",navContact:"Contact",locs:"Locs",systems:"Systems",genje:"GENJE",founder:"Founder",contact:"Contact",whatsapp:"WhatsApp",
 eyebrow:"Loc care · Eldoret Town / Karibu Mdosi · Kenya",heroTitle:"Loc care in Eldoret. Practical technology that works.",tagline:"Retouching, loc styling and installation in Eldoret.",locsCardTitle:"Loc care",locQuote:"Your locs. Considered care.",
 lead:"Retouching, styling, Sisterlocs retightening and artificial loc installation — with clear starting prices and personal confirmation on WhatsApp.",
 boundary:"Founded by Felix Lwova — Don Feloh. Enquiry is not a booking.",
@@ -103,7 +103,7 @@ applyTheme(theme);if(document.readyState==="loading")document.addEventListener("
 <a class="brand" href="#top">NAKEBUSEN <span>@donfelohke</span></a>
 <div class="nav-right">
 <nav class="nav-links" aria-label="Menyu kuu" data-i18n-aria="navMain">
-<a href="#crown" data-i18n="locs">Locs</a><a href="#code" data-i18n="systems">Mifumo</a><a href="#genje" data-i18n="genje">GENJE</a><a href="#founder" data-i18n="founder">Mwanzilishi</a><a href="#connect" data-i18n="contact">Mawasiliano</a>
+<a href="#crown" data-i18n="navLocCare">Locs</a><a href="#code" data-i18n="navDigital">Digital</a><a href="#genje" data-i18n="navCulture">Utamaduni</a><a href="#founder" data-i18n="navAbout">Kuhusu</a><a href="#connect" data-i18n="navContact">Wasiliana</a>
 </nav>
 <a class="nav-cta" data-wa-purpose="loc" href="https://wa.me/254719635415?text=Hello%20NAKEBUSEN%20—%20loc%20care%20enquiry" data-i18n="whatsapp">WhatsApp</a>
 <button type="button" id="language-toggle" aria-label="Switch language to Kiswahili">English</button>
