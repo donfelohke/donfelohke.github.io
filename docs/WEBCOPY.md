@@ -2,7 +2,7 @@
 
 **Status:** Proposed editorial source for review. This file documents recommended copy; it does not itself change the live website.  
 **Language policy:** Kiswahili is the default. English is available through a persistent, accessible language toggle. Keep the visitor's selected language across pages where technically feasible, without requiring an account.  
-**Commercial boundary:** ONLY NAKEBUSEN TRANSACTS. Clearly distinguish available services from research, concepts and work in progress.
+**Commercial boundary:** Customer-facing bookings and transactions are handled directly through NAKEBUSEN. Clearly distinguish available services from research, concepts and work in progress.
 
 ## Editorial principles
 
