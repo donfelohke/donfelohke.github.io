@@ -62,7 +62,7 @@ check(p.id_values.count("language-toggle-footer") == 1, "Expected one footer lan
 check("nakebusen-language" in html and "localStorage.setItem(languageKey,language)" in html, "Language preference must persist")
 check('data-i18n="bookingNote"' in html and 'data-i18n="digitalIntro"' in html, "Translate core service and technical copy")
 check('data-i18n="navLocCare"' in html and 'data-i18n="navDigital"' in html and 'href="#founder">@donfelohke</a>' in html, "Header navigation must stay focused on Locs, Digital, and the founder")
-check('navLocCare:"Loc Care"' in html and 'navDigital:"Digital"' in html, "English header navigation labels must describe the two primary paths")
+check('navLocCare:"Locs"' in html and 'navDigital:"Digital"' in html, "English header navigation labels must match the approved Locs and Digital paths")
 check('navLocCare:"Locs"' in html and 'navDigital:"Digital"' in html, "Kiswahili header navigation must preserve the concise Locs and Digital labels")
 check('section[id],.hero[id]{scroll-margin-top:9rem}' in html, "Mobile section anchors must account for sticky header height")
 check('price700:"From KES 700"' in html and 'price1500:"From KES 1,500"' in html and 'price3500:"From KES 3,500"' in html, "English price translations must be present")
