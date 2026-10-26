@@ -71,7 +71,7 @@ check(p.form_count == 0, "Do not add a fake booking form")
 check("wa.me/254719635415" in html, "WhatsApp enquiry link required")
 internal_boundary_phrase = " ".join(("ONLY", "NAKEBUSEN", "TRANSACTS"))
 check(internal_boundary_phrase not in html.upper(), "Do not expose internal transaction-boundary wording in public copy")
-check("Enquiry is not a booking." in html, "Booking confirmation boundary missing")
+check("Enquiry is not a booking." in html, "Booking confirmation boundary missing")\ncheck("NAKEBUSEN Locs • Digital" in html, "Canonical NAKEBUSEN brand name missing")\ncheck("Powered by WARENA" in html, "WARENA attribution missing")\ncheck("@donfelohke · #HisGenjeness" in html, "Creator signature missing")\ncheck("NAKEBUSEN Locs • Digital — Powered by WARENA | @donfelohke #HisGenjeness" in html, "Canonical page title missing")
 
 for href in p.hrefs:
     if href.startswith("#"):
