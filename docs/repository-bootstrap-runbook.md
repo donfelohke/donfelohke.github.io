@@ -8,7 +8,7 @@ This runbook turns the repository plan into an auditable sequence. It distinguis
 2. Use one repository per independently maintained product or corpus; keep integrations and reproducible configuration in first-party repositories rather than forking upstream projects without a concrete patch.
 3. Use least privilege. Do not grant blanket write access to third-party apps or every repository unless the specific workflow requires it and the owner deliberately approves it.
 4. Never commit tokens, private customer information, private client photos, payment records, or production secrets.
-5. Keep public portfolio and enquiry pages informational. **ONLY NAKEBUSEN TRANSACTS**; this repository does not collect bookings or payments.
+5. Keep public portfolio and enquiry pages informational. Customer-facing bookings and transactions are handled directly through NAKEBUSEN.; this repository does not collect bookings or payments.
 6. Keep IKAI non-diagnostic and non-surveillant: no face identification, covert monitoring, scoring, or hidden profiling.
 7. Preserve upstream licences and notices. Choose a licence for first-party work only after confirming ownership and compatibility.
 
