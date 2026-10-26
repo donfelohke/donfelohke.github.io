@@ -1,6 +1,6 @@
 # NAKEBUSEN Website Design and Engineering Standards
 
-Status: approved project constraint; implementation evidence must be recorded separately.
+Status: approved project constraints; implementation and release evidence must be recorded separately.
 
 ## Non-negotiable presentation rule
 
@@ -26,12 +26,24 @@ The separate Gallery repository is the home for visual assets. The website may l
 
 ## Language and localisation
 
-- Kiswahili (`sw`) is the default language on the public homepage; English (`en`) is available through a text-only language toggle in both the header and footer.
+**Release-blocking policy conflict — explicit owner decision required.**
+
+The repository has inconsistent default-language guidance:
+- `README.md` currently states that English (`en`) is the default and primary language.
+- Earlier wording in this standards document stated that Kiswahili (`sw`) is the public homepage default.
+- The homepage implementation has been reviewed as English-default.
+
+Do not silently choose a policy or treat these statements as reconciled. Until the site owner explicitly decides the default, record the language-policy release gate as **Blocked**. After the decision, align the homepage implementation, README, this document, translations, and automated tests before release.
+
+Once the policy is approved:
+
+- Provide a clearly labelled, text-only language toggle in the header and footer.
 - Both controls must perform the same action and share one preference stored under `nakebusen-language`; do not duplicate language state or use duplicate HTML IDs.
-- Update `html lang`, visible navigation and page copy, page title, description and social description when the language changes.
-- Keep language preference independent of the light/dark theme preference. If storage is unavailable, the page must remain usable with Kiswahili as the default.
+- Update `html lang`, all visible translated copy, page title, description and relevant social-description metadata according to the approved language policy.
+- Keep language preference independent of the light/dark theme preference.
+- If storage is unavailable, the page must remain usable and follow the approved default/fallback behaviour.
 - Every public content change must update both language dictionaries and preserve service prices, booking disclaimers, brand names and technical maturity labels.
-- Prefer natural Kenyan Kiswahili; keep well-understood service/technical terms where translation would reduce clarity. Treat human review as a release task.
+- Prefer natural Kenyan Kiswahili; keep well-understood service/technical terms where translation would reduce clarity. Human review is a release task.
 
 ## Accessibility and usability
 
@@ -39,6 +51,7 @@ The separate Gallery repository is the home for visual assets. The website may l
 - Maintain visible keyboard focus and logical navigation.
 - Use semantic HTML and descriptive link text.
 - Ensure both themes have sufficient text and control contrast.
+- Test theme and language controls for coherent accessible names, roles and state announcements.
 - Do not add a fake booking form. An enquiry does not equal a confirmed booking or payment.
 
 ## Content integrity
@@ -58,11 +71,16 @@ The separate Gallery repository is the home for visual assets. The website may l
 
 ## Release gates
 
-1. Run `python3 tests/test_site.py`.
-2. Run `node tests/theme-toggle.test.cjs`.
-3. Review the diff for accidental graphics, stale pricing, and unsupported claims.
-4. Verify mobile and desktop rendering, keyboard operation, and both theme states in a real browser.
-5. Inspect the GitHub Actions result and verify the deployed site separately.
-6. Record repository evidence, automated test results, and live-browser verification as distinct statuses.
+Use the complete test matrix, result definitions and evidence template in [NAKEBUSEN Browser-Based Release Checklist](NAKEBUSEN-BROWSER-RELEASE-CHECKLIST.md).
 
-A passing static test is not proof of live visual correctness. Do not claim browser testing or deployment verification without evidence.
+1. Resolve the default-language policy conflict and align documentation, implementation and tests.
+2. Run `python3 tests/test_site.py`.
+3. Run `node tests/theme-toggle.test.cjs`.
+4. Review the diff for accidental graphics, stale pricing, inconsistent translations and unsupported claims.
+5. Verify responsive rendering at 320, 360, 390 and 430 CSS-pixel widths plus desktop layouts in available real browsers.
+6. Verify visible translations, language metadata, both theme states, preference persistence/fallback, keyboard access and relevant assistive-technology behaviour.
+7. Verify service prices, contact links, WhatsApp handoff and booking disclaimers.
+8. Inspect the GitHub Actions result and record browser QA separately from static CI results.
+9. Verify the deployed site only after a separately approved release; record the live URL, deployed commit, browser/device and evidence.
+
+A passing static test is not proof of real-browser correctness or live visual correctness. Do not claim browser testing or deployment verification without evidence. The checklist does not itself authorise merging, closing a pull request, or deploying.
