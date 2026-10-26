@@ -95,3 +95,13 @@ Before contributing:
 ## Delivery status
 
 Record the PR, commit, successful workflow run and live visual verification separately. Do not claim desktop/mobile rendering was tested unless screenshots or browser-test evidence exists.
+
+---
+
+## Canonical architecture update — 2026-10-26
+
+This repository is the public view, not the canonical knowledge base. The current structure is **FELOH → NAKEBUSEN → NAKEBUSEN LOCS + NAKEBUSEN DIGITAL**. WARENA is the technical identity of NAKEBUSEN DIGITAL; WARENA Systems covers systems engineering and infrastructure. IKAI Mirror is reflective-computing research. **GENJE ZA WARENA — “The Fire of the Formidable”** is the current cultural identity and motivating idea for the former NIA naming frame, not another commercial division.
+
+**Commercial rule: ONLY NAKEBUSEN TRANSACTS.** This site presents approved services and routes enquiries; an enquiry is not a booking. Preserve current Eldoret campaign prices: Retouch & Styling **KES 700** and Artificial Locs Installation **KES 3,500**. Do not advertise shaving or braiding. Do not present concepts as deployed products or generated/stock imagery as client evidence. The governing principle remains **“The root becomes the runtime.”** AI suggests; the human decides.
+
+For shared definitions and decision provenance, see the [FELOH Sovereign Corpus canonical architecture](https://github.com/donfelohke/feloh-corpus/blob/main/docs/canonical-architecture-2026-10-26.md).
