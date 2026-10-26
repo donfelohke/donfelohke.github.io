@@ -66,3 +66,14 @@ The separate Gallery repository is the home for visual assets. The website may l
 6. Record repository evidence, automated test results, and live-browser verification as distinct statuses.
 
 A passing static test is not proof of live visual correctness. Do not claim browser testing or deployment verification without evidence.
+
+## Navigation and brand UX
+
+- Keep the global navigation short, descriptive and in the same order in both languages: **Loc Care, Digital, Culture, About, Contact** (Kiswahili: **Locs, Digital, Utamaduni, Kuhusu, Wasiliana**).
+- Navigation labels describe destinations, not internal brand shorthand. Preserve GENJE as the section identity while giving the destination a meaningful navigation label.
+- Keep the primary conversion action visually distinct: WhatsApp is the loc-care enquiry path; the hero and service section must retain the prices and the statement that an enquiry is not a confirmed booking.
+- Keep the canonical three-line brand lockup intact in the page content: **NAKEBUSEN Locs • Digital / Powered by WARENA / @donfelohke · #HisGenjeness**. Do not force the entire lockup into the narrow header if it causes wrapping or competes with the enquiry action.
+- Sticky-header anchor targets must leave the target heading visible after navigation, especially on narrow viewports.
+- Do not introduce a hamburger menu unless real content density requires it. For this single-page site, visible links are preferred because they keep destinations discoverable and avoid adding menu state.
+- Validate the actual header at 320, 360, 390, 430, 521, 760, 1024 and 1440 CSS pixels. Check wrapping, horizontal overflow, target spacing, keyboard focus, browser zoom to 200%, both languages and both theme modes.
+- The default-language decision remains a release-blocking governance issue until the homepage, README, standards and tests agree. This navigation change does not decide whether English or Kiswahili is the default.
