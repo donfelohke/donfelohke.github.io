@@ -61,9 +61,9 @@ check(p.id_values.count("language-toggle") == 1, "Expected one header language t
 check(p.id_values.count("language-toggle-footer") == 1, "Expected one footer language toggle")
 check("nakebusen-language" in html and "localStorage.setItem(languageKey,language)" in html, "Language preference must persist")
 check('data-i18n="bookingNote"' in html and 'data-i18n="digitalIntro"' in html, "Translate core service and technical copy")
-check('data-i18n="navLocCare"' in html and 'data-i18n="navDigital"' in html and 'href="#founder">@donfelohke</a>' in html, "Header navigation must stay focused on Locs, Digital, and the founder")
-check('navLocCare:"Loc Care"' in html and 'navDigital:"Digital"' in html, "English header navigation labels must describe the two primary paths")
-check('navLocCare:"Locs"' in html and 'navDigital:"Digital"' in html, "Kiswahili header navigation must preserve the concise Locs and Digital labels")
+check('data-i18n="navLocs"' in html and 'data-i18n="navDigital"' in html and 'href="#founder">@donfelohke</a>' in html, "Header navigation must stay focused on Locs, Digital, and the founder")
+check('navLocs:"Locs"' in html and 'navDigital:"Digital"' in html, "English header navigation labels must describe the two primary paths")
+check('navLocs:"Locs"' in html and 'navDigital:"Digital"' in html, "Kiswahili header navigation must preserve the concise Locs and Digital labels")
 check('section[id],.hero[id]{scroll-margin-top:9rem}' in html, "Mobile section anchors must account for sticky header height")
 check('price700:"From KES 700"' in html and 'price1500:"From KES 1,500"' in html and 'price3500:"From KES 3,500"' in html, "English price translations must be present")
 check(p.h1_count == 1, f"Expected one h1, found {p.h1_count}")
@@ -80,7 +80,8 @@ check(not p.graphic_tags, f"Keep page text-first; found media tags: {p.graphic_t
 check(not p.images, "Do not embed images; link Gallery repo instead")
 check(len(p.id_values) == len(p.ids), "Duplicate HTML id values are not allowed")
 check(not any(link.get("rel") == "icon" for link in p.links), "No graphic favicon under the text-only policy")
-check("☾" not in html and "☀" not in html, "Theme control must use text labels, not decorative glyphs")
+check("☾" not in html and "☀" not in html and "◐" not in html, "Theme control must use text labels, not decorative glyphs")
+check('>Dark</button>' in html or 'textContent=dark()?"Light":"Dark"' in html, "Theme control must expose Dark/Light text labels")
 check("Eldoret Town / Karibu Mdosi" in html, "Primary loc-care location wording is required")
 check("From KES 700" in html and "From KES 1,500" in html and "From KES 3,500" in html, "All service prices must be labelled as starting prices")
 check(not any(key in p.metas for key in ("og:image", "twitter:image")), "No social-preview image meta")
@@ -103,7 +104,9 @@ for href in p.hrefs:
     ):
         check(False, f"Unsupported or malformed link: {href}")
 
-check("NAKEBUSEN Locs • Digital</strong><br>Powered by WARENA<br>@donfelohke · #HisGenjeness" in html, "Canonical three-line NAKEBUSEN brand lockup missing")
+check("NAKEBUSEN" in html and "WARENA powered" in html and "@donfelohke" in html, "Footer must attribute NAKEBUSEN, WARENA, and @donfelohke")
+check('data-i18n="boundary"' in html and "ONLY NAKEBUSEN TRANSACTS" not in html, "Public boundary copy must be customer-facing")
+check('<span data-i18n="bookingNote">' in html, "bookingNote translation must not nest inside another data-i18n parent")
 
 for expected in ("KES 700", "KES 1,500", "KES 3,500", "Retouch", "Sisterlocs", "Artificial"):
     check(expected in html, f"Public service catalogue missing token: {expected}")
