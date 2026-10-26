@@ -40,6 +40,6 @@
 ## Rules preserved
 
 - Text-first / no embedded graphics  
-- Customer-facing bookings and transactions are handled directly through NAKEBUSEN · enquiry ≠ booking  
+- Enquiry does not confirm a booking; availability and final pricing are confirmed directly  
 - IKAI = WIP only  
 - Prices not silently changed  
