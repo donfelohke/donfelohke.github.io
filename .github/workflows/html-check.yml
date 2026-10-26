@@ -20,15 +20,9 @@ jobs:
           test -f tests/test_site.py
           test -f tests/check-inline-js.cjs
           test -f tests/theme-toggle.test.cjs
-          test -f tests/check-inline-js.cjs
-          test -f tests/theme-toggle.test.cjs
       - name: Parse and validate HTML, internal links, metadata and service catalogue
         run: python3 tests/test_site.py
       - name: Parse inline JavaScript without executing it
         run: node tests/check-inline-js.cjs
       - name: Verify theme and language preference behavior
-        run: node tests/theme-toggle.test.cjs
-      - name: Parse inline JavaScript without executing it
-        run: node tests/check-inline-js.cjs
-      - name: Verify theme preference behavior
         run: node tests/theme-toggle.test.cjs
