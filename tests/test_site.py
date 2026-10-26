@@ -64,7 +64,7 @@ nav = html.split('<nav class="nav-links"', 1)[1].split("</nav>", 1)[0]
 check(nav.count("<a ") == 3, f"Expected three primary navigation links, found {nav.count('<a ')}")
 check('navLocCare:"Loc Care"' in html and 'navDigital:"Digital"' in html and 'navAbout:"@donfelohke"' in html, "English navigation labels must match approved destinations")
 check('navLocCare:"Locs"' in html and 'navDigital:"Digital"' in html and 'navAbout:"@donfelohke"' in html, "Kiswahili navigation labels must match approved destinations")
-check("\\n@media" not in html, "CSS must not contain a literal \\n sequence between rules")
+check(r"\n@media" not in html, "CSS must not contain a literal escaped newline between rules")
 check('section[id],.hero[id]{scroll-margin-top:9rem}' in html, "Mobile section anchors must account for sticky header height")
 check('price700:"From KES 700"' in html and 'price1500:"From KES 1,500"' in html and 'price3500:"From KES 3,500"' in html, "English price translations must be present")
 check(p.h1_count == 1, f"Expected one h1, found {p.h1_count}")
