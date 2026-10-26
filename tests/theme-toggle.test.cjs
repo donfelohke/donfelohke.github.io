@@ -113,14 +113,15 @@ assert.equal(system.themeButton.textContent, "Dark", "system preference changes 
 
 const language = boot();
 assert.equal(language.root.lang, "en", "English is the default language");
-assert.match(language.twitterDescriptionMeta.content, /NAKEBUSEN Locs • Digital/);
+assert.match(language.twitterDescriptionMeta.content, /Loc care in Eldoret/);
 assert.match(language.ogTitleMeta.content, /NAKEBUSEN Locs • Digital/);
 assert.match(language.twitterTitleMeta.content, /NAKEBUSEN Locs • Digital/);
 assert.equal(language.headerLanguageButton.textContent, "Kiswahili");
 language.headerLanguageButton.listeners.click();
 assert.equal(language.root.lang, "sw", "header toggle switches to Kiswahili");
 assert.equal(language.values["nakebusen-language"], "sw", "language choice persists");
-assert.match(language.twitterDescriptionMeta.content, /NAKEBUSEN Locs • Digital/);
+assert.match(language.twitterDescriptionMeta.content, /Huduma za loc/);
+assert.match(language.twitterDescriptionMeta.content, /Huduma za loc/);
 assert.match(language.ogTitleMeta.content, /NAKEBUSEN Locs • Digital/);
 assert.match(language.twitterTitleMeta.content, /NAKEBUSEN Locs • Digital/);
 assert.equal(language.headerLanguageButton.textContent, "English");
