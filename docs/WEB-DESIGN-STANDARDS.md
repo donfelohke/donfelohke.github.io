@@ -24,6 +24,15 @@ The separate Gallery repository is the home for visual assets. The website may l
 - Respect `prefers-reduced-motion`; do not add motion that delays content access.
 - Avoid external fonts, trackers, unnecessary JavaScript, and mandatory third-party assets.
 
+## Language and localisation
+
+- Kiswahili (`sw`) is the default language on the public homepage; English (`en`) is available through a text-only language toggle in both the header and footer.
+- Both controls must perform the same action and share one preference stored under `nakebusen-language`; do not duplicate language state or use duplicate HTML IDs.
+- Update `html lang`, visible navigation and page copy, page title, description and social description when the language changes.
+- Keep language preference independent of the light/dark theme preference. If storage is unavailable, the page must remain usable with Kiswahili as the default.
+- Every public content change must update both language dictionaries and preserve service prices, booking disclaimers, brand names and technical maturity labels.
+- Prefer natural Kenyan Kiswahili; keep well-understood service/technical terms where translation would reduce clarity. Treat human review as a release task.
+
 ## Accessibility and usability
 
 - Target WCAG 2.2 AA.
