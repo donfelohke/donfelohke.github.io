@@ -43,7 +43,22 @@ All listed prices are starting prices in Kenyan shillings; final quotes depend o
 - WhatsApp / telephone: 0719 635 415 — https://wa.me/254719635415
 - Handle: **@donfelohke**.
 
-Confirm availability, suitability, final price and timing directly. An enquiry is not a confirmed booking. Do not invent testimonials, certifications, clients or service guarantees. Braiding is not part of the current advertised service scope.
+Confirm availability, suitability, final price and timing directly. An enquiry is not a confirmed booking or accepted project. Do not invent testimonials, certifications, clients, service guarantees, durations or availability. Braiding is not part of the current advertised service scope.
+
+## Public brand and copy hierarchy
+
+Lead with the customer's need and the service offered; explain the internal brand philosophy only after the practical offer is clear.
+
+- **Master identity:** NAKEBUSEN Locs & Digital — Powered by WARENA — by @donfelohke.
+- **Core beauty message:** “Your Beauty. Your Way.” Loc care is the primary customer-facing beauty offer; use the verified Eldoret Town / Karibu Mdosi location phrase.
+- **Beauty conversion path:** service and starting price → scope/pricing caveat → WhatsApp enquiry → direct confirmation. An enquiry is not a confirmed appointment.
+- **Digital message:** “Practical technology. Greater digital independence.” Explain GNU/Linux, computer systems, networking, infrastructure and development workflows through concrete client needs and agreed deliverables.
+- **WARENA message:** “Freedom Is a System.” Describe maintainability, understandable systems and greater digital independence without promising unsupported outcomes.
+- **IKAI status:** reflective-compute research in progress; never imply that IKAI is a released product.
+- **GENJE / FELOH:** creative technology, living memory, movement and human authorship are supporting identity context, not substitutes for the service descriptions.
+- **Voice:** clear, grounded, specific and respectful. Avoid generic luxury claims, invented proof, unexplained jargon and inflated guarantees.
+- **Metadata:** keep the page title and descriptions aligned with loc care in Eldoret and practical technology powered by WARENA. The website's text-only asset policy remains in force.
+- **Language:** English is the default for global audiences. Kiswahili translations should preserve prices, service boundaries and enquiry caveats, and be reviewed for meaning and local usage.
 
 ## Website and assets
 
