@@ -1,33 +1,34 @@
 # Top navigation — final direction
 
-**Status:** Implemented baseline on `main` (2026-10-26)  
-**Research note:** Spec is research-backed; full Baymard-style lab validation is separate.
+**Status:** Implemented on `main` (2026-10-26)
 
 ## Structure
 
 | Position | Element | Behaviour |
 |----------|---------|----------|
-| Top left | NAKEBUSEN | Home (`#top`) |
-| Under brand | Locs • Digital | Descriptor only |
-| Top right | WA | WhatsApp enquiry · accessible name: *Contact NAKEBUSEN on WhatsApp* |
-| Top right | EN / SW | Language toggle (real translation) |
-| Top right | ◐ | Theme toggle · aria-label updates |
+| Top left | **NAKEBUSEN** | Home (`#top`) |
+| Under brand | Locs • Digital | Descriptor |
+| Top right | **WA** | WhatsApp · `aria-label`: Contact NAKEBUSEN on WhatsApp |
+| Top right | **EN / SW** | Language toggle |
+| Top right | **◐** | Theme toggle |
 | Second row | Locs · Digital · @donfelohke | Section anchors |
+| Desktop ≥900px | Single row | Brand · centred links · utilities |
 
 ## Mobile
 
-Two-tier: brand + utilities, then service links. No hamburger for three destinations.
+Two-tier layout. No hamburger for three destinations.
 
-## Touch & a11y
+## Behaviour
 
-- Utility controls ≥ 2.75rem (~44px) target  
-- Visible focus  
-- Sticky header with scroll-margin on sections  
-- `aria-current="true"` on the section in view (IntersectionObserver)  
+- Sticky header with section `scroll-margin`
+- Touch targets ≥ 2.75rem (~44px)
+- `aria-current="true"` via IntersectionObserver (`setupActiveNav`)
+- Theme preference in `localStorage`
 
-## Release checks (manual)
+## Release checklist (manual)
 
-- [ ] 320 / 360 / 390 px no collision  
-- [ ] WA / language / theme work  
-- [ ] Locs Digital @donfelohke land on correct headings  
-- [ ] Sticky does not hide focused content  
+- [ ] 320 / 360 / 390 px no collisions
+- [ ] WA / EN / theme work
+- [ ] Section links land on headings (not under sticky bar)
+- [ ] Keyboard focus visible
+- [ ] Active link updates while scrolling
