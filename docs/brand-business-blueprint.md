@@ -11,6 +11,14 @@ Make the ecosystem understandable to first-time visitors while preserving the de
 
 ## 2. Brand architecture
 
+### Canonical public lockup
+
+> NAKEBUSEN Locs • Digital  
+> Powered by WARENA  
+> @donfelohke · #HisGenjeness
+
+Use this exact three-line lockup in public-facing brand placements. NAKEBUSEN is the customer-facing Locs and Digital brand; WARENA powers Digital; @donfelohke · #HisGenjeness is the creator signature.
+
 - **FELOH / Don Feloh:** human author, founder/CTO, integrator and creative practitioner.
 - **NAKEBUSEN:** human-facing care, craft, livelihood, customer relationship and sole commercial transaction boundary.
 - **WARENA:** systems engineering, GNU/Linux, reproducible and local-first infrastructure, networking, storage, recovery and operational handover.
