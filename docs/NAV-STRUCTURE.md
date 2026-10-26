@@ -1,45 +1,33 @@
-# Approved navigation structure
+# NAKEBUSEN — Top navigation (final direction)
 
-**Status:** LIVE direction · 26 October 2026  
-**Applies to:** `index.html` header + footer
+**Status:** Implemented baseline on `main` · 2026-10-26  
+**Research note:** Baymard mobile nav findings support clear scope and meaningful links; this doc is the site spec, not a claim that every viewport was lab-tested.
 
-## Header (mobile-first)
+## Structure
 
-| Zone | Content |
-|------|--------|
-| Left | **NAKEBUSEN** wordmark → `#top` |
-| Right | **WA** (aria-label WhatsApp) · **EN/SW** language · **Dark/Light** theme |
-| Second row | **Locs** · **Digital** · **@donfelohke** |
+| Position | Element | Behaviour |
+|----------|---------|----------|
+| Top left | NAKEBUSEN | Home (`#top`) |
+| Under brand | Locs • Digital | Descriptor only |
+| Top right | WA | WhatsApp · accessible name *Contact NAKEBUSEN on WhatsApp* |
+| Top right | EN / SW | Real language toggle |
+| Top right | ◐ | Theme toggle |
+| Second row (mobile / default) | Locs · Digital · @donfelohke | Section anchors |
+| ≥900px | Same elements, one horizontal row | Links centre; utilities right |
 
-No hamburger unless a future viewport forces it.
+## Rules
 
-## Hero
+- No hamburger for three primary destinations unless a future viewport test requires it.  
+- Touch targets ≈ 44×44 CSS px (`min-width/height: 2.75rem`).  
+- Sticky header with `scroll-padding-top` / section `scroll-margin-top` so headings stay visible.  
+- Active section: `aria-current="true"` via IntersectionObserver.  
+- Theme and language persist in `localStorage` (best effort).  
 
-- Brand context: NAKEBUSEN  
-- H1: *Your beauty. Your way.*  
-- Support: Loc care · Practical technology  
+## Verification checklist
 
-## Sections
-
-1. LOCS — services + KES starting prices + WhatsApp  
-2. DIGITAL — WARENA-powered systems  
-3. Founder / GENJE / IKAI (WIP) as supporting  
-4. Connect  
-
-## Footer
-
-- Prominent: **@donfelohke**  
-- Secondary: NAKEBUSEN · WARENA powered · #HisGenjeness  
-- Compact contact + social text links  
-- Optional footer language control synced with header  
-
-## Control behaviour
-
-- Language default **English**; toggle updates content + `lang` + metadata where supported  
-- Theme independent of language; readable contrast both modes  
-- Touch targets ≥ ~2.5rem min-height  
-- Keyboard focus visible  
-
-## Non-regressions
-
-ONLY NAKEBUSEN TRANSACTS · prices 700/1500/3500 · enquiry ≠ booking · text-first · IKAI WIP
+- [ ] Brand strongest; WARENA not in header competition  
+- [ ] 320 / 360 / 390 CSS px: no overlap  
+- [ ] WA, language, theme each work  
+- [ ] Keyboard focus visible; contrast OK  
+- [ ] Locs / Digital / @donfelohke land on correct sections  
+- [ ] Sticky: focused controls remain usable  
