@@ -12,4 +12,4 @@ This website repository owns:
 
 Shared brand rules and the transaction boundary remain defined in **feloh-corpus/BRAND-CONSTITUTION.md**.
 
-**ONLY NAKEBUSEN TRANSACTS.**
+**Customer-facing bookings and transactions are handled directly through NAKEBUSEN.**
