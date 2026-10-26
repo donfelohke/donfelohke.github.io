@@ -4,6 +4,16 @@ Repository: donfelohke/donfelohke.github.io
 Public URL: https://donfelohke.github.io/  
 Stable branch: main
 
+## Canonical public brand lockup
+
+Use this exact three-line lockup across the homepage, public copy and brand documentation:
+
+> NAKEBUSEN Locs • Digital  
+> Powered by WARENA  
+> @donfelohke · #HisGenjeness
+
+Keep the line order and wording exact. NAKEBUSEN is the customer-facing Locs and Digital brand; WARENA powers Digital; @donfelohke · #HisGenjeness is the creator signature.
+
 FELOH is the public doorway into NAKEBUSEN Locs, WARENA systems, IKAI Reflexive Compute, GENJE creative technology and the FELOH corpus.
 
 > FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
