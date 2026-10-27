@@ -460,6 +460,33 @@ header{
   .terminal-card:hover,.svc:hover,.footer-panel:hover,.btn:hover{transform:none}
 }
 
+
+/* NAKEBUSEN footer: editorial brand + clear Explore and Connect groups. */
+.minimal-footer{padding:1.65rem 0 calc(1rem + env(safe-area-inset-bottom,0px));}
+.minimal-footer .minimal-tagline{margin:.55rem 0 0;color:#F2EFEA;font:italic 1.15rem/1.3 var(--serif);}
+.minimal-footer .minimal-footer-group{min-width:0;}
+.minimal-footer .minimal-footer-label{margin:0 0 .25rem;color:#D4AF37;font:700 .68rem var(--mono);letter-spacing:.1em;text-transform:uppercase;}
+.minimal-footer .footer-nav{justify-content:flex-start;gap:.15rem .9rem;margin:.25rem 0 .4rem;}
+.minimal-footer .footer-contact-strip{margin:.25rem 0 .4rem;gap:.4rem;}
+.minimal-footer .footer-link{overflow-wrap:anywhere;}
+.minimal-footer .minimal-footer-signature{grid-column:1/-1;}
+.minimal-footer .footer-bottom{grid-column:1/-1;}
+@media(min-width:700px){
+ .minimal-footer>.wrap{grid-template-columns:minmax(0,1fr) auto minmax(0,1.35fr);align-items:start;gap:1rem 1.5rem;}
+ .minimal-footer .minimal-footer-brand{grid-column:1;grid-row:1;}
+ .minimal-footer .minimal-footer-group{grid-row:1;}
+ .minimal-footer .footer-nav{flex-direction:column;align-items:flex-start;gap:0;margin:.2rem 0;}
+ .minimal-footer .footer-nav a{min-height:2.25rem;}
+ .minimal-footer .footer-contact-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));}
+ .minimal-footer .footer-link{justify-content:flex-start;}
+ .minimal-footer .minimal-footer-signature,.minimal-footer .footer-bottom{grid-column:1/-1;}
+}
+@media(max-width:699px){
+ .minimal-footer .minimal-footer-group{padding-top:.25rem;}
+ .minimal-footer .footer-contact-strip{display:flex;}
+}
+@media(prefers-reduced-transparency:reduce){.minimal-footer{background:#10251D;}}
+
 </style>
 </head>
 <body>
@@ -630,11 +657,18 @@ header{
 <div class="minimal-footer-brand">
 <a class="minimal-wordmark" href="#top" aria-label="NAKEBUSEN home">NAKEBUSEN</a>
 <p class="minimal-brand-line">Locs · Powered by WARENA</p>
+<p class="minimal-tagline">Your Beauty ° Your Way.</p>
 </div>
+<div class="minimal-footer-group">
+<p class="minimal-footer-label">Explore</p>
 <nav class="footer-nav" aria-label="Footer navigation">
 <a href="#crown" data-i18n="navLocs">Locs</a><a href="#code" data-i18n="navDigital">Digital</a><a href="#connect" data-i18n="navConnect">Connect</a>
 </nav>
+</div>
+<div class="minimal-footer-group minimal-contact-group">
+<p class="minimal-footer-label">Connect</p>
 <div class="footer-contact-strip" aria-label="Contact NAKEBUSEN"><a class="footer-link" href="https://wa.me/254719635415">WhatsApp +254 719 635 415</a><a class="footer-link" href="tel:+254719635415">Call 0719 635 415</a><a class="footer-link" href="mailto:mela9ine@proton.me">Email</a><a class="footer-link" href="https://github.com/donfelohke/donfelohke.github.io">GitHub / Source</a></div>
+</div>
 <div class="minimal-footer-signature">
 <p>GRACE · GRIT · GLORY</p>
 <p><a href="https://github.com/donfelohke" rel="noopener">@donfelohke</a> · <span>#HisGenjeness</span></p>
