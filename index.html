@@ -148,6 +148,18 @@ header{background:var(--paper);box-shadow:0 4px 18px rgba(20,37,29,.06)}
 section{padding:clamp(2.5rem,6vw,4rem) 0}
 #paths{border-top:1px solid var(--line)}
 #code{background:var(--forest);color:var(--ivory)}
+/* Digital practice: individual terminal-green glass panels, distinct from Locs clay cards. */
+#code .digital-grid{display:grid;grid-template-columns:1fr;gap:1rem;align-items:stretch}
+#code .group{display:flex;flex-direction:column;align-items:stretch;gap:.6rem;min-width:0;padding:1.1rem;border:1px solid rgba(121,215,210,.24);border-top:3px solid #79D7D2;border-radius:6px;background:linear-gradient(145deg,rgba(25,56,45,.96),rgba(16,37,29,.92));box-shadow:0 10px 28px rgba(0,0,0,.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+#code .group h3{color:#F2EFEA;border-bottom-color:rgba(121,215,210,.3);padding-bottom:.7rem}
+#code .group .list-plain{flex:1;padding-left:1.1rem}
+#code .group .list-plain li{padding:.18rem 0}
+#code .group .actions{margin-top:auto}
+#code .group .btn{border-color:rgba(121,215,210,.55);background:rgba(16,37,29,.5);color:#F2EFEA}
+#code .group .btn:hover{background:#79D7D2;color:#10251D}
+@media(min-width:700px){#code .digital-grid{grid-template-columns:repeat(3,minmax(0,1fr))}#code .group{padding:1.2rem}}
+@media(prefers-reduced-transparency:reduce){#code .group{backdrop-filter:none;-webkit-backdrop-filter:none;background:#19382D}}
+@media(prefers-reduced-motion:reduce){#code .group .btn{transition:none}}
 #code .group{padding-top:.35rem}
 #code .group h3{padding-bottom:.4rem;border-bottom:1px solid rgba(243,237,226,.24)}
 .svc{align-items:start}
