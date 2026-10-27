@@ -182,6 +182,11 @@ section{padding:clamp(2.5rem,6vw,4rem) 0}
 .hero{background:var(--forest);color:var(--ivory);padding:clamp(3.25rem,8vw,5.75rem) 0 3rem;border-top:0}
 .hero .eyebrow,.hero .section-kicker,.hero .muted{color:var(--sage)}
 .hero .hero-brand-label{color:var(--ochre)}
+.hero h1{max-width:13ch}
+.hero .tagline{margin:.5rem 0 .85rem;color:#E7B19A;font:500 clamp(1.1rem,2.5vw,1.35rem)/1.35 var(--serif)}
+.hero .lead{max-width:42rem}
+@media(prefers-reduced-motion:reduce){.hero{scroll-behavior:auto}}
+
 .hero .hero-prices{width:min(100%,39rem);margin:1.4rem 0 0;padding:1rem 1.1rem;border:1px solid rgba(243,237,226,.24);border-top:3px solid var(--ochre);border-radius:5px;background:linear-gradient(145deg,#1D3428,#14251D)}
 .hero .hero-prices-label{margin:0 0 .4rem;color:var(--ochre);font:700 .68rem var(--mono);letter-spacing:.1em}
 .hero .hero-price-row{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding:.65rem 0;border-bottom:1px solid rgba(243,237,226,.18);font-size:.92rem}
@@ -256,10 +261,12 @@ header .nav{padding:.55rem .7rem}
 </div></header>
 <main id="main">
 <section class="hero" id="top"><div class="wrap">
-<p class="eyebrow" data-i18n="eyebrow">Loc care · Eldoret Town / Karibu Mdosi · Kenya</p>
-<p class="section-kicker hero-brand-label" data-i18n="heroBrand">NAKEBUSEN / ELDORET, KENYA</p>
-<h1 data-i18n="tagline">Your Beauty ° Your Way.</h1>
-<p class="lead" data-i18n="lead">Natural loc care in Eldoret Town, alongside practical computer systems, Linux and networking services.</p>
+<p class="eyebrow" data-i18n="eyebrow">NAKEBUSEN LOCS · ELDORET</p>
+<p class="section-kicker hero-brand-label" data-i18n="heroBrand">NAKEBUSEN · BEAUTY · TECHNOLOGY</p>
+<h1 data-i18n="tagline">Your beauty. Your way.</h1>
+<p class="tagline" data-i18n="heroSubline">Rooted in craft. Built with intention.</p>
+<p class="lead" data-i18n="lead">Natural loc care, considered styling and practical digital systems — grounded in care, independence and craft.</p>
+<p class="small muted" data-i18n="heroStatus">Eldoret Town, Kenya · Loc services · Enquiries confirmed manually.</p>
 <div class="hero-prices" aria-label="Loc care starting prices">
 <p class="hero-prices-label" data-i18n="heroPriceTitle">LOC CARE · STARTING PRICES</p>
 <div class="hero-price-row"><span data-i18n="retouch">Retouch &amp; Styling</span><strong data-i18n="price700">KES 700</strong></div>
