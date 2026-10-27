@@ -87,6 +87,24 @@ section{padding:clamp(2.5rem,6vw,4rem) 0}
 .price{padding-top:.25rem}
 @media(max-width:520px){.hero{padding-top:2.8rem}.hero:after{right:1.5rem;top:3.4rem;width:3.5rem;opacity:.4} .svc{grid-template-columns:minmax(0,1fr) auto;gap:.5rem}.price{font-size:.82rem}.nav-links{padding-bottom:.25rem}}
 @media(prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+
+/* Individual glass-terminal service cards: selective glass, editorial hierarchy, accessible fallback. */
+.terminal-grid{grid-template-columns:1fr;gap:1rem;margin:1.2rem 0}
+.terminal-card{position:relative;display:flex;flex-direction:column;min-width:0;padding:1.15rem;border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:4px;background:color-mix(in srgb,var(--paper) 88%,transparent);box-shadow:0 10px 28px rgba(20,37,29,.07);overflow:hidden}
+@supports((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.terminal-card{backdrop-filter:blur(12px) saturate(120%);-webkit-backdrop-filter:blur(12px) saturate(120%)}}
+.terminal-top{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding-bottom:.8rem;margin-bottom:1rem;border-bottom:1px solid var(--line);font:700 .68rem var(--mono);letter-spacing:.07em}
+.terminal-index{color:var(--muted)}.terminal-state{color:var(--muted);border:1px solid var(--line);padding:.2rem .4rem;font-size:.6rem}
+.terminal-card h3{font:500 1.35rem/1.2 var(--serif);letter-spacing:-.015em;margin:0 0 .6rem}
+.terminal-card p{margin:.1rem 0 1.1rem;max-width:42ch}
+.terminal-bottom{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem;margin-top:auto;padding-top:.9rem;border-top:1px solid var(--line)}
+.terminal-price{font:700 1rem var(--mono);letter-spacing:-.035em}
+.terminal-link{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.5rem .75rem;border:1px solid var(--ink);border-radius:3px;text-decoration:none;font-size:.8rem;font-weight:700}
+.terminal-link:hover{background:color-mix(in srgb,var(--gold) 16%,var(--paper));border-color:var(--gold)}
+#crown .note{margin-top:1.2rem}
+@media(min-width:640px){.terminal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.terminal-card:last-child{grid-column:1/-1}.terminal-card:last-child .terminal-bottom{justify-content:space-between}}
+@media(min-width:900px){.terminal-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.terminal-card:last-child{grid-column:auto}}
+@media(prefers-reduced-motion:reduce){.terminal-link{transition:none}}
+
 </style>
 </head>
 <body>
@@ -147,10 +165,25 @@ section{padding:clamp(2.5rem,6vw,4rem) 0}
 <p class="section-kicker" data-i18n="crownKicker">Loc care · GRACE</p>
 <h2 data-i18n="locTitle">Loc care &amp; prices</h2>
 <p data-i18n="locIntro">Natural loc care, maintenance and styling in Eldoret Town / Karibu Mdosi.</p>\n<p class="small muted" data-i18n="noBraiding">No braiding offered.</p>
-<div class="services">
-<div class="svc"><div><h3 data-i18n="retouch">Retouch &amp; Styling</h3><p class="small muted" data-i18n="retouchDesc">Loc maintenance and styling tailored to the condition of your locs and the work required.</p></div><div class="price" data-i18n="price700">From KES 700</div></div>
-<div class="svc"><div><h3 data-i18n="sister">Sisterlocs Retie</h3><p class="small muted" data-i18n="sisterDesc">Retightening service. Enquire to confirm suitability and requirements.</p></div><div class="price" data-i18n="price1500">From KES 1,500</div></div>
-<div class="svc"><div><h3 data-i18n="artificial">Artificial Locs Installation</h3><p class="small muted" data-i18n="artDesc">Discuss your preferred style, materials and installation requirements before proceeding.</p></div><div class="price" data-i18n="price3500">From KES 3,500</div></div>
+<div class="service-grid terminal-grid" aria-label="Loc service registry">
+<article class="terminal-card">
+<div class="terminal-top"><span class="terminal-index">NB / LOC-01</span><span class="terminal-state">SERVICE</span></div>
+<h3 data-i18n="retouch">Retouch &amp; Styling</h3>
+<p class="small muted" data-i18n="retouchDesc">Loc maintenance and styling tailored to the condition of your locs and the work required.</p>
+<div class="terminal-bottom"><span class="terminal-price" data-i18n="price700">From KES 700</span><a class="terminal-link" data-wa-purpose="loc" href="https://wa.me/254719635415" data-i18n="enquireWa">Enquire on WhatsApp ↗</a></div>
+</article>
+<article class="terminal-card">
+<div class="terminal-top"><span class="terminal-index">NB / LOC-02</span><span class="terminal-state">SERVICE</span></div>
+<h3 data-i18n="sister">Sisterlocs Retie</h3>
+<p class="small muted" data-i18n="sisterDesc">Retightening service. Enquire to confirm suitability and requirements.</p>
+<div class="terminal-bottom"><span class="terminal-price" data-i18n="price1500">From KES 1,500</span><a class="terminal-link" data-wa-purpose="loc" href="https://wa.me/254719635415" data-i18n="enquireWa">Enquire on WhatsApp ↗</a></div>
+</article>
+<article class="terminal-card">
+<div class="terminal-top"><span class="terminal-index">NB / LOC-03</span><span class="terminal-state">SERVICE</span></div>
+<h3 data-i18n="artificial">Artificial Locs Installation</h3>
+<p class="small muted" data-i18n="artDesc">Discuss your preferred style, materials and installation requirements before proceeding.</p>
+<div class="terminal-bottom"><span class="terminal-price" data-i18n="price3500">From KES 3,500</span><a class="terminal-link" data-wa-purpose="loc" href="https://wa.me/254719635415" data-i18n="enquireWa">Enquire on WhatsApp ↗</a></div>
+</article>
 </div>
 <p class="note"><strong data-i18n="aboutPrices">About our prices.</strong> <span data-i18n="bookingNote">Starting points in Kenyan shillings. Final cost depends on the service, loc condition and materials. Availability is confirmed directly. An enquiry is not a confirmed booking.</span></p>
 <div class="actions">
