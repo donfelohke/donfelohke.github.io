@@ -1,6 +1,6 @@
 # Web design standards — donfelohke.github.io
 
-**Status:** LIVE · 26 October 2026
+**Status:** LIVE · aligned with `index.html` and `docs/NAV-STRUCTURE.md` · 27 October 2026
 
 ## Architecture
 
