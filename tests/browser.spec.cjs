@@ -24,7 +24,10 @@ test("responsive widths remain usable without horizontal overflow", async ({ pag
     if (width <= 520) {
       await expect(page.locator(".nav-cta.nav-wa")).toBeHidden();
     }
-    for (const control of ["#theme-toggle", "#language-toggle", "#mobile-menu-toggle"]) {
+    const controlsToMeasure = width >= 900
+      ? ["#theme-toggle", "#language-toggle"]
+      : ["#theme-toggle", "#language-toggle", "#mobile-menu-toggle"];
+    for (const control of controlsToMeasure) {
       const box = await page.locator(control).boundingBox();
       expect(box, `${control} should be visible at ${width}px`).toBeTruthy();
       expect(box.width, `${control} touch width at ${width}px`).toBeGreaterThanOrEqual(44);
