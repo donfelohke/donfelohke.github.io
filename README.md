@@ -9,7 +9,7 @@ Repository: `donfelohke/donfelohke.github.io` · default branch `main`
 
 This static site presents services and routes enquiries. It does **not** confirm appointments or process payments. Confirm scope, price, availability and timing directly.
 
-**Last README alignment:** 27 October 2026 (webpage audit).
+**Last README alignment:** 27 October 2026.
 
 ---
 
@@ -26,16 +26,16 @@ This static site presents services and routes enquiries. It does **not** confirm
 | [docs/NAV-STRUCTURE.md](docs/NAV-STRUCTURE.md) | Header / footer structure |
 | [docs/WEB-DESIGN-STANDARDS.md](docs/WEB-DESIGN-STANDARDS.md) | Web implementation standards |
 
-Deep philosophy: [feloh-corpus BRAND-CONSTITUTION](https://github.com/donfelohke/feloh-corpus/blob/main/BRAND-CONSTITUTION.md) · [canonical architecture](https://github.com/donfelohke/feloh-corpus/blob/main/docs/canonical-architecture-2026-10-26.md)
+[Brand constitution](https://github.com/donfelohke/feloh-corpus/blob/main/BRAND-CONSTITUTION.md) · [Canonical architecture](https://github.com/donfelohke/feloh-corpus/blob/main/docs/canonical-architecture-2026-10-26.md)
 
 ---
 
 ## Architecture
 
 - **NAKEBUSEN** — master brand · Locs • Digital  
-- **Locs** — GRACE · beauty · craft · **Eldoret Town / Karibu Mdosi**  
+- **Locs** — GRACE · **Eldoret Town / Karibu Mdosi**  
 - **Digital** — GRIT · powered by **WARENA**  
-- **@donfelohke · #HisGenjeness** — GLORY · human author  
+- **@donfelohke · #HisGenjeness** — GLORY  
 - **IKAI** — research / WIP · **not a product**  
 
 ---
@@ -55,17 +55,16 @@ WhatsApp / tel: **+254 719 635 415** · https://wa.me/254719635415
 
 ## Language
 
-**English default.** Kiswahili via accessible toggle. Same prices and boundaries in both languages. Unreviewed translations stay drafts.
+**English default.** Kiswahili via accessible toggle. Same prices and boundaries in both languages.
 
 ---
 
 ## Website rules
 
-- Text-first public page: **no embedded product photography or Gallery assets required to render**  
-- Gallery: text link only  
+- Text-first public page: no Gallery assets required to render  
 - No analytics / tracking pixels / required external CDN fonts  
 - Static HTML · progressive enhancement  
-- Inline UI icons for controls are allowed when accessible; do not add decorative image grids  
+- Accessible inline UI icons allowed; no decorative image grids  
 
 ---
 
@@ -74,14 +73,9 @@ WhatsApp / tel: **+254 719 635 415** · https://wa.me/254719635415
 - Git is source of truth; use PRs for meaningful changes  
 - Distinguish LIVE · PARTIAL · RESEARCH · PROPOSAL  
 - Never invent clients, metrics, or availability  
-- IKAI: no face-ID, diagnosis, scoring, or covert profiling  
 - Workflow green ≠ browser proof ≠ live Pages parity  
 
----
-
-## Integration queue (hygiene)
-
-Prefer **one** homepage integration branch at a time. Superseded webcopy/theme PRs should be closed with a short comment after unique content is ported or discarded. Documentation-only PRs may proceed independently.
+Prefer **one** homepage integration branch at a time. Close superseded webcopy PRs after porting or discarding unique content.
 
 Use [BRAND-IMPLEMENTATION-CHECKLIST.md](docs/BRAND-IMPLEMENTATION-CHECKLIST.md) before release.
 
