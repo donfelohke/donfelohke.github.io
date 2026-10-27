@@ -13,7 +13,12 @@ test("responsive widths remain usable without horizontal overflow", async ({ pag
     await page.setViewportSize({ width, height: 900 });
     const metrics = await page.evaluate(() => ({
       viewport: document.documentElement.clientWidth,
+      innerWidth: window.innerWidth,
       document: document.documentElement.scrollWidth,
+      bodyScroll: document.body.scrollWidth,
+      rootRect: document.documentElement.getBoundingClientRect().toJSON(),
+      bodyRect: document.body.getBoundingClientRect().toJSON(),
+      pseudo: ["html","body","header","main",".hero",".floating-nav","#floating-more-panel"].map(sel => { const el=document.querySelector(sel); if(!el)return {sel,missing:true}; const r=getComputedStyle(el,"::after"); return {sel,afterContent:r.content,afterWidth:r.width,afterRight:r.right,afterPosition:r.position}; }),
       overflow: [...document.querySelectorAll("body *")].filter(el => {
         const r = el.getBoundingClientRect();
         return r.width > 0 && (r.right > document.documentElement.clientWidth + 1 || r.left < -1 || el.scrollWidth > el.clientWidth + 1);
