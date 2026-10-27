@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — NAKEBUSEN-ng page/repository alignment
+- Aligned public header and footer navigation with the canonical four destinations: Locs, Digital, About and Connect.
+- Kept mobile quick navigation compact, with About and contact/source links in More.
+- Restored 44 × 44 CSS-pixel interactive targets for compact header controls while preserving small icon artwork.
+- Synchronized the live stylesheet palette with the documented forest, canopy, ivory, terracotta and ochre tokens.
+- Aligned navigation, design standards and implementation checklist with the page implementation.
+
 ## Unreleased — portfolio and repository documentation
 - Added the public FELOH landing page and canonical brand/service information.
 - Added governance, contribution, privacy, security, architecture, operations and setup documentation.
