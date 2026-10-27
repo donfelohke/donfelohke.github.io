@@ -236,6 +236,11 @@ header .nav{padding:.55rem .7rem}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.glass-card{background:var(--paper)}:root[data-theme="dark"] .terminal-card.glass-card{background:var(--canopy)}}
 @media(prefers-reduced-transparency:reduce){.glass-card,:root[data-theme="dark"] .terminal-card.glass-card{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--paper)}:root[data-theme="dark"] .terminal-card.glass-card{background:var(--canopy)}}
 
+/* Compact toggle appearance while preserving 44px accessible hit areas. */
+#theme-toggle,#language-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem;padding:0;border-color:transparent;background:radial-gradient(circle,transparent 9.5px,var(--line) 10px,var(--line) 10.75px,transparent 11.25px);font-size:.52rem;line-height:1}
+#theme-toggle{font-size:.52rem}
+#language-toggle{font-size:.5rem}
+#theme-toggle:hover,#language-toggle:hover{background:radial-gradient(circle,transparent 9.5px,var(--gold) 10px,var(--gold) 10.75px,transparent 11.25px);border-color:transparent}
 </style>
 </head>
 <body>
