@@ -64,9 +64,12 @@ test("theme, language, and enquiry paths work in the browser", async ({ page }) 
 test("integrated hero keeps beauty-first copy, starting prices, and enquiry boundary", async ({ page }) => {
   await page.goto(pageUrl);
   await expect(page.locator(".hero h1")).toHaveText("Your Beauty ° Your Way.");
-  await expect(page.locator(".hero [data-i18n='heroStatus']")).toHaveText("Eldoret Town / Karibu Mdosi, Kenya · Loc services · Enquiries confirmed manually.");
-  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Rooted in craft. Built with intention.");
+  await expect(page.locator(".hero [data-i18n='heroStatus']")).toHaveText("Loc care enquiries · Availability confirmed separately.");
+  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Thoughtful loc care. Practical digital services.");
   await expect(page.locator(".hero .hero-price-row")).toHaveCount(3);
+  await expect(page.locator("#repositories")).toBeAttached();
+  await expect(page.locator("#repositories a[href=\"https://github.com/donfelohke/NAKEBUSEN\"]")).toBeVisible();
+  await expect(page.locator("#repositories a[href=\"https://github.com/donfelohke/feloh-corpus\"]")).toBeVisible();
   await expect(page.locator(".hero")).toContainText("KES 700");
   await expect(page.locator(".hero")).toContainText("KES 1,500");
   await expect(page.locator(".hero")).toContainText("KES 3,500");
@@ -74,8 +77,8 @@ test("integrated hero keeps beauty-first copy, starting prices, and enquiry boun
   await expect(page.locator('.hero a[data-wa-purpose="loc"]')).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
   await page.locator("#language-toggle").click();
   await expect(page.locator(".hero h1")).toHaveText("Urembo wako ° Njia yako.");
-  await expect(page.locator(".hero [data-i18n='heroStatus']")).toHaveText("Eldoret Town / Karibu Mdosi, Kenya · Huduma za loc · Maombi yanathibitishwa moja kwa moja.");
-  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Imejikita kwenye ufundi. Imejengwa kwa kusudi.");
+  await expect(page.locator(".hero [data-i18n='heroStatus']")).toHaveText("Maulizo ya huduma za loc · Upatikanaji unathibitishwa moja kwa moja.");
+  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Huduma za loc kwa umakini. Huduma za kidijitali kwa vitendo.");
 });
 
 test("deployed GitHub Pages homepage is reachable and readable on mobile", async ({ page }) => {
