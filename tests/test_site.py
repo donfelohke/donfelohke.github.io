@@ -61,9 +61,9 @@ check(p.id_values.count("language-toggle") == 1, "Expected one header language t
 check(p.id_values.count("language-toggle-footer") == 1, "Expected one footer language toggle")
 check("nakebusen-language" in html and "localStorage.setItem(languageKey,language)" in html, "Language preference must persist")
 check('data-i18n="bookingNote"' in html and 'data-i18n="digitalIntro"' in html, "Translate core service and technical copy")
-check('data-i18n="navLocs"' in html and 'data-i18n="navDigital"' in html and '<a href="#founder" data-i18n="navAbout">About</a>' in html and '<a href="#connect" data-i18n="navConnect">Connect</a>' in html, "Header navigation must expose Locs, Digital, About, and Connect")
-check('navLocs:"Locs"' in html and 'navDigital:"Digital"' in html and 'navAbout:"About"' in html and 'navConnect:"Connect"' in html, "English navigation labels must match all four destinations")
-check('navLocs:"Locs"' in html and 'navDigital:"Digital"' in html and 'navAbout:"Kuhusu"' in html and 'navConnect:"Wasiliana"' in html, "Kiswahili navigation labels must cover all four destinations")
+check('<a href="#crown" data-i18n="navLocsLong">NAKEBUSEN Locs</a>' in html and '<a href="#code" data-i18n="navDigitalLong">NAKEBUSEN Digital</a>' in html and '<a href="#founder" data-i18n="navAbout">@donfeloh</a>' in html and '<a href="#connect" data-i18n="navConnect">Connect</a>' in html, "Header navigation must expose NAKEBUSEN Locs, NAKEBUSEN Digital, @donfeloh, and Connect")
+check('navLocsLong:"NAKEBUSEN Locs"' in html and 'navDigitalLong:"NAKEBUSEN Digital"' in html and 'navAbout:"@donfeloh"' in html and 'navConnect:"Connect"' in html, "English navigation labels must match the brand hierarchy")
+check('navLocsLong:"NAKEBUSEN Locs"' in html and 'navDigitalLong:"NAKEBUSEN Digital"' in html and 'navAbout:"@donfeloh"' in html and 'navConnect:"Wasiliana"' in html, "Kiswahili navigation labels must match the brand hierarchy")
 check('section[id],.hero[id]{scroll-margin-top:9rem}' in html, "Mobile section anchors must account for sticky header height")
 check('price700:"KES 700"' in html and 'price1500:"KES 1,500"' in html and 'price3500:"KES 3,500"' in html, "English price translations must match the current service catalogue")
 check(p.h1_count == 1, f"Expected one h1, found {p.h1_count}")
@@ -127,3 +127,7 @@ check("Sitemap: https://donfelohke.github.io/sitemap.xml" in robots, "robots.txt
 check("<loc>https://donfelohke.github.io/</loc>" in sitemap, "Sitemap must include canonical homepage")
 
 print("PASS: structure, anchors, metadata, text-first policy, WhatsApp, service tokens, crawl files.")
+
+check('heroBrand:"NAKEBUSEN · LOCS · DIGITAL"' in html, "Hero lockup must name Locs and Digital beneath the master brand")
+check('lead:"Natural loc care and considered styling come first. NAKEBUSEN Digital offers practical computer systems, GNU/Linux and networking support."' in html, "Hero copy must prioritise beauty services and keep Digital secondary")
+check('<p class="minimal-brand-line">Locs · Digital</p>' in html, "Footer brand line must separate the master brand from the service divisions")
