@@ -90,6 +90,8 @@ check('id="theme-toggle"' in html and 'id="theme-toggle" aria-label="Switch to d
 check('id="theme-toggle"' in html and 'class="toggle-icon"' in html and 'viewBox="0 0 24 24"' in html, "Theme toggle must use inline icon artwork")
 check('id="language-toggle" aria-label="Switch language to Kiswahili"' in html and 'class="toggle-icon"' in html, "Language toggle must use an icon and accessible label")
 check('menu.innerHTML=opened?' in html and 'aria-expanded' in html, "Mobile menu must use icons and retain expanded state")
+check('id="mobile-menu-toggle" aria-label="Open navigation menu" title="Open navigation menu" aria-expanded="false" aria-controls="site-navigation"><svg class="toggle-icon"' in html, "Mobile menu toggle must use consistent inline SVG icon artwork")
+check('navMore:"More"' in html and 'navMore:"Zaidi"' in html and '<span data-i18n="navMore">More</span>' in html, "Floating More label must localize between English and Kiswahili")
 check('<p class="small muted" data-i18n="heroStatus">Eldoret Town / Karibu Mdosi, Kenya · Loc services · Enquiries confirmed manually.</p>' in html, "English hero fallback must use the approved Eldoret Town / Karibu Mdosi wording")
 check('heroStatus:"Eldoret Town / Karibu Mdosi, Kenya · Loc services · Enquiries confirmed manually."' in html, "English hero translation must preserve the approved location wording")
 check('heroStatus:"Eldoret Town / Karibu Mdosi, Kenya · Huduma za loc · Maombi yanathibitishwa moja kwa moja."' in html, "Kiswahili hero translation must preserve the approved location wording")
