@@ -25,11 +25,11 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
     removeAttribute(key) { delete attributes[key]; },
   };
   const themeMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
-  const descriptionMeta = { content: "" };
-  const ogDescriptionMeta = { content: "" };
-  const twitterDescriptionMeta = { content: "" };
-  const ogTitleMeta = { content: "" };
-  const twitterTitleMeta = { content: "" };
+  const descriptionMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
+  const ogDescriptionMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
+  const twitterDescriptionMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
+  const ogTitleMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
+  const twitterTitleMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
   const themeButton = makeButton();
   const headerLanguageButton = makeButton();
   const footerLanguageButton = makeButton();
