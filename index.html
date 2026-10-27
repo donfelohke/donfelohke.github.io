@@ -153,6 +153,18 @@ header .nav{padding:.55rem .7rem}
 @media(max-width:899px){header{width:calc(100% - .75rem);top:.35rem;margin-top:.35rem}header .nav{padding:.5rem}header.menu-open .nav-links{padding:.65rem .2rem .2rem;gap:.25rem}header.menu-open .nav-links a{min-height:2.75rem;display:inline-flex;align-items:center}#top,#paths,#crown,#code,#founder,#connect{scroll-margin-top:9.5rem}}
 @media(max-width:380px){.brand-sub{font-size:.65rem}.nav-right{gap:.2rem}#theme-toggle,#language-toggle,#mobile-menu-toggle{width:2.5rem;height:2.5rem}.hero h1{font-size:clamp(2.45rem,12vw,3.3rem)}}
 
+
+/* Glass-card material: responsive, content-safe adaptation of the supplied reference. */
+.glass-card{isolation:isolate;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.28);border-top:3px solid var(--gold);border-radius:12px;background:rgba(255,255,255,.06);-webkit-backdrop-filter:blur(5px) saturate(115%);backdrop-filter:blur(5px) saturate(115%);box-shadow:0 8px 32px rgba(0,0,0,.10),inset 0 1px 0 rgba(255,255,255,.32),inset 0 -1px 0 rgba(255,255,255,.08)}
+.glass-card::before{content:"";position:absolute;inset:0 0 auto;height:1px;z-index:0;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(255,255,255,.78),transparent)}
+.glass-card::after{content:"";position:absolute;inset:0 auto 0 0;width:1px;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.72),transparent 58%,rgba(255,255,255,.22))}
+.glass-card>*{position:relative;z-index:1}
+:root[data-theme="light"] .glass-card{background:rgba(255,255,255,.52);border-color:rgba(20,37,29,.18);box-shadow:0 8px 32px rgba(20,37,29,.08),inset 0 1px 0 rgba(255,255,255,.78),inset 0 -1px 0 rgba(20,37,29,.04)}
+:root[data-theme="light"] .glass-card::before{background:linear-gradient(90deg,transparent,rgba(255,255,255,.95),transparent)}
+:root[data-theme="dark"] .terminal-card.glass-card{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.24);border-top-color:var(--gold)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.glass-card{background:var(--paper)}:root[data-theme="dark"] .terminal-card.glass-card{background:var(--canopy)}}
+@media(prefers-reduced-transparency:reduce){.glass-card,:root[data-theme="dark"] .terminal-card.glass-card{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--paper)}:root[data-theme="dark"] .terminal-card.glass-card{background:var(--canopy)}}
+
 </style>
 </head>
 <body>
