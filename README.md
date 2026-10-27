@@ -21,6 +21,7 @@ This static site presents services and routes enquiries. It does not confirm app
 | [docs/SERVICE-CATALOG.md](docs/SERVICE-CATALOG.md) | Authoritative prices & scope |
 | [docs/NAV-STRUCTURE.md](docs/NAV-STRUCTURE.md) | Header / footer structure |
 | [docs/WEB-DESIGN-STANDARDS.md](docs/WEB-DESIGN-STANDARDS.md) | Web implementation standards |
+| [docs/MULTIMODAL-UI-UX-IMPLEMENTATION-PLAN.md](docs/MULTIMODAL-UI-UX-IMPLEMENTATION-PLAN.md) | Domain-specific UX, interaction modes, implementation work packages and release verification |
 
 Deep philosophy: [feloh-corpus BRAND-CONSTITUTION](https://github.com/donfelohke/feloh-corpus/blob/main/BRAND-CONSTITUTION.md)
 
