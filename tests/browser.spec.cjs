@@ -21,7 +21,7 @@ test("responsive widths remain usable without horizontal overflow", async ({ pag
       pseudo: ["html","body","header","main",".hero",".floating-nav","#floating-more-panel"].map(sel => { const el=document.querySelector(sel); if(!el)return {sel,missing:true}; const r=getComputedStyle(el,"::after"); return {sel,afterContent:r.content,afterWidth:r.width,afterRight:r.right,afterPosition:r.position}; }),
       overflow: [...document.querySelectorAll("body *")].filter(el => {
         const r = el.getBoundingClientRect();
-        return r.width > 0 && (r.right > document.documentElement.clientWidth + 1 || r.left < -1 || el.scrollWidth > el.clientWidth + 1);
+        return r.right > document.documentElement.clientWidth + 1 || r.left < -1 || el.scrollWidth > el.clientWidth + 1;
       }).sort((a, b) => b.getBoundingClientRect().right - a.getBoundingClientRect().right).slice(0, 16).map(el => ({tag: el.tagName, id: el.id, className: String(el.className).slice(0, 80), left: Math.round(el.getBoundingClientRect().left), right: Math.round(el.getBoundingClientRect().right), width: Math.round(el.getBoundingClientRect().width), clientWidth: el.clientWidth, scrollWidth: el.scrollWidth})),
       brand: document.querySelector(".brand").getBoundingClientRect().toJSON(),
       controls: document.querySelector(".nav-right").getBoundingClientRect().toJSON(),
