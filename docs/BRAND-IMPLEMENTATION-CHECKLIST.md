@@ -21,9 +21,9 @@
 
 ## Website
 
-- [ ] Hero: Your beauty. Your way.  
-- [ ] Nav: Locs · Digital · @donfelohke  
-- [ ] Controls: WA · EN/SW · theme  
+- [ ] Hero: Your Beauty ° Your Way.  
+- [ ] Nav: Locs · Digital · About · Connect; anchors match `#crown`, `#code`, `#founder`, `#connect`  
+- [ ] Controls: loc-care enquiry · WhatsApp · EN/SW · theme; compact icons retain 44 × 44 CSS px hit areas  
 - [ ] English default; Kiswahili toggle works  
 - [ ] Dark / light both readable  
 - [ ] No embedded graphics policy held  
