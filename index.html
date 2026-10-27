@@ -345,10 +345,11 @@ header{
   }
 }
 
-/* Icon-only header toggles: keep compact controls accessible through labels and tooltips. */
+/* Icon-only controls: compact artwork, full-size accessible touch targets. */
 .toggle-icon{display:block;width:1rem;height:1rem;flex:0 0 1rem}
 #theme-toggle,#language-toggle,#mobile-menu-toggle{font-size:0;line-height:1}
-#mobile-menu-toggle .toggle-icon{width:1rem;height:1rem}
+#theme-toggle,#language-toggle,#mobile-menu-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem;padding:.25rem}
+#theme-toggle .toggle-icon,#language-toggle .toggle-icon,#mobile-menu-toggle .toggle-icon{width:1rem;height:1rem;flex:0 0 1rem}
 
 /* Mobile-first floating glass-terminal navigation */
 .floating-nav{display:none}
@@ -486,6 +487,24 @@ header{
  .minimal-footer .footer-contact-strip{display:flex;}
 }
 @media(prefers-reduced-transparency:reduce){.minimal-footer{background:#10251D;}}
+
+
+/* Floating footer/contact sheet: available on demand, never a fixed full footer. */
+.floating-footer-brand{display:flex;flex-direction:column;gap:.15rem;padding:.35rem .45rem .8rem;margin-bottom:.45rem;border-bottom:1px solid var(--line)}
+.floating-footer-brand strong{font:700 1.15rem/1.15 var(--serif);letter-spacing:.015em;color:var(--ink)}
+.floating-footer-brand span{font-size:.78rem;color:var(--muted)}
+.floating-footer-brand span:last-child{font:italic 1rem/1.3 var(--serif);color:var(--ink)}
+.floating-footer-signature{display:flex;flex-direction:column;gap:.2rem;padding:.75rem .45rem .25rem;margin-top:.45rem;border-top:1px solid var(--line)}
+.floating-footer-signature strong{font:700 .68rem var(--mono);letter-spacing:.08em;color:var(--clay)}
+.floating-footer-signature span,.floating-footer-signature small{font-size:.75rem;color:var(--muted)}
+@media(max-width:899px){
+  #theme-toggle,#language-toggle,#mobile-menu-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem;padding:.25rem}
+  .floating-more-panel{max-height:calc(100dvh - 7.5rem - env(safe-area-inset-bottom,0px));overflow-y:auto;overscroll-behavior:contain}
+  .floating-more-panel a{min-height:2.75rem}
+}
+@media(min-width:900px){
+  #theme-toggle,#language-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem;padding:.25rem}
+}
 
 </style>
 </head>
@@ -638,20 +657,32 @@ header{
 <a href="#code" data-section="code" aria-label="Digital">
 <svg class="float-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 21h8m-4-4v4M7 9l2 2-2 2m4 0h4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="navDigital">Digital</span>
 </a>
-<a href="#connect" data-section="connect" aria-label="Connect">
-<svg class="float-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-8.8 8.4 9 9 0 0 1-3.7-.9L3 20l1.1-4.8a8.3 8.3 0 1 1 16.9-3.7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 9.5c.6 2.2 2.1 3.7 4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span data-i18n="navConnect">Connect</span>
+<a href="#founder" data-section="founder" aria-label="@donfelohke">
+<svg class="float-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>@donfelohke</span>
 </a>
 <button type="button" id="floating-more-toggle" aria-expanded="false" aria-controls="floating-more-panel" aria-label="Open more links">
 <svg class="float-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="5" cy="12" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="19" cy="12" r="1.5" fill="currentColor"/></svg><span>More</span>
 </button>
 </nav>
 <div id="floating-more-panel" class="floating-more-panel" hidden>
-<h2>More from NAKEBUSEN</h2>
-<a href="#founder">About / Don Feloh</a>
+<div class="floating-footer-brand">
+<strong>NAKEBUSEN</strong>
+<span>Locs · Powered by WARENA</span>
+<span>Your Beauty ° Your Way.</span>
+</div>
+<h2>Connect · More</h2>
+<a href="#crown">Locs · Services &amp; Prices</a>
+<a href="#code">Digital · Technology</a>
+<a href="#founder">@donfelohke · About</a>
 <a href="https://wa.me/254719635415" data-wa-purpose="general">WhatsApp · +254 719 635 415</a>
 <a href="tel:+254719635415">Call · 0719 635 415</a>
 <a href="mailto:mela9ine@proton.me">Email · mela9ine@proton.me</a>
 <a href="https://github.com/donfelohke/donfelohke.github.io">GitHub / Source</a>
+<div class="floating-footer-signature">
+<strong>GRACE · GRIT · GLORY</strong>
+<span>@donfelohke · #HisGenjeness</span>
+<small>© 2026 Felix Lwova · Don Feloh</small>
+</div>
 </div>
 <footer aria-label="Site footer" class="minimal-footer"><div class="wrap">
 <div class="minimal-footer-brand">
