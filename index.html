@@ -349,6 +349,117 @@ header{
 .toggle-icon{display:block;width:1rem;height:1rem;flex:0 0 1rem}
 #theme-toggle,#language-toggle,#mobile-menu-toggle{font-size:0;line-height:1}
 #mobile-menu-toggle .toggle-icon{width:1rem;height:1rem}
+
+/* Mobile-first floating glass-terminal navigation */
+.floating-nav{display:none}
+.floating-more-panel[hidden]{display:none!important}
+@media(max-width:899px){
+  body{padding-bottom:calc(5.8rem + env(safe-area-inset-bottom,0px))}
+  .floating-nav{position:fixed;z-index:40;left:max(.65rem,env(safe-area-inset-left,0px));right:max(.65rem,env(safe-area-inset-right,0px));bottom:calc(.45rem + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.25rem;padding:.4rem;border:1px solid color-mix(in srgb,var(--ink) 22%,transparent);border-radius:1rem;background:color-mix(in srgb,var(--paper) 88%,transparent);box-shadow:0 8px 30px rgba(0,0,0,.18);backdrop-filter:blur(18px) saturate(130%);-webkit-backdrop-filter:blur(18px) saturate(130%)}
+  .floating-nav a,.floating-nav button{display:flex;min-width:0;min-height:3.15rem;flex-direction:column;align-items:center;justify-content:center;gap:.12rem;padding:.25rem .1rem;border:1px solid transparent;border-radius:.7rem;background:transparent;color:var(--ink);font:600 .67rem/1.1 var(--sans);text-decoration:none;cursor:pointer}
+  .floating-nav .float-icon{width:1.15rem;height:1.15rem;display:block;flex:0 0 auto}
+  .floating-nav a[aria-current="location"],.floating-nav a[aria-current="true"]{background:color-mix(in srgb,var(--clay) 15%,var(--paper));border-color:color-mix(in srgb,var(--clay) 45%,transparent);font-weight:800}
+  :root[data-theme="dark"] .floating-nav a[aria-current="location"],:root[data-theme="dark"] .floating-nav a[aria-current="true"]{background:rgba(212,175,55,.16);border-color:rgba(212,175,55,.5)}
+  .floating-nav a:focus-visible,.floating-nav button:focus-visible,.floating-more-panel a:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+  .floating-more-panel{position:fixed;z-index:41;left:.8rem;right:.8rem;bottom:calc(5.25rem + env(safe-area-inset-bottom,0px));max-width:28rem;margin-inline:auto;padding:.85rem;border:1px solid var(--line);border-radius:1rem;background:var(--paper);color:var(--ink);box-shadow:0 12px 34px rgba(0,0,0,.22)}
+  .floating-more-panel h2{font:700 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;margin:.15rem .4rem .5rem;color:var(--muted)}
+  .floating-more-panel a{display:flex;align-items:center;min-height:2.75rem;padding:.55rem .65rem;border-radius:.45rem;color:var(--ink);text-decoration:none}
+  .floating-more-panel a:hover{background:color-mix(in srgb,var(--gold) 12%,var(--paper))}
+}
+@media(min-width:900px){.floating-nav,.floating-more-panel{display:none!important}body{padding-bottom:0}}
+@media(prefers-reduced-transparency:reduce){.floating-nav{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--paper)}}
+@media(prefers-reduced-motion:reduce){.floating-nav,.floating-more-panel{scroll-behavior:auto;transition:none}}
+
+
+/* NAKEBUSEN master direction: Liquid Glass Terminal + Editorial Hybrid.
+   Glass is reserved for navigation and transient controls; content stays legible and fast. */
+:root{
+  --forest:#033500;
+  --canopy:#0D2414;
+  --clay:#E2725B;
+  --ochre:#D4AF37;
+  --ivory:#F2EFEA;
+  --sage:#A9BBA9;
+  --paper:#F2EFEA;
+  --ink:#111111;
+  --gold:#D4AF37;
+  --muted:#454545;
+  --line:rgba(17,17,17,.2);
+  --focus:#033500;
+  --locs-clay:#E2725B;
+  --locs-clay-light:#F2B5A4;
+  --digital-bg:#033500;
+  --digital-panel:#0D2414;
+  --digital-line:#79D7D2;
+  --digital-phosphor:#79D7D2;
+  --coral:#E2725B;
+}
+:root[data-theme="light"]{--paper:#F2EFEA;--ink:#111111;--muted:#454545;--line:rgba(17,17,17,.2);--focus:#033500}
+:root[data-theme="dark"]{--paper:#111111;--ink:#F2EFEA;--muted:#C8C8C8;--line:rgba(242,239,234,.22);--focus:#79D7D2}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]):not([data-theme="dark"]){--paper:#111111;--ink:#F2EFEA;--muted:#C8C8C8;--line:rgba(242,239,234,.22);--focus:#79D7D2}
+}
+/* Editorial hero: strong typographic field, with no dependency on remote imagery. */
+.hero{background:var(--forest);color:var(--ivory)}
+.hero .eyebrow,.hero .muted{color:#D5E2D3}
+.hero .btn-fill{background:var(--clay);border-color:var(--clay);color:#111111}
+.hero .btn:not(.btn-fill){border-color:rgba(242,239,234,.68);color:var(--ivory);background:rgba(3,53,0,.35)}
+/* Locs: warm, opaque material cards; never use blur on service content. */
+#crown .svc.terminal-card{
+  background:#F7E9E2;
+  border:1px solid rgba(226,114,91,.42);
+  border-top:3px solid #E2725B;
+  border-radius:12px;
+  box-shadow:0 8px 22px rgba(17,17,17,.055);
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+#crown .svc .terminal-id,#crown .svc .price{color:#853D2E}
+#crown .svc .terminal-action{background:#853D2E;border-color:#853D2E;color:#FFFFFF}
+:root[data-theme="dark"] #crown .svc.terminal-card{background:#241B18;border-color:rgba(242,181,164,.35);border-top-color:#F2B5A4}
+:root[data-theme="dark"] #crown .svc .terminal-id,:root[data-theme="dark"] #crown .svc .price{color:#F2B5A4}
+:root[data-theme="dark"] #crown .svc .terminal-action{background:#E2725B;border-color:#E2725B;color:#111111}
+/* Digital: solid forest-terminal modules with restrained reflective teal. */
+#code{background:#033500;color:#F2EFEA}
+#code .group,.digital-grid .group{
+  background:#0D2414;
+  border:1px solid rgba(121,215,210,.3);
+  border-top:3px solid #79D7D2;
+  border-radius:12px;
+  box-shadow:0 8px 22px rgba(0,0,0,.12);
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+#code .group h3,.digital-grid .group h3{color:#79D7D2;border-bottom-color:rgba(121,215,210,.28)}
+#code .group,#code .group p,#code .group li{color:#F2EFEA}
+#code .group .muted{color:#D4E5E2}
+#code .group .btn{background:#033500;border-color:#79D7D2;color:#F2EFEA}
+#code .group .btn:hover{background:#79D7D2;color:#111111}
+/* Glass only where it helps orientation: compact header and mobile navigation. */
+header{
+  background:rgba(242,239,234,.88);
+  border:1px solid rgba(17,17,17,.14);
+  border-radius:16px;
+  box-shadow:0 8px 26px rgba(17,17,17,.09);
+}
+@supports((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  header{backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%)}
+}
+:root[data-theme="dark"] header{background:rgba(17,17,17,.9);border-color:rgba(242,239,234,.18)}
+.floating-nav{background:rgba(242,239,234,.94);border-color:rgba(17,17,17,.18)}
+:root[data-theme="dark"] .floating-nav{background:rgba(17,17,17,.94);border-color:rgba(242,239,234,.2)}
+/* Keep editorial, founder and footer surfaces mostly opaque for reading performance. */
+#founder .terminal-card,.footer-panel{background:var(--paper);border-radius:12px;box-shadow:0 6px 20px rgba(17,17,17,.055)}
+:root[data-theme="dark"] #founder .terminal-card,:root[data-theme="dark"] .footer-panel{background:#191919;border-color:rgba(242,239,234,.2)}
+.footer-panel.digital{background:#0D2414;color:#F2EFEA;border-top-color:#79D7D2}
+.footer-panel.digital h3,.footer-panel.digital a{color:#F2EFEA}
+@media(prefers-reduced-transparency:reduce){
+  header,.floating-nav{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--paper)}
+  #crown .svc.terminal-card{backdrop-filter:none;-webkit-backdrop-filter:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .terminal-card,.svc,.group,.footer-panel,.btn,.terminal-action,.footer-link{transition:none}
+  .terminal-card:hover,.svc:hover,.footer-panel:hover,.btn:hover{transform:none}
+}
+
 </style>
 </head>
 <body>
@@ -493,6 +604,28 @@ header{
 <p class="small muted" style="margin-top:1rem" data-i18n="location">Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya · other locations by arrangement</p>
 </div></section>
 </main>
+<nav class="floating-nav" aria-label="Mobile quick navigation">
+<a href="#crown" data-section="crown" aria-label="Locs">
+<svg class="float-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 19h16M6 19V9l6-4 6 4v10M9 19v-5h6v5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="navLocs">Locs</span>
+</a>
+<a href="#code" data-section="code" aria-label="Digital">
+<svg class="float-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 21h8m-4-4v4M7 9l2 2-2 2m4 0h4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="navDigital">Digital</span>
+</a>
+<a href="#connect" data-section="connect" aria-label="Connect">
+<svg class="float-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-8.8 8.4 9 9 0 0 1-3.7-.9L3 20l1.1-4.8a8.3 8.3 0 1 1 16.9-3.7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 9.5c.6 2.2 2.1 3.7 4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span data-i18n="navConnect">Connect</span>
+</a>
+<button type="button" id="floating-more-toggle" aria-expanded="false" aria-controls="floating-more-panel" aria-label="Open more links">
+<svg class="float-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="5" cy="12" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="19" cy="12" r="1.5" fill="currentColor"/></svg><span>More</span>
+</button>
+</nav>
+<div id="floating-more-panel" class="floating-more-panel" hidden>
+<h2>More from NAKEBUSEN</h2>
+<a href="#founder">About / Don Feloh</a>
+<a href="https://wa.me/254719635415" data-wa-purpose="general">WhatsApp · +254 719 635 415</a>
+<a href="tel:+254719635415">Call · 0719 635 415</a>
+<a href="mailto:mela9ine@proton.me">Email · mela9ine@proton.me</a>
+<a href="https://github.com/donfelohke/donfelohke.github.io">GitHub / Source</a>
+</div>
 <footer aria-label="Site footer" class="minimal-footer"><div class="wrap">
 <div class="minimal-footer-brand">
 <a class="minimal-wordmark" href="#top" aria-label="NAKEBUSEN home">NAKEBUSEN</a>
@@ -520,7 +653,9 @@ const copy={en:{skip:"Skip to content",navMain:"Main navigation",navLocs:"Locs",
 function updateWhatsappLinks(){const messages={sw:{loc:"Habari NAKEBUSEN, ninaulizia huduma za loc. Tafadhali thibitisha kufaa, bei na upatikanaji.",tech:"Habari NAKEBUSEN / WARENA — ningependa kujadili mradi wa teknolojia.",computer:"Habari NAKEBUSEN / WARENA — ninaulizia msaada wa kompyuta au GNU/Linux.",network:"Habari NAKEBUSEN / WARENA — ningependa kujadili mradi wa mitandao au miundombinu.",local:"Habari NAKEBUSEN / WARENA — ninaulizia mazingira ya kompyuta ya local-first au offline.",general:"Habari NAKEBUSEN."},en:{loc:"Hello NAKEBUSEN — I am enquiring about a loc service. Could you confirm suitability, price and availability?",tech:"Hello NAKEBUSEN / WARENA — I would like to discuss a technology project.",computer:"Hello NAKEBUSEN / WARENA — I would like to discuss computer support or GNU/Linux.",network:"Hello NAKEBUSEN / WARENA — I would like to discuss a networking or infrastructure project.",local:"Hello NAKEBUSEN / WARENA — I would like to discuss local-first or offline-capable computing.",general:"Hello NAKEBUSEN — I would like more information."}};document.querySelectorAll("[data-wa-purpose]").forEach(el=>{const purpose=el.getAttribute("data-wa-purpose")||"general";const bag=messages[language]||messages.en;el.href="https://wa.me/254719635415?text="+encodeURIComponent(bag[purpose]||bag.general)})}
 function applyLanguage(value){language=value;const bag=copy[language]||copy.en;const menuButton=document.getElementById("mobile-menu-toggle");if(menuButton){const opened=menuButton.getAttribute("aria-expanded")==="true";const sw=language==="sw";const label=opened?(sw?"Funga menyu ya urambazaji":"Close navigation menu"):(sw?"Fungua menyu ya urambazaji":"Open navigation menu");menuButton.setAttribute("aria-label",label);menuButton.setAttribute("title",label)}root.lang=language==="sw"?"sw":"en";document.querySelectorAll("[data-i18n]").forEach(el=>{const key=el.getAttribute("data-i18n");if(key&&bag[key]!=null)el.textContent=bag[key]});document.querySelectorAll("[data-i18n-aria]").forEach(el=>{const key=el.getAttribute("data-i18n-aria");if(key&&bag[key]!=null)el.setAttribute("aria-label",bag[key])});const lb=document.getElementById("language-toggle");const fb=document.getElementById("language-toggle-footer");const label=language==="en"?"Switch language to Kiswahili":"Badilisha lugha hadi Kiingereza";[lb,fb].forEach(b=>{if(!b)return;if(b===lb){b.innerHTML='<svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>'}else{b.textContent=language.toUpperCase()}b.setAttribute("aria-label",label);b.setAttribute("title",label);b.setAttribute("aria-pressed",String(language==="sw"))});try{localStorage.setItem(languageKey,language)}catch(_){}updateWhatsappLinks()}
 function cycleTheme(){const next=dark()?"light":"dark";try{localStorage.setItem(themeKey,next)}catch(_){}applyTheme(next)}
-function init(){applyTheme(theme);applyLanguage(language);const tb=document.getElementById("theme-toggle");if(tb)tb.addEventListener("click",cycleTheme);const lb=document.getElementById("language-toggle");const fb=document.getElementById("language-toggle-footer");function toggleLang(){applyLanguage(language==="en"?"sw":"en")}if(lb)lb.addEventListener("click",toggleLang);if(fb)fb.addEventListener("click",toggleLang);const menu=document.getElementById("mobile-menu-toggle");const header=document.querySelector("header");function setMenuLabel(opened){const sw=language==="sw";const label=opened?(sw?"Funga menyu ya urambazaji":"Close navigation menu"):(sw?"Fungua menyu ya urambazaji":"Open navigation menu");if(menu){menu.setAttribute("aria-expanded",String(opened));menu.setAttribute("aria-label",label);menu.setAttribute("title",label);menu.innerHTML=opened?'<svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>':'<svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'}}if(menu&&header){menu.addEventListener("click",()=>{const opened=header.classList.toggle("menu-open");setMenuLabel(opened)});document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>{header.classList.remove("menu-open");setMenuLabel(false)}))}const links=document.querySelectorAll(".nav-links a");function setCurrent(){const y=window.scrollY+120;let current=null;links.forEach(a=>{const id=(a.getAttribute("href")||"").slice(1);const el=document.getElementById(id);if(el&&el.offsetTop<=y)current=a});links.forEach(a=>a.removeAttribute("aria-current"));if(current)current.setAttribute("aria-current","true")}window.addEventListener("scroll",setCurrent,{passive:true});setCurrent();if(media.addEventListener)media.addEventListener("change",()=>{if(theme==="system")applyTheme("system")});else if(media.addListener)media.addListener(()=>{if(theme==="system")applyTheme("system")})}
+function init(){applyTheme(theme);applyLanguage(language);const tb=document.getElementById("theme-toggle");if(tb)tb.addEventListener("click",cycleTheme);const lb=document.getElementById("language-toggle");const fb=document.getElementById("language-toggle-footer");function toggleLang(){applyLanguage(language==="en"?"sw":"en")}if(lb)lb.addEventListener("click",toggleLang);if(fb)fb.addEventListener("click",toggleLang);const menu=document.getElementById("mobile-menu-toggle");const header=document.querySelector("header");function setMenuLabel(opened){const sw=language==="sw";const label=opened?(sw?"Funga menyu ya urambazaji":"Close navigation menu"):(sw?"Fungua menyu ya urambazaji":"Open navigation menu");if(menu){menu.setAttribute("aria-expanded",String(opened));menu.setAttribute("aria-label",label);menu.setAttribute("title",label);menu.innerHTML=opened?'<svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>':'<svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'}}if(menu&&header){menu.addEventListener("click",()=>{const opened=header.classList.toggle("menu-open");setMenuLabel(opened)});document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>{header.classList.remove("menu-open");setMenuLabel(false)}))}
+const moreButton=document.getElementById("floating-more-toggle");const morePanel=document.getElementById("floating-more-panel");function setMore(opened){if(!moreButton||!morePanel)return;morePanel.hidden=!opened;moreButton.setAttribute("aria-expanded",String(opened));moreButton.setAttribute("aria-label",opened?(language==="sw"?"Funga viungo zaidi":"Close more links"):(language==="sw"?"Fungua viungo zaidi":"Open more links"));if(opened){const first=morePanel.querySelector("a");if(first)first.focus()}}if(moreButton&&morePanel){moreButton.addEventListener("click",()=>setMore(morePanel.hidden));morePanel.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>setMore(false)));document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!morePanel.hidden){setMore(false);moreButton.focus()}});document.addEventListener("click",e=>{if(!morePanel.hidden&&!morePanel.contains(e.target)&&!moreButton.contains(e.target))setMore(false)})}
+const links=document.querySelectorAll('.nav-links a[href^="#"],.floating-nav a[data-section]');function setCurrent(){const y=window.scrollY+Math.max(130,window.innerHeight*.28);let current=null;links.forEach(a=>{const id=a.getAttribute("data-section")||(a.getAttribute("href")||"").slice(1);const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top+window.scrollY<=y)current=a});links.forEach(a=>a.removeAttribute("aria-current"));if(current){const id=current.getAttribute("data-section")||(current.getAttribute("href")||"").slice(1);links.forEach(a=>{const target=a.getAttribute("data-section")||(a.getAttribute("href")||"").slice(1);if(target===id)a.setAttribute("aria-current","location")})}}window.addEventListener("scroll",setCurrent,{passive:true});window.addEventListener("resize",setCurrent,{passive:true});setCurrent();if(media.addEventListener)media.addEventListener("change",()=>{if(theme==="system")applyTheme("system")});else if(media.addListener)media.addListener(()=>{if(theme==="system")applyTheme("system")})}
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
 })();
 </script>
