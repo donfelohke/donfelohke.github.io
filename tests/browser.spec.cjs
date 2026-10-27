@@ -16,8 +16,23 @@ test("responsive widths remain usable without horizontal overflow", async ({ pag
       document: document.documentElement.scrollWidth,
       brand: document.querySelector(".brand").getBoundingClientRect().toJSON(),
       controls: document.querySelector(".nav-right").getBoundingClientRect().toJSON(),
+      body: document.body.scrollWidth,
+      offenders: [...document.querySelectorAll("body *")].map((el) => ({tag: el.tagName, id: el.id, className: typeof el.className === "string" ? el.className : "", right: Math.round(el.getBoundingClientRect().right), left: Math.round(el.getBoundingClientRect().left), width: Math.round(el.getBoundingClientRect().width)})).filter((el) => el.right > window.innerWidth + 1 || el.left < -1).slice(0, 8),
     }));
-    expect(metrics.document, `horizontal overflow at ${width}px`).toBeLessThanOrEqual(metrics.viewport);
+    expect(metrics.document, `horizontal overflow at ${width}px; offenders: ${JSON.stringify(metrics.offenders)}`).toBeLessThanOrEqual(metrics.viewport);
+    expect(metrics.body, `body overflow at ${width}px; offenders: ${JSON.stringify(metrics.offenders)}`).toBeLessThanOrEqual(metrics.viewport);
+    if (width <= 520) {
+      await expect(page.locator(".nav-cta.nav-wa")).toBeHidden();
+    }
+    const controlsToMeasure = width >= 900
+      ? ["#theme-toggle", "#language-toggle"]
+      : ["#theme-toggle", "#language-toggle", "#mobile-menu-toggle"];
+    for (const control of controlsToMeasure) {
+      const box = await page.locator(control).boundingBox();
+      expect(box, `${control} should be visible at ${width}px`).toBeTruthy();
+      expect(box.width, `${control} touch width at ${width}px`).toBeGreaterThanOrEqual(44);
+      expect(box.height, `${control} touch height at ${width}px`).toBeGreaterThanOrEqual(44);
+    }
     expect(
       metrics.brand.right <= metrics.controls.left + 1 || metrics.brand.bottom <= metrics.controls.top + 1,
       `brand overlaps navigation controls at ${width}px`,

@@ -64,7 +64,7 @@ check('data-i18n="bookingNote"' in html and 'data-i18n="digitalIntro"' in html, 
 check('data-i18n="navLocs"' in html and 'data-i18n="navDigital"' in html and '<a href="#connect" data-i18n="navConnect">Connect</a>' in html, "Header navigation must expose Locs, Digital, and Connect")
 check('<a href="#founder" data-i18n="navAbout">@donfeloh</a>' in html, "Header navigation must expose the @donfeloh founder destination")
 check('#theme-toggle,#language-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem;padding:.25rem}' in html, "Theme and language controls must retain 44px hit areas")
-check('--forest:#14251D;--canopy:#1D3428;--clay:#C76F4A;--ochre:#D6AD54;--ivory:#F3EDE2;' in html, "Website palette must match the approved brand tokens")
+check('--forest:#033500;--canopy:#111111;--clay:#E2725B;--ochre:#D4AF37;--ivory:#F2EFEA;' in html, "Website palette must match the canonical NAKEBUSEN design tokens")
 check('<a href="#founder" data-section="founder" aria-label="@donfelohke">' in html, "Floating navigation must expose the @donfelohke destination")
 check('class="floating-footer-signature"' in html and "GRACE · GRIT · GLORY" in html, "Floating contact sheet must include the footer identity")
 check("#theme-toggle,#language-toggle,#mobile-menu-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem;padding:.25rem}" in html, "Icon controls must retain 44px touch targets")
@@ -72,6 +72,9 @@ check('navLocs:"Locs"' in html and 'navDigital:"Digital"' in html, "English head
 check('navLocs:"Locs"' in html and 'navDigital:"Digital"' in html, "Kiswahili header navigation must preserve the concise Locs and Digital labels")
 check('section[id],.hero[id]{scroll-margin-top:9rem}' in html, "Mobile section anchors must account for sticky header height")
 check('price700:"KES 700"' in html and 'price1500:"KES 1,500"' in html and 'price3500:"KES 3,500"' in html, "English price translations must match the current service catalogue")
+check(".wrap{width:min(calc(100% - 2rem),920px)" in html, "Content container must use valid intrinsic width sizing")
+check("overflow-x:hidden" not in html.lower(), "Do not hide horizontal overflow instead of fixing the cause")
+check("@media(max-width:520px){.nav-cta.nav-wa{display:none}" in html, "Hide the duplicate header WhatsApp control on narrow screens; retain the mobile More contact path")
 check(p.h1_count == 1, f"Expected one h1, found {p.h1_count}")
 check("description" in p.metas and len(p.metas["description"]) >= 50, "Missing or too-short meta description")
 check(
