@@ -72,7 +72,7 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
   };
   const context = {
     document,
-    window: { matchMedia: () => media },
+    window: { matchMedia: () => media, addEventListener() {} },
     localStorage: {
       getItem(key) {
         if (storageThrows) throw new Error("storage unavailable");
