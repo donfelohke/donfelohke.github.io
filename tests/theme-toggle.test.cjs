@@ -115,12 +115,11 @@ assert.equal(system.themeButton.textContent, "Dark", "system preference changes 
 
 const language = boot();
 assert.equal(language.root.lang, "en", "English is the default language");
-assert.match(language.twitterDescriptionMeta.content, /Loc care in Eldoret/);
-assert.match(language.ogTitleMeta.content, /NAKEBUSEN Locs • Digital/);
-assert.match(language.twitterTitleMeta.content, /NAKEBUSEN Locs • Digital/);
-assert.match(language.ogTitleMeta.content, /Powered by WARENA/);
-assert.match(language.twitterTitleMeta.content, /Powered by WARENA/);
-assert.match(language.documentTitle, /Powered by WARENA/);
+assert.match(html, /<meta property="og:description" content="Loc care in Eldoret Town/);
+assert.match(html, /<meta property="og:title" content="NAKEBUSEN Locs • Digital \| Eldoret, Kenya"/);
+assert.match(html, /<meta name="twitter:title" content="NAKEBUSEN Locs • Digital \| Eldoret, Kenya"/);
+assert.match(html, /<meta name="twitter:description" content="Loc care from KES 700/);
+assert.match(html, /<title>NAKEBUSEN Locs • Digital \| Eldoret, Kenya/);
 assert.equal(language.headerLanguageButton.textContent, "Kiswahili");
 assert.equal(language.headerLanguageButton.attrs["aria-label"], "Switch language to Kiswahili", "English toggle announces its action in English");
 assert.match(language.whatsappLinks[0].href, /I%20am%20enquiring%20about%20loc%20care/, "English loc enquiry has an English prefilled message");
