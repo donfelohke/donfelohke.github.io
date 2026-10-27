@@ -20,9 +20,9 @@
 
 ## Header
 
-- Left: NAKEBUSEN · Locs • Digital · @donfelohke  
-- Right: WhatsApp · Language · Theme  
-- Links: Loc Care · Digital · @donfelohke (or equivalent three destinations)  
+- Left: NAKEBUSEN · Locs · Powered by WARENA
+- Right: loc-care enquiry · WhatsApp · EN/SW · Light/Dark
+- Links: Locs (`#crown`) · Digital (`#code`) · About (`#founder`) · Connect (`#connect`)
 
 ## Language
 
