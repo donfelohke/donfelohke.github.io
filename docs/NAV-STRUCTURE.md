@@ -1,34 +1,66 @@
-# Top navigation — final direction
+# Header and footer navigation — canonical structure
 
-**Status:** Implemented on `main` (2026-10-26)
+**Status:** Final copy baseline · 2026-10-27  
+**Implementation source:** `index.html`  
+**Contact and price authority:** `PUBLIC-FACTS-REGISTER.md`, `SERVICE-CATALOG.md`
 
-## Structure
+## Header
 
 | Position | Element | Behaviour |
-|----------|---------|----------|
-| Top left | **NAKEBUSEN** | Home (`#top`) |
-| Under brand | Locs • Digital | Descriptor |
-| Top right | **WA** | WhatsApp · `aria-label`: Contact NAKEBUSEN on WhatsApp |
-| Top right | **EN / SW** | Language toggle |
-| Top right | **◐** | Theme toggle |
-| Second row | Locs · Digital · @donfelohke | Section anchors |
-| Desktop ≥900px | Single row | Brand · centred links · utilities |
+|---|---|---|
+| Left | **NAKEBUSEN** | Home anchor `#top` |
+| Under brand | Locs • Digital | Brand descriptor |
+| Navigation | **Locs · Digital · About · Connect** | Anchors to the matching sections |
+| Utility | **WA** | WhatsApp enquiry; accessible name identifies NAKEBUSEN |
+| Utility | **EN / SW** | Switch English / Kiswahili |
+| Utility | **Light / Dark** | Switch theme; follow system preference until the visitor chooses |
 
-## Mobile
+## Responsive behaviour
 
-Two-tier layout. No hamburger for three destinations.
+- Desktop: brand, centred navigation and utility controls share one row when space allows.
+- Mobile: compact two-tier header; avoid collisions and unnecessary hamburger navigation for a small set of destinations.
+- Sticky header with scroll offsets so section headings are not hidden.
+- Interactive targets at least 44 × 44 CSS pixels where practical.
+- Visible keyboard focus, descriptive accessible names, and a skip-to-content link.
+- Active section state must remain understandable to assistive technology.
+- Theme and language preferences may be stored locally; the page must remain usable if storage is unavailable.
+- Respect reduced-motion preferences.
 
-## Behaviour
+## Footer
 
-- Sticky header with section `scroll-margin`
-- Touch targets ≥ 2.75rem (~44px)
-- `aria-current="true"` via IntersectionObserver (`setupActiveNav`)
-- Theme preference in `localStorage`
+1. **Brand / signature:** NAKEBUSEN · WARENA powered · @donfelohke; GRACE · GRIT · GLORY.
+2. **Locs panel:** short service summary and link to Locs & prices.
+3. **Digital panel:** practical technology summary and link to Digital services.
+4. **Connect panel:** Felix Lwova · Don Feloh; Eldoret Town / Karibu Mdosi; WhatsApp, telephone and email.
+5. **Footer navigation:** Locs · Digital · About · Connect · Back to top.
+6. **Social / resources:** X, Instagram, TikTok, GitHub, Facebook and Gallery; include only the established destinations.
+7. **Footer utilities:** EN / SW language control and Source repository link.
+8. **Copyright:** © 2026 Felix Lwova · Don Feloh.
 
-## Release checklist (manual)
+## Approved public contacts
 
-- [ ] 320 / 360 / 390 px no collisions
-- [ ] WA / EN / theme work
-- [ ] Section links land on headings (not under sticky bar)
-- [ ] Keyboard focus visible
-- [ ] Active link updates while scrolling
+- WhatsApp / telephone: **+254 719 635 415**; local display **0719 635 415**.
+- WhatsApp URI: `https://wa.me/254719635415`.
+- Email: **mela9ine@proton.me**.
+- Location: **Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya**.
+- Do not add a street address, map pin, business hours, booking calendar or alternative contact without confirmation.
+
+## Language and transaction boundaries
+
+- English is the default; Kiswahili is available through the language toggle.
+- Both languages must preserve service scope, starting prices and booking disclaimers.
+- A WhatsApp message is an enquiry, not a confirmed booking.
+- Technology services are scoped and quoted per engagement.
+- **ONLY NAKEBUSEN TRANSACTS.** WARENA powers Digital; IKAI remains research / WIP; GENJE remains a creative practice identity.
+
+## Manual release checks
+
+- [ ] Test widths 320, 360, 390, 768 and desktop for collisions and horizontal overflow.
+- [ ] WhatsApp opens the correct destination and carries an enquiry, not a booking confirmation.
+- [ ] Telephone and email links match the public facts register.
+- [ ] EN / SW controls update page copy and accessible labels consistently.
+- [ ] Theme toggle works with light, dark and system preference.
+- [ ] Header anchors land below the sticky navigation.
+- [ ] Keyboard focus, reduced motion and contrast remain usable.
+- [ ] Footer links work; no unverified contact or location details appear.
+- [ ] Validate the deployed page separately; a successful commit or workflow is not browser proof.
