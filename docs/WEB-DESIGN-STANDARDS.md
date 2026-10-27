@@ -40,9 +40,11 @@
 
 | Token | Value |
 |-------|--------|
-| Paper / ink | `#F2EFEA` / `#111111` |
-| Gold | `#D4AF37` |
-| Terracotta (focus) | `#E2725B` |
+| Forest canvas / canopy | `#14251D` / `#1D3428` |
+| Warm ivory / sage | `#F3EDE2` / `#A9BBA9` |
+| Terracotta / ochre | `#C76F4A` / `#D6AD54` |
+| Light-theme muted text | `#46554A` |
+| Focus | Theme-aware high-contrast outline; validate against adjacent surfaces |
 | Serif / sans / mono | Georgia stack · system-ui · ui-monospace |
 
 ## Accessibility
