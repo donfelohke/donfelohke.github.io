@@ -1,6 +1,6 @@
 # Header and footer navigation — canonical structure
 
-**Status:** Final copy baseline · 2026-10-27  
+**Status:** Canonical navigation baseline · aligned with `index.html` · 2026-10-27  
 **Implementation source:** `index.html`  
 **Contact and price authority:** `PUBLIC-FACTS-REGISTER.md`, `SERVICE-CATALOG.md`
 
@@ -9,17 +9,18 @@
 | Position | Element | Behaviour |
 |---|---|---|
 | Left | **NAKEBUSEN** | Home anchor `#top` |
-| Under brand | Locs • Digital | Brand descriptor |
-| Navigation | **Locs · Digital · About · Connect** | Anchors to the matching sections |
+| Under brand | Locs · Powered by WARENA | Brand descriptor |
+| Navigation | **Locs · Digital · @donfeloh · Connect** | `#crown`, `#code`, `#founder`, `#connect` respectively |
 | Utility | **WA** | WhatsApp enquiry; accessible name identifies NAKEBUSEN |
 | Utility | **EN / SW** | Switch English / Kiswahili |
 | Utility | **Light / Dark** | Switch theme; follow system preference until the visitor chooses |
 
 ## Responsive behaviour
 
-- Desktop: brand, centred navigation and utility controls share one row when space allows.
-- Mobile: compact two-tier header; avoid collisions and unnecessary hamburger navigation for a small set of destinations.
+- Desktop: brand, four section links and utility controls share one row when space allows.
+- Mobile: compact two-tier header; preserve floating quick navigation and its More panel for secondary contact/source links.
 - Sticky header with scroll offsets so section headings are not hidden.
+- Theme/language/menu controls retain 44 × 44 CSS-pixel hit areas while the icon artwork remains compact.
 - Interactive targets at least 44 × 44 CSS pixels where practical.
 - Visible keyboard focus, descriptive accessible names, and a skip-to-content link.
 - Active section state must remain understandable to assistive technology.
