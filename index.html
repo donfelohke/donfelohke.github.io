@@ -153,6 +153,18 @@ header .nav{padding:.55rem .7rem}
 @media(max-width:899px){header{width:calc(100% - .75rem);top:.35rem;margin-top:.35rem}header .nav{padding:.5rem}header.menu-open .nav-links{padding:.65rem .2rem .2rem;gap:.25rem}header.menu-open .nav-links a{min-height:2.75rem;display:inline-flex;align-items:center}#top,#paths,#crown,#code,#founder,#connect{scroll-margin-top:9.5rem}}
 @media(max-width:380px){.brand-sub{font-size:.65rem}.nav-right{gap:.2rem}#theme-toggle,#language-toggle,#mobile-menu-toggle{width:2.5rem;height:2.5rem}.hero h1{font-size:clamp(2.45rem,12vw,3.3rem)}}
 
+
+/* Glass-card material: responsive, content-safe adaptation of the supplied reference. */
+.glass-card{isolation:isolate;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.28);border-top:3px solid var(--gold);border-radius:12px;background:rgba(255,255,255,.06);-webkit-backdrop-filter:blur(5px) saturate(115%);backdrop-filter:blur(5px) saturate(115%);box-shadow:0 8px 32px rgba(0,0,0,.10),inset 0 1px 0 rgba(255,255,255,.32),inset 0 -1px 0 rgba(255,255,255,.08)}
+.glass-card::before{content:"";position:absolute;inset:0 0 auto;height:1px;z-index:0;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(255,255,255,.78),transparent)}
+.glass-card::after{content:"";position:absolute;inset:0 auto 0 0;width:1px;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.72),transparent 58%,rgba(255,255,255,.22))}
+.glass-card>*{position:relative;z-index:1}
+:root[data-theme="light"] .glass-card{background:rgba(255,255,255,.52);border-color:rgba(20,37,29,.18);box-shadow:0 8px 32px rgba(20,37,29,.08),inset 0 1px 0 rgba(255,255,255,.78),inset 0 -1px 0 rgba(20,37,29,.04)}
+:root[data-theme="light"] .glass-card::before{background:linear-gradient(90deg,transparent,rgba(255,255,255,.95),transparent)}
+:root[data-theme="dark"] .terminal-card.glass-card{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.24);border-top-color:var(--gold)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.glass-card{background:var(--paper)}:root[data-theme="dark"] .terminal-card.glass-card{background:var(--canopy)}}
+@media(prefers-reduced-transparency:reduce){.glass-card,:root[data-theme="dark"] .terminal-card.glass-card{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--paper)}:root[data-theme="dark"] .terminal-card.glass-card{background:var(--canopy)}}
+
 </style>
 </head>
 <body>
@@ -214,19 +226,19 @@ header .nav{padding:.55rem .7rem}
 <p data-i18n="locIntro">Natural loc care, maintenance and styling in Eldoret Town / Karibu Mdosi.</p>
 <p class="small muted" data-i18n="noBraiding">No braiding offered.</p>
 <div class="services terminal-grid" aria-label="Loc care services">
-<article class="svc terminal-card" id="loc-01" aria-labelledby="loc-01-title">
+<article class="svc terminal-card glass-card" id="loc-01" aria-labelledby="loc-01-title">
 <div class="terminal-meta"><span class="terminal-id">LOC-01 / SERVICE</span><span class="terminal-kind">LOC CARE</span></div>
 <div class="terminal-copy"><h3 id="loc-01-title" data-i18n="retouch">Retouch &amp; Styling</h3><p class="small muted" data-i18n="retouchDesc">Natural loc maintenance and styling tailored to the condition of your locs and the work required.</p></div>
 <div class="price" data-i18n="price700">KES 700</div>
 <a class="btn terminal-action" href="https://wa.me/254719635415?text=Hi%20NAKEBUSEN%2C%20I%27d%20like%20to%20enquire%20about%20Retouch%20%26%20Styling%20(starting%20at%20KES%20700).%20Please%20let%20me%20know%20availability%20and%20preparation%20requirements." data-i18n="enquireService">Enquire about this service ↗</a>
 </article>
-<article class="svc terminal-card" id="loc-02" aria-labelledby="loc-02-title">
+<article class="svc terminal-card glass-card" id="loc-02" aria-labelledby="loc-02-title">
 <div class="terminal-meta"><span class="terminal-id">LOC-02 / SERVICE</span><span class="terminal-kind">LOC CARE</span></div>
 <div class="terminal-copy"><h3 id="loc-02-title" data-i18n="sister">Sisterlocs Retie</h3><p class="small muted" data-i18n="sisterDesc">Sisterlocs retightening. Enquire to confirm suitability and requirements.</p></div>
 <div class="price" data-i18n="price1500">KES 1,500</div>
 <a class="btn terminal-action" href="https://wa.me/254719635415?text=Hi%20NAKEBUSEN%2C%20I%27d%20like%20to%20enquire%20about%20Sisterlocs%20Retie%20(starting%20at%20KES%201%2C500).%20Please%20let%20me%20know%20availability%20and%20requirements." data-i18n="enquireService">Enquire about this service ↗</a>
 </article>
-<article class="svc terminal-card" id="loc-03" aria-labelledby="loc-03-title">
+<article class="svc terminal-card glass-card" id="loc-03" aria-labelledby="loc-03-title">
 <div class="terminal-meta"><span class="terminal-id">LOC-03 / SERVICE</span><span class="terminal-kind">LOC CARE</span></div>
 <div class="terminal-copy"><h3 id="loc-03-title" data-i18n="artificial">Artificial Locs Installation</h3><p class="small muted" data-i18n="artDesc">Discuss your preferred style, materials and installation requirements before proceeding.</p></div>
 <div class="price" data-i18n="price3500">KES 3,500</div>
