@@ -26,7 +26,7 @@ test("responsive widths remain usable without horizontal overflow", async ({ pag
       brand: document.querySelector(".brand").getBoundingClientRect().toJSON(),
       controls: document.querySelector(".nav-right").getBoundingClientRect().toJSON(),
     }));
-    expect(metrics.document, `horizontal overflow at ${width}px: ${JSON.stringify(metrics.overflow)}`).toBeLessThanOrEqual(metrics.viewport);
+    expect(metrics.document, `horizontal overflow at ${width}px: ${JSON.stringify({innerWidth:metrics.innerWidth,bodyScroll:metrics.bodyScroll,rootRect:metrics.rootRect,bodyRect:metrics.bodyRect,pseudo:metrics.pseudo,overflow:metrics.overflow})}`).toBeLessThanOrEqual(metrics.viewport);
     expect(
       metrics.brand.right <= metrics.controls.left + 1 || metrics.brand.bottom <= metrics.controls.top + 1,
       `brand overlaps navigation controls at ${width}px`,
