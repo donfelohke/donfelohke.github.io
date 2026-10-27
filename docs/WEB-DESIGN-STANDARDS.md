@@ -1,6 +1,6 @@
 # Web design standards — donfelohke.github.io
 
-**Status:** LIVE · 26 October 2026
+**Status:** LIVE · aligned with `index.html` and `docs/NAV-STRUCTURE.md` · 27 October 2026
 
 ## Architecture
 
@@ -20,9 +20,9 @@
 
 ## Header
 
-- Left: NAKEBUSEN · Locs • Digital · @donfelohke  
+- Left: NAKEBUSEN · Locs · Powered by WARENA  
 - Right: WhatsApp · Language · Theme  
-- Links: Loc Care · Digital · @donfelohke (or equivalent three destinations)  
+- Links: Locs (`#crown`) · Digital (`#code`) · @donfeloh (`#founder`) · Connect (`#connect`)  
 
 ## Language
 
@@ -34,7 +34,7 @@
 
 - Light / dark · `localStorage` key `nakebusen-theme`  
 - Respect `prefers-color-scheme` when unset  
-- Text-only control labels  
+- Text-only control labels; icon artwork may be compact but interactive hit areas remain at least 44 × 44 CSS pixels  
 
 ## Tokens
 
