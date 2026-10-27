@@ -51,6 +51,7 @@
 - English is the default; Kiswahili is available through the language toggle.
 - Both languages must preserve service scope, starting prices and booking disclaimers.
 - A WhatsApp message is an enquiry, not a confirmed booking.
+- Navigation CTA fallback text must say **“Enquire about loc care”** even before JavaScript runs; do not use “Book” wording that implies a confirmed appointment.
 - Technology services are scoped and quoted per engagement.
 - **ONLY NAKEBUSEN TRANSACTS.** WARENA powers Digital; IKAI remains research / WIP; GENJE remains a creative practice identity.
 
