@@ -14,10 +14,14 @@ test("responsive widths remain usable without horizontal overflow", async ({ pag
     const metrics = await page.evaluate(() => ({
       viewport: document.documentElement.clientWidth,
       document: document.documentElement.scrollWidth,
+      overflow: [...document.querySelectorAll("body *")].filter(el => {
+        const r = el.getBoundingClientRect();
+        return r.width > 0 && (r.right > document.documentElement.clientWidth + 1 || r.left < -1);
+      }).slice(0, 12).map(el => ({tag: el.tagName, id: el.id, className: String(el.className).slice(0, 80), left: Math.round(el.getBoundingClientRect().left), right: Math.round(el.getBoundingClientRect().right), width: Math.round(el.getBoundingClientRect().width)})),
       brand: document.querySelector(".brand").getBoundingClientRect().toJSON(),
       controls: document.querySelector(".nav-right").getBoundingClientRect().toJSON(),
     }));
-    expect(metrics.document, `horizontal overflow at ${width}px`).toBeLessThanOrEqual(metrics.viewport);
+    expect(metrics.document, `horizontal overflow at ${width}px: ${JSON.stringify(metrics.overflow)}`).toBeLessThanOrEqual(metrics.viewport);
     expect(
       metrics.brand.right <= metrics.controls.left + 1 || metrics.brand.bottom <= metrics.controls.top + 1,
       `brand overlaps navigation controls at ${width}px`,
