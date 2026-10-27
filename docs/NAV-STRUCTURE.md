@@ -9,7 +9,7 @@
 | Position | Element | Behaviour |
 |---|---|---|
 | Left | **NAKEBUSEN** | Home anchor `#top` |
-| Under brand | Locs • Digital | Brand descriptor |
+| Under brand | Locs · Powered by WARENA | Brand descriptor |
 | Navigation | **Locs · Digital · About · Connect** | `#crown`, `#code`, `#founder`, `#connect` respectively |
 | Utility | **WA** | WhatsApp enquiry; accessible name identifies NAKEBUSEN |
 | Utility | **EN / SW** | Switch English / Kiswahili |
