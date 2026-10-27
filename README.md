@@ -52,7 +52,9 @@ Enquiry is not a booking. Braiding is not in the current advertised scope.
 - Text-first: **no embedded graphics** on the public page  
 - Gallery: text link only  
 - No analytics / tracking pixels / required CDN fonts  
-- Static HTML · progressive enhancement  
+- Static HTML · progressive enhancement
+- `docs/NAV-STRUCTURE.md` is the canonical public header/footer navigation contract; `index.html` is the implementation source.
+- Repository documentation navigation is for contributors and remains distinct from public customer navigation.  
 
 ## Principles
 
