@@ -506,6 +506,29 @@ header{
   #theme-toggle,#language-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem;padding:.25rem}
 }
 
+
+/* Compact header controls: right-aligned, with less visual and horizontal footprint. */
+.nav-right{justify-self:end;justify-content:flex-end;gap:.125rem;min-width:0}
+#theme-toggle,#language-toggle,#mobile-menu-toggle{
+  width:2.5rem;height:2.5rem;min-width:2.5rem;min-height:2.5rem;
+  padding:.2rem;flex:0 0 2.5rem;
+}
+#theme-toggle .toggle-icon,#language-toggle .toggle-icon,#mobile-menu-toggle .toggle-icon{
+  width:.875rem;height:.875rem;
+}
+.nav-cta.nav-wa{min-width:2.5rem;min-height:2.5rem;width:2.5rem;height:2.5rem;padding:.2rem}
+#theme-toggle,#language-toggle{font-size:.65rem}
+@media(max-width:899px){
+  .nav{grid-template-columns:minmax(0,1fr) auto;gap:.35rem .5rem}
+  .nav-right{grid-column:2;grid-row:1;gap:.125rem}
+  .brand{min-width:0}
+  .brand-name{font-size:1rem}
+  .brand-sub{font-size:.68rem}
+}
+@media(min-width:900px){
+  .nav-right{gap:.2rem}
+}
+
 </style>
 </head>
 <body>
