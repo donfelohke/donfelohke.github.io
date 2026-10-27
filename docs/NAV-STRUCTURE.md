@@ -1,8 +1,17 @@
-# Header and footer navigation — canonical structure
+# NAKEBUSEN navigation — canonical structure
 
-**Status:** Canonical navigation baseline · aligned with `index.html` · 2026-10-27  
+**Status:** Proposed implementation baseline · 2026-10-27  
 **Implementation source:** `index.html`  
 **Contact and price authority:** `PUBLIC-FACTS-REGISTER.md`, `SERVICE-CATALOG.md`
+
+## Design decision
+
+- **Header D:** compact sticky top bar plus a persistent floating mobile dock.
+- **Footer:** minimal, in normal document flow.
+- **Dock:** retained on mobile and hidden on desktop.
+- **Visual system:** text-first glass-terminal styling; no new external assets, tracking, or font dependencies.
+- **Commercial priority:** Locs first; Digital is a secondary path powered by WARENA.
+- The dock supplements the header; it does not replace the main navigation or the page's semantic section links.
 
 ## Header
 
@@ -10,33 +19,35 @@
 |---|---|---|
 | Left | **NAKEBUSEN** | Home anchor `#top` |
 | Under brand | Locs · Powered by WARENA | Brand descriptor |
-| Navigation | **Locs · Digital · @donfeloh · Connect** | `#crown`, `#code`, `#founder`, `#connect` respectively |
-| Utility | **WA** | WhatsApp enquiry; accessible name identifies NAKEBUSEN |
-| Utility | **EN / SW** | Switch English / Kiswahili |
-| Utility | **Light / Dark** | Switch theme; follow system preference until the visitor chooses |
+| Primary links | **Locs · Digital · @donfeloh · Connect** | `#crown`, `#code`, `#founder`, `#connect` |
+| Utility | WhatsApp | Direct enquiry to the approved number |
+| Utility | Language | English / Kiswahili |
+| Utility | Theme | Light / dark; respect system preference until visitor chooses |
+| Utility | Menu | Expands/collapses the mobile primary navigation |
 
 ## Responsive behaviour
 
-- Desktop: brand, four section links and utility controls share one row when space allows.
-- Mobile: compact two-tier header; preserve floating quick navigation and its More panel for secondary contact/source links.
-- Sticky header with scroll offsets so section headings are not hidden.
-- Theme/language/menu controls retain 44 × 44 CSS-pixel hit areas while the icon artwork remains compact.
-- Interactive targets at least 44 × 44 CSS pixels where practical.
-- Visible keyboard focus, descriptive accessible names, and a skip-to-content link.
-- Active section state must remain understandable to assistive technology.
-- Theme and language preferences may be stored locally; the page must remain usable if storage is unavailable.
-- Respect reduced-motion preferences.
+- Desktop: brand, four primary links and utility controls share one row where space permits.
+- Mobile: compact sticky header; primary links are available through the menu.
+- Mobile floating dock: **Locs · Digital · @donfeloh · More**.
+- Dock is hidden at desktop widths. Account for safe-area insets and keep page content and keyboard focus visible above the dock.
+- The **More** panel is for secondary contact and source links: WhatsApp, telephone, email, GitHub / Source, plus the brand signature. Do not duplicate the dock's primary section links in this panel.
+- Anchor targets must land below the sticky header.
+- Controls should provide at least 44 × 44 CSS-pixel hit areas where practical, visible keyboard focus, descriptive accessible names and accurate expanded/pressed state.
+- Include a skip-to-content link, support keyboard operation, and respect reduced-motion preferences.
+- The page must remain usable without JavaScript; static CTA copy must not imply that an appointment is confirmed.
 
-## Footer
+## Minimal footer
 
-1. **Brand / signature:** NAKEBUSEN · WARENA powered · @donfelohke; GRACE · GRIT · GLORY.
-2. **Locs panel:** short service summary and link to Locs & prices.
-3. **Digital panel:** practical technology summary and link to Digital services.
-4. **Connect panel:** Felix Lwova · Don Feloh; Eldoret Town / Karibu Mdosi; WhatsApp, telephone and email.
-5. **Footer navigation:** Locs · Digital · About · Connect · Back to top.
-6. **Social / resources:** X, Instagram, TikTok, GitHub, Facebook and Gallery; include only the established destinations.
-7. **Footer utilities:** EN / SW language control and Source repository link.
-8. **Copyright:** © 2026 Felix Lwova · Don Feloh.
+The footer remains in normal document flow and uses three compact content groups where the viewport allows:
+
+1. **Brand:** NAKEBUSEN, Locs · Powered by WARENA, “Your Beauty ° Your Way.”
+2. **Explore:** Locs, Digital, @donfeloh and Connect links.
+3. **Connect:** WhatsApp, telephone, email and GitHub / Source.
+4. **Signature:** GRACE · GRIT · GLORY; @donfelohke · #HisGenjeness.
+5. **Bottom row:** © 2026 Felix Lwova · Don Feloh, source link and language control.
+
+Keep the footer visually restrained. Do not add social/resource lists, a second full service description, fixed footer behaviour, or new destinations without a separate design decision.
 
 ## Approved public contacts
 
@@ -49,19 +60,23 @@
 ## Language and transaction boundaries
 
 - English is the default; Kiswahili is available through the language toggle.
-- Both languages must preserve service scope, starting prices and booking disclaimers.
+- Both languages must preserve service scope, starting prices and the enquiry disclaimer.
 - A WhatsApp message is an enquiry, not a confirmed booking.
+- The header CTA fallback must say **“Enquire about loc care”** even before JavaScript runs; do not use “Book” wording that implies a confirmed appointment.
+- Approved starting prices: **Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Installation — KES 3,500**.
 - Technology services are scoped and quoted per engagement.
 - **ONLY NAKEBUSEN TRANSACTS.** WARENA powers Digital; IKAI remains research / WIP; GENJE remains a creative practice identity.
 
-## Manual release checks
+## Release checklist
 
-- [ ] Test widths 320, 360, 390, 768 and desktop for collisions and horizontal overflow.
-- [ ] WhatsApp opens the correct destination and carries an enquiry, not a booking confirmation.
-- [ ] Telephone and email links match the public facts register.
-- [ ] EN / SW controls update page copy and accessible labels consistently.
-- [ ] Theme toggle works with light, dark and system preference.
-- [ ] Header anchors land below the sticky navigation.
-- [ ] Keyboard focus, reduced motion and contrast remain usable.
-- [ ] Footer links work; no unverified contact or location details appear.
+- [ ] Test widths 320, 360, 390, 430, 768 and desktop for collisions and horizontal overflow.
+- [ ] Confirm the floating dock does not cover content, footer links or keyboard focus.
+- [ ] Verify More panel opens/closes by touch and keyboard; expanded state and focus handling remain correct.
+- [ ] Verify WhatsApp, telephone, email and source destinations.
+- [ ] Verify English / Kiswahili copy and accessible labels.
+- [ ] Verify light, dark and system theme behaviour.
+- [ ] Verify section anchors land below the sticky header.
+- [ ] Verify reduced motion, visible focus and contrast.
+- [ ] Confirm prices, contacts, location wording and enquiry-not-booking boundary remain correct.
+- [ ] Run repository checks and review their results.
 - [ ] Validate the deployed page separately; a successful commit or workflow is not browser proof.
