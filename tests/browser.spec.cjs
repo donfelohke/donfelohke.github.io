@@ -36,7 +36,7 @@ test("responsive widths remain usable without horizontal overflow", async ({ pag
 test("section links scroll clear of the sticky header", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto(pageUrl);
-  await page.locator('.hero a[href="#crown"]').click();
+  await page.locator('#site-navigation a[href="#crown"]').click();
   const result = await page.evaluate(() => ({
     targetTop: document.querySelector("#crown").getBoundingClientRect().top,
     headerBottom: document.querySelector("header").getBoundingClientRect().bottom,
@@ -59,6 +59,21 @@ test("theme, language, and enquiry paths work in the browser", async ({ page }) 
   expect(locHref).toContain("wa.me/254719635415");
   expect(techHref).toContain("wa.me/254719635415");
   expect(techHref).not.toBe(locHref);
+});
+
+test("integrated hero keeps beauty-first copy, starting prices, and enquiry boundary", async ({ page }) => {
+  await page.goto(pageUrl);
+  await expect(page.locator(".hero h1")).toHaveText("Your beauty. Your way.");
+  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Rooted in craft. Built with intention.");
+  await expect(page.locator(".hero .hero-price-row")).toHaveCount(3);
+  await expect(page.locator(".hero")).toContainText("KES 700");
+  await expect(page.locator(".hero")).toContainText("KES 1,500");
+  await expect(page.locator(".hero")).toContainText("KES 3,500");
+  await expect(page.locator(".hero")).toContainText("An enquiry is not a confirmed booking");
+  await expect(page.locator('.hero a[data-wa-purpose="loc"]')).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
+  await page.locator("#language-toggle").click();
+  await expect(page.locator(".hero h1")).toHaveText("Urembo wako. Njia yako.");
+  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Imejikita kwenye ufundi. Imejengwa kwa kusudi.");
 });
 
 test("deployed GitHub Pages homepage is reachable and readable on mobile", async ({ page }) => {
