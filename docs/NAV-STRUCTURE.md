@@ -1,6 +1,6 @@
 # Header and footer navigation — canonical structure
 
-**Status:** Final copy baseline · 2026-10-27  
+**Status:** Canonical navigation baseline · aligned with `index.html` · 2026-10-27  
 **Implementation source:** `index.html`  
 **Contact and price authority:** `PUBLIC-FACTS-REGISTER.md`, `SERVICE-CATALOG.md`
 
@@ -10,15 +10,16 @@
 |---|---|---|
 | Left | **NAKEBUSEN** | Home anchor `#top` |
 | Under brand | Locs • Digital | Brand descriptor |
-| Navigation | **Locs · Digital · About · Connect** | Anchors to the matching sections |
+| Navigation | **Locs · Digital · About · Connect** | `#crown`, `#code`, `#founder`, `#connect` respectively |
 | Utility | **WA** | WhatsApp enquiry; accessible name identifies NAKEBUSEN |
 | Utility | **EN / SW** | Switch English / Kiswahili |
 | Utility | **Light / Dark** | Switch theme; follow system preference until the visitor chooses |
 
 ## Responsive behaviour
 
-- Desktop: brand, centred navigation and utility controls share one row when space allows.
-- Mobile: compact two-tier header; avoid collisions and unnecessary hamburger navigation for a small set of destinations.
+- Desktop: brand, four section links and utility controls share one row when space allows.
+- Mobile: compact two-tier header with a four-link section menu; the separate floating quick navigation offers Locs, Digital, Connect and a More panel containing About and contact/source links.
+- Theme/language/menu icons remain visually compact while their interactive hit areas remain at least 44 × 44 CSS pixels.
 - Sticky header with scroll offsets so section headings are not hidden.
 - Interactive targets at least 44 × 44 CSS pixels where practical.
 - Visible keyboard focus, descriptive accessible names, and a skip-to-content link.
