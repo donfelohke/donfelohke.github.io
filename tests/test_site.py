@@ -65,7 +65,7 @@ check('data-i18n="navLocs"' in html and 'data-i18n="navDigital"' in html and 'hr
 check('navLocs:"Locs"' in html and 'navDigital:"Digital"' in html, "English header navigation labels must describe the two primary paths")
 check('navLocs:"Locs"' in html and 'navDigital:"Digital"' in html, "Kiswahili header navigation must preserve the concise Locs and Digital labels")
 check('section[id],.hero[id]{scroll-margin-top:9rem}' in html, "Mobile section anchors must account for sticky header height")
-check('price700:"From KES 700"' in html and 'price1500:"From KES 1,500"' in html and 'price3500:"From KES 3,500"' in html, "English price translations must be present")
+check('price700:"KES 700"' in html and 'price1500:"KES 1,500"' in html and 'price3500:"KES 3,500"' in html, "English price translations must match the current service catalogue")
 check(p.h1_count == 1, f"Expected one h1, found {p.h1_count}")
 check("description" in p.metas and len(p.metas["description"]) >= 50, "Missing or too-short meta description")
 check(
@@ -83,7 +83,7 @@ check(not any(link.get("rel") == "icon" for link in p.links), "No graphic favico
 check("☾" not in html and "☀" not in html and "◐" not in html, "Theme control must use text labels, not decorative glyphs")
 check('>Dark</button>' in html or 'textContent=dark()?"Light":"Dark"' in html, "Theme control must expose Dark/Light text labels")
 check("Eldoret Town / Karibu Mdosi" in html, "Primary loc-care location wording is required")
-check("From KES 700" in html and "From KES 1,500" in html and "From KES 3,500" in html, "All service prices must be labelled as starting prices")
+check("KES 700" in html and "KES 1,500" in html and "KES 3,500" in html, "All three approved service prices must be present")
 check(not any(key in p.metas for key in ("og:image", "twitter:image")), "No social-preview image meta")
 check("background-image" not in html.lower(), "No CSS image backgrounds")
 check("application/ld+json" in html and "Organization" in html, "Missing Organization structured data")

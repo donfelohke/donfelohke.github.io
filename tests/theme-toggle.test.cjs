@@ -25,11 +25,11 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
     removeAttribute(key) { delete attributes[key]; },
   };
   const themeMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
-  const descriptionMeta = { content: "" };
-  const ogDescriptionMeta = { content: "" };
-  const twitterDescriptionMeta = { content: "" };
-  const ogTitleMeta = { content: "" };
-  const twitterTitleMeta = { content: "" };
+  const descriptionMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
+  const ogDescriptionMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
+  const twitterDescriptionMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
+  const ogTitleMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
+  const twitterTitleMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
   const themeButton = makeButton();
   const headerLanguageButton = makeButton();
   const footerLanguageButton = makeButton();
@@ -72,7 +72,7 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
   };
   const context = {
     document,
-    window: { matchMedia: () => media },
+    window: { matchMedia: () => media, addEventListener() {} },
     localStorage: {
       getItem(key) {
         if (storageThrows) throw new Error("storage unavailable");
@@ -115,31 +115,27 @@ assert.equal(system.themeButton.textContent, "Dark", "system preference changes 
 
 const language = boot();
 assert.equal(language.root.lang, "en", "English is the default language");
-assert.match(language.twitterDescriptionMeta.content, /Loc care in Eldoret/);
-assert.match(language.ogTitleMeta.content, /NAKEBUSEN Locs • Digital/);
-assert.match(language.twitterTitleMeta.content, /NAKEBUSEN Locs • Digital/);
-assert.match(language.ogTitleMeta.content, /Powered by WARENA/);
-assert.match(language.twitterTitleMeta.content, /Powered by WARENA/);
-assert.match(language.documentTitle, /Powered by WARENA/);
-assert.equal(language.headerLanguageButton.textContent, "Kiswahili");
+assert.match(html, /<meta property="og:description" content="Loc care in Eldoret Town/);
+assert.match(html, /<meta property="og:title" content="NAKEBUSEN Locs • Digital \| Eldoret, Kenya"/);
+assert.match(html, /<meta name="twitter:title" content="NAKEBUSEN Locs • Digital \| Eldoret, Kenya"/);
+assert.match(html, /<meta name="twitter:description" content="Loc care from KES 700/);
+assert.match(html, /<title>NAKEBUSEN Locs • Digital \| Eldoret, Kenya/);
+assert.equal(language.headerLanguageButton.textContent, "EN", "English toggle uses the compact EN label");
 assert.equal(language.headerLanguageButton.attrs["aria-label"], "Switch language to Kiswahili", "English toggle announces its action in English");
-assert.match(language.whatsappLinks[0].href, /I%20am%20enquiring%20about%20loc%20care/, "English loc enquiry has an English prefilled message");
+assert.match(language.whatsappLinks[0].href, /I%20am%20enquiring%20about%20a%20loc%20service/, "English loc enquiry has an English prefilled message");
 language.headerLanguageButton.listeners.click();
 assert.equal(language.root.lang, "sw", "header toggle switches to Kiswahili");
-assert.equal(language.headerLanguageButton.attrs["aria-label"], "Badili lugha iwe Kiingereza", "Kiswahili toggle announces its action in Kiswahili");
-assert.match(language.whatsappLinks[0].href, /naulizia%20huduma%20za%20loc/, "Kiswahili loc enquiry has a Kiswahili prefilled message");
-assert.match(language.whatsappLinks[1].href, /mradi%20wa%20teknolojia/, "Kiswahili technology enquiry has a Kiswahili prefilled message");
+assert.equal(language.headerLanguageButton.textContent, "SW", "Kiswahili toggle uses the compact SW label");
+assert.equal(language.headerLanguageButton.attrs["aria-label"], "Badilisha lugha hadi Kiingereza", "Kiswahili toggle announces its action in Kiswahili");
+assert.match(language.whatsappLinks[0].href, /ninaulizia%20huduma%20za%20loc/, "Kiswahili loc enquiry has a Kiswahili prefilled message");
+assert.match(language.whatsappLinks[1].href, /kujadili%20mradi%20wa%20teknolojia/, "Kiswahili technology enquiry has a Kiswahili prefilled message");
 assert.equal(language.values["nakebusen-language"], "sw", "language choice persists");
-assert.match(language.twitterDescriptionMeta.content, /Huduma za loc/);
-assert.match(language.twitterDescriptionMeta.content, /Huduma za loc/);
-assert.match(language.ogTitleMeta.content, /NAKEBUSEN Locs • Digital/);
-assert.match(language.twitterTitleMeta.content, /NAKEBUSEN Locs • Digital/);
-assert.match(language.ogTitleMeta.content, /Inaendeshwa na WARENA/);
-assert.match(language.twitterTitleMeta.content, /Inaendeshwa na WARENA/);
-assert.equal(language.headerLanguageButton.textContent, "English");
-assert.equal(language.footerLanguageButton.textContent, "English");
+assert.equal(language.headerLanguageButton.textContent, "SW", "header retains compact language label in Kiswahili");
+assert.equal(language.footerLanguageButton.textContent, "SW", "footer retains compact language label in Kiswahili");
 language.footerLanguageButton.listeners.click();
 assert.equal(language.root.lang, "en", "footer toggle switches back to English");
+assert.equal(language.headerLanguageButton.textContent, "EN");
+assert.equal(language.footerLanguageButton.textContent, "EN");
 assert.equal(language.values["nakebusen-language"], "en");
 
 const restoredLanguage = boot({ storedLanguage: "sw" });
