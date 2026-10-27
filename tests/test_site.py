@@ -94,6 +94,7 @@ check('id="mobile-menu-toggle" aria-label="Open navigation menu" title="Open nav
 check('navMore:"More"' in html and 'navMore:"Zaidi"' in html and '<span data-i18n="navMore">More</span>' in html, "Floating More label must localize between English and Kiswahili")
 check('<p class="small muted" data-i18n="heroStatus">Eldoret Town / Karibu Mdosi, Kenya · Loc services · Enquiries confirmed manually.</p>' in html, "English hero fallback must use the approved Eldoret Town / Karibu Mdosi wording")
 check('heroStatus:"Eldoret Town / Karibu Mdosi, Kenya · Loc services · Enquiries confirmed manually."' in html, "English hero translation must preserve the approved location wording")
+check('founderDesc:"NAKEBUSEN inaleta urembo na teknolojia kupitia ufundi. WARENA ni msingi wa kiufundi. Don Feloh huleta ufundi, uelekeo wa teknolojia na ubunifu katika kazi hii."' in html, "Kiswahili founder copy must describe craft, technical direction, and creative practice naturally")
 check('heroStatus:"Eldoret Town / Karibu Mdosi, Kenya · Huduma za loc · Maombi yanathibitishwa moja kwa moja."' in html, "Kiswahili hero translation must preserve the approved location wording")
 check('<h1 data-i18n="tagline">Your Beauty ° Your Way.</h1>' in html, "Approved hero headline must be preserved")
 check('href="tel:+254719635415">Call 0719 635 415</a>' in html, "Footer telephone link required")
