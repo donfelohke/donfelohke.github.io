@@ -370,6 +370,96 @@ header{
 @media(prefers-reduced-transparency:reduce){.floating-nav{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--paper)}}
 @media(prefers-reduced-motion:reduce){.floating-nav,.floating-more-panel{scroll-behavior:auto;transition:none}}
 
+
+/* NAKEBUSEN master direction: Liquid Glass Terminal + Editorial Hybrid.
+   Glass is reserved for navigation and transient controls; content stays legible and fast. */
+:root{
+  --forest:#033500;
+  --canopy:#0D2414;
+  --clay:#E2725B;
+  --ochre:#D4AF37;
+  --ivory:#F2EFEA;
+  --sage:#A9BBA9;
+  --paper:#F2EFEA;
+  --ink:#111111;
+  --gold:#D4AF37;
+  --muted:#454545;
+  --line:rgba(17,17,17,.2);
+  --focus:#033500;
+  --locs-clay:#E2725B;
+  --locs-clay-light:#F2B5A4;
+  --digital-bg:#033500;
+  --digital-panel:#0D2414;
+  --digital-line:#79D7D2;
+  --digital-phosphor:#79D7D2;
+  --coral:#E2725B;
+}
+:root[data-theme="light"]{--paper:#F2EFEA;--ink:#111111;--muted:#454545;--line:rgba(17,17,17,.2);--focus:#033500}
+:root[data-theme="dark"]{--paper:#111111;--ink:#F2EFEA;--muted:#C8C8C8;--line:rgba(242,239,234,.22);--focus:#79D7D2}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]):not([data-theme="dark"]){--paper:#111111;--ink:#F2EFEA;--muted:#C8C8C8;--line:rgba(242,239,234,.22);--focus:#79D7D2}
+}
+/* Editorial hero: strong typographic field, with no dependency on remote imagery. */
+.hero{background:var(--forest);color:var(--ivory)}
+.hero .eyebrow,.hero .muted{color:#D5E2D3}
+.hero .btn-fill{background:var(--clay);border-color:var(--clay);color:#111111}
+.hero .btn:not(.btn-fill){border-color:rgba(242,239,234,.68);color:var(--ivory);background:rgba(3,53,0,.35)}
+/* Locs: warm, opaque material cards; never use blur on service content. */
+#crown .svc.terminal-card{
+  background:#F7E9E2;
+  border:1px solid rgba(226,114,91,.42);
+  border-top:3px solid #E2725B;
+  border-radius:12px;
+  box-shadow:0 8px 22px rgba(17,17,17,.055);
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+#crown .svc .terminal-id,#crown .svc .price{color:#853D2E}
+#crown .svc .terminal-action{background:#853D2E;border-color:#853D2E;color:#FFFFFF}
+:root[data-theme="dark"] #crown .svc.terminal-card{background:#241B18;border-color:rgba(242,181,164,.35);border-top-color:#F2B5A4}
+:root[data-theme="dark"] #crown .svc .terminal-id,:root[data-theme="dark"] #crown .svc .price{color:#F2B5A4}
+:root[data-theme="dark"] #crown .svc .terminal-action{background:#E2725B;border-color:#E2725B;color:#111111}
+/* Digital: solid forest-terminal modules with restrained reflective teal. */
+#code{background:#033500;color:#F2EFEA}
+#code .group,.digital-grid .group{
+  background:#0D2414;
+  border:1px solid rgba(121,215,210,.3);
+  border-top:3px solid #79D7D2;
+  border-radius:12px;
+  box-shadow:0 8px 22px rgba(0,0,0,.12);
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+#code .group h3,.digital-grid .group h3{color:#79D7D2;border-bottom-color:rgba(121,215,210,.28)}
+#code .group,#code .group p,#code .group li{color:#F2EFEA}
+#code .group .muted{color:#D4E5E2}
+#code .group .btn{background:#033500;border-color:#79D7D2;color:#F2EFEA}
+#code .group .btn:hover{background:#79D7D2;color:#111111}
+/* Glass only where it helps orientation: compact header and mobile navigation. */
+header{
+  background:rgba(242,239,234,.88);
+  border:1px solid rgba(17,17,17,.14);
+  border-radius:16px;
+  box-shadow:0 8px 26px rgba(17,17,17,.09);
+}
+@supports((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  header{backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%)}
+}
+:root[data-theme="dark"] header{background:rgba(17,17,17,.9);border-color:rgba(242,239,234,.18)}
+.floating-nav{background:rgba(242,239,234,.94);border-color:rgba(17,17,17,.18)}
+:root[data-theme="dark"] .floating-nav{background:rgba(17,17,17,.94);border-color:rgba(242,239,234,.2)}
+/* Keep editorial, founder and footer surfaces mostly opaque for reading performance. */
+#founder .terminal-card,.footer-panel{background:var(--paper);border-radius:12px;box-shadow:0 6px 20px rgba(17,17,17,.055)}
+:root[data-theme="dark"] #founder .terminal-card,:root[data-theme="dark"] .footer-panel{background:#191919;border-color:rgba(242,239,234,.2)}
+.footer-panel.digital{background:#0D2414;color:#F2EFEA;border-top-color:#79D7D2}
+.footer-panel.digital h3,.footer-panel.digital a{color:#F2EFEA}
+@media(prefers-reduced-transparency:reduce){
+  header,.floating-nav{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--paper)}
+  #crown .svc.terminal-card{backdrop-filter:none;-webkit-backdrop-filter:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .terminal-card,.svc,.group,.footer-panel,.btn,.terminal-action,.footer-link{transition:none}
+  .terminal-card:hover,.svc:hover,.footer-panel:hover,.btn:hover{transform:none}
+}
+
 </style>
 </head>
 <body>
