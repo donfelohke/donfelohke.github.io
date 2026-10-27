@@ -104,7 +104,7 @@ for href in p.hrefs:
     ):
         check(False, f"Unsupported or malformed link: {href}")
 
-check("NAKEBUSEN" in html and "WARENA powered" in html and "@donfelohke" in html, "Footer must attribute NAKEBUSEN, WARENA, and @donfelohke")
+check("NAKEBUSEN" in html and "Powered by WARENA" in html and "@donfelohke" in html, "Footer must attribute NAKEBUSEN, WARENA, and @donfelohke")
 check('data-i18n="boundary"' in html and "ONLY NAKEBUSEN TRANSACTS" not in html, "Public boundary copy must be customer-facing")
 check('<span data-i18n="bookingNote">' in html, "bookingNote translation must not nest inside another data-i18n parent")
 
