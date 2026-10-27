@@ -18,11 +18,15 @@ test("responsive widths remain usable without horizontal overflow", async ({ pag
       bodyScroll: document.body.scrollWidth,
       rootRect: document.documentElement.getBoundingClientRect().toJSON(),
       bodyRect: document.body.getBoundingClientRect().toJSON(),
-      pseudo: ["html","body","header","main",".hero",".floating-nav","#floating-more-panel"].map(sel => { const el=document.querySelector(sel); if(!el)return {sel,missing:true}; const r=getComputedStyle(el,"::after"); return {sel,afterContent:r.content,afterWidth:r.width,afterRight:r.right,afterPosition:r.position}; }),
-      overflow: [...document.querySelectorAll("body *")].filter(el => {
-        const r = el.getBoundingClientRect();
-        return r.right > document.documentElement.clientWidth + 1 || r.left < -1 || el.scrollWidth > el.clientWidth + 1;
-      }).sort((a, b) => b.getBoundingClientRect().right - a.getBoundingClientRect().right).slice(0, 16).map(el => ({tag: el.tagName, id: el.id, className: String(el.className).slice(0, 80), left: Math.round(el.getBoundingClientRect().left), right: Math.round(el.getBoundingClientRect().right), width: Math.round(el.getBoundingClientRect().width), clientWidth: el.clientWidth, scrollWidth: el.scrollWidth})),
+      pseudo: [...document.querySelectorAll("html,body,body *")].flatMap(el => ["::before","::after"].map(p => {
+        const s=getComputedStyle(el,p); const r=el.getBoundingClientRect();
+        return {sel:el.tagName.toLowerCase()+(el.id?"#"+el.id:"")+(typeof el.className==="string"&&el.className.trim()?"."+el.className.trim().split(/\\s+/).join("."):""),pseudo:p,content:s.content,position:s.position,left:s.left,right:s.right,width:s.width,transform:s.transform,hostLeft:Math.round(r.left),hostRight:Math.round(r.right)};
+      }).filter(x => x.content!=="none" && x.content!=="normal" && (x.position==="absolute" || x.position==="fixed" || x.transform!=="none") )),
+      overflow: [...document.querySelectorAll("body *")].map(el => {
+        const r=el.getBoundingClientRect();
+        return {tag:el.tagName,id:el.id,className:String(el.className).slice(0,80),left:Math.round(r.left),right:Math.round(r.right),top:Math.round(r.top),bottom:Math.round(r.bottom),width:Math.round(r.width),clientWidth:el.clientWidth,scrollWidth:el.scrollWidth,position:getComputedStyle(el).position,transform:getComputedStyle(el).transform,overflowX:getComputedStyle(el).overflowX};
+      }).filter(x => x.right > document.documentElement.clientWidth + 1 || x.left < -1 || x.scrollWidth > x.clientWidth + 1).sort((a,b) => Math.max(b.right-document.documentElement.clientWidth,-b.left,b.scrollWidth-b.clientWidth)-Math.max(a.right-document.documentElement.clientWidth,-a.left,a.scrollWidth-a.clientWidth)).slice(0,40),
+      scrollRoot:{tag:document.scrollingElement?.tagName,scrollWidth:document.scrollingElement?.scrollWidth,clientWidth:document.scrollingElement?.clientWidth,bodyWidth:getComputedStyle(document.body).width,rootWidth:getComputedStyle(document.documentElement).width},
       brand: document.querySelector(".brand").getBoundingClientRect().toJSON(),
       controls: document.querySelector(".nav-right").getBoundingClientRect().toJSON(),
     }));
