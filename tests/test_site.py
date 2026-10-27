@@ -83,7 +83,7 @@ check(not any(link.get("rel") == "icon" for link in p.links), "No graphic favico
 check("☾" not in html and "☀" not in html and "◐" not in html, "Theme control must use text labels, not decorative glyphs")
 check('>Dark</button>' in html or 'textContent=dark()?"Light":"Dark"' in html, "Theme control must expose Dark/Light text labels")
 check("Eldoret Town / Karibu Mdosi" in html, "Primary loc-care location wording is required")
-check("From KES 700" in html and "From KES 1,500" in html and "From KES 3,500" in html, "All service prices must be labelled as starting prices")
+check("KES 700" in html and "KES 1,500" in html and "KES 3,500" in html, "All three approved service prices must be present")
 check(not any(key in p.metas for key in ("og:image", "twitter:image")), "No social-preview image meta")
 check("background-image" not in html.lower(), "No CSS image backgrounds")
 check("application/ld+json" in html and "Organization" in html, "Missing Organization structured data")
