@@ -36,7 +36,7 @@ test("responsive widths remain usable without horizontal overflow", async ({ pag
 test("section links scroll clear of the sticky header", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto(pageUrl);
-  await page.locator('.hero a[href="#crown"]').click();
+  await page.locator('a[href="#crown"]').first().click();
   const result = await page.evaluate(() => ({
     targetTop: document.querySelector("#crown").getBoundingClientRect().top,
     headerBottom: document.querySelector("header").getBoundingClientRect().bottom,
