@@ -9,6 +9,7 @@ assert.ok(match, "inline application script exists");
 function makeButton() {
   return {
     textContent: "",
+    innerHTML: "",
     attrs: {},
     listeners: {},
     addEventListener(event, fn) { this.listeners[event] = fn; },
@@ -92,26 +93,27 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
 }
 
 const light = boot();
-assert.equal(light.themeButton.textContent, "Dark", "light theme offers dark mode");
+assert.match(light.themeButton.innerHTML, /<svg class="toggle-icon"/, "light theme toggle renders an icon");
+assert.match(light.themeButton.innerHTML, /M20\.5 15\.5A8\.5/, "light theme offers the moon/dark-mode action icon");
 assert.equal(light.themeButton.attrs["aria-label"], "Switch to dark theme");
 assert.equal(light.themeButton.attrs["aria-pressed"], "false");
 light.themeButton.listeners.click();
 assert.equal(light.attributes["data-theme"], "dark", "click switches to dark");
-assert.equal(light.themeButton.textContent, "Light");
+assert.match(light.themeButton.innerHTML, /<circle cx="12" cy="12" r="4"/, "dark theme shows the sun/light-mode action icon");
 assert.equal(light.themeButton.attrs["aria-label"], "Switch to light theme");
 assert.equal(light.themeButton.attrs["aria-pressed"], "true");
 assert.equal(light.values["nakebusen-theme"], "dark", "choice is persisted");
 
 const restored = boot({ storedTheme: light.values["nakebusen-theme"] });
 assert.equal(restored.attributes["data-theme"], "dark", "saved theme is restored");
-assert.equal(restored.themeButton.textContent, "Light");
+assert.match(restored.themeButton.innerHTML, /<circle cx="12" cy="12" r="4"/, "restored dark theme shows the sun icon");
 
 const system = boot({ systemDark: true });
 assert.equal(system.attributes["data-theme"], undefined, "system choice leaves explicit data-theme unset");
-assert.equal(system.themeButton.textContent, "Light", "system dark preference is reflected");
+assert.match(system.themeButton.innerHTML, /<circle cx="12" cy="12" r="4"/, "system dark preference shows the sun icon");
 system.media.matches = false;
 system.mediaListeners.change();
-assert.equal(system.themeButton.textContent, "Dark", "system preference changes are reflected");
+assert.match(system.themeButton.innerHTML, /M20\.5 15\.5A8\.5/, "system light preference shows the moon icon");
 
 const language = boot();
 assert.equal(language.root.lang, "en", "English is the default language");
@@ -120,21 +122,21 @@ assert.match(html, /<meta property="og:title" content="NAKEBUSEN Locs • Digita
 assert.match(html, /<meta name="twitter:title" content="NAKEBUSEN Locs • Digital \| Eldoret, Kenya"/);
 assert.match(html, /<meta name="twitter:description" content="Loc care from KES 700/);
 assert.match(html, /<title>NAKEBUSEN Locs • Digital \| Eldoret, Kenya/);
-assert.equal(language.headerLanguageButton.textContent, "EN", "English toggle uses the compact EN label");
+assert.match(language.headerLanguageButton.innerHTML, /<svg class="toggle-icon"/, "English header language toggle uses a globe icon");
 assert.equal(language.headerLanguageButton.attrs["aria-label"], "Switch language to Kiswahili", "English toggle announces its action in English");
 assert.match(language.whatsappLinks[0].href, /I%20am%20enquiring%20about%20a%20loc%20service/, "English loc enquiry has an English prefilled message");
 language.headerLanguageButton.listeners.click();
 assert.equal(language.root.lang, "sw", "header toggle switches to Kiswahili");
-assert.equal(language.headerLanguageButton.textContent, "SW", "Kiswahili toggle uses the compact SW label");
+assert.match(language.headerLanguageButton.innerHTML, /<svg class="toggle-icon"/, "Kiswahili header language toggle retains the globe icon");
 assert.equal(language.headerLanguageButton.attrs["aria-label"], "Badilisha lugha hadi Kiingereza", "Kiswahili toggle announces its action in Kiswahili");
 assert.match(language.whatsappLinks[0].href, /ninaulizia%20huduma%20za%20loc/, "Kiswahili loc enquiry has a Kiswahili prefilled message");
 assert.match(language.whatsappLinks[1].href, /kujadili%20mradi%20wa%20teknolojia/, "Kiswahili technology enquiry has a Kiswahili prefilled message");
 assert.equal(language.values["nakebusen-language"], "sw", "language choice persists");
-assert.equal(language.headerLanguageButton.textContent, "SW", "header retains compact language label in Kiswahili");
+assert.match(language.headerLanguageButton.innerHTML, /<svg class="toggle-icon"/, "header retains the globe icon in Kiswahili");
 assert.equal(language.footerLanguageButton.textContent, "SW", "footer retains compact language label in Kiswahili");
 language.footerLanguageButton.listeners.click();
 assert.equal(language.root.lang, "en", "footer toggle switches back to English");
-assert.equal(language.headerLanguageButton.textContent, "EN");
+assert.match(language.headerLanguageButton.innerHTML, /<svg class="toggle-icon"/);
 assert.equal(language.footerLanguageButton.textContent, "EN");
 assert.equal(language.values["nakebusen-language"], "en");
 
