@@ -23,6 +23,28 @@ test("responsive widths remain usable without horizontal overflow", async ({ pag
         const s=getComputedStyle(el,p); const r=el.getBoundingClientRect();
         return {sel:el.tagName.toLowerCase()+(el.id?"#"+el.id:"")+(typeof el.className==="string"&&el.className.trim()?"."+el.className.trim().split(/\\s+/).join("."):""),pseudo:p,content:s.content,position:s.position,left:s.left,right:s.right,width:s.width,transform:s.transform,hostLeft:Math.round(r.left),hostRight:Math.round(r.right)};
       }).filter(x => x.content!=="none" && x.content!=="normal" && (x.position==="absolute" || x.position==="fixed" || x.transform!=="none") )),
+      textOverflow: (() => {
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        const found = [];
+        while (walker.nextNode()) {
+          const node = walker.currentNode;
+          if (!node.nodeValue || !node.nodeValue.trim()) continue;
+          const range = document.createRange();
+          range.selectNodeContents(node);
+          const rects = [...range.getClientRects()];
+          const bad = rects.filter(r => r.right > document.documentElement.clientWidth + 1 || r.left < -1);
+          if (bad.length) found.push({text:node.nodeValue.trim().slice(0,120),rects:bad.map(r=>({left:Math.round(r.left),right:Math.round(r.right),width:Math.round(r.width)})),parent:node.parentElement?.tagName+"."+String(node.parentElement?.className||"").slice(0,60)});
+        }
+        return found.slice(0,30);
+      })(),
+      wideStyles: [...document.querySelectorAll("html,body,body *")].map(el => {
+        const s=getComputedStyle(el), r=el.getBoundingClientRect();
+        return {tag:el.tagName,id:el.id,cls:String(el.className).slice(0,60),width:s.width,minWidth:s.minWidth,maxWidth:s.maxWidth,whiteSpace:s.whiteSpace,position:s.position,transform:s.transform,left:Math.round(r.left),right:Math.round(r.right),scrollWidth:el.scrollWidth,clientWidth:el.clientWidth};
+      }).filter(x => parseFloat(x.width)>document.documentElement.clientWidth+1 || (x.minWidth.endsWith("px")&&parseFloat(x.minWidth)>document.documentElement.clientWidth+1)).slice(0,30),
+      pseudoAll: [...document.querySelectorAll("html,body,body *")].flatMap(el => ["::before","::after"].map(p => {
+        const s=getComputedStyle(el,p);
+        return {host:el.tagName.toLowerCase()+(el.id?"#"+el.id:"")+(typeof el.className==="string"&&el.className.trim()?"."+el.className.trim().split(/\s+/).join("."):""),pseudo:p,content:s.content,display:s.display,position:s.position,width:s.width,minWidth:s.minWidth,left:s.left,right:s.right,marginLeft:s.marginLeft,marginRight:s.marginRight,transform:s.transform,boxShadow:s.boxShadow};
+      }).filter(x => x.content!=="none"&&x.content!=="normal"&&x.display!=="none")),
       overflow: [...document.querySelectorAll("body *")].map(el => {
         const r=el.getBoundingClientRect();
         return {tag:el.tagName,id:el.id,className:String(el.className).slice(0,80),left:Math.round(r.left),right:Math.round(r.right),top:Math.round(r.top),bottom:Math.round(r.bottom),width:Math.round(r.width),clientWidth:el.clientWidth,scrollWidth:el.scrollWidth,position:getComputedStyle(el).position,transform:getComputedStyle(el).transform,overflowX:getComputedStyle(el).overflowX};
@@ -35,7 +57,7 @@ test("responsive widths remain usable without horizontal overflow", async ({ pag
       brand: document.querySelector(".brand").getBoundingClientRect().toJSON(),
       controls: document.querySelector(".nav-right").getBoundingClientRect().toJSON(),
     }));
-    expect(metrics.document, `horizontal overflow at ${width}px: ${JSON.stringify({innerWidth:metrics.innerWidth,bodyScroll:metrics.bodyScroll,rootRect:metrics.rootRect,bodyRect:metrics.bodyRect,pseudo:metrics.pseudo,overflow:metrics.overflow,farthest:metrics.farthest,scrollRoot:metrics.scrollRoot})}`).toBeLessThanOrEqual(metrics.viewport);
+    expect(metrics.document, `horizontal overflow at ${width}px: ${JSON.stringify({innerWidth:metrics.innerWidth,bodyScroll:metrics.bodyScroll,rootRect:metrics.rootRect,bodyRect:metrics.bodyRect,pseudo:metrics.pseudo,pseudoAll:metrics.pseudoAll,textOverflow:metrics.textOverflow,wideStyles:metrics.wideStyles,overflow:metrics.overflow,farthest:metrics.farthest,scrollRoot:metrics.scrollRoot})}`).toBeLessThanOrEqual(metrics.viewport);
     expect(
       metrics.brand.right <= metrics.controls.left + 1 || metrics.brand.bottom <= metrics.controls.top + 1,
       `brand overlaps navigation controls at ${width}px`,
