@@ -11,6 +11,7 @@ test("responsive widths remain usable without horizontal overflow", async ({ pag
   await page.goto(pageUrl);
   for (const width of [320, 360, 390, 430, 768, 1024, 1440]) {
     await page.setViewportSize({ width, height: 900 });
+    await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
     const metrics = await page.evaluate(() => ({
       viewport: document.documentElement.clientWidth,
       innerWidth: window.innerWidth,
@@ -90,7 +91,7 @@ test("integrated hero keeps beauty-first copy, starting prices, and enquiry boun
   await expect(page.locator(".hero")).toContainText("KES 700");
   await expect(page.locator(".hero")).toContainText("KES 1,500");
   await expect(page.locator(".hero")).toContainText("KES 3,500");
-  await expect(page.locator(".hero")).toContainText("Ombi si miadi iliyothibitishwa");
+  await expect(page.locator(".hero")).toContainText("An enquiry is not a confirmed booking");
   await expect(page.locator('.hero a[data-wa-purpose="loc"]')).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
   await page.locator("#language-toggle").click();
   await expect(page.locator(".hero h1")).toHaveText("Urembo wako ° Njia yako.");
@@ -155,7 +156,7 @@ test("every service enquiry opens the correct WhatsApp recipient with service co
     const href = await page.locator('[data-wa-purpose="' + purpose + '"]').first().getAttribute("href");
     expect(new URL(href).searchParams.get("text")).toBeTruthy();
   }
-  await expect(page.locator(".hero")).toContainText("An enquiry is not a confirmed booking");
+  await expect(page.locator(".hero")).toContainText("Ombi si miadi iliyothibitishwa");
 });
 
 test("key loc-service controls meet WCAG AA text contrast in the light palette", async ({ page }) => {
