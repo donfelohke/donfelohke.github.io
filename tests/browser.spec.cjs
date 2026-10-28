@@ -42,6 +42,15 @@ test("responsive widths remain usable without horizontal overflow", async ({ pag
     ).toBeTruthy();
     await expect(page.locator("#theme-toggle")).toBeVisible();
     await expect(page.locator("#language-toggle")).toBeVisible();
+    const controlsToMeasure = width >= 900
+      ? ["#theme-toggle", "#language-toggle"]
+      : ["#theme-toggle", "#language-toggle", "#mobile-menu-toggle"];
+    for (const control of controlsToMeasure) {
+      const box = await page.locator(control).boundingBox();
+      expect(box, `${control} should be visible at ${width}px`).toBeTruthy();
+      expect(box.width, `${control} touch width at ${width}px`).toBeGreaterThanOrEqual(44);
+      expect(box.height, `${control} touch height at ${width}px`).toBeGreaterThanOrEqual(44);
+    }
     if (width === 390) {
       await page.screenshot({ path: path.join(evidenceDir, "mobile-390.png"), fullPage: true });
     }
@@ -176,4 +185,25 @@ test("key loc-service controls meet WCAG AA text contrast in the light palette",
     return { fg, bg, ratio: (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05) };
   });
   expect(result.ratio, JSON.stringify(result)).toBeGreaterThanOrEqual(4.5);
+});
+
+test("mobile navigation and More panel preserve keyboard access", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(pageUrl);
+  const menu = page.locator("#mobile-menu-toggle");
+  await menu.click();
+  await expect(menu).toHaveAttribute("aria-expanded", "true");
+  await expect(page.locator('#site-navigation a[href="#connect"]')).toBeVisible();
+  await page.locator('#site-navigation a[href="#connect"]').click();
+  await expect(menu).toHaveAttribute("aria-expanded", "false");
+
+  const more = page.locator("#floating-more-toggle");
+  const panel = page.locator("#floating-more-panel");
+  await more.click();
+  await expect(panel).toBeVisible();
+  await expect(more).toHaveAttribute("aria-expanded", "true");
+  await page.keyboard.press("Escape");
+  await expect(panel).toBeHidden();
+  await expect(more).toHaveAttribute("aria-expanded", "false");
+  await expect(more).toBeFocused();
 });
