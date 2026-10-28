@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Dependency-free structural checks for the static NAKEBUSEN website."""
 from html.parser import HTMLParser
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -62,10 +63,16 @@ check(p.id_values.count("language-toggle-footer") == 1, "Expected one footer lan
 check("nakebusen-language" in html and "localStorage.setItem(languageKey,language)" in html, "Language preference must persist")
 check('data-i18n="bookingNote"' in html and 'data-i18n="digitalIntro"' in html, "Translate core service and technical copy")
 check('data-i18n="navLocs"' in html and 'data-i18n="navDigital"' in html and '<a href="#connect" data-i18n="navConnect">Connect</a>' in html, "Header navigation must expose Locs, Digital, and Connect")
+check('<a href="#repositories" data-i18n="navSource">Source</a>' in html, "Header navigation must expose the repository gateway")
+check('id="repositories"' in html and 'data-i18n="reposTitle"' in html, "Public page must include a repository gateway section")
+check("https://github.com/donfelohke/NAKEBUSEN" in html and "https://github.com/donfelohke/feloh-corpus" in html, "Repository gateway must link the NAKEBUSEN project and FELOH corpus")
 check('<a href="#founder" data-i18n="navAbout">@donfeloh</a>' in html, "Header navigation must expose the @donfeloh founder destination")
 check('#theme-toggle,#language-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem;padding:.25rem}' in html, "Theme and language controls must retain 44px hit areas")
-check('--forest:#14251D;--canopy:#1D3428;--clay:#C76F4A;--ochre:#D6AD54;--ivory:#F3EDE2;' in html, "Website palette must match the approved brand tokens")
-check('<a href="#founder" data-section="founder" aria-label="@donfelohke">' in html, "Floating navigation must expose the @donfelohke destination")
+check("--forest:#033500;" in html and "--canopy:#111111;" in html and "--clay:#E2725B;" in html and "--ochre:#D4AF37;" in html and "--ivory:#F2EFEA;" in html, "Website palette must match the canonical NAKEBUSEN design tokens")
+check(html.count("--forest:") == 1 and html.count("--canopy:") == 1, "Base brand tokens must each have one canonical declaration")
+check("--font-display:var(--serif)" in html and "--font-body:var(--sans)" in html and "--font-mono:var(--mono)" in html, "Typography aliases must derive from the canonical font tokens")
+check('<a href="#founder" data-i18n="navAbout">@donfeloh</a>' in html, "Full navigation must retain the founder destination")
+check('<nav class="floating-nav" aria-label="Mobile quick navigation">' in html and 'href="#founder" data-section="founder"' not in html[html.find('<nav class="floating-nav"'):html.find("</nav>", html.find('<nav class="floating-nav"'))], "Mobile quick navigation must avoid duplicating the full header menu")
 check('class="floating-footer-signature"' in html and "GRACE · GRIT · GLORY" in html, "Floating contact sheet must include the footer identity")
 check("#theme-toggle,#language-toggle,#mobile-menu-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem;padding:.25rem}" in html, "Icon controls must retain 44px touch targets")
 check('navLocs:"Locs"' in html and 'navDigital:"Digital"' in html, "English header navigation labels must describe the two primary paths")
@@ -92,14 +99,16 @@ check('id="language-toggle" aria-label="Switch language to Kiswahili"' in html a
 check('menu.innerHTML=opened?' in html and 'aria-expanded' in html, "Mobile menu must use icons and retain expanded state")
 check('id="mobile-menu-toggle" aria-label="Open navigation menu" title="Open navigation menu" aria-expanded="false" aria-controls="site-navigation"><svg class="toggle-icon"' in html, "Mobile menu toggle must use consistent inline SVG icon artwork")
 check('navMore:"More"' in html and 'navMore:"Zaidi"' in html and '<span data-i18n="navMore">More</span>' in html, "Floating More label must localize between English and Kiswahili")
-check('<p class="small muted" data-i18n="heroStatus">Eldoret Town / Karibu Mdosi, Kenya · Loc services · Enquiries confirmed manually.</p>' in html, "English hero fallback must use the approved Eldoret Town / Karibu Mdosi wording")
-check('heroStatus:"Eldoret Town / Karibu Mdosi, Kenya · Loc services · Enquiries confirmed manually."' in html, "English hero translation must preserve the approved location wording")
+check('<p class="eyebrow" data-i18n="eyebrow">ELDORET TOWN · KARIBU MDOSI</p>' in html, "English hero must lead with the approved Eldoret Town / Karibu Mdosi wording")
+check('<p class="small muted" data-i18n="heroStatus">Loc care enquiries · Availability confirmed separately.</p>' in html, "Hero must distinguish enquiries from confirmed availability")
+check('eyebrow:"ELDORET TOWN · KARIBU MDOSI"' in html and 'heroStatus:"Loc care enquiries · Availability confirmed separately."' in html, "English hero translation must preserve location-first hierarchy and enquiry boundary")
 check('founderDesc:"NAKEBUSEN inaleta urembo na teknolojia kupitia ufundi. WARENA ni msingi wa kiufundi. Don Feloh huleta ufundi, uelekeo wa teknolojia na ubunifu katika kazi hii."' in html, "Kiswahili founder copy must describe craft, technical direction, and creative practice naturally")
-check('heroStatus:"Eldoret Town / Karibu Mdosi, Kenya · Huduma za loc · Maombi yanathibitishwa moja kwa moja."' in html, "Kiswahili hero translation must preserve the approved location wording")
+check('eyebrow:"ELDORET TOWN · KARIBU MDOSI"' in html and 'heroStatus:"Maulizo ya huduma za loc · Upatikanaji unathibitishwa moja kwa moja."' in html, "Kiswahili hero translation must preserve location-first hierarchy and enquiry boundary")
 check('<h1 data-i18n="tagline">Your Beauty ° Your Way.</h1>' in html, "Approved hero headline must be preserved")
 check('href="tel:+254719635415">Call 0719 635 415</a>' in html, "Footer telephone link required")
 check('href="mailto:mela9ine@proton.me">Email</a>' in html, "Footer email link required")
-check('href="https://github.com/donfelohke/donfelohke.github.io">GitHub / Source</a>' in html, "Footer source link required")
+check('href="https://github.com/donfelohke/donfelohke.github.io">GitHub / Source</a>' in html or 'Website source ↗' in html, "Website source link required")
+check('href="https://github.com/donfelohke/NAKEBUSEN"' in html and 'href="https://github.com/donfelohke/feloh-corpus"' in html, "Footer and repository gateway must link project and corpus repositories")
 check("KES 700" in html and "KES 1,500" in html and "KES 3,500" in html, "All three approved service prices must be present")
 check(not any(key in p.metas for key in ("og:image", "twitter:image")), "No social-preview image meta")
 check("background-image" not in html.lower(), "No CSS image backgrounds")
@@ -108,6 +117,16 @@ check(p.form_count == 0, "Do not add a fake booking form")
 check("wa.me/254719635415" in html, "WhatsApp enquiry link required")
 check("ONLY NAKEBUSEN TRANSACTS" not in html.upper(), "Internal transaction wording must not appear in public copy")
 
+check('Retouch%20%26%20Styling%20(starting%20at%20KES%20700)' in html, "Retouch enquiry must preserve service and KES 700 context")
+check('Sisterlocs%20Retie%20(starting%20at%20KES%201%2C500)' in html, "Sisterlocs enquiry must preserve service and KES 1,500 context")
+check('Artificial%20Locs%20Installation%20(starting%20at%20KES%203%2C500)' in html, "Artificial locs enquiry must preserve service and KES 3,500 context")
+check('"areaServed":[{"@type":"City","name":"Eldoret"}]' in html, "Local structured data must identify Eldoret without inventing a street address")
+check('"telephone":"+254719635415"' in html and 'https://donfelohke.github.io/' in html, "Structured data must align the public phone and canonical URL")
+check('@import' not in html.lower(), "No external CSS imports; preserve static-first delivery")
+check(not re.search(r'<script[^>]+src=["\']https?://', html, re.I), "No required third-party JavaScript runtime")
+
+check(html.rstrip().endswith("</html>"), "No stray text or markup may follow the closing HTML document")
+check(html.lower().count("<script") == html.lower().count("</script>"), "All script tags must be balanced")
 for href in p.hrefs:
     if href.startswith("#"):
         check(href[1:] in p.ids, f"Broken internal anchor: {href}")

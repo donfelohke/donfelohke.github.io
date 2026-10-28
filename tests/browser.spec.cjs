@@ -8,22 +8,71 @@ const evidenceDir = path.resolve("test-results/evidence");
 fs.mkdirSync(evidenceDir, { recursive: true });
 
 test("responsive widths remain usable without horizontal overflow", async ({ page }) => {
-  await page.goto(pageUrl);
   for (const width of [320, 360, 390, 430, 768, 1024, 1440]) {
     await page.setViewportSize({ width, height: 900 });
+    await page.goto(pageUrl);
+    await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
     const metrics = await page.evaluate(() => ({
       viewport: document.documentElement.clientWidth,
+      innerWidth: window.innerWidth,
       document: document.documentElement.scrollWidth,
+      bodyScroll: document.body.scrollWidth,
+      rootRect: document.documentElement.getBoundingClientRect().toJSON(),
+      bodyRect: document.body.getBoundingClientRect().toJSON(),
+      pseudo: [...document.querySelectorAll("html,body,body *")].flatMap(el => ["::before","::after"].map(p => {
+        const s=getComputedStyle(el,p); const r=el.getBoundingClientRect();
+        return {sel:el.tagName.toLowerCase()+(el.id?"#"+el.id:"")+(typeof el.className==="string"&&el.className.trim()?"."+el.className.trim().split(/\\s+/).join("."):""),pseudo:p,content:s.content,position:s.position,left:s.left,right:s.right,width:s.width,transform:s.transform,hostLeft:Math.round(r.left),hostRight:Math.round(r.right)};
+      }).filter(x => x.content!=="none" && x.content!=="normal" && (x.position==="absolute" || x.position==="fixed" || x.transform!=="none") )),
+      textOverflow: (() => {
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        const found = [];
+        while (walker.nextNode()) {
+          const node = walker.currentNode;
+          if (!node.nodeValue || !node.nodeValue.trim()) continue;
+          const range = document.createRange();
+          range.selectNodeContents(node);
+          const rects = [...range.getClientRects()];
+          const bad = rects.filter(r => r.right > document.documentElement.clientWidth + 1 || r.left < -1);
+          if (bad.length) found.push({text:node.nodeValue.trim().slice(0,120),rects:bad.map(r=>({left:Math.round(r.left),right:Math.round(r.right),width:Math.round(r.width)})),parent:node.parentElement?.tagName+"."+String(node.parentElement?.className||"").slice(0,60)});
+        }
+        return found.slice(0,30);
+      })(),
+      wideStyles: [...document.querySelectorAll("html,body,body *")].map(el => {
+        const s=getComputedStyle(el), r=el.getBoundingClientRect();
+        return {tag:el.tagName,id:el.id,cls:String(el.className).slice(0,60),width:s.width,minWidth:s.minWidth,maxWidth:s.maxWidth,whiteSpace:s.whiteSpace,position:s.position,transform:s.transform,left:Math.round(r.left),right:Math.round(r.right),scrollWidth:el.scrollWidth,clientWidth:el.clientWidth};
+      }).filter(x => parseFloat(x.width)>document.documentElement.clientWidth+1 || (x.minWidth.endsWith("px")&&parseFloat(x.minWidth)>document.documentElement.clientWidth+1)).slice(0,30),
+      pseudoAll: [...document.querySelectorAll("html,body,body *")].flatMap(el => ["::before","::after"].map(p => {
+        const s=getComputedStyle(el,p);
+        return {host:el.tagName.toLowerCase()+(el.id?"#"+el.id:"")+(typeof el.className==="string"&&el.className.trim()?"."+el.className.trim().split(/\s+/).join("."):""),pseudo:p,content:s.content,display:s.display,position:s.position,width:s.width,minWidth:s.minWidth,left:s.left,right:s.right,marginLeft:s.marginLeft,marginRight:s.marginRight,transform:s.transform,boxShadow:s.boxShadow};
+      }).filter(x => x.content!=="none"&&x.content!=="normal"&&x.display!=="none")),
+      overflow: [...document.querySelectorAll("body *")].map(el => {
+        const r=el.getBoundingClientRect();
+        return {tag:el.tagName,id:el.id,className:String(el.className).slice(0,80),left:Math.round(r.left),right:Math.round(r.right),top:Math.round(r.top),bottom:Math.round(r.bottom),width:Math.round(r.width),clientWidth:el.clientWidth,scrollWidth:el.scrollWidth,position:getComputedStyle(el).position,transform:getComputedStyle(el).transform,overflowX:getComputedStyle(el).overflowX};
+      }).filter(x => x.right > document.documentElement.clientWidth + 1 || x.left < -1 || x.scrollWidth > x.clientWidth + 1).sort((a,b) => Math.max(b.right-document.documentElement.clientWidth,-b.left,b.scrollWidth-b.clientWidth)-Math.max(a.right-document.documentElement.clientWidth,-a.left,a.scrollWidth-a.clientWidth)).slice(0,40),
+      scrollRoot:{tag:document.scrollingElement?.tagName,scrollWidth:document.scrollingElement?.scrollWidth,clientWidth:document.scrollingElement?.clientWidth,bodyWidth:getComputedStyle(document.body).width,rootWidth:getComputedStyle(document.documentElement).width},
+      farthest: [...document.querySelectorAll("html,body,body *")].map(el => {
+        const r=el.getBoundingClientRect();
+        return {tag:el.tagName,id:el.id,className:String(el.className).slice(0,100),left:Math.round(r.left),right:Math.round(r.right),width:Math.round(r.width),position:getComputedStyle(el).position,display:getComputedStyle(el).display,overflowX:getComputedStyle(el).overflowX};
+      }).sort((a,b)=>Math.max(b.right-window.innerWidth,-b.left)-Math.max(a.right-window.innerWidth,-a.left)).slice(0,25),
       brand: document.querySelector(".brand").getBoundingClientRect().toJSON(),
       controls: document.querySelector(".nav-right").getBoundingClientRect().toJSON(),
     }));
-    expect(metrics.document, `horizontal overflow at ${width}px`).toBeLessThanOrEqual(metrics.viewport);
+    expect(metrics.document, `horizontal overflow at ${width}px: ${JSON.stringify({innerWidth:metrics.innerWidth,bodyScroll:metrics.bodyScroll,rootRect:metrics.rootRect,bodyRect:metrics.bodyRect,pseudo:metrics.pseudo,pseudoAll:metrics.pseudoAll,textOverflow:metrics.textOverflow,wideStyles:metrics.wideStyles,overflow:metrics.overflow,farthest:metrics.farthest,scrollRoot:metrics.scrollRoot})}`).toBeLessThanOrEqual(metrics.viewport);
     expect(
       metrics.brand.right <= metrics.controls.left + 1 || metrics.brand.bottom <= metrics.controls.top + 1,
       `brand overlaps navigation controls at ${width}px`,
     ).toBeTruthy();
     await expect(page.locator("#theme-toggle")).toBeVisible();
     await expect(page.locator("#language-toggle")).toBeVisible();
+    const controlsToMeasure = width >= 900
+      ? ["#theme-toggle", "#language-toggle"]
+      : ["#theme-toggle", "#language-toggle", "#mobile-menu-toggle"];
+    for (const control of controlsToMeasure) {
+      const box = await page.locator(control).boundingBox();
+      expect(box, `${control} should be visible at ${width}px`).toBeTruthy();
+      expect(box.width, `${control} touch width at ${width}px`).toBeGreaterThanOrEqual(44);
+      expect(box.height, `${control} touch height at ${width}px`).toBeGreaterThanOrEqual(44);
+    }
     if (width === 390) {
       await page.screenshot({ path: path.join(evidenceDir, "mobile-390.png"), fullPage: true });
     }
@@ -64,9 +113,12 @@ test("theme, language, and enquiry paths work in the browser", async ({ page }) 
 test("integrated hero keeps beauty-first copy, starting prices, and enquiry boundary", async ({ page }) => {
   await page.goto(pageUrl);
   await expect(page.locator(".hero h1")).toHaveText("Your Beauty ° Your Way.");
-  await expect(page.locator(".hero [data-i18n='heroStatus']")).toHaveText("Eldoret Town / Karibu Mdosi, Kenya · Loc services · Enquiries confirmed manually.");
-  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Rooted in craft. Built with intention.");
+  await expect(page.locator(".hero [data-i18n='heroStatus']")).toHaveText("Loc care enquiries · Availability confirmed separately.");
+  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Thoughtful loc care. Practical digital services.");
   await expect(page.locator(".hero .hero-price-row")).toHaveCount(3);
+  await expect(page.locator("#repositories")).toBeAttached();
+  await expect(page.locator("#repositories a[href=\"https://github.com/donfelohke/NAKEBUSEN\"]")).toBeVisible();
+  await expect(page.locator("#repositories a[href=\"https://github.com/donfelohke/feloh-corpus\"]")).toBeVisible();
   await expect(page.locator(".hero")).toContainText("KES 700");
   await expect(page.locator(".hero")).toContainText("KES 1,500");
   await expect(page.locator(".hero")).toContainText("KES 3,500");
@@ -74,8 +126,8 @@ test("integrated hero keeps beauty-first copy, starting prices, and enquiry boun
   await expect(page.locator('.hero a[data-wa-purpose="loc"]')).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
   await page.locator("#language-toggle").click();
   await expect(page.locator(".hero h1")).toHaveText("Urembo wako ° Njia yako.");
-  await expect(page.locator(".hero [data-i18n='heroStatus']")).toHaveText("Eldoret Town / Karibu Mdosi, Kenya · Huduma za loc · Maombi yanathibitishwa moja kwa moja.");
-  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Imejikita kwenye ufundi. Imejengwa kwa kusudi.");
+  await expect(page.locator(".hero [data-i18n='heroStatus']")).toHaveText("Maulizo ya huduma za loc · Upatikanaji unathibitishwa moja kwa moja.");
+  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Huduma za loc kwa umakini. Huduma za kidijitali kwa vitendo.");
 });
 
 test("deployed GitHub Pages homepage is reachable and readable on mobile", async ({ page }) => {
@@ -94,4 +146,86 @@ test("deployed GitHub Pages homepage is reachable and readable on mobile", async
   }));
   expect(metrics.document, "deployed page should not overflow horizontally at 390px").toBeLessThanOrEqual(metrics.viewport);
   await page.screenshot({ path: path.join(evidenceDir, "live-mobile-390.png"), fullPage: true });
+});
+
+test("every service enquiry opens the correct WhatsApp recipient with service context", async ({ page }) => {
+  await page.goto(pageUrl);
+  const expected = [
+    ["Retouch & Styling", "KES 700"],
+    ["Sisterlocs Retie", "KES 1,500"],
+    ["Artificial Locs Installation", "KES 3,500"],
+  ];
+  const serviceLinks = page.locator("#crown .svc a[data-i18n='enquireService']");
+  await expect(serviceLinks).toHaveCount(expected.length);
+  for (let i = 0; i < expected.length; i++) {
+    const href = await serviceLinks.nth(i).getAttribute("href");
+    const url = new URL(href);
+    expect(url.origin + url.pathname).toBe("https://wa.me/254719635415");
+    const message = url.searchParams.get("text") || "";
+    expect(message).toContain(expected[i][0]);
+    expect(message).toContain(expected[i][1]);
+    expect(message.toLowerCase()).not.toContain("booking confirmed");
+  }
+  const purposeText = {
+    loc: "loc service",
+    computer: "computer support",
+    network: "network",
+    local: "local-first",
+    tech: "technology project",
+    general: "more information",
+  };
+  for (const [purpose, phrase] of Object.entries(purposeText)) {
+    const links = page.locator('[data-wa-purpose="' + purpose + '"]');
+    await expect(links.first()).toBeAttached();
+    const href = await links.first().getAttribute("href");
+    const url = new URL(href);
+    expect(url.origin + url.pathname).toBe("https://wa.me/254719635415");
+    expect(url.searchParams.get("text") || "").toContain(phrase);
+  }
+  await page.locator("#language-toggle").click();
+  for (const purpose of Object.keys(purposeText)) {
+    const href = await page.locator('[data-wa-purpose="' + purpose + '"]').first().getAttribute("href");
+    expect(new URL(href).searchParams.get("text")).toBeTruthy();
+  }
+  await expect(page.locator(".hero")).toContainText("Ombi si miadi iliyothibitishwa");
+});
+
+test("key loc-service controls meet WCAG AA text contrast in the light palette", async ({ page }) => {
+  await page.goto(pageUrl);
+  const result = await page.locator("#crown .svc .terminal-action").first().evaluate((el) => {
+    const rgb = (value) => value.match(/[\d.]+/g).slice(0, 3).map(Number).map((v) => {
+      v /= 255;
+      return v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
+    });
+    const luminance = (value) => {
+      const c = rgb(value);
+      return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+    };
+    const fg = getComputedStyle(el).color;
+    const bg = getComputedStyle(el).backgroundColor;
+    const a = luminance(fg), b = luminance(bg);
+    return { fg, bg, ratio: (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05) };
+  });
+  expect(result.ratio, JSON.stringify(result)).toBeGreaterThanOrEqual(4.5);
+});
+
+test("mobile navigation and More panel preserve keyboard access", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(pageUrl);
+  const menu = page.locator("#mobile-menu-toggle");
+  await menu.click();
+  await expect(menu).toHaveAttribute("aria-expanded", "true");
+  await expect(page.locator('#site-navigation a[href="#connect"]')).toBeVisible();
+  await page.locator('#site-navigation a[href="#connect"]').click();
+  await expect(menu).toHaveAttribute("aria-expanded", "false");
+
+  const more = page.locator("#floating-more-toggle");
+  const panel = page.locator("#floating-more-panel");
+  await more.click();
+  await expect(panel).toBeVisible();
+  await expect(more).toHaveAttribute("aria-expanded", "true");
+  await page.keyboard.press("Escape");
+  await expect(panel).toBeHidden();
+  await expect(more).toHaveAttribute("aria-expanded", "false");
+  await expect(more).toBeFocused();
 });
