@@ -115,3 +115,45 @@ test("deployed GitHub Pages homepage is reachable and readable on mobile", async
   expect(metrics.document, "deployed page should not overflow horizontally at 390px").toBeLessThanOrEqual(metrics.viewport);
   await page.screenshot({ path: path.join(evidenceDir, "live-mobile-390.png"), fullPage: true });
 });
+
+test("every service enquiry opens the correct WhatsApp recipient with service context", async ({ page }) => {
+  await page.goto(pageUrl);
+  const expected = [
+    ["Retouch & Styling", "KES 700"],
+    ["Sisterlocs Retie", "KES 1,500"],
+    ["Artificial Locs Installation", "KES 3,500"],
+  ];
+  const serviceLinks = page.locator("#crown .svc a[data-i18n='enquireService']");
+  await expect(serviceLinks).toHaveCount(expected.length);
+  for (let i = 0; i < expected.length; i++) {
+    const href = await serviceLinks.nth(i).getAttribute("href");
+    const url = new URL(href);
+    expect(url.origin + url.pathname).toBe("https://wa.me/254719635415");
+    const message = url.searchParams.get("text") || "";
+    expect(message).toContain(expected[i][0]);
+    expect(message).toContain(expected[i][1]);
+    expect(message.toLowerCase()).not.toContain("booking confirmed");
+  }
+  const purposeText = {
+    loc: "loc service",
+    computer: "computer support",
+    network: "network",
+    local: "local-first",
+    tech: "technology project",
+    general: "more information",
+  };
+  for (const [purpose, phrase] of Object.entries(purposeText)) {
+    const links = page.locator('[data-wa-purpose="' + purpose + '"]');
+    await expect(links.first()).toBeAttached();
+    const href = await links.first().getAttribute("href");
+    const url = new URL(href);
+    expect(url.origin + url.pathname).toBe("https://wa.me/254719635415");
+    expect(url.searchParams.get("text") || "").toContain(phrase);
+  }
+  await page.locator("#language-toggle").click();
+  for (const purpose of Object.keys(purposeText)) {
+    const href = await page.locator('[data-wa-purpose="' + purpose + '"]').first().getAttribute("href");
+    expect(new URL(href).searchParams.get("text")).toBeTruthy();
+  }
+  await expect(page.locator(".hero")).toContainText("An enquiry is not a confirmed booking");
+});
