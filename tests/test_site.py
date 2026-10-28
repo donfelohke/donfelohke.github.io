@@ -114,6 +114,14 @@ check(p.form_count == 0, "Do not add a fake booking form")
 check("wa.me/254719635415" in html, "WhatsApp enquiry link required")
 check("ONLY NAKEBUSEN TRANSACTS" not in html.upper(), "Internal transaction wording must not appear in public copy")
 
+check('Retouch%20%26%20Styling%20(starting%20at%20KES%20700)' in html, "Retouch enquiry must preserve service and KES 700 context")
+check('Sisterlocs%20Retie%20(starting%20at%20KES%201%2C500)' in html, "Sisterlocs enquiry must preserve service and KES 1,500 context")
+check('Artificial%20Locs%20Installation%20(starting%20at%20KES%203%2C500)' in html, "Artificial locs enquiry must preserve service and KES 3,500 context")
+check('"areaServed":[{"@type":"City","name":"Eldoret"}]' in html, "Local structured data must identify Eldoret without inventing a street address")
+check('"telephone":"+254719635415"' in html and 'https://donfelohke.github.io/' in html, "Structured data must align the public phone and canonical URL")
+check('@import' not in html.lower(), "No external CSS imports; preserve static-first delivery")
+check(not re.search(r'<script[^>]+src=["\']https?://', html, re.I), "No required third-party JavaScript runtime")
+
 for href in p.hrefs:
     if href.startswith("#"):
         check(href[1:] in p.ids, f"Broken internal anchor: {href}")
