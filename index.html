@@ -18,10 +18,46 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"NAKEBUSEN","url":"https://donfelohke.github.io/","telephone":"+254719635415","email":"mela9ine@proton.me","areaServed":[{"@type":"City","name":"Eldoret"}],"sameAs":["https://x.com/donfelohke","https://www.instagram.com/donfelohke/","https://www.tiktok.com/@donfelohke","https://github.com/donfelohke","https://www.facebook.com/p/Nakebusen-023-Beauty-Lounge-61558789500287/"]}</script>
 <title>NAKEBUSEN · Locs · Powered by WARENA | Eldoret, Kenya</title>
 <style>
-:root{color-scheme:light dark;--forest:#033500;--canopy:#111111;--clay:#E2725B;--ochre:#D4AF37;--ivory:#F2EFEA;--sage:#A9BBA9;--paper:#F2EFEA;--ink:#111111;--gold:#D4AF37;--muted:#46554A;--line:rgba(20,37,29,.22);--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--mono:"JetBrains Mono",ui-monospace,"Cascadia Code",monospace;--focus:#033500}
-:root[data-theme="dark"]{color-scheme:dark;--paper:#033500;--ink:#F2EFEA;--muted:#A9BBA9;--line:rgba(243,237,226,.24);--focus:#D4AF37}
-:root[data-theme="light"]{color-scheme:light;--paper:#F2EFEA;--ink:#111111;--muted:#46554A;--line:rgba(20,37,29,.22);--focus:#033500}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]):not([data-theme="dark"]){--paper:#033500;--ink:#F2EFEA;--muted:#A9BBA9;--line:rgba(243,237,226,.24);--focus:#D4AF37}}
+:root{
+  color-scheme:light dark;
+  --forest:#033500;
+  --canopy:#111111;
+  --clay:#E2725B;
+  --ochre:#D4AF37;
+  --ivory:#F2EFEA;
+  --sage:#A9BBA9;
+  --paper:#F2EFEA;
+  --ink:#111111;
+  --gold:#D4AF37;
+  --muted:#454545;
+  --line:rgba(17,17,17,.2);
+  --focus:#033500;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"Cascadia Code",monospace;
+  --font-display:var(--serif);
+  --font-body:var(--sans);
+  --font-mono:var(--mono);
+  --space-1:.35rem;
+  --space-2:.7rem;
+  --space-3:1rem;
+  --space-4:1.4rem;
+  --space-5:2rem;
+  --panel-radius:12px;
+  --terminal-radius:16px;
+  --glass-blur:12px;
+  --glass-border:color-mix(in srgb,var(--line) 85%,transparent);
+  --locs-clay:#E2725B;
+  --locs-clay-light:#F2B5A4;
+  --digital-bg:#033500;
+  --digital-panel:#0D2414;
+  --digital-line:#79D7D2;
+  --digital-phosphor:#79D7D2;
+  --coral:#E2725B;
+}
+:root[data-theme="dark"]{color-scheme:dark;--paper:#111111;--ink:#F2EFEA;--muted:#C8C8C8;--line:rgba(242,239,234,.22);--focus:#D4AF37}
+:root[data-theme="light"]{color-scheme:light;--paper:#F2EFEA;--ink:#111111;--muted:#454545;--line:rgba(17,17,17,.2);--focus:#033500}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]):not([data-theme="dark"]){--paper:#111111;--ink:#F2EFEA;--muted:#C8C8C8;--line:rgba(242,239,234,.22);--focus:#D4AF37}}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--sans)}
 a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px;box-shadow:0 0 0 2px var(--paper)}
@@ -212,7 +248,6 @@ section{padding:clamp(2.5rem,6vw,4rem) 0}
 #paths .digital-path .terminal-action{background:var(--ivory);color:var(--forest);border-color:var(--ivory)}
 @media(min-width:640px){#paths .path-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#paths .path-card{min-height:19rem}}
 /* Approved Glass Terminal refinement: shared tokens, floating navigation, clear hero hierarchy. */
-:root{--space-1:.35rem;--space-2:.7rem;--space-3:1rem;--space-4:1.4rem;--space-5:2rem;--panel-radius:12px;--terminal-radius:16px;--glass-border:color-mix(in srgb,var(--line) 85%,transparent)}
 header{position:sticky;top:.55rem;z-index:40;width:min(calc(100% - 1.1rem),980px);margin:.55rem auto 0;border:1px solid var(--glass-border);border-radius:var(--terminal-radius);background:var(--paper);box-shadow:0 8px 28px rgba(20,37,29,.09);isolation:isolate}
 header .nav{padding:.55rem .7rem}
 @supports((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header{background:color-mix(in srgb,var(--paper) 91%,transparent);backdrop-filter:blur(16px) saturate(115%);-webkit-backdrop-filter:blur(16px) saturate(115%)}}
@@ -241,19 +276,6 @@ header .nav{padding:.55rem .7rem}
 
 
 /* NAKEBUSEN Glass Terminal system — restrained glass, strong contrast, local-first. */
-:root{
-  --font-display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
-  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --font-mono:"JetBrains Mono",ui-monospace,"Cascadia Code",monospace;
-  --glass-blur:12px;
-  --glass-border:rgba(255,255,255,.28);
-  --locs-clay:#B96549;
-  --locs-clay-light:#E7B19A;
-  --digital-bg:#07110C;
-  --digital-panel:#10251A;
-  --digital-line:#24543A;
-  --digital-phosphor:#79D7A0;
-}
 body{font-family:var(--font-body)}
 h1,h2,.tagline,.card h2,.svc h3,.terminal-card h3,.footer-panel h3{font-family:var(--font-display)}
 .eyebrow,.section-kicker,.terminal-meta,.terminal-card .price,.footer-kicker,.minimal-footer .minimal-footer-signature p:first-child{font-family:var(--font-mono)}
@@ -373,34 +395,6 @@ header{
 @media(prefers-reduced-motion:reduce){.floating-nav,.floating-more-panel{scroll-behavior:auto;transition:none}}
 
 
-/* NAKEBUSEN master direction: Liquid Glass Terminal + Editorial Hybrid.
-   Glass is reserved for navigation and transient controls; content stays legible and fast. */
-:root{
-  --forest:#033500;
-  --canopy:#0D2414;
-  --clay:#E2725B;
-  --ochre:#D4AF37;
-  --ivory:#F2EFEA;
-  --sage:#A9BBA9;
-  --paper:#F2EFEA;
-  --ink:#111111;
-  --gold:#D4AF37;
-  --muted:#454545;
-  --line:rgba(17,17,17,.2);
-  --focus:#033500;
-  --locs-clay:#E2725B;
-  --locs-clay-light:#F2B5A4;
-  --digital-bg:#033500;
-  --digital-panel:#0D2414;
-  --digital-line:#79D7D2;
-  --digital-phosphor:#79D7D2;
-  --coral:#E2725B;
-}
-:root[data-theme="light"]{--paper:#F2EFEA;--ink:#111111;--muted:#454545;--line:rgba(17,17,17,.2);--focus:#033500}
-:root[data-theme="dark"]{--paper:#111111;--ink:#F2EFEA;--muted:#C8C8C8;--line:rgba(242,239,234,.22);--focus:#79D7D2}
-@media(prefers-color-scheme:dark){
-  :root:not([data-theme="light"]):not([data-theme="dark"]){--paper:#111111;--ink:#F2EFEA;--muted:#C8C8C8;--line:rgba(242,239,234,.22);--focus:#79D7D2}
-}
 /* Editorial hero: strong typographic field, with no dependency on remote imagery. */
 .hero{background:var(--forest);color:var(--ivory)}
 .hero .eyebrow,.hero .muted{color:#D5E2D3}
