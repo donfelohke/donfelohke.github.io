@@ -8,9 +8,9 @@ const evidenceDir = path.resolve("test-results/evidence");
 fs.mkdirSync(evidenceDir, { recursive: true });
 
 test("responsive widths remain usable without horizontal overflow", async ({ page }) => {
-  await page.goto(pageUrl);
   for (const width of [320, 360, 390, 430, 768, 1024, 1440]) {
     await page.setViewportSize({ width, height: 900 });
+    await page.goto(pageUrl);
     await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
     const metrics = await page.evaluate(() => ({
       viewport: document.documentElement.clientWidth,
