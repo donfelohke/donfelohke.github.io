@@ -13,11 +13,28 @@ test("responsive widths remain usable without horizontal overflow", async ({ pag
     await page.setViewportSize({ width, height: 900 });
     const metrics = await page.evaluate(() => ({
       viewport: document.documentElement.clientWidth,
+      innerWidth: window.innerWidth,
       document: document.documentElement.scrollWidth,
+      bodyScroll: document.body.scrollWidth,
+      rootRect: document.documentElement.getBoundingClientRect().toJSON(),
+      bodyRect: document.body.getBoundingClientRect().toJSON(),
+      pseudo: [...document.querySelectorAll("html,body,body *")].flatMap(el => ["::before","::after"].map(p => {
+        const s=getComputedStyle(el,p); const r=el.getBoundingClientRect();
+        return {sel:el.tagName.toLowerCase()+(el.id?"#"+el.id:"")+(typeof el.className==="string"&&el.className.trim()?"."+el.className.trim().split(/\\s+/).join("."):""),pseudo:p,content:s.content,position:s.position,left:s.left,right:s.right,width:s.width,transform:s.transform,hostLeft:Math.round(r.left),hostRight:Math.round(r.right)};
+      }).filter(x => x.content!=="none" && x.content!=="normal" && (x.position==="absolute" || x.position==="fixed" || x.transform!=="none") )),
+      overflow: [...document.querySelectorAll("body *")].map(el => {
+        const r=el.getBoundingClientRect();
+        return {tag:el.tagName,id:el.id,className:String(el.className).slice(0,80),left:Math.round(r.left),right:Math.round(r.right),top:Math.round(r.top),bottom:Math.round(r.bottom),width:Math.round(r.width),clientWidth:el.clientWidth,scrollWidth:el.scrollWidth,position:getComputedStyle(el).position,transform:getComputedStyle(el).transform,overflowX:getComputedStyle(el).overflowX};
+      }).filter(x => x.right > document.documentElement.clientWidth + 1 || x.left < -1 || x.scrollWidth > x.clientWidth + 1).sort((a,b) => Math.max(b.right-document.documentElement.clientWidth,-b.left,b.scrollWidth-b.clientWidth)-Math.max(a.right-document.documentElement.clientWidth,-a.left,a.scrollWidth-a.clientWidth)).slice(0,40),
+      scrollRoot:{tag:document.scrollingElement?.tagName,scrollWidth:document.scrollingElement?.scrollWidth,clientWidth:document.scrollingElement?.clientWidth,bodyWidth:getComputedStyle(document.body).width,rootWidth:getComputedStyle(document.documentElement).width},
+      farthest: [...document.querySelectorAll("html,body,body *")].map(el => {
+        const r=el.getBoundingClientRect();
+        return {tag:el.tagName,id:el.id,className:String(el.className).slice(0,100),left:Math.round(r.left),right:Math.round(r.right),width:Math.round(r.width),position:getComputedStyle(el).position,display:getComputedStyle(el).display,overflowX:getComputedStyle(el).overflowX};
+      }).sort((a,b)=>Math.max(b.right-width,-b.left)-Math.max(a.right-width,-a.left)).slice(0,25),
       brand: document.querySelector(".brand").getBoundingClientRect().toJSON(),
       controls: document.querySelector(".nav-right").getBoundingClientRect().toJSON(),
     }));
-    expect(metrics.document, `horizontal overflow at ${width}px`).toBeLessThanOrEqual(metrics.viewport);
+    expect(metrics.document, `horizontal overflow at ${width}px: ${JSON.stringify({innerWidth:metrics.innerWidth,bodyScroll:metrics.bodyScroll,rootRect:metrics.rootRect,bodyRect:metrics.bodyRect,pseudo:metrics.pseudo,overflow:metrics.overflow,farthest:metrics.farthest,scrollRoot:metrics.scrollRoot})}`).toBeLessThanOrEqual(metrics.viewport);
     expect(
       metrics.brand.right <= metrics.controls.left + 1 || metrics.brand.bottom <= metrics.controls.top + 1,
       `brand overlaps navigation controls at ${width}px`,
@@ -64,9 +81,12 @@ test("theme, language, and enquiry paths work in the browser", async ({ page }) 
 test("integrated hero keeps beauty-first copy, starting prices, and enquiry boundary", async ({ page }) => {
   await page.goto(pageUrl);
   await expect(page.locator(".hero h1")).toHaveText("Your Beauty ° Your Way.");
-  await expect(page.locator(".hero [data-i18n='heroStatus']")).toHaveText("Eldoret Town / Karibu Mdosi, Kenya · Loc services · Enquiries confirmed manually.");
-  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Rooted in craft. Built with intention.");
+  await expect(page.locator(".hero [data-i18n='heroStatus']")).toHaveText("Loc care enquiries · Availability confirmed separately.");
+  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Thoughtful loc care. Practical digital services.");
   await expect(page.locator(".hero .hero-price-row")).toHaveCount(3);
+  await expect(page.locator("#repositories")).toBeAttached();
+  await expect(page.locator("#repositories a[href=\"https://github.com/donfelohke/NAKEBUSEN\"]")).toBeVisible();
+  await expect(page.locator("#repositories a[href=\"https://github.com/donfelohke/feloh-corpus\"]")).toBeVisible();
   await expect(page.locator(".hero")).toContainText("KES 700");
   await expect(page.locator(".hero")).toContainText("KES 1,500");
   await expect(page.locator(".hero")).toContainText("KES 3,500");
@@ -74,8 +94,8 @@ test("integrated hero keeps beauty-first copy, starting prices, and enquiry boun
   await expect(page.locator('.hero a[data-wa-purpose="loc"]')).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
   await page.locator("#language-toggle").click();
   await expect(page.locator(".hero h1")).toHaveText("Urembo wako ° Njia yako.");
-  await expect(page.locator(".hero [data-i18n='heroStatus']")).toHaveText("Eldoret Town / Karibu Mdosi, Kenya · Huduma za loc · Maombi yanathibitishwa moja kwa moja.");
-  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Imejikita kwenye ufundi. Imejengwa kwa kusudi.");
+  await expect(page.locator(".hero [data-i18n='heroStatus']")).toHaveText("Maulizo ya huduma za loc · Upatikanaji unathibitishwa moja kwa moja.");
+  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Huduma za loc kwa umakini. Huduma za kidijitali kwa vitendo.");
 });
 
 test("deployed GitHub Pages homepage is reachable and readable on mobile", async ({ page }) => {
