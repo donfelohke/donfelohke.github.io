@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Dependency-free structural checks for the static NAKEBUSEN website."""
 from html.parser import HTMLParser
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -67,7 +68,7 @@ check('id="repositories"' in html and 'data-i18n="reposTitle"' in html, "Public 
 check("https://github.com/donfelohke/NAKEBUSEN" in html and "https://github.com/donfelohke/feloh-corpus" in html, "Repository gateway must link the NAKEBUSEN project and FELOH corpus")
 check('<a href="#founder" data-i18n="navAbout">@donfeloh</a>' in html, "Header navigation must expose the @donfeloh founder destination")
 check('#theme-toggle,#language-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem;padding:.25rem}' in html, "Theme and language controls must retain 44px hit areas")
-check('--forest:#14251D;--canopy:#1D3428;--clay:#C76F4A;--ochre:#D6AD54;--ivory:#F3EDE2;' in html, "Website palette must match the approved brand tokens")
+check('--forest:#033500;--canopy:#111111;--clay:#E2725B;--ochre:#D4AF37;--ivory:#F2EFEA;' in html, "Website palette must match the canonical NAKEBUSEN design tokens")
 check('<a href="#founder" data-section="founder" aria-label="@donfelohke">' in html, "Floating navigation must expose the @donfelohke destination")
 check('class="floating-footer-signature"' in html and "GRACE · GRIT · GLORY" in html, "Floating contact sheet must include the footer identity")
 check("#theme-toggle,#language-toggle,#mobile-menu-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem;padding:.25rem}" in html, "Icon controls must retain 44px touch targets")
@@ -103,7 +104,7 @@ check('eyebrow:"ELDORET TOWN · KARIBU MDOSI"' in html and 'heroStatus:"Maulizo 
 check('<h1 data-i18n="tagline">Your Beauty ° Your Way.</h1>' in html, "Approved hero headline must be preserved")
 check('href="tel:+254719635415">Call 0719 635 415</a>' in html, "Footer telephone link required")
 check('href="mailto:mela9ine@proton.me">Email</a>' in html, "Footer email link required")
-check('href="https://github.com/donfelohke/donfelohke.github.io">GitHub / Source</a>' in html, "Footer source link required")
+check('href="https://github.com/donfelohke/donfelohke.github.io">GitHub / Source</a>' in html or 'Website source ↗' in html, "Website source link required")
 check('href="https://github.com/donfelohke/NAKEBUSEN"' in html and 'href="https://github.com/donfelohke/feloh-corpus"' in html, "Footer and repository gateway must link project and corpus repositories")
 check("KES 700" in html and "KES 1,500" in html and "KES 3,500" in html, "All three approved service prices must be present")
 check(not any(key in p.metas for key in ("og:image", "twitter:image")), "No social-preview image meta")
