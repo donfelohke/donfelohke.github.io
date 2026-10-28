@@ -125,6 +125,8 @@ check('"telephone":"+254719635415"' in html and 'https://donfelohke.github.io/' 
 check('@import' not in html.lower(), "No external CSS imports; preserve static-first delivery")
 check(not re.search(r'<script[^>]+src=["\']https?://', html, re.I), "No required third-party JavaScript runtime")
 
+check(html.rstrip().endswith("</html>"), "No stray text or markup may follow the closing HTML document")
+check(html.lower().count("<script") == html.lower().count("</script>"), "All script tags must be balanced")
 for href in p.hrefs:
     if href.startswith("#"):
         check(href[1:] in p.ids, f"Broken internal anchor: {href}")
