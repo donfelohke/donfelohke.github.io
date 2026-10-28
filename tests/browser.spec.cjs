@@ -157,3 +157,22 @@ test("every service enquiry opens the correct WhatsApp recipient with service co
   }
   await expect(page.locator(".hero")).toContainText("An enquiry is not a confirmed booking");
 });
+
+test("key loc-service controls meet WCAG AA text contrast in the light palette", async ({ page }) => {
+  await page.goto(pageUrl);
+  const result = await page.locator("#crown .svc .terminal-action").first().evaluate((el) => {
+    const rgb = (value) => value.match(/[\\d.]+/g).slice(0, 3).map(Number).map((v) => {
+      v /= 255;
+      return v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
+    });
+    const luminance = (value) => {
+      const c = rgb(value);
+      return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+    };
+    const fg = getComputedStyle(el).color;
+    const bg = getComputedStyle(el).backgroundColor;
+    const a = luminance(fg), b = luminance(bg);
+    return { fg, bg, ratio: (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05) };
+  });
+  expect(result.ratio, JSON.stringify(result)).toBeGreaterThanOrEqual(4.5);
+});
