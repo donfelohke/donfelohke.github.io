@@ -86,7 +86,8 @@ PR #99 and PR #100 are overlapping proposals, not independent release candidates
 
 - Use PR #99 as the content/feature base because it contains the approved revised hero and repository gateway.
 - Carry forward PR #100's palette and width correction; do not merge the two overlapping PRs independently.
-- Consolidate the final compact-control override into one 44px rule set; retain the 44px target for theme, language and menu controls.
+- Consolidate the base design tokens into one root declaration plus explicit light/dark overrides; consolidate the final compact-control override into one 44px rule set.
+- Browser diagnostics traced the 1,193px mobile scroll width to 10,897 stray characters after the first closing `</body></html>`: a duplicated tail of the inline script was being parsed as visible body text. The duplicate tail was removed and static guards now require the document to end at `</html>` and script tags to balance.
 - Mobile navigation: persistent quick bar has three destinations (Locs, Digital, More); the header menu retains the complete section navigation. The More panel provides WhatsApp, telephone, email and repository links.
 - Service enquiry verification covers the three service-specific messages and general purpose messages (loc, computer, network, local, tech, general) against the WhatsApp recipient.
 - Accessibility, performance and local search are release gates; code inspection alone is not a substitute for contrast calculation, browser accessibility checks, field performance data, or Search Console/Rich Results validation.
