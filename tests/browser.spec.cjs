@@ -30,7 +30,7 @@ test("responsive widths remain usable without horizontal overflow", async ({ pag
       farthest: [...document.querySelectorAll("html,body,body *")].map(el => {
         const r=el.getBoundingClientRect();
         return {tag:el.tagName,id:el.id,className:String(el.className).slice(0,100),left:Math.round(r.left),right:Math.round(r.right),width:Math.round(r.width),position:getComputedStyle(el).position,display:getComputedStyle(el).display,overflowX:getComputedStyle(el).overflowX};
-      }).sort((a,b)=>Math.max(b.right-width,-b.left)-Math.max(a.right-width,-a.left)).slice(0,25),
+      }).sort((a,b)=>Math.max(b.right-window.innerWidth,-b.left)-Math.max(a.right-window.innerWidth,-a.left)).slice(0,25),
       brand: document.querySelector(".brand").getBoundingClientRect().toJSON(),
       controls: document.querySelector(".nav-right").getBoundingClientRect().toJSON(),
     }));
@@ -161,7 +161,7 @@ test("every service enquiry opens the correct WhatsApp recipient with service co
 test("key loc-service controls meet WCAG AA text contrast in the light palette", async ({ page }) => {
   await page.goto(pageUrl);
   const result = await page.locator("#crown .svc .terminal-action").first().evaluate((el) => {
-    const rgb = (value) => value.match(/[\\d.]+/g).slice(0, 3).map(Number).map((v) => {
+    const rgb = (value) => value.match(/[\d.]+/g).slice(0, 3).map(Number).map((v) => {
       v /= 255;
       return v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
     });
