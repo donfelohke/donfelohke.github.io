@@ -90,7 +90,7 @@ test("integrated hero keeps beauty-first copy, starting prices, and enquiry boun
   await expect(page.locator(".hero")).toContainText("KES 700");
   await expect(page.locator(".hero")).toContainText("KES 1,500");
   await expect(page.locator(".hero")).toContainText("KES 3,500");
-  await expect(page.locator(".hero")).toContainText("An enquiry is not a confirmed booking");
+  await expect(page.locator(".hero")).toContainText("Ombi si miadi iliyothibitishwa");
   await expect(page.locator('.hero a[data-wa-purpose="loc"]')).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
   await page.locator("#language-toggle").click();
   await expect(page.locator(".hero h1")).toHaveText("Urembo wako ° Njia yako.");
