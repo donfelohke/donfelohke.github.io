@@ -101,6 +101,8 @@ check('href="tel:+254719635415">Call 0719 635 415</a>' in html, "Footer telephon
 check('href="mailto:mela9ine@proton.me">Email</a>' in html, "Footer email link required")
 check('href="https://github.com/donfelohke/donfelohke.github.io">GitHub / Source</a>' in html, "Footer source link required")
 check("KES 700" in html and "KES 1,500" in html and "KES 3,500" in html, "All three approved service prices must be present")
+check("Till: 3511456" in html and "FELIX LWOVA" in html, "Verified M-PESA Buy Goods merchant and Till must be published in the footer")
+check("Voluntary support for independent creative and technical work" in html and "Voluntary support is separate from payment for NAKEBUSEN services" in html, "Creator support must remain voluntary and distinct from service payments")
 check(not any(key in p.metas for key in ("og:image", "twitter:image")), "No social-preview image meta")
 check("background-image" not in html.lower(), "No CSS image backgrounds")
 check("application/ld+json" in html and "Organization" in html, "Missing Organization structured data")
