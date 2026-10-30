@@ -1,165 +1,322 @@
-# M-PESA Buy Goods — Website Integration & Saved Payment Message
+# NAKEBUSEN — M-PESA Payment Architecture & Reconciliation
 
-**Status:** RESEARCH / DRAFT — NOT PUBLISHED  
-**Date:** 30 October 2026  
-**Website:** https://donfelohke.github.io/  
-**Repository:** donfelohke/donfelohke.github.io  
-**Purpose:** Preserve a reusable customer payment message and define a safe staged integration.
+**Document ID:** NB-PA-01  
+**Research baseline:** 30 October 2026  
+**Status:** PROPOSED · NOT IMPLEMENTED · NOT PUBLISHED  
+**Public payment details:** WITHHELD PENDING SAFARICOM AND ACCOUNT-HOLDER VERIFICATION
 
-> **Publication gate:** The uploaded payment sticker identifies Buy Goods Till **3511456** and merchant name **FELIX LWOVA**. This document records what the sticker displays; it does not independently verify that the till is active, that NAKEBUSEN is authorised to collect through it, or that it is configured for Daraja. Do not add the till number or QR to the public website until the owner confirms those points and approves publication.
+## 1. Purpose and decision boundary
 
-## 1. Source-derived payment details
+Define two separate payment journeys:
 
-From the one-page QR sticker supplied by the owner:
+1. **NAKEBUSEN service payment** — payment against an agreed service, amount and service reference.
+2. **Creator support** — a voluntary contribution supporting independent creative, research, cultural and technical work. It does not purchase a NAKEBUSEN service or product.
 
-- Payment rail: M-PESA Lipa na M-PESA — Buy Goods
-- Till number: **3511456**
-- Merchant name printed: **FELIX LWOVA**
-- QR instruction: **SCAN TO PAY**
-- Alternative instruction printed: **LIPA NA BONGA via MY ONEAPP or Dial *126#**
-- The sticker displays M-PESA, Airtel Money and T-Kash network marks.
+The preferred logical design is one payment-information page and, only if Safaricom authorises the arrangement, one collection destination. This is a proposed architecture, not evidence that the existing Till is approved for both purposes.
 
-The sticker is evidence of the printed payment instructions, not proof of current till status, ownership authority, settlement, or API access.
+**Release rule:** Do not publish Till 3511456, the merchant name, the sticker QR, a payment deep link or a payment CTA until activation, account-holder authority, NAKEBUSEN collection authority, permitted purpose(s), fees and settlement arrangements have been confirmed in writing and the account holder has approved publication.
 
-## 2. Saved customer payment message
+No repository file or public website may contain payment credentials, PINs, passkeys, consumer secrets, initiator credentials, access tokens or private customer transaction data.
 
-### Reusable WhatsApp / SMS draft — hold until payment instructions are approved
+## 2. Evidence register
+
+### 2.1 Owner-supplied sticker — source-derived facts
+
+The supplied one-page PDF, `QR_Sticker_3511456_FL.pdf`, displays:
+
+- Rail: Lipa na M-PESA · Buy Goods.
+- Till number: **3511456**.
+- Printed merchant name: **FELIX LWOVA**.
+- QR instruction: **SCAN TO PAY**.
+- Alternative instruction: **LIPA NA BONGA via MY ONEAPP or Dial *126#**.
+- Network marks for Safaricom M-PESA, Airtel Money and T-Kash.
+
+This proves only what is printed on the supplied sticker. It does not prove current activation, registered ownership, the legal/business relationship between the merchant and NAKEBUSEN, settlement configuration or Daraja eligibility.
+
+### 2.2 Safaricom product distinctions
+
+The M-PESA Business Hub describes:
+
+- **Buy Goods:** merchant collection for goods and services.
+- **Business Till:** an enhanced Buy Goods Till with account-management and disbursement functions.
+- **Paybill:** recurring/long-term collection by an organisation, with an account identifier.
+- **Short-Term Paybill:** fundraising for specified short-term purposes such as medical bills, funerals, weddings, education and charity/catastrophe.
+- **Bill Manager:** invoicing, collection, e-receipts and reconciliation.
+- **Statements:** daily, monthly and yearly self-service statements, with longer/custom statement periods described in the Hub.
+
+Sources:
+- https://hub.m-pesaforbusiness.co.ke/
+- https://hub.m-pesaforbusiness.co.ke/merchant-onboarding/self-onboarding
+
+The public descriptions do not establish that voluntary creator contributions are authorised on this particular Buy Goods Till. Do not infer permission from Buy Goods accepting payment for goods/services, nor assume Short-Term Paybill is a general-purpose creator-support product. Ask Safaricom to confirm the correct product and permitted use in writing.
+
+### 2.3 Buy Goods merchant agreement — important limitation
+
+Safaricom's publicly listed Buy Goods Merchant Terms and Conditions PDF is marked **Version 1, March 2012**:
+https://www.safaricom.co.ke/images/Downloads/Resources_Downloads/buy_goods_contract.pdf
+
+The retrieved document includes a prohibited-use clause and obligations concerning reconciliation, customer receipts, taxes, customer support, suspension and confidentiality. This is an old listed version; do not represent it as the current contract without confirmation. Its text does not expressly classify this proposed creator-support arrangement. Its prohibited-use wording concerning solicitation is not sufficient to decide whether voluntary creator support is permitted.
+
+**Required evidence:** obtain the current merchant terms applicable to Till 3511456 and written Safaricom guidance on voluntary creator support and any relationship/branding between the merchant and NAKEBUSEN. Safaricom Business support: **M-PESABusiness@Safaricom.co.ke**.
+
+### 2.4 Fees and settlement — do not hard-code a tariff
+
+The Business Hub pages retrieved contain inconsistent published collection tariff figures (including 0.25%, 0.27% and a separate maximum 0.55% statement). Tariffs may vary by product, merchant profile and effective date. Do not put a fee in public copy or financial projections based on these conflicting summaries. Request the exact current tariff, settlement route, timing and withdrawal charges for this Till directly from Safaricom.
+
+## 3. Proposed customer-facing architecture
+
+**NAKEBUSEN website → Payments information page → two separate journeys**
+
+```text
+PAYMENTS
+  |
+  +-- SERVICE PAYMENT
+  |     Agreed service / deposit / balance
+  |     Commercial transaction
+  |     Internal service reference
+  |
+  +-- CREATOR SUPPORT
+        Voluntary contribution
+        No service or product purchased
+        Internal support reference
+
+          |
+          v
+  COLLECTION DESTINATION
+  Existing Buy Goods Till 3511456
+  ONLY IF SAFARICOM CONFIRMS BOTH USES
+          |
+          v
+  MERCHANT-SIDE VERIFICATION
+          |
+          v
+  NAKEBUSEN RECORDS
+  Classification · reconciliation · acknowledgement
+```
+
+The two purposes must remain distinct in the interface, customer messages, bookkeeping and reporting even if one authorised destination is used.
+
+### 3.1 Before approval
+
+- Do not expose the Till number, merchant name or QR.
+- Do not publish a “Buy me a coffee” payment button that routes to an unapproved Till.
+- Keep payment instructions in direct customer communication only after the correct account and permitted use are confirmed.
+- The public website may omit payment details entirely. A generic statement that instructions are provided after agreement is optional, not mandatory.
+
+### 3.2 After approval
+
+A single Payments page may present two clearly separated panels:
+- **Pay for a service** — only after NAKEBUSEN confirms the service, amount and payment stage.
+- **Support the work** — voluntary creator contribution, explicitly not a purchase or service payment.
+
+Do not mix both purposes in one ambiguous CTA. Do not imply that support contributions are tax-deductible, charitable donations or payments to a registered non-profit.
+
+## 4. Internal reference conventions
+
+These are internal enquiry/ledger classifications only. They are **not** guaranteed M-PESA Till account-reference fields and must not be presented as such.
+
+| Purpose | Internal reference |
+|---|---|
+| Retouch & Styling | `NAK-RETOUCH` |
+| LOCS Retie | `NAK-SISTERLOCKS` |
+| Artificial Locs Installation | `NAK-ARTIFICIAL` |
+| Creator support | `FELOH-COFFEE` |
+
+Store the internal reference alongside the actual M-PESA receipt number and verified merchant transaction data. Never assume the Till QR or Buy Goods flow accepts a customer-entered reference unless Safaricom confirms the relevant channel supports it.
+
+## 5. Reconciliation procedure
+
+| Stage | Procedure | Evidence / control |
+|---|---|---|
+| 1. Initiation | Customer receives instructions for an agreed service or voluntary support | Enquiry/support record and internal reference |
+| 2. Authorisation | Customer checks recipient and amount, then authorises M-PESA | Customer's M-PESA transaction |
+| 3. Merchant verification | Operator checks the merchant's own Till/App/Hub record or statement | Merchant-side transaction record |
+| 4. Classification | Assign service or creator-support category | Internal ledger |
+| 5. Reconciliation | Match ledger entries to merchant statement/transaction export | Daily reconciliation and exception report |
+| 6. Closure | Confirm service payment status or acknowledge voluntary support | Receipt, invoice update or acknowledgement |
+
+**Non-negotiable:** a screenshot, forwarded SMS or message shown on the payer's handset is not, by itself, proof that the merchant account received the funds. Verify the transaction in the merchant's own account records.
+
+### 5.1 Minimum ledger fields
+
+- Internal record ID.
+- Internal purpose reference.
+- Purpose class: `SERVICE` or `CREATOR_SUPPORT`.
+- Customer/enquirer reference (minimise personal data).
+- Agreed amount and currency.
+- M-PESA receipt number.
+- Transaction timestamp.
+- Till/store identifier verified by the merchant.
+- Merchant-side status and verification timestamp.
+- Reconciliation batch/date.
+- Exception/reversal note, where applicable.
+- Operator/auditor identity for material status changes.
+
+Do not store PINs, full credentials, unnecessary MSISDNs or screenshots as the sole authoritative evidence. Restrict ledger access and define retention/deletion rules.
+
+### 5.2 Payment state model
+
+- `EXPECTED` — amount agreed; no payment verified.
+- `PENDING` — customer reports payment or a request was initiated; merchant verification outstanding.
+- `CONFIRMED` — matching merchant-side transaction verified.
+- `UNMATCHED` — transaction exists but cannot yet be matched to an enquiry/reference.
+- `DUPLICATE` — repeated or duplicate payment requires review.
+- `REVERSED` — reversal verified in merchant records.
+- `FAILED` — transaction failure confirmed.
+- `REFUND_REVIEW` — refund/reversal decision requires authorised operator action.
+
+QR generation, STK request acceptance or browser redirect is not a `CONFIRMED` payment. Service booking/fulfilment state must remain separate from payment state.
+
+## 6. Saved customer messages — reusable drafts
+
+For direct communication only, after the relevant collection purpose and payment instructions have been approved. These are not public website copy.
+
+### 6.1 Service payment
 
 Hello,
 
 Thank you for choosing NAKEBUSEN.
 
-To make your payment, use the M-PESA Buy Goods Till:
+Please use the M-PESA Buy Goods payment details provided directly by NAKEBUSEN for your agreed service.
 
-**Till Number: 3511456**  
-**Merchant Name: FELIX LWOVA**
+Confirm the merchant name and amount before completing payment.
 
-Before confirming, check that the merchant name displayed matches the instructions above. Enter only the amount agreed with NAKEBUSEN.
+After payment, share your M-PESA confirmation message and service reference with us on +254 719 635 415.
 
-After payment, please share the M-PESA confirmation message and your service or enquiry reference with us on **+254 719 635 415**.
+Payment is confirmed as received only after verification by NAKEBUSEN.
 
-Your payment is treated as received only after it has been verified. Please contact us if the displayed merchant details do not match.
+NAKEBUSEN · GRACE · GRIT · GLORY
 
-**NAKEBUSEN · GRACE · GRIT · GLORY**
+### 6.2 Voluntary creator support
 
-### Short version
+Enjoying the work?
 
-NAKEBUSEN payment (Buy Goods): Till **3511456** · Merchant **FELIX LWOVA**. Pay only the agreed amount and verify the merchant name before confirming. Send the M-PESA confirmation and your service reference to **+254 719 635 415**. Payment is confirmed after verification.
+You can support independent creativity, research, culture and technical work with a voluntary coffee contribution.
 
-**Do not send either version to customers until till ownership/authority, active status and the approved NAKEBUSEN collection arrangement have been confirmed.**
+Use the verified payment instructions provided directly by @donfelohke.
 
-## 3. Recommended website placement — footer
+Your contribution is voluntary and does not purchase a NAKEBUSEN service or product.
 
-Place the payment entry in the **global website footer**, within a compact subsection labelled **Payments**. It should be secondary utility information, not a hero action, primary navigation item, service card, or booking CTA.
+Thank you for supporting the work.
 
-Recommended footer order:
+@donfelohke · #HisGenjeness
 
-1. **NAKEBUSEN** — brand identity and short descriptor.
-2. **Explore** — Crown, Digital and About navigation.
-3. **Contact** — WhatsApp and email.
-4. **Payments** — approved payment instructions or a link to the dedicated payment details section.
+**Do not send this message with Till details until Safaricom has confirmed that this use is permitted for the relevant account/product.**
 
-Keep the payment subsection visually restrained and text-first, consistent with the existing site. On narrow screens, stack the footer groups in the same order. Do not add a QR image to the footer by default; if a QR is later approved, provide it on a dedicated payment view with a clear amount/reference workflow and accessible text instructions.
+## 7. Footer and payment-page copy
 
-### Footer copy — safe pre-approval version
+### 7.1 Footer placement
 
-> **Payments**  
-> Payment instructions are provided after your service and amount have been agreed. Please use only payment details confirmed directly by NAKEBUSEN. We verify payments before confirming receipt.
+Keep the footer restrained. A single **Payments** link is enough; do not add a large payment card, QR, Till number or duplicate instructions to every footer column.
 
-### Footer copy — publish only after the publication gate is cleared
+### 7.2 Proposed payment-page copy — hold pending approval
 
-> **M-PESA Buy Goods**  
-> Till: **3511456**  
-> Merchant: **FELIX LWOVA**  
-> Pay only the agreed amount. Confirm the displayed merchant name before authorising payment, then share your M-PESA confirmation and service reference with NAKEBUSEN.
+**SERVICE PAYMENT**
 
-The till number and merchant identity must remain unpublished until active status, ownership/authority, NAKEBUSEN's collection arrangement and publication approval are confirmed. Keep customer enquiry, booking confirmation and payment as separate steps.
+Pay for your agreed NAKEBUSEN service using the payment instructions provided for your booking. Confirm the merchant name and amount before authorising payment.
 
-### Language parity
+**SUPPORT THE WORK**
 
-If published, add equivalent Kiswahili wording to the site's existing language dictionary. Preserve the same merchant identity, amount-checking instruction, payment-verification condition and booking boundary in both languages. Have the Kiswahili copy reviewed before release.
+Enjoying the work? You can make a voluntary contribution towards independent creativity, research, culture and technology. This contribution does not purchase a NAKEBUSEN service or product.
 
-## 4. Integration options
+The same collection destination may be used only if Safaricom confirms the proposed uses and the account holder approves the arrangement.
 
-| Stage | Approach | Scope |
+### 7.3 Suggested amounts
+
+KES 50 / 100 / 200 are proposals only. Do not preselect an amount or imply a required minimum. Confirm whether variable amounts and the proposed use are acceptable before publication.
+
+## 8. Safaricom verification register
+
+**Sticker-derived details (not account-verified):**
+- Till: `3511456`
+- Printed merchant: `FELIX LWOVA`
+
+**Outstanding — no public publication until resolved:**
+- [ ] Current activation status. The Business Hub says application status **Complete** means the Till is active and can receive payments; only the original applicant can check the application.
+- [ ] Registered account holder and merchant identity.
+- [ ] Authority of the account holder to collect NAKEBUSEN service payments.
+- [ ] Safaricom approval for voluntary creator contributions, if permitted at all.
+- [ ] Whether creator support should use a different Safaricom product or account.
+- [ ] Current merchant terms and any restrictions on solicitation, branding or third-party collection.
+- [ ] Applicable collection/withdrawal fees and settlement route/timing.
+- [ ] Supported networks and customer payment channels for this exact Till.
+- [ ] Production eligibility for Dynamic QR, callbacks, Transaction Status and any M-PESA Express flow.
+- [ ] Permission to publish the Till number, merchant name and sticker/QR on the NAKEBUSEN website.
+
+**Safaricom Business support:** M-PESABusiness@Safaricom.co.ke  
+**Business Hub:** https://hub.m-pesaforbusiness.co.ke/
+
+Only the original applicant can inspect the application's status in My Applications. Never ask another person to disclose their PIN, OTP or credentials.
+
+## 9. Future automation — feasibility, not implementation
+
+### 9.1 Dynamic QR
+
+Safaricom's Daraja Dynamic QR documentation describes QR generation for selected Lipa na M-PESA merchant transactions. The request model includes merchant name, reference, amount, transaction type and credit-party identifier; Buy Goods is represented by transaction code `BG`.
+
+Reference: https://developer.safaricom.co.ke/apis/DynamicQRCode
+
+Eligibility for Till 3511456 and production access are unverified. A Dynamic QR encodes payment initiation details; generation is not proof that payment completed.
+
+### 9.2 Server-side notifications
+
+If Safaricom approves a suitable C2B/Daraja integration:
+- Receive callbacks only at a controlled HTTPS backend endpoint.
+- Validate the expected merchant identifier, amount, receipt and supported reference fields.
+- Authenticate/verify notifications according to Safaricom's current integration specification.
+- Make callback processing idempotent.
+- Persist minimal transaction facts and an auditable event trail.
+- Handle duplicate, delayed, missing, reversed and unmatched callbacks.
+
+### 9.3 Transaction Status API
+
+Safaricom documents Transaction Status as a secondary reconciliation mechanism when callbacks are not received. A query requires an M-PESA receipt number or Originator Conversation ID; the API is asynchronous.
+
+Reference: https://developer.safaricom.co.ke/apis/TransactionStatus
+
+It is not a generic transaction-history endpoint and is not a replacement for statements or merchant-side verification.
+
+### 9.4 Bill Manager
+
+Safaricom describes Bill Manager as supporting invoices, collection, e-receipts and reconciliation. Assess it before building bespoke invoicing/reconciliation features. Availability, onboarding, pricing and fit for this merchant account require confirmation.
+
+Reference: https://developer.safaricom.co.ke/apis/BillManager
+
+### 9.5 Security and deployment boundary
+
+- No secrets or credentials in static website source, public Git, browser storage or frontend JavaScript.
+- Static GitHub Pages cannot safely host a secret-bearing payment backend or callback endpoint.
+- Use a separately secured server-side component only if automation is approved and operationally justified.
+- Keep the current site static-first until the business case and support burden justify a backend.
+- Do not add payment collection code, payment SDKs or a live QR before all business and technical gates pass.
+
+## 10. Implementation decision register
+
+| Decision | Status | Control |
 |---|---|---|
-| 1 — Manual | Static Buy Goods instructions | Publish approved till details and payment steps; verify receipts manually |
-| 2 — Dynamic QR | Safaricom Dynamic QR API | Backend requests a transaction-specific QR for an agreed amount/reference |
-| 3 — STK Push | Daraja M-PESA Express | Customer receives a payment prompt and explicitly authorises it |
-| 4 — Reconciliation | C2B confirmation callbacks / merchant reporting | Match confirmed transactions to service references and ledger entries |
+| One payment-information page | Approved direction | Do not publish payment details yet |
+| Separate service and creator-support journeys | Approved direction | Separate UI, messages and ledger categories |
+| Existing Till as candidate collection rail | Proposed | Subject to Safaricom approval |
+| Till number and merchant name in public footer | Withheld | Publish only after verification and approval |
+| Separate service/support bookkeeping | Recommended | Mandatory if both uses are approved |
+| Internal purpose references | Proposed | Internal only; not Till account-reference claims |
+| Suggested support amounts KES 50/100/200 | Proposed | Not published or preselected |
+| Automatic payment confirmation | Deferred | Requires backend, approved Daraja access and tests |
+| Dynamic QR | Future feasibility | Merchant eligibility and production access unverified |
+| Transaction Status API | Future feasibility | Secondary check, not primary ledger |
+| Bill Manager | Assess | May reduce bespoke reconciliation work |
+| Safaricom approval for mixed use | Outstanding | Written confirmation required |
 
-### Safaricom references
+## 11. Implementation sequence
 
-- Daraja 3.0 portal: https://daraja.safaricom.co.ke/apis/GettingStarted
-- Dynamic QR API: https://developer.safaricom.co.ke/apis/DynamicQRCode
-- M-PESA Express: https://developer.safaricom.co.ke/apis/MpesaExpressSimulate
-- M-PESA Business Till Guide: https://www.safaricom.co.ke/images/Downloads/the-mpesa-business-till-guide.pdf
-- Safaricom Buy Goods Guide: https://www.safaricom.co.ke/images/Downloads/Buy-goods-guides.pdf
+1. Verify applicant, account holder, activation and current merchant contract.
+2. Obtain Safaricom's written ruling on NAKEBUSEN service collection and voluntary creator support as separate purposes.
+3. Confirm whether one Till can support both, or whether a different product/account is required.
+4. Confirm fees, settlement, customer network coverage and merchant-side reporting.
+5. Approve customer messages and any public payment-page copy.
+6. Implement a minimal static information page only after approval; publish no credentials.
+7. Establish manual verification and daily reconciliation before accepting payments through the new journey.
+8. Evaluate Bill Manager and Daraja automation only after manual operations are reliable.
+9. Test sandbox, failure handling, duplicate handling, reversals and one controlled live payment before automated launch.
 
-Safaricom's Dynamic QR documentation describes QR generation for selected Lipa na M-PESA merchant transactions, including Buy Goods (`BG`), with merchant identifier, amount and transaction reference. Confirm production eligibility for this specific till with Safaricom before implementation.
-
-Daraja M-PESA Express is a merchant-initiated payment prompt. It is not a silent debit: the customer must authorise the prompt on their phone.
-
-## 5. Target architecture — only after approval
-
-```text
-NAKEBUSEN website
-      |
-      | Customer selects agreed service / amount
-      v
-NAKEBUSEN payment backend
-      |
-      +---- Daraja authentication (server-side secrets)
-      |
-      +---- Dynamic QR or STK Push request
-      |
-      v
-Safaricom M-PESA
-      |
-      | Customer authorises payment
-      v
-Registered callback endpoint
-      |
-      +---- Validate callback and transaction identifiers
-      +---- Enforce idempotency / duplicate handling
-      +---- Match amount, merchant and service reference
-      +---- Record payment status in ledger
-      v
-Payment status: PENDING / CONFIRMED / FAILED / REVIEW
-      |
-      v
-NAKEBUSEN operator verifies and updates customer
-```
-
-Security and correctness requirements:
-
-- Never place Daraja consumer secrets, passkeys, initiator credentials or access tokens in browser JavaScript, HTML, Git or public configuration.
-- Use HTTPS for backend endpoints and callbacks.
-- Treat browser redirects, screenshots and customer-submitted SMS as supporting evidence, not authoritative automated settlement signals.
-- Verify server-side transaction callbacks / merchant statements; validate the expected shortcode, amount, receipt and reference.
-- Make callback processing idempotent and retain a minimal audit trail.
-- Do not mark a booking as confirmed merely because a payment request was created or a QR was generated.
-- Define refund, reversal, duplicate-payment and unmatched-payment handling before go-live.
-- Keep payment records out of the public repository.
-
-## 6. Business and operational checks before publication
-
-- [ ] Confirm Till 3511456 is active with Safaricom.
-- [ ] Confirm the merchant name and the authorised account owner.
-- [ ] Confirm NAKEBUSEN is authorised to collect customer payments through this till.
-- [ ] Confirm the payment channel and supported customer networks with Safaricom.
-- [ ] Confirm whether the till is eligible for Dynamic QR and/or Daraja callbacks / M-PESA Express.
-- [ ] Confirm whether the business requires a separate business-owned till or shortcode.
-- [ ] Approve customer wording and Kiswahili translation.
-- [ ] Define who verifies payments and how receipts are recorded.
-- [ ] Test the customer journey in sandbox before requesting production credentials.
-- [ ] Test a small, controlled live transaction before public launch.
-- [ ] Update the website, privacy/operations documentation and service workflow together.
-
-## 7. Decision
-
-**Recommended now:** Preserve the reusable payment message in this draft and prepare the footer placement, but do not expose the till publicly or claim automated payment integration yet. The pre-approval footer copy in section 3 is safe to use without publishing unverified merchant details.
-
-**Recommended later:** Start with manual Buy Goods instructions once ownership and authority are confirmed. Add Daraja only when automated confirmation and reconciliation provide enough operational value to justify a backend and its ongoing support.
-
-Specification status is not implementation. A generated QR is not a payment confirmation. A successful API response is not proof of settlement.
+**Final boundary:** specification is not implementation; sticker is not account verification; a payment prompt or QR is not settlement; customer evidence is not merchant-side confirmation; Safaricom approval is not inferred from this research.
