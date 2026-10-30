@@ -124,7 +124,7 @@ assert.equal(language.root.lang, "sw", "header toggle switches to Kiswahili");
 assert.match(language.headerLanguageButton.innerHTML, /<svg class="toggle-icon"/, "Kiswahili header language toggle retains the globe icon");
 assert.equal(language.headerLanguageButton.attrs["aria-label"], "Badilisha lugha hadi Kiingereza", "Kiswahili toggle announces its action in Kiswahili");
 assert.equal(language.values["nakebusen-language"], "sw", "language preference persists");
-assert.match(language.whatsappLinks[0].href, /Ninaulizia/, "Kiswahili loc enquiry has a Kiswahili prefilled message");
+assert.match(language.whatsappLinks[0].href, /ninaulizia/, "Kiswahili loc enquiry has a Kiswahili prefilled message");
 language.footerLanguageButton.listeners.click();
 assert.equal(language.root.lang, "en", "footer toggle returns to English");
 
