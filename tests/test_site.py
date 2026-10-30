@@ -64,7 +64,7 @@ check('data-i18n="bookingNote"' in html and 'data-i18n="digitalIntro"' in html, 
 check('data-i18n="navLocs"' in html and 'data-i18n="navDigital"' in html and '<a href="#connect" data-i18n="navConnect">Connect</a>' in html, "Header navigation must expose Locs, Digital, and Connect")
 check('<a href="#founder" data-i18n="navAbout">@donfeloh</a>' in html, "Header navigation must expose the @donfeloh founder destination")
 check('#theme-toggle,#language-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem;padding:.25rem}' in html, "Theme and language controls must retain 44px hit areas")
-check('--forest:#14251D;--canopy:#1D3428;--clay:#C76F4A;--ochre:#D6AD54;--ivory:#F3EDE2;' in html, "Website palette must match the approved brand tokens")
+check('--forest:#033500;--canopy:#033500;--clay:#E2725B;--ochre:#D4AF37;--ivory:#F2EFEA;' in html, "Website palette must match the approved brand tokens")
 check('<a href="#founder" data-section="founder" aria-label="@donfelohke">' in html, "Floating navigation must expose the @donfelohke destination")
 check('class="floating-footer-signature"' in html and "GRACE · GRIT · GLORY" in html, "Floating contact sheet must include the footer identity")
 check("#theme-toggle,#language-toggle,#mobile-menu-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem;padding:.25rem}" in html, "Icon controls must retain 44px touch targets")
@@ -92,11 +92,11 @@ check('id="language-toggle" aria-label="Switch language to Kiswahili"' in html a
 check('menu.innerHTML=opened?' in html and 'aria-expanded' in html, "Mobile menu must use icons and retain expanded state")
 check('id="mobile-menu-toggle" aria-label="Open navigation menu" title="Open navigation menu" aria-expanded="false" aria-controls="site-navigation"><svg class="toggle-icon"' in html, "Mobile menu toggle must use consistent inline SVG icon artwork")
 check('navMore:"More"' in html and 'navMore:"Zaidi"' in html and '<span data-i18n="navMore">More</span>' in html, "Floating More label must localize between English and Kiswahili")
-check('<p class="small muted" data-i18n="heroStatus">Eldoret Town / Karibu Mdosi, Kenya · Loc services · Enquiries confirmed manually.</p>' in html, "English hero fallback must use the approved Eldoret Town / Karibu Mdosi wording")
-check('heroStatus:"Eldoret Town / Karibu Mdosi, Kenya · Loc services · Enquiries confirmed manually."' in html, "English hero translation must preserve the approved location wording")
-check('founderDesc:"NAKEBUSEN inaleta urembo na teknolojia kupitia ufundi. WARENA ni msingi wa kiufundi. Don Feloh huleta ufundi, uelekeo wa teknolojia na ubunifu katika kazi hii."' in html, "Kiswahili founder copy must describe craft, technical direction, and creative practice naturally")
-check('heroStatus:"Eldoret Town / Karibu Mdosi, Kenya · Huduma za loc · Maombi yanathibitishwa moja kwa moja."' in html, "Kiswahili hero translation must preserve the approved location wording")
-check('<h1 data-i18n="tagline">Your Beauty ° Your Way.</h1>' in html, "Approved hero headline must be preserved")
+check('<p class="small muted" data-i18n="heroStatus">Eldoret Town, Uasin Gishu County, Kenya · LOCS and DIGITAL services.</p>' in html, "English hero fallback must use the approved Eldoret Town / Karibu Mdosi wording")
+check('heroStatus:"Eldoret Town, Uasin Gishu County, Kenya · LOCS and DIGITAL services."' in html, "English hero translation must preserve the approved location wording")
+check('founderDesc:"NAKEBUSEN inaunganisha ufundi, teknolojia na utamaduni kupitia ujuzi wa vitendo, kazi ya ubunifu na kujitegemea. WARENA ndiyo utambulisho wa kiufundi ndani ya NAKEBUSEN DIGITAL. Don Feloh anaongoza ufundi, mwelekeo wa teknolojia na ubunifu wa biashara hii."' in html, "Kiswahili founder copy must describe craft, technical direction, and creative practice naturally")
+check('heroStatus:"Eldoret Town, Kaunti ya Uasin Gishu, Kenya · Huduma za LOCS na DIGITAL."' in html, "Kiswahili hero translation must preserve the approved location wording")
+check('<h1 data-i18n="tagline">Beautiful Roots. Sovereign Systems.</h1>' in html, "Approved hero headline must be preserved")
 check('href="tel:+254719635415">Call 0719 635 415</a>' in html, "Footer telephone link required")
 check('href="mailto:mela9ine@proton.me">Email</a>' in html, "Footer email link required")
 check('href="https://github.com/donfelohke/donfelohke.github.io">GitHub / Source</a>' in html, "Footer source link required")
@@ -125,7 +125,7 @@ check("NAKEBUSEN" in html and "Powered by WARENA" in html and "@donfelohke" in h
 check('data-i18n="boundary"' in html and "ONLY NAKEBUSEN TRANSACTS" not in html, "Public boundary copy must be customer-facing")
 check('<span data-i18n="bookingNote">' in html, "bookingNote translation must not nest inside another data-i18n parent")
 
-for expected in ("KES 700", "KES 1,500", "KES 3,500", "Retouch", "Sisterlocs", "Artificial"):
+for expected in ("KES 700", "KES 1,500", "KES 3,500", "Retouch", "LOCS Retie", "Artificial"):
     check(expected in html, f"Public service catalogue missing token: {expected}")
 
 robots = (ROOT / "robots.txt").read_text(encoding="utf-8")
