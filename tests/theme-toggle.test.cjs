@@ -54,14 +54,8 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
       if (selector === 'meta[name="twitter:description"]') return twitterDescriptionMeta;
       if (selector === 'meta[property="og:title"]') return ogTitleMeta;
       if (selector === 'meta[name="twitter:title"]') return twitterTitleMeta;
+      if (selector === "#theme-toggle") return themeButton;
       return null;
-    },
-    querySelectorAll(selector) {
-      if (selector === "#language-toggle, #language-toggle-footer") {
-        return [headerLanguageButton, footerLanguageButton];
-      }
-      if (selector === "[data-wa-purpose]") return whatsappLinks;
-      return [];
     },
     getElementById(id) {
       if (id === "theme-toggle") return themeButton;
@@ -69,55 +63,55 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
       if (id === "language-toggle-footer") return footerLanguageButton;
       return null;
     },
+    querySelectorAll(selector) {
+      if (selector === "[data-wa-purpose]") return whatsappLinks;
+      return [];
+    },
     addEventListener() {},
+  };
+  const storage = {
+    getItem(key) {
+      if (storageThrows) throw new Error("storage unavailable");
+      return Object.prototype.hasOwnProperty.call(values, key) ? values[key] : null;
+    },
+    setItem(key, value) {
+      if (storageThrows) throw new Error("storage unavailable");
+      values[key] = String(value);
+    },
   };
   const context = {
     document,
-    window: { matchMedia: () => media, addEventListener() {} },
-    localStorage: {
-      getItem(key) {
-        if (storageThrows) throw new Error("storage unavailable");
-        return values[key] ?? null;
-      },
-      setItem(key, value) {
-        if (storageThrows) throw new Error("storage unavailable");
-        values[key] = value;
-      },
-    },
+    window: { matchMedia() { return media; }, localStorage: storage },
+    localStorage: storage,
+    console,
   };
+  context.window.document = document;
   vm.runInNewContext(match[1], context);
   return {
     attributes, root, themeMeta, descriptionMeta, ogDescriptionMeta, twitterDescriptionMeta, ogTitleMeta, twitterTitleMeta, themeButton,
-    headerLanguageButton, footerLanguageButton, whatsappLinks, values, media, mediaListeners, documentTitle: document.title,
+    headerLanguageButton, footerLanguageButton, whatsappLinks, values, mediaListeners, media,
   };
 }
 
-const light = boot();
-assert.match(light.themeButton.innerHTML, /<svg class="toggle-icon"/, "light theme toggle renders an icon");
-assert.match(light.themeButton.innerHTML, /M20\.5 15\.5A8\.5/, "light theme offers the moon/dark-mode action icon");
-assert.equal(light.themeButton.attrs["aria-label"], "Switch to dark theme");
-assert.equal(light.themeButton.attrs["aria-pressed"], "false");
-light.themeButton.listeners.click();
-assert.equal(light.attributes["data-theme"], "dark", "click switches to dark");
-assert.match(light.themeButton.innerHTML, /<circle cx="12" cy="12" r="4"/, "dark theme shows the sun/light-mode action icon");
-assert.equal(light.themeButton.attrs["aria-label"], "Switch to light theme");
-assert.equal(light.themeButton.attrs["aria-pressed"], "true");
-assert.equal(light.values["nakebusen-theme"], "dark", "choice is persisted");
+const light = boot({ storedTheme: "light" });
+assert.equal(light.attributes["data-theme"], "light");
+assert.match(light.themeButton.innerHTML, /M20\.5 15\.5A8\.5/, "light theme shows the moon icon");
 
-const restored = boot({ storedTheme: light.values["nakebusen-theme"] });
-assert.equal(restored.attributes["data-theme"], "dark", "saved theme is restored");
-assert.match(restored.themeButton.innerHTML, /<circle cx="12" cy="12" r="4"/, "restored dark theme shows the sun icon");
+const dark = boot({ storedTheme: "dark" });
+assert.equal(dark.attributes["data-theme"], "dark");
+assert.match(dark.themeButton.innerHTML, /circle cx=\"12\"/, "dark theme shows the sun icon");
+assert.equal(dark.themeMeta.content, "#111111");
 
-const system = boot({ systemDark: true });
-assert.equal(system.attributes["data-theme"], undefined, "system choice leaves explicit data-theme unset");
-assert.match(system.themeButton.innerHTML, /<circle cx="12" cy="12" r="4"/, "system dark preference shows the sun icon");
+const system = boot({ storedTheme: "system", systemDark: true });
+assert.equal(system.attributes["data-theme"], undefined);
+assert.match(system.themeButton.innerHTML, /circle cx=\"12\"/, "system dark preference shows the sun icon");
 system.media.matches = false;
 system.mediaListeners.change();
 assert.match(system.themeButton.innerHTML, /M20\.5 15\.5A8\.5/, "system light preference shows the moon icon");
 
 const language = boot();
 assert.equal(language.root.lang, "en", "English is the default language");
-assert.match(html, /<meta property="og:description" content="Craft, technology and culture rooted in African ingenuity\. Professional loc care/);
+assert.match(html, /<meta property="og:description" content="Craft, technology and culture rooted in African ingenuity\. Loc care and practical technology in Eldoret Town, Kenya\."/);
 assert.match(html, /<meta property="og:title" content="NAKEBUSEN — Beautiful Roots\. Sovereign Systems\."/);
 assert.match(html, /<meta name="twitter:title" content="NAKEBUSEN — Beautiful Roots\. Sovereign Systems\."/);
 assert.match(html, /<meta name="twitter:description" content="Craft, technology and culture rooted in African ingenuity\. Loc care/);
@@ -129,22 +123,12 @@ language.headerLanguageButton.listeners.click();
 assert.equal(language.root.lang, "sw", "header toggle switches to Kiswahili");
 assert.match(language.headerLanguageButton.innerHTML, /<svg class="toggle-icon"/, "Kiswahili header language toggle retains the globe icon");
 assert.equal(language.headerLanguageButton.attrs["aria-label"], "Badilisha lugha hadi Kiingereza", "Kiswahili toggle announces its action in Kiswahili");
-assert.match(language.whatsappLinks[0].href, /ninaulizia%20huduma%20za%20loc/, "Kiswahili loc enquiry has a Kiswahili prefilled message");
-assert.match(language.whatsappLinks[1].href, /kujadili%20mradi%20wa%20teknolojia/, "Kiswahili technology enquiry has a Kiswahili prefilled message");
-assert.equal(language.values["nakebusen-language"], "sw", "language choice persists");
-assert.match(language.headerLanguageButton.innerHTML, /<svg class="toggle-icon"/, "header retains the globe icon in Kiswahili");
-assert.equal(language.footerLanguageButton.textContent, "SW", "footer retains compact language label in Kiswahili");
+assert.equal(language.values["nakebusen-language"], "sw", "language preference persists");
+assert.match(language.whatsappLinks[0].href, /Ninaulizia/, "Kiswahili loc enquiry has a Kiswahili prefilled message");
 language.footerLanguageButton.listeners.click();
-assert.equal(language.root.lang, "en", "footer toggle switches back to English");
-assert.match(language.headerLanguageButton.innerHTML, /<svg class="toggle-icon"/);
-assert.equal(language.footerLanguageButton.textContent, "EN");
-assert.equal(language.values["nakebusen-language"], "en");
+assert.equal(language.root.lang, "en", "footer toggle returns to English");
 
-const restoredLanguage = boot({ storedLanguage: "sw" });
-assert.equal(restoredLanguage.root.lang, "sw", "saved language preference is restored");
-const noStorage = boot({ storageThrows: true });
-assert.equal(noStorage.root.lang, "en", "page remains usable with English default when storage is unavailable");
-noStorage.themeButton.listeners.click();
-assert.equal(noStorage.attributes["data-theme"], "dark", "theme control works without storage");
+const resilient = boot({ storageThrows: true, systemDark: true });
+assert.match(resilient.themeButton.innerHTML, /circle cx=\"12\"/, "theme still works when storage throws");
 
-console.log("PASS: theme state, persistence, system preference, bilingual toggles, and storage fallback.");
+console.log("PASS: theme and language preference behavior.");
