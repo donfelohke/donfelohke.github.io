@@ -530,73 +530,100 @@ header{
 }
 
 
-/* M1 brand-system overrides: restrained, text-first, palette-controlled. */
+/* NAKEBUSEN design system — consolidated implementation
+   Canonical palette, editorial type, restrained surfaces and accessible controls. */
+:root{
+  --content-width:1040px;
+  --font-display:var(--serif);
+  --font-body:var(--sans);
+  --font-technical:var(--mono);
+  --text-xs:clamp(.72rem,.68rem + .12vw,.78rem);
+  --text-sm:clamp(.875rem,.84rem + .15vw,.95rem);
+  --text-base:clamp(1rem,.96rem + .18vw,1.125rem);
+  --text-lg:clamp(1.125rem,1.04rem + .35vw,1.3rem);
+  --text-xl:clamp(1.35rem,1.18rem + .7vw,1.75rem);
+  --text-2xl:clamp(1.7rem,1.4rem + 1.2vw,2.5rem);
+  --text-display:clamp(2.65rem,1.9rem + 4.1vw,5.35rem);
+  --leading-body:1.7;
+  --leading-heading:1.12;
+  --tracking-display:-.035em;
+  --clay-text:#9F3F2D;
+  --gold-text:#765900;
+  --accent-on-clay:#111111;
+  --text-on-dark:#F2EFEA;
+}
+:root[data-theme="dark"]{--clay-text:#F2EFEA;--gold-text:#D4AF37;--text-on-dark:#F2EFEA}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]):not([data-theme="dark"]){--clay-text:#F2EFEA;--gold-text:#D4AF37;--text-on-dark:#F2EFEA}
+}
+html{scroll-padding-top:6rem}
+body{font-family:var(--font-body);font-size:var(--text-base);line-height:var(--leading-body);letter-spacing:0}
+.wrap{width:min(100% - 2rem,var(--content-width));margin-inline:auto}
+header,.floating-nav{background:var(--paper)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important}
 .hero:after{content:none!important;display:none!important}
-header{background:var(--paper)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important}
-.card,.terminal-card,.svc,.group,.footer-panel{box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
-.terminal-card,.svc,.card,.footer-panel{border-radius:0!important}
-.terminal-card,.svc{background:var(--paper)!important}
-.dark-band .group,.dark-band .terminal-card{background:var(--forest)!important;color:var(--ivory)!important}
-.terminal-id,.terminal-card .price,.svc .price{color:var(--ink)!important}
-:root[data-theme="dark"] .terminal-id,:root[data-theme="dark"] .terminal-card .price,:root[data-theme="dark"] .svc .price{color:var(--ivory)!important}
-.dark-band .terminal-id,.dark-band .terminal-card .price,.dark-band .group h3{color:var(--ivory)!important}
-.dark-band .muted,.dark-band .section-kicker{color:var(--ivory)!important}
-#crown .svc .terminal-action{color:var(--ink)!important}
-.hero .eyebrow,.hero .section-kicker,.hero .muted,.hero .hero-tech-note{color:var(--ivory)!important}
-#paths .beauty-path{background:var(--paper)!important}
-#paths .beauty-path .terminal-id{color:var(--ink)!important}
+h1,.hero h1{font-family:var(--font-display);font-size:var(--text-display);font-weight:500;line-height:.99;letter-spacing:var(--tracking-display);text-wrap:balance;max-width:13ch}
+h2{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:500;line-height:var(--leading-heading);letter-spacing:-.02em;text-wrap:balance}
+h3,.svc h3,.terminal-card h3{font-family:var(--font-display);font-size:var(--text-xl);font-weight:600;line-height:1.18;letter-spacing:-.01em}
+p,li{max-width:72ch}
+.lead{font-size:var(--text-lg);line-height:1.65;max-width:42rem}
+.tagline,.quote{font-family:var(--font-display);font-size:clamp(1.25rem,1.08rem + .7vw,1.8rem);line-height:1.38}
+.brand-name{font-family:var(--font-display);font-size:1.2rem;font-weight:700}
+.nav-links{font-size:var(--text-sm);font-weight:600}
+.eyebrow,.section-kicker,.footer-kicker,.terminal-meta,.terminal-id,.terminal-kind,.price,.hero-prices-label,.hero .hero-price-row strong,.minimal-footer-signature p:first-child{font-family:var(--font-technical);font-variant-numeric:tabular-nums}
+.eyebrow,.section-kicker,.footer-kicker{font-size:var(--text-xs);letter-spacing:.1em;line-height:1.5}
+.small,.footer-panel p,.footer-bottom{font-size:var(--text-sm)}
+.muted{color:var(--muted)}
+/* Flat, text-first surfaces: no glass, blur, gradient or decorative shadows. */
+.card,.terminal-card,.svc,.group,.footer-panel{box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:0!important}
+.terminal-card,.svc,.card,.footer-panel{background:var(--paper)!important}
+.terminal-card,.svc{border-color:var(--line)}
+.dark-band .group,.dark-band .terminal-card,#code .group{background:var(--forest)!important;color:var(--ivory)!important}
+.dark-band .muted,.dark-band .section-kicker,.dark-band .group h3,#code .group h3{color:var(--ivory)!important}
+.terminal-id,.terminal-card .price,.svc .price{color:var(--clay-text)}
+:root[data-theme="dark"] .terminal-id,:root[data-theme="dark"] .terminal-card .price,:root[data-theme="dark"] .svc .price{color:var(--ivory)}
+.dark-band .terminal-id,.dark-band .terminal-card .price{color:var(--ivory)}
+#paths .beauty-path{background:var(--paper)!important;color:var(--ink)}
+#paths .beauty-path .terminal-id{color:var(--clay-text)}
 #paths .digital-path{background:var(--forest)!important;color:var(--ivory)!important}
 #paths .digital-path .terminal-kind,#paths .digital-path .path-note{color:var(--ivory)!important}
 #paths .digital-path .terminal-id{color:var(--ochre)!important}
-#code .group{background:var(--forest)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important;border-radius:0!important}
-#code .group .btn:hover{background:var(--ochre)!important;color:var(--ink)!important}
+#crown .svc .terminal-action{background:var(--clay)!important;border-color:var(--clay)!important;color:var(--ink)!important}
+#crown .svc .terminal-action:hover{background:var(--clay)!important;color:var(--ink)!important}
+.hero .eyebrow,.hero .section-kicker,.hero .muted,.hero .hero-tech-note{color:var(--ivory)!important}
+.hero .hero-brand-label,.hero .hero-prices-label{color:var(--ochre)!important}
 .hero .hero-prices{background:var(--forest)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
-.floating-nav{background:var(--paper)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important}
-.floating-footer-signature strong{color:var(--ink)!important}
-
-/* Footer payment and creator-support utilities */
-.footer-payments{display:grid;grid-template-columns:1fr;gap:.9rem;margin:.85rem 0 1rem;padding-top:.9rem;border-top:1px solid rgba(242,239,234,.2)}
-.footer-payment{min-width:0}
-.footer-payment h2{margin:0 0 .3rem;color:#D4AF37;font:700 .68rem var(--mono);letter-spacing:.1em;text-transform:uppercase}
-.footer-payment p{margin:.25rem 0;color:#F2EFEA;font-size:.88rem}
-.footer-payment .footer-payment-note{color:rgba(242,239,234,.82);font-size:.78rem}
-.footer-payment .footer-link{margin-top:.35rem;min-height:2.75rem;border-color:rgba(242,239,234,.38);background:#033500;color:#F2EFEA}
-.footer-payment .footer-link:focus-visible{outline:3px solid #D4AF37;outline-offset:3px}
-@media(min-width:700px){.footer-payments{grid-column:1/-1;grid-template-columns:1fr 1fr;gap:1.5rem}.footer-payment+ .footer-payment{border-left:1px solid rgba(242,239,234,.2);padding-left:1.5rem}}
-
-/* UX refresh: clearer hierarchy, stronger touch targets and a direct mobile enquiry path. */
-:root{--content-width:1040px}
-.wrap{width:min(100% - 2rem,var(--content-width));}
-.hero{padding-block:clamp(3.25rem,8vw,6rem) clamp(2.25rem,5vw,3.5rem)}
-.hero h1{max-width:13ch;text-wrap:balance}
-.hero .tagline{max-width:34rem}
-.hero .lead{max-width:42rem;font-size:clamp(1rem,1.8vw,1.12rem)}
-.hero-prices{max-width:34rem;margin:1.35rem 0 1rem;padding:1rem 1.1rem;border-left:3px solid var(--gold)}
-.hero-price-row{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding:.35rem 0;border-bottom:1px solid rgba(242,239,234,.2)}
-.hero-price-row:last-of-type{border-bottom:0}
-.hero-price-row strong{white-space:nowrap}
-.hero-prices-label,.hero-tech-note{font:700 .68rem var(--mono);letter-spacing:.08em}
-.hero .actions{gap:.65rem}
-.hero .actions .btn{min-height:3.1rem;padding-inline:1.1rem}
+.hero .hero-price-row{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding:.35rem 0;border-bottom:1px solid rgba(242,239,234,.2)}
+.hero .hero-price-row:last-of-type{border-bottom:0}
+.hero .hero-price-row strong{white-space:nowrap}
+.hero-prices-label,.hero-tech-note{font:700 .68rem var(--font-technical);letter-spacing:.08em}
 #paths .path-card{padding:clamp(1.2rem,3vw,1.8rem);gap:1rem}
-#paths .path-card h2{max-width:20ch;text-wrap:balance}
-#paths .path-note{font-size:.88rem;font-weight:600}
+#paths .path-card h2{max-width:20ch}
+#paths .path-note{font-size:var(--text-sm);font-weight:600}
 #crown .svc{gap:.8rem;padding:clamp(1rem,2.5vw,1.35rem)}
 #crown .svc .terminal-copy{width:100%}
 #crown .svc .terminal-action{width:100%;align-self:stretch;min-height:3rem}
-#code .group{min-height:100%}
-section> .wrap>h2{max-width:26ch;text-wrap:balance}
-section p{max-width:72ch}
+#code .group{min-height:100%;border-radius:0!important}
+#code .group .btn:hover{background:var(--ochre);color:var(--ink)}
+section>.wrap>h2{max-width:26ch}
 .note{border-left-width:4px}
 .btn,.footer-link,.nav-links a{touch-action:manipulation}
 a,button{-webkit-tap-highlight-color:transparent}
 :focus-visible{scroll-margin-block:7rem}
+.footer-payments{display:grid;grid-template-columns:1fr;gap:.9rem;margin:.85rem 0 1rem;padding-top:.9rem;border-top:1px solid rgba(242,239,234,.2)}
+.footer-payment{min-width:0}
+.footer-payment h2{margin:0 0 .3rem;color:var(--ochre);font:700 .68rem var(--font-technical);letter-spacing:.1em;text-transform:uppercase}
+.footer-payment p{margin:.25rem 0;color:var(--ivory);font-size:var(--text-sm)}
+.footer-payment .footer-payment-note{color:rgba(242,239,234,.86);font-size:var(--text-xs)}
+.footer-payment .footer-link{margin-top:.35rem;min-height:2.75rem;border-color:rgba(242,239,234,.38);background:var(--forest);color:var(--ivory)}
+.footer-payment .footer-link:focus-visible{outline:3px solid var(--ochre);outline-offset:3px}
+.floating-footer-signature strong{color:var(--ink)!important}
+@media(min-width:700px){.footer-payments{grid-column:1/-1;grid-template-columns:1fr 1fr;gap:1.5rem}.footer-payment+.footer-payment{border-left:1px solid rgba(242,239,234,.2);padding-left:1.5rem}}
 @media(max-width:899px){
  body{padding-bottom:calc(5.25rem + env(safe-area-inset-bottom,0px))}
  .floating-nav{grid-template-columns:repeat(4,minmax(0,1fr));gap:.2rem;bottom:calc(.4rem + env(safe-area-inset-bottom,0px));padding:.35rem}
- .floating-nav a,.floating-nav button{min-height:3.25rem;font-size:.7rem}
+ .floating-nav a,.floating-nav button{min-height:3.25rem;font-size:var(--text-xs)}
  .floating-nav .floating-wa{background:var(--forest);color:var(--ivory);border-color:var(--forest);font-weight:800}
- :root[data-theme="dark"] .floating-nav .floating-wa{background:var(--ochre);color:#111;border-color:var(--ochre)}
+ :root[data-theme="dark"] .floating-nav .floating-wa{background:var(--ochre);color:var(--ink);border-color:var(--ochre)}
  .floating-more-panel{bottom:calc(5.5rem + env(safe-area-inset-bottom,0px))}
  .nav-links{padding:.45rem .1rem .2rem}
  .nav-links a{padding-inline:.3rem}
@@ -604,19 +631,16 @@ a,button{-webkit-tap-highlight-color:transparent}
 @media(max-width:520px){
  .wrap{width:min(100% - 1.5rem,var(--content-width))}
  .hero{padding-top:2.25rem}
- .hero h1{font-size:clamp(2.55rem,13vw,3.65rem)}
+ .hero h1{font-size:clamp(2.55rem,12vw,3.65rem);line-height:1.02}
  .hero-prices{margin-top:1rem;padding:.8rem}
- .hero-price-row{font-size:.88rem}
+ .hero-price-row{font-size:var(--text-sm)}
  .hero .actions{display:grid;grid-template-columns:1fr}
  .hero .actions .btn{width:100%}
  .services{gap:.7rem}
  #crown .svc .terminal-action{width:100%}
 }
-@media(min-width:900px){
- .wrap{width:min(100% - 3rem,var(--content-width))}
- .hero{min-height:unset}
-}
-@media(prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+@media(min-width:900px){.wrap{width:min(100% - 3rem,var(--content-width))}.hero{min-height:unset}}
+@media(prefers-reduced-motion:reduce){.btn,.btn:hover{transition:none;transform:none}.hero{scroll-behavior:auto}}
 
 </style>
 </head>
