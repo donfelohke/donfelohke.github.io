@@ -48,18 +48,32 @@ NAKEBUSEN payment (Buy Goods): Till **3511456** · Merchant **FELIX LWOVA**. Pay
 
 **Do not send either version to customers until till ownership/authority, active status and the approved NAKEBUSEN collection arrangement have been confirmed.**
 
-## 3. Recommended website placement
+## 3. Recommended website placement — footer
 
-The existing site is a static, text-first page with WhatsApp enquiry links, English/Kiswahili copy, manual booking confirmation and no payment processor. Keep that architecture.
+Place the payment entry in the **global website footer**, within a compact subsection labelled **Payments**. It should be secondary utility information, not a hero action, primary navigation item, service card, or booking CTA.
 
-Recommended future placement: a compact **Payment** subsection near the existing Connect section, after service scope and quotation information. Do not make it a hero CTA or imply that payment itself books an appointment.
+Recommended footer order:
 
-Proposed public copy after approval:
+1. **NAKEBUSEN** — brand identity and short descriptor.
+2. **Explore** — Crown, Digital and About navigation.
+3. **Contact** — WhatsApp and email.
+4. **Payments** — approved payment instructions or a link to the dedicated payment details section.
 
-> **Payment by M-PESA Buy Goods**  
-> Once your service, amount and timing have been agreed, you can pay using our approved Buy Goods instructions. Confirm the merchant name and amount before authorising payment. Share the M-PESA confirmation with us using your service reference. We verify every payment before confirming receipt.
+Keep the payment subsection visually restrained and text-first, consistent with the existing site. On narrow screens, stack the footer groups in the same order. Do not add a QR image to the footer by default; if a QR is later approved, provide it on a dedicated payment view with a clear amount/reference workflow and accessible text instructions.
 
-Only display the till number and/or QR after the publication gate in section 1 is cleared. Keep the customer enquiry and booking process separate from payment.
+### Footer copy — safe pre-approval version
+
+> **Payments**  
+> Payment instructions are provided after your service and amount have been agreed. Please use only payment details confirmed directly by NAKEBUSEN. We verify payments before confirming receipt.
+
+### Footer copy — publish only after the publication gate is cleared
+
+> **M-PESA Buy Goods**  
+> Till: **3511456**  
+> Merchant: **FELIX LWOVA**  
+> Pay only the agreed amount. Confirm the displayed merchant name before authorising payment, then share your M-PESA confirmation and service reference with NAKEBUSEN.
+
+The till number and merchant identity must remain unpublished until active status, ownership/authority, NAKEBUSEN's collection arrangement and publication approval are confirmed. Keep customer enquiry, booking confirmation and payment as separate steps.
 
 ### Language parity
 
@@ -144,7 +158,7 @@ Security and correctness requirements:
 
 ## 7. Decision
 
-**Recommended now:** Preserve the reusable payment message in this draft and prepare the website placement, but do not expose the till publicly or claim automated payment integration yet.
+**Recommended now:** Preserve the reusable payment message in this draft and prepare the footer placement, but do not expose the till publicly or claim automated payment integration yet. The pre-approval footer copy in section 3 is safe to use without publishing unverified merchant details.
 
 **Recommended later:** Start with manual Buy Goods instructions once ownership and authority are confirmed. Add Daraja only when automated confirmation and reconciliation provide enough operational value to justify a backend and its ongoing support.
 
