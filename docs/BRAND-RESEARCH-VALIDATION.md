@@ -1,55 +1,78 @@
-# NAKEBUSEN Brand Document — Research & Validation
+# NAKEBUSEN — Brand Research and Validation Register
 
-**Date:** 26 October 2026  
-**Type:** INTERPRETATION + source-informed recommendations  
-**Not:** completed competitor audit, customer study, trademark clearance, or full WCAG lab test
+**Version:** M1 · 30 October 2026  
+**Status:** Research scope and evidence limitations  
+**Purpose:** Separate approved brand decisions from claims that still require independent evidence.
 
-## Approved direction (preserve)
+## 1. Approved brand direction
 
-- Master brand: **NAKEBUSEN**  
-- Domains: **Locs • Digital**  
-- Endorsement: **Powered by WARENA**  
-- Human: **@donfelohke · #HisGenjeness**  
-- Signature: **GRACE · GRIT · GLORY**  
-- Site: one master brand, two paths, concise hero, deeper philosophy on About  
-- Tone: clear, warm, professional, culturally grounded  
+- Parent enterprise: **NAKEBUSEN**.
+- Homepage: **Beautiful Roots. Sovereign Systems.**
+- Supporting statement: **Craft, technology and culture rooted in African ingenuity.**
+- Canonical lockup: **NAKEBUSEN Locs ° Powered by WARENA**.
+- Customer paths: **NAKEBUSEN LOCS · CROWN** and **NAKEBUSEN DIGITAL · WARENA**.
+- Governing identity: **GENJE ZA WARENA — THE FIRE OF THE FORMIDABLE.**
+- Commercial boundary: **ONLY NAKEBUSEN TRANSACTS**.
+- Research boundary: IKAI Mirror is research, not a released product.
 
-## Findings
+These are approved brand decisions. They are not, by themselves, evidence of market demand, legal status, linguistic etymology or technical performance.
 
-### 1. Master-brand strategy is appropriate
+## 2. Evidence distinctions
 
-Parent / sub-brand guidance (e.g. institutional brand architecture materials from MIT and Aalto) supports a central brand with clear units. **Recommendation:** keep NAKEBUSEN dominant; do not equal-weight every project logo.
+| Topic | Current position | Evidence still required |
+|---|---|---|
+| NAKEBUSEN meaning | Founder-supplied interpretation: “Beautiful” in Turkana | Independent linguistic review and contextual usage |
+| GENJE ZA WARENA | Adopted brand interpretation: “The Fire of the Formidable” | Do not present as verified etymology without linguistic evidence |
+| LOCS prices | Operator-supplied starting prices | Reconfirm before campaigns and material price changes |
+| DIGITAL capabilities | Defined service areas | Confirm current availability, tools, delivery scope and capacity |
+| Customer demand | Not established by brand documents | Customer interviews, enquiry records and paid conversion evidence |
+| Competitor position | Not a completed competitor audit | Local competitor inventory, service/price comparison and dated evidence |
+| Accessibility | WCAG 2.2 AA target | Contrast measurements, manual keyboard and screen-reader testing |
+| Legal identity | Founder public naming remains provisional | Confirm copyright holder and any required business/legal attribution |
+| Logo system | Typographic lockup approved | No separate emblem geometry or image mark is approved |
 
-### 2. Two journeys need different proof
+## 3. Market validation requirements
 
-Salon-style discovery (services, contact, booking path) informs **Locs**. **Digital** needs capability statements and project evidence when available. Case studies are patterns, not measured conversion proof.
+A future market study should distinguish:
 
-### 3. WhatsApp deserves a prominent role
+1. Verified competitor facts from observations.
+2. Publicly listed prices from quoted or negotiated prices.
+3. Customer statements from actual purchasing behaviour.
+4. Enquiries from confirmed bookings and completed transactions.
+5. Hypotheses from measured results.
 
-Kenya communications and media research contexts identify WhatsApp as a leading platform among measured audiences. **Recommendation:** prominent WhatsApp + alternatives; request ≠ confirmation.
+Do not invent competitor names, customer counts, conversion rates, testimonials or market-share claims.
 
-### 4. Accessibility is mandatory
+## 4. Technical validation requirements
 
-WCAG 2.2 provides testable criteria. **Recommendation:** themes, keyboard, contrast, touch targets, language clarity in brand + web standards.
+For WARENA Systems and DIGITAL:
 
-## Gaps before “finished operational standard”
+- Record actual hardware and software support.
+- Define engagement scope and exclusions.
+- Record source revisions and build inputs for reproducibility claims.
+- Test deployments before describing them as verified.
+- Avoid unsupported uptime, security or enterprise-capacity claims.
 
-| Area | Gap |
-|------|-----|
-| Logo system | Geometry, clear space, files, misuse |
-| Type scale | Exact modular scale file |
-| Verification | Live browser matrix, contrast measures |
-| Governance | Explicit change owners (partially addressed in BRAND-MANUAL §13) |
+For IKAI Mirror:
 
-## Principal sources (orientation)
+- Keep conceptual, prototype and released states distinct.
+- Do not describe conceptual modes as implemented features.
+- Do not imply that research is available for purchase.
 
-- MIT Brand Architecture — parent / unit relationships  
-- Aalto Brand Architecture — master-brand portfolios  
-- W3C WCAG 2.2  
-- Communications Authority of Kenya — publications / audience context  
-- Media Council of Kenya — digital audience context  
-- Local beauty web patterns (e.g. salon booking UX case studies) — pattern only  
+## 5. Principal research references
 
-## Decision
+The earlier research orientation identified these source families for future primary-source review:
 
-Adopt [BRAND-MANUAL.md](./BRAND-MANUAL.md) as the **versioned canonical guide**, keep supporting specs linked, and audit the live site against [BRAND-IMPLEMENTATION-CHECKLIST.md](./BRAND-IMPLEMENTATION-CHECKLIST.md).
+- MIT and Aalto brand architecture materials.
+- W3C WCAG 2.2.
+- Communications Authority of Kenya publications.
+- Media Council of Kenya digital audience research.
+- Local competitor service menus and business listings.
+
+This list is a research starting point, not a citation record or proof that a full study has been completed. Any future publication should include dated sources, methods and limitations.
+
+## 6. Decision
+
+Use BRAND-CANON.md for identity and enterprise boundaries, PUBLIC-FACTS-REGISTER.md for factual publication control, SERVICE-CATALOG.md for services and prices, and BRAND-IMPLEMENTATION-CHECKLIST.md for implementation verification.
+
+**Approved brand direction is not a substitute for independent research.**

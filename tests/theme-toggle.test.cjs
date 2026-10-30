@@ -117,11 +117,11 @@ assert.match(system.themeButton.innerHTML, /M20\.5 15\.5A8\.5/, "system light pr
 
 const language = boot();
 assert.equal(language.root.lang, "en", "English is the default language");
-assert.match(html, /<meta property="og:description" content="Your Beauty ° Your Way\. Natural loc care in Eldoret Town/);
-assert.match(html, /<meta property="og:title" content="NAKEBUSEN · Locs · Powered by WARENA \| Eldoret, Kenya"/);
-assert.match(html, /<meta name="twitter:title" content="NAKEBUSEN · Locs · Powered by WARENA \| Eldoret, Kenya"/);
-assert.match(html, /<meta name="twitter:description" content="Your Beauty ° Your Way\. Loc care in Eldoret from KES 700/);
-assert.match(html, /<title>NAKEBUSEN · Locs · Powered by WARENA \| Eldoret, Kenya/);
+assert.match(html, /<meta property="og:description" content="Craft, technology and culture rooted in African ingenuity\. Professional loc care/);
+assert.match(html, /<meta property="og:title" content="NAKEBUSEN — Beautiful Roots\. Sovereign Systems\."/);
+assert.match(html, /<meta name="twitter:title" content="NAKEBUSEN — Beautiful Roots\. Sovereign Systems\."/);
+assert.match(html, /<meta name="twitter:description" content="Craft, technology and culture rooted in African ingenuity\. Loc care/);
+assert.match(html, /<title>NAKEBUSEN — Beautiful Roots\. Sovereign Systems\.<\/title>/);
 assert.match(language.headerLanguageButton.innerHTML, /<svg class="toggle-icon"/, "English header language toggle uses a globe icon");
 assert.equal(language.headerLanguageButton.attrs["aria-label"], "Switch language to Kiswahili", "English toggle announces its action in English");
 assert.match(language.whatsappLinks[0].href, /I%20am%20enquiring%20about%20a%20loc%20service/, "English loc enquiry has an English prefilled message");

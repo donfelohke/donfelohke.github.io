@@ -1,88 +1,132 @@
-# NAKEBUSEN Master Implementation Brief
+# NAKEBUSEN — Master Implementation Brief
 
-**Version:** 1.0  
-**Date:** 27 October 2026  
-**Status:** Approved direction; implementation and deployment must be verified independently.
+**Document ID:** NB-MIB-01  
+**Version:** M1 · 30 October 2026  
+**Status:** Approved direction · implementation subject to verification  
+**Authority:** BRAND-CANON.md · BRAND-MANUAL.md · PUBLIC-FACTS-REGISTER.md
 
-## Master direction
+## 1. Master direction
 
-**Liquid Glass Terminal + Editorial Hybrid**  
-**Optimisation:** balanced across conversion, brand identity and performance.
+**Beautiful Roots. Sovereign Systems.**
 
-NAKEBUSEN presents beauty and technology as two distinct practices under one coherent identity. Editorial typography and tactile warm materials lead the Locs experience. Forest-green terminal surfaces and restrained reflective teal distinguish NAKEBUSEN Digital, powered by WARENA. Glass is a functional layer for navigation and transient controls, not a coating for every surface.
+**Craft, technology and culture rooted in African ingenuity.**
 
-## Canonical content
+NAKEBUSEN brings together professional loc care and practical technology services in Eldoret Town, Kenya. It is one enterprise with two clear customer-facing paths: LOCS · CROWN and DIGITAL · WARENA.
 
-- Brand: **NAKEBUSEN**
-- Tagline: **Your Beauty ° Your Way.**
-- Descriptor: **NAKEBUSEN · Locs · Powered by WARENA**
-- Location: **Eldoret Town / Karibu Mdosi · Kenya**
-- Founder identity: **@donfelohke · #HisGenjeness**
-- Primary CTA: **Enquire about loc care**
-- Secondary CTA: **Explore Digital**
-- Required disclosure: **An enquiry is not a confirmed booking.**
-- No braiding service should be advertised.
+**ONLY NAKEBUSEN TRANSACTS.**
 
-### Locs services and prices
+GENJE ZA WARENA is the governing identity expression, not a separate commercial division. WARENA Systems is the technical identity within NAKEBUSEN DIGITAL. IKAI Mirror remains research, not a released product.
 
-| Service | Price |
+## 2. Canonical identity
+
+**Exact lockup:** NAKEBUSEN Locs ° Powered by WARENA  
+**Supporting signature:** @donfelohke · #HisGenjeness
+
+Preserve the degree sign `°`. Do not substitute a bullet or middle dot.
+
+**Founder public treatment:** Felix Lwova — Don Feloh, provisional. Do not globally replace the founder name. Copyright rights-holder remains subject to confirmation.
+
+## 3. Canonical homepage content
+
+**H1:** Beautiful Roots. Sovereign Systems.
+
+**Supporting statement:** Craft, technology and culture rooted in African ingenuity.
+
+**Introduction:** NAKEBUSEN brings together professional loc care and practical technology services in Eldoret Town, Kenya.
+
+**Philosophy:** We believe human capability, cultural heritage and technical ingenuity belong together.
+
+**Identity expression:** GENJE ZA WARENA — THE FIRE OF THE FORMIDABLE. This is an adopted brand interpretation, not verified linguistic etymology.
+
+**Community:** Watu ndio mali. Heshima idumu.
+
+## 4. LOCS services and prices
+
+All prices are starting prices in Kenyan shillings.
+
+| Service | Starting price |
 |---|---:|
 | Retouch & Styling | KES 700 |
-| Sisterlocs Retie | KES 1,500 |
+| LOCS Retie | KES 1,500 |
 | Artificial Locs Installation | KES 3,500 |
 
-Keep prices visible, legible, and unchanged. The enquiry flow must not imply instant booking or guaranteed availability.
+Final cost depends on service scope, loc condition and materials. No braiding or shaving. Do not promise unverified home visits or appointment availability. An enquiry is not a confirmed booking.
 
-## Visual tokens
+Primary enquiry: WhatsApp. Secondary: telephone.
 
-- Charcoal: `#111111`
-- Forest green: `#033500`
-- Warm ivory: `#F2EFEA`
-- Terracotta: `#E2725B`
-- Ochre/gold: `#D4AF37`
-- Reflective teal: `#79D7D2`
+## 5. DIGITAL service areas
 
-Typography: Cormorant Garamond for expressive display headings, Inter/system sans-serif for body and controls, JetBrains Mono for restrained technical metadata. Do not require remote font or image requests for the page to remain usable.
+Practical computing and infrastructure, including:
 
-## Component specification
+- GNU/Linux installation, administration and troubleshooting.
+- Computer diagnostics, recovery and maintenance.
+- Wi-Fi, router configuration and LAN networking.
+- Small-office infrastructure and servers.
+- Learning-space systems.
+- Local-first and offline-capable environments.
+- Reproducible development environments.
 
-1. **Header/navigation:** compact floating glass-terminal capsule; preserve brand and desktop links; retain icon-based theme/language/menu controls. Glass should have a solid fallback.
-2. **Hero:** strong editorial type, clear Eldoret location, loc-care CTA first and Digital CTA second. The hero must communicate service and price quickly.
-3. **Locs cards:** separate warm terracotta-tinted, mostly opaque cards; show each exact service price and a direct enquiry route.
-4. **Digital cards:** distinct forest-green terminal modules with teal accents; describe actual GNU/Linux, computer systems, networking and local-first infrastructure services.
-5. **Founder/craft:** support trust and identity without outranking the primary service journey.
-6. **Mobile dock:** Locs, Digital, Connect, More; stable anchors, active section state, safe-area spacing and dismissible More panel.
-7. **Footer:** modular Locs, Digital and Connect surfaces; verified contact links; no single oversized glass slab and no dock overlap.
+These are capability areas, not a guarantee of immediate availability. Scope, feasibility, deliverables, pricing and support must be agreed per engagement.
 
-## Interaction and performance
+## 6. Approved visual tokens
 
-- Keep the existing static-first GitHub Pages architecture; avoid adding a framework for visual effects.
-- Use semantic HTML, stable section IDs, valid anchors, minimal JavaScript and accessible control names.
-- Support keyboard focus, reduced motion and reduced transparency. Provide opaque fallbacks when backdrop filtering is unsupported or disabled.
-- Glass is reserved for navigation and transient controls; long-form content, service cards and footer panels remain opaque or lightly tinted.
-- Avoid excessive blur, decorative animation, external dependencies and unnecessary image payloads.
-- Maintain working WhatsApp, phone and email destinations; do not invent or silently replace contact links.
+| Token | Hex |
+|---|---|
+| Ink | `#111111` |
+| Ivory | `#F2EFEA` |
+| Ochre | `#D4AF37` |
+| Terracotta | `#E2725B` |
+| Forest | `#033500` |
+| Blue | `#3A6D8C` |
 
-## Acceptance criteria
+Typography:
+- Cormorant Garamond / Georgia fallback for editorial headings.
+- Inter / system sans-serif fallback for body and controls.
+- JetBrains Mono / system monospace fallback for technical labels.
 
-### Content
-- All three service prices remain exact.
-- Eldoret Town / Karibu Mdosi is visible.
-- The enquiry-not-booking disclosure remains visible.
-- Locs and Digital remain clearly distinct; no braiding is advertised.
+No external font CDN. Self-hosted fonts require verified licences.
 
-### Design
-- Editorial hero prioritises loc-care conversion.
-- Terracotta/ochre distinguishes Locs; forest green/teal distinguishes Digital.
-- Glass is restrained to navigation/transient controls.
-- Light and dark themes remain readable.
+## 7. Design and component rules
 
-### Accessibility and QA
-- Check responsive layout at 320, 360, 390 and 430 CSS px, landscape and desktop.
-- Check keyboard operation, visible focus, screen-reader labels, contrast, safe areas and no horizontal overflow.
-- Verify prices, language/theme controls, mobile menu, active navigation, and all contact links.
-- Run static and browser UI checks. Verify the actual GitHub Pages deployment separately after merge; passing pull-request checks does not prove deployment.
+- Editorial, text-first composition.
+- Functional interface icons are permitted.
+- Decorative artwork, ornamental gradients, excessive blur and unnecessary visual effects are excluded.
+- Genuine LOCS portfolio photography is permitted only with recorded client permission.
+- Keep service information and prices prominent.
+- Preserve the current static single-page architecture and existing anchors unless a separately approved route migration is prepared.
+- Preserve working WhatsApp, telephone, email, theme, language and navigation controls.
+- Keep the mobile quick-navigation usable without obscuring content or keyboard focus.
+- No unnecessary tracking, advertising profiles or external dependencies.
 
-## Git workflow
+## 8. Accessibility and performance
 
-Implement on a feature branch, review the diff, run checks, inspect the deployed page after merge, and report each state accurately. Never claim a commit, merge, or live deployment without verifying it.
+Target WCAG 2.2 AA.
+
+- Semantic HTML and one primary H1.
+- Skip link, logical headings and visible keyboard focus.
+- Accessible control names and state.
+- Escape closes open navigation panels and restores focus.
+- Respect reduced-motion preferences.
+- Test actual colour pairings in light and dark themes.
+- Reflow at 320, 360, 390, 430, 760 and 1024 CSS px, plus desktop.
+- Preserve progressive enhancement and avoid unnecessary scripts.
+
+## 9. Verification and release
+
+Acceptance requires:
+- Approved copy and service prices match the governing documents.
+- Canonical lockup and palette are exact.
+- English and Kiswahili content are aligned and reviewed.
+- Navigation, themes, language and contact destinations work.
+- No horizontal overflow at the required viewports.
+- Static HTML, inline JavaScript and browser UI checks pass.
+- Manual keyboard and screen-reader review is recorded.
+- Actual GitHub Pages deployment is checked separately after merge.
+
+A successful pull-request workflow is not proof of live deployment or full WCAG conformance.
+
+## 10. Change control
+
+Use a feature branch and reviewed pull request for material changes. Record the exact commit and test evidence. Keep specification, implementation, testing, verification and deployment distinct.
+
+**Governing principle:** Preserve what works. Reconcile what conflicts. Verify what changes.

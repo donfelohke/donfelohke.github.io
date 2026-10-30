@@ -1,82 +1,88 @@
-# NAKEBUSEN navigation — canonical structure
+# NAKEBUSEN — Navigation and Information Architecture
 
-**Status:** Proposed implementation baseline · 2026-10-27  
-**Implementation source:** `index.html`  
-**Contact and price authority:** `PUBLIC-FACTS-REGISTER.md`, `SERVICE-CATALOG.md`
+**Document ID:** NB-NS-01  
+**Version:** M1 · 30 October 2026  
+**Status:** Approved single-page information architecture  
+**Implementation source:** index.html
 
-## Design decision
+## 1. Purpose
 
-- **Header D:** compact sticky top bar plus a persistent floating mobile dock.
-- **Footer:** minimal, in normal document flow.
-- **Dock:** retained on mobile and hidden on desktop.
-- **Visual system:** text-first glass-terminal styling; no new external assets, tracking, or font dependencies.
-- **Commercial priority:** Locs first; Digital is a secondary path powered by WARENA.
-- The dock supplements the header; it does not replace the main navigation or the page's semantic section links.
+Make the two commercial paths obvious while preserving a concise single-page website and its existing section anchors.
 
-## Header
+Do not introduce new routes or a booking engine as part of this change.
 
-| Position | Element | Behaviour |
-|---|---|---|
-| Left | **NAKEBUSEN** | Home anchor `#top` |
-| Under brand | Locs · Powered by WARENA | Brand descriptor |
-| Primary links | **Locs · Digital · @donfeloh · Connect** | `#crown`, `#code`, `#founder`, `#connect` |
-| Utility | WhatsApp | Direct enquiry to the approved number |
-| Utility | Language | English / Kiswahili |
-| Utility | Theme | Light / dark; respect system preference until visitor chooses |
-| Utility | Menu | Expands/collapses the mobile primary navigation |
+## 2. Primary navigation
 
-## Responsive behaviour
+- Home — `#top`
+- LOCS · CROWN — `#crown`
+- DIGITAL · WARENA — `#code`
+- About — `#founder`
+- Contact — `#connect`
 
-- Desktop: brand, four primary links and utility controls share one row where space permits.
-- Mobile: compact sticky header; primary links are available through the menu.
-- Mobile floating dock: **Locs · Digital · @donfeloh · More**.
-- Dock is hidden at desktop widths. Account for safe-area insets and keep page content and keyboard focus visible above the dock.
-- The **More** panel is for secondary contact and source links: WhatsApp, telephone, email, GitHub / Source, plus the brand signature. Do not duplicate the dock's primary section links in this panel.
-- Anchor targets must land below the sticky header.
-- Controls should provide at least 44 × 44 CSS-pixel hit areas where practical, visible keyboard focus, descriptive accessible names and accurate expanded/pressed state.
-- Include a skip-to-content link, support keyboard operation, and respect reduced-motion preferences.
-- The page must remain usable without JavaScript; static CTA copy must not imply that an appointment is confirmed.
+The service-path cards may link to the corresponding LOCS and DIGITAL sections.
 
-## Minimal footer
+## 3. Page sequence
 
-The footer remains in normal document flow and uses three compact content groups where the viewport allows:
+1. Hero and enterprise introduction.
+2. Two service-path cards.
+3. LOCS service catalogue and starting prices.
+4. DIGITAL service areas and enquiry.
+5. Philosophy and GENJE ZA WARENA.
+6. About / founder.
+7. Community and contact.
+8. Footer.
 
-1. **Brand:** NAKEBUSEN, Locs · Powered by WARENA, “Your Beauty ° Your Way.”
-2. **Explore:** Locs, Digital, @donfeloh and Connect links.
-3. **Connect:** WhatsApp, telephone, email and GitHub / Source.
-4. **Signature:** GRACE · GRIT · GLORY; @donfelohke · #HisGenjeness.
-5. **Bottom row:** © 2026 Felix Lwova · Don Feloh, source link and language control.
+The philosophy and community content should not compete with the two customer-facing service paths.
 
-Keep the footer visually restrained. Do not add social/resource lists, a second full service description, fixed footer behaviour, or new destinations without a separate design decision.
+## 4. Header and controls
 
-## Approved public contacts
+- Exact typographic lockup: **NAKEBUSEN Locs ° Powered by WARENA**.
+- Sticky header with primary navigation.
+- WhatsApp enquiry action.
+- English / Kiswahili control.
+- Light / dark theme control.
+- Accessible mobile menu.
 
-- WhatsApp / telephone: **+254 719 635 415**; local display **0719 635 415**.
-- WhatsApp URI: `https://wa.me/254719635415`.
-- Email: **mela9ine@proton.me**.
-- Location: **Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya**.
-- Do not add a street address, map pin, business hours, booking calendar or alternative contact without confirmation.
+The current mobile quick-navigation dock and More panel are existing components. Preserve them during this content update unless a separate approved design change removes them. They supplement, not replace, the primary navigation.
 
-## Language and transaction boundaries
+## 5. Mobile and keyboard behaviour
 
-- English is the default; Kiswahili is available through the language toggle.
-- Both languages must preserve service scope, starting prices and the enquiry disclaimer.
-- A WhatsApp message is an enquiry, not a confirmed booking.
-- The header CTA fallback must say **“Enquire about loc care”** even before JavaScript runs; do not use “Book” wording that implies a confirmed appointment.
-- Approved starting prices: **Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Installation — KES 3,500**.
-- Technology services are scoped and quoted per engagement.
-- **ONLY NAKEBUSEN TRANSACTS.** WARENA powers Digital; IKAI remains research / WIP; GENJE remains a creative practice identity.
+- Menu button exposes accurate `aria-expanded` and `aria-controls`.
+- Menu is keyboard operable.
+- Escape closes the mobile menu and returns focus to its toggle.
+- Selecting a navigation destination closes the mobile menu.
+- The More panel closes on Escape and restores focus to its toggle.
+- Anchor targets must not be hidden beneath the sticky header.
+- Floating navigation must not obscure page content, footer links or keyboard focus.
+- Respect reduced-motion preferences and safe-area insets.
 
-## Release checklist
+## 6. Footer
 
-- [ ] Test widths 320, 360, 390, 430, 768 and desktop for collisions and horizontal overflow.
-- [ ] Confirm the floating dock does not cover content, footer links or keyboard focus.
-- [ ] Verify More panel opens/closes by touch and keyboard; expanded state and focus handling remain correct.
-- [ ] Verify WhatsApp, telephone, email and source destinations.
-- [ ] Verify English / Kiswahili copy and accessible labels.
-- [ ] Verify light, dark and system theme behaviour.
-- [ ] Verify section anchors land below the sticky header.
-- [ ] Verify reduced motion, visible focus and contrast.
-- [ ] Confirm prices, contacts, location wording and enquiry-not-booking boundary remain correct.
-- [ ] Run repository checks and review their results.
-- [ ] Validate the deployed page separately; a successful commit or workflow is not browser proof.
+Keep the footer in normal document flow.
+
+Include:
+- Brand lockup and supporting signature.
+- LOCS and DIGITAL links.
+- WhatsApp, telephone and email.
+- Source repository.
+- Language control.
+- Existing founder/copyright treatment until rights-holder confirmation.
+
+## 7. Commercial and factual boundaries
+
+- ONLY NAKEBUSEN TRANSACTS.
+- WhatsApp is an enquiry, not a confirmed booking.
+- LOCS starting prices: Retouch & Styling KES 700; LOCS Retie KES 1,500; Artificial Locs Installation KES 3,500.
+- DIGITAL is scoped and quoted per engagement.
+- GENJE is governing identity, not a separate checkout.
+- WARENA Systems is within DIGITAL.
+- IKAI is research, not a released product.
+- Do not invent street address, map pin or opening hours.
+
+## 8. Future routes
+
+Separate routes such as `/locs/`, `/digital/`, `/about/`, `/contact/` and `/research/ikai/` are deferred. The current approved implementation is a single-page static site with section anchors. Any route migration requires a separate route inventory and redirect plan.
+
+## 9. Verification
+
+Test desktop and mobile navigation, keyboard focus, Escape behaviour, anchor offsets, dock overlap, both languages, both themes and all contact destinations.

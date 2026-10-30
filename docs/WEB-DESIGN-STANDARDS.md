@@ -1,67 +1,92 @@
-# Web design standards — donfelohke.github.io
+# NAKEBUSEN — Web Design Standards
 
-**Status:** LIVE · aligned with `index.html` and `docs/NAV-STRUCTURE.md` · 27 October 2026
+**Document ID:** NB-WDS-01  
+**Version:** M1 · 30 October 2026  
+**Status:** Approved design specification · browser verification pending
 
-## Architecture
+## 1. Design direction
 
-- Single static `index.html` preferred  
-- No required CDN, analytics, or external fonts  
-- **No embedded graphics** (images, SVG art, video, canvas, CSS image backgrounds, graphic favicons, OG images)  
-- Gallery: text link only  
+Ghetto-Luxe Dark Academia × African Desert Editorial × Silicon Savannah Neo-naturalism.
 
-## Information architecture
+The interface should feel grounded, editorial, culturally aware and technically literate. Avoid generic luxury/salon styling, default Rasta palettes, AI-neon effects, excessive blur, ornamental gradients and decorative animation.
 
-1. Hero — beauty-first commercial offer  
-2. Path cards — Locs · Digital · About  
-3. LOCS catalogue + prices  
-4. DIGITAL + WARENA  
-5. GENJE / founder / IKAI (WIP)  
-6. Connect + footer  
+## 2. Approved palette
 
-## Header
+| Token | Hex |
+|---|---|
+| Ink | `#111111` |
+| Ivory | `#F2EFEA` |
+| Ochre | `#D4AF37` |
+| Terracotta | `#E2725B` |
+| Forest | `#033500` |
+| Blue | `#3A6D8C` |
 
-- Left: NAKEBUSEN · Locs · Powered by WARENA  
-- Right: WhatsApp · Language · Theme  
-- Links: Locs (`#crown`) · Digital (`#code`) · @donfeloh (`#founder`) · Connect (`#connect`)  
+Use alpha transparency only for subtle borders and surface separation. Do not introduce unrelated palette colours. Test every actual text and control pairing; accents are not automatically valid body-text colours.
 
-## Language
+## 3. Typography
 
-- Default **English** in HTML source (`lang`, title, meta, body fallback)  
-- Kiswahili via toggle; persist preference; independent of theme  
-- Header and footer controls stay in sync if both exist  
+- Editorial: Cormorant Garamond, Georgia fallback.
+- Body/interface: Inter, system sans-serif fallback.
+- Technical labels: JetBrains Mono, system monospace fallback.
 
-## Theme
+No external font CDN. Self-host only with verified licences. If no local font files are present, system fallbacks are the actual rendered fonts.
 
-- Light / dark · `localStorage` key `nakebusen-theme`  
-- Respect `prefers-color-scheme` when unset  
-- Text-only control labels; icon artwork may be compact but interactive hit areas remain at least 44 × 44 CSS pixels  
+## 4. Graphics and imagery
 
-## Tokens
+- Text-first layout.
+- Functional interface icons permitted.
+- Decorative illustrations and unnecessary SVG artwork excluded.
+- Genuine LOCS photography permitted only with client permission.
+- Never represent stock or generated images as client results.
+- No unnecessary third-party scripts or tracking.
+- No media is required for the page to communicate its services.
 
-| Token | Value |
-|-------|--------|
-| Forest canvas / canopy | `#14251D` / `#1D3428` |
-| Warm ivory / sage | `#F3EDE2` / `#A9BBA9` |
-| Terracotta / ochre | `#C76F4A` / `#D6AD54` |
-| Light-theme muted text | `#46554A` |
-| Focus | Theme-aware high-contrast outline; validate against adjacent surfaces |
-| Serif / sans / mono | Georgia stack · system-ui · ui-monospace |
+## 5. Layout and navigation
 
-## Accessibility
+- Single-page static HTML is the current architecture.
+- Preserve semantic anchors: `#top`, `#crown`, `#code`, `#philosophy`, `#founder`, `#connect`.
+- Sticky header and existing mobile quick-navigation must remain accessible.
+- Keep the two service paths more prominent than research or founder content.
+- Footer remains in normal document flow.
 
-- One `h1`  
-- Visible focus  
-- Keyboard operable controls  
-- Contrast for text and controls  
-- Reflow without horizontal scroll at 320 CSS px  
-- Sticky header: adequate `scroll-margin` on sections  
+## 6. Responsive requirements
 
-## Release gates
+Test at 320, 360, 390, 430, 760, 1024 CSS px and wide desktop.
 
-Static CI ≠ browser proof. Before calling a release complete:
+- No unintended horizontal scrolling.
+- No clipped lockup or navigation.
+- Logical content order.
+- Readable service and price information.
+- Touch targets approximately 44 × 44 CSS px where practical.
+- Floating navigation must not cover content or keyboard focus.
 
-- 320, 360, 390, 430, 760 CSS px + desktop  
-- Both themes · both languages · WhatsApp on a real device  
-- Deployed Pages matches reviewed commit  
+## 7. Accessibility
 
-See [WEBCOPY.md](./WEBCOPY.md) · [PR-CONSOLIDATION-45-46-47.md](./PR-CONSOLIDATION-45-46-47.md)
+Target WCAG 2.2 AA.
+
+- Semantic landmarks and one H1.
+- Skip-to-content link.
+- Logical heading structure.
+- Visible keyboard focus.
+- Accessible names and state for controls.
+- Keyboard-operable menus and panels.
+- Escape handling and focus restoration.
+- Text and interface contrast tested in both themes.
+- Correct language declaration.
+- Reviewed translations.
+- Reduced-motion support.
+- Reflow and zoom testing.
+
+Automated audits are not a substitute for manual keyboard and screen-reader testing.
+
+## 8. Performance and privacy
+
+- No required CDN or external font service.
+- Minimise JavaScript and third-party dependencies.
+- Preserve progressive enhancement.
+- Avoid unnecessary tracking and advertising profiles.
+- Do not promise privacy or local-first guarantees beyond the actual implementation.
+
+## 9. Release gate
+
+A successful CI workflow is not browser proof. Verify the reviewed commit on the deployed site, test both themes and languages, check mobile layouts, validate links and record accessibility findings.
