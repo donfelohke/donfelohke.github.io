@@ -81,7 +81,7 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
   };
   const context = {
     document,
-    window: { matchMedia() { return media; }, localStorage: storage },
+    window: { matchMedia() { return media; }, localStorage: storage, addEventListener() {} },
     localStorage: storage,
     console,
   };
