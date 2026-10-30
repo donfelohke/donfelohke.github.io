@@ -82,7 +82,18 @@ test("integrated hero keeps approved M1 copy, starting prices, and enquiry bound
   await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Ufundi, teknolojia na utamaduni wenye mizizi katika ubunifu wa Kiafrika.");
 });
 
-\ntest("mobile menu closes on Escape and restores focus", async ({ page }) => {\n  await page.setViewportSize({ width: 390, height: 844 });\n  await page.goto(pageUrl);\n  const toggle = page.locator("#mobile-menu-toggle");\n  await toggle.click();\n  await expect(toggle).toHaveAttribute("aria-expanded", "true");\n  await page.keyboard.press("Escape");\n  await expect(toggle).toHaveAttribute("aria-expanded", "false");\n  await expect(toggle).toBeFocused();\n});\n
+
+test("mobile menu closes on Escape and restores focus", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(pageUrl);
+  const toggle = page.locator("#mobile-menu-toggle");
+  await toggle.click();
+  await expect(toggle).toHaveAttribute("aria-expanded", "true");
+  await page.keyboard.press("Escape");
+  await expect(toggle).toHaveAttribute("aria-expanded", "false");
+  await expect(toggle).toBeFocused();
+});
+
 test("deployed GitHub Pages homepage is reachable and readable on mobile", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   const response = await page.goto("https://donfelohke.github.io/", {
