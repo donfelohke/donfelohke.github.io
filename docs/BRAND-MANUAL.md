@@ -1,249 +1,159 @@
 # NAKEBUSEN Brand Manual
 
-**Version:** 2026-10-26  
-**Status:** LIVE architecture · PARTIAL visual specification · not a finished logo system  
-**Owner:** Felix Lwova · Don Feloh · @donfelohke  
-**Scope:** Public brand for NAKEBUSEN Locs • Digital  
+**Document ID:** NB-BM-01  
+**Version:** M1 · 30 October 2026  
+**Status:** Approved brand specification · implementation verification pending  
+**Brand authority:** @donfelohke  
+**Scope:** NAKEBUSEN public identity, LOCS, DIGITAL, WARENA and related research
 
-Related: [BRAND-CANON.md](./BRAND-CANON.md) · [WEBCOPY.md](./WEBCOPY.md) · [SERVICE-CATALOG.md](./SERVICE-CATALOG.md) · [WEB-DESIGN-STANDARDS.md](./WEB-DESIGN-STANDARDS.md) · [NAV-STRUCTURE.md](./NAV-STRUCTURE.md) · [BRAND-RESEARCH-VALIDATION.md](./BRAND-RESEARCH-VALIDATION.md)
+## 1. Brand foundation
 
----
+**Purpose:** Bring professional loc care and practical technology together through human capability, cultural heritage and technical ingenuity.
 
-## 01. Brand foundation
+**Positioning:** One grounded enterprise with two clear customer paths: LOCS · CROWN and DIGITAL · WARENA.
 
-| Element | Statement |
-|---------|-----------|
-| **Purpose** | Make personal care and practical technology serve real life in Kenya — with the human remaining the author. |
-| **Positioning** | Local beauty craft + maintainable systems under one grounded enterprise. |
-| **Promise** | Clear services, honest prices, direct confirmation; systems you can understand and keep. |
-| **Audience (priority)** | 1) Loc-care clients in Eldoret Town / Karibu Mdosi · 2) Digital/systems clients · 3) Research/creative collaborators |
-| **Differentiators** | Beauty and systems under one operator; WhatsApp-first contact; no fake SaaS theatre; ONLY NAKEBUSEN TRANSACTS |
+**Homepage headline:** Beautiful Roots. Sovereign Systems.
 
-**Tone:** Clear, warm, professional, culturally grounded. Not generic luxury; not startup hype.
+**Supporting statement:** Craft, technology and culture rooted in African ingenuity.
 
----
+**Public introduction:** NAKEBUSEN brings together professional loc care and practical technology services in Eldoret Town, Kenya.
 
-## 02. Brand architecture
+**Tone:** Clear, direct, warm, professional and culturally grounded. Avoid generic luxury language, startup hype and unsupported claims.
+
+## 2. Enterprise architecture
 
 ```text
-                    FELOH (human author / practice)
-                              |
-                         NAKEBUSEN
-                    (master · only transacts)
-                     /              \
-                  LOCS            DIGITAL
-                 (GRACE)      (powered by WARENA / GRIT)
-                                    |
-                              IKAI (research / WIP)
+NAKEBUSEN
+└── GENJE ZA WARENA
+    ├── NAKEBUSEN LOCS · CROWN
+    └── NAKEBUSEN DIGITAL · WARENA
+        ├── WARENA Systems
+        └── IKAI Mirror (Research)
 
-Public signature: @donfelohke · #HisGenjeness (GLORY)
-Philosophy line: GRACE · GRIT · GLORY
+by @donfelohke · #HisGenjeness
 ```
 
-| Entity | Role | Public treatment |
-|--------|------|------------------|
-| **NAKEBUSEN** | Master brand · commercial home | Dominant wordmark |
-| **Locs** | Service domain | Equal path with Digital under NAKEBUSEN |
-| **Digital** | Service domain | Endorsed: *Powered by WARENA* |
-| **WARENA** | Technical identity | Endorsement, not a second consumer logo race |
-| **@donfelohke / #HisGenjeness** | Human identity | Footer / About / social |
-| **IKAI** | Reflective-compute research | Labelled WIP · never sold as product |
-| **GENJE** | Cultural / creative practice | Supporting context |
+**ONLY NAKEBUSEN TRANSACTS.**
 
-**Rule:** Do not give every project an equally prominent competing logo.
+- NAKEBUSEN is the parent enterprise and only customer-facing commercial entity.
+- LOCS · CROWN is the loc-care practice.
+- DIGITAL · WARENA is the technical-services practice.
+- GENJE ZA WARENA is the governing identity expression, not a separate commercial division.
+- WARENA Systems is the technical identity within NAKEBUSEN DIGITAL, not a separate checkout destination.
+- IKAI is research, not a released product or a product checkout path.
 
----
+## 3. Canonical lockup
 
-## 03. Naming and language
+**NAKEBUSEN Locs ° Powered by WARENA**
 
-### Canonical lockup (exact order)
+Preserve the degree sign `°` exactly. Do not substitute a bullet, middle dot or hyphen.
 
-```text
-NAKEBUSEN Locs • Digital
-Powered by WARENA
-@donfelohke · #HisGenjeness
-```
+Supporting signature: `@donfelohke · #HisGenjeness`.
 
-Optional signature line: `GRACE · GRIT · GLORY`
+The lockup is typographic. Do not invent or imply an approved emblem or logo asset.
 
-### Spelling
+## 4. Colour system
 
-- **NAKEBUSEN** — always capitals in brand lockups  
-- **Locs / Digital** — service domain labels  
-- **WARENA** — capitals  
-- **#HisGenjeness** — exact hashtag form  
-- Prefer **Locs • Digital** (bullet) in lockups; avoid inventing “Locs & Tech Co.”
+| Name | Hex | Use |
+|---|---|---|
+| Ink | `#111111` | Primary text and dark surfaces |
+| Ivory | `#F2EFEA` | Light surfaces and text on dark surfaces |
+| Ochre | `#D4AF37` | Accent, rules and highlights |
+| Terracotta | `#E2725B` | Accent and restrained emphasis |
+| Forest | `#033500` | Deep green surfaces |
+| Blue | `#3A6D8C` | Secondary accent and selected interface elements |
 
-### Language policy
+The six colours are the approved brand palette. Alpha transparency may be used for borders and subtle surface separation. Do not introduce unrelated colour families.
 
-- **English default** for global HTML, metadata, README  
-- **Kiswahili** via accessible toggle; same prices, boundaries, contacts  
-- Mark unreviewed translations as drafts  
+Colour approval does not establish accessibility. Test actual foreground/background combinations; do not use Ochre or Terracotta as small body text on Ivory unless measured contrast passes.
 
-### Forbidden claims
+## 5. Typography
 
-- Enquiry = confirmed booking  
-- IKAI as released product  
-- Invented clients, metrics, testimonials  
-- Braiding / unverified home-visit as advertised promises (unless service register is deliberately updated)  
+- Editorial headings: Cormorant Garamond, with Georgia/serif fallback.
+- Body and interface: Inter, with system sans-serif fallback.
+- Technical labels: JetBrains Mono, with system monospace fallback.
 
----
+No external font CDN. Self-hosted font files may be used only after their files and licences are verified. Until then, use the declared system fallbacks; do not claim that a font is loaded when it is not.
 
-## 04. Logo system
+## 6. Text-first graphics policy
 
-**Status: NEEDS SPECIFICATION**
+- Functional interface icons are permitted.
+- Decorative illustrations, unnecessary SVG artwork, ornamental gradients, excessive blur and visual effects are excluded.
+- Genuine LOCS portfolio photography may be used when the work is authentic and the required client permission is recorded.
+- Do not use stock or generated imagery as evidence of client work.
+- Keep the interface readable without decorative media or optional scripts.
+- Avoid unnecessary third-party scripts, tracking and external dependencies.
 
-Current public site is **text-first** (no embedded graphics). Wordmark is typographic: **NAKEBUSEN** + subline.
+## 7. Public content
 
-| Item | Status |
-|------|--------|
-| Primary wordmark (text) | LIVE on site |
-| SVG / PNG logo files | NOT established in this manual |
-| Clear space / min size | NOT specified |
-| Misuse examples | NOT specified |
-| Emblem candidates (e.g. W / wolf studies) | RESEARCH only · not approved marks |
+### LOCS · CROWN
 
-Until logo assets are approved and versioned, use the **typographic lockup** only.
+Services and approved starting prices:
 
----
+| Service | Starting price |
+|---|---:|
+| Retouch & Styling | KES 700 |
+| LOCS Retie | KES 1,500 |
+| Artificial Locs Installation | KES 3,500 |
 
-## 05. Colour system
+Prices are starting points. Final cost depends on service scope, loc condition and materials. No braiding or shaving. Do not promise unverified home visits or appointment availability.
 
-| Token | Hex | Role |
-|-------|-----|------|
-| INK | `#111111` | Primary text / fills |
-| IVORY / PAPER | `#F2EFEA` | Background light |
-| OCHRE GOLD | `#D4AF37` | Accent rule / highlights |
-| TERRACOTTA | `#E2725B` | Focus / emphasis |
-| DARK SURFACE | `#171715` | Dark theme paper |
-| MUTED (light) | `#625F59` | Secondary text |
-| MUTED (dark) | `#C1BCB4` | Secondary text dark |
+Primary enquiry: WhatsApp. Secondary: telephone.
 
-**Requirements:** Maintain readable contrast for body text and controls in **both** themes. Gold is accent, not body text on ivory without contrast check.
+### DIGITAL · WARENA
 
----
+Approved homepage description:
 
-## 06. Typography
+Practical computing and infrastructure, including GNU/Linux, computer maintenance, networking and locally controlled computing systems. Services are scoped per engagement.
 
-| Role | Stack | Notes |
-|------|-------|--------|
-| Editorial / headings | Georgia, Times New Roman, serif | Brand voice |
-| UI / body | system-ui, Segoe UI, Roboto, sans-serif | No required webfont CDN |
-| Mono / controls | ui-monospace, Cascadia Code, monospace | Labels, prices, toggles |
+Do not publish unsupported certifications, fixed prices, warranties, service-level agreements, security guarantees or availability claims.
 
-**Status:** Exact modular type scale (rem ladder) still to be frozen in a tokens file. Current site uses clamp for H1/H2.
+## 8. Philosophy and identity language
 
----
+**We believe human capability, cultural heritage and technical ingenuity belong together.**
 
-## 07. Photography and graphics
+**The root becomes the runtime.**
 
-| Rule | Detail |
-|------|--------|
-| Public website | **No embedded graphics** (images, SVG art, video, canvas, graphic favicons, OG images) |
-| Gallery | Separate repo; **text links only** from the site |
-| Evidence | Real work only with permission; never pass stock/AI as client results |
-| Future imagery | Prefer natural light, honest craft, Eldoret context when assets are approved |
+**GENJE ZA WARENA — THE FIRE OF THE FORMIDABLE.**
 
----
+The GENJE expression is an adopted brand interpretation, not verified linguistic etymology.
 
-## 08. Voice and messaging
+Community value: **Watu ndio mali. Heshima idumu.**
 
-### Hierarchy
+The adopted brand meaning of NAKEBUSEN is “Beautiful” in Turkana, as supplied by the founder; formal linguistic verification remains open. Do not present either interpretation as independently verified linguistic research.
 
-1. What the visitor can book or enquire about  
-2. Clear price / scope boundary  
-3. Contact (WhatsApp + alternatives)  
-4. Philosophy (GRACE · GRIT · GLORY) on deeper sections / About  
+## 9. Founder and attribution
 
-### Approved hero direction
+The current public About treatment remains **Felix Lwova — Don Feloh**, provisional. Technical contexts may use Feloh Warena / WARENA where appropriate. Do not globally replace the founder name without a separate confirmation.
 
-- **H1:** Your beauty. Your way.  
-- **Support:** Loc care. Practical technology.  
+Copyright ownership and legal attribution require confirmation before changing the rights-holder statement.
 
-### Paths
+## 10. Accessibility and responsive behaviour
 
-- **Locs** — services, starting prices, real work (when available), appointment **request**  
-- **Digital** — capabilities, consultation enquiry, evidence when available  
+Target WCAG 2.2 AA.
 
-### Contact
+- Semantic landmarks and logical heading hierarchy.
+- One primary H1.
+- Skip-to-content link.
+- Keyboard-operable navigation and controls.
+- Visible focus indicators.
+- Accessible names and expanded states.
+- Contrast testing for actual themes and components.
+- Reflow at 320 CSS px without horizontal scrolling.
+- Reduced-motion support.
+- Correct document language and reviewed Kiswahili copy.
+- Touch targets of approximately 44 × 44 CSS px where practical.
 
-WhatsApp is **prominent** (Kenya channel reality) but not exclusive. Keep phone, email, GitHub where listed. **Request ≠ confirmation.**
+Automated checks do not independently prove WCAG conformance.
 
----
+## 11. Language
 
-## 09. Service identities
+English is the default. Kiswahili is available through the language toggle when the complete translation has been reviewed. Both languages must preserve service scope, prices, contact details and the enquiry-not-booking boundary.
 
-### Locs (GRACE)
+## 12. Change control
 
-- Location phrase: **Eldoret Town / Karibu Mdosi**  
-- Starting prices: Retouch & Styling **KES 700** · Sisterlocs Retie **KES 1,500** · Artificial Locs Installation **KES 3,500**  
-- Authority: [SERVICE-CATALOG.md](./SERVICE-CATALOG.md)  
+The public facts register governs factual claims. The service catalogue governs service scope and prices. The brand canon governs identity and commercial boundaries.
 
-### Digital (GRIT · WARENA)
+Specification, implementation, testing, verification and deployment are separate states. Do not describe a proposal as a released capability.
 
-- Line: **Freedom Is a System.**  
-- Scope agreed before work  
-- No SLA theatre without contract  
-
----
-
-## 10. Digital experience
-
-| Element | Standard |
-|---------|----------|
-| Header | NAKEBUSEN left · WA / EN·SW / theme right · Locs · Digital · @donfelohke |
-| Hero | Concise offer first |
-| About / founder | Deeper philosophy |
-| Mobile | Brand + controls row 1; nav row 2; avoid hamburger unless required |
-| Pages | Static HTML preferred; no tracking; no required CDN fonts |
-
----
-
-## 11. Accessibility and quality
-
-**Target:** Align with **WCAG 2.2** practices relevant to a static brochure site.
-
-Minimum release checks:
-
-- Keyboard operable controls; visible focus  
-- Both themes readable  
-- Touch targets ~2.5rem min-height on primary controls  
-- One H1; sensible heading order  
-- Language toggle updates `lang` and visible copy  
-- No horizontal scroll at 320 CSS px  
-
-Static CI ≠ browser proof.
-
----
-
-## 12. Applications
-
-| Surface | Treatment |
-|---------|-----------|
-| Website | Text-first; lockup in footer |
-| Social bios | NAKEBUSEN Locs • Digital · Powered by WARENA · @donfelohke |
-| Posters / ads | Face + name for cold audiences; services + prices for Locs; WhatsApp CTA |
-| Service menu | Match SERVICE-CATALOG |
-| GitHub READMEs | Domain-specific; link corpus for shared terms |
-
----
-
-## 13. Governance
-
-| Item | Rule |
-|------|------|
-| Source of truth | This manual + SERVICE-CATALOG for prices |
-| Change control | PR on `donfelohke.github.io` and/or `feloh-corpus`; no silent price changes |
-| Version | Date in header; note material changes in commit message |
-| Approval | Owner (@donfelohke) for architecture and prices |
-| Status labels | LIVE · PARTIAL · RESEARCH · PROPOSAL |
-
----
-
-## Appendices
-
-- **A.** Service register → [SERVICE-CATALOG.md](./SERVICE-CATALOG.md)  
-- **B.** Webcopy → [WEBCOPY.md](./WEBCOPY.md)  
-- **C.** Techcopy → [TECHCOPY.md](./TECHCOPY.md)  
-- **D.** Implementation checklist → [BRAND-IMPLEMENTATION-CHECKLIST.md](./BRAND-IMPLEMENTATION-CHECKLIST.md)  
-- **E.** Research notes → [BRAND-RESEARCH-VALIDATION.md](./BRAND-RESEARCH-VALIDATION.md)  
+**Governing principle:** Beautiful Roots. Sovereign Systems.
