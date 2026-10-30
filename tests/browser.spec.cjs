@@ -49,12 +49,15 @@ test("theme and language toggles work", async ({ page }) => {
   await expect(page.locator("#philosophy")).toContainText("GENJE ZA WARENA");
   await expect(page.locator("#philosophy")).toContainText("The root becomes the runtime.");
   await expect(page.locator("#crown")).toContainText("Sisterlocs Retightening");
+  await expect(page.locator(".footer-payments")).toContainText("Till: 3511456");
+  await expect(page.locator(".footer-payments")).toContainText("FELIX LWOVA");
+  await expect(page.locator(".footer-payments")).toContainText("Voluntary support");
   await expect(page.locator("body")).not.toContainText("ONLY NAKEBUSEN TRANSACTS");
   await expect(page.locator('.hero a[data-wa-purpose="loc"]')).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
   await page.locator("#language-toggle").click();
   await expect(page.locator(".hero h1")).toHaveText("Mizizi Mizuri. Mifumo Huru.");
   await expect(page.locator(".hero [data-i18n='heroStatus']")).toHaveText("Eldoret Town, Kaunti ya Uasin Gishu, Kenya · Huduma za LOCS na DIGITAL.");
-  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Ufundi, teknolojia na utamaduni wenye mizizi katika ubunifu wa Kiafrika.");
+  await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Huduma za utunzaji wa loc na teknolojia za vitendo, zenye mizizi katika ubunifu wa Kiafrika.");
 });
 
 test("mobile menu closes on Escape and restores focus", async ({ page }) => {
