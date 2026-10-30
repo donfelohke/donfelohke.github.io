@@ -14,11 +14,11 @@ This static site presents services and routes enquiries. It does not confirm app
 | Document | Role |
 |----------|------|
 | [docs/BRAND-MANUAL.md](docs/BRAND-MANUAL.md) | **Canonical brand manual** (architecture, voice, colour, governance) |
-| [docs/BRAND-RESEARCH-VALIDATION.md](docs/BRAND-RESEARCH-VALIDATION.md) | Research findings & limits |
+| [docs/BRAND-RESEARCH-VALIDATION.md](docs/BRAND-RESEARCH-VALIDATION.md) | Research findings and limits |
 | [docs/BRAND-IMPLEMENTATION-CHECKLIST.md](docs/BRAND-IMPLEMENTATION-CHECKLIST.md) | Release / audit checklist |
 | [docs/WEBCOPY.md](docs/WEBCOPY.md) | Approved public copy |
 | [docs/TECHCOPY.md](docs/TECHCOPY.md) | Digital / WARENA messaging |
-| [docs/SERVICE-CATALOG.md](docs/SERVICE-CATALOG.md) | Authoritative prices & scope |
+| [docs/SERVICE-CATALOG.md](docs/SERVICE-CATALOG.md) | Authoritative prices and scope |
 | [docs/NAV-STRUCTURE.md](docs/NAV-STRUCTURE.md) | Header / footer structure |
 | [docs/WEB-DESIGN-STANDARDS.md](docs/WEB-DESIGN-STANDARDS.md) | Web implementation standards |
 
@@ -40,12 +40,12 @@ Deep philosophy: [feloh-corpus BRAND-CONSTITUTION](https://github.com/donfelohke
 | Sisterlocs Retie | **1,500** |
 | Artificial Locs Installation | **3,500** |
 
-WhatsApp / tel: **+254 719 635 415** · https://wa.me/254719635415  
+WhatsApp / telephone: **+254 719 635 415** · https://wa.me/254719635415  
 Enquiry is not a booking. Braiding is not in the current advertised scope.
 
 ## Language
 
-**English default.** Kiswahili via accessible toggle. Same prices and boundaries in both languages. Unreviewed translations stay drafts.
+**English default.** Kiswahili via accessible toggle. Same prices and boundaries in both languages. Unreviewed translations remain drafts.
 
 ## Website rules
 
@@ -56,14 +56,14 @@ Enquiry is not a booking. Braiding is not in the current advertised scope.
 
 ## Principles
 
-- Git is source of truth; use PRs for meaningful changes  
+- Git is source of truth; use pull requests for meaningful changes  
 - Distinguish LIVE · PARTIAL · RESEARCH · PROPOSAL  
 - Never invent clients, metrics, or availability  
 - IKAI: no face-ID, diagnosis, scoring, or covert profiling  
 
 ## Verify before release
 
-Use [BRAND-IMPLEMENTATION-CHECKLIST.md](docs/BRAND-IMPLEMENTATION-CHECKLIST.md). Workflow green ≠ browser proof.
+Use [BRAND-IMPLEMENTATION-CHECKLIST.md](docs/BRAND-IMPLEMENTATION-CHECKLIST.md). A green workflow does not constitute browser proof.
 
 ---
 
