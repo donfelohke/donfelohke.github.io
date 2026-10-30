@@ -60,6 +60,21 @@ test("theme and language toggles work", async ({ page }) => {
   await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Huduma za utunzaji wa loc na teknolojia za vitendo, zenye mizizi katika ubunifu wa Kiafrika.");
 });
 
+test("mobile quick navigation prioritises service paths and WhatsApp", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(pageUrl);
+  const quickNav = page.locator(".floating-nav");
+  await expect(quickNav).toBeVisible();
+  await expect(quickNav.locator('a[href="#crown"]')).toBeVisible();
+  await expect(quickNav.locator('a[href="#code"]')).toBeVisible();
+  const whatsapp = quickNav.locator("a.floating-wa");
+  await expect(whatsapp).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
+  await quickNav.locator("#floating-more-toggle").click();
+  await expect(page.locator("#floating-more-panel")).toBeVisible();
+  await expect(page.locator("#floating-more-panel")).toContainText("@donfelohke");
+  await expect(page.locator("#floating-more-panel")).toContainText("GENJE ZA WARENA");
+});
+
 test("mobile menu closes on Escape and restores focus", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(pageUrl);
