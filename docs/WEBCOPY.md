@@ -1,117 +1,126 @@
-# NAKEBUSEN — Canonical homepage webcopy
+# NAKEBUSEN — Canonical Website Copy
 
-**Status:** Final copy baseline · 2026-10-27  
-**Authority:** `PUBLIC-FACTS-REGISTER.md` and `SERVICE-CATALOG.md`
+**Document ID:** NB-WC-01  
+**Version:** M1 · 30 October 2026  
+**Status:** Approved copy baseline  
+**Factual authority:** PUBLIC-FACTS-REGISTER.md · SERVICE-CATALOG.md
 
 ## Brand lockup
 
-**NAKEBUSEN Locs • Digital**  
-**Powered by WARENA**  
-**@donfelohke · #HisGenjeness**
+**NAKEBUSEN Locs ° Powered by WARENA**
 
-## Header and navigation
+Supporting signature: **@donfelohke · #HisGenjeness**
 
-- Brand link: **NAKEBUSEN** — returns to the top.
-- Descriptor: **Locs • Digital**.
-- Section links: **Locs · Digital · About · Connect**.
-- Utilities: WhatsApp contact, **EN / SW** language toggle, and light/dark theme toggle.
-- Keep mobile navigation compact, accessible and free of overlapping controls.
-- Keep keyboard focus visible and anchor targets clear of the sticky header.
+## Homepage
 
-## Hero
+### Hero
 
-**Eyebrow:** Loc care · Eldoret Town / Karibu Mdosi · Kenya  
-**H1:** NAKEBUSEN  
-**Tagline:** Your Beauty ° Your Way  
-**Supporting copy:** Natural loc care in Eldoret Town, alongside practical computer systems, GNU/Linux and networking services.  
-**Price cue:** Loc services from KES 700. Technology services are scoped to your needs.  
-**Primary action:** Enquire about loc care  
-**Secondary action:** Explore Digital  
-**Boundary:** An enquiry is not a confirmed booking. Availability, suitability, final price and timing are agreed directly.
+**H1:** Beautiful Roots. Sovereign Systems.
 
-## Locs
+**Supporting statement:** Craft, technology and culture rooted in African ingenuity.
 
-**Section title:** Loc care & prices  
-**Intro:** Natural loc care, maintenance and styling in Eldoret Town / Karibu Mdosi.
+**Introduction:** NAKEBUSEN brings together professional loc care and practical technology services in Eldoret Town, Kenya.
 
-- **Retouch & Styling — from KES 700.** Loc maintenance and styling tailored to the condition of your locs and the work required.
-- **Sisterlocs Retie — from KES 1,500.** Enquire to confirm suitability and requirements.
-- **Artificial Locs Installation — from KES 3,500.** Discuss the preferred style, materials and installation requirements before proceeding.
+**Location line:** Eldoret Town, Uasin Gishu County, Kenya.
 
-**Price note:** Prices are starting points in Kenyan shillings. Final cost depends on the work required, loc condition and materials. Confirm availability directly. Braiding is not offered.
+**Primary action:** Enquire about loc care.  
+**Secondary action:** Explore digital services.
 
-**Action:** Enquire on WhatsApp
+**Enquiry boundary:** An enquiry is not a confirmed booking. Availability, suitability, final price and timing are agreed directly.
 
-## Digital
+### LOCS · CROWN
 
-**Section title:** NAKEBUSEN Digital  
-**Descriptor:** Powered by WARENA  
-**Slogan:** Freedom Is a System.  
-**Intro:** Practical technology for individuals, homes, businesses and organisations—from computer systems and GNU/Linux to networking and local-first infrastructure.
+**Heading:** NAKEBUSEN LOCS · CROWN
 
-**Service areas:**
-- Computer diagnostics, recovery, maintenance and GNU/Linux administration.
-- Wi-Fi, router configuration, LAN and small-office infrastructure.
-- Laboratory, classroom and cybercafé systems.
-- Offline-capable computing and reproducible development environments.
-- Systems engineering and infrastructure planning.
+Professional loc care, maintenance, retouching and styling, with artificial loc installation.
 
-**Scope note:** Each engagement is scoped to the actual need. Feasibility, deliverables, pricing and support are agreed before work begins. Technology services are quoted per engagement.
+| Service | Starting price |
+|---|---:|
+| Retouch & Styling | KES 700 |
+| LOCS Retie | KES 1,500 |
+| Artificial Locs Installation | KES 3,500 |
 
-**IKAI note:** IKAI — Reflective Compute is research in progress, not a released product or a service for purchase.
+Prices are starting points in Kenyan shillings. Final cost depends on the service, loc condition, materials and work required.
 
-**Action:** Discuss a technical project
+**Service boundaries:** No braiding. No shaving. Do not promise unconfirmed home visits or appointment availability.
 
-## About
+**Primary action:** Enquire on WhatsApp.  
+**Secondary action:** Call NAKEBUSEN.
 
-**Kicker:** The person behind the work · GLORY  
-**Name:** Felix Lwova — Don Feloh  
-**Role:** Founder · CTO · Loctician · Creative Technologist  
-**Copy:** NAKEBUSEN brings beauty and technology together through practical skill, creative craft and self-determination. WARENA provides the technical foundation. Don Feloh brings the craft, technical direction and creative practice behind the work.
+### DIGITAL · WARENA
 
-**Signature:** GRACE · GRIT · GLORY
+**Heading:** NAKEBUSEN DIGITAL · WARENA
 
-## Connect
+Practical computing and infrastructure for people and organisations. Service areas include GNU/Linux, computer maintenance, networking and locally controlled computing systems.
 
-**Heading:** What do you need help with?  
-**Copy:** Whether you are enquiring about loc care or planning a technology project, get in touch directly. Tell us what you need. We will discuss suitability, availability, scope and next steps before any work is agreed.
+Services are scoped per engagement. Feasibility, deliverables, price and support are agreed before work begins.
 
-**Published contact details**
-- WhatsApp / telephone: **+254 719 635 415** · local display: **0719 635 415**
-- Email: **mela9ine@proton.me**
-- Location phrase: **Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya**
-- Other locations: by arrangement; do not imply an unverified street address or map pin.
+**Action:** Discuss a technical requirement.
 
-WhatsApp messages may prefill an enquiry prompt; they must not imply that a booking has been accepted.
+**IKAI note:** IKAI Mirror is research into reflective, local-first computing. It is not a released product or a service for purchase.
 
-## Footer
+### Philosophy
 
-**Brand line:** NAKEBUSEN · WARENA powered · @donfelohke  
-**Signature:** GRACE · GRIT · GLORY — Craft, capability and creative expression.
+**We believe human capability, cultural heritage and technical ingenuity belong together.**
 
-**NAKEBUSEN Locs**  
-Natural loc care, retouch and styling, Sisterlocs retie and artificial loc installation.  
-Link: **View services & prices**
+**The root becomes the runtime.**
 
-**NAKEBUSEN Digital**  
-Practical computer systems, GNU/Linux, networking and local-first infrastructure.  
-Link: **Explore technology**
+### GENJE ZA WARENA
 
-**Connect · Eldoret, Kenya**  
-Felix Lwova · Founder · CTO · Loctician · Creative Technologist  
-Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya  
-WhatsApp · Call 0719 635 415 · Email
+**THE FIRE OF THE FORMIDABLE.**
 
-**Footer navigation:** Locs · Digital · About · Connect · Back to top  
-**Social links:** X · Instagram · TikTok · GitHub · Facebook · Gallery  
-**Utility:** Language toggle · Source repository  
-**Copyright:** © 2026 Felix Lwova · Don Feloh
+GENJE ZA WARENA is the governing intention behind the enterprise, expressed through intensity, excellence and formidable creative practice. This is an adopted brand interpretation, not a claim of verified linguistic etymology.
 
-## Editorial and trust rules
+### Community
 
-- Lead with literal service information; keep prices and next steps more prominent than philosophy.
-- English is the default; Kiswahili is available through the language toggle. Keep service boundaries and prices consistent across both languages.
-- **An enquiry is not a booking.** Never claim an appointment is confirmed before direct agreement.
-- **ONLY NAKEBUSEN TRANSACTS.** WARENA powers Digital; IKAI is research in progress; GENJE is a creative practice identity.
-- Do not advertise braiding, unconfirmed home visits, guaranteed availability, invented testimonials or unverified addresses.
-- Keep the public site text-first, static and usable without third-party fonts or embedded tracking.
+**Watu ndio mali. Heshima idumu.**
+
+### About
+
+**Public name:** Felix Lwova — Don Feloh (provisional).
+
+NAKEBUSEN brings craft, technology and culture together through practical skill, creative work and self-determination. WARENA is the technical identity within NAKEBUSEN DIGITAL. Don Feloh leads the craft, technical direction and creative practice behind the enterprise.
+
+**Signature:** GRACE · GRIT · GLORY.
+
+Do not globally replace the founder name or alter copyright attribution without confirmation.
+
+### Contact
+
+**Heading:** What do you need help with?
+
+Whether you are enquiring about loc care or planning a technology project, get in touch directly. Tell us what you need. We will discuss suitability, availability, scope and next steps before any work is agreed.
+
+- WhatsApp / telephone: +254 719 635 415
+- Email: mela9ine@proton.me
+- Location: Eldoret Town, Uasin Gishu County, Kenya
+
+Do not invent a street address, opening hours or map pin.
+
+## Navigation
+
+Home · LOCS · DIGITAL · About · Contact.
+
+Keep LOCS and DIGITAL as the two primary service paths. GENJE and IKAI remain contextual identity / research content, not separate commercial destinations.
+
+## Metadata
+
+**Title:** NAKEBUSEN — Beautiful Roots. Sovereign Systems.
+
+**Description:** NAKEBUSEN brings together professional loc care and practical technology services in Eldoret Town, Kenya. Explore LOCS and DIGITAL.
+
+Canonical URL: https://donfelohke.github.io/
+
+## Translation requirements
+
+English is the default. Kiswahili must be reviewed for accuracy, tone, service scope, prices, contact details and the enquiry-not-booking boundary before publication. Do not translate brand names, prices or the exact lockup inconsistently.
+
+## Editorial rules
+
+- Put clear service information and next steps before philosophy.
+- Preserve the approved headline and supporting statement.
+- Do not claim guaranteed availability or confirmed bookings.
+- Do not advertise braiding, shaving or unconfirmed home visits.
+- Do not present IKAI as a product.
+- Do not present GENJE or WARENA as independent checkout destinations.
+- Do not publish unverified linguistic, legal, technical or customer claims.
