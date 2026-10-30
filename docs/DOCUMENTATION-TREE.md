@@ -9,6 +9,7 @@ This website repository owns:
 - Public `index.html` behaviour and tests
 - `docs/WEBCOPY.md`, `WEB-DESIGN-STANDARDS.md`, `SERVICE-CATALOG.md`
 - Deployment, recovery, audience research, PR reconciliation notes
+- Homepage audit register: [`NWAR-01-HOMEPAGE-AUDIT-2026-10-30.md`](./NWAR-01-HOMEPAGE-AUDIT-2026-10-30.md) (research branch until merged)
 
 Shared brand rules remain defined in **feloh-corpus/BRAND-CONSTITUTION.md**.
 
