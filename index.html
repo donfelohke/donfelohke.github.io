@@ -164,7 +164,7 @@ section{padding:clamp(2.5rem,6vw,4rem) 0}
 #code{background:var(--forest);color:var(--ivory)}
 /* Digital practice: individual terminal-green glass panels, distinct from Locs clay cards. */
 #code .digital-grid{display:grid;grid-template-columns:1fr;gap:1rem;align-items:stretch}
-#code .group{display:flex;flex-direction:column;align-items:stretch;gap:.6rem;min-width:0;padding:1.1rem;border:1px solid rgba(58,109,140,.24);border-top:3px solid #3A6D8C;border-radius:6px;background:linear-gradient(145deg,rgba(3,53,0,.96),rgba(3,53,0,.92));box-shadow:0 10px 28px rgba(0,0,0,.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+#code .group{display:flex;flex-direction:column;align-items:stretch;gap:.6rem;min-width:0;padding:1.1rem;border:1px solid rgba(58,109,140,.24);border-top:3px solid #3A6D8C;border-radius:6px;background:linear-gradient(145deg,rgba(3,53,0,.96),rgba(3,53,0,.92));box-shadow:0 10px 28px rgba(17,17,17,.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 #code .group h3{color:#F2EFEA;border-bottom-color:rgba(58,109,140,.3);padding-bottom:.7rem}
 #code .group .list-plain{flex:1;padding-left:1.1rem}
 #code .group .list-plain li{padding:.18rem 0}
@@ -228,7 +228,7 @@ header .nav{padding:.55rem .7rem}
 
 
 /* Glass-card material: responsive, content-safe adaptation of the supplied reference. */
-.glass-card{isolation:isolate;position:relative;overflow:hidden;border:1px solid rgba(242,239,234,.28);border-top:3px solid var(--gold);border-radius:12px;background:rgba(242,239,234,.06);-webkit-backdrop-filter:blur(5px) saturate(115%);backdrop-filter:blur(5px) saturate(115%);box-shadow:0 8px 32px rgba(0,0,0,.10),inset 0 1px 0 rgba(242,239,234,.32),inset 0 -1px 0 rgba(242,239,234,.08)}
+.glass-card{isolation:isolate;position:relative;overflow:hidden;border:1px solid rgba(242,239,234,.28);border-top:3px solid var(--gold);border-radius:12px;background:rgba(242,239,234,.06);-webkit-backdrop-filter:blur(5px) saturate(115%);backdrop-filter:blur(5px) saturate(115%);box-shadow:0 8px 32px rgba(17,17,17,.10),inset 0 1px 0 rgba(242,239,234,.32),inset 0 -1px 0 rgba(242,239,234,.08)}
 .glass-card::before{content:"";position:absolute;inset:0 0 auto;height:1px;z-index:0;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(242,239,234,.78),transparent)}
 .glass-card::after{content:"";position:absolute;inset:0 auto 0 0;width:1px;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(242,239,234,.72),transparent 58%,rgba(242,239,234,.22))}
 .glass-card>*{position:relative;z-index:1}
@@ -282,7 +282,7 @@ header{
 :root[data-theme="dark"] #crown .svc.terminal-card{
   background:linear-gradient(145deg,rgba(17,17,17,.96),rgba(17,17,17,.92));
   border-color:rgba(242,239,234,.28);border-top-color:var(--locs-clay-light);
-  box-shadow:0 12px 28px rgba(0,0,0,.2),inset 0 1px 0 rgba(242,239,234,.05)
+  box-shadow:0 12px 28px rgba(17,17,17,.2),inset 0 1px 0 rgba(242,239,234,.05)
 }
 :root[data-theme="dark"] #crown .svc .terminal-id,:root[data-theme="dark"] #crown .svc .price{color:var(--locs-clay-light)}
 /* Digital = deep forest terminal panels, not neon-on-black everywhere. */
@@ -291,7 +291,7 @@ header{
   border:1px solid rgba(58,109,140,.22);
   border-top:3px solid var(--digital-phosphor);
   border-radius:10px;
-  box-shadow:0 10px 28px rgba(0,0,0,.12),inset 0 1px 0 rgba(242,239,234,.035);
+  box-shadow:0 10px 28px rgba(17,17,17,.12),inset 0 1px 0 rgba(242,239,234,.035);
 }
 #code .group h3,.digital-grid .group h3{color:var(--digital-phosphor);border-bottom-color:rgba(58,109,140,.22)}
 #code .group,#code .group p,#code .group li{color:#F2EFEA}
@@ -356,13 +356,13 @@ header{
 .floating-more-panel[hidden]{display:none!important}
 @media(max-width:899px){
   body{padding-bottom:calc(5.8rem + env(safe-area-inset-bottom,0px))}
-  .floating-nav{position:fixed;z-index:40;left:max(.65rem,env(safe-area-inset-left,0px));right:max(.65rem,env(safe-area-inset-right,0px));bottom:calc(.45rem + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.25rem;padding:.4rem;border:1px solid color-mix(in srgb,var(--ink) 22%,transparent);border-radius:1rem;background:color-mix(in srgb,var(--paper) 88%,transparent);box-shadow:0 8px 30px rgba(0,0,0,.18);backdrop-filter:blur(18px) saturate(130%);-webkit-backdrop-filter:blur(18px) saturate(130%)}
+  .floating-nav{position:fixed;z-index:40;left:max(.65rem,env(safe-area-inset-left,0px));right:max(.65rem,env(safe-area-inset-right,0px));bottom:calc(.45rem + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.25rem;padding:.4rem;border:1px solid color-mix(in srgb,var(--ink) 22%,transparent);border-radius:1rem;background:color-mix(in srgb,var(--paper) 88%,transparent);box-shadow:0 8px 30px rgba(17,17,17,.18);backdrop-filter:blur(18px) saturate(130%);-webkit-backdrop-filter:blur(18px) saturate(130%)}
   .floating-nav a,.floating-nav button{display:flex;min-width:0;min-height:3.15rem;flex-direction:column;align-items:center;justify-content:center;gap:.12rem;padding:.25rem .1rem;border:1px solid transparent;border-radius:.7rem;background:transparent;color:var(--ink);font:600 .67rem/1.1 var(--sans);text-decoration:none;cursor:pointer}
   .floating-nav .float-icon{width:1.15rem;height:1.15rem;display:block;flex:0 0 auto}
   .floating-nav a[aria-current="location"],.floating-nav a[aria-current="true"]{background:color-mix(in srgb,var(--clay) 15%,var(--paper));border-color:color-mix(in srgb,var(--clay) 45%,transparent);font-weight:800}
   :root[data-theme="dark"] .floating-nav a[aria-current="location"],:root[data-theme="dark"] .floating-nav a[aria-current="true"]{background:rgba(212,175,55,.16);border-color:rgba(212,175,55,.5)}
   .floating-nav a:focus-visible,.floating-nav button:focus-visible,.floating-more-panel a:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
-  .floating-more-panel{position:fixed;z-index:41;left:.8rem;right:.8rem;bottom:calc(5.25rem + env(safe-area-inset-bottom,0px));max-width:28rem;margin-inline:auto;padding:.85rem;border:1px solid var(--line);border-radius:1rem;background:var(--paper);color:var(--ink);box-shadow:0 12px 34px rgba(0,0,0,.22)}
+  .floating-more-panel{position:fixed;z-index:41;left:.8rem;right:.8rem;bottom:calc(5.25rem + env(safe-area-inset-bottom,0px));max-width:28rem;margin-inline:auto;padding:.85rem;border:1px solid var(--line);border-radius:1rem;background:var(--paper);color:var(--ink);box-shadow:0 12px 34px rgba(17,17,17,.22)}
   .floating-more-panel h2{font:700 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;margin:.15rem .4rem .5rem;color:var(--muted)}
   .floating-more-panel a{display:flex;align-items:center;min-height:2.75rem;padding:.55rem .65rem;border-radius:.45rem;color:var(--ink);text-decoration:none}
   .floating-more-panel a:hover{background:color-mix(in srgb,var(--gold) 12%,var(--paper))}
@@ -426,7 +426,7 @@ header{
   border:1px solid rgba(58,109,140,.3);
   border-top:3px solid #3A6D8C;
   border-radius:12px;
-  box-shadow:0 8px 22px rgba(0,0,0,.12);
+  box-shadow:0 8px 22px rgba(17,17,17,.12);
   backdrop-filter:none;-webkit-backdrop-filter:none;
 }
 #code .group h3,.digital-grid .group h3{color:#3A6D8C;border-bottom-color:rgba(58,109,140,.28)}
@@ -529,7 +529,7 @@ header{
   .nav-right{gap:.2rem}
 }
 
-\n/* M1 brand-system overrides: restrained, text-first, palette-controlled. */\n.hero:after{content:none!important;display:none!important}\nheader{background:var(--paper)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important}\n.card,.terminal-card,.svc,.group,.footer-panel{box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}\n.terminal-card,.svc,.card,.footer-panel{border-radius:0!important}\n.terminal-card,.svc{background:var(--paper)!important}\n.dark-band .group,.dark-band .terminal-card{background:var(--forest)!important;color:var(--ivory)!important}\n.terminal-id,.terminal-card .price,.svc .price{color:var(--ink)!important}\n:root[data-theme="dark"] .terminal-id,:root[data-theme="dark"] .terminal-card .price,:root[data-theme="dark"] .svc .price{color:var(--ivory)!important}\n.dark-band .terminal-id,.dark-band .terminal-card .price,.dark-band .group h3{color:var(--ivory)!important}\n.dark-band .muted,.dark-band .section-kicker{color:var(--ivory)!important}\n#crown .svc .terminal-action{color:var(--ink)!important}\n</style>
+\n/* M1 brand-system overrides: restrained, text-first, palette-controlled. */\n.hero:after{content:none!important;display:none!important}\nheader{background:var(--paper)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important}\n.card,.terminal-card,.svc,.group,.footer-panel{box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}\n.terminal-card,.svc,.card,.footer-panel{border-radius:0!important}\n.terminal-card,.svc{background:var(--paper)!important}\n.dark-band .group,.dark-band .terminal-card{background:var(--forest)!important;color:var(--ivory)!important}\n.terminal-id,.terminal-card .price,.svc .price{color:var(--ink)!important}\n:root[data-theme="dark"] .terminal-id,:root[data-theme="dark"] .terminal-card .price,:root[data-theme="dark"] .svc .price{color:var(--ivory)!important}\n.dark-band .terminal-id,.dark-band .terminal-card .price,.dark-band .group h3{color:var(--ivory)!important}\n.dark-band .muted,.dark-band .section-kicker{color:var(--ivory)!important}\n#crown .svc .terminal-action{color:var(--ink)!important}\n.hero .eyebrow,.hero .section-kicker,.hero .muted,.hero .hero-tech-note{color:var(--ivory)!important}\n#paths .beauty-path{background:var(--paper)!important}\n#paths .beauty-path .terminal-id{color:var(--ink)!important}\n#paths .digital-path{background:var(--forest)!important;color:var(--ivory)!important}\n#paths .digital-path .terminal-kind,#paths .digital-path .path-note{color:var(--ivory)!important}\n#paths .digital-path .terminal-id{color:var(--ochre)!important}\n#code .group{background:var(--forest)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important;border-radius:0!important}\n#code .group .btn:hover{background:var(--ochre)!important;color:var(--ink)!important}\n.hero .hero-prices{background:var(--forest)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}\n.floating-nav{background:var(--paper)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important}\n</style>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
