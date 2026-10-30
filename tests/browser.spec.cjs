@@ -73,7 +73,7 @@ test("integrated hero keeps approved M1 copy, starting prices, and enquiry bound
   await expect(page.locator(".hero")).toContainText("An enquiry is not a confirmed booking");
   await expect(page.locator("#philosophy")).toContainText("GENJE ZA WARENA");
   await expect(page.locator("#philosophy")).toContainText("The root becomes the runtime.");
-  await expect(page.locator("#crown")).toContainText("LOCS Retie");
+  await expect(page.locator("#crown")).toContainText("Sisterlocs Retightening");
   await expect(page.locator("body")).not.toContainText("ONLY NAKEBUSEN TRANSACTS");
   await expect(page.locator('.hero a[data-wa-purpose="loc"]')).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
   await page.locator("#language-toggle").click();
