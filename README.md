@@ -57,7 +57,7 @@ Do not infer a street address or opening hours.
 
 | Document | Authority |
 |---|---|
-| [BRAND-CANON.md](docs/BRAND-CANON.md) | Identity and commercial constitution |
+| [NAKEBUSEN-MASTER-IMPLEMENTATION-BRIEF.md](NAKEBUSEN-MASTER-IMPLEMENTATION-BRIEF.md) | Approved M1 implementation direction |\n| [BRAND-CANON.md](docs/BRAND-CANON.md) | Identity and commercial constitution |
 | [BRAND-MANUAL.md](docs/BRAND-MANUAL.md) | Brand, voice and visual system |
 | [PUBLIC-FACTS-REGISTER.md](docs/PUBLIC-FACTS-REGISTER.md) | Public factual claims and evidence classes |
 | [SERVICE-CATALOG.md](docs/SERVICE-CATALOG.md) | Services, starting prices and boundaries |
