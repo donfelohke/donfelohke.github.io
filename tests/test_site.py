@@ -125,7 +125,7 @@ check("NAKEBUSEN" in html and "Powered by WARENA" in html and "@donfelohke" in h
 check('data-i18n="boundary"' in html and "ONLY NAKEBUSEN TRANSACTS" not in html, "Public boundary copy must be customer-facing")
 check('<span data-i18n="bookingNote">' in html, "bookingNote translation must not nest inside another data-i18n parent")
 
-for expected in ("KES 700", "KES 1,500", "KES 3,500", "Retouch", "LOCS Retie", "Artificial"):
+for expected in ("KES 700", "KES 1,500", "KES 3,500", "Retouch", "Sisterlocs Retightening", "Artificial"):
     check(expected in html, f"Public service catalogue missing token: {expected}")
 
 robots = (ROOT / "robots.txt").read_text(encoding="utf-8")
