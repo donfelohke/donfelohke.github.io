@@ -8,7 +8,7 @@ const pageUrl = pathToFileURL(path.join(root, "index.html")).href;
 const evidenceDir = path.join(root, "test-results", "browser-evidence");
 fs.mkdirSync(evidenceDir, { recursive: true });
 
-const widths = [320, 360, 390, 430, 768, 1280];
+const widths = [320, 360, 390, 430, 760, 1024, 1280];
 
 for (const width of widths) {
   test(`layout holds at ${width}px`, async ({ page }) => {
@@ -42,13 +42,16 @@ test("theme and language toggles work", async ({ page }) => {
   await expect(page.locator(".hero h1")).toHaveText("Beautiful Roots. Sovereign Systems.");
   await expect(page.locator(".hero [data-i18n='heroStatus']")).toHaveText("Eldoret Town, Uasin Gishu County, Kenya · LOCS and DIGITAL services.");
   await expect(page.locator(".hero [data-i18n='heroSubline']")).toHaveText("Craft, technology and culture rooted in African ingenuity.");
-  await expect(page.locator(".hero")).toContainText("KES 700");
-  await expect(page.locator(".hero")).toContainText("KES 1,500");
-  await expect(page.locator(".hero")).toContainText("KES 3,500");
+  await expect(page.locator(".hero")).toContainText("KES 700+");
+  await expect(page.locator(".hero")).toContainText("KES 1,500+");
+  await expect(page.locator(".hero")).toContainText("KES 3,500+");
   await expect(page.locator(".hero")).toContainText("An enquiry is not a confirmed booking");
   await expect(page.locator("#philosophy")).toContainText("GENJE ZA WARENA");
   await expect(page.locator("#philosophy")).toContainText("The root becomes the runtime.");
   await expect(page.locator("#crown")).toContainText("LOCS Retie");
+  await expect(page.locator("#founder")).not.toContainText("CTO");
+  await expect(page.locator("body")).not.toContainText("other locations by arrangement");
+  await expect(page.locator("body")).toContainText("NAKEBUSEN Locs ° Powered by WARENA");
   await expect(page.locator(".footer-payments")).toHaveCount(0);
   await expect(page.locator("body")).not.toContainText("3511456");
   await expect(page.locator("body")).not.toContainText("M-PESA Buy Goods");
