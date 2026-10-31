@@ -73,7 +73,7 @@ check("#theme-toggle,#language-toggle,#mobile-menu-toggle{width:2.75rem;height:2
 check('navLocs:"Locs"' in html and 'navDigital:"Digital"' in html, "English header navigation labels must describe the two primary paths")
 check('navLocs:"Locs"' in html and 'navDigital:"Digital"' in html, "Kiswahili header navigation must preserve the concise Locs and Digital labels")
 check('section[id],.hero[id]{scroll-margin-top:9rem}' in html, "Mobile section anchors must account for sticky header height")
-check('price700:"KES 700"' in html and 'price1500:"KES 1,500"' in html and 'price3500:"KES 3,500"' in html, "English price translations must match the current service catalogue")
+check('price700:"KES 700+"' in html and 'price1500:"KES 1,500+"' in html and 'price3500:"KES 3,500+"' in html, "English price translations must match the current service catalogue")
 check(p.h1_count == 1, f"Expected one h1, found {p.h1_count}")
 check("description" in p.metas and len(p.metas["description"]) >= 50, "Missing or too-short meta description")
 check(
@@ -103,8 +103,8 @@ check('href="tel:+254719635415">Call 0719 635 415</a>' in html, "Footer telephon
 check('href="mailto:mela9ine@proton.me">Email</a>' in html, "Footer email link required")
 check('href="https://github.com/donfelohke/donfelohke.github.io">GitHub / Source</a>' in html, "Footer source link required")
 check("KES 700" in html and "KES 1,500" in html and "KES 3,500" in html, "All three approved service prices must be present")
-check("Till: 3511456" in html and "FELIX LWOVA" in html, "Verified M-PESA Buy Goods merchant and Till must be published in the footer")
-check("Voluntary support for independent creative and technical work" in html and "Voluntary support is separate from payment for NAKEBUSEN services" in html, "Creator support must remain voluntary and distinct from service payments")
+check('<div class="footer-payments"' not in html and "3511456" not in html and "M-PESA Buy Goods" not in html, "Unverified payment details must remain unpublished")
+check("Voluntary support" not in html, "Creator-support payment copy must remain unpublished until its payment route is verified")
 check(not any(key in p.metas for key in ("og:image", "twitter:image")), "No social-preview image meta")
 check("background-image" not in html.lower(), "No CSS image backgrounds")
 check("application/ld+json" in html and "Organization" in html, "Missing Organization structured data")
@@ -129,7 +129,7 @@ check("NAKEBUSEN" in html and "Powered by WARENA" in html and "@donfelohke" in h
 check('data-i18n="boundary"' in html and "ONLY NAKEBUSEN TRANSACTS" not in html, "Public boundary copy must be customer-facing")
 check('<span data-i18n="bookingNote">' in html, "bookingNote translation must not nest inside another data-i18n parent")
 
-for expected in ("KES 700", "KES 1,500", "KES 3,500", "Retouch", "Sisterlocs Retightening", "Artificial"):
+for expected in ("KES 700", "KES 1,500", "KES 3,500", "Retouch", "LOCS Retie", "Artificial"):
     check(expected in html, f"Public service catalogue missing token: {expected}")
 
 robots = (ROOT / "robots.txt").read_text(encoding="utf-8")
