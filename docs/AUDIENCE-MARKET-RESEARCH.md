@@ -2,7 +2,7 @@
 
 **Repository:** `donfelohke/donfelohke.github.io`  
 **Research date:** 2026-10-25  
-**Status:** Research and copy recommendations; not evidence of conversion performance.
+**Status:** Historical research and copy recommendations; not evidence of conversion performance. Service naming was reconciled on 2026-10-31; use LOCS Retie as the current public label.
 
 ## Executive recommendation
 
@@ -42,7 +42,7 @@ Reviewed the current `index.html` and `README.md` in this repository. Existing a
 
 - Public identity: **NAKEBUSEN @donfelohke — WARENA powered**.
 - Primary local market phrase: **Eldoret Town / Karibu Mdosi**. Lodwar/Turkana can remain secondary context, but current service availability must be confirmed directly.
-- Loc-care starting prices: **Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Installation — KES 3,500**.
+- Loc-care starting prices: **Retouch & Styling — KES 700; LOCS Retie — KES 1,500; Artificial Locs Installation — KES 3,500**.
 - Contact: **+254 719 635 415**, WhatsApp and telephone.
 - Technical offer includes GNU/Linux support, computer maintenance, networking, routers/servers, small-office and lab systems, and local-first/offline-capable environments.
 - IKAI is research and development, not a released product.
@@ -65,11 +65,11 @@ Reviewed the current `index.html` and `README.md` in this repository. Existing a
 **Recommended draft:**
 
 > **NAKEBUSEN LOCS — Your Crown. Your Craft.**  
-> Loc care in Eldoret Town / Karibu Mdosi. Retouching, styling, Sisterlocs retightening and artificial loc installation, with the work and price discussed clearly before you commit.
+> Loc care in Eldoret Town / Karibu Mdosi. Retouching, styling, LOCS Retie and artificial loc installation, with the work and price discussed clearly before you commit.
 >
 > **Starting prices**  
 > Retouch & Styling — KES 700  
-> Sisterlocs Retie — KES 1,500  
+> LOCS Retie — KES 1,500  
 > Artificial Locs Installation — KES 3,500
 >
 > Send a WhatsApp enquiry to discuss your locs, preferred style, availability and final quote. An enquiry is not a confirmed booking.
