@@ -48,10 +48,10 @@ test("theme and language toggles work", async ({ page }) => {
   await expect(page.locator(".hero")).toContainText("An enquiry is not a confirmed booking");
   await expect(page.locator("#philosophy")).toContainText("GENJE ZA WARENA");
   await expect(page.locator("#philosophy")).toContainText("The root becomes the runtime.");
-  await expect(page.locator("#crown")).toContainText("Sisterlocs Retightening");
-  await expect(page.locator(".footer-payments")).toContainText("Till: 3511456");
-  await expect(page.locator(".footer-payments")).toContainText("FELIX LWOVA");
-  await expect(page.locator(".footer-payments")).toContainText("Voluntary support");
+  await expect(page.locator("#crown")).toContainText("LOCS Retie");
+  await expect(page.locator(".footer-payments")).toHaveCount(0);
+  await expect(page.locator("body")).not.toContainText("3511456");
+  await expect(page.locator("body")).not.toContainText("M-PESA Buy Goods");
   await expect(page.locator("body")).not.toContainText("ONLY NAKEBUSEN TRANSACTS");
   await expect(page.locator('.hero a[data-wa-purpose="loc"]')).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
   await page.locator("#language-toggle").click();
