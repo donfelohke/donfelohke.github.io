@@ -72,3 +72,7 @@ A green workflow is not browser proof. Verify source, Pages deployment, public U
 ---
 
 © 2026 Felix Lwova · Don Feloh
+
+## Technical research boundary — 2026-11
+
+WARENA's desktop-stack research (Guix/RDE, Niri, Noctalia v5, Sway, dwl-guile and Nix/NixOS comparisons) is documented separately from the public service offer. It does not imply that any particular desktop stack is installed, deployed or available as a standard service. See the [WARENA research decision](https://github.com/donfelohke/WARENA/blob/main/docs/desktop-stack-decision-2026-11.md).
