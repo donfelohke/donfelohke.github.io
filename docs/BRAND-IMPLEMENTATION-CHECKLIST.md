@@ -97,4 +97,4 @@ Record the exact commit, test date, browsers/devices, routes tested, results, de
 
 Use a reviewed pull request for material website changes. Do not merge or deploy based solely on a successful commit. Keep specification, implementation, testing, verification and release states distinct.
 
-**Current checklist status:** M1 content and implementation changes are proposed in a review branch; deployment and browser verification remain pending.
+**Current checklist status:** Stage A content and implementation changes are proposed in draft PR #112; deployment, browser verification and release approval remain pending.
