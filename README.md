@@ -1,11 +1,11 @@
-# NAKEBUSEN — Beautiful Roots. Sovereign Systems.
+# NAKEBUSEN — Your Beauty ° Your Way.
 
 **Craft, technology and culture rooted in African ingenuity.**
 
 Public website: https://donfelohke.github.io/  
 Repository: `donfelohke/donfelohke.github.io`
 
-NAKEBUSEN brings together professional loc care and practical technology services in Eldoret Town, Kenya.
+NAKEBUSEN brings together loc care and practical technology services in Eldoret Town, Kenya.
 
 ## Enterprise architecture
 
@@ -22,7 +22,7 @@ by @donfelohke · #HisGenjeness
 
 **ONLY NAKEBUSEN TRANSACTS.**
 
-- LOCS · CROWN — professional loc care and maintenance.
+- LOCS · CROWN — loc care, maintenance, retouching and styling.
 - DIGITAL · WARENA — practical computing and infrastructure.
 - GENJE ZA WARENA — governing intention, not a separate commercial division.
 - WARENA Systems — technical identity within DIGITAL.
@@ -34,24 +34,27 @@ Canonical lockup: **NAKEBUSEN Locs ° Powered by WARENA**.
 
 | Service | Starting price |
 |---|---:|
-| Retouch & Styling | KES 700 |
-| LOCS Retie | KES 1,500 |
-| Artificial Locs Installation | KES 3,500 |
+| Retouch & Styling | KES 700+ |
+| Sisterlocs Retie | KES 1,500+ |
+| Artificial Locs Installation | KES 3,500+ |
 
-No braiding or shaving. Final cost depends on scope, loc condition and materials. An enquiry is not a confirmed booking.
+No braiding or shaving. Final cost depends on scope, loc condition and materials. An enquiry does not confirm a booking; availability and final terms are agreed directly.
 
 ## DIGITAL service areas
 
 GNU/Linux, computer maintenance, networking, small-office infrastructure, learning-space systems, local-first environments and reproducible development setups. Services are scoped per engagement; availability and feasibility must be confirmed.
 
-## Contact
+## Founder and contact
+
+**Felix Lwova · Don Feloh**  
+**Founder · CTO · Loctician · Creative Technologist**
 
 - WhatsApp / telephone: +254 719 635 415
 - WhatsApp: https://wa.me/254719635415
 - Email: mela9ine@proton.me
-- Location: Eldoret Town, Uasin Gishu County, Kenya
+- Location: Eldoret Town · Karibu Mdosi · Uasin Gishu · Kenya
 
-Do not infer a street address or opening hours.
+Do not infer a street address or opening hours. The public founder display name and copyright attribution remain subject to their evidence controls in PUBLIC-FACTS-REGISTER.md.
 
 ## Documentation
 
