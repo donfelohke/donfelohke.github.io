@@ -1,7 +1,7 @@
 # NAKEBUSEN — Public Facts Register
 
 **Document ID:** NB-PFR-01  
-**Version:** M1 · 30 October 2026  
+**Version:** M2 · 9 November 2026  
 **Status:** Publication control  
 **Authority:** @donfelohke
 
@@ -24,7 +24,7 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-003 | LOCS · CROWN and DIGITAL · WARENA are the two customer paths | F2 | Canonical |
 | PF-004 | Lockup: NAKEBUSEN Locs ° Powered by WARENA | F2 | Preserve exact degree sign |
 | PF-005 | Supporting signature: @donfelohke · #HisGenjeness | F2 | Use where appropriate |
-| PF-006 | Homepage headline: Beautiful Roots. Sovereign Systems. | F2 | Approved |
+| PF-006 | Homepage headline: Your Beauty ° Your Way. | F2 | Approved 9 November 2026; supersedes the previous editorial-first H1 |
 | PF-007 | Supporting statement: Craft, technology and culture rooted in African ingenuity | F2 | Approved |
 | PF-008 | NAKEBUSEN adopted meaning “Beautiful” in Turkana | F4 | Attribute as founder-supplied interpretation pending linguistic verification |
 | PF-009 | GENJE ZA WARENA interpreted as “THE FIRE OF THE FORMIDABLE” | F4 | Brand interpretation only; not verified etymology |
