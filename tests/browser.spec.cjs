@@ -54,6 +54,7 @@ test("approved services, starting prices and enquiry boundary are present", asyn
 
 test("theme and language controls work and preserve preferences", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
+  await page.emulateMedia({ colorScheme: "light" });
   await page.goto(pageUrl);
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
   await expect(page.locator("h1")).toHaveText("Your Beauty ° Your Way.");
