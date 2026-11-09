@@ -50,6 +50,17 @@ def check(condition, message):
         raise AssertionError(message)
 
 
+def relative_luminance(hex_color):
+    channels = [int(hex_color[index:index + 2], 16) / 255 for index in (1, 3, 5)]
+    linear = [channel / 12.92 if channel <= 0.04045 else ((channel + 0.055) / 1.055) ** 2.4 for channel in channels]
+    return sum(channel * weight for channel, weight in zip(linear, (0.2126, 0.7152, 0.0722)))
+
+
+def contrast_ratio(foreground, background):
+    high, low = sorted((relative_luminance(foreground), relative_luminance(background)), reverse=True)
+    return (high + 0.05) / (low + 0.05)
+
+
 p = SiteParser()
 p.feed(html)
 p.close()
@@ -83,6 +94,16 @@ check(p.metas.get("twitter:title") == "NAKEBUSEN — Your Beauty ° Your Way.", 
 check("nakebusen-theme" in html and "nakebusen-language" in html, "Theme and language persistence keys")
 check('#theme-toggle,#language-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem' in html, "Theme and language controls meet 44px target")
 check("prefers-reduced-motion:reduce" in html, "Reduced-motion preference is respected")
+root_css = re.search(r":root\\{([^}]*)\\}", html).group(1)
+dark_css = re.search(r':root\\[data-theme="dark"\\]\\{([^}]*)\\}', html).group(1)
+light_sage = re.search(r"--sage:(#[0-9A-Fa-f]{6})", root_css).group(1)
+dark_sage = re.search(r"--sage:(#[0-9A-Fa-f]{6})", dark_css).group(1)
+light_price = re.search(r"--price:(#[0-9A-Fa-f]{6})", root_css).group(1)
+dark_price = re.search(r"--price:(#[0-9A-Fa-f]{6})", dark_css).group(1)
+check(contrast_ratio(light_sage, "#F2EFEA") >= 4.5, "Muted text meets WCAG AA contrast in light theme")
+check(contrast_ratio(dark_sage, "#111111") >= 4.5, "Muted text meets WCAG AA contrast in dark theme")
+check(contrast_ratio(light_price, "#F2EFEA") >= 4.5, "Service prices meet WCAG AA contrast in light theme")
+check(contrast_ratio(dark_price, "#111111") >= 4.5, "Service prices meet WCAG AA contrast in dark theme")
 check("function applyLanguage(lang)" in html and "document.querySelectorAll('[data-wa-purpose]')" in html, "Language changes update general-purpose WhatsApp links")
 check("document.querySelectorAll('[data-wa-service]')" in html, "Language changes update service-specific WhatsApp links")
 
