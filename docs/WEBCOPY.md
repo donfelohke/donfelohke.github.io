@@ -1,7 +1,7 @@
 # NAKEBUSEN — Canonical Website Copy
 
 **Document ID:** NB-WC-01  
-**Version:** M1 · 30 October 2026  
+**Version:** M2 · 9 November 2026  
 **Status:** Approved copy baseline  
 **Factual authority:** PUBLIC-FACTS-REGISTER.md · SERVICE-CATALOG.md
 
@@ -15,18 +15,20 @@ Supporting signature: **@donfelohke · #HisGenjeness**
 
 ### Hero
 
-**H1:** Beautiful Roots. Sovereign Systems.
+**H1:** Your Beauty ° Your Way.
 
 **Supporting statement:** Craft, technology and culture rooted in African ingenuity.
 
-**Introduction:** NAKEBUSEN brings together professional loc care and practical technology services in Eldoret Town, Kenya.
+**Service descriptor:** Natural loc care.
 
-**Location line:** Eldoret Town, Uasin Gishu County, Kenya.
+**Location line:** Eldoret Town · Karibu Mdosi · Kenya.
 
-**Primary action:** Enquire about loc care.  
-**Secondary action:** Explore digital services.
+**Primary action:** WhatsApp — enquire about loc care.  
+**Secondary action:** Explore Locs services.
 
-**Enquiry boundary:** An enquiry is not a confirmed booking. Availability, suitability, final price and timing are agreed directly.
+**Enquiry boundary:** An enquiry does not confirm a booking. Availability and final terms are agreed directly.
+
+The editorial phrase “Beautiful Roots. Sovereign Systems.” may remain in supporting identity content; it is no longer the homepage H1.
 
 ### LOCS · CROWN
 
@@ -105,9 +107,9 @@ Keep LOCS and DIGITAL as the two primary service paths. GENJE and IKAI remain co
 
 ## Metadata
 
-**Title:** NAKEBUSEN — Beautiful Roots. Sovereign Systems.
+**Title:** NAKEBUSEN — Your Beauty ° Your Way.
 
-**Description:** NAKEBUSEN brings together professional loc care and practical technology services in Eldoret Town, Kenya. Explore LOCS and DIGITAL.
+**Description:** NAKEBUSEN provides natural loc care in Eldoret Town, Kenya. Explore loc-care services and enquire directly on WhatsApp.
 
 Canonical URL: https://donfelohke.github.io/
 
@@ -118,7 +120,7 @@ English is the default. Kiswahili must be reviewed for accuracy, tone, service s
 ## Editorial rules
 
 - Put clear service information and next steps before philosophy.
-- Preserve the approved headline and supporting statement.
+- Use the approved commercial-first headline and preserve the supporting statement.
 - Do not claim guaranteed availability or confirmed bookings.
 - Do not advertise braiding, shaving or unconfirmed home visits.
 - Do not present IKAI as a product.
