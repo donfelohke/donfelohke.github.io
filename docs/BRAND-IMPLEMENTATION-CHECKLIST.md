@@ -1,7 +1,7 @@
 # NAKEBUSEN — Brand Implementation Checklist
 
 **Document ID:** NB-BIC-01  
-**Version:** M2 · 9 November 2026  
+**Version:** M3 · 9 November 2026  
 **Status:** Implementation and verification checklist
 
 Status meanings: APPROVED = decision approved; IMPLEMENTED = code changed; TESTED = checks executed; VERIFIED = evidence supports acceptance; RELEASED = deployed and checked.
@@ -20,7 +20,8 @@ Status meanings: APPROVED = decision approved; IMPLEMENTED = code changed; TESTE
 - [x] GENJE ZA WARENA is governing intention, not a separate commercial division.
 - [x] WARENA Systems belongs within DIGITAL.
 - [x] IKAI is research, not a released product.
-- [x] LOCS Retie is the canonical public service label.
+- [x] Sisterlocs Retie is the canonical public service label; KES 1,500+ remains the starting price.
+- [x] Public role line: Founder · CTO · Loctician · Creative Technologist.
 
 These checkboxes record approved decisions, not test results.
 
@@ -30,11 +31,11 @@ These checkboxes record approved decisions, not test results.
 - [ ] Enterprise introduction matches approved copy.
 - [ ] LOCS and DIGITAL are the two obvious service paths.
 - [ ] LOCS service descriptions and prices match SERVICE-CATALOG.md.
-- [ ] LOCS Retie replaces Sisterlocks / Sisterlocs terminology.
+- [ ] Sisterlocs Retie label and description are consistent across page, catalogue, facts register and WhatsApp message.
 - [ ] No braiding or shaving claims.
 - [ ] DIGITAL capability wording remains scoped and evidence-led.
-- [ ] Philosophy, GENJE and community copy are correctly positioned.
-- [ ] Founder identity remains provisional where applicable.
+- [ ] Philosophy, GENJE and community copy do not displace service information or reintroduce retired homepage copy.
+- [ ] Founder public role line includes CTO; founder display-name and copyright evidence statuses remain explicit.
 - [ ] Enquiry is not described as a confirmed booking.
 
 ## 3. Brand and visual system
@@ -51,18 +52,16 @@ These checkboxes record approved decisions, not test results.
 ## 4. Navigation and interaction
 
 - [ ] Primary navigation destinations work.
-- [ ] Mobile menu exposes correct expanded state.
-- [ ] Escape closes mobile menu and restores focus.
-- [ ] More panel opens and closes by keyboard and touch.
 - [ ] Anchor targets clear sticky header.
-- [ ] Floating dock does not cover content or focus.
-- [ ] Language control updates content and document lang.
-- [ ] Theme control works with system preference.
+- [ ] Language control updates content, accessible labels and document lang.
+- [ ] Theme control works with system preference and user preference.
+- [ ] Language and theme controls remain functional when local storage is unavailable.
+- [ ] Every WhatsApp CTA updates its pre-filled message when the language changes.
 - [ ] WhatsApp, telephone and email destinations work.
 
 ## 5. Accessibility and responsive testing
 
-- [ ] 320, 360, 390, 430, 760, 1024 CSS px and desktop.
+- [ ] 320, 360, 390, 430, 768, 1024 CSS px and desktop.
 - [ ] No horizontal overflow.
 - [ ] Visible focus and keyboard-only operation.
 - [ ] Screen-reader review.
@@ -76,11 +75,11 @@ These checkboxes record approved decisions, not test results.
 - [ ] HTML validation.
 - [ ] JavaScript syntax and browser console.
 - [ ] Metadata and canonical URL.
-- [ ] Kiswahili translation reviewed.
+- [ ] Kiswahili translation reviewed for semantic parity.
 - [ ] Public facts match PUBLIC-FACTS-REGISTER.md.
 - [ ] DIGITAL service availability confirmed before stronger claims.
 - [ ] Linguistic interpretations qualified.
-- [ ] Copyright attribution not changed without confirmation.
+- [ ] Copyright attribution remains unchanged pending confirmation.
 - [ ] No unsupported security, uptime or reproducibility claims.
 - [ ] No placeholder or broken links.
 
@@ -88,13 +87,17 @@ These checkboxes record approved decisions, not test results.
 
 Record the exact commit, test date, browsers/devices, routes tested, results, defects and reviewer. Test evidence must refer to the exact release candidate.
 
-- [ ] CI checks reviewed.
-- [ ] Browser tests completed.
-- [ ] Deployed page checked separately.
+- [ ] Static HTML checks pass.
+- [ ] Browser tests pass.
+- [ ] Responsive screenshots reviewed.
+- [ ] Deployed page checked separately after an authorised merge.
 - [ ] Release explicitly authorised.
 
-## 8. Change control
+## 8. Change control and current status
 
-Use a reviewed pull request for material website changes. Do not merge or deploy based solely on a successful commit. Keep specification, implementation, testing, verification and release states distinct.
-
-**Current checklist status:** Stage A content and implementation changes are proposed in draft PR #112; deployment, browser verification and release approval remain pending.
+- Stage A PR #112 was merged to `main` on 9 November 2026 at merge commit `e9a0c4c395a731f7082a80e85f88dfcf22ced64a`.
+- This confirms the source merge only; it does not by itself establish successful deployment or independent live-browser verification.
+- The current correction branch is `audit/website-accuracy-reconciliation`.
+- Current correction work is not merged or released. Do not change this status until the corresponding evidence exists.
+- Use a reviewed pull request for material website changes. Do not merge or deploy based solely on a successful commit.
+- Keep specification, implementation, testing, verification and release states distinct.
