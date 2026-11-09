@@ -1,14 +1,14 @@
 # NAKEBUSEN — Brand Implementation Checklist
 
 **Document ID:** NB-BIC-01  
-**Version:** M1 · 30 October 2026  
+**Version:** M2 · 9 November 2026  
 **Status:** Implementation and verification checklist
 
 Status meanings: APPROVED = decision approved; IMPLEMENTED = code changed; TESTED = checks executed; VERIFIED = evidence supports acceptance; RELEASED = deployed and checked.
 
-## 1. Approved M1 decisions
+## 1. Approved brand decisions
 
-- [x] Homepage H1: Beautiful Roots. Sovereign Systems.
+- [x] Homepage H1: Your Beauty ° Your Way. (approved 9 November 2026; supersedes the M1 editorial-first H1)
 - [x] Supporting statement: Craft, technology and culture rooted in African ingenuity.
 - [x] Six-colour palette approved.
 - [x] Typography strategy approved.
@@ -26,7 +26,7 @@ These checkboxes record approved decisions, not test results.
 
 ## 2. Homepage content
 
-- [ ] Hero headline and supporting statement match approved copy.
+- [ ] Hero headline, supporting statement and beauty-first information order match approved copy.
 - [ ] Enterprise introduction matches approved copy.
 - [ ] LOCS and DIGITAL are the two obvious service paths.
 - [ ] LOCS service descriptions and prices match SERVICE-CATALOG.md.
