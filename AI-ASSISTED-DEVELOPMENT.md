@@ -19,3 +19,10 @@ This repository applies the canonical policy to static website code, public copy
 ## Verification
 
 Record commands, browser/device scope, accessibility checks, workflow results and known limitations. A merged PR does not prove deployment; verify the published site separately before claiming release.
+
+
+## Website code and content laundering
+
+Do not use AI or manual rewriting to disguise copied templates, proprietary themes, restricted scripts, third-party copy, photographs or customer material as original website work. Record source repositories and versions for imported components, themes, fonts and dependencies, together with licences and required notices. A visual redesign, renamed CSS classes, minification or generated replacement does not establish independent authorship.
+
+For material public copy, preserve factual source references and human approval. Do not publish a testimonial, project claim, price, payment instruction or deployment claim merely because an AI tool generated it. When provenance is uncertain, hold the affected page or asset from publication and resolve rights before release.
