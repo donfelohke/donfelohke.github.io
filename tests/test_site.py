@@ -89,6 +89,7 @@ check("braiding" not in html.lower() and "shaving" not in html.lower(), "No brai
 check("other locations by arrangement" not in html.lower(), "No unverified location promise")
 check("Buy Goods Till Number: 3511456" in html and "Account / Merchant name: FELIX LWOVA" in html, "Verified M-PESA Buy Goods Till and merchant name must be published")
 check("Confirm FELIX LWOVA and the agreed amount before entering your PIN." in html and "paymentSafety" in html, "Payment instructions must show merchant verification and payment safety")
+check("Pay only after the service and total amount are agreed directly with NAKEBUSEN." in html and "Use the published Buy Goods Till and merchant name shown above." in html, "Payment boundary and fallback instructions match the published payment details")
 check("Support Us" in html and "separate from NAKEBUSEN service payments" in html, "Voluntary support must remain separate from commercial payments")
 check("mailto:mela9ine@proton.me" in html and "tel:+254719635415" in html, "Footer must expose direct email and telephone links")
 check("Eldoret Town / Karibu Mdosi" in html, "Footer must include current service location")
