@@ -22,7 +22,7 @@
 :root[data-theme="dark"]{color-scheme:dark;--paper:#242923;--ink:#F3EEE4;--sage:#8FB4C8;--price:#D6C6A5;--line:rgba(242,239,234,.24);--focus:#D6C6A5;--glass-topbar:rgba(23,61,50,.42);--glass-dock:rgba(23,61,50,.86);--glass-edge:rgba(242,239,234,.22);--glass-shadow:0 12px 36px rgba(0,0,0,.3)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--sans)}
-a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}header a:focus-visible,header button:focus-visible,.floating-dock a:focus-visible{outline-color:#D6C6A5}
 .wrap{width:min(100% - 2rem,920px);margin-inline:auto}
 header{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
 .nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem;padding:.75rem 0}
@@ -72,11 +72,11 @@ header{position:sticky;top:.55rem;z-index:30;background:transparent;border:0;poi
 header .nav{pointer-events:auto;background:var(--paper);border:1px solid var(--glass-edge);border-radius:18px;box-shadow:0 8px 24px rgba(17,17,17,.08);padding:.65rem .85rem}
 @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header .nav{background:var(--glass-topbar);box-shadow:0 10px 28px rgba(17,17,17,.1);backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate))}}
 .hero{position:relative;isolation:isolate;overflow:hidden;padding:clamp(3.5rem,9vw,6rem) 0 3rem;background:radial-gradient(ellipse at 12% 18%,rgba(214,198,165,.16),transparent 42%),radial-gradient(ellipse at 88% 72%,rgba(23,61,50,.12),transparent 44%)}
-.hero .wrap{position:relative;padding:clamp(1.5rem,5vw,3.5rem);border:1px solid rgba(255,255,255,.58);border-radius:26px;background:rgba(255,255,255,.48);box-shadow:0 18px 55px rgba(20,30,24,.12);backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%)}
-:root[data-theme="dark"] .hero .wrap{background:rgba(24,34,28,.7);border-color:rgba(242,239,234,.14)}
+.hero .wrap{position:relative;padding:clamp(1.5rem,5vw,3.5rem);border:1px solid var(--line);border-radius:26px;background:var(--paper);box-shadow:0 18px 55px rgba(20,30,24,.12)}
+:root[data-theme="dark"] .hero .wrap{background:#202823;border-color:rgba(242,239,234,.18)}
 .hero .wrap:after{content:"";position:absolute;right:-2.5rem;top:-3rem;width:10rem;height:10rem;border:1px solid rgba(214,198,165,.5);border-radius:50%;pointer-events:none;opacity:.45}
-.svc{position:relative;padding:1.25rem;border:1px solid rgba(255,255,255,.58);border-top:3px solid var(--clay);border-radius:16px;background:rgba(255,255,255,.48);box-shadow:0 10px 30px rgba(20,30,24,.07);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:transform .2s ease,box-shadow .2s ease}
-:root[data-theme="dark"] .svc{background:rgba(24,34,28,.68);border-color:rgba(242,239,234,.14);border-top-color:var(--clay)}
+.svc{position:relative;padding:1.25rem;border:1px solid var(--line);border-top:3px solid var(--clay);border-radius:16px;background:var(--paper);box-shadow:0 10px 30px rgba(20,30,24,.07);transition:transform .2s ease,box-shadow .2s ease}
+:root[data-theme="dark"] .svc{background:#202823;border-color:rgba(242,239,234,.18);border-top-color:var(--clay)}
 .svc:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(20,30,24,.14)}
 footer{padding:2.5rem 0 calc(7.5rem + env(safe-area-inset-bottom));border-top:1px solid rgba(214,198,165,.38);background:linear-gradient(145deg,#242923 0%,#102D25 100%);color:#F3EEE4}
 footer a{color:#F3EEE4}
@@ -89,7 +89,7 @@ footer a{color:#F3EEE4}
 .footer-contact-grid{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem}
 .footer-contact-grid a{text-decoration:none}
 .footer-location{font-size:.85rem;margin:.3rem 0 0}
-.footer-payment{margin:1.4rem 0;padding:1rem;border:1px solid rgba(214,198,165,.48);border-radius:16px;display:grid;gap:.8rem;background:rgba(255,255,255,.045);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.footer-payment{margin:1.4rem 0;padding:1rem;border:1px solid rgba(214,198,165,.48);border-radius:16px;display:grid;gap:.8rem;background:#303A33}
 .footer-payment h2{margin:0;color:#F3EEE4;font-size:1.2rem}
 .footer-payment h3{margin:.2rem 0;color:#D6C6A5;font-size:.95rem}
 .footer-payment p{margin:.2rem 0;max-width:70ch}
@@ -124,7 +124,7 @@ footer a{color:#F3EEE4}
   --ink:#242923;
   --clay:#A34F3B;
   --ochre:#8B5E16;
-  --sage:#87917A;
+  --sage:#626B58;
   --sandstone:#D6C6A5;
   --price:#173D32;
   --line:rgba(36,41,35,.20);
@@ -410,6 +410,7 @@ const themeKey='nakebusen-theme';
 const languageKey='nakebusen-language';
 const themeToggle=document.getElementById('theme-toggle');
 const languageToggle=document.getElementById('language-toggle');
+const themeMeta=document.querySelector('meta[name="theme-color"]');
 const storage={
 get(key){try{return localStorage.getItem(key);}catch(error){return null;}},
 set(key,value){try{localStorage.setItem(key,value);}catch(error){}}
@@ -488,6 +489,7 @@ artificial:"Habari NAKEBUSEN — ninaulizia huduma ya Artificial Locs Installati
 };
 function applyTheme(theme){
 root.setAttribute('data-theme',theme);
+if(themeMeta)themeMeta.setAttribute('content',theme==='dark'?'#102D25':'#173D32');
 storage.set(themeKey,theme);
 if(themeToggle)themeToggle.setAttribute('aria-label',theme==='dark'?'Switch to light theme':'Switch to dark theme');
 }
