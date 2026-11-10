@@ -31,9 +31,14 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
   };
   const themeButton = element();
   const languageButton = element();
+  const themeMeta = element({ content: "#173D32" });
   const nav = element({ "data-i18n-aria": "navMain" });
   const translated = [
     element({ "data-i18n": "tagline" }),
+    element({ "data-i18n": "heroLead" }),
+    element({ "data-i18n": "heroService" }),
+    element({ "data-i18n": "crownIntro" }),
+    element({ "data-i18n": "founderDesc" }),
     element({ "data-i18n": "svcRetie" }),
     element({ "data-i18n": "role" }),
     element({ "data-i18n": "bookingNote" }),
@@ -54,6 +59,10 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
     getElementById(id) {
       if (id === "theme-toggle") return themeButton;
       if (id === "language-toggle") return languageButton;
+      return null;
+    },
+    querySelector(selector) {
+      if (selector === 'meta[name="theme-color"]') return themeMeta;
       return null;
     },
     querySelectorAll(selector) {
@@ -80,7 +89,7 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
     localStorage: storage,
   };
   vm.runInNewContext(match[1], context);
-  return { root, rootAttributes, themeButton, languageButton, nav, translated, purposes, services, values };
+  return { root, rootAttributes, themeButton, languageButton, themeMeta, nav, translated, purposes, services, values };
 }
 
 const light = boot({ storedTheme: "light" });
@@ -89,19 +98,26 @@ assert.equal(light.themeButton.attributes["aria-label"], "Switch to dark theme")
 light.themeButton.listeners.click();
 assert.equal(light.rootAttributes["data-theme"], "dark", "theme button toggles to dark");
 assert.equal(light.values["nakebusen-theme"], "dark", "theme preference persists");
+assert.equal(light.themeMeta.attributes.content, "#102D25", "theme colour metadata changes to dark forest");
 
 const dark = boot({ storedTheme: "dark" });
 assert.equal(dark.rootAttributes["data-theme"], "dark");
 assert.equal(dark.themeButton.attributes["aria-label"], "Switch to light theme");
+assert.equal(dark.themeMeta.attributes.content, "#102D25", "saved dark theme sets matching browser theme colour");
 
 const system = boot({ systemDark: true });
 assert.equal(system.rootAttributes["data-theme"], "dark", "system preference is used when no saved preference exists");
+assert.equal(system.themeMeta.attributes.content, "#102D25", "system dark preference sets matching browser theme colour");
 
 const language = boot();
 assert.equal(language.root.lang, "en", "English is the default language");
 assert.equal(language.translated[0].textContent, "Your Beauty ° Your Way.");
-assert.equal(language.translated[1].textContent, "Sisterlocs Retie");
-assert.equal(language.translated[2].textContent, "Founder · CTO · Loctician · Creative Technologist");
+assert.match(language.translated[1].textContent, /natural loc care and practical digital services/i);
+assert.match(language.translated[2].textContent, /GNU\\/Linux, computer and network support/i);
+assert.match(language.translated[3].textContent, /starting prices and direct enquiries/i);
+assert.match(language.translated[4].textContent, /^I founded NAKEBUSEN/);
+assert.equal(language.translated[5].textContent, "Sisterlocs Retie");
+assert.equal(language.translated[6].textContent, "Founder · CTO · Loctician · Creative Technologist");
 assert.equal(language.nav.attributes["aria-label"], "Main navigation");
 assert.match(decodeURIComponent(language.purposes[0].href), /enquiring about loc care/, "English general loc enquiry is prefilled");
 assert.match(decodeURIComponent(language.purposes[1].href), /technology project/, "English Digital enquiry is prefilled");
@@ -116,7 +132,11 @@ assert.equal(language.values["nakebusen-language"], "sw", "language preference p
 assert.equal(language.languageButton.attributes["aria-label"], "Badilisha lugha hadi Kiingereza");
 assert.equal(language.nav.attributes["aria-label"], "Urambazaji mkuu");
 assert.equal(language.translated[0].textContent, "Uzuri Wako ° Kwa Namna Yako.");
-assert.equal(language.translated[1].textContent, "Sisterlocs Retie");
+assert.match(language.translated[1].textContent, /Utunzaji wa loc za asili na huduma za kidijitali za vitendo/);
+assert.match(language.translated[2].textContent, /GNU\\/Linux, kompyuta na mitandao katika Eldoret Town/);
+assert.match(language.translated[3].textContent, /bei za kuanzia na maulizo ya moja kwa moja/);
+assert.match(language.translated[4].textContent, /^Nilianzisha NAKEBUSEN/);
+assert.equal(language.translated[5].textContent, "Sisterlocs Retie");
 assert.match(decodeURIComponent(language.purposes[0].href), /ninaulizia huduma za utunzaji wa loc/, "Kiswahili general loc message is updated");
 assert.match(decodeURIComponent(language.purposes[1].href), /ninaulizia mradi wa teknolojia/, "Kiswahili Digital message is updated");
 assert.match(decodeURIComponent(language.purposes[2].href), /huduma za NAKEBUSEN/, "Kiswahili general contact message is updated");
