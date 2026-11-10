@@ -2,7 +2,7 @@
 
 **Document ID:** NB-WDS-01  
 **Version:** M2 · 10 November 2026  
-**Status:** Approved direction · implementation review pending  
+**Status:** Approved direction · contrast/material correction in review branch  
 **Related specification:** [Distinct Native Experience System](./NATIVE-EXPERIENCE-SYSTEM.md)
 
 ## 1. Design direction
@@ -34,7 +34,8 @@ The existing public site remains a lightweight single-page gateway. Distinct sec
 | Warm paper | `#F3EEE4` | Editorial and Locs canvas |
 | Terracotta | `#A34F3B` | NAKEBUSEN identity and active accent |
 | Deep ochre | `#8B5E16` | Heritage highlight |
-| Muted sage | `#87917A` | Technical supporting accent |
+| Muted sage | `#87917A` | Decorative / non-text technical accent; do not use for normal-sized text on warm paper |
+| Text-safe sage | `#626B58` | Muted text on warm paper; approximately 4.83:1 contrast |
 | Sandstone | `#D6C6A5` | Secondary text and highlight |
 
 Use colours according to experience ownership. Do not make every section use every accent. Test each text/control pairing; the palette is not itself proof of WCAG contrast.
@@ -68,6 +69,8 @@ Use colours according to experience ownership. Do not make every section use eve
 - Dock destinations: Locs, Digital, Connect only.
 - Preserve compact language and theme controls.
 - Blur is progressive enhancement, never required for legibility.
+- Keep glass to functional navigation surfaces (topbar and floating dock); hero, service cards and payment instructions use opaque content surfaces.
+- Provide solid defaults before `@supports` backdrop-filter enhancements.
 - Respect reduced-transparency preferences.
 - Maintain visible keyboard focus, safe-area spacing and anchor offsets.
 
@@ -106,7 +109,8 @@ Target WCAG 2.2 AA:
 - semantic landmarks, one H1 and logical heading hierarchy;
 - skip link and visible focus;
 - keyboard-operable controls with accessible names and state;
-- adequate text and interface contrast in both themes;
+- adequate text and interface contrast in both themes; use context-aware focus rings on light and dark navigation surfaces;
+- text-safe sage for normal-sized text on warm paper; decorative sage is not a text colour;
 - touch targets around 44 × 44 CSS px where practical;
 - reduced motion and reduced transparency;
 - language declaration updates with the selected language.
