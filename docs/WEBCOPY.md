@@ -129,7 +129,7 @@ Contact: **WhatsApp +254 719 635 415 · Call 0719 635 415 · mela9ine@proton.me*
 
 Location: **Eldoret Town · Karibu Mdosi · Uasin Gishu · Kenya**.
 
-Payment: request current verified M-PESA Buy Goods details directly through the official NAKEBUSEN WhatsApp contact after agreeing the service and amount. Do not publish the Till number or merchant details until account authority and payment-purpose verification are complete. Never request a PIN or one-time code.
+Payment: the published M-PESA Buy Goods details are **Till 3511456 · Account / Merchant name FELIX LWOVA**. The customer confirms the service and total amount directly with NAKEBUSEN before paying, then verifies the merchant name and amount on the M-PESA confirmation screen before entering a PIN. Never share a PIN or one-time code. Do not change the published details without re-verifying merchant authority and payment purpose.
 
 Independent support: voluntary support for Don Feloh’s creative, cultural and technical work is separate from NAKEBUSEN service payments; ask about available arrangements.
 
