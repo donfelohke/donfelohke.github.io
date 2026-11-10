@@ -46,9 +46,8 @@ Colour ownership:
 - Digital: deep forest canvas; warm ivory text; sage and sandstone supporting accents.
 - Founder: charcoal canvas; warm ivory text; sandstone secondary text; terracotta identity marker.
 - Header: dark forest glass in both themes, with a solid fallback.
-- Floating dock: charcoal glass, with a solid fallback.
+- Floating dock: charcoal glass, with a solid fallback and destination-specific active treatment.
 - Hero, service cards and payment instructions: opaque content surfaces; do not apply glass blur to content.
-- Floating dock: charcoal glass; active destination treatment varies by section.
 
 Do not use palette membership as proof of contrast. Verify every actual foreground/background pair, including focus, hover, active and disabled states, against WCAG 2.2 AA.
 
