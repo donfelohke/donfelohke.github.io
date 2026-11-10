@@ -46,7 +46,7 @@ The footer is primarily informational, not a second section-navigation system. R
 
 - ONLY NAKEBUSEN TRANSACTS.
 - WhatsApp is an enquiry, not a confirmed booking.
-- LOCS starting prices: Retouch & Styling KES 700; Sisterlocs Retie KES 1,500; Artificial Locs Installation KES 3,500.
+- LOCS starting prices: Retouch & Styling KES 700+; Sisterlocs Retie KES 1,500+; Artificial Locs Installation KES 3,500+.
 - DIGITAL is scoped and quoted per engagement.
 - Published M-PESA Buy Goods details: **Till 3511456 · Account / Merchant name FELIX LWOVA**. Changes require re-verification of merchant authority and payment purpose. Payment is due only after the service and total amount are agreed; confirm the merchant name and amount before entering a PIN. Never share a PIN or one-time code.
 - Do not invent street address, map pin or opening hours.
