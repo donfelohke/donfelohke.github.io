@@ -62,6 +62,7 @@ test("approved services, starting prices and enquiry boundary are present", asyn
   await expect(page.locator("footer")).toContainText("Buy Goods Till Number: 3511456");
   await expect(page.locator("footer")).toContainText("Account / Merchant name: FELIX LWOVA");
   await expect(page.locator("footer")).toContainText("M-PESA Buy Goods");
+  await expect(page.locator("footer")).toContainText("Pay only after the service and total amount are agreed directly with NAKEBUSEN.");
 });
 
 test("theme and language controls work and preserve preferences", async ({ page }) => {
