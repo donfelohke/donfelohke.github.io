@@ -48,6 +48,18 @@ section{padding:2.25rem 0;border-top:1px solid var(--line)}h2{font:clamp(1.4rem,
 .list-plain{margin:.35rem 0 0;padding:0;list-style:none}.list-plain li{padding:.45rem 0;border-bottom:1px solid var(--line)}
 footer{padding:2.5rem 0 1.5rem;border-top:1px solid var(--line);font-size:.9rem;color:var(--sage);background:#111;color:#F2EFEA}
 footer a{color:#F2EFEA}.footer-nav{display:flex;flex-wrap:wrap;gap:.9rem;margin:1rem 0}
+.footer-payment{margin:1.5rem 0;padding:1.1rem;border:1px solid rgba(212,175,55,.55);border-radius:8px;display:grid;gap:.8rem}
+.footer-payment h2{margin:0;color:#F2EFEA;font-size:1.25rem}
+.footer-payment h3{margin:.2rem 0;color:#D4AF37;font-size:1rem}
+.footer-payment p{margin:.2rem 0;max-width:70ch}
+.footer-payment ol{margin:.35rem 0;padding-left:1.35rem}
+.footer-payment li{padding:.2rem 0}
+.footer-payment-number{font-size:1.55rem;font-weight:800;letter-spacing:.06em;color:#D4AF37}
+.footer-payment-name{font-weight:750;color:#F2EFEA}
+.footer-payment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem}
+.footer-payment-panel{padding:.85rem;border-top:1px solid rgba(242,239,234,.22)}
+.footer-payment-note{font-size:.82rem;color:#d4d0c8}
+.footer-payment a{display:inline-block;padding:.65rem .85rem;border:1px solid #D4AF37;border-radius:4px;text-decoration:none;font-weight:700;min-height:44px}
 .skip{position:absolute;left:1rem;top:-100px;z-index:50;padding:.6rem 1rem;background:var(--paper)}.skip:focus{top:1rem}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -141,6 +153,37 @@ footer a{color:#F2EFEA}.footer-nav{display:flex;flex-wrap:wrap;gap:.9rem;margin:
 <a href="#connect" data-i18n="navConnect">Connect</a>
 <a href="https://github.com/donfelohke/donfelohke.github.io">GitHub / Source</a>
 </nav>
+<section class="footer-payment" aria-labelledby="footer-payment-title">
+<h2 id="footer-payment-title" data-i18n="paymentTitle">M-PESA Buy Goods · Pay NAKEBUSEN</h2>
+<div class="footer-payment-grid">
+<div class="footer-payment-panel">
+<h3 data-i18n="paymentTillLabel">BUY GOODS TILL NUMBER</h3>
+<p class="footer-payment-number">3511456</p>
+<h3 data-i18n="paymentAccountLabel">ACCOUNT / MERCHANT NAME</h3>
+<p class="footer-payment-name">FELIX LWOVA</p>
+<p class="footer-payment-note" data-i18n="paymentCheck">Before confirming, check that the merchant name displayed by M-PESA matches FELIX LWOVA.</p>
+</div>
+<div class="footer-payment-panel">
+<h3 data-i18n="paymentHowTitle">How to pay</h3>
+<ol>
+<li data-i18n="paymentStep1">Open M-PESA on your phone.</li>
+<li data-i18n="paymentStep2">Select Lipa na M-PESA.</li>
+<li data-i18n="paymentStep3">Select Buy Goods and Services.</li>
+<li data-i18n="paymentStep4">Enter Till number 3511456.</li>
+<li data-i18n="paymentStep5">Enter the amount agreed with NAKEBUSEN.</li>
+<li data-i18n="paymentStep6">Confirm the displayed merchant name is FELIX LWOVA.</li>
+<li data-i18n="paymentStep7">Enter your M-PESA PIN and keep the confirmation message.</li>
+</ol>
+</div>
+</div>
+<p class="footer-payment-note" data-i18n="paymentBoundary">Pay only for a service and amount agreed directly with NAKEBUSEN. An enquiry is not a booking or payment request. Never share your M-PESA PIN or one-time code.</p>
+<div class="footer-payment-panel">
+<h3 data-i18n="supportTitle">Support Us · Support independent work</h3>
+<p data-i18n="supportCopy">To support Don Feloh’s independent creative, cultural and technical work, contact us first for the appropriate support arrangement. Support is voluntary and separate from NAKEBUSEN service payments.</p>
+<a href="https://wa.me/254719635415?text=Hello%20Don%20Feloh%20%E2%80%94%20I%20would%20like%20to%20support%20your%20independent%20creative%20and%20technical%20work.%20Please%20share%20the%20available%20options." data-i18n="supportAction">Ask about supporting the work</a>
+</div>
+<p class="footer-payment-note" data-i18n="paymentHelp">Payment assistance: WhatsApp +254 719 635 415 · Call 0719 635 415.</p>
+</section>
 <p class="small">@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY</p>
 <p class="small">© Felix Lwova · Don Feloh</p>
 </div>
@@ -178,7 +221,7 @@ role:'Founder · CTO · Loctician · Creative Technologist',
 founderDesc:'NAKEBUSEN brings beauty and technology together through practical skill, creative craft and self-determination. WARENA provides the technical foundation. Don Feloh brings the craft, technical direction and creative practice behind the work.',
 connectDesc:'Whether you need loc care or a technology project, get in touch. We discuss suitability, availability, scope and next steps before any work is agreed.',
 call2:'Call 0719 635 415',email:'Email',location:'Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya',
-boundary:'Commercial enquiries route through NAKEBUSEN. An enquiry is not a confirmed booking.'
+paymentTitle:'M-PESA Buy Goods · Pay NAKEBUSEN',paymentTillLabel:'BUY GOODS TILL NUMBER',paymentAccountLabel:'ACCOUNT / MERCHANT NAME',paymentCheck:'Before confirming, check that the merchant name displayed by M-PESA matches FELIX LWOVA.',paymentHowTitle:'How to pay',paymentStep1:'Open M-PESA on your phone.',paymentStep2:'Select Lipa na M-PESA.',paymentStep3:'Select Buy Goods and Services.',paymentStep4:'Enter Till number 3511456.',paymentStep5:'Enter the amount agreed with NAKEBUSEN.',paymentStep6:'Confirm the displayed merchant name is FELIX LWOVA.',paymentStep7:'Enter your M-PESA PIN and keep the confirmation message.',paymentBoundary:'Pay only for a service and amount agreed directly with NAKEBUSEN. An enquiry is not a booking or payment request. Never share your M-PESA PIN or one-time code.',supportTitle:'Support Us · Support independent work',supportCopy:'To support Don Feloh’s independent creative, cultural and technical work, contact us first for the appropriate support arrangement. Support is voluntary and separate from NAKEBUSEN service payments.',supportAction:'Ask about supporting the work',paymentHelp:'Payment assistance: WhatsApp +254 719 635 415 · Call 0719 635 415.',boundary:'Commercial enquiries route through NAKEBUSEN. An enquiry is not a confirmed booking.'
 },
 sw:{
 skip:'Ruka hadi maudhui',navMain:'Urambazaji kuu',navLocs:'Locs',navDigital:'Digital',navConnect:'Wasiliana',
@@ -201,7 +244,7 @@ role:'Mwanzilishi · CTO · Loctician · Creative Technologist',
 founderDesc:'NAKEBUSEN inaunganisha urembo na teknolojia kupitia ujuzi wa vitendo, ubunifu na kujitegemea. WARENA hutoa msingi wa kiufundi. Don Feloh huongoza ufundi, mwelekeo wa kiufundi na ubunifu wa kazi.',
 connectDesc:'Iwe unahitaji utunzaji wa loc au mradi wa teknolojia, wasiliana nasi. Tutajadili kufaa, upatikanaji, upeo na hatua zinazofuata kabla ya kukubaliana kuhusu kazi.',
 call2:'Piga 0719 635 415',email:'Barua pepe',location:'Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya',
-boundary:'Maswali ya kibiashara hupitia NAKEBUSEN. Ombi halithibitishi nafasi.'
+paymentTitle:'M-PESA Buy Goods · Lipa NAKEBUSEN',paymentTillLabel:'NAMBA YA TILL YA BUY GOODS',paymentAccountLabel:'JINA LA AKAUNTI / MFANYABIASHARA',paymentCheck:'Kabla ya kuthibitisha, hakikisha jina linaloonyeshwa na M-PESA ni FELIX LWOVA.',paymentHowTitle:'Jinsi ya kulipa',paymentStep1:'Fungua M-PESA kwenye simu yako.',paymentStep2:'Chagua Lipa na M-PESA.',paymentStep3:'Chagua Buy Goods and Services.',paymentStep4:'Weka namba ya Till 3511456.',paymentStep5:'Weka kiasi mlichokubaliana na NAKEBUSEN.',paymentStep6:'Hakikisha jina la mfanyabiashara ni FELIX LWOVA.',paymentStep7:'Weka PIN yako ya M-PESA na uhifadhi ujumbe wa uthibitisho.',paymentBoundary:'Lipa tu kwa huduma na kiasi mlichokubaliana moja kwa moja na NAKEBUSEN. Kuuliza hakumaanishi nafasi imethibitishwa wala kuwa kuna ombi la malipo. Usishiriki PIN au msimbo wako wa mara moja.',supportTitle:'Tuunge Mkono · Kazi huru',supportCopy:'Ili kuunga mkono kazi huru za ubunifu, utamaduni na teknolojia za Don Feloh, wasiliana nasi kwanza kuhusu njia inayofaa. Msaada ni wa hiari na umetenganishwa na malipo ya huduma za NAKEBUSEN.',supportAction:'Uliza jinsi ya kuunga mkono kazi',paymentHelp:'Msaada wa malipo: WhatsApp +254 719 635 415 · Piga 0719 635 415.',boundary:'Maswali ya kibiashara hupitia NAKEBUSEN. Ombi halithibitishi nafasi.'
 }
 };
 const whatsappMessages={
