@@ -62,6 +62,29 @@ footer a{color:#F2EFEA}.footer-nav{display:flex;flex-wrap:wrap;gap:.9rem;margin:
 .footer-payment a{display:inline-block;padding:.65rem .85rem;border:1px solid #D4AF37;border-radius:4px;text-decoration:none;font-weight:700;min-height:44px}
 .skip{position:absolute;left:1rem;top:-100px;z-index:50;padding:.6rem 1rem;background:var(--paper)}.skip:focus{top:1rem}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Glassmorphism-terminal refinement */
+header{position:sticky;top:.55rem;z-index:30;background:transparent;border:0;pointer-events:none}
+header .nav{pointer-events:auto;background:rgba(242,239,234,.78);border:1px solid rgba(255,255,255,.58);border-radius:18px;box-shadow:0 18px 48px rgba(20,30,24,.12);backdrop-filter:blur(18px) saturate(145%);-webkit-backdrop-filter:blur(18px) saturate(145%);padding:.65rem .85rem}
+:root[data-theme="dark"] header .nav{background:rgba(24,34,28,.78);border-color:rgba(242,239,234,.16)}
+.hero{position:relative;isolation:isolate;overflow:hidden;padding:clamp(3.5rem,9vw,6rem) 0 3rem;background:radial-gradient(ellipse at 12% 18%,rgba(212,175,55,.16),transparent 42%),radial-gradient(ellipse at 88% 72%,rgba(3,53,0,.12),transparent 44%)}
+.hero .wrap{position:relative;padding:clamp(1.5rem,5vw,3.5rem);border:1px solid rgba(255,255,255,.58);border-radius:26px;background:rgba(255,255,255,.48);box-shadow:0 18px 55px rgba(20,30,24,.12);backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%)}
+:root[data-theme="dark"] .hero .wrap{background:rgba(24,34,28,.7);border-color:rgba(242,239,234,.14)}
+.hero .wrap:after{content:"";position:absolute;right:-2.5rem;top:-3rem;width:10rem;height:10rem;border:1px solid rgba(212,175,55,.5);border-radius:50%;pointer-events:none;opacity:.45}
+.svc{position:relative;padding:1.25rem;border:1px solid rgba(255,255,255,.58);border-top:3px solid var(--clay);border-radius:16px;background:rgba(255,255,255,.48);box-shadow:0 10px 30px rgba(20,30,24,.07);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:transform .2s ease,box-shadow .2s ease}
+:root[data-theme="dark"] .svc{background:rgba(24,34,28,.68);border-color:rgba(242,239,234,.14);border-top-color:var(--clay)}
+.svc:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(20,30,24,.14)}
+footer{padding-bottom:7.5rem}
+.floating-dock{position:fixed;z-index:40;left:50%;bottom:max(.75rem,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;align-items:center;gap:.2rem;width:max-content;max-width:calc(100vw - 1.25rem);padding:.45rem;border:1px solid rgba(255,255,255,.52);border-radius:20px;background:rgba(242,239,234,.82);box-shadow:0 16px 48px rgba(0,0,0,.2);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%)}
+:root[data-theme="dark"] .floating-dock{background:rgba(24,34,28,.86);border-color:rgba(242,239,234,.16)}
+.floating-dock a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.1rem;min-width:3.2rem;min-height:3.15rem;padding:.35rem .45rem;border-radius:13px;text-decoration:none;font:600 .68rem var(--sans);color:var(--ink)}
+.floating-dock a:hover,.floating-dock a:focus-visible{background:rgba(212,175,55,.2)}
+.floating-dock .dock-icon{font:700 1rem var(--mono);line-height:1.1}
+.floating-dock .dock-wa{background:var(--forest);color:var(--ivory)}
+@media(min-width:760px){.floating-dock{gap:.5rem;padding:.5rem .65rem}.floating-dock a{flex-direction:row;min-width:5rem;gap:.45rem;padding:.45rem .75rem;font-size:.78rem}}
+@media(max-width:560px){.wrap{width:min(100% - 1.25rem,920px)}.nav{gap:.45rem}.nav-links{gap:.35rem}.nav-links a{font-size:.8rem}.brand{font-size:.98rem}.nav-cta{min-height:2.5rem;padding:.35rem .65rem}}
+@media(prefers-reduced-motion:reduce){.svc{transition:none}.svc:hover{transform:none}}
+
 </style>
 </head>
 <body>
@@ -188,6 +211,7 @@ footer a{color:#F2EFEA}.footer-nav{display:flex;flex-wrap:wrap;gap:.9rem;margin:
 <p class="small">© Felix Lwova · Don Feloh</p>
 </div>
 </footer>
+<nav class="floating-dock" aria-label="Quick navigation"><a href="#top"><span class="dock-icon" aria-hidden="true">⌂</span><span>Home</span></a><a href="#crown"><span class="dock-icon" aria-hidden="true">✳</span><span>Locs</span></a><a href="#code"><span class="dock-icon" aria-hidden="true">⌘</span><span>Digital</span></a><a href="#connect"><span class="dock-icon" aria-hidden="true">↗</span><span>Connect</span></a><a class="dock-wa" href="https://wa.me/254719635415" data-wa-purpose="general"><span class="dock-icon" aria-hidden="true">WA</span><span>Enquire</span></a></nav>
 <script>
 (function(){
 const root=document.documentElement;
