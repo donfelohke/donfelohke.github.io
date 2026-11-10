@@ -1,7 +1,7 @@
 # NAKEBUSEN — Canonical Website Copy
 
 **Document ID:** NB-WC-01  
-**Version:** M5 · 10 November 2026  
+**Version:** M6 · 10 November 2026  
 **Status:** Approved copy baseline  
 **Factual authority:** PUBLIC-FACTS-REGISTER.md · SERVICE-CATALOG.md
 
@@ -17,9 +17,9 @@ Supporting signature: **@donfelohke · #HisGenjeness**
 
 **H1:** Your Beauty ° Your Way.
 
-**Supporting statement:** Rooted in African ingenuity. Bringing together personal craft, practical technology and living culture.
+**Supporting statement:** Natural loc care and practical digital services, bringing together skilled craft, useful technology and living culture.
 
-**Service descriptor:** Natural loc care, thoughtful styling and practical digital services in Eldoret.
+**Service descriptor:** Loc maintenance, styling and practical GNU/Linux, computer and network support in Eldoret Town.
 
 **Location line:** Eldoret Town · Karibu Mdosi · Kenya.
 
@@ -34,7 +34,7 @@ The editorial phrase “Beautiful Roots. Sovereign Systems.” is not the homepa
 
 **Heading:** Your Crown. Your Craft.
 
-Natural loc care, retouch and styling, Sisterlocs Retie and artificial loc installation.
+Natural loc care, maintenance and styling, Sisterlocs Retie and artificial loc installation. Clear service scope, starting prices and direct enquiries.
 
 | Service | Starting price |
 |---|---:|
@@ -44,7 +44,7 @@ Natural loc care, retouch and styling, Sisterlocs Retie and artificial loc insta
 
 Prices are starting points in Kenyan shillings. Final cost depends on the service, loc condition, materials and work required.
 
-**Retouch & Styling description:** Refresh your locs with retouching and a considered finish. Final scope depends on your hair and the work required.\n\n**Sisterlocs Retie description:** Careful retightening for Sisterlocs. Share your current condition and maintenance needs when enquiring.\n\n**Artificial Locs Installation description:** Artificial loc installation, with the method and scope confirmed before work begins.
+**Retouch & Styling description:** Refresh and maintain your existing locs with retouching and styling. Final scope depends on your loc condition and the work required.\n\n**Sisterlocs Retie description:** Careful retightening for established Sisterlocs. Share their current condition and your maintenance needs when enquiring.\n\n**Artificial Locs Installation description:** Artificial loc installation, with the method, materials and scope confirmed before work begins.
 
 **Service boundaries:** No braiding. No shaving. Do not promise unconfirmed home visits or appointment availability. Do not imply official Sisterlocks/Sisterlocs certification, affiliation or endorsement without evidence.
 
@@ -56,7 +56,7 @@ Prices are starting points in Kenyan shillings. Final cost depends on the servic
 
 **Heading:** Freedom Is a System.
 
-Practical support for Linux computers, workstations and networks. Powered by WARENA. We first discuss the problem, assess what is practical and agree on the work before proceeding.
+Practical GNU/Linux, workstation and network support, powered by WARENA. We discuss the problem, assess what is practical and agree on the scope before work begins.
 
 Service areas include:
 - GNU/Linux and workstation support.
@@ -71,15 +71,26 @@ Services are scoped per engagement. Feasibility, deliverables, price and support
 
 **IKAI note:** IKAI Mirror is research into reflective, local-first computing. It is not a released product or a service for purchase. This note is not a current homepage section.
 
+### GitHub and technical work
+
+The website introduces NAKEBUSEN's services. GitHub provides access to the underlying technical work, source code and project documentation. It is an evidence and exploration layer, not a separate commercial or booking channel.
+
+- **WARENA:** https://github.com/donfelohke/WARENA — systems engineering and infrastructure.
+- **FELOH Corpus:** https://github.com/donfelohke/feloh-corpus — project canon and documentation.
+- **Website source:** https://github.com/donfelohke/donfelohke.github.io — website code and change history.
+- **GitHub profile:** https://github.com/donfelohke — wider technical and creative portfolio.
+
+IKAI remains research, not a released product. GENJE remains creative practice, not a separate checkout destination.
+
 ### Connect
 
 **Public name:** Felix Lwova — Don Feloh (provisional display treatment).
 
 **Public role line:** Founder · CTO · Loctician · Creative Technologist.
 
-Founded by Felix Lwova — Don Feloh, NAKEBUSEN brings personal care and practical technology together through independent, hands-on work. WARENA provides the systems-engineering foundation behind the technical services.
+I founded NAKEBUSEN to bring together personal care, skilled craft and practical technology. My work spans natural loc care, GNU/Linux systems, infrastructure and creative technology. WARENA provides the systems-engineering foundation behind the technical services.
 
-Whether you need loc care or a technology project, get in touch. We discuss suitability, availability, scope and next steps before any work is agreed.
+Whether you are enquiring about loc care or a technology project, get in touch. We will discuss suitability, availability, scope and next steps before agreeing on any work.
 
 - WhatsApp / telephone: +254 719 635 415
 - Email: mela9ine@proton.me
