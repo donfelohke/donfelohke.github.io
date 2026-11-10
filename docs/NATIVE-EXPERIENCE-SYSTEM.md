@@ -37,7 +37,8 @@ The current site is a single-page NAKEBUSEN gateway. These are native section ex
 | Warm paper | `#F3EEE4` | Editorial canvas |
 | Terracotta | `#A34F3B` | NAKEBUSEN identity and selected action accents |
 | Deep ochre | `#8B5E16` | Heritage accent; use carefully for text contrast |
-| Muted sage | `#87917A` | Technical secondary accent |
+| Muted sage | `#87917A` | Decorative technical accent; not normal-sized text on warm paper |
+| Text-safe sage | `#626B58` | Muted text on warm paper; approximately 4.83:1 contrast |
 | Sandstone | `#D6C6A5` | Warm secondary text and highlights |
 
 Colour ownership:
@@ -45,6 +46,8 @@ Colour ownership:
 - Digital: deep forest canvas; warm ivory text; sage and sandstone supporting accents.
 - Founder: charcoal canvas; warm ivory text; sandstone secondary text; terracotta identity marker.
 - Header: dark forest glass in both themes, with a solid fallback.
+- Floating dock: charcoal glass, with a solid fallback.
+- Hero, service cards and payment instructions: opaque content surfaces; do not apply glass blur to content.
 - Floating dock: charcoal glass; active destination treatment varies by section.
 
 Do not use palette membership as proof of contrast. Verify every actual foreground/background pair, including focus, hover, active and disabled states, against WCAG 2.2 AA.
@@ -96,7 +99,8 @@ Review at 320, 360, 390, 430, 760, 1024 CSS px and desktop:
 - floating dock does not obscure content or focus;
 - all controls are keyboard operable with visible focus;
 - reduced-motion and reduced-transparency preferences are respected;
-- actual contrast is checked in both themes.
+- actual contrast is checked in both themes, including context-aware focus rings on dark navigation surfaces;
+- decorative sage `#87917A` is not used for normal-sized text on warm paper; use text-safe sage `#626B58`.
 
 Automated static checks do not establish screen-reader, browser, device or WCAG conformance.
 
