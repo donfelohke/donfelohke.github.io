@@ -113,7 +113,7 @@ Preserve:
 - No braiding or shaving claims.
 - No unverified address, opening hours, availability, certification or customer outcomes.
 - An enquiry does not confirm a booking.
-- Do not publish M-PESA merchant details before verification.
+- Use the verified published M-PESA Buy Goods details: **Till 3511456 · Account / Merchant name FELIX LWOVA**. Any change requires re-verification. Pay only after the service and total amount are agreed; verify the merchant and amount before entering a PIN. Never share a PIN or one-time code.
 - IKAI remains research; GENJE remains creative practice; neither becomes a checkout destination by this change.
 
 ## 9. Footer navigation
