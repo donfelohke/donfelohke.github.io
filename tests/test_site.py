@@ -69,7 +69,7 @@ check(html.count("<html") == 1, "Expected one html root")
 check('<html lang="en">' in html, "English must be the default document language")
 check(p.h1_count == 1, f"Expected one h1, found {p.h1_count}")
 check('id="site-navigation"' not in html, "No duplicate header section navigation")
-footer_nav = re.search(r'<div\b(?=[^>]*class="[^"]*\bfooter-nav\b")[^>]*>(.*?)</div>', html, re.S)
+footer_nav = re.search(r'<nav\b(?=[^>]*class="[^"]*\bfooter-nav\b")[^>]*>(.*?)</nav>', html, re.S)
 footer_nav_links = re.findall(r'<a\b[^>]*href="([^"]+)"[^>]*>(.*?)</a>', footer_nav.group(1), re.S) if footer_nav else []
 check(len(footer_nav_links) == 1, "Footer has exactly one minimal repository link")
 check(footer_nav_links[0][0] == "https://github.com/donfelohke?tab=repositories", "Footer repository link uses the canonical GitHub repositories destination")
