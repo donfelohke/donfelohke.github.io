@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased — Homepage, footer and navigation reconciliation (10 November 2026)
+## 2026-11-10 — Homepage, footer and navigation reconciliation
 - Add the @donfeloh founder anchor to primary and footer navigation while retaining Locs, Digital and Connect.
 - Reorganise the footer into identity, contact, payment-enquiry and independent-support areas.
 - Add direct WhatsApp, telephone, email and Eldoret location details to the footer.
