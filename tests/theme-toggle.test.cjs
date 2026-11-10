@@ -38,8 +38,13 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
     element({ "data-i18n": "role" }),
     element({ "data-i18n": "bookingNote" }),
     element({ "data-i18n": "digitalIntro" }),
+    element({ "data-i18n": "navAbout" }),
+    element({ "data-i18n": "footerContactTitle" }),
+    element({ "data-i18n": "footerSignature" }),
+    element({ "data-i18n": "paymentAction" }),
+    element({ "data-i18n": "supportAction" }),
   ];
-  const purposes = ["loc", "tech", "general"].map(value => element({ "data-wa-purpose": value }));
+  const purposes = ["loc", "tech", "general", "payment", "support"].map(value => element({ "data-wa-purpose": value }));
   const services = ["retouch", "retie", "artificial"].map(value => element({ "data-wa-service": value }));
   const values = {};
   if (storedTheme !== null) values["nakebusen-theme"] = storedTheme;
@@ -101,18 +106,22 @@ assert.equal(language.nav.attributes["aria-label"], "Main navigation");
 assert.match(decodeURIComponent(language.purposes[0].href), /enquiring about loc care/, "English general loc enquiry is prefilled");
 assert.match(decodeURIComponent(language.purposes[1].href), /technology project/, "English Digital enquiry is prefilled");
 assert.match(decodeURIComponent(language.purposes[2].href), /make an enquiry/, "English general contact enquiry is prefilled");
+assert.match(decodeURIComponent(language.purposes[3].href), /verified M-PESA Buy Goods payment details/, "English payment enquiry is prefilled");
+assert.match(decodeURIComponent(language.purposes[4].href), /support your independent creative/, "English independent-support enquiry is prefilled");
 assert.match(decodeURIComponent(language.services[1].href), /Sisterlocs Retie/, "English Sisterlocs Retie message matches the service label");
 
 language.languageButton.listeners.click();
 assert.equal(language.root.lang, "sw", "language toggle switches to Kiswahili");
 assert.equal(language.values["nakebusen-language"], "sw", "language preference persists");
 assert.equal(language.languageButton.attributes["aria-label"], "Badilisha lugha hadi Kiingereza");
-assert.equal(language.nav.attributes["aria-label"], "Urambazaji kuu");
+assert.equal(language.nav.attributes["aria-label"], "Urambazaji mkuu");
 assert.equal(language.translated[0].textContent, "Uzuri Wako ° Kwa Namna Yako.");
 assert.equal(language.translated[1].textContent, "Sisterlocs Retie");
 assert.match(decodeURIComponent(language.purposes[0].href), /ninaulizia huduma za utunzaji wa loc/, "Kiswahili general loc message is updated");
 assert.match(decodeURIComponent(language.purposes[1].href), /ninaulizia mradi wa teknolojia/, "Kiswahili Digital message is updated");
 assert.match(decodeURIComponent(language.purposes[2].href), /huduma za NAKEBUSEN/, "Kiswahili general contact message is updated");
+assert.match(decodeURIComponent(language.purposes[3].href), /maelezo yaliyothibitishwa ya malipo/, "Kiswahili payment enquiry is updated");
+assert.match(decodeURIComponent(language.purposes[4].href), /kuunga mkono kazi zako huru/, "Kiswahili independent-support enquiry is updated");
 assert.match(decodeURIComponent(language.services[1].href), /Sisterlocs Retie/, "Kiswahili service message matches the service label");
 
 language.languageButton.listeners.click();

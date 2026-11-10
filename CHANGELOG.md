@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — Homepage, footer and navigation reconciliation (10 November 2026)
+- Add the @donfeloh founder anchor to primary and footer navigation while retaining Locs, Digital and Connect.
+- Reorganise the footer into identity, contact, payment-enquiry and independent-support areas.
+- Add direct WhatsApp, telephone, email and Eldoret location details to the footer.
+- Replace public Till/merchant literals with a verified-payment-details request path pending merchant authority and payment-purpose verification.
+- Preserve the floating mobile dock, English default, Kiswahili toggle, theme control, starting prices and enquiry-not-booking disclosure.
+- Expand structural checks for the navigation anchors, footer contact links and payment publication gate.
+
 ## Unreleased — NAKEBUSEN-ng navigation and visual-token alignment
 - Aligned the header and footer navigation with Locs, Digital, @donfeloh and Connect.
 - Preserved floating mobile quick navigation and secondary links.

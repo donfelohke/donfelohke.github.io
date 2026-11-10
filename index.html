@@ -78,7 +78,29 @@ header .nav{pointer-events:auto;background:rgba(242,239,234,.78);border:1px soli
 .svc{position:relative;padding:1.25rem;border:1px solid rgba(255,255,255,.58);border-top:3px solid var(--clay);border-radius:16px;background:rgba(255,255,255,.48);box-shadow:0 10px 30px rgba(20,30,24,.07);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:transform .2s ease,box-shadow .2s ease}
 :root[data-theme="dark"] .svc{background:rgba(24,34,28,.68);border-color:rgba(242,239,234,.14);border-top-color:var(--clay)}
 .svc:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(20,30,24,.14)}
-footer{padding-bottom:7.5rem}
+footer{padding:2.5rem 0 calc(7.5rem + env(safe-area-inset-bottom));border-top:1px solid rgba(212,175,55,.38);background:linear-gradient(145deg,#111 0%,#17231b 100%);color:#F2EFEA}
+footer a{color:#F2EFEA}
+.footer-lockup{font:700 1.1rem var(--serif);margin:0}
+.footer-role,.footer-location,.footer-payment-note{color:#d4d0c8}
+.footer-nav{display:flex;flex-wrap:wrap;gap:.55rem 1rem;margin:1rem 0 1.5rem}
+.footer-nav a,.footer-contact-grid a{min-height:44px;display:inline-flex;align-items:center}
+.footer-contact{margin:1.2rem 0;padding:1rem 0;border-top:1px solid rgba(242,239,234,.18);border-bottom:1px solid rgba(242,239,234,.18)}
+.footer-contact h2,.footer-support h2{font:600 1.1rem var(--serif);margin:0 0 .5rem;color:#F2EFEA}
+.footer-contact-grid{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem}
+.footer-contact-grid a{text-decoration:none}
+.footer-location{font-size:.85rem;margin:.3rem 0 0}
+.footer-payment{margin:1.4rem 0;padding:1rem;border:1px solid rgba(212,175,55,.48);border-radius:16px;display:grid;gap:.8rem;background:rgba(255,255,255,.045);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.footer-payment h2{margin:0;color:#F2EFEA;font-size:1.2rem}
+.footer-payment h3{margin:.2rem 0;color:#D4AF37;font-size:.95rem}
+.footer-payment p{margin:.2rem 0;max-width:70ch}
+.footer-payment ol{margin:.35rem 0;padding-left:1.35rem}
+.footer-payment li{padding:.25rem 0}
+.footer-payment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:.7rem}
+.footer-payment-panel{padding:.85rem;border-top:1px solid rgba(242,239,234,.2)}
+.footer-payment-note{font-size:.82rem;color:#d4d0c8}
+.footer-payment a,.footer-support a{display:inline-flex;align-items:center;justify-content:center;padding:.65rem .85rem;border:1px solid #D4AF37;border-radius:8px;text-decoration:none;font-weight:700;min-height:44px;width:fit-content;max-width:100%}
+.footer-support{margin:1.4rem 0;padding:1rem;border:1px solid rgba(242,239,234,.18);border-radius:16px;background:rgba(255,255,255,.035)}
+.footer-signature{margin:1.2rem 0 .4rem;color:#D4AF37;font:600 .78rem var(--mono);letter-spacing:.04em}
 .floating-dock{position:fixed;z-index:40;left:50%;bottom:max(.75rem,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;align-items:center;gap:.2rem;width:max-content;max-width:calc(100vw - 1.25rem);padding:.45rem;border:1px solid rgba(255,255,255,.52);border-radius:20px;background:rgba(242,239,234,.82);box-shadow:0 16px 48px rgba(0,0,0,.2);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%)}
 :root[data-theme="dark"] .floating-dock{background:rgba(24,34,28,.86);border-color:rgba(242,239,234,.16)}
 .floating-dock a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.1rem;min-width:3.2rem;min-height:3.15rem;padding:.35rem .45rem;border-radius:13px;text-decoration:none;font:600 .68rem var(--sans);color:var(--ink)}
@@ -99,6 +121,7 @@ footer{padding-bottom:7.5rem}
 <nav id="site-navigation" class="nav-links" aria-label="Main navigation" data-i18n-aria="navMain">
 <a href="#crown" data-i18n="navLocs">Locs</a>
 <a href="#code" data-i18n="navDigital">Digital</a>
+<a href="#founder" data-i18n="navAbout">@donfeloh</a>
 <a href="#connect" data-i18n="navConnect">Connect</a>
 </nav>
 <div class="nav-right">
@@ -154,7 +177,7 @@ footer{padding-bottom:7.5rem}
 <section id="connect">
 <div class="wrap">
 <p class="section-kicker" data-i18n="connectKicker">Connect</p>
-<h2 data-i18n="founderTitle">Felix Lwova — Don Feloh</h2>
+<h2 id="founder" data-i18n="founderTitle">Felix Lwova — Don Feloh</h2>
 <p class="muted" data-i18n="role">Founder · CTO · Loctician · Creative Technologist</p>
 <p data-i18n="founderDesc">NAKEBUSEN brings beauty and technology together through practical skill, creative craft and self-determination. WARENA provides the technical foundation. Don Feloh brings the craft, technical direction and creative practice behind the work.</p>
 <p data-i18n="connectDesc">Whether you need loc care or a technology project, get in touch. We discuss suitability, availability, scope and next steps before any work is agreed.</p>
@@ -172,45 +195,51 @@ footer{padding-bottom:7.5rem}
 </main>
 <footer>
 <div class="wrap">
-<p><strong>NAKEBUSEN</strong> Locs ° Powered by WARENA</p>
+<p class="footer-lockup"><strong>NAKEBUSEN</strong> Locs ° Powered by WARENA</p>
+<p class="footer-role" data-i18n="role">Founder · CTO · Loctician · Creative Technologist</p>
 <nav class="footer-nav" aria-label="Footer navigation" data-i18n-aria="navFooter">
 <a href="#crown" data-i18n="navLocs">Locs</a>
 <a href="#code" data-i18n="navDigital">Digital</a>
+<a href="#founder" data-i18n="navAbout">@donfeloh</a>
 <a href="#connect" data-i18n="navConnect">Connect</a>
 <a href="https://github.com/donfelohke/donfelohke.github.io">GitHub / Source</a>
 </nav>
+<div class="footer-contact" aria-labelledby="footer-contact-title">
+<h2 id="footer-contact-title" data-i18n="footerContactTitle">Contact NAKEBUSEN</h2>
+<div class="footer-contact-grid">
+<a href="https://wa.me/254719635415" data-wa-purpose="general">WhatsApp · +254 719 635 415</a>
+<a href="tel:+254719635415" data-i18n="call2">Call 0719 635 415</a>
+<a href="mailto:mela9ine@proton.me">mela9ine@proton.me</a>
+</div>
+<p class="footer-location" data-i18n="location">Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya</p>
+</div>
 <section class="footer-payment" aria-labelledby="footer-payment-title">
-<h2 id="footer-payment-title" data-i18n="paymentTitle">M-PESA Buy Goods · Pay NAKEBUSEN</h2>
+<h2 id="footer-payment-title" data-i18n="paymentTitle">M-PESA Buy Goods · Request payment details</h2>
+<p data-i18n="paymentIntro">For an agreed NAKEBUSEN service, request the current verified Buy Goods details directly through our official WhatsApp contact.</p>
 <div class="footer-payment-grid">
 <div class="footer-payment-panel">
-<h3 data-i18n="paymentTillLabel">BUY GOODS TILL NUMBER</h3>
-<p class="footer-payment-number">3511456</p>
-<h3 data-i18n="paymentAccountLabel">ACCOUNT / MERCHANT NAME</h3>
-<p class="footer-payment-name">FELIX LWOVA</p>
-<p class="footer-payment-note" data-i18n="paymentCheck">Before confirming, check that the merchant name displayed by M-PESA matches FELIX LWOVA.</p>
-</div>
-<div class="footer-payment-panel">
-<h3 data-i18n="paymentHowTitle">How to pay</h3>
+<h3 data-i18n="paymentHowTitle">Before you pay</h3>
 <ol>
-<li data-i18n="paymentStep1">Open M-PESA on your phone.</li>
-<li data-i18n="paymentStep2">Select Lipa na M-PESA.</li>
-<li data-i18n="paymentStep3">Select Buy Goods and Services.</li>
-<li data-i18n="paymentStep4">Enter Till number 3511456.</li>
-<li data-i18n="paymentStep5">Enter the amount agreed with NAKEBUSEN.</li>
-<li data-i18n="paymentStep6">Confirm the displayed merchant name is FELIX LWOVA.</li>
-<li data-i18n="paymentStep7">Enter your M-PESA PIN and keep the confirmation message.</li>
+<li data-i18n="paymentStep1">Confirm the service and total amount directly with NAKEBUSEN.</li>
+<li data-i18n="paymentStep2">Request the current verified Buy Goods payment details through WhatsApp.</li>
+<li data-i18n="paymentStep3">Before entering your PIN, check that the merchant name shown by M-PESA matches the details confirmed directly.</li>
+<li data-i18n="paymentStep4">Keep your M-PESA confirmation message.</li>
 </ol>
 </div>
-</div>
-<p class="footer-payment-note" data-i18n="paymentBoundary">Pay only for a service and amount agreed directly with NAKEBUSEN. An enquiry is not a booking or payment request. Never share your M-PESA PIN or one-time code.</p>
 <div class="footer-payment-panel">
-<h3 data-i18n="supportTitle">Support Us · Support independent work</h3>
-<p data-i18n="supportCopy">To support Don Feloh’s independent creative, cultural and technical work, contact us first for the appropriate support arrangement. Support is voluntary and separate from NAKEBUSEN service payments.</p>
-<a href="https://wa.me/254719635415?text=Hello%20Don%20Feloh%20%E2%80%94%20I%20would%20like%20to%20support%20your%20independent%20creative%20and%20technical%20work.%20Please%20share%20the%20available%20options." data-i18n="supportAction">Ask about supporting the work</a>
+<h3 data-i18n="paymentSafetyTitle">Payment safety</h3>
+<p data-i18n="paymentSafety">Never share your M-PESA PIN or one-time code. Do not pay an amount that has not been agreed directly with NAKEBUSEN.</p>
+<a href="https://wa.me/254719635415" data-wa-purpose="payment" data-i18n="paymentAction">Request verified payment details</a>
 </div>
-<p class="footer-payment-note" data-i18n="paymentHelp">Payment assistance: WhatsApp +254 719 635 415 · Call 0719 635 415.</p>
+</div>
+<p class="footer-payment-note" data-i18n="paymentBoundary">An enquiry is not a booking or payment request. Payment details are shared directly after the service and amount are agreed.</p>
 </section>
-<p class="small">@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY</p>
+<section class="footer-support" aria-labelledby="footer-support-title">
+<h2 id="footer-support-title" data-i18n="supportTitle">Support Us · Support independent work</h2>
+<p data-i18n="supportCopy">Support Don Feloh’s independent creative, cultural and technical work. Support is voluntary and separate from NAKEBUSEN service payments; contact us first for available arrangements.</p>
+<a href="https://wa.me/254719635415" data-wa-purpose="support" data-i18n="supportAction">Ask about supporting the work</a>
+</section>
+<p class="footer-signature" data-i18n="footerSignature">@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY</p>
 <p class="small">© Felix Lwova · Don Feloh</p>
 </div>
 </footer>
@@ -228,7 +257,7 @@ set(key,value){try{localStorage.setItem(key,value);}catch(error){}}
 };
 const copy={
 en:{
-skip:'Skip to content',navMain:'Main navigation',navFooter:'Footer navigation',navQuick:'Quick navigation',dockHome:'Home',dockEnquire:'Enquire',navLocs:'Locs',navDigital:'Digital',navConnect:'Connect',
+skip:'Skip to content',navMain:'Main navigation',navFooter:'Footer navigation',navQuick:'Quick navigation',dockHome:'Home',dockEnquire:'Enquire',navLocs:'Locs',navDigital:'Digital',navAbout:'@donfeloh',navConnect:'Connect',footerContactTitle:'Contact NAKEBUSEN',footerSignature:'@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY',
 eyebrow:'NAKEBUSEN Locs ° Powered by WARENA',tagline:'Your Beauty ° Your Way.',
 heroLead:'Craft, technology and culture rooted in African ingenuity.',heroService:'Natural loc care.',
 heroStatus:'Eldoret Town · Karibu Mdosi · Kenya.',
@@ -248,10 +277,10 @@ role:'Founder · CTO · Loctician · Creative Technologist',
 founderDesc:'NAKEBUSEN brings beauty and technology together through practical skill, creative craft and self-determination. WARENA provides the technical foundation. Don Feloh brings the craft, technical direction and creative practice behind the work.',
 connectDesc:'Whether you need loc care or a technology project, get in touch. We discuss suitability, availability, scope and next steps before any work is agreed.',
 call2:'Call 0719 635 415',email:'Email',location:'Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya',
-paymentTitle:'M-PESA Buy Goods · Pay NAKEBUSEN',paymentTillLabel:'BUY GOODS TILL NUMBER',paymentAccountLabel:'ACCOUNT / MERCHANT NAME',paymentCheck:'Before confirming, check that the merchant name displayed by M-PESA matches FELIX LWOVA.',paymentHowTitle:'How to pay',paymentStep1:'Open M-PESA on your phone.',paymentStep2:'Select Lipa na M-PESA.',paymentStep3:'Select Buy Goods and Services.',paymentStep4:'Enter Till number 3511456.',paymentStep5:'Enter the amount agreed with NAKEBUSEN.',paymentStep6:'Confirm the displayed merchant name is FELIX LWOVA.',paymentStep7:'Enter your M-PESA PIN and keep the confirmation message.',paymentBoundary:'Pay only for a service and amount agreed directly with NAKEBUSEN. An enquiry is not a booking or payment request. Never share your M-PESA PIN or one-time code.',supportTitle:'Support Us · Support independent work',supportCopy:'To support Don Feloh’s independent creative, cultural and technical work, contact us first for the appropriate support arrangement. Support is voluntary and separate from NAKEBUSEN service payments.',supportAction:'Ask about supporting the work',paymentHelp:'Payment assistance: WhatsApp +254 719 635 415 · Call 0719 635 415.',boundary:'Commercial enquiries route through NAKEBUSEN. An enquiry is not a confirmed booking.'
+paymentTitle:'M-PESA Buy Goods · Request payment details',paymentIntro:'For an agreed NAKEBUSEN service, request the current verified Buy Goods details directly through our official WhatsApp contact.',paymentHowTitle:'Before you pay',paymentStep1:'Confirm the service and total amount directly with NAKEBUSEN.',paymentStep2:'Request the current verified Buy Goods payment details through WhatsApp.',paymentStep3:'Before entering your PIN, check that the merchant name shown by M-PESA matches the details confirmed directly.',paymentStep4:'Keep your M-PESA confirmation message.',paymentSafetyTitle:'Payment safety',paymentSafety:'Never share your M-PESA PIN or one-time code. Do not pay an amount that has not been agreed directly with NAKEBUSEN.',paymentAction:'Request verified payment details',paymentBoundary:'An enquiry is not a booking or payment request. Payment details are shared directly after the service and amount are agreed.',supportTitle:'Support Us · Support independent work',supportCopy:'Support Don Feloh’s independent creative, cultural and technical work. Support is voluntary and separate from NAKEBUSEN service payments; contact us first for available arrangements.',supportAction:'Ask about supporting the work',boundary:'Commercial enquiries route through NAKEBUSEN. An enquiry is not a confirmed booking.'
 },
 sw:{
-skip:'Ruka hadi maudhui',navMain:'Urambazaji mkuu',navFooter:'Urambazaji wa chini',navQuick:'Urambazaji wa haraka',dockHome:'Mwanzo',dockEnquire:'Uliza',navLocs:'Locs',navDigital:'Digital',navConnect:'Wasiliana',
+skip:'Ruka hadi maudhui',navMain:'Urambazaji mkuu',navFooter:'Urambazaji wa chini',navQuick:'Urambazaji wa haraka',dockHome:'Mwanzo',dockEnquire:'Uliza',navLocs:'Locs',navDigital:'Digital',navAbout:'@donfeloh',navConnect:'Wasiliana',footerContactTitle:'Wasiliana na NAKEBUSEN',footerSignature:'@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY',
 eyebrow:'NAKEBUSEN Locs ° Powered by WARENA',tagline:'Uzuri Wako ° Kwa Namna Yako.',
 heroLead:'Ufundi, teknolojia na utamaduni wenye mizizi katika ubunifu wa Kiafrika.',heroService:'Utunzaji wa locs asilia.',
 heroStatus:'Eldoret Town · Karibu Mdosi · Kenya.',
@@ -271,7 +300,7 @@ role:'Mwanzilishi · CTO · Loctician · Creative Technologist',
 founderDesc:'NAKEBUSEN inaunganisha urembo na teknolojia kupitia ujuzi wa vitendo, ubunifu na kujitegemea. WARENA hutoa msingi wa kiufundi. Don Feloh huongoza ufundi, mwelekeo wa kiufundi na ubunifu wa kazi.',
 connectDesc:'Iwe unahitaji utunzaji wa loc au mradi wa teknolojia, wasiliana nasi. Tutajadili kufaa, upatikanaji, upeo na hatua zinazofuata kabla ya kukubaliana kuhusu kazi.',
 call2:'Piga 0719 635 415',email:'Barua pepe',location:'Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya',
-paymentTitle:'M-PESA Buy Goods · Lipa NAKEBUSEN',paymentTillLabel:'NAMBA YA TILL YA BUY GOODS',paymentAccountLabel:'JINA LA AKAUNTI / MFANYABIASHARA',paymentCheck:'Kabla ya kuthibitisha, hakikisha jina linaloonyeshwa na M-PESA ni FELIX LWOVA.',paymentHowTitle:'Jinsi ya kulipa',paymentStep1:'Fungua M-PESA kwenye simu yako.',paymentStep2:'Chagua Lipa na M-PESA.',paymentStep3:'Chagua Buy Goods and Services.',paymentStep4:'Weka namba ya Till 3511456.',paymentStep5:'Weka kiasi mlichokubaliana na NAKEBUSEN.',paymentStep6:'Hakikisha jina la mfanyabiashara ni FELIX LWOVA.',paymentStep7:'Weka PIN yako ya M-PESA na uhifadhi ujumbe wa uthibitisho.',paymentBoundary:'Lipa tu kwa huduma na kiasi mlichokubaliana moja kwa moja na NAKEBUSEN. Kuuliza hakumaanishi nafasi imethibitishwa wala kuwa kuna ombi la malipo. Usishiriki PIN au msimbo wako wa mara moja.',supportTitle:'Tuunge Mkono · Kazi huru',supportCopy:'Ili kuunga mkono kazi huru za ubunifu, utamaduni na teknolojia za Don Feloh, wasiliana nasi kwanza kuhusu njia inayofaa. Msaada ni wa hiari na umetenganishwa na malipo ya huduma za NAKEBUSEN.',supportAction:'Uliza jinsi ya kuunga mkono kazi',paymentHelp:'Msaada wa malipo: WhatsApp +254 719 635 415 · Piga 0719 635 415.',boundary:'Maswali ya kibiashara hupitia NAKEBUSEN. Ombi halithibitishi nafasi.'
+paymentTitle:'M-PESA Buy Goods · Omba maelezo ya malipo',paymentIntro:'Kwa huduma ya NAKEBUSEN mliyokubaliana, omba maelezo ya sasa yaliyothibitishwa ya Buy Goods kupitia WhatsApp yetu rasmi.',paymentHowTitle:'Kabla ya kulipa',paymentStep1:'Thibitisha huduma na jumla ya kiasi moja kwa moja na NAKEBUSEN.',paymentStep2:'Omba maelezo ya sasa yaliyothibitishwa ya malipo ya Buy Goods kupitia WhatsApp.',paymentStep3:'Kabla ya kuweka PIN, hakikisha jina la mfanyabiashara linaloonyeshwa na M-PESA linalingana na maelezo mliyothibitisha moja kwa moja.',paymentStep4:'Hifadhi ujumbe wa uthibitisho wa M-PESA.',paymentSafetyTitle:'Usalama wa malipo',paymentSafety:'Usishiriki PIN yako ya M-PESA au msimbo wa mara moja. Usilipe kiasi ambacho hamjakubaliana moja kwa moja na NAKEBUSEN.',paymentAction:'Omba maelezo yaliyothibitishwa ya malipo',paymentBoundary:'Kuuliza hakuthibitishi nafasi wala ombi la malipo. Maelezo ya malipo hushirikiwa moja kwa moja baada ya kukubaliana kuhusu huduma na kiasi.',supportTitle:'Tuunge Mkono · Kazi huru',supportCopy:'Saidia kazi huru za ubunifu, utamaduni na teknolojia za Don Feloh. Msaada ni wa hiari na umetenganishwa na malipo ya huduma za NAKEBUSEN; wasiliana nasi kwanza kuhusu njia zinazopatikana.',supportAction:'Uliza jinsi ya kuunga mkono kazi',boundary:'Maswali ya kibiashara hupitia NAKEBUSEN. Ombi halithibitishi nafasi.'
 }
 };
 const whatsappMessages={
@@ -279,6 +308,8 @@ en:{
 loc:"Hello NAKEBUSEN — I'm enquiring about loc care. I'd like to discuss my requirements.",
 tech:"Hello NAKEBUSEN — I'm enquiring about a technology project. I'd like to discuss my requirements.",
 general:"Hello NAKEBUSEN — I'd like to make an enquiry. Please let me know the next steps.",
+payment:"Hello NAKEBUSEN — please share the current verified M-PESA Buy Goods payment details for my agreed service.",
+support:"Hello Don Feloh — I would like to support your independent creative and technical work. Please share the available options.",
 retouch:"Hello NAKEBUSEN — I'm enquiring about Retouch & Styling. I'd like to discuss my requirements.",
 retie:"Hello NAKEBUSEN — I'm enquiring about Sisterlocs Retie. I'd like to discuss my requirements.",
 artificial:"Hello NAKEBUSEN — I'm enquiring about Artificial Locs Installation. I'd like to discuss my requirements."
@@ -287,6 +318,8 @@ sw:{
 loc:"Habari NAKEBUSEN — ninaulizia huduma za utunzaji wa loc. Ningependa kujadili mahitaji yangu.",
 tech:"Habari NAKEBUSEN — ninaulizia mradi wa teknolojia. Ningependa kujadili mahitaji yangu.",
 general:"Habari NAKEBUSEN — ningependa kuuliza kuhusu huduma za NAKEBUSEN. Tafadhali nijulishe hatua zinazofuata.",
+payment:"Habari NAKEBUSEN — tafadhali nitumie maelezo yaliyothibitishwa ya malipo ya M-PESA Buy Goods kwa huduma tuliyokubaliana.",
+support:"Habari Don Feloh — ningependa kuunga mkono kazi zako huru za ubunifu na teknolojia. Tafadhali nitumie njia zinazopatikana.",
 retouch:"Habari NAKEBUSEN — ninaulizia huduma ya Retouch & Styling. Ningependa kujadili mahitaji yangu.",
 retie:"Habari NAKEBUSEN — ninaulizia huduma ya Sisterlocs Retie. Ningependa kujadili mahitaji yangu.",
 artificial:"Habari NAKEBUSEN — ninaulizia huduma ya Artificial Locs Installation. Ningependa kujadili mahitaji yangu."
