@@ -245,6 +245,29 @@ header #theme-toggle,header #language-toggle{
   .experience,.experience *{scroll-behavior:auto}
 }
 
+
+/* Minimal footer repository navigation */
+footer .footer-nav{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+  margin:.85rem 0 .65rem;
+  padding-top:.75rem;
+  border-top:1px solid rgba(214,198,165,.24);
+  font-size:.82rem;
+}
+footer .footer-nav a{
+  color:#D6C6A5;
+  text-decoration:underline;
+  text-decoration-color:rgba(214,198,165,.48);
+  text-underline-offset:.22em;
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+}
+footer .footer-nav a:hover{color:#F3EEE4}
+footer .footer-nav a:focus-visible{outline:2px solid #D6C6A5;outline-offset:3px}
+
 </style>
 </head>
 <body>
@@ -370,6 +393,7 @@ header #theme-toggle,header #language-toggle{
 <p data-i18n="supportCopy">Support Don Feloh’s independent creative, cultural and technical work. Support is voluntary and separate from NAKEBUSEN service payments; contact us first for available arrangements.</p>
 <a href="https://wa.me/254719635415" data-wa-purpose="support" data-i18n="supportAction">Ask about supporting the work</a>
 </section>
+<nav class="footer-nav" aria-label="Repository navigation"><a href="https://github.com/donfelohke?tab=repositories">GitHub repositories ↗</a></nav>
 <p class="footer-signature" data-i18n="footerSignature">@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY</p>
 <p class="small">© Felix Lwova · Don Feloh</p>
 </div>
