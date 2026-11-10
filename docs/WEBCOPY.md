@@ -1,7 +1,7 @@
 # NAKEBUSEN — Canonical Website Copy
 
 **Document ID:** NB-WC-01  
-**Version:** M4 · 10 November 2026  
+**Version:** M5 · 10 November 2026  
 **Status:** Approved copy baseline  
 **Factual authority:** PUBLIC-FACTS-REGISTER.md · SERVICE-CATALOG.md
 
@@ -17,9 +17,9 @@ Supporting signature: **@donfelohke · #HisGenjeness**
 
 **H1:** Your Beauty ° Your Way.
 
-**Supporting statement:** Craft, technology and culture rooted in African ingenuity.
+**Supporting statement:** Rooted in African ingenuity. Bringing together personal craft, practical technology and living culture.
 
-**Service descriptor:** Natural loc care.
+**Service descriptor:** Natural loc care, thoughtful styling and practical digital services in Eldoret.
 
 **Location line:** Eldoret Town · Karibu Mdosi · Kenya.
 
@@ -44,7 +44,7 @@ Natural loc care, retouch and styling, Sisterlocs Retie and artificial loc insta
 
 Prices are starting points in Kenyan shillings. Final cost depends on the service, loc condition, materials and work required.
 
-**Sisterlocs Retie description:** Retightening for established Sisterlocs; suitability is confirmed before work.
+**Retouch & Styling description:** Refresh your locs with retouching and a considered finish. Final scope depends on your hair and the work required.\n\n**Sisterlocs Retie description:** Careful retightening for Sisterlocs. Share your current condition and maintenance needs when enquiring.\n\n**Artificial Locs Installation description:** Artificial loc installation, with the method and scope confirmed before work begins.
 
 **Service boundaries:** No braiding. No shaving. Do not promise unconfirmed home visits or appointment availability. Do not imply official Sisterlocks/Sisterlocs certification, affiliation or endorsement without evidence.
 
@@ -56,7 +56,7 @@ Prices are starting points in Kenyan shillings. Final cost depends on the servic
 
 **Heading:** Freedom Is a System.
 
-Practical GNU/Linux, workstation and network support. Powered by WARENA. Scope and feasibility agreed per engagement.
+Practical support for Linux computers, workstations and networks. Powered by WARENA. We first discuss the problem, assess what is practical and agree on the work before proceeding.
 
 Service areas include:
 - GNU/Linux and workstation support.
@@ -77,7 +77,7 @@ Services are scoped per engagement. Feasibility, deliverables, price and support
 
 **Public role line:** Founder · CTO · Loctician · Creative Technologist.
 
-NAKEBUSEN brings beauty and technology together through practical skill, creative craft and self-determination. WARENA provides the technical foundation. Don Feloh brings the craft, technical direction and creative practice behind the work.
+Founded by Felix Lwova — Don Feloh, NAKEBUSEN brings personal care and practical technology together through independent, hands-on work. WARENA provides the systems-engineering foundation behind the technical services.
 
 Whether you need loc care or a technology project, get in touch. We discuss suitability, availability, scope and next steps before any work is agreed.
 
@@ -117,9 +117,9 @@ Independent support: voluntary support for Don Feloh’s creative, cultural and 
 
 ## Metadata
 
-**Title:** NAKEBUSEN — Your Beauty ° Your Way.
+**Title:** NAKEBUSEN Loc Care & Digital Services · Eldoret, Kenya
 
-**Description:** NAKEBUSEN provides natural loc care in Eldoret Town, Kenya. Explore loc-care services and enquire directly on WhatsApp.
+**Description:** NAKEBUSEN offers natural loc care in Eldoret Town, Kenya, alongside practical Linux, workstation and network support. Enquire directly on WhatsApp.
 
 Canonical URL: https://donfelohke.github.io/
 
@@ -132,7 +132,7 @@ All WhatsApp enquiry links must change their pre-filled message when the languag
 ## Editorial rules
 
 - Put clear service information and next steps before identity or philosophy.
-- Use the approved beauty-first headline and preserve the supporting statement.
+- Use the approved beauty-first headline. Keep the supporting statement clear, human and connected to the actual offer.
 - Do not claim guaranteed availability or confirmed bookings.
 - Do not advertise braiding, shaving or unconfirmed home visits.
 - Do not present IKAI as a product.
