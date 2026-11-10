@@ -2,7 +2,7 @@
 
 **Document ID:** NB-WDS-01  
 **Version:** M2 · 10 November 2026  
-**Status:** Approved direction · contrast/material correction in review branch  
+**Status:** Approved direction · contrast/material correction merged to `main`; final browser verification pending  
 **Related specification:** [Distinct Native Experience System](./NATIVE-EXPERIENCE-SYSTEM.md)
 
 ## 1. Design direction
