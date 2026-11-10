@@ -135,7 +135,7 @@ assert.equal(language.languageButton.attributes["aria-label"], "Badilisha lugha 
 assert.equal(language.nav.attributes["aria-label"], "Urambazaji mkuu");
 assert.equal(language.translated[0].textContent, "Uzuri Wako ° Kwa Namna Yako.");
 assert.match(language.translated[1].textContent, /Utunzaji wa loc za asili Eldoret Town.*WARENA/);
-assert.match(language.translated[2].textContent, /Bei ni za kuanzia na maulizo ya moja kwa moja/);
+assert.match(language.translated[2].textContent, /bei za kuanzia na maulizo ya moja kwa moja/);
 assert.match(language.translated[3].textContent, /^Nilianzisha NAKEBUSEN/);
 assert.equal(language.translated[4].textContent, "Sisterlocs Retie");
 assert.equal(language.translated[5].textContent, "Mwanzilishi · CTO · Loctician · Creative Technologist");
