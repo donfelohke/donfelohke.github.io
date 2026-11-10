@@ -38,7 +38,10 @@ test("single bottom navigation exposes exactly Locs, Digital and Connect", async
     await dock.getByRole("link", { name: "Connect" }).click();
     await expect(page.locator("#connect")).toBeVisible();
     await expect(page.locator("#site-navigation")).toHaveCount(0);
-    await expect(page.locator("footer .footer-nav")).toHaveCount(0);
+    const footerRepositories = page.locator("footer .footer-nav a");
+    await expect(footerRepositories).toHaveCount(1);
+    await expect(footerRepositories).toHaveText("GitHub repositories");
+    await expect(footerRepositories).toHaveAttribute("href", "https://github.com/donfelohke?tab=repositories");
     await expect(page.locator("header .brand")).toBeVisible();
     await expect(page.locator("#language-toggle")).toBeVisible();
     await expect(page.locator("#theme-toggle")).toBeVisible();
@@ -120,9 +123,34 @@ test("contact destinations and commercial routing are correct", async ({ page })
   await expect(page.locator("#connect")).toContainText("Eldoret Town / Karibu Mdosi");
 });
 
-test("keyboard focus is visible on interactive controls", async ({ page }) => {
+test("keyboard focus is visible on interactive controls and dark surfaces", async ({ page }) => {
   await page.goto(pageUrl);
   await page.keyboard.press("Tab");
   await expect(page.locator(".skip")).toBeFocused();
   await expect(page.locator(".skip")).toBeVisible();
+
+  for (const selector of ["#code a", "#connect a", "footer a"]) {
+    const control = page.locator(selector).first();
+    await control.focus();
+    const focus = await control.evaluate(el => ({
+      visible: el.matches(":focus-visible"),
+      color: getComputedStyle(el).outlineColor,
+      style: getComputedStyle(el).outlineStyle,
+      width: getComputedStyle(el).outlineWidth,
+    }));
+    expect(focus.visible, `${selector} receives keyboard-style focus`).toBeTruthy();
+    expect(focus.style).toBe("solid");
+    expect(focus.width).not.toBe("0px");
+    expect(focus.color).toBe("rgb(214, 198, 165)");
+  }
+});
+
+test("theme colour metadata follows the selected theme", async ({ page }) => {
+  await page.goto(pageUrl);
+  const themeColor = page.locator('meta[name="theme-color"]');
+  await expect(themeColor).toHaveAttribute("content", "#173D32");
+  await page.getByRole("button", { name: "Switch to dark theme" }).click();
+  await expect(themeColor).toHaveAttribute("content", "#102D25");
+  await page.getByRole("button", { name: "Switch to light theme" }).click();
+  await expect(themeColor).toHaveAttribute("content", "#173D32");
 });
