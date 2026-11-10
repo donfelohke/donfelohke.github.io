@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-10 — Published M-PESA payment details restored
+- Restore the previously published Buy Goods Till **3511456** and account/merchant name **FELIX LWOVA**.
+- Keep payment conditional on direct agreement of the service and total amount, with merchant/amount verification before PIN entry and explicit PIN/one-time-code safety.
+- Reconcile canonical copy and the public facts register with the published payment instructions.
+
+
 ## 2026-11-10 — Unified homepage hero
 - Expand the hero into a concise overview of NAKEBUSEN beauty and digital services, founder authorship and research/creative practice.
 - Add three service/practice summaries, founder role and signature, plus direct paths to Digital and GitHub.
