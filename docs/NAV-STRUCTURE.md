@@ -1,7 +1,7 @@
 # NAKEBUSEN — Navigation and Information Architecture
 
 **Document ID:** NB-NS-01  
-**Version:** M3 · 10 November 2026  
+**Version:** M4 · 10 November 2026  
 **Status:** Approved single-page navigation architecture  
 **Implementation source:** index.html
 
@@ -11,8 +11,10 @@ Use one primary navigation system: the floating bottom dock. Do not duplicate se
 
 ## 2. Floating topbar
 
-- Transparent, floating glass topbar.
+- Transparent, floating glass topbar using ivory-tinted light glass and forest-tinted dark glass.
 - Brand title and compact language/theme toggles only.
+- 20px blur and 150% saturation where backdrop filtering is supported; solid-theme fallback otherwise.
+- Respect reduced-transparency preferences without relying on blur for legibility.
 - No section links, menu, or second navigation row.
 - Brand title links to the page start.
 - Keep toggles keyboard accessible with 44 × 44 CSS-pixel hit areas.
