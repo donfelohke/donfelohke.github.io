@@ -64,6 +64,10 @@ footer a{color:#F2EFEA}.footer-nav{display:flex;flex-wrap:wrap;gap:.9rem;margin:
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 /* Glassmorphism-terminal refinement */
+.nav-right{flex-shrink:0}
+.floating-dock a[aria-current="location"]{background:rgba(212,175,55,.24);box-shadow:inset 0 0 0 1px rgba(212,175,55,.48)}
+.floating-dock .dock-wa[aria-current]{background:var(--forest);color:var(--ivory);box-shadow:0 0 0 2px var(--ochre)}
+@media(max-width:560px){header .nav{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center}.nav-links{grid-column:1/-1;grid-row:2;justify-content:flex-start;gap:.85rem;padding-top:.2rem}.nav-right{grid-column:2;grid-row:1}.brand{grid-column:1;grid-row:1}}
 header{position:sticky;top:.55rem;z-index:30;background:transparent;border:0;pointer-events:none}
 header .nav{pointer-events:auto;background:rgba(242,239,234,.78);border:1px solid rgba(255,255,255,.58);border-radius:18px;box-shadow:0 18px 48px rgba(20,30,24,.12);backdrop-filter:blur(18px) saturate(145%);-webkit-backdrop-filter:blur(18px) saturate(145%);padding:.65rem .85rem}
 :root[data-theme="dark"] header .nav{background:rgba(24,34,28,.78);border-color:rgba(242,239,234,.16)}
@@ -91,14 +95,13 @@ footer{padding-bottom:7.5rem}
 <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 <header>
 <div class="wrap nav">
-<a class="brand" href="#">NAKEBUSEN<span class="brand-sub">Locs ° Powered by WARENA</span></a>
+<a class="brand" href="#top">NAKEBUSEN<span class="brand-sub">Locs ° Powered by WARENA</span></a>
 <nav id="site-navigation" class="nav-links" aria-label="Main navigation" data-i18n-aria="navMain">
 <a href="#crown" data-i18n="navLocs">Locs</a>
 <a href="#code" data-i18n="navDigital">Digital</a>
 <a href="#connect" data-i18n="navConnect">Connect</a>
 </nav>
 <div class="nav-right">
-<a class="nav-cta" href="https://wa.me/254719635415" data-wa-purpose="loc" aria-label="WhatsApp">WA</a>
 <button type="button" id="language-toggle" aria-label="Switch language to Kiswahili" title="Language"><span class="toggle-icon" aria-hidden="true">EN</span></button>
 <button type="button" id="theme-toggle" aria-label="Switch to dark theme" title="Theme"><span class="toggle-icon" aria-hidden="true">◐</span></button>
 </div>
@@ -170,7 +173,7 @@ footer{padding-bottom:7.5rem}
 <footer>
 <div class="wrap">
 <p><strong>NAKEBUSEN</strong> Locs ° Powered by WARENA</p>
-<nav class="footer-nav" aria-label="Footer">
+<nav class="footer-nav" aria-label="Footer navigation" data-i18n-aria="navFooter">
 <a href="#crown" data-i18n="navLocs">Locs</a>
 <a href="#code" data-i18n="navDigital">Digital</a>
 <a href="#connect" data-i18n="navConnect">Connect</a>
@@ -211,7 +214,7 @@ footer{padding-bottom:7.5rem}
 <p class="small">© Felix Lwova · Don Feloh</p>
 </div>
 </footer>
-<nav class="floating-dock" aria-label="Quick navigation"><a href="#top"><span class="dock-icon" aria-hidden="true">⌂</span><span>Home</span></a><a href="#crown"><span class="dock-icon" aria-hidden="true">✳</span><span>Locs</span></a><a href="#code"><span class="dock-icon" aria-hidden="true">⌘</span><span>Digital</span></a><a href="#connect"><span class="dock-icon" aria-hidden="true">↗</span><span>Connect</span></a><a class="dock-wa" href="https://wa.me/254719635415" data-wa-purpose="general"><span class="dock-icon" aria-hidden="true">WA</span><span>Enquire</span></a></nav>
+<nav class="floating-dock" aria-label="Quick navigation" data-i18n-aria="navQuick"><a href="#top" data-dock-target="top"><span class="dock-icon" aria-hidden="true">⌂</span><span data-i18n="dockHome">Home</span></a><a href="#crown" data-dock-target="crown"><span class="dock-icon" aria-hidden="true">✳</span><span data-i18n="navLocs">Locs</span></a><a href="#code" data-dock-target="code"><span class="dock-icon" aria-hidden="true">⌘</span><span data-i18n="navDigital">Digital</span></a><a href="#connect" data-dock-target="connect"><span class="dock-icon" aria-hidden="true">↗</span><span data-i18n="navConnect">Connect</span></a><a class="dock-wa" href="https://wa.me/254719635415" data-wa-purpose="general"><span class="dock-icon" aria-hidden="true">WA</span><span data-i18n="dockEnquire">Enquire</span></a></nav>
 <script>
 (function(){
 const root=document.documentElement;
@@ -225,7 +228,7 @@ set(key,value){try{localStorage.setItem(key,value);}catch(error){}}
 };
 const copy={
 en:{
-skip:'Skip to content',navMain:'Main navigation',navLocs:'Locs',navDigital:'Digital',navConnect:'Connect',
+skip:'Skip to content',navMain:'Main navigation',navFooter:'Footer navigation',navQuick:'Quick navigation',dockHome:'Home',dockEnquire:'Enquire',navLocs:'Locs',navDigital:'Digital',navConnect:'Connect',
 eyebrow:'NAKEBUSEN Locs ° Powered by WARENA',tagline:'Your Beauty ° Your Way.',
 heroLead:'Craft, technology and culture rooted in African ingenuity.',heroService:'Natural loc care.',
 heroStatus:'Eldoret Town · Karibu Mdosi · Kenya.',
@@ -248,7 +251,7 @@ call2:'Call 0719 635 415',email:'Email',location:'Eldoret Town / Karibu Mdosi ·
 paymentTitle:'M-PESA Buy Goods · Pay NAKEBUSEN',paymentTillLabel:'BUY GOODS TILL NUMBER',paymentAccountLabel:'ACCOUNT / MERCHANT NAME',paymentCheck:'Before confirming, check that the merchant name displayed by M-PESA matches FELIX LWOVA.',paymentHowTitle:'How to pay',paymentStep1:'Open M-PESA on your phone.',paymentStep2:'Select Lipa na M-PESA.',paymentStep3:'Select Buy Goods and Services.',paymentStep4:'Enter Till number 3511456.',paymentStep5:'Enter the amount agreed with NAKEBUSEN.',paymentStep6:'Confirm the displayed merchant name is FELIX LWOVA.',paymentStep7:'Enter your M-PESA PIN and keep the confirmation message.',paymentBoundary:'Pay only for a service and amount agreed directly with NAKEBUSEN. An enquiry is not a booking or payment request. Never share your M-PESA PIN or one-time code.',supportTitle:'Support Us · Support independent work',supportCopy:'To support Don Feloh’s independent creative, cultural and technical work, contact us first for the appropriate support arrangement. Support is voluntary and separate from NAKEBUSEN service payments.',supportAction:'Ask about supporting the work',paymentHelp:'Payment assistance: WhatsApp +254 719 635 415 · Call 0719 635 415.',boundary:'Commercial enquiries route through NAKEBUSEN. An enquiry is not a confirmed booking.'
 },
 sw:{
-skip:'Ruka hadi maudhui',navMain:'Urambazaji kuu',navLocs:'Locs',navDigital:'Digital',navConnect:'Wasiliana',
+skip:'Ruka hadi maudhui',navMain:'Urambazaji mkuu',navFooter:'Urambazaji wa chini',navQuick:'Urambazaji wa haraka',dockHome:'Mwanzo',dockEnquire:'Uliza',navLocs:'Locs',navDigital:'Digital',navConnect:'Wasiliana',
 eyebrow:'NAKEBUSEN Locs ° Powered by WARENA',tagline:'Uzuri Wako ° Kwa Namna Yako.',
 heroLead:'Ufundi, teknolojia na utamaduni wenye mizizi katika ubunifu wa Kiafrika.',heroService:'Utunzaji wa locs asilia.',
 heroStatus:'Eldoret Town · Karibu Mdosi · Kenya.',
@@ -329,6 +332,20 @@ applyTheme(preferredTheme==='dark'||preferredTheme==='light'?preferredTheme:(sys
 applyLanguage(storage.get(languageKey)||'en');
 if(themeToggle)themeToggle.addEventListener('click',()=>applyTheme(root.getAttribute('data-theme')==='dark'?'light':'dark'));
 if(languageToggle)languageToggle.addEventListener('click',()=>applyLanguage(root.lang==='en'?'sw':'en'));
+const dockLinks=Array.from(document.querySelectorAll('[data-dock-target]'));
+if('IntersectionObserver' in window&&dockLinks.length){
+const sections=dockLinks.map(link=>document.getElementById(link.dataset.dockTarget)).filter(Boolean);
+const observer=new IntersectionObserver(entries=>{
+const visible=entries.filter(entry=>entry.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio);
+if(!visible.length)return;
+const activeId=visible[0].target.id;
+dockLinks.forEach(link=>{
+if(link.dataset.dockTarget===activeId)link.setAttribute('aria-current','location');
+else link.removeAttribute('aria-current');
+});
+},{rootMargin:'-18% 0px -58% 0px',threshold:[0,.15,.35,.6]});
+sections.forEach(section=>observer.observe(section));
+}
 }
 init();
 })();
