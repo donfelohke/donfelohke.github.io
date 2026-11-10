@@ -13,7 +13,7 @@ Do not introduce new routes or a booking engine as part of this change.
 
 ## 2. Primary navigation
 
-- Home — `#top`
+- Brand lockup — `#top` (home)
 - Locs — `#crown`
 - Digital — `#code`
 - @donfeloh — `#founder`
@@ -45,7 +45,7 @@ The primary navigation is **Locs · Digital · @donfeloh · Connect**. The found
 - Light / dark theme control.
 - Accessible mobile menu.
 
-The current mobile quick-navigation dock and More panel are existing components. Preserve them during this content update unless a separate approved design change removes them. They supplement, not replace, the primary navigation.
+The floating mobile dock remains a separate quick-navigation layer with Home, Locs, Digital, Connect and WhatsApp enquiry destinations. It supplements, not replaces, the primary navigation.
 
 ## 5. Mobile and keyboard behaviour
 
