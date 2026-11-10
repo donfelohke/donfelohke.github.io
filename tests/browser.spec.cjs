@@ -25,18 +25,24 @@ for (const width of widths) {
   });
 }
 
-test("primary navigation reaches Locs, Digital, @donfeloh and Connect", async ({ page }) => {
-  await page.setViewportSize({ width: 1280, height: 900 });
-  await page.goto(pageUrl);
-  const nav = page.getByRole("navigation", { name: "Main navigation" });
-  await nav.getByRole("link", { name: "Locs" }).click();
-  await expect(page.locator("#crown")).toBeVisible();
-  await nav.getByRole("link", { name: "Digital" }).click();
-  await expect(page.locator("#code")).toBeVisible();
-  await nav.getByRole("link", { name: "@donfeloh" }).click();
-  await expect(page.locator("#founder")).toBeVisible();
-  await nav.getByRole("link", { name: "Connect" }).click();
-  await expect(page.locator("#connect")).toBeVisible();
+test("single bottom navigation exposes exactly Locs, Digital and Connect", async ({ page }) => {
+  for (const width of [390, 1280]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto(pageUrl);
+    const dock = page.getByRole("navigation", { name: "Section navigation" });
+    await expect(dock.getByRole("link")).toHaveCount(3);
+    await dock.getByRole("link", { name: "Locs" }).click();
+    await expect(page.locator("#crown")).toBeVisible();
+    await dock.getByRole("link", { name: "Digital" }).click();
+    await expect(page.locator("#code")).toBeVisible();
+    await dock.getByRole("link", { name: "Connect" }).click();
+    await expect(page.locator("#connect")).toBeVisible();
+    await expect(page.locator("#site-navigation")).toHaveCount(0);
+    await expect(page.locator("footer .footer-nav")).toHaveCount(0);
+    await expect(page.locator("header .brand")).toBeVisible();
+    await expect(page.locator("#language-toggle")).toBeVisible();
+    await expect(page.locator("#theme-toggle")).toBeVisible();
+  }
 });
 
 test("approved services, starting prices and enquiry boundary are present", async ({ page }) => {

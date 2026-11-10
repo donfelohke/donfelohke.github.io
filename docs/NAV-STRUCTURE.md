@@ -1,90 +1,54 @@
 # NAKEBUSEN — Navigation and Information Architecture
 
 **Document ID:** NB-NS-01  
-**Version:** M2 · 10 November 2026  
-**Status:** Approved single-page information architecture  
+**Version:** M3 · 10 November 2026  
+**Status:** Approved single-page navigation architecture  
 **Implementation source:** index.html
 
-## 1. Purpose
+## 1. Navigation model
 
-Make the two commercial paths obvious while preserving a concise single-page website and its existing section anchors.
+Use one primary navigation system: the floating bottom dock. Do not duplicate section links in the topbar or footer.
 
-Do not introduce new routes or a booking engine as part of this change.
+## 2. Floating topbar
 
-## 2. Primary navigation
+- Transparent, floating glass topbar.
+- Brand title and compact language/theme toggles only.
+- No section links, menu, or second navigation row.
+- Brand title links to the page start.
+- Keep toggles keyboard accessible with 44 × 44 CSS-pixel hit areas.
 
-- Brand lockup — `#top` (home)
+## 3. Floating bottom navigation
+
+The sole section navigation contains exactly three icon-led destinations:
+
 - Locs — `#crown`
 - Digital — `#code`
-- @donfeloh — `#founder`
 - Connect — `#connect`
 
-The service-path cards may link to the corresponding LOCS and DIGITAL sections.
+No Home, Enquire, founder, or extra destination in this dock. Enquiry actions remain in the relevant page content and contact area.
 
-## 3. Page sequence
+## 4. Footer
 
-1. Hero and enterprise introduction.
-2. Two service-path cards.
-3. LOCS service catalogue and starting prices.
-4. DIGITAL service areas and enquiry.
-5. Philosophy and GENJE ZA WARENA.
-6. About / founder.
-7. Community and contact.
-8. Footer.
+The footer is informational, not navigational. Remove the footer section-link row. Retain brand identity, founder role, contact methods, service location, payment-enquiry instructions, independent-support information, source/copyright information and signature.
 
-The philosophy and community content should not compete with the two customer-facing service paths.
+## 5. Accessibility and responsive behaviour
 
-## 4. Header and controls
+- Use a labelled navigation landmark for the bottom dock.
+- Each destination has a visible text label and a distinct icon; icons are decorative to assistive technology.
+- Keep minimum 44 × 44 CSS-pixel touch targets.
+- Preserve visible keyboard focus, active-section indication, safe-area inset spacing and reduced-motion support.
+- Ensure the dock does not obscure content or footer controls at narrow viewports.
+- Topbar controls remain available in both themes and languages.
 
-The primary navigation is **Locs · Digital · @donfeloh · Connect**. The founder anchor is attached to the founder heading inside the Connect section; it does not create a separate page or route.
-
-- Exact typographic lockup: **NAKEBUSEN Locs ° Powered by WARENA**.
-- Sticky header with primary navigation.
-- WhatsApp enquiry action.
-- English / Kiswahili control.
-- Light / dark theme control.
-- Accessible mobile menu.
-
-The floating mobile dock remains a separate quick-navigation layer with Home, Locs, Digital, Connect and WhatsApp enquiry destinations. It supplements, not replaces, the primary navigation.
-
-## 5. Mobile and keyboard behaviour
-
-- Menu button exposes accurate `aria-expanded` and `aria-controls`.
-- Menu is keyboard operable.
-- Escape closes the mobile menu and returns focus to its toggle.
-- Selecting a navigation destination closes the mobile menu.
-- The More panel closes on Escape and restores focus to its toggle.
-- Anchor targets must not be hidden beneath the sticky header.
-- Floating navigation must not obscure page content, footer links or keyboard focus.
-- Respect reduced-motion preferences and safe-area insets.
-
-## 6. Footer
-
-Keep the footer in normal document flow.
-
-Include:
-- Brand lockup and founder role.
-- Locs, Digital, @donfeloh and Connect links, plus the source repository.
-- WhatsApp, telephone, email and current Eldoret location.
-- Separate M-PESA payment-enquiry and voluntary independent-support areas.
-- No public Till number or merchant details until account authority and payment-purpose verification are complete.
-- Existing founder/copyright treatment until rights-holder confirmation.
-
-## 7. Commercial and factual boundaries
+## 6. Commercial and factual boundaries
 
 - ONLY NAKEBUSEN TRANSACTS.
 - WhatsApp is an enquiry, not a confirmed booking.
 - LOCS starting prices: Retouch & Styling KES 700; Sisterlocs Retie KES 1,500; Artificial Locs Installation KES 3,500.
 - DIGITAL is scoped and quoted per engagement.
-- GENJE is governing identity, not a separate checkout.
-- WARENA Systems is within DIGITAL.
-- IKAI is research, not a released product.
+- No public Till number or merchant details until account authority and payment-purpose verification are complete.
 - Do not invent street address, map pin or opening hours.
 
-## 8. Future routes
+## 7. Verification
 
-Separate routes such as `/locs/`, `/digital/`, `/about/`, `/contact/` and `/research/ikai/` are deferred. The current approved implementation is a single-page static site with section anchors. Any route migration requires a separate route inventory and redirect plan.
-
-## 9. Verification
-
-Test desktop and mobile navigation, keyboard focus, Escape behaviour, anchor offsets, dock overlap, both languages, both themes and all contact destinations.
+Test the three dock destinations at mobile and desktop widths, absence of duplicate section navigation, topbar controls, keyboard focus, anchor offsets, dock overlap, both languages, both themes and all contact destinations.

@@ -68,7 +68,10 @@ p.close()
 check(html.count("<html") == 1, "Expected one html root")
 check('<html lang="en">' in html, "English must be the default document language")
 check(p.h1_count == 1, f"Expected one h1, found {p.h1_count}")
-check('data-i18n="navLocs"' in html and 'data-i18n="navDigital"' in html and 'data-i18n="navAbout"' in html and 'data-i18n="navConnect"' in html, "Header must expose Locs, Digital, @donfeloh, Connect")
+check('id="site-navigation"' not in html and 'class="footer-nav"' not in html, "No duplicate header or footer section navigation")
+check('class="floating-dock"' in html and html.count('data-dock-target=') == 3, "Bottom dock has exactly three destinations")
+check('data-dock-target="crown"' in html and 'data-dock-target="code"' in html and 'data-dock-target="connect"' in html, "Bottom dock exposes Locs, Digital and Connect")
+check('data-i18n="navLocs"' in html and 'data-i18n="navDigital"' in html and 'data-i18n="navConnect"' in html, "Section labels remain available in bottom navigation")
 check('id="connect"' in html and 'id="founder"' in html and 'id="crown"' in html and 'id="code"' in html, "Primary sections and founder anchor required")
 check("Your Beauty ° Your Way." in html, "Approved homepage headline")
 check("NAKEBUSEN Locs ° Powered by WARENA" in html, "Canonical lockup")
@@ -115,4 +118,4 @@ for href in p.hrefs:
     if href.startswith("#"):
         check(href[1:] in p.ids or href[1:] == "", f"Broken anchor: {href}")
 
-print("PASS: structure, canonical facts, service catalogue, contact paths and publication gates.")
+print("PASS: single floating navigation, structure, canonical facts, service catalogue, contact paths and publication gates.")
