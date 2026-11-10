@@ -73,6 +73,22 @@ header .nav{pointer-events:auto;background:var(--paper);border:1px solid var(--g
 @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header .nav{background:var(--glass-topbar);box-shadow:0 10px 28px rgba(17,17,17,.1);backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate))}}
 .hero{position:relative;isolation:isolate;overflow:hidden;padding:clamp(3.5rem,9vw,6rem) 0 3rem;background:radial-gradient(ellipse at 12% 18%,rgba(214,198,165,.16),transparent 42%),radial-gradient(ellipse at 88% 72%,rgba(23,61,50,.12),transparent 44%)}
 .hero .wrap{position:relative;padding:clamp(1.5rem,5vw,3.5rem);border:1px solid var(--line);border-radius:26px;background:var(--paper);box-shadow:0 18px 55px rgba(20,30,24,.12)}
+/* Unified hero: identity, services, authorship and discovery */
+.hero .eyebrow{margin-bottom:.8rem}
+.hero .lead{max-width:48rem;font-size:clamp(1.05rem,2.3vw,1.25rem)}
+.hero-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin:1.5rem 0 1rem}
+.hero-path{min-width:0;padding:.9rem;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--paper) 88%,var(--ochre))}
+.hero-path strong{display:block;font:700 .72rem var(--mono);letter-spacing:.07em;margin-bottom:.35rem}
+.hero-path span{display:block;font-size:.88rem;line-height:1.45}
+.hero-path-locs{border-top:3px solid var(--clay)}
+.hero-path-digital{border-top:3px solid var(--forest)}
+.hero-path-research{border-top:3px solid var(--ochre)}
+.hero-founder{margin:.85rem 0 0;padding-top:.85rem;border-top:1px solid var(--line);font-size:.9rem}
+.hero-founder strong{font-family:var(--serif);font-size:1.08rem}
+.hero-signature{margin:.45rem 0 0;color:var(--sage-text);font:700 .68rem var(--mono);letter-spacing:.08em}
+.hero .actions{align-items:center}
+@media(max-width:620px){.hero-overview{grid-template-columns:1fr;gap:.5rem}.hero-path{padding:.75rem}.hero-path span{font-size:.86rem}}
+@media(prefers-reduced-transparency:reduce){.hero-path{background:var(--paper)}}
 :root[data-theme="dark"] .hero .wrap{background:#202823;border-color:rgba(242,239,234,.18)}
 .hero .wrap:after{content:"";position:absolute;right:-2.5rem;top:-3rem;width:10rem;height:10rem;border:1px solid rgba(214,198,165,.5);border-radius:50%;pointer-events:none;opacity:.45}
 .svc{position:relative;padding:1.25rem;border:1px solid var(--line);border-top:3px solid var(--clay);border-radius:16px;background:var(--paper);box-shadow:0 10px 30px rgba(20,30,24,.07);transition:transform .2s ease,box-shadow .2s ease}
@@ -285,14 +301,22 @@ footer .footer-nav a:focus-visible{outline:2px solid #D6C6A5;outline-offset:3px}
 <main id="main">
 <section class="hero" id="top">
 <div class="wrap">
-<p class="eyebrow" data-i18n="eyebrow">NAKEBUSEN Locs ° Powered by WARENA</p>
+<p class="eyebrow" data-i18n="eyebrow">NAKEBUSEN · BEAUTY &amp; DIGITAL · ELDORET, KENYA</p>
 <h1 data-i18n="tagline">Your Beauty ° Your Way.</h1>
-<p class="lead" data-i18n="heroLead">Natural loc care and practical digital services, bringing together skilled craft, useful technology and living culture.</p>
-<p class="small muted" data-i18n="heroService">Loc maintenance, styling and practical GNU/Linux, computer and network support in Eldoret Town.</p>
-<p class="small muted" data-i18n="heroStatus">Eldoret Town · Karibu Mdosi · Kenya.</p>
+<p class="lead" data-i18n="heroLead">NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh), bringing together natural loc care, practical computing and creative technology.</p>
+<p class="small muted" data-i18n="heroService">Personal care grounded in craft and heritage; practical GNU/Linux, computer and network support; and independent research in reflective computing and creative practice.</p>
+<p class="small muted" data-i18n="heroStatus">Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.</p>
+<div class="hero-overview" aria-label="NAKEBUSEN service and practice areas">
+<div class="hero-path hero-path-locs"><strong data-i18n="heroLocTitle">01 · BEAUTY &amp; LOC CARE</strong><span data-i18n="heroLocCopy">Natural loc maintenance, retouching, styling, Sisterlocs retie and artificial loc installation.</span></div>
+<div class="hero-path hero-path-digital"><strong data-i18n="heroDigitalTitle">02 · DIGITAL · WARENA</strong><span data-i18n="heroDigitalCopy">GNU/Linux, computer support, networking and local-first infrastructure. Freedom Is a System.</span></div>
+<div class="hero-path hero-path-research"><strong data-i18n="heroResearchTitle">03 · RESEARCH &amp; CREATIVE</strong><span data-i18n="heroResearchCopy">IKAI · GENJE · FELOH Corpus — reflective computing, embodied practice and creative technology.</span></div>
+</div>
+<p class="hero-founder"><strong data-i18n="heroFounder">Felix Lwova · Don Feloh</strong><br><span data-i18n="heroRole">Founder · CTO · Loctician · Creative Technologist</span></p>
+<p class="hero-signature" data-i18n="heroSignature">GRACE · GRIT · GLORY / HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES</p>
 <div class="actions">
 <a class="btn btn-fill" data-wa-purpose="loc" href="https://wa.me/254719635415" data-i18n="heroEnquire">WhatsApp — Enquire about loc care</a>
-<a class="btn" href="#crown" data-i18n="exploreLocs">Explore Locs services</a>
+<a class="btn" href="#code" data-i18n="heroDigitalLink">Explore digital services</a>
+<a class="btn" href="https://github.com/donfelohke" data-i18n="heroGithub">Explore the work on GitHub ↗</a>
 </div>
 </div>
 </section>
@@ -422,9 +446,15 @@ set(key,value){try{localStorage.setItem(key,value);}catch(error){}}
 const copy={
 en:{
 skip:'Skip to content',navMain:'Main navigation',navFooter:'Footer navigation',navQuick:'Section navigation',dockHome:'Home',dockEnquire:'Enquire',navLocs:'Locs',navDigital:'Digital',navAbout:'@donfeloh',navConnect:'Connect',footerContactTitle:'Contact NAKEBUSEN',footerSignature:'@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY',
-eyebrow:'NAKEBUSEN Locs ° Powered by WARENA',tagline:'Your Beauty ° Your Way.',
-heroLead:'Natural loc care and practical technology services, bringing together skilled craft, useful technology and living culture.',heroService:'Loc maintenance and styling, alongside GNU/Linux, computer and network support in Eldoret Town.',
-heroStatus:'Eldoret Town · Karibu Mdosi · Kenya.',
+eyebrow:'NAKEBUSEN · BEAUTY & DIGITAL · ELDORET, KENYA',tagline:'Your Beauty ° Your Way.',
+heroLead:'NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh), bringing together natural loc care, practical computing and creative technology.',heroService:'Personal care grounded in craft and heritage; practical GNU/Linux, computer and network support; and independent research in reflective computing and creative practice.',
+heroStatus:'Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.',
+heroLocTitle:'01 · BEAUTY & LOC CARE',heroLocCopy:'Natural loc maintenance, retouching, styling, Sisterlocs retie and artificial loc installation.',
+heroDigitalTitle:'02 · DIGITAL · WARENA',heroDigitalCopy:'GNU/Linux, computer support, networking and local-first infrastructure. Freedom Is a System.',
+heroResearchTitle:'03 · RESEARCH & CREATIVE',heroResearchCopy:'IKAI · GENJE · FELOH Corpus — reflective computing, embodied practice and creative technology.',
+heroFounder:'Felix Lwova · Don Feloh',heroRole:'Founder · CTO · Loctician · Creative Technologist',
+heroSignature:'GRACE · GRIT · GLORY / HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES',
+heroDigitalLink:'Explore digital services',heroGithub:'Explore the work on GitHub ↗',
 heroEnquire:'WhatsApp — Enquire about loc care',exploreLocs:'Explore Locs services',
 enquireRetouch:'Enquire about Retouch & Styling',enquireRetie:'Enquire about Sisterlocs Retie',enquireArtificial:'Enquire about Artificial Locs Installation',
 crownKicker:'LOCS · CROWN',crownTitle:'Your Crown. Your Craft.',
@@ -446,9 +476,15 @@ githubTitle:'Beyond the interface.',githubCopy:'The website introduces the servi
 },
 sw:{
 skip:'Ruka hadi maudhui',navMain:'Urambazaji mkuu',navFooter:'Urambazaji wa chini',navQuick:'Urambazaji wa sehemu',dockHome:'Mwanzo',dockEnquire:'Uliza',navLocs:'Locs',navDigital:'Digital',navAbout:'@donfeloh',navConnect:'Wasiliana',footerContactTitle:'Wasiliana na NAKEBUSEN',footerSignature:'@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY',
-eyebrow:'NAKEBUSEN Locs ° Powered by WARENA',tagline:'Uzuri Wako ° Kwa Namna Yako.',
-heroLead:'Tumejikita katika ubunifu wa Kiafrika, tukileta pamoja ufundi binafsi, teknolojia ya vitendo na utamaduni hai.',heroService:'Utunzaji wa loc za asili, mitindo makini na huduma za kidijitali Eldoret.',
-heroStatus:'Eldoret Town · Karibu Mdosi · Kenya.',
+eyebrow:'NAKEBUSEN · UREMBO NA TEKNOLOJIA · ELDORET, KENYA',tagline:'Uzuri Wako ° Kwa Namna Yako.',
+heroLead:'NAKEBUSEN ni huduma za urembo na teknolojia iliyoanzishwa na Felix Lwova (Don Feloh), ikiunganisha utunzaji wa loc za asili, kompyuta na teknolojia bunifu.',heroService:'Huduma binafsi zinazotegemea ufundi na urithi; msaada wa GNU/Linux, kompyuta na mitandao; pamoja na utafiti huru wa mifumo ya kompyuta na ubunifu.',
+heroStatus:'Utunzaji wa loc · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.',
+heroLocTitle:'01 · UREMBO NA UTUNZAJI WA LOC',heroLocCopy:'Utunzaji wa loc za asili, retouch, mitindo, Sisterlocs retie na ufungaji wa artificial locs.',
+heroDigitalTitle:'02 · TEKNOLOJIA · WARENA',heroDigitalCopy:'GNU/Linux, msaada wa kompyuta, mitandao na mifumo ya local-first. Uhuru ni Mfumo.',
+heroResearchTitle:'03 · UTAFITI NA UBUNIFU',heroResearchCopy:'IKAI · GENJE · FELOH Corpus — utafiti wa mifumo ya kompyuta, mazoezi ya mwili na teknolojia bunifu.',
+heroFounder:'Felix Lwova · Don Feloh',heroRole:'Mwanzilishi · CTO · Loctician · Creative Technologist',
+heroSignature:'GRACE · GRIT · GLORY / URITHI · UBORA WA WAAFRIKA WEUSI · MUSTAKABALI HURU',
+heroDigitalLink:'Chunguza huduma za teknolojia',heroGithub:'Chunguza kazi kwenye GitHub ↗',
 heroEnquire:'WhatsApp — Uliza kuhusu utunzaji wa locs',exploreLocs:'Chunguza huduma za Locs',
 enquireRetouch:'Uliza kuhusu Retouch & Styling',enquireRetie:'Uliza kuhusu Sisterlocs Retie',enquireArtificial:'Uliza kuhusu Artificial Locs Installation',
 crownKicker:'LOCS · CROWN',crownTitle:'Taji Yako. Ufundi Wako.',
