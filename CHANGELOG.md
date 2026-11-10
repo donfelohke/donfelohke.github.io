@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-10 — Post-merge audit corrections
+- Align structural and browser tests with the approved three-link bottom dock and the single minimal GitHub repositories footer link.
+- Test the effective text-safe sage and service-price contrast tokens against the actual light and dark paper surfaces.
+- Extend focus-visible styling to links and buttons on WARENA, Don Feloh and footer dark surfaces.
+- Keep browser theme-colour metadata synchronized with the selected theme and add direct unit/browser assertions.
+- Restore Kiswahili semantic parity for the hero service proposition, loc-service introduction and first-person founder description.
+- Reconcile canonical footer/navigation copy and distinguish merged implementation from outstanding browser/accessibility verification.
+- Mark the 30 October master implementation brief as a historical baseline superseded by current canonical website copy and standards.
+
+
 ## 2026-11-10 — Glass Terminal v2 and main-branch test repair
 - Refine the floating topbar and bottom dock with ivory/forest-tinted glass tokens, 20px blur and 150% saturation where supported.
 - Keep solid, theme-aware fallbacks for browsers without backdrop filtering and users requesting reduced transparency.
