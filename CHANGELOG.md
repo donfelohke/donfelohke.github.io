@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-10 — Glass Terminal v2 and main-branch test repair
+- Refine the floating topbar and bottom dock with ivory/forest-tinted glass tokens, 20px blur and 150% saturation where supported.
+- Keep solid, theme-aware fallbacks for browsers without backdrop filtering and users requesting reduced transparency.
+- Set the bottom dock radius to 26px and retain ochre active-section treatment.
+- Correct browser assertions to match the single bottom navigation and the six general-purpose WhatsApp links.
+- Extend structural checks for glass tokens and reduced-transparency support.
+
+
 ## 2026-11-10 — Single floating navigation
 - Restrict the transparent floating topbar to the brand title and language/theme toggles.
 - Make the floating bottom dock the sole primary navigation with exactly Locs, Digital and Connect.
