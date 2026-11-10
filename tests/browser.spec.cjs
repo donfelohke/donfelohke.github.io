@@ -98,7 +98,7 @@ test("theme and language controls work and preserve preferences", async ({ page 
 test("all WhatsApp purposes and service links update with the selected language", async ({ page }) => {
   await page.goto(pageUrl);
   const purposeLinks = page.locator("a[data-wa-purpose]");
-  await expect(purposeLinks).toHaveCount(6);
+  await expect(purposeLinks).toHaveCount(5);
   for (const purpose of ["loc", "tech", "general", "payment", "support"]) {
     await expect(page.locator(`a[data-wa-purpose="${purpose}"]`).first()).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
   }
@@ -114,14 +114,16 @@ test("all WhatsApp purposes and service links update with the selected language"
   await expect(page.locator('a[data-wa-service="retie"]')).toHaveAttribute("href", /Sisterlocs/);
 });
 
-test("contact destinations and commercial routing are correct", async ({ page }) => {
+test("Connect owns the contact directory; footer stays minimal", async ({ page }) => {
   await page.goto(pageUrl);
-  await expect(page.locator('a[href="tel:+254719635415"]').first()).toBeVisible();
-  await expect(page.locator('a[href="mailto:mela9ine@proton.me"]').first()).toBeVisible();
-  await expect(page.locator("footer")).toContainText("Eldoret Town / Karibu Mdosi");
-  await expect(page.locator("footer")).toContainText("Support Us");
+  await expect(page.locator('#connect a[href="tel:+254719635415"]')).toBeVisible();
+  await expect(page.locator('#connect a[href="mailto:mela9ine@proton.me"]')).toBeVisible();
   await expect(page.locator("#connect")).toContainText("Commercial enquiries route through NAKEBUSEN.");
   await expect(page.locator("#connect")).toContainText("Eldoret Town / Karibu Mdosi");
+  await expect(page.locator("footer")).not.toContainText("Eldoret Town / Karibu Mdosi");
+  await expect(page.locator("footer")).toContainText("Support Us");
+  await expect(page.locator('footer a[href^="tel:"]')).toHaveCount(0);
+  await expect(page.locator('footer a[href^="mailto:"]')).toHaveCount(0);
 });
 
 test("keyboard focus is visible on interactive controls and dark surfaces", async ({ page }) => {
