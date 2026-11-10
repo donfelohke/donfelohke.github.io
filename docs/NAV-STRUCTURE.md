@@ -54,3 +54,8 @@ The footer is informational, not navigational. Remove the footer section-link ro
 ## 7. Verification
 
 Test the three dock destinations at mobile and desktop widths, absence of duplicate section navigation, topbar controls, keyboard focus, anchor offsets, dock overlap, both languages, both themes and all contact destinations.
+
+
+## Footer repository navigation
+
+The footer uses one minimal external repository-navigation link: **GitHub repositories** → `https://github.com/donfelohke?tab=repositories`. Keep detailed project links in the WARENA Digital section, not duplicated as a long footer directory. The footer link must remain keyboard accessible and visually subordinate to contact and business information.
