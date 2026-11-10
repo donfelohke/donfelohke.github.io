@@ -1,7 +1,7 @@
 # NAKEBUSEN — Canonical Website Copy
 
 **Document ID:** NB-WC-01  
-**Version:** M3 · 9 November 2026  
+**Version:** M4 · 10 November 2026  
 **Status:** Approved copy baseline  
 **Factual authority:** PUBLIC-FACTS-REGISTER.md · SERVICE-CATALOG.md
 
@@ -100,6 +100,16 @@ Keep Locs as the primary beauty service path and Digital as the technical servic
 ## Footer
 
 **NAKEBUSEN Locs ° Powered by WARENA**
+
+Navigation: **Locs · Digital · @donfeloh · Connect · GitHub / Source**.
+
+Contact: **WhatsApp +254 719 635 415 · Call 0719 635 415 · mela9ine@proton.me**.
+
+Location: **Eldoret Town · Karibu Mdosi · Uasin Gishu · Kenya**.
+
+Payment: request current verified M-PESA Buy Goods details directly through the official NAKEBUSEN WhatsApp contact after agreeing the service and amount. Do not publish the Till number or merchant details until account authority and payment-purpose verification are complete. Never request a PIN or one-time code.
+
+Independent support: voluntary support for Don Feloh’s creative, cultural and technical work is separate from NAKEBUSEN service payments; ask about available arrangements.
 
 **@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY**
 
