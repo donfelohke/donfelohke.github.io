@@ -1,7 +1,7 @@
 # NAKEBUSEN — Navigation and Information Architecture
 
 **Document ID:** NB-NS-01  
-**Version:** M4 · 10 November 2026  
+**Version:** M5 · 10 November 2026  
 **Status:** Approved single-page navigation architecture  
 **Implementation source:** index.html
 
@@ -11,7 +11,7 @@ Use one primary navigation system: the floating bottom dock. Do not duplicate se
 
 ## 2. Floating topbar
 
-- Transparent, floating glass topbar using ivory-tinted light glass and forest-tinted dark glass.
+- Dark-forest floating glass topbar using `#173D32` in light theme and deep forest `#102D25` in dark theme.
 - Brand title and compact language/theme toggles only.
 - 20px blur and 150% saturation where backdrop filtering is supported; solid-theme fallback otherwise.
 - Respect reduced-transparency preferences without relying on blur for legibility.
@@ -21,13 +21,13 @@ Use one primary navigation system: the floating bottom dock. Do not duplicate se
 
 ## 3. Floating bottom navigation
 
-The sole section navigation contains exactly three icon-led destinations:
+The sole section navigation uses a charcoal glass surface and contains exactly three icon-led destinations:
 
 - Locs — `#crown`
 - Digital — `#code`
 - Connect — `#connect`
 
-No Home, Enquire, founder, or extra destination in this dock. Enquiry actions remain in the relevant page content and contact area.
+Use terracotta active treatment for Locs, sage for Digital and ochre for Connect. No Home, Enquire, founder, or extra destination in this dock. Enquiry actions remain in the relevant page content and contact area.
 
 ## 4. Footer
 
@@ -54,3 +54,8 @@ The footer is informational, not navigational. Remove the footer section-link ro
 ## 7. Verification
 
 Test the three dock destinations at mobile and desktop widths, absence of duplicate section navigation, topbar controls, keyboard focus, anchor offsets, dock overlap, both languages, both themes and all contact destinations.
+
+
+## Footer repository navigation
+
+The footer uses one minimal external repository-navigation link: **GitHub repositories** → `https://github.com/donfelohke?tab=repositories`. Keep detailed project links in the WARENA Digital section, not duplicated as a long footer directory. The footer link must remain keyboard accessible and visually subordinate to contact and business information.
