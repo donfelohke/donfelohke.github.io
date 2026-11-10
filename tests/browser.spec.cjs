@@ -96,7 +96,7 @@ test("all WhatsApp purposes and service links update with the selected language"
   await page.getByRole("button", { name: "Switch language to Kiswahili" }).click();
   await expect(page.locator('a[data-wa-purpose="loc"]').first()).toHaveAttribute("href", /ninaulizia/);
   await expect(page.locator('a[data-wa-purpose="tech"]')).toHaveAttribute("href", /ninaulizia/);
-  await expect(page.locator('a[data-wa-purpose="general"]')).toHaveAttribute("href", /huduma/);
+  await expect(page.locator('a[data-wa-purpose="general"]').first()).toHaveAttribute("href", /huduma/);
   await expect(page.locator('a[data-wa-purpose="payment"]')).toHaveAttribute("href", /maelezo/);
   await expect(page.locator('a[data-wa-purpose="support"]')).toHaveAttribute("href", /kuunga/);
   await expect(page.locator('a[data-wa-service="retie"]')).toHaveAttribute("href", /Sisterlocs/);
@@ -104,8 +104,8 @@ test("all WhatsApp purposes and service links update with the selected language"
 
 test("contact destinations and commercial routing are correct", async ({ page }) => {
   await page.goto(pageUrl);
-  await expect(page.locator('a[href="tel:+254719635415"]')).toBeVisible();
-  await expect(page.locator('a[href="mailto:mela9ine@proton.me"]')).toBeVisible();
+  await expect(page.locator('a[href="tel:+254719635415"]').first()).toBeVisible();
+  await expect(page.locator('a[href="mailto:mela9ine@proton.me"]').first()).toBeVisible();
   await expect(page.locator("footer")).toContainText("Eldoret Town / Karibu Mdosi");
   await expect(page.locator("footer")).toContainText("Support Us");
   await expect(page.locator("#connect")).toContainText("Commercial enquiries route through NAKEBUSEN.");
