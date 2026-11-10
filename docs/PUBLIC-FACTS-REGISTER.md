@@ -1,7 +1,7 @@
 # NAKEBUSEN — Public Facts Register
 
 **Document ID:** NB-PFR-01  
-**Version:** M2 · 9 November 2026  
+**Version:** M3 · 9 November 2026  
 **Status:** Publication control  
 **Authority:** @donfelohke
 
@@ -36,7 +36,7 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-015 | WhatsApp: https://wa.me/254719635415 | F1 | Enquiry channel |
 | PF-016 | Email: mela9ine@proton.me | F1 | Verify before campaigns |
 | PF-017 | Retouch & Styling from KES 700 | F1 | Starting price |
-| PF-018 | LOCS Retie from KES 1,500 | F1 | Starting price; canonical service label |
+| PF-018 | Sisterlocs Retie from KES 1,500 | F1 | Starting price; canonical public service label approved 9 November 2026 |
 | PF-019 | Artificial Locs Installation from KES 3,500 | F1 | Starting price |
 | PF-020 | Final LOCS cost depends on scope, loc condition and materials | F1 | Publish with prices |
 | PF-021 | No braiding | F1 | Do not advertise braiding |
@@ -45,18 +45,21 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-024 | DIGITAL service areas include GNU/Linux, computer maintenance and networking | F3 | Scope and availability must be confirmed |
 | PF-025 | Local-first and offline-capable systems | F3 | Describe as service area; no blanket guarantees |
 | PF-026 | Reproducible development environments | F3 | Do not claim verified reproducibility without evidence |
-| PF-027 | Founder display name Felix Lwova — Don Feloh | F4 | Provisional public treatment |
+| PF-027 | Founder display name Felix Lwova — Don Feloh | F4 | Provisional public treatment; do not infer legal-name or registration status |
 | PF-028 | Copyright holder | F4 | Confirm before changing legal attribution |
 | PF-029 | Opening hours and street address | F5 | Do not invent |
 | PF-030 | Appointment availability | F5 | An enquiry is not a confirmed booking |
+| PF-031 | Public role line: Founder · CTO · Loctician · Creative Technologist | F2 | Approved for public presentation 9 November 2026; role wording is not a certification claim |
 
 ## Publication controls
 
 1. Prices and contact details must match this register and SERVICE-CATALOG.
 2. Digital capability must be labelled according to actual availability.
 3. Linguistic interpretations must retain their qualifications.
-4. Founder and copyright attribution must not be silently changed.
-5. No testimonials, customer names, portfolio claims or certifications without evidence and permission.
-6. Re-verify prices and contacts before paid campaigns.
+4. Founder display-name and copyright attribution must not be silently changed; PF-027 and PF-028 remain subject to their stated evidence classes.
+5. The approved public role line does not establish external certification, registration or professional accreditation.
+6. No testimonials, customer names, portfolio claims or certifications without evidence and permission.
+7. Re-verify prices and contacts before paid campaigns.
+8. The Sisterlocs Retie label does not itself imply trademark affiliation, official endorsement or certification.
 
 **Evidence discipline:** F1 means supplied by the operator, not independently verified.

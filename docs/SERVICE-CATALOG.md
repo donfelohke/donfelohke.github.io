@@ -1,7 +1,7 @@
 # NAKEBUSEN — Service Catalogue
 
 **Document ID:** NB-SC-01  
-**Version:** M1 · 30 October 2026  
+**Version:** M2 · 9 November 2026  
 **Status:** Approved public service baseline  
 **Rule:** ONLY NAKEBUSEN TRANSACTS · an enquiry is not a confirmed booking
 
@@ -16,9 +16,9 @@
 
 | Service | Starting price (KES) | Scope note |
 |---|---:|---|
-| Retouch & Styling | **700** | Final scope depends on loc condition and work required |
-| LOCS Retie | **1,500** | Enquire to confirm suitability and requirements |
-| Artificial Locs Installation | **3,500** | Final scope depends on preferred style, materials and installation requirements |
+| Retouch & Styling | **700+** | Final scope depends on loc condition and work required |
+| Sisterlocs Retie | **1,500+** | Retightening for established Sisterlocs; confirm suitability and requirements before work |
+| Artificial Locs Installation | **3,500+** | Final scope depends on preferred style, materials and installation requirements |
 
 Prices are starting points, not fixed quotes. Confirm the actual scope and final price directly before work begins.
 
@@ -28,7 +28,12 @@ Prices are starting points, not fixed quotes. Confirm the actual scope and final
 - No shaving.
 - Do not promise home visits without confirmation.
 - Do not claim an appointment is confirmed when a WhatsApp enquiry is sent.
-- Use the canonical public service label **LOCS Retie**; do not alternate with Sisterlocks / Sisterlocs naming in the public catalogue.
+- Use **Sisterlocs Retie** as the canonical public service label. Do not alternate between LOCS Retie, Sisterlocs Retie and Sisterlocks Retie.
+- Do not imply official Sisterlocks/Sisterlocs certification, affiliation or endorsement unless independently substantiated and expressly approved.
+
+### Enquiry boundary
+
+An enquiry does not confirm a booking. Availability and final terms are agreed directly.
 
 ## 2. DIGITAL · WARENA
 

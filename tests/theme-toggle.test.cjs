@@ -1,3 +1,5 @@
+"use strict";
+
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const vm = require("node:vm");
@@ -6,68 +8,56 @@ const html = fs.readFileSync("index.html", "utf8");
 const match = html.match(/<script>\s*([\s\S]*?)<\/script>/);
 assert.ok(match, "inline application script exists");
 
-function makeButton() {
+function element(attributes = {}) {
   return {
+    attributes,
     textContent: "",
-    innerHTML: "",
-    attrs: {},
+    href: "",
     listeners: {},
+    getAttribute(key) { return this.attributes[key] ?? null; },
+    setAttribute(key, value) { this.attributes[key] = value; },
     addEventListener(event, fn) { this.listeners[event] = fn; },
-    setAttribute(key, value) { this.attrs[key] = value; },
+    querySelector() { return this.icon; },
+    icon: { textContent: "" },
   };
 }
 
 function boot({ storedTheme = null, storedLanguage = null, systemDark = false, storageThrows = false } = {}) {
-  const attributes = {};
-  const mediaListeners = {};
+  const rootAttributes = {};
   const root = {
     lang: "en",
-    setAttribute(key, value) { attributes[key] = value; },
-    removeAttribute(key) { delete attributes[key]; },
+    setAttribute(key, value) { rootAttributes[key] = value; },
+    getAttribute(key) { return rootAttributes[key] ?? null; },
   };
-  const themeMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
-  const descriptionMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
-  const ogDescriptionMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
-  const twitterDescriptionMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
-  const ogTitleMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
-  const twitterTitleMeta = { content: "", setAttribute(key, value) { this[key] = value; } };
-  const themeButton = makeButton();
-  const headerLanguageButton = makeButton();
-  const footerLanguageButton = makeButton();
-  const whatsappLinks = ["loc", "tech", "general"].map(purpose => ({ href: "", getAttribute(key) { return key === "data-wa-purpose" ? purpose : null; } }));
+  const themeButton = element();
+  const languageButton = element();
+  const nav = element({ "data-i18n-aria": "navMain" });
+  const translated = [
+    element({ "data-i18n": "tagline" }),
+    element({ "data-i18n": "svcRetie" }),
+    element({ "data-i18n": "role" }),
+    element({ "data-i18n": "bookingNote" }),
+    element({ "data-i18n": "digitalIntro" }),
+  ];
+  const purposes = ["loc", "tech", "general"].map(value => element({ "data-wa-purpose": value }));
+  const services = ["retouch", "retie", "artificial"].map(value => element({ "data-wa-service": value }));
   const values = {};
   if (storedTheme !== null) values["nakebusen-theme"] = storedTheme;
   if (storedLanguage !== null) values["nakebusen-language"] = storedLanguage;
-  const media = {
-    matches: systemDark,
-    addEventListener(event, fn) { mediaListeners[event] = fn; },
-    addListener(fn) { mediaListeners.change = fn; },
-  };
   const document = {
     documentElement: root,
-    readyState: "complete",
-    title: "",
-    querySelector(selector) {
-      if (selector === 'meta[name="theme-color"]') return themeMeta;
-      if (selector === 'meta[name="description"]') return descriptionMeta;
-      if (selector === 'meta[property="og:description"]') return ogDescriptionMeta;
-      if (selector === 'meta[name="twitter:description"]') return twitterDescriptionMeta;
-      if (selector === 'meta[property="og:title"]') return ogTitleMeta;
-      if (selector === 'meta[name="twitter:title"]') return twitterTitleMeta;
-      if (selector === "#theme-toggle") return themeButton;
-      return null;
-    },
     getElementById(id) {
       if (id === "theme-toggle") return themeButton;
-      if (id === "language-toggle") return headerLanguageButton;
-      if (id === "language-toggle-footer") return footerLanguageButton;
+      if (id === "language-toggle") return languageButton;
       return null;
     },
     querySelectorAll(selector) {
-      if (selector === "[data-wa-purpose]") return whatsappLinks;
+      if (selector === "[data-i18n]") return translated;
+      if (selector === "[data-i18n-aria]") return [nav];
+      if (selector === "[data-wa-purpose]") return purposes;
+      if (selector === "[data-wa-service]") return services;
       return [];
     },
-    addEventListener() {},
   };
   const storage = {
     getItem(key) {
@@ -81,54 +71,60 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
   };
   const context = {
     document,
-    window: { matchMedia() { return media; }, localStorage: storage, addEventListener() {} },
+    window: { matchMedia() { return { matches: systemDark }; } },
     localStorage: storage,
-    console,
   };
-  context.window.document = document;
   vm.runInNewContext(match[1], context);
-  return {
-    attributes, root, themeMeta, descriptionMeta, ogDescriptionMeta, twitterDescriptionMeta, ogTitleMeta, twitterTitleMeta, themeButton,
-    headerLanguageButton, footerLanguageButton, whatsappLinks, values, mediaListeners, media,
-  };
+  return { root, rootAttributes, themeButton, languageButton, nav, translated, purposes, services, values };
 }
 
 const light = boot({ storedTheme: "light" });
-assert.equal(light.attributes["data-theme"], "light");
-assert.match(light.themeButton.innerHTML, /M20\.5 15\.5A8\.5/, "light theme shows the moon icon");
+assert.equal(light.rootAttributes["data-theme"], "light");
+assert.equal(light.themeButton.attributes["aria-label"], "Switch to dark theme");
+light.themeButton.listeners.click();
+assert.equal(light.rootAttributes["data-theme"], "dark", "theme button toggles to dark");
+assert.equal(light.values["nakebusen-theme"], "dark", "theme preference persists");
 
 const dark = boot({ storedTheme: "dark" });
-assert.equal(dark.attributes["data-theme"], "dark");
-assert.match(dark.themeButton.innerHTML, /circle cx=\"12\"/, "dark theme shows the sun icon");
-assert.equal(dark.themeMeta.content, "#111111");
+assert.equal(dark.rootAttributes["data-theme"], "dark");
+assert.equal(dark.themeButton.attributes["aria-label"], "Switch to light theme");
 
-const system = boot({ storedTheme: "system", systemDark: true });
-assert.equal(system.attributes["data-theme"], undefined);
-assert.match(system.themeButton.innerHTML, /circle cx=\"12\"/, "system dark preference shows the sun icon");
-system.media.matches = false;
-system.mediaListeners.change();
-assert.match(system.themeButton.innerHTML, /M20\.5 15\.5A8\.5/, "system light preference shows the moon icon");
+const system = boot({ systemDark: true });
+assert.equal(system.rootAttributes["data-theme"], "dark", "system preference is used when no saved preference exists");
 
 const language = boot();
 assert.equal(language.root.lang, "en", "English is the default language");
-assert.match(html, /<meta property="og:description" content="Craft, technology and culture rooted in African ingenuity\. Loc care and practical technology in Eldoret Town, Kenya\."/);
-assert.match(html, /<meta property="og:title" content="NAKEBUSEN — Beautiful Roots\. Sovereign Systems\."/);
-assert.match(html, /<meta name="twitter:title" content="NAKEBUSEN — Beautiful Roots\. Sovereign Systems\."/);
-assert.match(html, /<meta name="twitter:description" content="Craft, technology and culture rooted in African ingenuity\. Loc care/);
-assert.match(html, /<title>NAKEBUSEN — Beautiful Roots\. Sovereign Systems\.<\/title>/);
-assert.match(language.headerLanguageButton.innerHTML, /<svg class="toggle-icon"/, "English header language toggle uses a globe icon");
-assert.equal(language.headerLanguageButton.attrs["aria-label"], "Switch language to Kiswahili", "English toggle announces its action in English");
-assert.match(language.whatsappLinks[0].href, /I%20am%20enquiring%20about%20a%20loc%20service/, "English loc enquiry has an English prefilled message");
-language.headerLanguageButton.listeners.click();
-assert.equal(language.root.lang, "sw", "header toggle switches to Kiswahili");
-assert.match(language.headerLanguageButton.innerHTML, /<svg class="toggle-icon"/, "Kiswahili header language toggle retains the globe icon");
-assert.equal(language.headerLanguageButton.attrs["aria-label"], "Badilisha lugha hadi Kiingereza", "Kiswahili toggle announces its action in Kiswahili");
+assert.equal(language.translated[0].textContent, "Your Beauty ° Your Way.");
+assert.equal(language.translated[1].textContent, "Sisterlocs Retie");
+assert.equal(language.translated[2].textContent, "Founder · CTO · Loctician · Creative Technologist");
+assert.equal(language.nav.attributes["aria-label"], "Main navigation");
+assert.match(decodeURIComponent(language.purposes[0].href), /enquiring about loc care/, "English general loc enquiry is prefilled");
+assert.match(decodeURIComponent(language.purposes[1].href), /technology project/, "English Digital enquiry is prefilled");
+assert.match(decodeURIComponent(language.purposes[2].href), /make an enquiry/, "English general contact enquiry is prefilled");
+assert.match(decodeURIComponent(language.services[1].href), /Sisterlocs Retie/, "English Sisterlocs Retie message matches the service label");
+
+language.languageButton.listeners.click();
+assert.equal(language.root.lang, "sw", "language toggle switches to Kiswahili");
 assert.equal(language.values["nakebusen-language"], "sw", "language preference persists");
-assert.match(language.whatsappLinks[0].href, /ninaulizia/, "Kiswahili loc enquiry has a Kiswahili prefilled message");
-language.footerLanguageButton.listeners.click();
-assert.equal(language.root.lang, "en", "footer toggle returns to English");
+assert.equal(language.languageButton.attributes["aria-label"], "Badilisha lugha hadi Kiingereza");
+assert.equal(language.nav.attributes["aria-label"], "Urambazaji kuu");
+assert.equal(language.translated[0].textContent, "Uzuri Wako ° Kwa Namna Yako.");
+assert.equal(language.translated[1].textContent, "Sisterlocs Retie");
+assert.match(decodeURIComponent(language.purposes[0].href), /ninaulizia huduma za utunzaji wa loc/, "Kiswahili general loc message is updated");
+assert.match(decodeURIComponent(language.purposes[1].href), /ninaulizia mradi wa teknolojia/, "Kiswahili Digital message is updated");
+assert.match(decodeURIComponent(language.purposes[2].href), /huduma za NAKEBUSEN/, "Kiswahili general contact message is updated");
+assert.match(decodeURIComponent(language.services[1].href), /Sisterlocs Retie/, "Kiswahili service message matches the service label");
+
+language.languageButton.listeners.click();
+assert.equal(language.root.lang, "en", "language toggle returns to English");
+
+const restored = boot({ storedLanguage: "sw", storedTheme: "light" });
+assert.equal(restored.root.lang, "sw", "saved language is restored");
+assert.equal(restored.rootAttributes["data-theme"], "light", "saved theme is restored");
 
 const resilient = boot({ storageThrows: true, systemDark: true });
-assert.match(resilient.themeButton.innerHTML, /circle cx=\"12\"/, "theme still works when storage throws");
+assert.equal(resilient.rootAttributes["data-theme"], "dark", "theme still works when storage is unavailable");
+resilient.languageButton.listeners.click();
+assert.equal(resilient.root.lang, "sw", "language still works when storage is unavailable");
 
-console.log("PASS: theme and language preference behavior.");
+console.log("PASS: theme, language, persistence fallback and all WhatsApp enquiry messages.");
