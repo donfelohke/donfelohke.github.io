@@ -87,7 +87,7 @@ check("mailto:mela9ine@proton.me" in html and "tel:+254719635415" in html, "Foot
 check("Eldoret Town / Karibu Mdosi" in html, "Footer must include current service location")
 check("ONLY NAKEBUSEN TRANSACTS" not in html, "Internal commercial rule is not presented as customer-facing copy")
 check("wa.me/254719635415" in html, "Canonical WhatsApp destination required")
-check(set(p.data_wa_purpose) == {"loc", "tech", "general"}, "All three general WhatsApp purposes must be represented")
+check(set(p.data_wa_purpose) == {"loc", "tech", "general", "payment", "support"}, "Loc, Digital, general, payment and independent-support WhatsApp purposes must be represented")
 check(set(p.data_wa_service) == {"retouch", "retie", "artificial"}, "All three service-specific WhatsApp links must be represented")
 check(all("wa.me/254719635415" in href for href in p.hrefs if "wa.me/" in href), "All WhatsApp links use the canonical number")
 check(p.form_count == 0, "No fake booking form")
