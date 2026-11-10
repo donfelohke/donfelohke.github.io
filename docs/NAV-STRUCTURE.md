@@ -31,7 +31,7 @@ Use terracotta active treatment for Locs, sage for Digital and ochre for Connect
 
 ## 4. Footer
 
-The footer is informational, not navigational. Remove the footer section-link row. Retain brand identity, founder role, contact methods, service location, payment-enquiry instructions, independent-support information, source/copyright information and signature.
+The footer is primarily informational, not a second section-navigation system. Retain brand identity, founder role, contact methods, service location, payment-enquiry instructions, independent-support information, source/copyright information and signature. Permit exactly one visually subordinate external repository link: **GitHub repositories**. Do not repeat Locs, Digital or Connect links in the footer.
 
 ## 5. Accessibility and responsive behaviour
 
@@ -53,7 +53,7 @@ The footer is informational, not navigational. Remove the footer section-link ro
 
 ## 7. Verification
 
-Test the three dock destinations at mobile and desktop widths, absence of duplicate section navigation, topbar controls, keyboard focus, anchor offsets, dock overlap, both languages, both themes and all contact destinations.
+Test the three dock destinations at mobile and desktop widths, absence of duplicate section navigation, exactly one footer GitHub repositories link, topbar controls, context-aware keyboard focus on dark and light surfaces, anchor offsets, dock overlap, both languages, both themes and all contact destinations.
 
 
 ## Footer repository navigation
