@@ -59,8 +59,8 @@ test("approved services, starting prices and enquiry boundary are present", asyn
   await expect(page.locator("#crown")).toContainText("An enquiry does not confirm a booking.");
   await expect(page.locator("#connect")).toContainText("Founder · CTO · Loctician · Creative Technologist");
   await expect(page.locator("body")).not.toContainText("LOCS Retie");
-  await expect(page.locator("body")).not.toContainText("3511456");
-  await expect(page.locator("body")).not.toContainText("FELIX LWOVA");
+  await expect(page.locator("footer")).toContainText("Buy Goods Till Number: 3511456");
+  await expect(page.locator("footer")).toContainText("Account / Merchant name: FELIX LWOVA");
   await expect(page.locator("footer")).toContainText("M-PESA Buy Goods");
 });
 
