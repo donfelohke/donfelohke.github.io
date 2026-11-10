@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#F2EFEA">
+<meta name="theme-color" content="#173D32">
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="NAKEBUSEN provides natural loc care and practical GNU/Linux, workstation and network support in Eldoret Town, Kenya. Locs ° Powered by WARENA. Enquire on WhatsApp.">
 <link rel="canonical" href="https://donfelohke.github.io/">
@@ -113,6 +113,135 @@ footer a{color:#F2EFEA}
 @media(prefers-reduced-motion:reduce){.svc{transition:none}.svc:hover{transform:none}}
 @media(prefers-reduced-transparency:reduce){header .nav,.floating-dock,.hero .wrap,.svc{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--paper);box-shadow:none;border-color:var(--line)}footer .footer-payment{backdrop-filter:none;-webkit-backdrop-filter:none;background:#111;box-shadow:none}}
 
+
+/* Distinct native experience system — shared foundations, brand-owned surfaces */
+:root{
+  --forest:#173D32;
+  --deep-forest:#102D25;
+  --charcoal:#242923;
+  --paper:#F3EEE4;
+  --ivory:#F3EEE4;
+  --ink:#242923;
+  --clay:#A34F3B;
+  --ochre:#8B5E16;
+  --sage:#87917A;
+  --sandstone:#D6C6A5;
+  --price:#173D32;
+  --line:rgba(36,41,35,.20);
+  --focus:#102D25;
+  --glass-topbar:rgba(23,61,50,.94);
+  --glass-dock:rgba(36,41,35,.94);
+  --glass-edge:rgba(243,238,228,.22);
+  --glass-active:rgba(163,79,59,.34);
+}
+:root[data-theme="dark"]{
+  --paper:#171B18;
+  --ink:#F3EEE4;
+  --sage:#D6C6A5;
+  --price:#D6C6A5;
+  --line:rgba(243,238,228,.22);
+  --focus:#D6C6A5;
+  --glass-topbar:rgba(16,45,37,.96);
+  --glass-dock:rgba(36,41,35,.96);
+  --glass-edge:rgba(243,238,228,.24);
+  --glass-active:rgba(214,198,165,.20);
+}
+header .nav{
+  color:#F3EEE4;
+  background:#173D32;
+  border-color:rgba(243,238,228,.22);
+  box-shadow:0 10px 28px rgba(16,45,37,.22);
+}
+header .brand,header .nav a{color:#F3EEE4}
+header .brand-sub{color:#D6C6A5}
+header #theme-toggle,header #language-toggle{
+  color:#F3EEE4;
+  background:rgba(16,45,37,.72);
+  border-color:rgba(243,238,228,.34);
+}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  header .nav{background:var(--glass-topbar)}
+}
+.experience{position:relative}
+.experience-locs{
+  background:var(--paper);
+  color:var(--ink);
+  border-top:3px solid var(--clay);
+}
+.experience-locs .svc{border-top-color:var(--clay)}
+.experience-locs .price{color:var(--forest)}
+:root[data-theme="dark"] .experience-locs .price{color:var(--sandstone)}
+.experience-warena{
+  background:#102D25;
+  color:#F3EEE4;
+  border-top:3px solid #87917A;
+}
+.experience-warena .section-kicker,
+.experience-warena .muted{color:#D6C6A5}
+.experience-warena h2,.experience-warena h3{color:#F3EEE4}
+.experience-warena .list-plain li{border-color:rgba(243,238,228,.22)}
+.experience-warena .list-plain a{color:#D6C6A5;text-underline-offset:.18em}
+.experience-warena .note{
+  color:#F3EEE4;
+  background:rgba(214,198,165,.10);
+  border-left-color:#D6C6A5;
+}
+.experience-warena .btn-fill{
+  color:#102D25;
+  background:#D6C6A5;
+  border-color:#D6C6A5;
+}
+.experience-warena .btn:not(.btn-fill){
+  color:#F3EEE4;
+  border-color:rgba(243,238,228,.62);
+}
+.experience-author{
+  background:#242923;
+  color:#F3EEE4;
+  border-top:3px solid #A34F3B;
+}
+.experience-author .section-kicker,
+.experience-author .muted{color:#D6C6A5}
+.experience-author h2{color:#F3EEE4}
+.experience-author .btn-fill{
+  color:#fff;
+  background:#A34F3B;
+  border-color:#A34F3B;
+}
+.experience-author .btn:not(.btn-fill){
+  color:#F3EEE4;
+  border-color:rgba(243,238,228,.58);
+}
+.floating-dock{
+  color:#F3EEE4;
+  background:#242923;
+  border-color:rgba(243,238,228,.24);
+}
+.floating-dock a{color:#F3EEE4}
+.floating-dock .dock-wa{
+  background:#173D32;
+  color:#F3EEE4;
+}
+.floating-dock a[href="#crown"][aria-current="location"]{
+  background:rgba(163,79,59,.34);
+  box-shadow:inset 0 0 0 1px rgba(214,198,165,.55);
+}
+.floating-dock a[href="#code"][aria-current="location"]{
+  background:rgba(135,145,122,.28);
+  box-shadow:inset 0 0 0 1px rgba(214,198,165,.45);
+}
+.floating-dock a[href="#connect"][aria-current="location"]{
+  background:rgba(139,94,22,.34);
+  box-shadow:inset 0 0 0 1px rgba(214,198,165,.5);
+}
+@media(prefers-reduced-transparency:reduce){
+  header .nav{background:#173D32}
+  .floating-dock{background:#242923}
+}
+@media(prefers-reduced-motion:reduce){
+  .experience,.experience *{scroll-behavior:auto}
+}
+
 </style>
 </head>
 <body>
@@ -140,7 +269,7 @@ footer a{color:#F2EFEA}
 </div>
 </div>
 </section>
-<section id="crown">
+<section id="crown" class="experience experience-locs">
 <div class="wrap">
 <p class="section-kicker" data-i18n="crownKicker">LOCS · CROWN</p>
 <h2 data-i18n="crownTitle">Your Crown. Your Craft.</h2>
@@ -153,7 +282,7 @@ footer a{color:#F2EFEA}
 <p class="note"><span data-i18n="bookingNote">Prices are starting points. Final cost depends on condition, scope and materials. An enquiry does not confirm a booking. Availability and final terms are agreed directly.</span></p>
 </div>
 </section>
-<section id="code">
+<section id="code" class="experience experience-warena">
 <div class="wrap">
 <p class="section-kicker" data-i18n="digitalKicker">DIGITAL · WARENA</p>
 <h2 data-i18n="digitalTitle">Freedom Is a System.</h2>
@@ -180,7 +309,7 @@ footer a{color:#F2EFEA}
 </div>
 </div>
 </section>
-<section id="connect">
+<section id="connect" class="experience experience-author">
 <div class="wrap">
 <p class="section-kicker" data-i18n="connectKicker">Connect</p>
 <h2 id="founder" data-i18n="founderTitle">Felix Lwova — Don Feloh</h2>
