@@ -36,10 +36,6 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
   const translated = [
     element({ "data-i18n": "tagline" }),
     element({ "data-i18n": "heroLead" }),
-    element({ "data-i18n": "heroService" }),
-    element({ "data-i18n": "heroLocCopy" }),
-    element({ "data-i18n": "heroDigitalCopy" }),
-    element({ "data-i18n": "heroResearchCopy" }),
     element({ "data-i18n": "crownIntro" }),
     element({ "data-i18n": "founderDesc" }),
     element({ "data-i18n": "svcRetie" }),
@@ -47,7 +43,6 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
     element({ "data-i18n": "bookingNote" }),
     element({ "data-i18n": "digitalIntro" }),
     element({ "data-i18n": "navAbout" }),
-    element({ "data-i18n": "footerContactTitle" }),
     element({ "data-i18n": "footerSignature" }),
     element({ "data-i18n": "paymentAction" }),
     element({ "data-i18n": "paymentBoundary" }),
@@ -116,16 +111,15 @@ assert.equal(system.themeMeta.attributes.content, "#102D25", "system dark prefer
 const language = boot();
 assert.equal(language.root.lang, "en", "English is the default language");
 assert.equal(language.translated[0].textContent, "Your Beauty ° Your Way.");
-assert.match(language.translated[1].textContent, /beauty and digital-services practice founded by Felix Lwova/i);
-assert.match(language.translated[2].textContent, /GNU.*Linux, computer and network support/i);
-assert.match(language.translated[3].textContent, /Natural loc maintenance, retouching, styling/i);
-assert.match(language.translated[4].textContent, /GNU.*Linux, computer support, networking/i);
-assert.match(language.translated[5].textContent, /IKAI.*GENJE.*FELOH Corpus/);
-assert.match(language.translated[6].textContent, /starting prices and direct enquiries/i);
-assert.match(language.translated[7].textContent, /^I founded NAKEBUSEN/);
-assert.equal(language.translated[8].textContent, "Sisterlocs Retie");
-assert.equal(language.translated[9].textContent, "Founder · CTO · Loctician · Creative Technologist");
-assert.match(language.translated[16].textContent, /Pay only after the service and total amount are agreed directly with NAKEBUSEN/);
+assert.match(language.translated[1].textContent, /Natural loc care in Eldoret Town.*powered by WARENA/i);
+assert.match(language.translated[2].textContent, /starting prices and direct enquiries/i);
+assert.match(language.translated[3].textContent, /^I founded NAKEBUSEN/);
+assert.equal(language.translated[4].textContent, "Sisterlocs Retie");
+assert.equal(language.translated[5].textContent, "Founder · CTO · Loctician · Creative Technologist");
+assert.match(language.translated[6].textContent, /Prices are starting points/);
+assert.match(language.translated[7].textContent, /Practical GNU\/Linux, workstation and network support/);
+assert.equal(language.translated[8].textContent, "@donfeloh");
+assert.match(language.translated[11].textContent, /Pay only after the service and total amount are agreed directly with NAKEBUSEN/);
 assert.equal(language.nav.attributes["aria-label"], "Main navigation");
 assert.match(decodeURIComponent(language.purposes[0].href), /enquiring about loc care/, "English general loc enquiry is prefilled");
 assert.match(decodeURIComponent(language.purposes[1].href), /technology project/, "English Digital enquiry is prefilled");
@@ -140,15 +134,15 @@ assert.equal(language.values["nakebusen-language"], "sw", "language preference p
 assert.equal(language.languageButton.attributes["aria-label"], "Badilisha lugha hadi Kiingereza");
 assert.equal(language.nav.attributes["aria-label"], "Urambazaji mkuu");
 assert.equal(language.translated[0].textContent, "Uzuri Wako ° Kwa Namna Yako.");
-assert.match(language.translated[1].textContent, /huduma za urembo na teknolojia iliyoanzishwa na Felix Lwova/i);
-assert.match(language.translated[2].textContent, /GNU.*Linux, kompyuta na mitandao/);
-assert.match(language.translated[3].textContent, /Utunzaji wa loc za asili, retouch, mitindo/i);
-assert.match(language.translated[4].textContent, /GNU.*Linux, msaada wa kompyuta, mitandao/i);
-assert.match(language.translated[5].textContent, /IKAI.*GENJE.*FELOH Corpus/);
-assert.match(language.translated[6].textContent, /bei za kuanzia na maulizo ya moja kwa moja/);
-assert.match(language.translated[7].textContent, /^Nilianzisha NAKEBUSEN/);
-assert.equal(language.translated[8].textContent, "Sisterlocs Retie");
-assert.match(language.translated[16].textContent, /Lipa tu baada ya kukubaliana moja kwa moja na NAKEBUSEN/);
+assert.match(language.translated[1].textContent, /Utunzaji wa loc za asili Eldoret Town.*WARENA/);
+assert.match(language.translated[2].textContent, /Bei ni za kuanzia na maulizo ya moja kwa moja/);
+assert.match(language.translated[3].textContent, /^Nilianzisha NAKEBUSEN/);
+assert.equal(language.translated[4].textContent, "Sisterlocs Retie");
+assert.equal(language.translated[5].textContent, "Mwanzilishi · CTO · Loctician · Creative Technologist");
+assert.match(language.translated[6].textContent, /Bei ni za kuanzia/);
+assert.match(language.translated[7].textContent, /Usaidizi wa vitendo kwa kompyuta za Linux/);
+assert.equal(language.translated[8].textContent, "@donfeloh");
+assert.match(language.translated[11].textContent, /Lipa tu baada ya kukubaliana moja kwa moja na NAKEBUSEN/);
 assert.match(decodeURIComponent(language.purposes[0].href), /ninaulizia huduma za utunzaji wa loc/, "Kiswahili general loc message is updated");
 assert.match(decodeURIComponent(language.purposes[1].href), /ninaulizia mradi wa teknolojia/, "Kiswahili Digital message is updated");
 assert.match(decodeURIComponent(language.purposes[2].href), /huduma za NAKEBUSEN/, "Kiswahili general contact message is updated");
