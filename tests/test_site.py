@@ -79,7 +79,7 @@ check('data-i18n="navLocs"' in html and 'data-i18n="navDigital"' in html and 'da
 check('id="connect"' in html and 'id="founder"' in html and 'id="crown"' in html and 'id="code"' in html, "Primary sections and founder anchor required")
 check("Your Beauty ° Your Way." in html, "Approved homepage headline")
 check('<a class="brand" href="#top">NAKEBUSEN<span class="brand-sub">Locs ° Powered by WARENA</span></a>' in html, "Canonical lockup")
-check("Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya." in html, "Approved hero location")
+check('data-i18n="location"' in html and "Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya" in html, "Connect retains the canonical service location")
 check("Sisterlocs Retie" in html and "LOCS Retie" not in html, "Sisterlocs Retie is the sole canonical public service label")
 check("KES 700+" in html and "KES 1,500+" in html and "KES 3,500+" in html, "All three starting prices must be present")
 check("Founder · CTO · Loctician · Creative Technologist" in html, "Approved public founder role")
@@ -91,8 +91,8 @@ check("Buy Goods Till Number: 3511456" in html and "Account / Merchant name: FEL
 check("Confirm FELIX LWOVA and the agreed amount before entering your PIN." in html and "paymentSafety" in html, "Payment instructions must show merchant verification and payment safety")
 check("Pay only after the service and total amount are agreed directly with NAKEBUSEN." in html and "Use the published Buy Goods Till and merchant name shown above." in html, "Payment boundary and fallback instructions match the published payment details")
 check("Support Us" in html and "separate from NAKEBUSEN service payments" in html, "Voluntary support must remain separate from commercial payments")
-check("mailto:mela9ine@proton.me" in html and "tel:+254719635415" in html, "Footer must expose direct email and telephone links")
-check("Eldoret Town / Karibu Mdosi" in html, "Footer must include current service location")
+check("mailto:mela9ine@proton.me" in html and "tel:+254719635415" in html, "Connect retains direct email and telephone links")
+check('class="footer-contact"' not in html and 'class="footer-role"' not in html, "Footer avoids repeating the Connect contact directory and founder role")
 check("ONLY NAKEBUSEN TRANSACTS" not in html, "Internal commercial rule is not presented as customer-facing copy")
 check("wa.me/254719635415" in html, "Canonical WhatsApp destination required")
 check(set(p.data_wa_purpose) == {"loc", "tech", "general", "payment", "support"}, "Loc, Digital, general, payment and independent-support WhatsApp purposes must be represented")
@@ -134,4 +134,4 @@ for href in p.hrefs:
     if href.startswith("#"):
         check(href[1:] in p.ids or href[1:] == "", f"Broken anchor: {href}")
 
-print("PASS: single dock navigation, minimal repository footer link, structure, canonical facts, contact paths, effective theme contrast and publication gates.")
+print("PASS: concise hero, single Connect contact directory, minimal repository footer, canonical facts, payment/support details, effective theme contrast and publication gates.")
