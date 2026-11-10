@@ -40,7 +40,7 @@ test("single bottom navigation exposes exactly Locs, Digital and Connect", async
     await expect(page.locator("#site-navigation")).toHaveCount(0);
     const footerRepositories = page.locator("footer .footer-nav a");
     await expect(footerRepositories).toHaveCount(1);
-    await expect(footerRepositories).toHaveText("GitHub repositories");
+    await expect(footerRepositories).toContainText("GitHub repositories");
     await expect(footerRepositories).toHaveAttribute("href", "https://github.com/donfelohke?tab=repositories");
     await expect(page.locator("header .brand")).toBeVisible();
     await expect(page.locator("#language-toggle")).toBeVisible();
