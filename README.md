@@ -69,6 +69,7 @@ Do not infer a street address or opening hours. The public founder display name 
 | [TECHCOPY.md](docs/TECHCOPY.md) | DIGITAL / WARENA technical messaging |
 | [NAV-STRUCTURE.md](docs/NAV-STRUCTURE.md) | Single-page navigation and anchors |
 | [WEB-DESIGN-STANDARDS.md](docs/WEB-DESIGN-STANDARDS.md) | Visual, responsive and accessibility rules |
+| [NATIVE-EXPERIENCE-SYSTEM.md](docs/NATIVE-EXPERIENCE-SYSTEM.md) | Distinct native experience rules for Locs, WARENA Digital and Don Feloh |
 | [BRAND-IMPLEMENTATION-CHECKLIST.md](docs/BRAND-IMPLEMENTATION-CHECKLIST.md) | Implementation and release checks |
 | [BRAND-RESEARCH-VALIDATION.md](docs/BRAND-RESEARCH-VALIDATION.md) | Research context and limits |
 
