@@ -2,7 +2,7 @@
 
 **Document ID:** EC-DNES-01  
 **Version:** M1 · 10 November 2026  
-**Status:** Implemented in feature branch; review and browser verification pending  
+**Status:** Implemented and merged to `main`; browser, keyboard and assistive-technology verification remains pending  
 **Implementation:** `index.html`  
 **Scope:** Public NAKEBUSEN gateway and its Locs, Digital and founder sections
 
@@ -120,14 +120,14 @@ Preserve:
 
 Keep footer navigation minimal and purposeful. Provide one clearly labelled external link, **GitHub repositories**, to the public `@donfelohke` repositories view. Detailed repository links remain in the WARENA Digital section, where their purpose can be explained. Do not duplicate the full primary navigation or list every project in the footer. Preserve a visible keyboard focus state and a practical touch target.
 
-## 10. Release gate
+## 10. Release and verification status
 
-This branch changes the homepage presentation and records the design system. Before merge:
+The native experience implementation is merged to `main`. This records source state, not complete release verification. The remaining verification work is:
 1. Run all available repository checks.
 2. Inspect the full diff for accidental copy, price, contact or translation changes.
 3. Verify both themes and both languages in a real browser.
 4. Test all required responsive widths, keyboard focus, reduced motion and reduced transparency.
 5. Check anchor navigation and dock overlap.
-6. Verify the deployed GitHub Pages commit after merge.
+6. Verify the deployed GitHub Pages commit after the corrective changes merge.
 
-Branch implementation is not deployment evidence. Browser and accessibility checks remain pending until recorded.
+A merged source change or successful deployment is not evidence of browser accessibility, screen-reader usability or full WCAG conformance.
