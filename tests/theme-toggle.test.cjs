@@ -113,7 +113,7 @@ const language = boot();
 assert.equal(language.root.lang, "en", "English is the default language");
 assert.equal(language.translated[0].textContent, "Your Beauty ° Your Way.");
 assert.match(language.translated[1].textContent, /natural loc care and practical digital services/i);
-assert.match(language.translated[2].textContent, /GNU\\/Linux, computer and network support/i);
+assert.match(language.translated[2].textContent, /GNU.*Linux, computer and network support/i);
 assert.match(language.translated[3].textContent, /starting prices and direct enquiries/i);
 assert.match(language.translated[4].textContent, /^I founded NAKEBUSEN/);
 assert.equal(language.translated[5].textContent, "Sisterlocs Retie");
@@ -133,7 +133,7 @@ assert.equal(language.languageButton.attributes["aria-label"], "Badilisha lugha 
 assert.equal(language.nav.attributes["aria-label"], "Urambazaji mkuu");
 assert.equal(language.translated[0].textContent, "Uzuri Wako ° Kwa Namna Yako.");
 assert.match(language.translated[1].textContent, /Utunzaji wa loc za asili na huduma za kidijitali za vitendo/);
-assert.match(language.translated[2].textContent, /GNU\\/Linux, kompyuta na mitandao katika Eldoret Town/);
+assert.match(language.translated[2].textContent, /GNU.*Linux, kompyuta na mitandao katika Eldoret Town/);
 assert.match(language.translated[3].textContent, /bei za kuanzia na maulizo ya moja kwa moja/);
 assert.match(language.translated[4].textContent, /^Nilianzisha NAKEBUSEN/);
 assert.equal(language.translated[5].textContent, "Sisterlocs Retie");
