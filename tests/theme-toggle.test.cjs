@@ -50,6 +50,7 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
     element({ "data-i18n": "footerContactTitle" }),
     element({ "data-i18n": "footerSignature" }),
     element({ "data-i18n": "paymentAction" }),
+    element({ "data-i18n": "paymentBoundary" }),
     element({ "data-i18n": "supportAction" }),
   ];
   const purposes = ["loc", "tech", "general", "payment", "support"].map(value => element({ "data-wa-purpose": value }));
@@ -124,6 +125,7 @@ assert.match(language.translated[6].textContent, /starting prices and direct enq
 assert.match(language.translated[7].textContent, /^I founded NAKEBUSEN/);
 assert.equal(language.translated[8].textContent, "Sisterlocs Retie");
 assert.equal(language.translated[9].textContent, "Founder · CTO · Loctician · Creative Technologist");
+assert.match(language.translated[16].textContent, /Pay only after the service and total amount are agreed directly with NAKEBUSEN/);
 assert.equal(language.nav.attributes["aria-label"], "Main navigation");
 assert.match(decodeURIComponent(language.purposes[0].href), /enquiring about loc care/, "English general loc enquiry is prefilled");
 assert.match(decodeURIComponent(language.purposes[1].href), /technology project/, "English Digital enquiry is prefilled");
@@ -146,6 +148,7 @@ assert.match(language.translated[5].textContent, /IKAI.*GENJE.*FELOH Corpus/);
 assert.match(language.translated[6].textContent, /bei za kuanzia na maulizo ya moja kwa moja/);
 assert.match(language.translated[7].textContent, /^Nilianzisha NAKEBUSEN/);
 assert.equal(language.translated[8].textContent, "Sisterlocs Retie");
+assert.match(language.translated[16].textContent, /Lipa tu baada ya kukubaliana moja kwa moja na NAKEBUSEN/);
 assert.match(decodeURIComponent(language.purposes[0].href), /ninaulizia huduma za utunzaji wa loc/, "Kiswahili general loc message is updated");
 assert.match(decodeURIComponent(language.purposes[1].href), /ninaulizia mradi wa teknolojia/, "Kiswahili Digital message is updated");
 assert.match(decodeURIComponent(language.purposes[2].href), /huduma za NAKEBUSEN/, "Kiswahili general contact message is updated");
