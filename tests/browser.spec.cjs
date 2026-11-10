@@ -25,6 +25,19 @@ for (const width of widths) {
   });
 }
 
+test("hero is concise and does not repeat founder, signature or GitHub details", async ({ page }) => {
+  await page.goto(pageUrl);
+  const hero = page.locator("#top");
+  await expect(hero.locator("h1")).toHaveCount(1);
+  await expect(hero).toContainText("Your Beauty ° Your Way.");
+  await expect(hero).toContainText("Natural loc care in Eldoret Town");
+  await expect(hero).toContainText("powered by WARENA");
+  await expect(hero.getByRole("link")).toHaveCount(2);
+  await expect(hero).not.toContainText("Felix Lwova");
+  await expect(hero).not.toContainText("GRACE · GRIT · GLORY");
+  await expect(hero.locator('a[href^="https://github.com/"]')).toHaveCount(0);
+});
+
 test("single bottom navigation exposes exactly Locs, Digital and Connect", async ({ page }) => {
   for (const width of [390, 1280]) {
     await page.setViewportSize({ width, height: 900 });
