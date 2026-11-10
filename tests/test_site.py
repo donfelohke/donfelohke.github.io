@@ -115,4 +115,4 @@ for href in p.hrefs:
     if href.startswith("#"):
         check(href[1:] in p.ids or href[1:] == "", f"Broken anchor: {href}")
 
-print("PASS: structure, canonical facts, service catalogue, contact paths and publication gates.")
+print("PASS: single floating navigation, structure, canonical facts, service catalogue, contact paths and publication gates.")
