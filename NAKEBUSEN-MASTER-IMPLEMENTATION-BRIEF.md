@@ -2,8 +2,10 @@
 
 **Document ID:** NB-MIB-01  
 **Version:** M1 · 30 October 2026  
-**Status:** Approved direction · implementation subject to verification  
-**Authority:** BRAND-CANON.md · BRAND-MANUAL.md · PUBLIC-FACTS-REGISTER.md
+**Status:** Historical baseline · superseded for current website copy, service facts, navigation and visual tokens  
+**Historical authority:** BRAND-CANON.md · BRAND-MANUAL.md · PUBLIC-FACTS-REGISTER.md
+
+> **Supersession notice (10 November 2026):** This brief records the earlier 30 October direction. It is not the active source of truth for the homepage headline, current service labels/prices, palette, footer or navigation. Use [WEBCOPY.md](./docs/WEBCOPY.md), [SERVICE-CATALOG.md](./docs/SERVICE-CATALOG.md), [PUBLIC-FACTS-REGISTER.md](./docs/PUBLIC-FACTS-REGISTER.md), [NAV-STRUCTURE.md](./docs/NAV-STRUCTURE.md) and [WEB-DESIGN-STANDARDS.md](./docs/WEB-DESIGN-STANDARDS.md) for the current approved baseline. Historical copy and tokens below are retained for provenance, not implementation.
 
 ## 1. Master direction
 

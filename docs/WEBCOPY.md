@@ -17,14 +17,25 @@ Supporting signature: **@donfelohke · #HisGenjeness**
 
 **H1:** Your Beauty ° Your Way.
 
-**Supporting statement:** Natural loc care and practical digital services, bringing together skilled craft, useful technology and living culture.
+**Eyebrow:** NAKEBUSEN · BEAUTY & DIGITAL · ELDORET, KENYA.
 
-**Service descriptor:** Loc maintenance, styling and practical GNU/Linux, computer and network support in Eldoret Town.
+**Supporting statement:** NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh), bringing together natural loc care, practical computing and creative technology.
 
-**Location line:** Eldoret Town · Karibu Mdosi · Kenya.
+**Service descriptor:** Personal care grounded in craft and heritage; practical GNU/Linux, computer and network support; and independent research in reflective computing and creative practice.
+
+**Location line:** Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
+
+**Practice overview:**
+- **Beauty & Loc Care:** Natural loc maintenance, retouching, styling, Sisterlocs retie and artificial loc installation.
+- **Digital · WARENA:** GNU/Linux, computer support, networking and local-first infrastructure. Freedom Is a System.
+- **Research & Creative:** IKAI · GENJE · FELOH Corpus — reflective computing, embodied practice and creative technology. These are research, creative practice and knowledge domains, not separate checkout destinations.
+
+**Founder line:** Felix Lwova · Don Feloh — Founder · CTO · Loctician · Creative Technologist.
+
+**Signature:** GRACE · GRIT · GLORY / HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES.
 
 **Primary action:** WhatsApp — Enquire about loc care.  
-**Secondary action:** Explore Locs services.
+**Secondary actions:** Explore digital services · Explore the work on GitHub.
 
 **Enquiry boundary:** An enquiry does not confirm a booking. Availability and final terms are agreed directly.
 
@@ -112,13 +123,13 @@ Keep Locs as the primary beauty service path and Digital as the technical servic
 
 **NAKEBUSEN Locs ° Powered by WARENA**
 
-Navigation: **Locs · Digital · @donfeloh · Connect · GitHub / Source**.
+Primary section navigation: **Locs · Digital · Connect** (floating dock only). The footer has one subordinate external link: **GitHub repositories**. The topbar contains the brand anchor and language/theme controls only.
 
 Contact: **WhatsApp +254 719 635 415 · Call 0719 635 415 · mela9ine@proton.me**.
 
 Location: **Eldoret Town · Karibu Mdosi · Uasin Gishu · Kenya**.
 
-Payment: request current verified M-PESA Buy Goods details directly through the official NAKEBUSEN WhatsApp contact after agreeing the service and amount. Do not publish the Till number or merchant details until account authority and payment-purpose verification are complete. Never request a PIN or one-time code.
+Payment: the published M-PESA Buy Goods details are **Till 3511456 · Account / Merchant name FELIX LWOVA**. The customer confirms the service and total amount directly with NAKEBUSEN before paying, then verifies the merchant name and amount on the M-PESA confirmation screen before entering a PIN. Never share a PIN or one-time code. Do not change the published details without re-verifying merchant authority and payment purpose.
 
 Independent support: voluntary support for Don Feloh’s creative, cultural and technical work is separate from NAKEBUSEN service payments; ask about available arrangements.
 

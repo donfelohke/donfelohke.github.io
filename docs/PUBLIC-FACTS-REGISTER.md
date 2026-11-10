@@ -1,7 +1,7 @@
 # NAKEBUSEN — Public Facts Register
 
 **Document ID:** NB-PFR-01  
-**Version:** M5 · 10 November 2026  
+**Version:** M6 · 10 November 2026  
 **Status:** Publication control  
 **Authority:** @donfelohke
 
@@ -25,7 +25,7 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-004 | Lockup: NAKEBUSEN Locs ° Powered by WARENA | F2 | Preserve exact degree sign |
 | PF-005 | Supporting signature: @donfelohke · #HisGenjeness | F2 | Use where appropriate |
 | PF-006 | Homepage headline: Your Beauty ° Your Way. | F2 | Approved 9 November 2026; supersedes the previous editorial-first H1 |
-| PF-007 | Supporting statement: Natural loc care and practical digital services, bringing together skilled craft, useful technology and living culture. | F2 | Approved copy update 10 November 2026 |
+| PF-007 | Homepage supporting statement: NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh), bringing together natural loc care, practical computing and creative technology. | F2 | Approved unified hero copy, 10 November 2026 |
 | PF-008 | NAKEBUSEN adopted meaning “Beautiful” in Turkana | F4 | Attribute as founder-supplied interpretation pending linguistic verification |
 | PF-009 | GENJE ZA WARENA interpreted as “THE FIRE OF THE FORMIDABLE” | F4 | Brand interpretation only; not verified etymology |
 | PF-010 | GENJE is not a separate commercial division | F2 | Canonical |
@@ -50,10 +50,12 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-029 | Opening hours and street address | F5 | Do not invent |
 | PF-030 | Appointment availability | F5 | An enquiry is not a confirmed booking |
 | PF-031 | Public role line: Founder · CTO · Loctician · Creative Technologist | F2 | Approved for public presentation 9 November 2026; role wording is not a certification claim |
+| PF-032 | M-PESA Buy Goods Till: 3511456; account / merchant name: FELIX LWOVA | F1 | Published payment details restored from the previously published verified record on 10 November 2026; changes require re-verification of merchant authority and payment purpose |
+| PF-033 | Payment is due only after the service and total amount are agreed directly with NAKEBUSEN | F1 | Customer must confirm the displayed merchant name and amount before entering a PIN; never request or share a PIN or one-time code |
 
 ## Publication controls
 
-1. Prices and contact details must match this register and SERVICE-CATALOG.
+1. Prices, contact details and published M-PESA payment details must match this register and SERVICE-CATALOG. Re-verify the Till/merchant pairing before any change or paid campaign.
 2. Digital capability must be labelled according to actual availability.
 3. Linguistic interpretations must retain their qualifications.
 4. Founder display-name and copyright attribution must not be silently changed; PF-027 and PF-028 remain subject to their stated evidence classes.

@@ -31,7 +31,7 @@ Use terracotta active treatment for Locs, sage for Digital and ochre for Connect
 
 ## 4. Footer
 
-The footer is informational, not navigational. Remove the footer section-link row. Retain brand identity, founder role, contact methods, service location, payment-enquiry instructions, independent-support information, source/copyright information and signature.
+The footer is primarily informational, not a second section-navigation system. Retain brand identity, founder role, contact methods, service location, payment-enquiry instructions, independent-support information, source/copyright information and signature. Permit exactly one visually subordinate external repository link: **GitHub repositories**. Do not repeat Locs, Digital or Connect links in the footer.
 
 ## 5. Accessibility and responsive behaviour
 
@@ -46,14 +46,14 @@ The footer is informational, not navigational. Remove the footer section-link ro
 
 - ONLY NAKEBUSEN TRANSACTS.
 - WhatsApp is an enquiry, not a confirmed booking.
-- LOCS starting prices: Retouch & Styling KES 700; Sisterlocs Retie KES 1,500; Artificial Locs Installation KES 3,500.
+- LOCS starting prices: Retouch & Styling KES 700+; Sisterlocs Retie KES 1,500+; Artificial Locs Installation KES 3,500+.
 - DIGITAL is scoped and quoted per engagement.
-- No public Till number or merchant details until account authority and payment-purpose verification are complete.
+- Published M-PESA Buy Goods details: **Till 3511456 · Account / Merchant name FELIX LWOVA**. Changes require re-verification of merchant authority and payment purpose. Payment is due only after the service and total amount are agreed; confirm the merchant name and amount before entering a PIN. Never share a PIN or one-time code.
 - Do not invent street address, map pin or opening hours.
 
 ## 7. Verification
 
-Test the three dock destinations at mobile and desktop widths, absence of duplicate section navigation, topbar controls, keyboard focus, anchor offsets, dock overlap, both languages, both themes and all contact destinations.
+Test the three dock destinations at mobile and desktop widths, absence of duplicate section navigation, exactly one footer GitHub repositories link, topbar controls, context-aware keyboard focus on dark and light surfaces, anchor offsets, dock overlap, both languages, both themes and all contact destinations.
 
 
 ## Footer repository navigation

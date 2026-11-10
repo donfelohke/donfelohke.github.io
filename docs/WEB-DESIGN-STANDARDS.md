@@ -2,7 +2,7 @@
 
 **Document ID:** NB-WDS-01  
 **Version:** M2 · 10 November 2026  
-**Status:** Approved direction · contrast/material correction in review branch  
+**Status:** Approved direction · contrast/material correction merged to `main`; final browser verification pending  
 **Related specification:** [Distinct Native Experience System](./NATIVE-EXPERIENCE-SYSTEM.md)
 
 ## 1. Design direction
@@ -109,7 +109,7 @@ Target WCAG 2.2 AA:
 - semantic landmarks, one H1 and logical heading hierarchy;
 - skip link and visible focus;
 - keyboard-operable controls with accessible names and state;
-- adequate text and interface contrast in both themes; use context-aware focus rings on light and dark navigation surfaces;
+- adequate text and interface contrast in both themes; use context-aware focus rings on light and dark content/navigation surfaces, including WARENA, Don Feloh and footer controls;
 - text-safe sage for normal-sized text on warm paper; decorative sage is not a text colour;
 - touch targets around 44 × 44 CSS px where practical;
 - reduced motion and reduced transparency;
