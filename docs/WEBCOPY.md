@@ -112,7 +112,7 @@ Keep Locs as the primary beauty service path and Digital as the technical servic
 
 **NAKEBUSEN Locs ° Powered by WARENA**
 
-Navigation: **Locs · Digital · @donfeloh · Connect · GitHub / Source**.
+Primary section navigation: **Locs · Digital · Connect** (floating dock only). The footer has one subordinate external link: **GitHub repositories**. The topbar contains the brand anchor and language/theme controls only.
 
 Contact: **WhatsApp +254 719 635 415 · Call 0719 635 415 · mela9ine@proton.me**.
 
