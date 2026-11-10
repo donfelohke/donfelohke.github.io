@@ -113,7 +113,11 @@ Preserve:
 - Do not publish M-PESA merchant details before verification.
 - IKAI remains research; GENJE remains creative practice; neither becomes a checkout destination by this change.
 
-## 9. Release gate
+## 9. Footer navigation
+
+Keep footer navigation minimal and purposeful. Provide one clearly labelled external link, **GitHub repositories**, to the public `@donfelohke` repositories view. Detailed repository links remain in the WARENA Digital section, where their purpose can be explained. Do not duplicate the full primary navigation or list every project in the footer. Preserve a visible keyboard focus state and a practical touch target.
+
+## 10. Release gate
 
 This branch changes the homepage presentation and records the design system. Before merge:
 1. Run all available repository checks.
