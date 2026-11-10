@@ -25,7 +25,7 @@ for (const width of widths) {
   });
 }
 
-test("primary navigation reaches Locs, Digital and Connect", async ({ page }) => {
+test("primary navigation reaches Locs, Digital, @donfeloh and Connect", async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto(pageUrl);
   const nav = page.getByRole("navigation", { name: "Main navigation" });
@@ -33,6 +33,8 @@ test("primary navigation reaches Locs, Digital and Connect", async ({ page }) =>
   await expect(page.locator("#crown")).toBeVisible();
   await nav.getByRole("link", { name: "Digital" }).click();
   await expect(page.locator("#code")).toBeVisible();
+  await nav.getByRole("link", { name: "@donfeloh" }).click();
+  await expect(page.locator("#founder")).toBeVisible();
   await nav.getByRole("link", { name: "Connect" }).click();
   await expect(page.locator("#connect")).toBeVisible();
 });
@@ -49,7 +51,8 @@ test("approved services, starting prices and enquiry boundary are present", asyn
   await expect(page.locator("#connect")).toContainText("Founder · CTO · Loctician · Creative Technologist");
   await expect(page.locator("body")).not.toContainText("LOCS Retie");
   await expect(page.locator("body")).not.toContainText("3511456");
-  await expect(page.locator("body")).not.toContainText("M-PESA Buy Goods");
+  await expect(page.locator("body")).not.toContainText("FELIX LWOVA");
+  await expect(page.locator("footer")).toContainText("M-PESA Buy Goods");
 });
 
 test("theme and language controls work and preserve preferences", async ({ page }) => {
@@ -68,7 +71,7 @@ test("theme and language controls work and preserve preferences", async ({ page 
   await expect(page.locator("h1")).toHaveText("Uzuri Wako ° Kwa Namna Yako.");
   await expect(page.locator("#crown")).toContainText("Sisterlocs Retie");
   await expect(page.locator("#connect [data-i18n='role']")).toHaveText("Mwanzilishi · CTO · Loctician · Creative Technologist");
-  await expect(page.getByRole("navigation", { name: "Urambazaji kuu" })).toBeVisible();
+  await expect(page.getByRole("navigation", { name: "Urambazaji mkuu" })).toBeVisible();
 
   await page.reload();
   await expect(page.locator("html")).toHaveAttribute("lang", "sw");
@@ -83,8 +86,8 @@ test("theme and language controls work and preserve preferences", async ({ page 
 test("all WhatsApp purposes and service links update with the selected language", async ({ page }) => {
   await page.goto(pageUrl);
   const purposeLinks = page.locator("a[data-wa-purpose]");
-  await expect(purposeLinks).toHaveCount(4);
-  for (const purpose of ["loc", "tech", "general"]) {
+  await expect(purposeLinks).toHaveCount(7);
+  for (const purpose of ["loc", "tech", "general", "payment", "support"]) {
     await expect(page.locator(`a[data-wa-purpose="${purpose}"]`).first()).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
   }
   await expect(page.locator('a[data-wa-service="retie"]')).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
@@ -94,6 +97,8 @@ test("all WhatsApp purposes and service links update with the selected language"
   await expect(page.locator('a[data-wa-purpose="loc"]').first()).toHaveAttribute("href", /ninaulizia/);
   await expect(page.locator('a[data-wa-purpose="tech"]')).toHaveAttribute("href", /ninaulizia/);
   await expect(page.locator('a[data-wa-purpose="general"]')).toHaveAttribute("href", /huduma/);
+  await expect(page.locator('a[data-wa-purpose="payment"]')).toHaveAttribute("href", /maelezo/);
+  await expect(page.locator('a[data-wa-purpose="support"]')).toHaveAttribute("href", /kuunga/);
   await expect(page.locator('a[data-wa-service="retie"]')).toHaveAttribute("href", /Sisterlocs/);
 });
 
@@ -101,6 +106,8 @@ test("contact destinations and commercial routing are correct", async ({ page })
   await page.goto(pageUrl);
   await expect(page.locator('a[href="tel:+254719635415"]')).toBeVisible();
   await expect(page.locator('a[href="mailto:mela9ine@proton.me"]')).toBeVisible();
+  await expect(page.locator("footer")).toContainText("Eldoret Town / Karibu Mdosi");
+  await expect(page.locator("footer")).toContainText("Support Us");
   await expect(page.locator("#connect")).toContainText("Commercial enquiries route through NAKEBUSEN.");
   await expect(page.locator("#connect")).toContainText("Eldoret Town / Karibu Mdosi");
 });
