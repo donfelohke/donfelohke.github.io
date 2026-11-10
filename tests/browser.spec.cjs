@@ -77,7 +77,9 @@ test("theme and language controls work and preserve preferences", async ({ page 
   await expect(page.locator("h1")).toHaveText("Uzuri Wako ° Kwa Namna Yako.");
   await expect(page.locator("#crown")).toContainText("Sisterlocs Retie");
   await expect(page.locator("#connect [data-i18n='role']")).toHaveText("Mwanzilishi · CTO · Loctician · Creative Technologist");
-  await expect(page.getByRole("navigation", { name: "Urambazaji mkuu" })).toBeVisible();
+  const swDock = page.getByRole("navigation", { name: "Urambazaji wa sehemu" });
+  await expect(swDock.getByRole("link")).toHaveCount(3);
+  await expect(page.locator("header nav")).toHaveCount(0);
 
   await page.reload();
   await expect(page.locator("html")).toHaveAttribute("lang", "sw");
@@ -92,7 +94,7 @@ test("theme and language controls work and preserve preferences", async ({ page 
 test("all WhatsApp purposes and service links update with the selected language", async ({ page }) => {
   await page.goto(pageUrl);
   const purposeLinks = page.locator("a[data-wa-purpose]");
-  await expect(purposeLinks).toHaveCount(7);
+  await expect(purposeLinks).toHaveCount(6);
   for (const purpose of ["loc", "tech", "general", "payment", "support"]) {
     await expect(page.locator(`a[data-wa-purpose="${purpose}"]`).first()).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
   }
