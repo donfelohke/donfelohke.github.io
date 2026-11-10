@@ -1,7 +1,7 @@
 # NAKEBUSEN — Navigation and Information Architecture
 
 **Document ID:** NB-NS-01  
-**Version:** M1 · 30 October 2026  
+**Version:** M2 · 10 November 2026  
 **Status:** Approved single-page information architecture  
 **Implementation source:** index.html
 
@@ -14,10 +14,10 @@ Do not introduce new routes or a booking engine as part of this change.
 ## 2. Primary navigation
 
 - Home — `#top`
-- LOCS · CROWN — `#crown`
-- DIGITAL · WARENA — `#code`
-- About — `#founder`
-- Contact — `#connect`
+- Locs — `#crown`
+- Digital — `#code`
+- @donfeloh — `#founder`
+- Connect — `#connect`
 
 The service-path cards may link to the corresponding LOCS and DIGITAL sections.
 
@@ -35,6 +35,8 @@ The service-path cards may link to the corresponding LOCS and DIGITAL sections.
 The philosophy and community content should not compete with the two customer-facing service paths.
 
 ## 4. Header and controls
+
+The primary navigation is **Locs · Digital · @donfeloh · Connect**. The founder anchor is attached to the founder heading inside the Connect section; it does not create a separate page or route.
 
 - Exact typographic lockup: **NAKEBUSEN Locs ° Powered by WARENA**.
 - Sticky header with primary navigation.
@@ -61,18 +63,18 @@ The current mobile quick-navigation dock and More panel are existing components.
 Keep the footer in normal document flow.
 
 Include:
-- Brand lockup and supporting signature.
-- LOCS and DIGITAL links.
-- WhatsApp, telephone and email.
-- Source repository.
-- Language control.
+- Brand lockup and founder role.
+- Locs, Digital, @donfeloh and Connect links, plus the source repository.
+- WhatsApp, telephone, email and current Eldoret location.
+- Separate M-PESA payment-enquiry and voluntary independent-support areas.
+- No public Till number or merchant details until account authority and payment-purpose verification are complete.
 - Existing founder/copyright treatment until rights-holder confirmation.
 
 ## 7. Commercial and factual boundaries
 
 - ONLY NAKEBUSEN TRANSACTS.
 - WhatsApp is an enquiry, not a confirmed booking.
-- LOCS starting prices: Retouch & Styling KES 700; LOCS Retie KES 1,500; Artificial Locs Installation KES 3,500.
+- LOCS starting prices: Retouch & Styling KES 700; Sisterlocs Retie KES 1,500; Artificial Locs Installation KES 3,500.
 - DIGITAL is scoped and quoted per engagement.
 - GENJE is governing identity, not a separate checkout.
 - WARENA Systems is within DIGITAL.
