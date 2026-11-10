@@ -1,7 +1,7 @@
 # NAKEBUSEN — Public Facts Register
 
 **Document ID:** NB-PFR-01  
-**Version:** M3 · 9 November 2026  
+**Version:** M4 · 10 November 2026  
 **Status:** Publication control  
 **Authority:** @donfelohke
 
@@ -25,7 +25,7 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-004 | Lockup: NAKEBUSEN Locs ° Powered by WARENA | F2 | Preserve exact degree sign |
 | PF-005 | Supporting signature: @donfelohke · #HisGenjeness | F2 | Use where appropriate |
 | PF-006 | Homepage headline: Your Beauty ° Your Way. | F2 | Approved 9 November 2026; supersedes the previous editorial-first H1 |
-| PF-007 | Supporting statement: Craft, technology and culture rooted in African ingenuity | F2 | Approved |
+| PF-007 | Supporting statement: Rooted in African ingenuity. Bringing together personal craft, practical technology and living culture. | F2 | Approved copy update 10 November 2026 |
 | PF-008 | NAKEBUSEN adopted meaning “Beautiful” in Turkana | F4 | Attribute as founder-supplied interpretation pending linguistic verification |
 | PF-009 | GENJE ZA WARENA interpreted as “THE FIRE OF THE FORMIDABLE” | F4 | Brand interpretation only; not verified etymology |
 | PF-010 | GENJE is not a separate commercial division | F2 | Canonical |
