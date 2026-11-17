@@ -95,3 +95,8 @@ Use [BRAND-IMPLEMENTATION-CHECKLIST.md](docs/BRAND-IMPLEMENTATION-CHECKLIST.md).
 ## Technical research boundary — 2026-11
 
 WARENA's desktop-stack research (Guix/RDE, Niri, Noctalia v5, Sway, dwl-guile and Nix/NixOS comparisons) is documented separately from the public service offer. It does not imply that any particular desktop stack is installed, deployed or available as a standard service. See the [WARENA research decision](https://github.com/donfelohke/WARENA/blob/main/docs/desktop-stack-decision-2026-11.md).
+
+
+## WARENA technical-policy boundary — 2026-11-17
+
+WARENA and IKAI system architecture is native-first and excludes JavaScript and web technologies as application/runtime dependencies. This repository is the public publication surface; its existing static website is not thereby declared a WARENA/IKAI runtime or migrated by this policy. Any future site changes remain subject to separate approval and implementation review. See the [WARENA Technology Constitution](https://github.com/donfelohke/WARENA/blob/main/docs/TECHNOLOGY-CONSTITUTION-2026-11-17.md).
