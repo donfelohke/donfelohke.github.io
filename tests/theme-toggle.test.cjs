@@ -5,7 +5,6 @@ const fs = require("node:fs");
 const vm = require("node:vm");
 
 const scripts = [...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)];
-const scripts = [...html.matchAll(/<script\\b[^>]*>([\\s\\S]*?)<\\/script>/gi)];
 const bootstrapMatch = scripts.find(match => match[1].includes("nakebusen-theme") && match[1].includes("setAttribute('data-theme'"));
 const match = scripts.find(match => match[1].includes("function applyTheme"));
 assert.ok(bootstrapMatch, "early theme bootstrap exists");
