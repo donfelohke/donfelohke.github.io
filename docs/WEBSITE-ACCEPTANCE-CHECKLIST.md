@@ -44,3 +44,10 @@ Mark after real checks. Spec alone is not pass.
 ## Priority
 
 P0 trust → P1 mobile journeys → P2 a11y/tech → P3 polish  
+
+
+## Evidence record required for each release
+
+For every checked item, record the tested commit, date/time, browser and version, device/viewport, procedure, expected result, observed result, pass/fail, defect reference and retest. For production checks, record the deployed Pages commit and verify the public URL after deployment. Keep source-level workflow results separate from manual browser, real-device, accessibility and payment-provider verification.
+
+Do not mark an item complete from a code review alone. No checklist item is implicitly passed by this document.
