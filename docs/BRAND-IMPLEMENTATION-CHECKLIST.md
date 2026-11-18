@@ -1,7 +1,7 @@
 # NAKEBUSEN — Brand Implementation Checklist
 
 **Document ID:** NB-BIC-01  
-**Version:** M3 · 9 November 2026  
+**Version:** M5 · 19 November 2026  
 **Status:** Implementation and verification checklist
 
 Status meanings: APPROVED = decision approved; IMPLEMENTED = code changed; TESTED = checks executed; VERIFIED = evidence supports acceptance; RELEASED = deployed and checked.
@@ -49,6 +49,19 @@ These checkboxes record approved decisions, not test results.
 - [ ] Functional icons remain accessible.
 - [ ] LOCS photography has documented permission.
 
+### AMOLED-first theme decision — 19 November 2026
+
+- [x] Dark theme uses a true-black `#000000` page canvas for OLED displays.
+- [x] Dark theme uses layered `#151515` card surfaces and the established forest-green WARENA section.
+- [x] Warm ivory `#F2EFEA` is the primary dark-theme text colour; muted warm grey `#B8B0A5` is reserved for secondary text.
+- [x] Terracotta `#E2725B`, ochre `#D4AF37` and forest green `#173D32` for primary brand actions and `#033500` for the WARENA surface provide restrained brand accents in dark mode.
+- [x] Light theme remains a complete, user-selectable warm-paper experience.
+- [x] Green-section supporting text and links use accessible high-contrast ivory.
+- [ ] Verify all foreground/background pairs with automated WCAG 2.2 AA checks and manual review.
+- [ ] Measure real-device OLED power behaviour; do not publish a fixed battery-saving claim.
+
+Implementation state: AMOLED token changes and WARENA-section contrast correction are implemented on the PR branch. Automated verification is pending.
+
 ## 4. Navigation and interaction
 
 - [ ] Primary navigation destinations work.
@@ -95,9 +108,13 @@ Record the exact commit, test date, browsers/devices, routes tested, results, de
 
 ## 8. Change control and current status
 
+- 19 November 2026: approved AMOLED-first direction implemented on the PR branch: true-black dark-theme canvas, layered charcoal surfaces, warm ivory text, terracotta/ochre accents, and corrected high-contrast WARENA section links. Light theme remains available. Browser accessibility verification is pending; no OLED battery-saving percentage is claimed.
+
+- 18 November 2026: research-led refinements prepared on `fix/nakebusen-site-quality-2026-11-18`: consolidated the stylesheet, aligned hero copy and practice overview to WEBCOPY, corrected Artificial Locs Installation to KES 3,500, made the ONLY NAKEBUSEN TRANSACTS boundary explicit, clarified WARENA's non-checkout role and per-engagement DIGITAL scope, and added automated responsive, interaction, anchor, storage-fallback and axe accessibility coverage. These are implementation changes; test execution and release remain pending.
+
 - Stage A PR #112 was merged to `main` on 9 November 2026 at merge commit `e9a0c4c395a731f7082a80e85f88dfcf22ced64a`.
 - This confirms the source merge only; it does not by itself establish successful deployment or independent live-browser verification.
-- The current correction branch is `audit/website-accuracy-reconciliation`.
-- Current correction work is not merged or released. Do not change this status until the corresponding evidence exists.
+- The current implementation branch is `fix/nakebusen-site-quality-2026-11-18`; PR #129 is the review surface.
+- Current implementation work is not merged or released. Do not change this status until the corresponding evidence exists.
 - Use a reviewed pull request for material website changes. Do not merge or deploy based solely on a successful commit.
 - Keep specification, implementation, testing, verification and release states distinct.
