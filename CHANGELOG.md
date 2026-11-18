@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-11-19 — Editorial homepage UI/UX refinement
+- Recompose the hero as a responsive editorial grid: approved headline and introduction on the primary column, three plain-language service/research pathways alongside it on wide screens.
+- Widen the reading canvas while keeping long-form text constrained for readability.
+- Replace nested/gradient service-card treatments with restrained service rows, clear starting prices and persistent enquiry actions.
+- Keep the Locs, Digital and Connect section treatments, existing three-destination floating dock, English/Kiswahili controls, light/dark themes and WhatsApp enquiry logic.
+- Remove final-cascade ornamental gradients, excessive shadows, card lift and entrance/scroll animations; preserve the selective glass navigation with solid reduced-transparency fallbacks.
+- Retain the text-first policy: no unapproved client photography, stock imagery, external fonts, trackers or new dependencies.
+- Preserve all approved prices, payment details, contact information, research status and the NAKEBUSEN-only transaction boundary.
+- Verification required: repository static checks, browser viewport screenshots, keyboard/focus, contrast, language/theme persistence and real WhatsApp handoff.
+
+
 ## 2026-11-10 — Published M-PESA payment details restored
 - Restore the previously published Buy Goods Till **3511456** and account/merchant name **FELIX LWOVA**.
 - Keep payment conditional on direct agreement of the service and total amount, with merchant/amount verification before PIN entry and explicit PIN/one-time-code safety.
