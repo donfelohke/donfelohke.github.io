@@ -296,3 +296,36 @@ test("depth interactions are tactile and respect reduced-motion preferences", as
   const metrics = await page.evaluate(() => ({viewport:document.documentElement.clientWidth,document:document.documentElement.scrollWidth}));
   expect(metrics.document).toBeLessThanOrEqual(metrics.viewport);
 });
+
+
+test("AMOLED theme preserves native section surfaces and the light theme", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.emulateMedia({ colorScheme: "dark" });
+  await page.goto(pageUrl);
+
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  const darkSurfaces = await page.evaluate(() => ({
+    canvas: getComputedStyle(document.body).backgroundColor,
+    header: getComputedStyle(document.querySelector("header .nav")).backgroundColor,
+    locs: getComputedStyle(document.querySelector("#crown")).backgroundColor,
+    service: getComputedStyle(document.querySelector(".svc")).backgroundColor,
+    digital: getComputedStyle(document.querySelector("#code")).backgroundColor,
+    connect: getComputedStyle(document.querySelector("#connect")).backgroundColor,
+    footer: getComputedStyle(document.querySelector("footer")).backgroundColor,
+    themeColor: document.querySelector('meta[name="theme-color"]').content,
+  }));
+  expect(darkSurfaces.canvas).toBe("rgb(0, 0, 0)");
+  expect(darkSurfaces.header).toContain("3, 53, 0");
+  expect(darkSurfaces.locs).toBe("rgb(0, 0, 0)");
+  expect(darkSurfaces.service).toBe("rgb(21, 21, 21)");
+  expect(darkSurfaces.digital).toBe("rgb(3, 53, 0)");
+  expect(darkSurfaces.connect).toBe("rgb(21, 21, 21)");
+  expect(darkSurfaces.footer).toBe("rgb(8, 8, 8)");
+  expect(darkSurfaces.themeColor).toBe("#000000");
+
+  await page.getByRole("button", { name: "Switch to light theme" }).click();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  await expect(page.locator("body")).toHaveCSS("background-color", "rgb(243, 238, 228)");
+  await page.reload();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+});
