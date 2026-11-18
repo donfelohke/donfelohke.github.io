@@ -38,7 +38,7 @@ Canonical lockup: **NAKEBUSEN Locs ° Powered by WARENA**.
 |---|---:|
 | Retouch & Styling | KES 700+ |
 | Sisterlocs Retie | KES 1,500+ |
-| Artificial Locs Installation | KES 3,500+ |
+| Artificial Locs Installation | KES 3,500 |
 
 No braiding or shaving. Final cost depends on scope, loc condition and materials. An enquiry does not confirm a booking; availability and final terms are agreed directly.
 
@@ -74,6 +74,12 @@ Do not infer a street address or opening hours. The public founder display name 
 | [NATIVE-EXPERIENCE-SYSTEM.md](docs/NATIVE-EXPERIENCE-SYSTEM.md) | Distinct native experience rules for Locs, WARENA Digital and Don Feloh |
 | [BRAND-IMPLEMENTATION-CHECKLIST.md](docs/BRAND-IMPLEMENTATION-CHECKLIST.md) | Implementation and release checks |
 | [BRAND-RESEARCH-VALIDATION.md](docs/BRAND-RESEARCH-VALIDATION.md) | Research context and limits |
+
+| [UI-UX-RESEARCH-2026-11-19.md](docs/UI-UX-RESEARCH-2026-11-19.md) | 2026 mobile UX, AMOLED, accessibility, performance and case-study decisions |
+| [WEBSITE-AUDIT-DISCREPANCY-REGISTER.md](docs/WEBSITE-AUDIT-DISCREPANCY-REGISTER.md) | Dated Phase 1 source-audit register; proposals are not approvals |
+| [NAKEBUSEN-BROWSER-RELEASE-CHECKLIST.md](docs/NAKEBUSEN-BROWSER-RELEASE-CHECKLIST.md) | Evidence-based browser and release verification |
+| [HTML-CORPUS-EXTRACTION-REGISTER.md](docs/HTML-CORPUS-EXTRACTION-REGISTER.md) | Historical source-corpus inventory and reconciliation limits |
+| [NAKEBUSEN Market & Customer Research](research/nakebusen-market-customer-research-2026-10.md) | Historical market hypotheses and customer-validation plan |
 
 ## Website principles
 

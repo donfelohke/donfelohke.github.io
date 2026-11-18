@@ -1,7 +1,7 @@
 # NAKEBUSEN — Service Catalogue
 
 **Document ID:** NB-SC-01  
-**Version:** M2 · 9 November 2026  
+**Version:** M3 · 18 November 2026  
 **Status:** Approved public service baseline  
 **Rule:** ONLY NAKEBUSEN TRANSACTS · an enquiry is not a confirmed booking
 
@@ -18,7 +18,7 @@
 |---|---:|---|
 | Retouch & Styling | **700+** | Final scope depends on loc condition and work required |
 | Sisterlocs Retie | **1,500+** | Retightening for established Sisterlocs; confirm suitability and requirements before work |
-| Artificial Locs Installation | **3,500+** | Final scope depends on preferred style, materials and installation requirements |
+| Artificial Locs Installation | **3,500** | Final scope depends on preferred style, materials and installation requirements |
 
 Prices are starting points, not fixed quotes. Confirm the actual scope and final price directly before work begins.
 
