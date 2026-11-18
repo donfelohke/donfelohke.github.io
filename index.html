@@ -5,445 +5,71 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#173D32">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="NAKEBUSEN provides natural loc care and practical GNU/Linux, workstation and network support in Eldoret Town, Kenya. Locs ° Powered by WARENA. Enquire on WhatsApp.">
+<meta name="description" content="NAKEBUSEN brings together natural loc care in Eldoret Town and practical GNU/Linux, computer and network support powered by WARENA. Enquire directly on WhatsApp.">
 <link rel="canonical" href="https://donfelohke.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="NAKEBUSEN">
 <meta property="og:title" content="NAKEBUSEN — Your Beauty ° Your Way.">
-<meta property="og:description" content="Natural loc care and practical digital services in Eldoret Town. Locs ° Powered by WARENA.">
+<meta property="og:description" content="Natural loc care in Eldoret Town, alongside practical GNU/Linux, computer and network support powered by WARENA. Enquire directly with NAKEBUSEN.">
 <meta property="og:url" content="https://donfelohke.github.io/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NAKEBUSEN — Your Beauty ° Your Way.">
-<meta name="twitter:description" content="Loc care in Eldoret. Practical digital services powered by WARENA.">
+<meta name="twitter:description" content="Natural loc care in Eldoret and practical GNU/Linux, computer and network support powered by WARENA.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"NAKEBUSEN","url":"https://donfelohke.github.io/","telephone":"+254719635415","email":"mela9ine@proton.me","areaServed":[{"@type":"City","name":"Eldoret"}]}</script>
 <title>NAKEBUSEN Loc Care &amp; Digital Services · Eldoret, Kenya</title>
 <style>
-:root{color-scheme:light dark;--forest:#173D32;--clay:#A34F3B;--ochre:#D6C6A5;--ivory:#F3EEE4;--sage:#3A6D8C;--price:#173D32;--paper:#F3EEE4;--ink:#242923;--line:rgba(17,17,17,.22);--serif:Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--mono:ui-monospace,monospace;--focus:#242923;--glass-blur:20px;--glass-saturate:150%;--glass-topbar:rgba(242,239,234,.34);--glass-dock:rgba(242,239,234,.84);--glass-edge:rgba(17,17,17,.14);--glass-shadow:0 12px 36px rgba(17,17,17,.18);--glass-active:rgba(214,198,165,.22)}
-:root[data-theme="dark"]{color-scheme:dark;--paper:#242923;--ink:#F3EEE4;--sage:#8FB4C8;--price:#D6C6A5;--line:rgba(242,239,234,.24);--focus:#D6C6A5;--glass-topbar:rgba(23,61,50,.42);--glass-dock:rgba(23,61,50,.86);--glass-edge:rgba(242,239,234,.22);--glass-shadow:0 12px 36px rgba(0,0,0,.3)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--sans)}
-a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}header a:focus-visible,header button:focus-visible,.floating-dock a:focus-visible{outline-color:#D6C6A5}
+:root{color-scheme:light;--forest:#173D32;--deep-forest:#102D25;--charcoal:#242923;--paper:#F3EEE4;--ink:#242923;--clay:#A34F3B;--ochre:#8B5E16;--sage:#87917A;--muted:#626B58;--sandstone:#D6C6A5;--line:rgba(36,41,35,.20);--focus:#102D25;--serif:Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;--glass-blur:20px;--glass-saturate:150%}
+:root[data-theme="dark"]{color-scheme:dark;--paper:#171B18;--ink:#F3EEE4;--muted:#D6C6A5;--line:rgba(243,238,228,.22);--focus:#D6C6A5}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:6rem}
+body{margin:0;padding-bottom:calc(5.5rem + env(safe-area-inset-bottom));background:var(--paper);color:var(--ink);font:16px/1.65 var(--sans)}
+a{color:inherit;text-underline-offset:.18em}a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .wrap{width:min(100% - 2rem,920px);margin-inline:auto}
-header{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
-.nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem;padding:.75rem 0}
-.brand{text-decoration:none;font:700 1.05rem var(--serif)}.brand-sub{display:block;font:500 .72rem var(--sans);color:var(--sage)}
-.nav-links{display:flex;flex-wrap:wrap;gap:.85rem;font-size:.9rem}
-.nav-links a{text-decoration:none;min-height:2.75rem;display:inline-flex;align-items:center}
-.nav-right{display:flex;align-items:center;gap:.35rem}
-.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.45rem .9rem;border:1px solid var(--ink);background:var(--forest);color:var(--ivory);font-weight:700;text-decoration:none;border-radius:3px;font-size:.88rem}
-.btn:not(.btn-fill){background:transparent;color:var(--ink)}
-#theme-toggle,#language-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink);cursor:pointer;font:700 .72rem var(--mono)}
-.hero{padding:clamp(3rem,8vw,5rem) 0 2.5rem}
-.eyebrow{font:700 .7rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--sage-text);margin:0 0 .6rem}
-h1{font:clamp(2.4rem,8vw,4.5rem)/1.05 var(--serif);font-weight:500;margin:0 0 .75rem;max-width:14ch}
-.lead{max-width:40rem;margin:0 0 1rem}.actions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
-section{padding:2.25rem 0;border-top:1px solid var(--line)}h2{font:clamp(1.4rem,3.6vw,1.95rem)/1.15 var(--serif);font-weight:500;margin:0 0 .65rem}
-.section-kicker{font:700 .7rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--sage-text);margin:0 0 .35rem}
-.muted{color:var(--sage-text)}.small{font-size:.92rem}
-.services{display:grid;gap:.85rem;margin:1.1rem 0}@media(min-width:640px){.services{grid-template-columns:repeat(3,1fr)}}
-.svc .actions{margin-top:1rem}.svc .btn{width:100%}
-.svc{padding:1.1rem;border:1px solid var(--line);border-top:3px solid var(--clay);border-radius:4px}
-.svc h3{font:500 1.2rem var(--serif);margin:0 0 .45rem}.price{font:700 1rem var(--mono);color:var(--price);margin:.35rem 0}
-.note{margin:1rem 0;padding:1rem;border-left:3px solid var(--ochre);background:color-mix(in srgb,var(--ochre) 12%,var(--paper));font-size:.95rem}
-.list-plain{margin:.35rem 0 0;padding:0;list-style:none}.list-plain li{padding:.45rem 0;border-bottom:1px solid var(--line)}
-footer{padding:2.5rem 0 1.5rem;border-top:1px solid var(--line);font-size:.9rem;color:var(--sage);background:#242923;color:#F3EEE4}
-footer a{color:#F3EEE4}.footer-nav{display:flex;flex-wrap:wrap;gap:.9rem;margin:1rem 0}
-.footer-payment{margin:1.5rem 0;padding:1.1rem;border:1px solid rgba(214,198,165,.55);border-radius:8px;display:grid;gap:.8rem}
-.footer-payment h2{margin:0;color:#F3EEE4;font-size:1.25rem}
-.footer-payment h3{margin:.2rem 0;color:#D6C6A5;font-size:1rem}
-.footer-payment p{margin:.2rem 0;max-width:70ch}
-.footer-payment ol{margin:.35rem 0;padding-left:1.35rem}
-.footer-payment li{padding:.2rem 0}
-.footer-payment-number{font-size:1.55rem;font-weight:800;letter-spacing:.06em;color:#D6C6A5}
-.footer-payment-name{font-weight:750;color:#F3EEE4}
-.footer-payment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem}
-.footer-payment-panel{padding:.85rem;border-top:1px solid rgba(242,239,234,.22)}
-.footer-payment-note{font-size:.82rem;color:#D6C6A5}
-.footer-payment a{display:inline-block;padding:.65rem .85rem;border:1px solid #D6C6A5;border-radius:4px;text-decoration:none;font-weight:700;min-height:44px}
-.skip{position:absolute;left:1rem;top:-100px;z-index:50;padding:.6rem 1rem;background:var(--paper)}.skip:focus{top:1rem}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-
-/* Glassmorphism-terminal refinement */
-.nav-right{flex-shrink:0}
-.floating-dock a[aria-current="location"]{background:rgba(214,198,165,.24);box-shadow:inset 0 0 0 1px rgba(214,198,165,.48)}
-.floating-dock .dock-wa[aria-current]{background:var(--forest);color:var(--ivory);box-shadow:0 0 0 2px var(--ochre)}
-@media(max-width:560px){header .nav{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center}.nav-links{grid-column:1/-1;grid-row:2;justify-content:flex-start;gap:.85rem;padding-top:.2rem}.nav-right{grid-column:2;grid-row:1}.brand{grid-column:1;grid-row:1}}
-header{position:sticky;top:.55rem;z-index:30;background:transparent;border:0;pointer-events:none}
-header .nav{pointer-events:auto;background:var(--paper);border:1px solid var(--glass-edge);border-radius:18px;box-shadow:0 8px 24px rgba(17,17,17,.08);padding:.65rem .85rem}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header .nav{background:var(--glass-topbar);box-shadow:0 10px 28px rgba(17,17,17,.1);backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate))}}
-.hero{position:relative;isolation:isolate;overflow:hidden;padding:clamp(3.5rem,9vw,6rem) 0 3rem;background:radial-gradient(ellipse at 12% 18%,rgba(214,198,165,.16),transparent 42%),radial-gradient(ellipse at 88% 72%,rgba(23,61,50,.12),transparent 44%)}
-.hero .wrap{position:relative;padding:clamp(1.5rem,5vw,3.5rem);border:1px solid var(--line);border-radius:26px;background:var(--paper);box-shadow:0 18px 55px rgba(20,30,24,.12)}
-/* Unified hero: identity, services, authorship and discovery */
-.hero .eyebrow{margin-bottom:.8rem}
-.hero .lead{max-width:48rem;font-size:clamp(1.05rem,2.3vw,1.25rem)}
-.hero-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin:1.5rem 0 1rem}
-.hero-path{min-width:0;padding:.9rem;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--paper) 88%,var(--ochre))}
-.hero-path strong{display:block;font:700 .72rem var(--mono);letter-spacing:.07em;margin-bottom:.35rem}
-.hero-path span{display:block;font-size:.88rem;line-height:1.45}
-.hero-path-locs{border-top:3px solid var(--clay)}
-.hero-path-digital{border-top:3px solid var(--forest)}
-.hero-path-research{border-top:3px solid var(--ochre)}
-.hero-founder{margin:.85rem 0 0;padding-top:.85rem;border-top:1px solid var(--line);font-size:.9rem}
-.hero-founder strong{font-family:var(--serif);font-size:1.08rem}
-.hero-signature{margin:.45rem 0 0;color:var(--sage-text);font:700 .68rem var(--mono);letter-spacing:.08em}
-.hero .actions{align-items:center}
-@media(max-width:620px){.hero-overview{grid-template-columns:1fr;gap:.5rem}.hero-path{padding:.75rem}.hero-path span{font-size:.86rem}}
-@media(prefers-reduced-transparency:reduce){.hero-path{background:var(--paper)}}
-:root[data-theme="dark"] .hero .wrap{background:#202823;border-color:rgba(242,239,234,.18)}
-.hero .wrap:after{content:"";position:absolute;right:-2.5rem;top:-3rem;width:10rem;height:10rem;border:1px solid rgba(214,198,165,.5);border-radius:50%;pointer-events:none;opacity:.45}
-.svc{position:relative;padding:1.25rem;border:1px solid var(--line);border-top:3px solid var(--clay);border-radius:16px;background:var(--paper);box-shadow:0 10px 30px rgba(20,30,24,.07);transition:transform .2s ease,box-shadow .2s ease}
-:root[data-theme="dark"] .svc{background:#202823;border-color:rgba(242,239,234,.18);border-top-color:var(--clay)}
-.svc:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(20,30,24,.14)}
-footer{padding:2.5rem 0 calc(7.5rem + env(safe-area-inset-bottom));border-top:1px solid rgba(214,198,165,.38);background:linear-gradient(145deg,#242923 0%,#102D25 100%);color:#F3EEE4}
-footer a{color:#F3EEE4}
-.footer-lockup{font:700 1.1rem var(--serif);margin:0}
-.footer-role,.footer-location,.footer-payment-note{color:#D6C6A5}
-.footer-nav{display:flex;flex-wrap:wrap;gap:.55rem 1rem;margin:1rem 0 1.5rem}
-.footer-nav a,.footer-contact-grid a{min-height:44px;display:inline-flex;align-items:center}
-.footer-contact{margin:1.2rem 0;padding:1rem 0;border-top:1px solid rgba(242,239,234,.18);border-bottom:1px solid rgba(242,239,234,.18)}
-.footer-contact h2,.footer-support h2{font:600 1.1rem var(--serif);margin:0 0 .5rem;color:#F3EEE4}
-.footer-contact-grid{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem}
-.footer-contact-grid a{text-decoration:none}
-.footer-location{font-size:.85rem;margin:.3rem 0 0}
-.footer-payment{margin:1.4rem 0;padding:1rem;border:1px solid rgba(214,198,165,.48);border-radius:16px;display:grid;gap:.8rem;background:#303A33}
-.footer-payment h2{margin:0;color:#F3EEE4;font-size:1.2rem}
-.footer-payment h3{margin:.2rem 0;color:#D6C6A5;font-size:.95rem}
-.footer-payment p{margin:.2rem 0;max-width:70ch}
-.footer-payment ol{margin:.35rem 0;padding-left:1.35rem}
-.footer-payment li{padding:.25rem 0}
-.footer-payment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:.7rem}
-.footer-payment-panel{padding:.85rem;border-top:1px solid rgba(242,239,234,.2)}
-.footer-payment-note{font-size:.82rem;color:#D6C6A5}
-.footer-payment a,.footer-support a{display:inline-flex;align-items:center;justify-content:center;padding:.65rem .85rem;border:1px solid #D6C6A5;border-radius:8px;text-decoration:none;font-weight:700;min-height:44px;width:fit-content;max-width:100%}
-.footer-support{margin:1.4rem 0;padding:1rem;border:1px solid rgba(242,239,234,.18);border-radius:16px;background:rgba(255,255,255,.035)}
-.footer-signature{margin:1.2rem 0 .4rem;color:#D6C6A5;font:600 .78rem var(--mono);letter-spacing:.04em}
-.floating-dock{position:fixed;z-index:40;left:50%;bottom:max(.75rem,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;align-items:center;gap:.2rem;width:max-content;max-width:calc(100vw - 1.25rem);padding:.45rem;border:1px solid var(--glass-edge);border-radius:26px;background:var(--paper);box-shadow:var(--glass-shadow)}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.floating-dock{background:var(--glass-dock);backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate))}}
-.floating-dock a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.15rem;min-width:4.6rem;min-height:3.4rem;padding:.4rem .65rem;border-radius:13px;text-decoration:none;font:650 .72rem var(--sans);color:var(--ink)}
-.floating-dock a:hover,.floating-dock a:focus-visible{background:var(--glass-active)}
-.floating-dock a[aria-current="location"]{background:var(--glass-active);box-shadow:inset 0 0 0 1px rgba(214,198,165,.52)}
-.floating-dock .dock-icon{font:700 1.15rem var(--mono);line-height:1.1}
-.floating-dock .dock-wa{background:var(--forest);color:var(--ivory)}
-@media(min-width:760px){.floating-dock{gap:.45rem;padding:.5rem .65rem}.floating-dock a{flex-direction:row;min-width:6rem;gap:.5rem;padding:.5rem .85rem;font-size:.8rem}}
-@media(max-width:560px){.wrap{width:min(100% - 1.25rem,920px)}.nav{gap:.45rem}.nav-links{gap:.35rem}.nav-links a{font-size:.8rem}.brand{font-size:.98rem}.nav-cta{min-height:2.5rem;padding:.35rem .65rem}}
-@media(prefers-reduced-motion:reduce){.svc{transition:none}.svc:hover{transform:none}}
-@media(prefers-reduced-transparency:reduce){header .nav,.floating-dock,.hero .wrap,.svc{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--paper);box-shadow:none;border-color:var(--line)}footer .footer-payment{backdrop-filter:none;-webkit-backdrop-filter:none;background:#242923;box-shadow:none}}
-
-
-/* Distinct native experience system — shared foundations, brand-owned surfaces */
-:root{
-  --forest:#173D32;
-  --deep-forest:#102D25;
-  --charcoal:#242923;
-  --paper:#F3EEE4;
-  --ivory:#F3EEE4;
-  --ink:#242923;
-  --clay:#A34F3B;
-  --ochre:#8B5E16;
-  --sage:#87917A;--sage-text:#626B58;
-  --sandstone:#D6C6A5;
-  --price:#173D32;
-  --line:rgba(36,41,35,.20);
-  --focus:#102D25;
-  --glass-topbar:rgba(23,61,50,.94);
-  --glass-dock:rgba(36,41,35,.94);
-  --glass-edge:rgba(243,238,228,.22);
-  --glass-active:rgba(163,79,59,.34);
-}
-:root[data-theme="dark"]{
-  --paper:#171B18;
-  --ink:#F3EEE4;
-  --sage:#D6C6A5;
-  --sage-text:#D6C6A5;
-  --price:#D6C6A5;
-  --line:rgba(243,238,228,.22);
-  --focus:#D6C6A5;
-  --glass-topbar:rgba(16,45,37,.96);
-  --glass-dock:rgba(36,41,35,.96);
-  --glass-edge:rgba(243,238,228,.24);
-  --glass-active:rgba(214,198,165,.20);
-}
-header .nav{
-  color:#F3EEE4;
-  background:#173D32;
-  border-color:rgba(243,238,228,.22);
-  box-shadow:0 10px 28px rgba(16,45,37,.22);
-}
-header .brand,header .nav a{color:#F3EEE4}
-header .brand-sub{color:#D6C6A5}
-header #theme-toggle,header #language-toggle{
-  color:#F3EEE4;
-  background:rgba(16,45,37,.72);
-  border-color:rgba(243,238,228,.34);
-}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  header .nav{background:var(--glass-topbar)}
-}
-.experience{position:relative}
-.experience-locs{
-  background:var(--paper);
-  color:var(--ink);
-  border-top:3px solid var(--clay);
-}
-.experience-locs .svc{border-top-color:var(--clay)}
-.experience-locs .price{color:var(--forest)}
-:root[data-theme="dark"] .experience-locs .price{color:var(--sandstone)}
-.experience-warena{
-  background:#102D25;
-  color:#F3EEE4;
-  border-top:3px solid #87917A;
-}
-.experience-warena .section-kicker,
-.experience-warena .muted{color:#D6C6A5}
-.experience-warena h2,.experience-warena h3{color:#F3EEE4}
-.experience-warena .list-plain li{border-color:rgba(243,238,228,.22)}
-.experience-warena .list-plain a{color:#D6C6A5;text-underline-offset:.18em}
-.experience-warena .note{
-  color:#F3EEE4;
-  background:rgba(214,198,165,.10);
-  border-left-color:#D6C6A5;
-}
-.experience-warena .btn-fill{
-  color:#102D25;
-  background:#D6C6A5;
-  border-color:#D6C6A5;
-}
-.experience-warena .btn:not(.btn-fill){
-  color:#F3EEE4;
-  border-color:rgba(243,238,228,.62);
-}
-.experience-author{
-  background:#242923;
-  color:#F3EEE4;
-  border-top:3px solid #A34F3B;
-}
-.experience-author .section-kicker,
-.experience-author .muted{color:#D6C6A5}
-.experience-author h2{color:#F3EEE4}
-.experience-author .btn-fill{
-  color:#fff;
-  background:#A34F3B;
-  border-color:#A34F3B;
-}
-.experience-author .btn:not(.btn-fill){
-  color:#F3EEE4;
-  border-color:rgba(243,238,228,.58);
-}
-.floating-dock{
-  color:#F3EEE4;
-  background:#242923;
-  border-color:rgba(243,238,228,.24);
-}
-.floating-dock a{color:#F3EEE4}
-.floating-dock .dock-wa{
-  background:#173D32;
-  color:#F3EEE4;
-}
-.floating-dock a[href="#crown"][aria-current="location"]{
-  background:rgba(163,79,59,.34);
-  box-shadow:inset 0 0 0 1px rgba(214,198,165,.55);
-}
-.floating-dock a[href="#code"][aria-current="location"]{
-  background:rgba(135,145,122,.28);
-  box-shadow:inset 0 0 0 1px rgba(214,198,165,.45);
-}
-.floating-dock a[href="#connect"][aria-current="location"]{
-  background:rgba(139,94,22,.34);
-  box-shadow:inset 0 0 0 1px rgba(214,198,165,.5);
-}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .floating-dock{background:var(--glass-dock)}
-}
-@media(prefers-reduced-transparency:reduce){
-  header .nav{background:#173D32}
-  .floating-dock{background:#242923}
-}
-@media(prefers-reduced-motion:reduce){
-  .experience,.experience *{scroll-behavior:auto}
-}
-
-
-/* Minimal footer repository navigation */
-footer .footer-nav{
-  display:flex;
-  align-items:center;
-  gap:.75rem;
-  margin:.85rem 0 .65rem;
-  padding-top:.75rem;
-  border-top:1px solid rgba(214,198,165,.24);
-  font-size:.82rem;
-}
-footer .footer-nav a{
-  color:#D6C6A5;
-  text-decoration:underline;
-  text-decoration-color:rgba(214,198,165,.48);
-  text-underline-offset:.22em;
-  min-height:44px;
-  display:inline-flex;
-  align-items:center;
-}
-footer .footer-nav a:hover{color:#F3EEE4}
-footer .footer-nav a:focus-visible{outline:2px solid #D6C6A5;outline-offset:3px}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:60;padding:.65rem 1rem;background:var(--paper);color:var(--ink);border:2px solid var(--focus);border-radius:4px}.skip:focus{top:1rem}
+header{position:sticky;top:.5rem;z-index:30;pointer-events:none}
+header .nav{pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.55rem .8rem;min-height:4rem;border:1px solid rgba(243,238,228,.24);border-radius:18px;background:rgba(23,61,50,.94);color:#F3EEE4;box-shadow:0 10px 28px rgba(16,45,37,.2)}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header .nav{background:rgba(23,61,50,.78);backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate))}}
+.brand{color:#F3EEE4;text-decoration:none;font:700 1.08rem var(--serif);line-height:1.15}.brand-sub{display:block;margin-top:.2rem;color:#D6C6A5;font:500 .7rem var(--sans)}
+.nav-right{display:flex;align-items:center;gap:.45rem}
+#theme-toggle,#language-toggle{display:inline-grid;place-items:center;width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem;border:1px solid rgba(243,238,228,.42);border-radius:50%;background:rgba(16,45,37,.72);color:#F3EEE4;cursor:pointer;font:700 .72rem var(--mono)}
+.hero{padding:clamp(2.5rem,7vw,4.5rem) 0 2.5rem;background:var(--paper)}.hero .wrap{padding:clamp(1.1rem,4vw,2.6rem);border:1px solid var(--line);border-radius:18px;background:var(--paper)}
+.eyebrow,.section-kicker{margin:0 0 .55rem;color:var(--muted);font:700 .7rem var(--mono);letter-spacing:.12em;text-transform:uppercase}
+h1{max-width:15ch;margin:0 0 .85rem;font:500 clamp(2.5rem,8vw,4.5rem)/1.04 var(--serif);letter-spacing:-.025em}
+.lead{max-width:52rem;margin:0;color:var(--ink);font-size:clamp(1.02rem,2.2vw,1.2rem)}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:1.15rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.62rem .9rem;border:1px solid var(--forest);border-radius:5px;background:transparent;color:var(--forest);font-weight:700;font-size:.9rem;text-align:center;text-decoration:none}.btn-fill{background:var(--forest);color:#F3EEE4}
+:root[data-theme="dark"] .btn:not(.btn-fill){border-color:#D6C6A5;color:#F3EEE4}
+.hero-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem;margin:1.45rem 0 0}
+.hero-path{min-width:0;padding:.9rem;border:1px solid var(--line);border-radius:10px;background:color-mix(in srgb,var(--paper) 90%,var(--sandstone))}
+.hero-path strong{display:block;margin-bottom:.35rem;font:700 .7rem var(--mono);letter-spacing:.07em}.hero-path span{display:block;font-size:.88rem;line-height:1.5}
+.hero-path-locs{border-top:3px solid var(--clay)}.hero-path-digital{border-top:3px solid var(--forest)}.hero-path-research{border-top:3px solid var(--ochre)}
+section{padding:2.4rem 0;border-top:1px solid var(--line);scroll-margin-top:6rem}h2{margin:0 0 .7rem;font:500 clamp(1.55rem,4vw,2.1rem)/1.15 var(--serif)}h3{font-family:var(--serif)}
+.experience-locs{background:var(--paper);color:var(--ink);border-top:3px solid var(--clay)}.experience-locs .section-kicker{color:var(--clay)}
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem;margin:1.15rem 0}
+.svc{display:flex;flex-direction:column;min-width:0;padding:1.1rem;border:1px solid var(--line);border-top:3px solid var(--clay);border-radius:9px;background:color-mix(in srgb,var(--paper) 96%,var(--sandstone))}
+.svc h3{margin:0 0 .35rem;font-size:1.2rem;line-height:1.25;font-weight:600}.price{margin:.35rem 0;color:var(--forest);font:700 1rem var(--mono)}:root[data-theme="dark"] .price{color:var(--sandstone)}
+.muted,.small{color:var(--muted)}.small{font-size:.91rem}.svc .small{flex:1}.svc .actions{margin-top:1rem}.svc .btn{width:100%}
+.note{margin:1.1rem 0 0;padding:1rem;border-left:3px solid var(--ochre);background:color-mix(in srgb,var(--sandstone) 15%,var(--paper));font-size:.94rem}
+.list-plain{margin:.45rem 0 0;padding:0;list-style:none}.list-plain li{padding:.5rem 0;border-bottom:1px solid var(--line)}
+.experience-warena{background:var(--deep-forest);color:#F3EEE4;border-top:3px solid #87917A}.experience-warena .section-kicker,.experience-warena .muted{color:#D6C6A5}.experience-warena h2,.experience-warena h3{color:#F3EEE4}.experience-warena .list-plain li{border-color:rgba(243,238,228,.22)}.experience-warena .list-plain a,.experience-warena .note a{color:#D6C6A5}.experience-warena .note{color:#F3EEE4;background:rgba(214,198,165,.10);border-left-color:#D6C6A5}.experience-warena .btn-fill{background:#D6C6A5;border-color:#D6C6A5;color:#102D25}.experience-warena .btn:not(.btn-fill){border-color:#D6C6A5;color:#F3EEE4}
+.experience-author{background:var(--charcoal);color:#F3EEE4;border-top:3px solid var(--clay)}.experience-author .section-kicker,.experience-author .muted{color:#D6C6A5}.experience-author h2{color:#F3EEE4}.experience-author .btn-fill{background:var(--clay);border-color:var(--clay);color:#fff}.experience-author .btn:not(.btn-fill){border-color:#D6C6A5;color:#F3EEE4}
 .experience-warena a:focus-visible,.experience-warena button:focus-visible,.experience-author a:focus-visible,.experience-author button:focus-visible,footer a:focus-visible,footer button:focus-visible{outline-color:#D6C6A5}
-
-/* NAKEBUSEN expressive glass + motion system */
-:root{
-  --glass-blur:24px;
-  --glass-saturate:165%;
-  --glass-topbar:rgba(23,61,50,.68);
-  --glass-dock:rgba(36,41,35,.70);
-  --glass-edge:rgba(243,238,228,.32);
-  --glass-shadow:0 18px 52px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.10);
-  --glass-highlight:rgba(255,255,255,.18);
-  --glass-radius:22px;
-  --motion-fast:160ms;
-  --motion-standard:240ms;
-  --motion-editorial:460ms;
-  --ease-standard:cubic-bezier(.2,.7,.2,1);
-  --ease-emphasis:cubic-bezier(.16,1,.3,1);
-}
-:root[data-theme="dark"]{
-  --glass-topbar:rgba(16,45,37,.68);
-  --glass-dock:rgba(36,41,35,.72);
-  --glass-edge:rgba(243,238,228,.30);
-  --glass-shadow:0 18px 52px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.09);
-}
-header .nav,.floating-dock{
-  isolation:isolate;
-  overflow:hidden;
-  border:1px solid var(--glass-edge);
-  box-shadow:var(--glass-shadow);
-}
-header .nav{
-  position:relative;
-  background:var(--glass-topbar);
-  border-radius:var(--glass-radius);
-}
-.floating-dock{
-  background:var(--glass-dock);
-  border-radius:28px;
-}
-header .nav::before,.floating-dock::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:0;
-  border-radius:inherit;
-  pointer-events:none;
-  background:linear-gradient(145deg,var(--glass-highlight),transparent 38%,rgba(255,255,255,.025) 72%,rgba(255,255,255,.07));
-}
-header .nav>* ,.floating-dock>*{
-  position:relative;
-  z-index:1;
-}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  header .nav,.floating-dock{
-    -webkit-backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));
-    backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));
-  }
-}
-@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  header .nav{background:#173D32}
-  .floating-dock{background:#242923}
-}
-.hero{
-  isolation:isolate;
-}
-.hero::before{
-  content:"";
-  position:absolute;
-  z-index:0;
-  inset:-18%;
-  pointer-events:none;
-  background:
-    radial-gradient(ellipse at 18% 28%,rgba(214,198,165,.24),transparent 38%),
-    radial-gradient(ellipse at 78% 64%,rgba(23,61,50,.20),transparent 42%),
-    radial-gradient(ellipse at 58% 8%,rgba(163,79,59,.10),transparent 34%);
-  transform:translate3d(-1%,0,0) scale(1.02);
-  animation:nakebusen-ambient-drift 22s ease-in-out infinite alternate;
-}
-.hero .wrap{
-  z-index:1;
-  border-color:var(--glass-edge);
-  box-shadow:0 22px 64px rgba(20,30,24,.16),inset 0 1px 0 rgba(255,255,255,.12);
-  animation:nakebusen-hero-enter 720ms var(--ease-emphasis) both;
-}
-:root[data-theme="dark"] .hero .wrap{
-  background:rgba(32,40,35,.78);
-}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  :root[data-theme="dark"] .hero .wrap{
-    -webkit-backdrop-filter:blur(12px) saturate(125%);
-    backdrop-filter:blur(12px) saturate(125%);
-  }
-}
-.hero-path{
-  transition:transform var(--motion-standard) var(--ease-standard),border-color var(--motion-standard) var(--ease-standard),box-shadow var(--motion-standard) var(--ease-standard);
-}
-.svc{
-  transition:transform var(--motion-standard) var(--ease-standard),border-color var(--motion-standard) var(--ease-standard);
-}
-.floating-dock a,.btn,.nav-cta,#theme-toggle,#language-toggle{
-  transition:transform var(--motion-fast) var(--ease-standard),background-color var(--motion-standard) var(--ease-standard),border-color var(--motion-standard) var(--ease-standard),color var(--motion-standard) var(--ease-standard),box-shadow var(--motion-standard) var(--ease-standard);
-}
-.floating-dock a[aria-current="location"]{
-  box-shadow:inset 0 0 0 1px rgba(214,198,165,.62),0 0 18px rgba(214,198,165,.10);
-}
-@media(hover:hover) and (pointer:fine){
-  .hero-path:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(20,30,24,.10)}
-  .svc:hover{transform:translateY(-5px)}
-  .floating-dock a:hover{transform:translateY(-2px)}
-  .btn:hover,.nav-cta:hover{transform:translateY(-2px)}
-}
-.btn:active,.nav-cta:active,.floating-dock a:active,#theme-toggle:active,#language-toggle:active{
-  transform:scale(.97);
-}
-@keyframes nakebusen-ambient-drift{
-  from{transform:translate3d(-1.2%,0,0) scale(1.02)}
-  to{transform:translate3d(1.2%,1%,0) scale(1.06)}
-}
-@keyframes nakebusen-hero-enter{
-  from{opacity:0;transform:translateY(14px)}
-  to{opacity:1;transform:translateY(0)}
-}
-@keyframes nakebusen-section-enter{
-  from{opacity:.35;transform:translateY(14px)}
-  to{opacity:1;transform:translateY(0)}
-}
-@supports (animation-timeline:view()){
-  .experience{
-    animation:nakebusen-section-enter linear both;
-    animation-timeline:view();
-    animation-range:entry 0% entry 34%;
-  }
-}
-@media(max-width:560px){
-  :root{--glass-blur:17px;--glass-saturate:145%;--glass-shadow:0 12px 34px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.08)}
-  .hero::before{inset:-10%;animation-duration:28s}
-  .hero .wrap{animation-duration:560ms}
-  .floating-dock{max-width:calc(100vw - 1rem)}
-}
-@media(prefers-reduced-transparency:reduce){
-  header .nav{background:#173D32;box-shadow:none}
-  .floating-dock{background:#242923;box-shadow:none}
-  header .nav::before,.floating-dock::before{display:none}
-  :root[data-theme="dark"] .hero .wrap{background:#202823;backdrop-filter:none;-webkit-backdrop-filter:none}
-}
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .hero::before,.hero .wrap,.experience{animation:none!important}
-  .hero-path,.svc,.floating-dock a,.btn,.nav-cta,#theme-toggle,#language-toggle{transition:none!important}
-  .hero-path:hover,.svc:hover,.floating-dock a:hover,.btn:hover,.nav-cta:hover{transform:none}
-  .btn:active,.nav-cta:active,.floating-dock a:active,#theme-toggle:active,#language-toggle:active{transform:none}
-}
-
-
-/* Research-led editorial restraint: keep glass on navigation, not content. */
-.hero{background:var(--paper)}
-.hero .wrap{box-shadow:none;border-radius:18px}
-.hero .wrap:after{content:none}
-.svc:hover{transform:none;box-shadow:0 12px 30px rgba(20,30,24,.10)}
-@media(prefers-reduced-motion:reduce){.svc,.svc:hover{transform:none;transition:none}}
+footer{padding:2.4rem 0 calc(2rem + env(safe-area-inset-bottom));background:linear-gradient(145deg,#242923 0%,#102D25 100%);color:#F3EEE4;font-size:.91rem}footer a{color:#F3EEE4}.footer-lockup{margin:0;font:700 1.1rem var(--serif)}
+.footer-payment{display:grid;gap:.8rem;margin:1.4rem 0;padding:1rem;border:1px solid rgba(214,198,165,.5);border-radius:12px;background:#303A33}.footer-payment h2{margin:0;color:#F3EEE4;font-size:1.2rem}.footer-payment h3{margin:.2rem 0;color:#D6C6A5;font-size:1rem}.footer-payment p{max-width:70ch;margin:.2rem 0}.footer-payment-number{color:#D6C6A5;font-size:clamp(1.2rem,4vw,1.55rem);font-weight:800;letter-spacing:.04em;overflow-wrap:anywhere}.footer-payment-name{font-weight:750}
+.footer-payment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}.footer-payment-panel{padding:.85rem;border-top:1px solid rgba(242,239,234,.22)}.footer-payment ol{margin:.35rem 0;padding-left:1.3rem}.footer-payment li{padding:.2rem 0}.footer-payment-note{color:#D6C6A5;font-size:.84rem}
+.footer-payment a,.footer-support a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;max-width:100%;padding:.65rem .85rem;border:1px solid #D6C6A5;border-radius:6px;color:#F3EEE4;font-weight:700;text-decoration:none}
+.footer-support{margin:1.4rem 0;padding:1rem;border:1px solid rgba(242,239,234,.22);border-radius:12px;background:rgba(255,255,255,.035)}.footer-support h2{margin:0 0 .5rem;color:#F3EEE4;font-size:1.15rem}
+.footer-nav{display:flex;align-items:center;gap:.75rem;margin:.85rem 0 .65rem;padding-top:.75rem;border-top:1px solid rgba(214,198,165,.24);font-size:.84rem}.footer-nav a{display:inline-flex;align-items:center;min-height:44px;color:#D6C6A5;text-decoration:underline;text-underline-offset:.22em}
+.footer-signature{margin:1.1rem 0 .4rem;color:#D6C6A5;font:600 .76rem var(--mono);letter-spacing:.04em}
+.floating-dock{position:fixed;z-index:40;left:50%;bottom:max(.65rem,env(safe-area-inset-bottom));display:flex;align-items:center;gap:.2rem;width:max-content;max-width:calc(100vw - 1rem);padding:.4rem;border:1px solid rgba(243,238,228,.24);border-radius:24px;background:rgba(36,41,35,.96);box-shadow:0 14px 36px rgba(0,0,0,.3);transform:translateX(-50%)}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.floating-dock{background:rgba(36,41,35,.78);backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate))}}
+.floating-dock a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.12rem;min-width:4.5rem;min-height:3.1rem;padding:.35rem .6rem;border-radius:12px;color:#F3EEE4;text-decoration:none;font-size:.72rem;font-weight:700}.floating-dock .dock-icon{font:700 1.05rem/1 var(--mono)}
+.floating-dock a[href="#crown"][aria-current="location"]{background:rgba(163,79,59,.38);box-shadow:inset 0 0 0 1px rgba(214,198,165,.58)}.floating-dock a[href="#code"][aria-current="location"]{background:rgba(135,145,122,.34);box-shadow:inset 0 0 0 1px rgba(214,198,165,.5)}.floating-dock a[href="#connect"][aria-current="location"]{background:rgba(139,94,22,.38);box-shadow:inset 0 0 0 1px rgba(214,198,165,.58)}
+@media(min-width:760px){.floating-dock{gap:.4rem;padding:.45rem .6rem}.floating-dock a{flex-direction:row;min-width:6rem;min-height:3rem;gap:.45rem;padding:.45rem .8rem;font-size:.8rem}}
+@media(max-width:640px){.hero-overview,.services,.footer-payment-grid{grid-template-columns:1fr}.hero-path{padding:.8rem}}
+@media(max-width:420px){.wrap{width:min(100% - 1.25rem,920px)}.hero .wrap{padding:1rem}.actions .btn{flex:1 1 100%}.nav-right{gap:.3rem}}
+@media(prefers-reduced-transparency:reduce){header .nav{background:#173D32;box-shadow:none}.floating-dock{background:#242923;box-shadow:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.svc,.floating-dock a,#theme-toggle,#language-toggle{transition:none!important}.btn:hover,.svc:hover,.floating-dock a:hover{transform:none!important}}
+@media(hover:hover) and (pointer:fine){.svc{transition:box-shadow .18s ease,border-color .18s ease}.svc:hover{box-shadow:0 10px 24px rgba(20,30,24,.09)}.btn,.floating-dock a,#theme-toggle,#language-toggle{transition:background-color .18s ease,border-color .18s ease,color .18s ease}.floating-dock a:hover{background:rgba(214,198,165,.16)}}
 </style>
 </head>
 <body>
@@ -458,14 +84,15 @@ header .nav>* ,.floating-dock>*{
 </div>
 </header>
 <main id="main">
-<section class="hero" id="top">
+<section class="hero" id="top" aria-labelledby="page-title">
 <div class="wrap">
 <p class="eyebrow" data-i18n="eyebrow">NAKEBUSEN · BEAUTY &amp; DIGITAL · ELDORET, KENYA.</p>
-<h1 data-i18n="tagline">Your Beauty ° Your Way.</h1>
+<h1 id="page-title" data-i18n="tagline">Your Beauty ° Your Way.</h1>
 <p class="lead" data-i18n="heroLead">NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh), bringing together natural loc care, practical computing and creative technology.</p>
 <div class="actions">
 <a class="btn btn-fill" data-wa-purpose="loc" href="https://wa.me/254719635415" data-i18n="heroEnquire">WhatsApp — Enquire about loc care</a>
 <a class="btn" href="#code" data-i18n="heroDigitalLink">Explore digital services</a>
+<a class="btn" href="https://github.com/donfelohke" data-i18n="heroWorkLink">Explore work on GitHub</a>
 </div>
 <div class="hero-overview" aria-label="NAKEBUSEN practice overview">
 <div class="hero-path hero-path-locs"><strong data-i18n="overviewBeautyTitle">BEAUTY &amp; LOC CARE</strong><span data-i18n="overviewBeauty">Natural loc maintenance, retouching, styling, Sisterlocs retie and artificial loc installation.</span></div>
@@ -474,23 +101,23 @@ header .nav>* ,.floating-dock>*{
 </div>
 </div>
 </section>
-<section id="crown" class="experience experience-locs">
+<section id="crown" class="experience experience-locs" aria-labelledby="crown-title">
 <div class="wrap">
 <p class="section-kicker" data-i18n="crownKicker">LOCS · CROWN</p>
-<h2 data-i18n="crownTitle">Your Crown. Your Craft.</h2>
+<h2 id="crown-title" data-i18n="crownTitle">Your Crown. Your Craft.</h2>
 <p data-i18n="crownIntro">Natural loc care, maintenance and styling, Sisterlocs Retie and artificial loc installation. Clear service scope, starting prices and direct enquiries.</p>
 <div class="services">
 <article class="svc"><h3 data-i18n="svcRetouch">Retouch &amp; Styling</h3><p class="price" data-i18n="price700">KES 700+</p><p class="small muted" data-i18n="svcRetouchDesc">Refresh and maintain your existing locs with retouching and styling. Final scope depends on your loc condition and the work required.</p><div class="actions"><a class="btn btn-fill" data-wa-service="retouch" href="https://wa.me/254719635415" data-i18n="enquireRetouch">Enquire about Retouch &amp; Styling</a></div></article>
 <article class="svc"><h3 data-i18n="svcRetie">Sisterlocs Retie</h3><p class="price" data-i18n="price1500">KES 1,500+</p><p class="small muted" data-i18n="svcRetieDesc">Careful retightening for established Sisterlocs. Share their current condition and your maintenance needs when enquiring.</p><div class="actions"><a class="btn btn-fill" data-wa-service="retie" href="https://wa.me/254719635415" data-i18n="enquireRetie">Enquire about Sisterlocs Retie</a></div></article>
-<article class="svc"><h3 data-i18n="svcArtificial">Artificial Locs Installation</h3><p class="price" data-i18n="price3500">KES 3,500+</p><p class="small muted" data-i18n="svcArtificialDesc">Artificial loc installation, with the method, materials and scope confirmed before work begins.</p><div class="actions"><a class="btn btn-fill" data-wa-service="artificial" href="https://wa.me/254719635415" data-i18n="enquireArtificial">Enquire about Artificial Locs Installation</a></div></article>
+<article class="svc"><h3 data-i18n="svcArtificial">Artificial Locs Installation</h3><p class="price" data-i18n="price3500">KES 3,500</p><p class="small muted" data-i18n="svcArtificialDesc">Artificial loc installation, with the method, materials and scope confirmed before work begins.</p><div class="actions"><a class="btn btn-fill" data-wa-service="artificial" href="https://wa.me/254719635415" data-i18n="enquireArtificial">Enquire about Artificial Locs Installation</a></div></article>
 </div>
 <p class="note"><span data-i18n="bookingNote">Prices are starting points. Final cost depends on condition, scope and materials. An enquiry does not confirm a booking. Availability and final terms are agreed directly.</span></p>
 </div>
 </section>
-<section id="code" class="experience experience-warena">
+<section id="code" class="experience experience-warena" aria-labelledby="digital-title">
 <div class="wrap">
 <p class="section-kicker" data-i18n="digitalKicker">DIGITAL · WARENA</p>
-<h2 data-i18n="digitalTitle">Freedom Is a System.</h2>
+<h2 id="digital-title" data-i18n="digitalTitle">Freedom Is a System.</h2>
 <p data-i18n="digitalIntro">Practical GNU/Linux, workstation and network support, powered by WARENA. We discuss the problem, assess what is practical and agree on the scope before work begins.</p>
 <ul class="list-plain">
 <li data-i18n="dig1">GNU/Linux and workstation support</li>
@@ -499,7 +126,8 @@ header .nav>* ,.floating-dock>*{
 <li data-i18n="dig4">Local-first and offline-capable systems</li>
 <li data-i18n="dig5">Infrastructure planning and documented handover</li>
 </ul>
-<div class="actions" style="margin-top:1rem">
+<p class="digital-scope" data-i18n="digitalScope">Services are scoped per engagement. Feasibility, deliverables, price and support are agreed before work begins.</p>
+<div class="actions">
 <a class="btn btn-fill" data-wa-purpose="tech" href="https://wa.me/254719635415" data-i18n="bookTech">Discuss a technical project</a>
 </div>
 <div class="note" aria-labelledby="github-title">
@@ -514,10 +142,10 @@ header .nav>* ,.floating-dock>*{
 </div>
 </div>
 </section>
-<section id="connect" class="experience experience-author">
+<section id="connect" class="experience experience-author" aria-labelledby="connect-title">
 <div class="wrap">
 <p class="section-kicker" data-i18n="connectKicker">Connect</p>
-<h2 id="founder" data-i18n="founderTitle">Felix Lwova — Don Feloh</h2>
+<h2 id="connect-title" data-i18n="founderTitle">Felix Lwova — Don Feloh</h2>
 <p class="muted" data-i18n="role">Founder · CTO · Loctician · Creative Technologist</p>
 <p data-i18n="founderDesc">I founded NAKEBUSEN to bring together personal care, skilled craft and practical technology. My work spans natural loc care, GNU/Linux systems, infrastructure and creative technology. WARENA provides the systems-engineering foundation behind the technical services.</p>
 <p data-i18n="connectDesc">Whether you are enquiring about loc care or a technology project, get in touch. We will discuss suitability, availability, scope and next steps before agreeing on any work.</p>
@@ -526,7 +154,7 @@ header .nav>* ,.floating-dock>*{
 <a class="btn" href="tel:+254719635415" data-i18n="call2">Call 0719 635 415</a>
 <a class="btn" href="mailto:mela9ine@proton.me" data-i18n="email">Email</a>
 </div>
-<p class="small muted" style="margin-top:1rem" data-i18n="location">Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya</p>
+<p class="small muted location-line" data-i18n="location">Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya</p>
 <p class="small muted" data-i18n="boundary">Commercial enquiries route through NAKEBUSEN. An enquiry is not a confirmed booking.</p>
 </div>
 </section>
@@ -590,20 +218,20 @@ en:{
 skip:'Skip to content',navMain:'Main navigation',navFooter:'Footer navigation',navQuick:'Section navigation',dockHome:'Home',dockEnquire:'Enquire',navLocs:'Locs',navDigital:'Digital',navAbout:'@donfeloh',navConnect:'Connect',footerSignature:'@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY',themeToLight:'Switch to light theme',themeToDark:'Switch to dark theme',
 eyebrow:'NAKEBUSEN · BEAUTY & DIGITAL · ELDORET, KENYA.',tagline:'Your Beauty ° Your Way.',
 heroLead:'NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh), bringing together natural loc care, practical computing and creative technology.',
-overviewBeautyTitle:'BEAUTY & LOC CARE',overviewBeauty:'Natural loc maintenance, retouching, styling, Sisterlocs retie and artificial loc installation.',overviewDigitalTitle:'DIGITAL · WARENA',overviewDigital:'GNU/Linux, computer support, networking and local-first infrastructure. Freedom Is a System.',overviewResearchTitle:'RESEARCH & CREATIVE',overviewResearch:'IKAI · GENJE · FELOH Corpus — reflective computing, embodied practice and creative technology. Research and knowledge domains, not services for purchase.',
+overviewBeautyTitle:'BEAUTY & LOC CARE',overviewBeauty:'Natural loc maintenance, retouching, styling, Sisterlocs retie and artificial loc installation.',overviewDigitalTitle:'DIGITAL · WARENA',overviewDigital:'GNU/Linux, computer support, networking and local-first infrastructure. Freedom Is a System.',overviewResearchTitle:'RESEARCH & CREATIVE',overviewResearch:'IKAI · GENJE · FELOH Corpus — reflective computing, embodied practice and creative technology. Research and knowledge domains, not services for purchase.',digitalScope:'Services are scoped per engagement. Feasibility, deliverables, price and support are agreed before work begins.',
 
 
 
 
 
 
-heroDigitalLink:'Explore digital services',
+heroDigitalLink:'Explore digital services',heroWorkLink:'Explore work on GitHub',
 heroEnquire:'WhatsApp — Enquire about loc care',exploreLocs:'Explore Locs services',
 enquireRetouch:'Enquire about Retouch & Styling',enquireRetie:'Enquire about Sisterlocs Retie',enquireArtificial:'Enquire about Artificial Locs Installation',
 crownKicker:'LOCS · CROWN',crownTitle:'Your Crown. Your Craft.',
 crownIntro:'Natural loc care, maintenance and styling, Sisterlocs Retie and artificial loc installation. Clear service scope, starting prices and direct enquiries.',
 svcRetouch:'Retouch & Styling',svcRetie:'Sisterlocs Retie',svcArtificial:'Artificial Locs Installation',
-price700:'KES 700+',price1500:'KES 1,500+',price3500:'KES 3,500+',
+price700:'KES 700+',price1500:'KES 1,500+',price3500:'KES 3,500',
 svcRetouchDesc:'Refresh and maintain your existing locs with retouching and styling. Final scope depends on your loc condition and the work required.',svcRetieDesc:'Careful retightening for established Sisterlocs. Share their current condition and your maintenance needs when enquiring.',svcArtificialDesc:'Artificial loc installation, with the method, materials and scope confirmed before work begins.',
 bookingNote:'Prices are starting points. Final cost depends on condition, scope and materials. An enquiry does not confirm a booking. Availability and final terms are agreed directly.',
 digitalKicker:'DIGITAL · WARENA',digitalTitle:'Freedom Is a System.',
@@ -621,20 +249,20 @@ sw:{
 skip:'Ruka hadi maudhui',navMain:'Urambazaji mkuu',navFooter:'Urambazaji wa chini',navQuick:'Urambazaji wa sehemu',dockHome:'Mwanzo',dockEnquire:'Uliza',navLocs:'Locs',navDigital:'Digital',navAbout:'@donfeloh',navConnect:'Wasiliana',footerSignature:'@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY',themeToLight:'Badilisha hadi mandhari mepesi',themeToDark:'Badilisha hadi mandhari meusi',
 eyebrow:'NAKEBUSEN · UREMBO NA TEKNOLOJIA · ELDORET, KENYA.',tagline:'Uzuri Wako ° Kwa Namna Yako.',
 heroLead:'NAKEBUSEN ni huduma za urembo na teknolojia iliyoanzishwa na Felix Lwova (Don Feloh), ikileta pamoja utunzaji wa loc za asili, usaidizi wa kompyuta na teknolojia bunifu.',
-overviewBeautyTitle:'UREMBO NA UTUNZAJI WA LOC',overviewBeauty:'Utunzaji wa loc za asili, retouch, mitindo, Sisterlocs retie na uwekaji wa loc za bandia.',overviewDigitalTitle:'TEKNOLOJIA · WARENA',overviewDigital:'GNU/Linux, usaidizi wa kompyuta, mitandao na miundombinu ya local-first. Uhuru ni Mfumo.',overviewResearchTitle:'UTAFITI NA UBUNIFU',overviewResearch:'IKAI · GENJE · FELOH Corpus — utafiti wa kompyuta tafakuri, maarifa ya mwili na teknolojia bunifu. Ni maeneo ya utafiti na maarifa, si huduma za kununua.',
+overviewBeautyTitle:'UREMBO NA UTUNZAJI WA LOC',overviewBeauty:'Utunzaji wa loc za asili, retouch, mitindo, Sisterlocs retie na uwekaji wa loc za bandia.',overviewDigitalTitle:'TEKNOLOJIA · WARENA',overviewDigital:'GNU/Linux, usaidizi wa kompyuta, mitandao na miundombinu ya local-first. Uhuru ni Mfumo.',overviewResearchTitle:'UTAFITI NA UBUNIFU',overviewResearch:'IKAI · GENJE · FELOH Corpus — utafiti wa kompyuta tafakuri, maarifa ya mwili na teknolojia bunifu. Ni maeneo ya utafiti na maarifa, si huduma za kununua.',digitalScope:'Huduma hupangwa kulingana na kila kazi. Uwezekano, matokeo, gharama na msaada hukubaliwa kabla ya kazi kuanza.',
 
 
 
 
 
 
-heroDigitalLink:'Chunguza huduma za teknolojia',
+heroDigitalLink:'Chunguza huduma za teknolojia',heroWorkLink:'Chunguza kazi kwenye GitHub',
 heroEnquire:'WhatsApp — Uliza kuhusu utunzaji wa locs',exploreLocs:'Chunguza huduma za Locs',
 enquireRetouch:'Uliza kuhusu Retouch & Styling',enquireRetie:'Uliza kuhusu Sisterlocs Retie',enquireArtificial:'Uliza kuhusu Artificial Locs Installation',
 crownKicker:'LOCS · CROWN',crownTitle:'Taji Yako. Ufundi Wako.',
 crownIntro:'Utunzaji wa loc za asili, matengenezo na mitindo, Sisterlocs Retie na uwekaji wa loc za bandia. Upeo wa huduma, bei za kuanzia na maulizo ya moja kwa moja vimeelezwa wazi.',
 svcRetouch:'Retouch & Styling',svcRetie:'Sisterlocs Retie',svcArtificial:'Artificial Locs Installation',
-price700:'KES 700+',price1500:'KES 1,500+',price3500:'KES 3,500+',
+price700:'KES 700+',price1500:'KES 1,500+',price3500:'KES 3,500',
 svcRetouchDesc:'Fanya locs zako zionekane nadhifu tena kwa retouch na umaliziaji makini. Kazi ya mwisho hutegemea hali ya nywele na huduma inayohitajika.',svcRetieDesc:'Kukaza upya Sisterlocs kwa umakini. Eleza hali ya sasa na mahitaji ya utunzaji unapoulizia.',svcArtificialDesc:'Ufungaji wa loc za bandia; aina ya ufungaji na kazi inayohitajika huthibitishwa kabla ya kuanza.',
 bookingNote:'Bei ni za kuanzia. Gharama ya mwisho hutegemea hali, upeo wa kazi na vifaa. Ombi halithibitishi nafasi. Upatikanaji na masharti ya mwisho hukubaliwa moja kwa moja.',
 digitalKicker:'DIGITAL · WARENA',digitalTitle:'Uhuru ni Mfumo.',
