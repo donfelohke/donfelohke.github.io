@@ -115,7 +115,7 @@ assert.equal(system.themeMeta.attributes.content, "#000000", "system dark prefer
 const language = boot();
 assert.equal(language.root.lang, "en", "English is the default language");
 assert.equal(language.translated[0].textContent, "Your Beauty ° Your Way.");
-assert.match(language.translated[1].textContent, /Natural loc care in Eldoret Town \/ Karibu Mdosi/);
+assert.match(language.translated[1].textContent, /NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova/);
 assert.match(language.translated[2].textContent, /starting prices and direct enquiries/i);
 assert.match(language.translated[3].textContent, /^I founded NAKEBUSEN/);
 assert.equal(language.translated[4].textContent, "Sisterlocs Retie");
@@ -139,13 +139,13 @@ assert.equal(language.values["nakebusen-language"], "sw", "language preference p
 assert.equal(language.languageButton.attributes["aria-label"], "Badilisha lugha hadi Kiingereza");
 assert.equal(language.nav.attributes["aria-label"], "Urambazaji mkuu");
 assert.equal(language.translated[0].textContent, "Uzuri Wako ° Kwa Namna Yako.");
-assert.match(language.translated[1].textContent, /Utunzaji wa loc za asili Eldoret Town \/ Karibu Mdosi/);
+assert.match(language.translated[1].textContent, /NAKEBUSEN ni huduma za urembo na teknolojia iliyoanzishwa na Felix Lwova/);
 assert.match(language.translated[2].textContent, /bei za kuanzia na maulizo ya moja kwa moja/);
 assert.match(language.translated[3].textContent, /^Nilianzisha NAKEBUSEN/);
 assert.equal(language.translated[4].textContent, "Sisterlocs Retie");
 assert.equal(language.translated[5].textContent, "Mwanzilishi · CTO · Loctician · Creative Technologist");
 assert.match(language.translated[6].textContent, /Bei ni za kuanzia/);
-assert.match(language.translated[7].textContent, /Usaidizi wa vitendo kwa kompyuta za Linux/);
+assert.match(language.translated[7].textContent, /Usaidizi wa vitendo wa GNU\/Linux, workstation na mitandao/);
 assert.equal(language.translated[8].textContent, "@donfeloh");
 assert.match(language.translated[9].textContent, /HERITAGE.*BLACK EXCELLENCE.*SOVEREIGN FUTURES/);
 assert.match(language.translated[11].textContent, /Lipa tu baada ya kukubaliana moja kwa moja na NAKEBUSEN/);
