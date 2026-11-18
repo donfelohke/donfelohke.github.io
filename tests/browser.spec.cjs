@@ -26,17 +26,18 @@ for (const width of widths) {
   });
 }
 
-test("hero follows approved copy and keeps the three practice domains distinct", async ({ page }) => {
+test("hero prioritises the two customer paths and keeps research secondary", async ({ page }) => {
   await page.goto(pageUrl);
   const hero = page.locator("#top");
   await expect(hero.locator("h1")).toHaveCount(1);
   await expect(hero.locator("h1")).toHaveText("Your Beauty ° Your Way.");
   await expect(hero.locator(".lead")).toContainText("NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh)");
-  await expect(hero.locator(".hero-overview .hero-path")).toHaveCount(3);
+  await expect(hero.locator(".hero-overview .hero-path")).toHaveCount(2);
   await expect(hero).toContainText("BEAUTY & LOC CARE");
   await expect(hero).toContainText("DIGITAL · WARENA");
-  await expect(hero).toContainText("RESEARCH & CREATIVE");
-  await expect(hero).toContainText("not services for purchase");
+  await expect(hero).not.toContainText("RESEARCH & CREATIVE");
+  await expect(page.locator("#connect")).toContainText("RESEARCH & CREATIVE");
+  await expect(page.locator("#connect")).toContainText("not services for purchase");
   await expect(page.locator("#connect")).toContainText("ONLY NAKEBUSEN TRANSACTS.");
   await expect(page.locator("#code")).toContainText("not a separate checkout");
   await expect(hero.getByRole("link")).toHaveCount(3);
@@ -148,7 +149,8 @@ test("Connect owns the contact directory; footer stays minimal", async ({ page }
   await expect(page.locator('#connect a[href="tel:+254719635415"]')).toBeVisible();
   await expect(page.locator('#connect a[href="mailto:mela9ine@proton.me"]')).toBeVisible();
   await expect(page.locator("#connect")).toContainText("Commercial enquiries route through NAKEBUSEN.");
-  await expect(page.locator("#connect")).toContainText("Eldoret Town / Karibu Mdosi");
+  await expect(page.locator("#crown")).toContainText("Eldoret Town / Karibu Mdosi");
+  await expect(page.locator("#connect")).not.toContainText("Eldoret Town / Karibu Mdosi");
   await expect(page.locator("footer")).not.toContainText("Eldoret Town / Karibu Mdosi");
   await expect(page.locator("footer")).toContainText("Support Us");
   await expect(page.locator('footer a[href^="tel:"]')).toHaveCount(0);
