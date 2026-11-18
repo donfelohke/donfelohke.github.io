@@ -385,3 +385,16 @@ This section translates current platform guidance and published UX benchmarks in
 - No real-user task study has measured whether Eldoret customers find service, price, location and enquiry details quickly.
 - No field Core Web Vitals dataset has been supplied; performance targets remain acceptance criteria, not claimed results.
 - Screen-reader testing with TalkBack and VoiceOver, high-contrast settings, large text and actual OLED/LCD devices remains necessary before claiming full accessibility or device-specific quality.
+
+
+## 19 November copy and research-page implementation response
+
+The companion copy revision is implemented on review branch `copy/research-page-homepage-refresh-2026-11-19`; this does not change the evidence status of the research above or establish a release.
+
+- The homepage lead now uses the approved NAKEBUSEN practice statement while keeping the loc-care enquiry as the primary action.
+- The hero discovery overview now identifies three distinct destinations: Beauty & Loc Care, Digital · WARENA, and Research & Creative. Only the first two are commercial paths.
+- The research destination at `/research/` introduces FELOH Corpus, IKAI, GENJE and WARENA, and links selected scholarly works and the source repositories.
+- The page explicitly distinguishes research, proposals and creative practice from released products and purchasable services.
+- The homepage copy remains bilingual; the research page is English-first in this revision and is not represented as a fully translated page.
+
+Automated checks have been added for the research page and updated homepage hierarchy. Their result remains pending until the branch workflow executes. Browser screenshots, assistive-technology review, manual contrast testing and live Pages verification remain release gates.
