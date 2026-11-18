@@ -9,7 +9,7 @@ const pageUrl = pathToFileURL(path.join(root, "index.html")).href;
 const evidenceDir = path.join(root, "test-results", "evidence");
 fs.mkdirSync(evidenceDir, { recursive: true });
 
-const widths = [320, 360, 390, 430, 768, 1280];
+const widths = [320, 360, 390, 430, 768, 1024, 1280];
 
 for (const width of widths) {
   test(`layout holds at ${width}px`, async ({ page }) => {
@@ -37,6 +37,8 @@ test("hero follows approved copy and keeps the three practice domains distinct",
   await expect(hero).toContainText("DIGITAL · WARENA");
   await expect(hero).toContainText("RESEARCH & CREATIVE");
   await expect(hero).toContainText("not services for purchase");
+  await expect(page.locator("#connect")).toContainText("ONLY NAKEBUSEN TRANSACTS.");
+  await expect(page.locator("#code")).toContainText("not a separate checkout");
   await expect(hero.getByRole("link")).toHaveCount(3);
   await expect(hero.locator('a[href="https://github.com/donfelohke"]')).toHaveCount(1);
   await expect(hero).not.toContainText("GRACE · GRIT · GLORY");
@@ -73,6 +75,7 @@ test("approved services, starting prices and enquiry boundary are present", asyn
   await expect(page.locator("#crown")).toContainText("KES 1,500+");
   await expect(page.locator("#crown")).toContainText("Artificial Locs Installation");
   await expect(page.locator("#crown")).toContainText("KES 3,500");
+  await expect(page.locator("#connect")).toContainText("ONLY NAKEBUSEN TRANSACTS.");
   await expect(page.locator("#crown")).toContainText("An enquiry does not confirm a booking.");
   await expect(page.locator("#connect")).toContainText("Founder · CTO · Loctician · Creative Technologist");
   await expect(page.locator("body")).not.toContainText("LOCS Retie");
@@ -198,4 +201,19 @@ test("bottom dock targets remain touch-sized at 320px and section anchors clear 
     const top = await page.locator(`#${id}`).evaluate(el => el.getBoundingClientRect().top);
     expect(top).toBeGreaterThanOrEqual(0);
   }
+});
+
+test("language and theme controls remain usable when local storage is unavailable", async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(window, "localStorage", {
+      configurable: true,
+      get() { throw new Error("storage disabled by test"); }
+    });
+  });
+  await page.goto(pageUrl);
+  await page.getByRole("button", { name: "Switch language to Kiswahili" }).click();
+  await expect(page.locator("html")).toHaveAttribute("lang", "sw");
+  await page.getByRole("button", { name: "Badilisha hadi mandhari meusi" }).click();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  await expect(page.getByRole("button", { name: "Badilisha hadi mandhari mepesi" })).toBeVisible();
 });
