@@ -112,3 +112,7 @@ WARENA's desktop-stack research (Guix/RDE, Niri, Noctalia v5, Sway, dwl-guile an
 ## WARENA technical-policy boundary — 2026-11-17
 
 WARENA and IKAI system architecture is native-first and excludes JavaScript and web technologies as application/runtime dependencies. This repository is the public publication surface; its existing static website is not thereby declared a WARENA/IKAI runtime or migrated by this policy. Any future site changes remain subject to separate approval and implementation review. See the [WARENA Technology Constitution](https://github.com/donfelohke/WARENA/blob/main/docs/TECHNOLOGY-CONSTITUTION-2026-11-17.md).
+
+## IKAI Mirror research boundary — 2026-11-18
+
+IKAI Mirror is documented research, not a released product, public service or website feature. Its proposed Beauty Mirror application does not change NAKEBUSEN's service catalogue, availability or booking terms. The public site remains an audience view; **ONLY NAKEBUSEN TRANSACTS**. See [IKAI's specialist mirror research](https://github.com/donfelohke/Ikai/blob/main/docs/IKAI-MIRROR-TECHNOLOGY-AND-SCHOLARLY-RESEARCH-2026-11-18.md) and the [FELOH Corpus cross-project alignment](https://github.com/donfelohke/feloh-corpus/blob/main/docs/IKAI-MIRROR-CROSS-PROJECT-ALIGNMENT-2026-11-18.md). No website implementation is part of this documentation update.
