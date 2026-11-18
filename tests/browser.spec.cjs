@@ -241,7 +241,7 @@ test("research page explains the four domains and remains non-commercial", async
   await expect(page.locator("main")).toContainText("ONLY NAKEBUSEN TRANSACTS.");
   await expect(page.locator("main")).toContainText("not a released product");
   await expect(page.locator('a[href="https://doi.org/10.1145/3631431"]')).toBeVisible();
-  await expect(page.locator('a[href="https://github.com/donfelohke/Ikai"]')).toBeVisible();
+  await expect(page.getByRole("link", { name: "IKAI", exact: true })).toBeVisible();
   const axe = await new AxeBuilder({ page }).withTags(["wcag2a","wcag2aa","wcag21a","wcag21aa","wcag22aa"]).analyze();
   expect(axe.violations, "research page accessibility violations").toEqual([]);
   for (const width of [320, 390, 768, 1280]) {
