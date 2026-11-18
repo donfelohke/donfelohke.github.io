@@ -38,7 +38,7 @@ h1{max-width:15ch;margin:0 0 .85rem;font:500 clamp(2.5rem,8vw,4.5rem)/1.04 var(-
 .actions{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:1.15rem}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.62rem .9rem;border:1px solid var(--forest);border-radius:5px;background:transparent;color:var(--forest);font-weight:700;font-size:.9rem;text-align:center;text-decoration:none}.btn-fill{background:var(--forest);color:#F3EEE4}
 :root[data-theme="dark"] .btn:not(.btn-fill){border-color:#D6C6A5;color:#F3EEE4}
-.hero-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem;margin:1.45rem 0 0}
+.hero-overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin:1.45rem 0 0}
 .hero-path{min-width:0;padding:.9rem;border:1px solid var(--line);border-radius:10px;background:color-mix(in srgb,var(--paper) 90%,var(--sandstone))}
 .hero-path strong{display:block;margin-bottom:.35rem;font:700 .7rem var(--mono);letter-spacing:.07em}.hero-path span{display:block;font-size:.88rem;line-height:1.5}
 .hero-path-locs{border-top:3px solid var(--clay)}.hero-path-digital{border-top:3px solid var(--forest)}.hero-path-research{border-top:3px solid var(--ochre)}
@@ -97,7 +97,6 @@ footer{padding:2.4rem 0 calc(2rem + env(safe-area-inset-bottom));background:line
 <div class="hero-overview">
 <div class="hero-path hero-path-locs"><strong data-i18n="overviewBeautyTitle">BEAUTY &amp; LOC CARE</strong><span data-i18n="overviewBeauty">Natural loc maintenance, retouching, styling, Sisterlocs retie and artificial loc installation.</span></div>
 <div class="hero-path hero-path-digital"><strong data-i18n="overviewDigitalTitle">DIGITAL · WARENA</strong><span data-i18n="overviewDigital">GNU/Linux, computer support, networking and local-first infrastructure. Freedom Is a System.</span></div>
-<div class="hero-path hero-path-research"><strong data-i18n="overviewResearchTitle">RESEARCH &amp; CREATIVE</strong><span data-i18n="overviewResearch">IKAI · GENJE · FELOH Corpus — reflective computing, embodied practice and creative technology. Research and knowledge domains, not services for purchase.</span></div>
 </div>
 </div>
 </section>
@@ -106,6 +105,7 @@ footer{padding:2.4rem 0 calc(2rem + env(safe-area-inset-bottom));background:line
 <p class="section-kicker" data-i18n="crownKicker">LOCS · CROWN</p>
 <h2 id="crown-title" data-i18n="crownTitle">Your Crown. Your Craft.</h2>
 <p data-i18n="crownIntro">Natural loc care, maintenance and styling, Sisterlocs Retie and artificial loc installation. Clear service scope, starting prices and direct enquiries.</p>
+<p class="small muted location-line" data-i18n="location">Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya</p>
 <div class="services">
 <article class="svc"><h3 data-i18n="svcRetouch">Retouch &amp; Styling</h3><p class="price" data-i18n="price700">KES 700+</p><p class="small muted" data-i18n="svcRetouchDesc">Refresh and maintain your existing locs with retouching and styling. Final scope depends on your loc condition and the work required.</p><div class="actions"><a class="btn btn-fill" data-wa-service="retouch" href="https://wa.me/254719635415" data-i18n="enquireRetouch">Enquire about Retouch &amp; Styling</a></div></article>
 <article class="svc"><h3 data-i18n="svcRetie">Sisterlocs Retie</h3><p class="price" data-i18n="price1500">KES 1,500+</p><p class="small muted" data-i18n="svcRetieDesc">Careful retightening for established Sisterlocs. Share their current condition and your maintenance needs when enquiring.</p><div class="actions"><a class="btn btn-fill" data-wa-service="retie" href="https://wa.me/254719635415" data-i18n="enquireRetie">Enquire about Sisterlocs Retie</a></div></article>
@@ -149,12 +149,13 @@ footer{padding:2.4rem 0 calc(2rem + env(safe-area-inset-bottom));background:line
 <p class="muted" data-i18n="role">Founder · CTO · Loctician · Creative Technologist</p>
 <p data-i18n="founderDesc">I founded NAKEBUSEN to bring together personal care, skilled craft and practical technology. My work spans natural loc care, GNU/Linux systems, infrastructure and creative technology. WARENA provides the systems-engineering foundation behind the technical services.</p>
 <p data-i18n="connectDesc">Whether you are enquiring about loc care or a technology project, get in touch. We will discuss suitability, availability, scope and next steps before agreeing on any work.</p>
+<p class="section-kicker" data-i18n="overviewResearchTitle">RESEARCH &amp; CREATIVE</p>
+<p class="small muted" data-i18n="overviewResearch">IKAI · GENJE · FELOH Corpus — reflective computing, embodied practice and creative technology. Research and knowledge domains, not services for purchase.</p>
 <div class="actions">
 <a class="btn btn-fill" data-wa-purpose="general" href="https://wa.me/254719635415">WhatsApp +254 719 635 415</a>
 <a class="btn" href="tel:+254719635415" data-i18n="call2">Call 0719 635 415</a>
 <a class="btn" href="mailto:mela9ine@proton.me" data-i18n="email">Email</a>
 </div>
-<p class="small muted location-line" data-i18n="location">Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya</p>
 <p class="small muted" data-i18n="boundary">Commercial enquiries route through NAKEBUSEN. An enquiry is not a confirmed booking.</p>
 </div>
 </section>
