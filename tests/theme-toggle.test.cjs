@@ -5,11 +5,40 @@ const fs = require("node:fs");
 const vm = require("node:vm");
 
 const html = fs.readFileSync("index.html", "utf8");
-const match = html.match(/<script>\s*([\s\S]*?)<\/script>/);
+const scripts = [...html.matchAll(/<script\\b[^>]*>([\\s\\S]*?)<\\/script>/gi)];
+const bootstrapMatch = scripts.find(match => match[1].includes("nakebusen-theme") && match[1].includes("setAttribute('data-theme'"));
+const match = scripts.find(match => match[1].includes("function applyTheme"));
+assert.ok(bootstrapMatch, "early theme bootstrap exists");
 assert.ok(match, "inline application script exists");
+assert.ok(html.indexOf(bootstrapMatch[0]) < html.indexOf("<style>"), "theme bootstrap runs before the main stylesheet");
+
+function bootEarly({ storedTheme = null, systemDark = false, storageThrows = false } = {}) {
+  const attrs = {};
+  const root = { dataset: {}, setAttribute(key, value) { attrs[key] = value; this.dataset[key.replace(/^data-/, "")] = value; } };
+  const meta = element({ content: "#173D32" });
+  const document = { documentElement: root, querySelector() { return meta; } };
+  const context = {
+    document,
+    window: { matchMedia() { return { matches: systemDark }; } },
+    localStorage: { getItem() { if (storageThrows) throw new Error("storage unavailable"); return storedTheme; } },
+  };
+  vm.runInNewContext(bootstrapMatch[1], context);
+  return { root, attrs, meta };
+}
+
+const earlyDark = bootEarly({ storedTheme: "dark", systemDark: false });
+assert.equal(earlyDark.attrs["data-theme"], "dark", "saved dark theme is applied before CSS");
+assert.equal(earlyDark.meta.attributes.content, "#000000", "early dark theme updates browser chrome");
+const earlyLight = bootEarly({ storedTheme: "light", systemDark: true });
+assert.equal(earlyLight.attrs["data-theme"], "light", "saved light preference overrides system dark");
+assert.equal(earlyLight.meta.attributes.content, "#173D32");
+const earlySystem = bootEarly({ storedTheme: "invalid", systemDark: true });
+assert.equal(earlySystem.attrs["data-theme"], "dark", "invalid preference falls back to system theme");
+const earlyFallback = bootEarly({ storageThrows: true, systemDark: true });
+assert.equal(earlyFallback.attrs["data-theme"], "dark", "system preference works when storage is unavailable");
 assert.ok(html.includes("bottom:calc(.65rem + env(safe-area-inset-bottom))"), "floating dock adds spacing above the device safe area");
-assert.ok(html.includes("header .nav{background:#173D32;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}"), "reduced-transparency header removes backdrop blur");
-assert.ok(html.includes(".floating-dock{background:#242923;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}"), "reduced-transparency dock removes backdrop blur");
+assert.ok(html.includes(':root[data-theme="dark"] header .nav{background:#033500}'), "reduced-transparency dark header uses opaque forest");
+assert.ok(html.includes(':root[data-theme="dark"] .floating-dock{background:#151515}'), "reduced-transparency dark dock uses opaque charcoal");
 
 
 function element(attributes = {}) {
