@@ -1,6 +1,8 @@
-# NAKEBUSEN — Your Beauty ° Your Way.
+# NAKEBUSEN — Beautiful Roots. Sovereign Systems.
 
 **Craft, technology and culture rooted in African ingenuity.**
+
+**Canonical lockup:** NAKEBUSEN Locs ° Powered by WARENA.
 
 Public website: https://donfelohke.github.io/  
 Repository: `donfelohke/donfelohke.github.io`
@@ -54,7 +56,7 @@ GNU/Linux, computer maintenance, networking, small-office infrastructure, learni
 - Email: mela9ine@proton.me
 - Location: Eldoret Town · Karibu Mdosi · Uasin Gishu · Kenya
 
-Do not infer a street address or opening hours. The public founder display name and copyright attribution remain subject to their evidence controls in PUBLIC-FACTS-REGISTER.md.
+Do not infer a street address or opening hours. The public founder display name and copyright attribution remain subject to their evidence controls in PUBLIC-FACTS-REGISTER.md. The site is a public audience view; NAKEBUSEN remains the only commercial transaction interface.
 
 ## Documentation
 
