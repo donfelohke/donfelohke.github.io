@@ -18,8 +18,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"NAKEBUSEN","url":"https://donfelohke.github.io/","telephone":"+254719635415","email":"mela9ine@proton.me","areaServed":[{"@type":"City","name":"Eldoret"}]}</script>
 <title>NAKEBUSEN Loc Care &amp; Digital Services · Eldoret, Kenya</title>
 <style>
-:root{color-scheme:light;--forest:#173D32;--deep-forest:#102D25;--charcoal:#242923;--paper:#F3EEE4;--ink:#242923;--clay:#A34F3B;--ochre:#8B5E16;--sage:#87917A;--muted:#626B58;--sage-text:#626B58;--price:#173D32;--sandstone:#D6C6A5;--line:rgba(36,41,35,.20);--focus:#102D25;--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Consolas,monospace;--glass-blur:20px;--glass-saturate:150%}
-:root[data-theme="dark"]{color-scheme:dark;--paper:#000000;--ink:#F2EFEA;--charcoal:#151515;--forest:#173D32;--deep-forest:#033500;--clay:#E2725B;--ochre:#D4AF37;--muted:#B8B0A5;--sage-text:#B8B0A5;--price:#F2EFEA;--sandstone:#D6C6A5;--line:rgba(242,239,234,.20);--focus:#F2EFEA}
+:root{color-scheme:light;--forest:#173D32;--deep-forest:#102D25;--charcoal:#242923;--paper:#F3EEE4;--ink:#242923;--clay:#A34F3B;--ochre:#8B5E16;--sage:#87917A;--muted:#626B58;--sage-text:#626B58;--price:#173D32;--sandstone:#D6C6A5;--line:rgba(36,41,35,.20);--focus:#102D25;--action-bg:#173D32;--action-ink:#F3EEE4;--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Consolas,monospace;--glass-blur:20px;--glass-saturate:150%}
+:root[data-theme="dark"]{color-scheme:dark;--paper:#000000;--ink:#F2EFEA;--charcoal:#151515;--forest:#173D32;--deep-forest:#033500;--clay:#E2725B;--ochre:#D4AF37;--muted:#B8B0A5;--sage-text:#B8B0A5;--price:#F2EFEA;--sandstone:#D6C6A5;--line:rgba(242,239,234,.20);--focus:#F2EFEA;--action-bg:#D6C6A5;--action-ink:#102D25}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:6rem}
 body{margin:0;padding-bottom:calc(5.5rem + env(safe-area-inset-bottom));background:var(--paper);color:var(--ink);font:16px/1.65 var(--sans)}
 a{color:inherit;text-underline-offset:.18em}a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
@@ -36,7 +36,7 @@ header .nav{pointer-events:auto;display:flex;align-items:center;justify-content:
 h1{max-width:15ch;margin:0 0 .85rem;font:500 clamp(2.5rem,8vw,4.5rem)/1.04 var(--serif);letter-spacing:-.025em}
 .lead{max-width:52rem;margin:0;color:var(--ink);font-size:clamp(1.02rem,2.2vw,1.2rem)}
 .actions{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:1.15rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.62rem .9rem;border:1px solid var(--forest);border-radius:5px;background:transparent;color:var(--forest);font-weight:700;font-size:.9rem;text-align:center;text-decoration:none}.btn-fill{background:var(--forest);color:#F3EEE4}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.62rem .9rem;border:1px solid var(--forest);border-radius:5px;background:transparent;color:var(--forest);font-weight:700;font-size:.9rem;text-align:center;text-decoration:none}.btn-fill{background:var(--action-bg);border-color:var(--action-bg);color:var(--action-ink)}
 :root[data-theme="dark"] .btn:not(.btn-fill){border-color:#D6C6A5;color:#F3EEE4}
 .hero-overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin:1.45rem 0 0}
 .hero-path{min-width:0;padding:.9rem;border:1px solid var(--line);border-radius:10px;background:color-mix(in srgb,var(--paper) 90%,var(--sandstone))}
@@ -301,7 +301,7 @@ artificial:"Habari NAKEBUSEN — ninaulizia huduma ya Artificial Locs Installati
 };
 function applyTheme(theme){
 root.setAttribute('data-theme',theme);
-if(themeMeta)themeMeta.setAttribute('content',theme==='dark'?'#102D25':'#173D32');
+if(themeMeta)themeMeta.setAttribute('content',theme==='dark'?'#000000':'#173D32');
 storage.set(themeKey,theme);
 if(themeToggle){const dict=copy[root.lang]||copy.en;themeToggle.setAttribute('aria-label',theme==='dark'?dict.themeToLight:dict.themeToDark);}
 }
