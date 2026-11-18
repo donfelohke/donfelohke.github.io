@@ -1,7 +1,7 @@
 # NAKEBUSEN — Brand Implementation Checklist
 
 **Document ID:** NB-BIC-01  
-**Version:** M3 · 9 November 2026  
+**Version:** M4 · 18 November 2026  
 **Status:** Implementation and verification checklist
 
 Status meanings: APPROVED = decision approved; IMPLEMENTED = code changed; TESTED = checks executed; VERIFIED = evidence supports acceptance; RELEASED = deployed and checked.
@@ -94,6 +94,8 @@ Record the exact commit, test date, browsers/devices, routes tested, results, de
 - [ ] Release explicitly authorised.
 
 ## 8. Change control and current status
+
+- 18 November 2026: research-led refinements prepared on `fix/nakebusen-site-quality-2026-11-18`: consolidated the stylesheet, aligned hero copy and practice overview to WEBCOPY, corrected Artificial Locs Installation to KES 3,500, clarified per-engagement DIGITAL scope, and added automated responsive, interaction, anchor and axe accessibility coverage. These are implementation changes; test execution and release remain pending.
 
 - Stage A PR #112 was merged to `main` on 9 November 2026 at merge commit `e9a0c4c395a731f7082a80e85f88dfcf22ced64a`.
 - This confirms the source merge only; it does not by itself establish successful deployment or independent live-browser verification.
