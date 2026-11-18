@@ -122,8 +122,11 @@ test("all WhatsApp purposes and service links update with the selected language"
   for (const purpose of ["loc", "tech", "general", "payment", "support"]) {
     await expect(page.locator(`a[data-wa-purpose="${purpose}"]`).first()).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
   }
-  await expect(page.locator('a[data-wa-service="retie"]')).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
+  for (const service of ["retouch", "retie", "artificial"]) {
+    await expect(page.locator(`a[data-wa-service="${service}"]`)).toHaveAttribute("href", /wa\.me\/254719635415\?text=/);
+  }
   await expect(page.locator('a[data-wa-service="retie"]')).toHaveAttribute("href", /Sisterlocs/);
+  await expect(page.locator('a[data-wa-service="artificial"]')).toHaveAttribute("href", /Artificial/);
 
   await page.getByRole("button", { name: "Switch language to Kiswahili" }).click();
   await expect(page.locator('a[data-wa-purpose="loc"]').first()).toHaveAttribute("href", /ninaulizia/);
