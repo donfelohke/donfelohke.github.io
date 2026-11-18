@@ -26,6 +26,13 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Run responsive, interaction and accessibility tests
         run: npx playwright test
+      - name: Upload browser evidence on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-evidence
+          path: test-results/
+          if-no-files-found: ignore
   build:
     if: github.event_name != 'pull_request'
     needs: quality
