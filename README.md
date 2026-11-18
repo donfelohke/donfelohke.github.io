@@ -1,6 +1,8 @@
-# NAKEBUSEN — Beautiful Roots. Sovereign Systems.
+# NAKEBUSEN — Your Beauty ° Your Way.
 
-**Craft, technology and culture rooted in African ingenuity.**
+**Natural loc care in Eldoret Town, Kenya. Practical technology powered by WARENA.**
+
+Research and creative practice are documented separately from the commercial service offer.
 
 **Canonical lockup:** NAKEBUSEN Locs ° Powered by WARENA.
 
@@ -58,6 +60,12 @@ GNU/Linux, computer maintenance, networking, small-office infrastructure, learni
 
 Do not infer a street address or opening hours. The public founder display name and copyright attribution remain subject to their evidence controls in PUBLIC-FACTS-REGISTER.md. The site is a public audience view; NAKEBUSEN remains the only commercial transaction interface.
 
+## Public destinations
+
+- [NAKEBUSEN homepage](https://donfelohke.github.io/) — loc care and Digital service enquiries.
+- [Research & Creative Practice](https://donfelohke.github.io/research/) — research domains, selected scholarly reading and project archives. Research is not a service catalogue.
+- [GitHub profile](https://github.com/donfelohke) — source repositories and project history.
+
 ## Documentation
 
 | Document | Authority |
@@ -67,7 +75,8 @@ Do not infer a street address or opening hours. The public founder display name 
 | [BRAND-MANUAL.md](docs/BRAND-MANUAL.md) | Brand, voice and visual system |
 | [PUBLIC-FACTS-REGISTER.md](docs/PUBLIC-FACTS-REGISTER.md) | Public factual claims and evidence classes |
 | [SERVICE-CATALOG.md](docs/SERVICE-CATALOG.md) | Services, starting prices and boundaries |
-| [WEBCOPY.md](docs/WEBCOPY.md) | Canonical public website copy |
+| [WEBCOPY.md](docs/WEBCOPY.md) | Canonical public website copy and research-page contract |
+| [WEBSITE-COPY-RESEARCH-AND-IMPLEMENTATION-2026-11-19.md](docs/WEBSITE-COPY-RESEARCH-AND-IMPLEMENTATION-2026-11-19.md) | Copy audit, content strategy and implementation record |
 | [TECHCOPY.md](docs/TECHCOPY.md) | DIGITAL / WARENA technical messaging |
 | [NAV-STRUCTURE.md](docs/NAV-STRUCTURE.md) | Single-page navigation and anchors |
 | [WEB-DESIGN-STANDARDS.md](docs/WEB-DESIGN-STANDARDS.md) | Visual, responsive and accessibility rules |
