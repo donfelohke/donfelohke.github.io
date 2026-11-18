@@ -158,6 +158,17 @@ test("Connect owns the contact directory; footer stays minimal", async ({ page }
   await expect(page.locator('footer a[href^="mailto:"]')).toHaveCount(0);
 });
 
+test("loc enquiry guidance and technical engagement process are explicit", async ({ page }) => {
+  await page.goto(pageUrl);
+  await expect(page.locator(".enquiry-steps li")).toHaveCount(3);
+  await expect(page.locator(".enquiry-guide")).toContainText("final price directly");
+  await expect(page.locator(".digital-process li")).toHaveCount(3);
+  await expect(page.locator(".digital-process")).toContainText("practical handover");
+  await page.getByRole("button", { name: "Switch language to Kiswahili" }).click();
+  await expect(page.locator(".enquiry-guide")).toContainText("bei ya mwisho");
+  await expect(page.locator(".digital-process")).toContainText("makabidhiano");
+});
+
 test("keyboard focus is visible on interactive controls and dark surfaces", async ({ page }) => {
   await page.goto(pageUrl);
   await page.keyboard.press("Tab");
