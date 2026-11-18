@@ -51,6 +51,7 @@ function boot({ storedTheme = null, storedLanguage = null, systemDark = false, s
     element({ "data-i18n": "paymentAction" }),
     element({ "data-i18n": "paymentBoundary" }),
     element({ "data-i18n": "supportAction" }),
+    element({ "data-i18n": "researchExplore" }),
   ];
   const purposes = ["loc", "tech", "general", "payment", "support"].map(value => element({ "data-wa-purpose": value }));
   const services = ["retouch", "retie", "artificial"].map(value => element({ "data-wa-service": value }));
