@@ -114,7 +114,7 @@ Record the exact commit, test date, browsers/devices, routes tested, results, de
 
 - Stage A PR #112 was merged to `main` on 9 November 2026 at merge commit `e9a0c4c395a731f7082a80e85f88dfcf22ced64a`.
 - This confirms the source merge only; it does not by itself establish successful deployment or independent live-browser verification.
-- The 19 November copy and research-page revision is on `copy/research-page-homepage-refresh-2026-11-19`; it is a review branch and is not yet released.
+- The 19 November copy and research-page revision is on `copy/research-page-homepage-refresh-2026-11-19`; it is reviewed in [PR #133](https://github.com/donfelohke/donfelohke.github.io/pull/133) and is not yet released.
 - Current implementation work is not merged or released. Do not change this status until the corresponding evidence exists.
 - Use a reviewed pull request for material website changes. Do not merge or deploy based solely on a successful commit.
 - Keep specification, implementation, testing, verification and release states distinct.
@@ -127,3 +127,5 @@ Record the exact commit, test date, browsers/devices, routes tested, results, de
 - Updated `README.md` and `docs/WEBCOPY.md` to link and define the new destination. Added `docs/WEBSITE-COPY-RESEARCH-AND-IMPLEMENTATION-2026-11-19.md` as the audit and implementation record.
 - Added Playwright expectations for the new hero hierarchy and research page. CI execution is pending.
 - **Not verified:** live Pages route, browser rendering, screen-reader behaviour, contrast audit, social previews or production deployment.
+
+- PR #133 was opened against `main` on 19 November 2026. At the time of this record, the GitHub connector returned no workflow runs or combined commit statuses for the PR head; automated checks must be confirmed from the PR Checks tab before merge.
