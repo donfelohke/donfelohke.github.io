@@ -2,7 +2,7 @@
 
 **Document ID:** NB-UX-IMPL-2026-11-19  
 **Date:** 19 November 2026  
-**Status:** PROPOSED — approval required before website implementation  
+**Status:** APPROVED — implementation in progress  
 **Baseline:** `main` at `db809bf53a939822f5d5846c3916b88594954751`  
 **Primary implementation surface:** `index.html`  
 **Decision owner:** NAKEBUSEN
@@ -11,7 +11,7 @@
 
 Translate the approved AMOLED editorial direction into a coherent, testable dark-theme experience without replacing the existing native experience architecture.
 
-This proposal is a specification only. It does not authorise edits to production HTML/CSS/JavaScript, a deployment, a new payment flow, new services, or a change to business facts. The implementation must begin only after the decision owner approves this specification.
+The decision owner approved this specification on 19 November 2026. Implementation is proceeding on this review branch only. Approval does not authorise merging to `main` or deployment; those remain separate decisions.
 
 The public site remains a lightweight static, single-page NAKEBUSEN gateway. The dark theme is an optional first-class theme; the light theme remains supported. Theme selection must not collapse the distinct Locs, Digital/WARENA and Don Feloh experiences into one generic black-and-gold template.
 
@@ -166,15 +166,29 @@ A successful CI run is not proof of real-device rendering, screen-reader usabili
 - No React/framework migration, analytics, tracking, CDN fonts or unrelated repository-wide refactor.
 - No direct write to `main`; implementation proceeds on a review branch and requires a separate merge decision.
 
-## 10. Approval checklist
+## 10. Implementation progress
+
+| Change | State | Evidence |
+|---|---|---|
+| Early saved/system theme bootstrap before the main stylesheet | Implemented | `index.html` |
+| Native AMOLED surfaces for Locs, WARENA, Connect, header, dock and footer | Implemented | `index.html` |
+| Remove radial glow, perspective hover and entrance/scroll animation cascade | Implemented | `index.html` |
+| Preserve warm-paper light theme and existing theme/language controller | Implemented; automated verification pending | `index.html`, theme tests |
+| Early-bootstrap unit coverage | Implemented; automated verification pending | `tests/theme-toggle.test.cjs` |
+| Structural AMOLED/content checks | Implemented; automated verification pending | `tests/test_site.py` |
+| Browser surface and light-theme regression test | Implemented; automated verification pending | `tests/browser.spec.cjs` |
+| Manual screen-reader, contrast, reduced-transparency and real-device verification | Pending | Requires human/browser review |
+| Merge to main and GitHub Pages deployment | Not authorised | Separate approval required |
+
+## 11. Approval checklist
 
 Approval authorises the implementation branch only; it does not authorise deployment or merging.
 
-- [ ] Approve optional AMOLED dark theme while retaining warm-paper light theme.
-- [ ] Approve native section colour ownership in dark mode: Locs near-black/terracotta, WARENA forest, Connect charcoal.
-- [ ] Approve CSS consolidation and removal of decorative gradient/shadow/scroll animation cascade.
-- [ ] Approve early synchronous theme bootstrap and the stated preference precedence.
-- [ ] Approve the file-by-file scope and automated/manual acceptance gates.
-- [ ] Approve documentation-only correction of the stale KES 3,500+ notation to KES 3,500.
+- [x] Approve optional AMOLED dark theme while retaining warm-paper light theme.
+- [x] Approve native section colour ownership in dark mode: Locs near-black/terracotta, WARENA forest, Connect charcoal.
+- [x] Approve CSS consolidation and removal of decorative gradient/shadow/scroll animation cascade.
+- [x] Approve early synchronous theme bootstrap and the stated preference precedence.
+- [x] Approve the file-by-file scope and automated/manual acceptance gates.
+- [x] Approve documentation-only correction of the stale KES 3,500+ notation to KES 3,500.
 
-**Requested decision:** approve this specification as written, or identify the specific decision to revise. No website implementation or deployment is performed until approval is explicit.
+**Approval recorded:** all six decisions above were approved on 19 November 2026. Implementation is limited to this review branch. Merge and deployment require separate approval.
