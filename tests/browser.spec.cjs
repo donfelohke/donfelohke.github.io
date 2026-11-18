@@ -253,3 +253,25 @@ test("research page explains the four domains and remains non-commercial", async
     expect(metrics.document, `research page has no horizontal overflow at ${width}px`).toBeLessThanOrEqual(metrics.viewport);
   }
 });
+
+test("depth interactions are tactile and respect reduced-motion preferences", async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await page.goto(pageUrl);
+  const service = page.locator(".svc").first();
+  await service.hover();
+  await expect.poll(() => service.evaluate(el => getComputedStyle(el).transform)).not.toBe("none");
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  const reduced = await page.evaluate(() => ({
+    heroAnimation: getComputedStyle(document.querySelector(".hero .wrap")).animationName,
+    sectionAnimation: getComputedStyle(document.querySelector(".experience")).animationName,
+    serviceTransform: getComputedStyle(document.querySelector(".svc")).transform,
+    serviceTransition: getComputedStyle(document.querySelector(".svc")).transitionProperty,
+  }));
+  expect(reduced.heroAnimation).toBe("none");
+  expect(reduced.sectionAnimation).toBe("none");
+  expect(reduced.serviceTransform).toBe("none");
+  expect(reduced.serviceTransition).not.toContain("transform");
+  const metrics = await page.evaluate(() => ({viewport:document.documentElement.clientWidth,document:document.documentElement.scrollWidth}));
+  expect(metrics.document).toBeLessThanOrEqual(metrics.viewport);
+});
