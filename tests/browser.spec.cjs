@@ -176,7 +176,7 @@ test("loc enquiry guidance and technical engagement process are explicit", async
   await expect(page.locator(".digital-process")).toContainText("practical handover");
   await page.getByRole("button", { name: "Switch language to Kiswahili" }).click();
   await expect(page.locator(".enquiry-guide")).toContainText("bei ya mwisho");
-  await expect(page.locator(".digital-process")).toContainText("makabidhiano");
+  await expect(page.locator(".digital-process")).toContainText("tunakabidhi");
 });
 
 test("keyboard focus is visible on interactive controls and dark surfaces", async ({ page }) => {
