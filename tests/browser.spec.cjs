@@ -26,21 +26,22 @@ for (const width of widths) {
   });
 }
 
-test("hero prioritises the two customer paths and keeps research secondary", async ({ page }) => {
+test("hero prioritises loc care while exposing the research destination", async ({ page }) => {
   await page.goto(pageUrl);
   const hero = page.locator("#top");
   await expect(hero.locator("h1")).toHaveCount(1);
   await expect(hero.locator("h1")).toHaveText("Your Beauty ° Your Way.");
-  await expect(hero.locator(".lead")).toContainText("Natural loc care in Eldoret Town / Karibu Mdosi");
-  await expect(hero.locator(".hero-overview .hero-path")).toHaveCount(2);
+  await expect(hero.locator(".lead")).toContainText("NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh)");
+  await expect(hero.locator(".hero-overview .hero-path")).toHaveCount(3);
   await expect(hero).toContainText("BEAUTY & LOC CARE");
   await expect(hero).toContainText("DIGITAL · WARENA");
-  await expect(hero).not.toContainText("RESEARCH & CREATIVE");
+  await expect(hero).toContainText("RESEARCH & CREATIVE");
+  await expect(hero.getByRole("link", { name: "Explore research" })).toHaveAttribute("href", "/research/");
   await expect(page.locator("#connect")).toContainText("RESEARCH & CREATIVE");
   await expect(page.locator("#connect")).toContainText("not services for purchase");
   await expect(page.locator("#connect")).toContainText("ONLY NAKEBUSEN TRANSACTS.");
   await expect(page.locator("#code")).toContainText("not a separate checkout");
-  await expect(hero.getByRole("link")).toHaveCount(2);
+  await expect(hero.getByRole("link")).toHaveCount(3);
   await expect(page.locator('#code a[href="https://github.com/donfelohke"]')).toHaveCount(1);
   await expect(hero).not.toContainText("GRACE · GRIT · GLORY");
 });
@@ -227,4 +228,28 @@ test("language and theme controls remain usable when local storage is unavailabl
   await page.getByRole("button", { name: "Badilisha hadi mandhari meusi" }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
   await expect(page.getByRole("button", { name: "Badilisha hadi mandhari mepesi" })).toBeVisible();
+});
+
+test("research page explains the four domains and remains non-commercial", async ({ page }) => {
+  const researchUrl = pathToFileURL(path.join(root, "research", "index.html")).href;
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(researchUrl);
+  await expect(page.locator("h1")).toHaveText("Research & Creative Practice");
+  for (const label of ["FELOH Corpus", "IKAI", "GENJE", "WARENA"]) {
+    await expect(page.locator("main")).toContainText(label);
+  }
+  await expect(page.locator("main")).toContainText("ONLY NAKEBUSEN TRANSACTS.");
+  await expect(page.locator("main")).toContainText("not a released product");
+  await expect(page.locator('a[href="https://doi.org/10.1145/3631431"]')).toBeVisible();
+  await expect(page.locator('a[href="https://github.com/donfelohke/Ikai"]')).toBeVisible();
+  const axe = await new AxeBuilder({ page }).withTags(["wcag2a","wcag2aa","wcag21a","wcag21aa","wcag22aa"]).analyze();
+  expect(axe.violations, "research page accessibility violations").toEqual([]);
+  for (const width of [320, 390, 768, 1280]) {
+    await page.setViewportSize({ width, height: 900 });
+    const metrics = await page.evaluate(() => ({
+      viewport: document.documentElement.clientWidth,
+      document: document.documentElement.scrollWidth,
+    }));
+    expect(metrics.document, `research page has no horizontal overflow at ${width}px`).toBeLessThanOrEqual(metrics.viewport);
+  }
 });
