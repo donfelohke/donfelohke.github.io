@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 22
       - name: Install browser test dependencies
-        run: npm install --no-save @playwright/test@1.56.1 @axe-core/playwright@4.10.2
+        run: npm install
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
       - name: Run responsive, interaction and accessibility tests
