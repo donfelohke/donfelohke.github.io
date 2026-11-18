@@ -98,7 +98,7 @@ Use [BRAND-IMPLEMENTATION-CHECKLIST.md](docs/BRAND-IMPLEMENTATION-CHECKLIST.md).
 
 The following specialist records are research documentation only and do not change the public service offer or imply a released product:
 
-- [IKAI voice and smart-glasses architecture](https://github.com/donfelohke/Ikai/blob/main/docs/IKAI-VOICE-GLASSES-DISTRIBUTED-ARCHITECTURE-2026-11-18.md)
+- [IKAI voice and smart-glasses architecture](https://github.com/donfelohke/Ikai/pull/22)
 - [GENJE kinetics and livecoding framework](https://github.com/donfelohke/Genje/blob/main/docs/KINETICS-LIVECODING-AND-IKAI-INTERACTION-2026-11-18.md)
 - [WARENA wearable platform integration](https://github.com/donfelohke/WARENA/blob/main/docs/IKAI-WEARABLE-PLATFORM-INTEGRATION-2026-11-18.md)
 
