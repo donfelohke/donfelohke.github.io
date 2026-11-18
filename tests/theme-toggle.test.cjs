@@ -9,7 +9,8 @@ const match = html.match(/<script>\s*([\s\S]*?)<\/script>/);
 assert.ok(match, "inline application script exists");
 
 assert.match(html, /bottom:calc\\(\\.65rem \\+ env\\(safe-area-inset-bottom\\)\\)/, "floating dock adds spacing above the device safe area");
-assert.match(html, /@media\\(prefers-reduced-transparency:reduce\\)\\{[^}]*backdrop-filter:none;[^}]*-webkit-backdrop-filter:none;/, "reduced-transparency mode removes backdrop blur");
+assert.match(html, /header \\.nav\\{[^}]*backdrop-filter:none;-webkit-backdrop-filter:none/, "reduced-transparency header removes backdrop blur");
+assert.match(html, /\\.floating-dock\\{[^}]*backdrop-filter:none;-webkit-backdrop-filter:none/, "reduced-transparency dock removes backdrop blur");
 
 function element(attributes = {}) {
   return {
