@@ -75,6 +75,7 @@ test("approved services, starting prices and enquiry boundary are present", asyn
   await expect(page.locator("#crown")).toContainText("KES 1,500+");
   await expect(page.locator("#crown")).toContainText("Artificial Locs Installation");
   await expect(page.locator("#crown")).toContainText("KES 3,500");
+  await expect(page.locator("#crown")).not.toContainText("KES 3,500+");
   await expect(page.locator("#connect")).toContainText("ONLY NAKEBUSEN TRANSACTS.");
   await expect(page.locator("#crown")).toContainText("An enquiry does not confirm a booking.");
   await expect(page.locator("#connect")).toContainText("Founder · CTO · Loctician · Creative Technologist");
@@ -100,6 +101,9 @@ test("theme and language controls work and preserve preferences", async ({ page 
   await expect(page.locator("html")).toHaveAttribute("lang", "sw");
   await expect(page.locator("h1")).toHaveText("Uzuri Wako ° Kwa Namna Yako.");
   await expect(page.locator("#crown")).toContainText("Sisterlocs Retie");
+  await expect(page.locator("#connect")).toContainText("Miamala yote hupitia NAKEBUSEN pekee.");
+  await expect(page.locator("#code")).toContainText("si sehemu tofauti ya malipo");
+  await expect(page.locator("footer")).toContainText("SOVEREIGN FUTURES");
   await expect(page.locator("#connect [data-i18n='role']")).toHaveText("Mwanzilishi · CTO · Loctician · Creative Technologist");
   const swDock = page.getByRole("navigation", { name: "Urambazaji wa sehemu" });
   await expect(swDock.getByRole("link")).toHaveCount(3);
@@ -135,6 +139,8 @@ test("all WhatsApp purposes and service links update with the selected language"
   await expect(page.locator('a[data-wa-purpose="payment"]')).toHaveAttribute("href", /maelezo/);
   await expect(page.locator('a[data-wa-purpose="support"]')).toHaveAttribute("href", /kuunga/);
   await expect(page.locator('a[data-wa-service="retie"]')).toHaveAttribute("href", /Sisterlocs/);
+  await expect(page.locator('a[data-wa-service="retouch"]')).toHaveAttribute("href", /Retouch/);
+  await expect(page.locator('a[data-wa-service="artificial"]')).toHaveAttribute("href", /Artificial/);
 });
 
 test("Connect owns the contact directory; footer stays minimal", async ({ page }) => {
