@@ -114,6 +114,30 @@ a:focus-visible,button:focus-visible{box-shadow:0 0 0 4px color-mix(in srgb,var(
 :root[data-theme="dark"] .hero .wrap,:root[data-theme="dark"] .svc,:root[data-theme="dark"] .hero-path{background:#000}
 }
 
+
+/* Benchmark refinement: editorial clarity, low-noise surfaces and service decision support. */
+body,:root[data-theme="dark"] body{background:var(--paper)}
+.hero .wrap{background:var(--paper);border-color:var(--line);border-radius:10px;box-shadow:0 12px 30px rgba(20,30,24,.055),inset 0 1px 0 rgba(255,255,255,.35)}
+.hero .wrap::before{display:none}
+:root[data-theme="dark"] .hero .wrap{background:#050505;border-color:rgba(214,198,165,.24);box-shadow:0 14px 36px rgba(0,0,0,.4)}
+.hero-path{border-radius:7px;box-shadow:none;background:color-mix(in srgb,var(--paper) 94%,var(--sandstone))}
+:root[data-theme="dark"] .hero-path{background:#101010;box-shadow:none}
+.svc{border-radius:8px;background:var(--paper);box-shadow:0 3px 12px rgba(20,30,24,.045);transform:none}
+:root[data-theme="dark"] .svc{background:#080808;box-shadow:0 4px 14px rgba(0,0,0,.22)}
+@media(hover:hover) and (pointer:fine){.svc:hover{transform:translateY(-2px);box-shadow:0 9px 20px rgba(20,30,24,.09)}:root[data-theme="dark"] .svc:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,0,0,.4)}}
+.enquiry-guide{margin:1.4rem 0 0;padding:1.15rem 0 0;border-top:1px solid var(--line)}
+.enquiry-guide h3{margin:0 0 .85rem;font-size:1.25rem}
+.enquiry-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin:0;padding:0;list-style:none;counter-reset:enquiry}
+.enquiry-steps li{position:relative;min-width:0;padding:.9rem .9rem .9rem 2.8rem;border-left:2px solid var(--clay);background:color-mix(in srgb,var(--paper) 92%,var(--sandstone));counter-increment:enquiry}
+.enquiry-steps li::before{content:counter(enquiry,decimal-leading-zero);position:absolute;left:.75rem;top:.85rem;color:var(--clay);font:700 .72rem var(--mono)}
+:root[data-theme="dark"] .enquiry-steps li{background:#101010}
+.digital-process{margin:1.2rem 0;padding:1rem 1.1rem;border:1px solid rgba(243,238,228,.24);border-radius:8px;background:rgba(0,0,0,.12)}
+.digital-process h3{margin:0 0 .5rem;color:#F3EEE4;font-size:1.15rem}
+.digital-process ol{margin:.4rem 0 0;padding-left:1.25rem}
+.digital-process li{padding:.2rem 0}
+@media(max-width:640px){.enquiry-steps{grid-template-columns:1fr}.enquiry-steps li{padding-block:.8rem}}
+@media(prefers-reduced-motion:reduce){.svc:hover{transform:none}}
+
 </style>
 </head>
 <body>
@@ -156,6 +180,14 @@ a:focus-visible,button:focus-visible{box-shadow:0 0 0 4px color-mix(in srgb,var(
 <article class="svc"><h3 data-i18n="svcArtificial">Artificial Locs Installation</h3><p class="price" data-i18n="price3500">KES 3,500</p><p class="small muted" data-i18n="svcArtificialDesc">Artificial loc installation, with the method, materials and scope confirmed before work begins.</p><div class="actions"><a class="btn btn-fill" data-wa-service="artificial" href="https://wa.me/254719635415" data-i18n="enquireArtificial">Enquire about Artificial Locs Installation</a></div></article>
 </div>
 <p class="note"><span data-i18n="bookingNote">Prices are starting points. Final cost depends on condition, scope and materials. An enquiry does not confirm a booking. Availability and final terms are agreed directly.</span></p>
+<div class="enquiry-guide" aria-labelledby="enquiry-guide-title">
+<h3 id="enquiry-guide-title" data-i18n="enquiryTitle">A clear enquiry, a considered plan.</h3>
+<ol class="enquiry-steps">
+<li data-i18n="enquiryStep1">Choose the service you are interested in and tell us what you need.</li>
+<li data-i18n="enquiryStep2">Share your loc condition, maintenance needs or preferred installation details.</li>
+<li data-i18n="enquiryStep3">We discuss suitability, availability, scope and the final price directly before any booking is agreed.</li>
+</ol>
+</div>
 </div>
 </section>
 <section id="code" class="experience experience-warena" aria-labelledby="digital-title">
@@ -171,6 +203,14 @@ a:focus-visible,button:focus-visible{box-shadow:0 0 0 4px color-mix(in srgb,var(
 <li data-i18n="dig5">Infrastructure planning and documented handover</li>
 </ul>
 <p class="digital-scope" data-i18n="digitalScope">WARENA powers technical work within NAKEBUSEN; it is not a separate checkout. Services are scoped per engagement, with feasibility, deliverables, price and support agreed before work begins.</p>
+<div class="digital-process" aria-labelledby="digital-process-title">
+<h3 id="digital-process-title" data-i18n="digitalProcessTitle">How a technical engagement works</h3>
+<ol>
+<li data-i18n="digitalProcess1">Describe the system, issue and outcome you need.</li>
+<li data-i18n="digitalProcess2">We assess feasibility and agree the scope, deliverables and price.</li>
+<li data-i18n="digitalProcess3">Work proceeds on agreement, with a practical handover of what was completed.</li>
+</ol>
+</div>
 <div class="actions">
 <a class="btn btn-fill" data-wa-purpose="tech" href="https://wa.me/254719635415" data-i18n="bookTech">Discuss a technical project</a>
 </div>
@@ -279,6 +319,7 @@ svcRetouch:'Retouch & Styling',svcRetie:'Sisterlocs Retie',svcArtificial:'Artifi
 price700:'KES 700+',price1500:'KES 1,500+',price3500:'KES 3,500',
 svcRetouchDesc:'Refresh and maintain your existing locs with retouching and styling. Final scope depends on your loc condition and the work required.',svcRetieDesc:'Careful retightening for established Sisterlocs. Share their current condition and your maintenance needs when enquiring.',svcArtificialDesc:'Artificial loc installation, with the method, materials and scope confirmed before work begins.',
 bookingNote:'Prices are starting points. Final cost depends on condition, scope and materials. An enquiry does not confirm a booking. Availability and final terms are agreed directly.',
+enquiryTitle:'A clear enquiry, a considered plan.',enquiryStep1:'Choose the service you are interested in and tell us what you need.',enquiryStep2:'Share your loc condition, maintenance needs or preferred installation details.',enquiryStep3:'We discuss suitability, availability, scope and the final price directly before any booking is agreed.',digitalProcessTitle:'How a technical engagement works',digitalProcess1:'Describe the system, issue and outcome you need.',digitalProcess2:'We assess feasibility and agree the scope, deliverables and price.',digitalProcess3:'Work proceeds on agreement, with a practical handover of what was completed.',
 digitalKicker:'DIGITAL · WARENA',digitalTitle:'Freedom Is a System.',
 digitalIntro:'Practical GNU/Linux, workstation and network support, powered by WARENA. We help people and small organisations understand, maintain and adapt their systems, including where connectivity is unreliable. Each engagement is assessed and scoped before work begins.',
 dig1:'GNU/Linux and workstation support',dig2:'Computer diagnostics and maintenance',dig3:'Small-office networking and Wi-Fi',dig4:'Local-first and offline-capable systems',dig5:'Infrastructure planning and documented handover',
@@ -310,6 +351,7 @@ svcRetouch:'Retouch & Styling',svcRetie:'Sisterlocs Retie',svcArtificial:'Artifi
 price700:'KES 700+',price1500:'KES 1,500+',price3500:'KES 3,500',
 svcRetouchDesc:'Fanya locs zako zionekane nadhifu tena kwa retouch na umaliziaji makini. Kazi ya mwisho hutegemea hali ya nywele na huduma inayohitajika.',svcRetieDesc:'Kukaza upya Sisterlocs kwa umakini. Eleza hali ya sasa na mahitaji ya utunzaji unapoulizia.',svcArtificialDesc:'Ufungaji wa loc za bandia; aina ya ufungaji na kazi inayohitajika huthibitishwa kabla ya kuanza.',
 bookingNote:'Bei ni za kuanzia. Gharama ya mwisho hutegemea hali, upeo wa kazi na vifaa. Ombi halithibitishi nafasi. Upatikanaji na masharti ya mwisho hukubaliwa moja kwa moja.',
+enquiryTitle:'Ulizia huduma kwa uwazi, panga hatua zinazofuata.',enquiryStep1:'Chagua huduma unayoihitaji na utueleze unachotafuta.',enquiryStep2:'Eleza hali ya loc zako, mahitaji ya matengenezo au maelezo ya mtindo unaopendelea.',enquiryStep3:'Tutajadili kufaa, upatikanaji, upeo wa kazi na bei ya mwisho kabla ya kukubaliana kuhusu nafasi.',digitalProcessTitle:'Namna kazi ya teknolojia inavyofanyika',digitalProcess1:'Eleza mfumo, changamoto na matokeo unayohitaji.',digitalProcess2:'Tunatathmini uwezekano na kukubaliana kuhusu upeo, matokeo na gharama.',digitalProcess3:'Kazi huanza baada ya makubaliano, kisha tunakabidhi maelezo ya kazi iliyokamilika.',
 digitalKicker:'DIGITAL · WARENA',digitalTitle:'Uhuru ni Mfumo.',
 digitalIntro:'Usaidizi wa vitendo wa GNU/Linux, workstation na mitandao, unaowezeshwa na WARENA. Tunasaidia watu na mashirika madogo kuelewa, kutunza na kuboresha mifumo yao, hata pale muunganisho wa intaneti unapokuwa hafifu. Kila kazi hutathminiwa na kupangiwa upeo kabla ya kuanza.',
 dig1:'Msaada wa GNU/Linux na workstation',dig2:'Uchunguzi na matengenezo ya kompyuta',dig3:'Mitandao ya ofisi ndogo na Wi-Fi',dig4:'Mifumo ya local-first na inayoweza kufanya kazi bila intaneti',dig5:'Mipango ya miundombinu na makabidhiano yaliyoandikwa',
