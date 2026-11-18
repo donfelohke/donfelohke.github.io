@@ -54,7 +54,7 @@ These checkboxes record approved decisions, not test results.
 - [x] Dark theme uses a true-black `#000000` page canvas for OLED displays.
 - [x] Dark theme uses layered `#151515` card surfaces and the established forest-green WARENA section.
 - [x] Warm ivory `#F2EFEA` is the primary dark-theme text colour; muted warm grey `#B8B0A5` is reserved for secondary text.
-- [x] Terracotta `#E2725B`, ochre `#D4AF37` and forest green `#668C64` provide restrained brand accents in dark mode.
+- [x] Terracotta `#E2725B`, ochre `#D4AF37` and forest green `#173D32` for primary brand actions and `#033500` for the WARENA surface provide restrained brand accents in dark mode.
 - [x] Light theme remains a complete, user-selectable warm-paper experience.
 - [x] Green-section supporting text and links use accessible high-contrast ivory.
 - [ ] Verify all foreground/background pairs with automated WCAG 2.2 AA checks and manual review.
