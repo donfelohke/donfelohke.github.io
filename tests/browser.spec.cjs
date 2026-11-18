@@ -158,6 +158,27 @@ test("Connect owns the contact directory; footer stays minimal", async ({ page }
   await expect(page.locator('footer a[href^="mailto:"]')).toHaveCount(0);
 });
 
+test("research page explains project maturity without creating a commercial path", async ({ page }) => {
+  const researchUrl = pathToFileURL(path.join(root, "research", "index.html")).href;
+  await page.goto(researchUrl);
+  await expect(page.getByRole("heading", { name: "Research & Creative Practice" })).toBeVisible();
+  await expect(page.locator(".status-key strong")).toHaveText(["LIVE", "PROTOTYPE", "RESEARCH", "PROPOSAL"]);
+  await expect(page.locator("body")).toContainText("not the overall maturity of an entire research domain");
+  await expect(page.locator("body")).toContainText("ONLY NAKEBUSEN TRANSACTS");
+  await expect(page.locator("body")).not.toContainText("Book a research session");
+});
+
+test("loc enquiry guidance and technical engagement process are explicit", async ({ page }) => {
+  await page.goto(pageUrl);
+  await expect(page.locator(".enquiry-steps li")).toHaveCount(3);
+  await expect(page.locator(".enquiry-guide")).toContainText("final price directly");
+  await expect(page.locator(".digital-process li")).toHaveCount(3);
+  await expect(page.locator(".digital-process")).toContainText("practical handover");
+  await page.getByRole("button", { name: "Switch language to Kiswahili" }).click();
+  await expect(page.locator(".enquiry-guide")).toContainText("bei ya mwisho");
+  await expect(page.locator(".digital-process")).toContainText("tunakabidhi");
+});
+
 test("keyboard focus is visible on interactive controls and dark surfaces", async ({ page }) => {
   await page.goto(pageUrl);
   await page.keyboard.press("Tab");

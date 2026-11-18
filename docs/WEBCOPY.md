@@ -41,6 +41,8 @@ Supporting signature: **@donfelohke · #HisGenjeness**
 
 **Enquiry boundary:** An enquiry does not confirm a booking. Availability and final terms are agreed directly.
 
+**Enquiry sequence:** Choose the service and describe what is needed; share relevant loc condition, maintenance needs or installation details; then discuss suitability, availability, scope and final price directly before a booking is agreed.
+
 The editorial phrase “Beautiful Roots. Sovereign Systems.” is not the homepage H1 or active hero copy.
 
 ### LOCS · CROWN
@@ -79,6 +81,8 @@ Service areas include:
 - Infrastructure planning and documented handover.
 
 Services are scoped per engagement. Feasibility, deliverables, price and support are agreed before work begins.
+
+**Engagement sequence:** The customer describes the system, issue and desired outcome; NAKEBUSEN assesses feasibility and agrees scope, deliverables and price; work proceeds on agreement and includes a practical handover of completed work.
 
 **Action:** Discuss a technical project.
 
