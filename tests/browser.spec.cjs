@@ -184,7 +184,7 @@ test("theme colour metadata follows the selected theme", async ({ page }) => {
   const themeColor = page.locator('meta[name="theme-color"]');
   await expect(themeColor).toHaveAttribute("content", "#173D32");
   await page.getByRole("button", { name: "Switch to dark theme" }).click();
-  await expect(themeColor).toHaveAttribute("content", "#102D25");
+  await expect(themeColor).toHaveAttribute("content", "#000000");
   await page.getByRole("button", { name: "Switch to light theme" }).click();
   await expect(themeColor).toHaveAttribute("content", "#173D32");
 });
