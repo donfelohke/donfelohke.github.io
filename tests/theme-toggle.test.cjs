@@ -97,16 +97,16 @@ assert.equal(light.themeButton.attributes["aria-label"], "Switch to dark theme")
 light.themeButton.listeners.click();
 assert.equal(light.rootAttributes["data-theme"], "dark", "theme button toggles to dark");
 assert.equal(light.values["nakebusen-theme"], "dark", "theme preference persists");
-assert.equal(light.themeMeta.attributes.content, "#102D25", "theme colour metadata changes to dark forest");
+assert.equal(light.themeMeta.attributes.content, "#000000", "theme colour metadata uses AMOLED black");
 
 const dark = boot({ storedTheme: "dark" });
 assert.equal(dark.rootAttributes["data-theme"], "dark");
 assert.equal(dark.themeButton.attributes["aria-label"], "Switch to light theme");
-assert.equal(dark.themeMeta.attributes.content, "#102D25", "saved dark theme sets matching browser theme colour");
+assert.equal(dark.themeMeta.attributes.content, "#000000", "saved dark theme sets AMOLED browser theme colour");
 
 const system = boot({ systemDark: true });
 assert.equal(system.rootAttributes["data-theme"], "dark", "system preference is used when no saved preference exists");
-assert.equal(system.themeMeta.attributes.content, "#102D25", "system dark preference sets matching browser theme colour");
+assert.equal(system.themeMeta.attributes.content, "#000000", "system dark preference sets AMOLED browser theme colour");
 
 const language = boot();
 assert.equal(language.root.lang, "en", "English is the default language");
