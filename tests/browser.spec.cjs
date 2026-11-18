@@ -29,9 +29,12 @@ test("hero is concise and does not repeat founder, signature or GitHub details",
   await page.goto(pageUrl);
   const hero = page.locator("#top");
   await expect(hero.locator("h1")).toHaveCount(1);
+  await expect(hero.locator(".hero-overview .hero-path")).toHaveCount(3);
   await expect(hero).toContainText("Your Beauty ° Your Way.");
-  await expect(hero).toContainText("Natural loc care in Eldoret Town");
-  await expect(hero).toContainText("powered by WARENA");
+  await expect(hero).toContainText("NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh)");
+  await expect(hero).toContainText("natural loc care, practical computing and creative technology");
+  await expect(hero).toContainText("RESEARCH & CREATIVE");
+  await expect(hero).toContainText("not services for purchase");
   await expect(hero.getByRole("link")).toHaveCount(2);
   await expect(hero).not.toContainText("Felix Lwova");
   await expect(hero).not.toContainText("GRACE · GRIT · GLORY");
