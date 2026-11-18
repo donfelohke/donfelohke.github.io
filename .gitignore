@@ -11,3 +11,8 @@ Thumbs.db
 !.env.example
 *.pem
 *.key
+
+# Browser-test output
+node_modules/
+test-results/
+playwright-report/
