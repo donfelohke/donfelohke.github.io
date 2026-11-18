@@ -94,6 +94,16 @@ Use [BRAND-IMPLEMENTATION-CHECKLIST.md](docs/BRAND-IMPLEMENTATION-CHECKLIST.md).
 
 © 2026 Felix Lwova · Don Feloh
 
+## Cross-project research references — 2026-11-18
+
+The following specialist records are research documentation only and do not change the public service offer or imply a released product:
+
+- [IKAI voice and smart-glasses architecture](https://github.com/donfelohke/Ikai/blob/main/docs/IKAI-VOICE-GLASSES-DISTRIBUTED-ARCHITECTURE-2026-11-18.md)
+- [GENJE kinetics and livecoding framework](https://github.com/donfelohke/Genje/blob/main/docs/KINETICS-LIVECODING-AND-IKAI-INTERACTION-2026-11-18.md)
+- [WARENA wearable platform integration](https://github.com/donfelohke/WARENA/blob/main/docs/IKAI-WEARABLE-PLATFORM-INTEGRATION-2026-11-18.md)
+
+The public website remains NAKEBUSEN's audience and service view. IKAI is research, GENJE is creative practice, WARENA is technical infrastructure, and **ONLY NAKEBUSEN TRANSACTS**.
+
 ## Technical research boundary — 2026-11
 
 WARENA's desktop-stack research (Guix/RDE, Niri, Noctalia v5, Sway, dwl-guile and Nix/NixOS comparisons) is documented separately from the public service offer. It does not imply that any particular desktop stack is installed, deployed or available as a standard service. See the [WARENA research decision](https://github.com/donfelohke/WARENA/blob/main/docs/desktop-stack-decision-2026-11.md).
