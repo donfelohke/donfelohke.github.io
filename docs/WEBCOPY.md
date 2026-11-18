@@ -1,8 +1,8 @@
 # NAKEBUSEN — Canonical Website Copy
 
 **Document ID:** NB-WC-01  
-**Version:** M6 · 10 November 2026  
-**Status:** Approved copy baseline  
+**Version:** M7 · 19 November 2026  
+**Status:** Approved copy baseline · research-page addition  
 **Factual authority:** PUBLIC-FACTS-REGISTER.md · SERVICE-CATALOG.md
 
 ## Brand lockup
@@ -20,6 +20,8 @@ Supporting signature: **@donfelohke · #HisGenjeness**
 **Eyebrow:** NAKEBUSEN · BEAUTY & DIGITAL · ELDORET, KENYA.
 
 **Supporting statement:** NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh), bringing together natural loc care, practical computing and creative technology.
+
+**Commercial-first reading order:** Loc care in Eldoret is the immediate customer proposition. Digital · WARENA remains a secondary technical-services path. Research & Creative is an informational destination, not a commercial service path.
 
 **Service descriptor:** Personal care grounded in craft and heritage; practical GNU/Linux, computer and network support; and independent research in reflective computing and creative practice.
 
@@ -51,7 +53,7 @@ Natural loc care, maintenance and styling, Sisterlocs Retie and artificial loc i
 |---|---:|
 | Retouch & Styling | KES 700+ |
 | Sisterlocs Retie | KES 1,500+ |
-| Artificial Locs Installation | KES 3,500+ |
+| Artificial Locs Installation | KES 3,500 |
 
 Prices are starting points in Kenyan shillings. Final cost depends on the service, loc condition, materials and work required.
 
@@ -81,6 +83,14 @@ Services are scoped per engagement. Feasibility, deliverables, price and support
 **Action:** Discuss a technical project.
 
 **IKAI note:** IKAI Mirror is research into reflective, local-first computing. It is not a released product or a service for purchase. This note is not a current homepage section.
+
+### Research page
+
+**Destination:** `/research/` — Research & Creative Practice.
+
+The page documents FELOH Corpus (knowledge and provenance), IKAI (reflective-computing research), GENJE (embodied creative practice) and WARENA (systems and infrastructure). It links to the source repositories and selected scholarly works. It must label research and proposals accurately and must not create a new service, product, booking or checkout path.
+
+**Research introduction:** Independent inquiry across African-centred scholarship, reflective computing, embodied practice and technological freedom.
 
 ### GitHub and technical work
 
