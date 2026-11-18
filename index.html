@@ -438,6 +438,12 @@ header .nav>* ,.floating-dock>*{
 }
 
 
+/* Research-led editorial restraint: keep glass on navigation, not content. */
+.hero{background:var(--paper)}
+.hero .wrap{box-shadow:none;border-radius:18px}
+.hero .wrap:after{content:none}
+.svc:hover{transform:none;box-shadow:0 12px 30px rgba(20,30,24,.10)}
+@media(prefers-reduced-motion:reduce){.svc,.svc:hover{transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -454,12 +460,17 @@ header .nav>* ,.floating-dock>*{
 <main id="main">
 <section class="hero" id="top">
 <div class="wrap">
-<p class="eyebrow" data-i18n="eyebrow">NAKEBUSEN · LOCS · ELDORET, KENYA</p>
+<p class="eyebrow" data-i18n="eyebrow">NAKEBUSEN · BEAUTY &amp; DIGITAL · ELDORET, KENYA.</p>
 <h1 data-i18n="tagline">Your Beauty ° Your Way.</h1>
-<p class="lead" data-i18n="heroLead">Natural loc care in Eldoret Town, alongside practical GNU/Linux, computer and network services powered by WARENA.</p>
+<p class="lead" data-i18n="heroLead">NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh), bringing together natural loc care, practical computing and creative technology.</p>
 <div class="actions">
 <a class="btn btn-fill" data-wa-purpose="loc" href="https://wa.me/254719635415" data-i18n="heroEnquire">WhatsApp — Enquire about loc care</a>
 <a class="btn" href="#code" data-i18n="heroDigitalLink">Explore digital services</a>
+</div>
+<div class="hero-overview" aria-label="NAKEBUSEN practice overview">
+<div class="hero-path hero-path-locs"><strong data-i18n="overviewBeautyTitle">BEAUTY &amp; LOC CARE</strong><span data-i18n="overviewBeauty">Natural loc maintenance, retouching, styling, Sisterlocs retie and artificial loc installation.</span></div>
+<div class="hero-path hero-path-digital"><strong data-i18n="overviewDigitalTitle">DIGITAL · WARENA</strong><span data-i18n="overviewDigital">GNU/Linux, computer support, networking and local-first infrastructure. Freedom Is a System.</span></div>
+<div class="hero-path hero-path-research"><strong data-i18n="overviewResearchTitle">RESEARCH &amp; CREATIVE</strong><span data-i18n="overviewResearch">IKAI · GENJE · FELOH Corpus — reflective computing, embodied practice and creative technology. Research and knowledge domains, not services for purchase.</span></div>
 </div>
 </div>
 </section>
@@ -576,9 +587,10 @@ set(key,value){try{localStorage.setItem(key,value);}catch(error){}}
 };
 const copy={
 en:{
-skip:'Skip to content',navMain:'Main navigation',navFooter:'Footer navigation',navQuick:'Section navigation',dockHome:'Home',dockEnquire:'Enquire',navLocs:'Locs',navDigital:'Digital',navAbout:'@donfeloh',navConnect:'Connect',footerSignature:'@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY',
-eyebrow:'NAKEBUSEN · LOCS · ELDORET, KENYA',tagline:'Your Beauty ° Your Way.',
-heroLead:'Natural loc care in Eldoret Town, alongside practical GNU/Linux, computer and network services powered by WARENA.',
+skip:'Skip to content',navMain:'Main navigation',navFooter:'Footer navigation',navQuick:'Section navigation',dockHome:'Home',dockEnquire:'Enquire',navLocs:'Locs',navDigital:'Digital',navAbout:'@donfeloh',navConnect:'Connect',footerSignature:'@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY',themeToLight:'Switch to light theme',themeToDark:'Switch to dark theme',
+eyebrow:'NAKEBUSEN · BEAUTY & DIGITAL · ELDORET, KENYA.',tagline:'Your Beauty ° Your Way.',
+heroLead:'NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh), bringing together natural loc care, practical computing and creative technology.',
+overviewBeautyTitle:'BEAUTY & LOC CARE',overviewBeauty:'Natural loc maintenance, retouching, styling, Sisterlocs retie and artificial loc installation.',overviewDigitalTitle:'DIGITAL · WARENA',overviewDigital:'GNU/Linux, computer support, networking and local-first infrastructure. Freedom Is a System.',overviewResearchTitle:'RESEARCH & CREATIVE',overviewResearch:'IKAI · GENJE · FELOH Corpus — reflective computing, embodied practice and creative technology. Research and knowledge domains, not services for purchase.',
 
 
 
@@ -606,9 +618,10 @@ paymentTitle:'M-PESA Buy Goods · Published payment details',paymentIntro:'For a
 githubTitle:'Beyond the interface.',githubCopy:'Explore the code and documentation behind the work.',githubWarena:'WARENA · Systems',githubCorpus:'FELOH Corpus · Canon',githubSource:'Website source · Code',githubProfile:'GitHub portfolio · Projects',githubRepositories:'GitHub repositories'
 },
 sw:{
-skip:'Ruka hadi maudhui',navMain:'Urambazaji mkuu',navFooter:'Urambazaji wa chini',navQuick:'Urambazaji wa sehemu',dockHome:'Mwanzo',dockEnquire:'Uliza',navLocs:'Locs',navDigital:'Digital',navAbout:'@donfeloh',navConnect:'Wasiliana',footerSignature:'@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY',
-eyebrow:'NAKEBUSEN · LOCS · ELDORET, KENYA',tagline:'Uzuri Wako ° Kwa Namna Yako.',
-heroLead:'Utunzaji wa loc za asili Eldoret Town, pamoja na huduma za GNU/Linux, kompyuta na mitandao zinazoendeshwa na WARENA.',
+skip:'Ruka hadi maudhui',navMain:'Urambazaji mkuu',navFooter:'Urambazaji wa chini',navQuick:'Urambazaji wa sehemu',dockHome:'Mwanzo',dockEnquire:'Uliza',navLocs:'Locs',navDigital:'Digital',navAbout:'@donfeloh',navConnect:'Wasiliana',footerSignature:'@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY',themeToLight:'Badilisha hadi mandhari mepesi',themeToDark:'Badilisha hadi mandhari meusi',
+eyebrow:'NAKEBUSEN · UREMBO NA TEKNOLOJIA · ELDORET, KENYA.',tagline:'Uzuri Wako ° Kwa Namna Yako.',
+heroLead:'NAKEBUSEN ni huduma za urembo na teknolojia iliyoanzishwa na Felix Lwova (Don Feloh), ikileta pamoja utunzaji wa loc za asili, usaidizi wa kompyuta na teknolojia bunifu.',
+overviewBeautyTitle:'UREMBO NA UTUNZAJI WA LOC',overviewBeauty:'Utunzaji wa loc za asili, retouch, mitindo, Sisterlocs retie na uwekaji wa loc za bandia.',overviewDigitalTitle:'TEKNOLOJIA · WARENA',overviewDigital:'GNU/Linux, usaidizi wa kompyuta, mitandao na miundombinu ya local-first. Uhuru ni Mfumo.',overviewResearchTitle:'UTAFITI NA UBUNIFU',overviewResearch:'IKAI · GENJE · FELOH Corpus — utafiti wa kompyuta tafakuri, maarifa ya mwili na teknolojia bunifu. Ni maeneo ya utafiti na maarifa, si huduma za kununua.',
 
 
 
@@ -662,7 +675,7 @@ function applyTheme(theme){
 root.setAttribute('data-theme',theme);
 if(themeMeta)themeMeta.setAttribute('content',theme==='dark'?'#102D25':'#173D32');
 storage.set(themeKey,theme);
-if(themeToggle)themeToggle.setAttribute('aria-label',theme==='dark'?'Switch to light theme':'Switch to dark theme');
+if(themeToggle){const dict=copy[root.lang]||copy.en;themeToggle.setAttribute('aria-label',theme==='dark'?dict.themeToLight:dict.themeToDark);}
 }
 function applyLanguage(lang){
 const selected=copy[lang]?lang:'en';
@@ -691,6 +704,7 @@ if(languageToggle){
 languageToggle.querySelector('.toggle-icon').textContent=selected==='en'?'EN':'SW';
 languageToggle.setAttribute('aria-label',selected==='en'?'Switch language to Kiswahili':'Badilisha lugha hadi Kiingereza');
 }
+if(themeToggle)themeToggle.setAttribute('aria-label',root.getAttribute('data-theme')==='dark'?dict.themeToLight:dict.themeToDark);
 }
 function init(){
 const preferredTheme=storage.get(themeKey);
