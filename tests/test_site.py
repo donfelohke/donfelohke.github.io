@@ -79,7 +79,7 @@ check('data-i18n="navLocs"' in html and 'data-i18n="navDigital"' in html and 'da
 check('id="connect"' in html and 'id="founder"' in html and 'id="crown"' in html and 'id="code"' in html, "Primary sections and founder anchor required")
 check("Your Beauty ° Your Way." in html, "Approved homepage headline")
 check('<a class="brand" href="#top">NAKEBUSEN<span class="brand-sub">Locs ° Powered by WARENA</span></a>' in html, "Canonical lockup")
-check('data-i18n="location"' in html and "Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya" in html, "Connect retains the canonical service location")
+check('data-i18n="location"' in html and "Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya" in html, "Locs section retains the canonical service location")
 check("Sisterlocs Retie" in html and "LOCS Retie" not in html, "Sisterlocs Retie is the sole canonical public service label")
 check("KES 700+" in html and "KES 1,500+" in html and "KES 3,500" in html and "KES 3,500+" not in html, "All three approved public prices must be present")
 check("Founder · CTO · Loctician · Creative Technologist" in html, "Approved public founder role")
