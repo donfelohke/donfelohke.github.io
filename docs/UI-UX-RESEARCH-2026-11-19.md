@@ -136,6 +136,56 @@ Use warm paper rather than pure white as the dominant surface, dark ink for prim
 - No text or action depends on a blur effect, subtle tint or colour alone.
 - Evaluate OLED power claims cautiously: actual savings depend on device, brightness, content and usage.
 
+## 6A. Typography and brand colour decisions — 19 November 2026
+
+### Typography roles
+
+| Role | Preferred face | Device-safe fallback | Use |
+|---|---|---|---|
+| Editorial display | Cormorant Garamond | Georgia, Times New Roman, serif | H1/H2, short brand statements and lockup |
+| Body and interface | Inter | system-ui, -apple-system, Segoe UI, Roboto, sans-serif | Paragraphs, service descriptions, navigation and controls |
+| Technical metadata | JetBrains Mono | ui-monospace, SFMono-Regular, Consolas, monospace | Prices, compact labels, technical identifiers and metadata |
+
+The three-family direction is deliberate: serif gives NAKEBUSEN a human editorial voice; sans-serif carries service clarity and mobile reading; monospace marks technical information without turning the whole page into a terminal aesthetic. Keep body copy at 16px or larger, use comfortable line-height (approximately 1.55–1.7), and reserve uppercase tracking for short labels.
+
+**Loading policy:** the current CSS names the preferred faces but does not download them. A face is used only if already available on the device; otherwise the declared fallback renders. Do not add a Google Fonts/CDN request. A future self-hosted WOFF2 addition requires verified licence, subset coverage for English and Kiswahili, font-display fallback, and measured payload/CLS impact. If the file is unavailable, retain the fallback rather than blocking text rendering.
+
+### Brand colour roles
+
+| Token | Light | AMOLED dark | Semantic role |
+|---|---|---|---|
+| Canvas | #F3EEE4 | #000000 | Warm editorial paper / OLED black canvas |
+| Content surface | warm-paper mix | #151515 | Service and content panels, separated from canvas |
+| Primary text | #242923 | #F2EFEA | Main reading text |
+| Secondary text | #626B58 | #B8B0A5 | Supporting copy; verify against its actual surface |
+| Forest | #173D32 | #173D32 | Navigation, WARENA identity and primary light-theme action |
+| Deep forest | #102D25 | #033500 | WARENA section surface, with ivory text |
+| Terracotta | #A34F3B | #E2725B | NAKEBUSEN/Locs marker and restrained emphasis |
+| Ochre | #8B5E16 | #D4AF37 | Heritage accent, rules and non-body highlights |
+| Sandstone | #D6C6A5 | #D6C6A5 | Secondary accent and dark-theme primary action surface |
+
+Use a single dominant identity per section: warm paper + terracotta for Locs; deep forest + ivory for Digital; charcoal + sandstone for Connect. Do not distribute all accents evenly across every component. Keep the brand recognisable through the relationship of colours and content, not a decorative rainbow or generic pink-and-gold salon template.
+
+### AMOLED implementation rules
+
+- Use #000000 for the dark-theme page canvas and browser theme colour so OLED pixels can switch off on true-black regions; this is a display-specific opportunity, not a promise of a fixed battery saving. LCD screens do not gain the same pixel-level benefit.
+- Use #151515 for raised content surfaces and opaque cards to preserve grouping and avoid making every component visually collapse into one plane.
+- Use warm ivory for primary text and a lighter sandstone/grey for secondary information. Do not use low-contrast green, muted sage or dark terracotta for small text on black.
+- Dark-theme filled actions use sandstone #D6C6A5 with deep-forest text #102D25; this avoids the low-contrast forest-on-black action treatment. Outline actions retain a clear sandstone border and ivory label.
+- Preserve a complete light theme. Dark mode is a user/system preference, not the default assumption for every visitor or a universal readability improvement.
+- Test the actual device theme, browser chrome, keyboard focus, pressed/hover states, payment panel and floating dock on OLED and LCD devices. A theme token table is not a contrast audit.
+
+### Decision
+
+Retain the current three-role type direction and brand palette; improve token semantics rather than introducing new type families or colours. The implementation change in this release gives dark-theme filled actions a high-contrast sandstone surface and makes the browser theme colour true black when AMOLED dark mode is selected.
+
+### Typography and accessibility sources
+
+- CDC, *Accessible Fonts* (2026): https://www.cdc.gov/nceh/clearwriting/writing-tips/pdfs/2026/032526-Accessible-Fonts-H.pdf
+- University of Arizona, *Accessible Branding*: https://accessibility.arizona.edu/documents-media/accessible-branding
+- HTTP Archive, *2025 Web Almanac — Fonts*: https://cdn.httparchive.org/v1/static/almanac/ebooks/web_almanac_2025_en.pdf
+- W3C, *WCAG 2.2*: https://www.w3.org/TR/WCAG22/
+
 ## 7. Liquid Glass and expressive design
 
 Apple's guidance treats Liquid Glass as a functional layer for navigation and controls, distinct from content surfaces. It advises sparing use and preserving legibility. This is a useful design principle for NAKEBUSEN, not a requirement to reproduce iOS.
@@ -286,3 +336,52 @@ Use a small, diverse local usability sample as formative research, not as a stat
 10. Doman Digital, MMM Beauty case study: https://www.domandigital.co.uk/work/mmm-beauty
 
 **Research conclusion:** NAKEBUSEN should be recognisable and expressive, but the highest-performing design is the one that helps a customer confidently understand the service, starting price, location and next step—with no unnecessary friction or false promises.
+
+
+## 10. Comparative case-study synthesis and implementation priorities — 19 November 2026
+
+This section translates current platform guidance and published UX benchmarks into decisions for this specific service-discovery page. It is not a claim that NAKEBUSEN has undergone a moderated user study or that these sources predict conversion outcomes.
+
+### Case-study comparison
+
+| Reference | Evidence and useful pattern | What transfers to NAKEBUSEN | What does not transfer |
+|---|---|---|---|
+| Apple Human Interface Guidelines — Liquid Glass | Apple defines Liquid Glass as a functional layer for navigation and controls, separate from the content layer; it cautions against overuse and prioritises legibility. | Keep glass on the sticky header and floating section dock. Keep service descriptions and prices on stable, opaque surfaces. Honour reduced-transparency settings with opaque, unblurred controls. | Do not reproduce iOS system materials or assume browser CSS can match native platform rendering. |
+| Google Material 3 Expressive research | Google describes 46 studies and 18,000+ participants; its design principles use colour, shape, size, motion and containment to direct attention and group related elements. | Use section-specific colour roles and strong, consistent CTA treatment; let terracotta identify Locs and forest identify WARENA. | Do not interpret the aggregate research summary as evidence of a guaranteed fourfold improvement or copy a mobile-app component system into a static website. |
+| Baymard Travel Accommodations UX Benchmark 2026 | The benchmark covers 9 accommodation case studies and reports recurring problems around homepage task priority and transparent pricing. It is ecommerce/reservation research, not salon research. | Put the primary customer task first; state starting prices, what affects the final quote, service location and what happens after enquiry. Avoid hidden costs and ambiguous CTA labels. | Do not add hotel-style filters, availability search, checkout, reviews or reservation widgets to a service enquiry page. |
+| W3C WCAG 2.2 and mobile guidance | Normative requirements cover keyboard focus, target size, reflow, focus not obscured, input modalities and accessible status. | Test at 320 CSS px, preserve visible 44px practical touch targets, make fixed navigation safe-area-aware, and ensure focus is not covered by the dock or sticky header. | A screenshot or automated axe pass alone cannot establish WCAG conformance. |
+| Google Core Web Vitals | Field targets at the 75th percentile: LCP ≤2.5s, INP ≤200ms and CLS ≤0.1. | Keep the static text-first page, avoid remote font and media dependencies, reserve layout space for any future assets, and measure field performance when enough traffic exists. | A local Playwright timing or Lighthouse lab score is not a substitute for field data. |
+
+### Verified design decisions
+
+1. **Service-first first impression.** The loc-care offer and WhatsApp enquiry remain the primary customer path. WARENA remains visible but secondary; IKAI, GENJE and research/creative identity remain outside the primary commercial journey.
+2. **Price transparency.** Keep the approved public prices exact: Retouch & Styling KES 700+, Sisterlocs Retie KES 1,500+, Artificial Locs Installation KES 3,500. Explain that scope and final terms are agreed directly. Do not imply a fixed quote where the price is a starting point.
+3. **Location and confirmation.** Show Eldoret Town / Karibu Mdosi in the loc-care context. A WhatsApp enquiry is not a booking; a person confirms availability and final terms.
+4. **Glass is functional, not content decoration.** Header and floating dock may use glass where supported. Cards, service copy, prices and payment details stay legible on stable surfaces.
+5. **Respect display preferences.** Keep light and dark themes complete. When reduced transparency is requested, remove both translucency and backdrop blur rather than merely making the surface more opaque. Place the floating dock above the device safe-area inset plus a small visual gap.
+6. **No dark-mode absolutism.** True black is an AMOLED canvas option, not a guarantee of battery savings or a universally better reading experience. Evaluate contrast on the actual component surface in both themes.
+7. **No conversion theatre.** No fabricated testimonials, ratings, scarcity, countdowns, live availability, automatic booking, payment verification or success states.
+
+### Implementation changes in this revision
+
+- The floating dock's bottom offset now adds a spacing gap on top of the device safe-area inset; it no longer treats the inset itself as the complete gap.
+- The `prefers-reduced-transparency: reduce` branch now explicitly disables both standard and WebKit backdrop filters for the header and dock, in addition to using opaque backgrounds.
+- These changes preserve the existing content, service catalogue, prices, contact destinations, M-PESA details and commercial boundary.
+
+### Research source map
+
+- Apple, *Materials — Human Interface Guidelines*: https://developer.apple.com/design/human-interface-guidelines/materials
+- Apple, *Adopting Liquid Glass*: https://developer.apple.com/documentation/technologyoverviews/adopting-liquid-glass
+- Google Design, *Expressive Design: Google's UX Research*: https://design.google/library/expressive-material-design-google-research
+- Baymard, *Travel Accommodations UX Benchmark 2026*: https://baymard.com/research-articles/travel-accommodations-ux-benchmark-2026
+- W3C, *Web Content Accessibility Guidelines 2.2*: https://www.w3.org/TR/WCAG22/
+- W3C, *Guidance on Applying WCAG 2.2 to Mobile Applications*: https://www.w3.org/TR/wcag2mobile-22/
+- Google, *Understanding Core Web Vitals*: https://developers.google.com/search/docs/appearance/core-web-vitals
+- W3C, *Technique C39 — prefers-reduced-motion*: https://www.w3.org/WAI/WCAG22/Techniques/css/C39.html
+
+### Remaining evidence gaps
+
+- No current-run rendered screenshots or live device capture are attached to this code review; this is a source and test review, not a visual audit.
+- No real-user task study has measured whether Eldoret customers find service, price, location and enquiry details quickly.
+- No field Core Web Vitals dataset has been supplied; performance targets remain acceptance criteria, not claimed results.
+- Screen-reader testing with TalkBack and VoiceOver, high-contrast settings, large text and actual OLED/LCD devices remains necessary before claiming full accessibility or device-specific quality.

@@ -18,8 +18,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"NAKEBUSEN","url":"https://donfelohke.github.io/","telephone":"+254719635415","email":"mela9ine@proton.me","areaServed":[{"@type":"City","name":"Eldoret"}]}</script>
 <title>NAKEBUSEN Loc Care &amp; Digital Services · Eldoret, Kenya</title>
 <style>
-:root{color-scheme:light;--forest:#173D32;--deep-forest:#102D25;--charcoal:#242923;--paper:#F3EEE4;--ink:#242923;--clay:#A34F3B;--ochre:#8B5E16;--sage:#87917A;--muted:#626B58;--sage-text:#626B58;--price:#173D32;--sandstone:#D6C6A5;--line:rgba(36,41,35,.20);--focus:#102D25;--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Consolas,monospace;--glass-blur:20px;--glass-saturate:150%}
-:root[data-theme="dark"]{color-scheme:dark;--paper:#000000;--ink:#F2EFEA;--charcoal:#151515;--forest:#173D32;--deep-forest:#033500;--clay:#E2725B;--ochre:#D4AF37;--muted:#B8B0A5;--sage-text:#B8B0A5;--price:#F2EFEA;--sandstone:#D6C6A5;--line:rgba(242,239,234,.20);--focus:#F2EFEA}
+:root{color-scheme:light;--forest:#173D32;--deep-forest:#102D25;--charcoal:#242923;--paper:#F3EEE4;--ink:#242923;--clay:#A34F3B;--ochre:#8B5E16;--sage:#87917A;--muted:#626B58;--sage-text:#626B58;--price:#173D32;--sandstone:#D6C6A5;--line:rgba(36,41,35,.20);--focus:#102D25;--action-bg:#173D32;--action-ink:#F3EEE4;--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Consolas,monospace;--glass-blur:20px;--glass-saturate:150%}
+:root[data-theme="dark"]{color-scheme:dark;--paper:#000000;--ink:#F2EFEA;--charcoal:#151515;--forest:#173D32;--deep-forest:#033500;--clay:#E2725B;--ochre:#D4AF37;--muted:#B8B0A5;--sage-text:#B8B0A5;--price:#F2EFEA;--sandstone:#D6C6A5;--line:rgba(242,239,234,.20);--focus:#F2EFEA;--action-bg:#D6C6A5;--action-ink:#102D25}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:6rem}
 body{margin:0;padding-bottom:calc(5.5rem + env(safe-area-inset-bottom));background:var(--paper);color:var(--ink);font:16px/1.65 var(--sans)}
 a{color:inherit;text-underline-offset:.18em}a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
@@ -36,7 +36,7 @@ header .nav{pointer-events:auto;display:flex;align-items:center;justify-content:
 h1{max-width:15ch;margin:0 0 .85rem;font:500 clamp(2.5rem,8vw,4.5rem)/1.04 var(--serif);letter-spacing:-.025em}
 .lead{max-width:52rem;margin:0;color:var(--ink);font-size:clamp(1.02rem,2.2vw,1.2rem)}
 .actions{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:1.15rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.62rem .9rem;border:1px solid var(--forest);border-radius:5px;background:transparent;color:var(--forest);font-weight:700;font-size:.9rem;text-align:center;text-decoration:none}.btn-fill{background:var(--forest);color:#F3EEE4}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.62rem .9rem;border:1px solid var(--forest);border-radius:5px;background:transparent;color:var(--forest);font-weight:700;font-size:.9rem;text-align:center;text-decoration:none}.btn-fill{background:var(--action-bg);border-color:var(--action-bg);color:var(--action-ink)}
 :root[data-theme="dark"] .btn:not(.btn-fill){border-color:#D6C6A5;color:#F3EEE4}
 .hero-overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin:1.45rem 0 0}
 .hero-path{min-width:0;padding:.9rem;border:1px solid var(--line);border-radius:10px;background:color-mix(in srgb,var(--paper) 90%,var(--sandstone))}
@@ -60,14 +60,14 @@ footer{padding:2.4rem 0 calc(2rem + env(safe-area-inset-bottom));background:line
 .footer-support{margin:1.4rem 0;padding:1rem;border:1px solid rgba(242,239,234,.22);border-radius:12px;background:rgba(255,255,255,.035)}.footer-support h2{margin:0 0 .5rem;color:#F3EEE4;font-size:1.15rem}
 .footer-nav{display:flex;align-items:center;gap:.75rem;margin:.85rem 0 .65rem;padding-top:.75rem;border-top:1px solid rgba(214,198,165,.24);font-size:.84rem}.footer-nav a{display:inline-flex;align-items:center;min-height:44px;color:#D6C6A5;text-decoration:underline;text-underline-offset:.22em}
 .footer-signature{margin:1.1rem 0 .4rem;color:#D6C6A5;font:600 .76rem var(--mono);letter-spacing:.04em}
-.floating-dock{position:fixed;z-index:40;left:50%;bottom:max(.65rem,env(safe-area-inset-bottom));display:flex;align-items:center;gap:.2rem;width:max-content;max-width:calc(100vw - 1rem);padding:.4rem;border:1px solid rgba(243,238,228,.24);border-radius:24px;background:rgba(36,41,35,.96);box-shadow:0 14px 36px rgba(0,0,0,.3);transform:translateX(-50%)}
+.floating-dock{position:fixed;z-index:40;left:50%;bottom:calc(.65rem + env(safe-area-inset-bottom));display:flex;align-items:center;gap:.2rem;width:max-content;max-width:calc(100vw - 1rem);padding:.4rem;border:1px solid rgba(243,238,228,.24);border-radius:24px;background:rgba(36,41,35,.96);box-shadow:0 14px 36px rgba(0,0,0,.3);transform:translateX(-50%)}
 @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.floating-dock{background:rgba(36,41,35,.78);backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate))}}
 .floating-dock a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.12rem;min-width:4.5rem;min-height:3.1rem;padding:.35rem .6rem;border-radius:12px;color:#F3EEE4;text-decoration:none;font-size:.72rem;font-weight:700}.floating-dock .dock-icon{font:700 1.05rem/1 var(--mono)}
 .floating-dock a[href="#crown"][aria-current="location"]{background:rgba(163,79,59,.38);box-shadow:inset 0 0 0 1px rgba(214,198,165,.58)}.floating-dock a[href="#code"][aria-current="location"]{background:rgba(135,145,122,.34);box-shadow:inset 0 0 0 1px rgba(214,198,165,.5)}.floating-dock a[href="#connect"][aria-current="location"]{background:rgba(139,94,22,.38);box-shadow:inset 0 0 0 1px rgba(214,198,165,.58)}
 @media(min-width:760px){.floating-dock{gap:.4rem;padding:.45rem .6rem}.floating-dock a{flex-direction:row;min-width:6rem;min-height:3rem;gap:.45rem;padding:.45rem .8rem;font-size:.8rem}}
 @media(max-width:640px){.hero-overview,.services,.footer-payment-grid{grid-template-columns:1fr}.hero-path{padding:.8rem}}
 @media(max-width:420px){.wrap{width:min(100% - 1.25rem,920px)}.hero .wrap{padding:1rem}.actions .btn{flex:1 1 100%}.nav-right{gap:.3rem}}
-@media(prefers-reduced-transparency:reduce){header .nav{background:#173D32;box-shadow:none}.floating-dock{background:#242923;box-shadow:none}}
+@media(prefers-reduced-transparency:reduce){header .nav{background:#173D32;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}.floating-dock{background:#242923;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.svc,.floating-dock a,#theme-toggle,#language-toggle{transition:none!important}.btn:hover,.svc:hover,.floating-dock a:hover{transform:none!important}}
 @media(hover:hover) and (pointer:fine){.svc{transition:box-shadow .18s ease,border-color .18s ease}.svc:hover{box-shadow:0 10px 24px rgba(20,30,24,.09)}.btn,.floating-dock a,#theme-toggle,#language-toggle{transition:background-color .18s ease,border-color .18s ease,color .18s ease}.floating-dock a:hover{background:rgba(214,198,165,.16)}}
 </style>
@@ -88,7 +88,7 @@ footer{padding:2.4rem 0 calc(2rem + env(safe-area-inset-bottom));background:line
 <div class="wrap">
 <p class="eyebrow" data-i18n="eyebrow">NAKEBUSEN · BEAUTY &amp; DIGITAL · ELDORET, KENYA.</p>
 <h1 id="page-title" data-i18n="tagline">Your Beauty ° Your Way.</h1>
-<p class="lead" data-i18n="heroLead">NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh), bringing together natural loc care, practical computing and creative technology.</p>
+<p class="lead" data-i18n="heroLead">Natural loc care in Eldoret Town / Karibu Mdosi — Retouch & Styling, Sisterlocs Retie and Artificial Locs Installation. Practical GNU/Linux and network support is also available through WARENA.</p>
 <div class="actions">
 <a class="btn btn-fill" data-wa-purpose="loc" href="https://wa.me/254719635415" data-i18n="heroEnquire">WhatsApp — Enquire about loc care</a>
 <a class="btn" href="#code" data-i18n="heroDigitalLink">Explore digital services</a>
@@ -217,7 +217,7 @@ const copy={
 en:{
 skip:'Skip to content',navMain:'Main navigation',navFooter:'Footer navigation',navQuick:'Section navigation',dockHome:'Home',dockEnquire:'Enquire',navLocs:'Locs',navDigital:'Digital',navAbout:'@donfeloh',navConnect:'Connect',footerSignature:'@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY / HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES',themeToLight:'Switch to light theme',themeToDark:'Switch to dark theme',
 eyebrow:'NAKEBUSEN · BEAUTY & DIGITAL · ELDORET, KENYA.',tagline:'Your Beauty ° Your Way.',
-heroLead:'NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh), bringing together natural loc care, practical computing and creative technology.',
+heroLead:'Natural loc care in Eldoret Town / Karibu Mdosi — Retouch & Styling, Sisterlocs Retie and Artificial Locs Installation. Practical GNU/Linux and network support is also available through WARENA.',
 overviewBeautyTitle:'BEAUTY & LOC CARE',overviewBeauty:'Natural loc maintenance, retouching, styling, Sisterlocs retie and artificial loc installation.',overviewDigitalTitle:'DIGITAL · WARENA',overviewDigital:'GNU/Linux, computer support, networking and local-first infrastructure. Freedom Is a System.',overviewResearchTitle:'RESEARCH & CREATIVE',overviewResearch:'IKAI · GENJE · FELOH Corpus — reflective computing, embodied practice and creative technology. Research and knowledge domains, not services for purchase.',digitalScope:'WARENA powers technical work within NAKEBUSEN; it is not a separate checkout. Services are scoped per engagement, with feasibility, deliverables, price and support agreed before work begins.',
 
 
@@ -248,7 +248,7 @@ githubTitle:'Beyond the interface.',githubCopy:'Explore the code and documentati
 sw:{
 skip:'Ruka hadi maudhui',navMain:'Urambazaji mkuu',navFooter:'Urambazaji wa chini',navQuick:'Urambazaji wa sehemu',dockHome:'Mwanzo',dockEnquire:'Uliza',navLocs:'Locs',navDigital:'Digital',navAbout:'@donfeloh',navConnect:'Wasiliana',footerSignature:'@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY / HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES',themeToLight:'Badilisha hadi mandhari mepesi',themeToDark:'Badilisha hadi mandhari meusi',
 eyebrow:'NAKEBUSEN · UREMBO NA TEKNOLOJIA · ELDORET, KENYA.',tagline:'Uzuri Wako ° Kwa Namna Yako.',
-heroLead:'NAKEBUSEN ni huduma za urembo na teknolojia iliyoanzishwa na Felix Lwova (Don Feloh), ikileta pamoja utunzaji wa loc za asili, usaidizi wa kompyuta na teknolojia bunifu.',
+heroLead:'Utunzaji wa loc za asili Eldoret Town / Karibu Mdosi — Retouch & Styling, Sisterlocs Retie na uwekaji wa loc za bandia. Usaidizi wa GNU/Linux, kompyuta na mitandao pia unapatikana kupitia WARENA.',
 overviewBeautyTitle:'UREMBO NA UTUNZAJI WA LOC',overviewBeauty:'Utunzaji wa loc za asili, retouch, mitindo, Sisterlocs retie na uwekaji wa loc za bandia.',overviewDigitalTitle:'TEKNOLOJIA · WARENA',overviewDigital:'GNU/Linux, usaidizi wa kompyuta, mitandao na miundombinu ya local-first. Uhuru ni Mfumo.',overviewResearchTitle:'UTAFITI NA UBUNIFU',overviewResearch:'IKAI · GENJE · FELOH Corpus — utafiti wa kompyuta tafakuri, maarifa ya mwili na teknolojia bunifu. Ni maeneo ya utafiti na maarifa, si huduma za kununua.',digitalScope:'WARENA huwezesha kazi za teknolojia ndani ya NAKEBUSEN; si sehemu tofauti ya malipo. Huduma hupangwa kwa kila kazi, na uwezekano, matokeo, gharama na msaada hukubaliwa kabla ya kazi kuanza.',
 
 
@@ -301,7 +301,7 @@ artificial:"Habari NAKEBUSEN — ninaulizia huduma ya Artificial Locs Installati
 };
 function applyTheme(theme){
 root.setAttribute('data-theme',theme);
-if(themeMeta)themeMeta.setAttribute('content',theme==='dark'?'#102D25':'#173D32');
+if(themeMeta)themeMeta.setAttribute('content',theme==='dark'?'#000000':'#173D32');
 storage.set(themeKey,theme);
 if(themeToggle){const dict=copy[root.lang]||copy.en;themeToggle.setAttribute('aria-label',theme==='dark'?dict.themeToLight:dict.themeToDark);}
 }

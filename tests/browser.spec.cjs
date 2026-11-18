@@ -31,7 +31,7 @@ test("hero prioritises the two customer paths and keeps research secondary", asy
   const hero = page.locator("#top");
   await expect(hero.locator("h1")).toHaveCount(1);
   await expect(hero.locator("h1")).toHaveText("Your Beauty ° Your Way.");
-  await expect(hero.locator(".lead")).toContainText("NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh)");
+  await expect(hero.locator(".lead")).toContainText("Natural loc care in Eldoret Town / Karibu Mdosi");
   await expect(hero.locator(".hero-overview .hero-path")).toHaveCount(2);
   await expect(hero).toContainText("BEAUTY & LOC CARE");
   await expect(hero).toContainText("DIGITAL · WARENA");
@@ -184,7 +184,7 @@ test("theme colour metadata follows the selected theme", async ({ page }) => {
   const themeColor = page.locator('meta[name="theme-color"]');
   await expect(themeColor).toHaveAttribute("content", "#173D32");
   await page.getByRole("button", { name: "Switch to dark theme" }).click();
-  await expect(themeColor).toHaveAttribute("content", "#102D25");
+  await expect(themeColor).toHaveAttribute("content", "#000000");
   await page.getByRole("button", { name: "Switch to light theme" }).click();
   await expect(themeColor).toHaveAttribute("content", "#173D32");
 });

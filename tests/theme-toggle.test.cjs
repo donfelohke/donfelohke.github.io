@@ -7,6 +7,10 @@ const vm = require("node:vm");
 const html = fs.readFileSync("index.html", "utf8");
 const match = html.match(/<script>\s*([\s\S]*?)<\/script>/);
 assert.ok(match, "inline application script exists");
+assert.ok(html.includes("bottom:calc(.65rem + env(safe-area-inset-bottom))"), "floating dock adds spacing above the device safe area");
+assert.ok(html.includes("header .nav{background:#173D32;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}"), "reduced-transparency header removes backdrop blur");
+assert.ok(html.includes(".floating-dock{background:#242923;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}"), "reduced-transparency dock removes backdrop blur");
+
 
 function element(attributes = {}) {
   return {
@@ -97,21 +101,21 @@ assert.equal(light.themeButton.attributes["aria-label"], "Switch to dark theme")
 light.themeButton.listeners.click();
 assert.equal(light.rootAttributes["data-theme"], "dark", "theme button toggles to dark");
 assert.equal(light.values["nakebusen-theme"], "dark", "theme preference persists");
-assert.equal(light.themeMeta.attributes.content, "#102D25", "theme colour metadata changes to dark forest");
+assert.equal(light.themeMeta.attributes.content, "#000000", "theme colour metadata uses AMOLED black");
 
 const dark = boot({ storedTheme: "dark" });
 assert.equal(dark.rootAttributes["data-theme"], "dark");
 assert.equal(dark.themeButton.attributes["aria-label"], "Switch to light theme");
-assert.equal(dark.themeMeta.attributes.content, "#102D25", "saved dark theme sets matching browser theme colour");
+assert.equal(dark.themeMeta.attributes.content, "#000000", "saved dark theme sets AMOLED browser theme colour");
 
 const system = boot({ systemDark: true });
 assert.equal(system.rootAttributes["data-theme"], "dark", "system preference is used when no saved preference exists");
-assert.equal(system.themeMeta.attributes.content, "#102D25", "system dark preference sets matching browser theme colour");
+assert.equal(system.themeMeta.attributes.content, "#000000", "system dark preference sets AMOLED browser theme colour");
 
 const language = boot();
 assert.equal(language.root.lang, "en", "English is the default language");
 assert.equal(language.translated[0].textContent, "Your Beauty ° Your Way.");
-assert.match(language.translated[1].textContent, /NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova/);
+assert.match(language.translated[1].textContent, /Natural loc care in Eldoret Town \/ Karibu Mdosi/);
 assert.match(language.translated[2].textContent, /starting prices and direct enquiries/i);
 assert.match(language.translated[3].textContent, /^I founded NAKEBUSEN/);
 assert.equal(language.translated[4].textContent, "Sisterlocs Retie");
@@ -135,7 +139,7 @@ assert.equal(language.values["nakebusen-language"], "sw", "language preference p
 assert.equal(language.languageButton.attributes["aria-label"], "Badilisha lugha hadi Kiingereza");
 assert.equal(language.nav.attributes["aria-label"], "Urambazaji mkuu");
 assert.equal(language.translated[0].textContent, "Uzuri Wako ° Kwa Namna Yako.");
-assert.match(language.translated[1].textContent, /NAKEBUSEN ni huduma za urembo na teknolojia.*loc za asili/);
+assert.match(language.translated[1].textContent, /Utunzaji wa loc za asili Eldoret Town \/ Karibu Mdosi/);
 assert.match(language.translated[2].textContent, /bei za kuanzia na maulizo ya moja kwa moja/);
 assert.match(language.translated[3].textContent, /^Nilianzisha NAKEBUSEN/);
 assert.equal(language.translated[4].textContent, "Sisterlocs Retie");
