@@ -7,10 +7,10 @@ const vm = require("node:vm");
 const html = fs.readFileSync("index.html", "utf8");
 const match = html.match(/<script>\s*([\s\S]*?)<\/script>/);
 assert.ok(match, "inline application script exists");
+assert.ok(html.includes("bottom:calc(.65rem + env(safe-area-inset-bottom))"), "floating dock adds spacing above the device safe area");
+assert.ok(html.includes("header .nav{background:#173D32;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}"), "reduced-transparency header removes backdrop blur");
+assert.ok(html.includes(".floating-dock{background:#242923;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}"), "reduced-transparency dock removes backdrop blur");
 
-assert.match(html, /bottom:calc\\(\\.65rem \\+ env\\(safe-area-inset-bottom\\)\\)/, "floating dock adds spacing above the device safe area");
-assert.match(html, /header \\.nav\\{[^}]*backdrop-filter:none;-webkit-backdrop-filter:none/, "reduced-transparency header removes backdrop blur");
-assert.match(html, /\\.floating-dock\\{[^}]*backdrop-filter:none;-webkit-backdrop-filter:none/, "reduced-transparency dock removes backdrop blur");
 
 function element(attributes = {}) {
   return {
