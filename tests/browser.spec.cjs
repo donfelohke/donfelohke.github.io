@@ -40,8 +40,8 @@ test("hero prioritises the two customer paths and keeps research secondary", asy
   await expect(page.locator("#connect")).toContainText("not services for purchase");
   await expect(page.locator("#connect")).toContainText("ONLY NAKEBUSEN TRANSACTS.");
   await expect(page.locator("#code")).toContainText("not a separate checkout");
-  await expect(hero.getByRole("link")).toHaveCount(3);
-  await expect(hero.locator('a[href="https://github.com/donfelohke"]')).toHaveCount(1);
+  await expect(hero.getByRole("link")).toHaveCount(2);
+  await expect(page.locator('#code a[href="https://github.com/donfelohke"]')).toHaveCount(1);
   await expect(hero).not.toContainText("GRACE · GRIT · GLORY");
 });
 
