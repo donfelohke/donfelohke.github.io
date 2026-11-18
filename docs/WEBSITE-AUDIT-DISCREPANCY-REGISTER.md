@@ -69,7 +69,7 @@ Historical briefs and superseded brand documents remain useful for provenance bu
 - Two commercial paths: **LOCS · CROWN** and **DIGITAL · WARENA**.
 - Canonical lockup: **NAKEBUSEN Locs ° Powered by WARENA**.
 - Homepage H1: **Your Beauty ° Your Way.**
-- LOCS: Retouch & Styling **KES 700+**; Sisterlocs Retie **KES 1,500+**; Artificial Locs Installation **KES 3,500+**.
+- LOCS: Retouch & Styling **KES 700+**; Sisterlocs Retie **KES 1,500+**; Artificial Locs Installation **KES 3,500**.
 - No braiding or shaving claims.
 - An enquiry is not a confirmed booking.
 - Digital services are scoped per engagement; no blanket availability, security, uptime or warranty claims.
@@ -114,3 +114,18 @@ This audit used repository source and documentation at the recorded baseline com
 - actual availability of any LOCS or DIGITAL service engagement.
 
 These remain explicit verification tasks, not assumed successes.
+
+
+## 8. Phase 2 copy and research-page update — 19 November 2026
+
+**Review branch:** `copy/research-page-homepage-refresh-2026-11-19`  
+**Status:** Implemented on branch; tests pending; not released.
+
+| ID | Priority | Files | Update | Remaining evidence |
+|---|---|---|---|---|
+| WADR-017 | P0 | `index.html`, `docs/WEBCOPY.md` | Hero lead aligned with approved practice statement; loc care remains primary; service-specific enquiry stays the dominant action. | Playwright and manual content review. |
+| WADR-018 | P1 | `index.html`, `research/index.html` | Added a dedicated Research & Creative Practice destination and linked it from the homepage discovery overview. The page distinguishes FELOH Corpus, IKAI, GENJE and WARENA and marks research maturity accurately. | Check route on GitHub Pages, mobile/desktop layout, links and accessibility. |
+| WADR-019 | P1 | `README.md`, `docs/WEBCOPY.md`, `docs/UI-UX-RESEARCH-2026-11-19.md` | Reconciled the repository orientation and canonical copy with the new research destination. | Review documentation consistency after CI. |
+| WADR-020 | P1 | `tests/browser.spec.cjs` | Updated homepage hierarchy expectations and added research-page smoke, link, responsive-overflow and axe checks. | CI execution and defect resolution. |
+
+The review branch does not modify payment details, commercial boundaries, approved starting prices, the founder role or the three-item floating dock. The research page is not a checkout, booking path or released product catalogue.
