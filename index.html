@@ -140,6 +140,11 @@ body,:root[data-theme="dark"] body{background:var(--paper)}
 @media(max-width:640px){.enquiry-steps{grid-template-columns:1fr}.enquiry-steps li{padding-block:.8rem}}
 @media(prefers-reduced-motion:reduce){.svc:hover{transform:none}}
 
+
+/* Keep the entrance motion spatial: opacity fades can temporarily reduce text contrast. */
+@media(prefers-reduced-motion:no-preference){.hero .wrap{animation:hero-rise .55s cubic-bezier(.2,.7,.25,1) both}}
+@keyframes hero-rise{from{transform:translateY(10px)}to{transform:translateY(0)}}
+
 </style>
 </head>
 <body>
