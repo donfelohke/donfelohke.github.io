@@ -100,6 +100,7 @@ The following specialist records are research documentation only and do not chan
 
 - [IKAI voice and smart-glasses architecture](https://github.com/donfelohke/Ikai/blob/main/docs/IKAI-VOICE-GLASSES-DISTRIBUTED-ARCHITECTURE-2026-11-18.md)
 - [GENJE kinetics and livecoding framework](https://github.com/donfelohke/Genje/blob/main/docs/KINETICS-LIVECODING-AND-IKAI-INTERACTION-2026-11-18.md)
+- [NVIDIA XR AI architecture comparison](https://github.com/donfelohke/Ikai/blob/main/docs/NVIDIA-XR-AI-ARCHITECTURE-COMPARATIVE-STUDY-2026-11-18.md) — industrial research reference only; not a public service or selected dependency.
 - [WARENA wearable platform integration](https://github.com/donfelohke/WARENA/blob/main/docs/IKAI-WEARABLE-PLATFORM-INTEGRATION-2026-11-18.md)
 
 The public website remains NAKEBUSEN's audience and service view. IKAI is research, GENJE is creative practice, WARENA is technical infrastructure, and **ONLY NAKEBUSEN TRANSACTS**.
