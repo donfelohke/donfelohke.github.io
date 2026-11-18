@@ -136,6 +136,56 @@ Use warm paper rather than pure white as the dominant surface, dark ink for prim
 - No text or action depends on a blur effect, subtle tint or colour alone.
 - Evaluate OLED power claims cautiously: actual savings depend on device, brightness, content and usage.
 
+## 6A. Typography and brand colour decisions — 19 November 2026
+
+### Typography roles
+
+| Role | Preferred face | Device-safe fallback | Use |
+|---|---|---|---|
+| Editorial display | Cormorant Garamond | Georgia, Times New Roman, serif | H1/H2, short brand statements and lockup |
+| Body and interface | Inter | system-ui, -apple-system, Segoe UI, Roboto, sans-serif | Paragraphs, service descriptions, navigation and controls |
+| Technical metadata | JetBrains Mono | ui-monospace, SFMono-Regular, Consolas, monospace | Prices, compact labels, technical identifiers and metadata |
+
+The three-family direction is deliberate: serif gives NAKEBUSEN a human editorial voice; sans-serif carries service clarity and mobile reading; monospace marks technical information without turning the whole page into a terminal aesthetic. Keep body copy at 16px or larger, use comfortable line-height (approximately 1.55–1.7), and reserve uppercase tracking for short labels.
+
+**Loading policy:** the current CSS names the preferred faces but does not download them. A face is used only if already available on the device; otherwise the declared fallback renders. Do not add a Google Fonts/CDN request. A future self-hosted WOFF2 addition requires verified licence, subset coverage for English and Kiswahili, font-display fallback, and measured payload/CLS impact. If the file is unavailable, retain the fallback rather than blocking text rendering.
+
+### Brand colour roles
+
+| Token | Light | AMOLED dark | Semantic role |
+|---|---|---|---|
+| Canvas | #F3EEE4 | #000000 | Warm editorial paper / OLED black canvas |
+| Content surface | warm-paper mix | #151515 | Service and content panels, separated from canvas |
+| Primary text | #242923 | #F2EFEA | Main reading text |
+| Secondary text | #626B58 | #B8B0A5 | Supporting copy; verify against its actual surface |
+| Forest | #173D32 | #173D32 | Navigation, WARENA identity and primary light-theme action |
+| Deep forest | #102D25 | #033500 | WARENA section surface, with ivory text |
+| Terracotta | #A34F3B | #E2725B | NAKEBUSEN/Locs marker and restrained emphasis |
+| Ochre | #8B5E16 | #D4AF37 | Heritage accent, rules and non-body highlights |
+| Sandstone | #D6C6A5 | #D6C6A5 | Secondary accent and dark-theme primary action surface |
+
+Use a single dominant identity per section: warm paper + terracotta for Locs; deep forest + ivory for Digital; charcoal + sandstone for Connect. Do not distribute all accents evenly across every component. Keep the brand recognisable through the relationship of colours and content, not a decorative rainbow or generic pink-and-gold salon template.
+
+### AMOLED implementation rules
+
+- Use #000000 for the dark-theme page canvas and browser theme colour so OLED pixels can switch off on true-black regions; this is a display-specific opportunity, not a promise of a fixed battery saving. LCD screens do not gain the same pixel-level benefit.
+- Use #151515 for raised content surfaces and opaque cards to preserve grouping and avoid making every component visually collapse into one plane.
+- Use warm ivory for primary text and a lighter sandstone/grey for secondary information. Do not use low-contrast green, muted sage or dark terracotta for small text on black.
+- Dark-theme filled actions use sandstone #D6C6A5 with deep-forest text #102D25; this avoids the low-contrast forest-on-black action treatment. Outline actions retain a clear sandstone border and ivory label.
+- Preserve a complete light theme. Dark mode is a user/system preference, not the default assumption for every visitor or a universal readability improvement.
+- Test the actual device theme, browser chrome, keyboard focus, pressed/hover states, payment panel and floating dock on OLED and LCD devices. A theme token table is not a contrast audit.
+
+### Decision
+
+Retain the current three-role type direction and brand palette; improve token semantics rather than introducing new type families or colours. The implementation change in this release gives dark-theme filled actions a high-contrast sandstone surface and makes the browser theme colour true black when AMOLED dark mode is selected.
+
+### Typography and accessibility sources
+
+- CDC, *Accessible Fonts* (2026): https://www.cdc.gov/nceh/clearwriting/writing-tips/pdfs/2026/032526-Accessible-Fonts-H.pdf
+- University of Arizona, *Accessible Branding*: https://accessibility.arizona.edu/documents-media/accessible-branding
+- HTTP Archive, *2025 Web Almanac — Fonts*: https://cdn.httparchive.org/v1/static/almanac/ebooks/web_almanac_2025_en.pdf
+- W3C, *WCAG 2.2*: https://www.w3.org/TR/WCAG22/
+
 ## 7. Liquid Glass and expressive design
 
 Apple's guidance treats Liquid Glass as a functional layer for navigation and controls, distinct from content surfaces. It advises sparing use and preserving legibility. This is a useful design principle for NAKEBUSEN, not a requirement to reproduce iOS.
