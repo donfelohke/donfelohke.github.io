@@ -1,8 +1,8 @@
 # NAKEBUSEN — Web Design Standards
 
 **Document ID:** NB-WDS-01  
-**Version:** M2 · 10 November 2026  
-**Status:** Approved direction · contrast/material correction merged to `main`; final browser verification pending  
+**Version:** M3 · 19 November 2026  
+**Status:** Approved design direction · AMOLED implementation on review branch; automated verification in progress; manual browser/accessibility verification pending  
 **Related specification:** [Distinct Native Experience System](./NATIVE-EXPERIENCE-SYSTEM.md)
 
 ## 1. Design direction
@@ -39,6 +39,26 @@ The existing public site remains a lightweight single-page gateway. Distinct sec
 | Sandstone | `#D6C6A5` | Secondary text and highlight |
 
 Use colours according to experience ownership. Do not make every section use every accent. Test each text/control pairing; the palette is not itself proof of WCAG contrast.
+
+
+### AMOLED dark-theme extension · 19 November 2026
+
+The optional dark theme is a first-class experience; the warm-paper light theme remains supported. Resolve the saved preference or system colour preference before the main stylesheet paints.
+
+| Token | Hex | Dark-theme role |
+|---|---|---|
+| OLED canvas | `#000000` | Page and Locs canvas |
+| Raised surface | `#151515` | Service, Connect and payment panels |
+| Secondary surface | `#080808` | Hero and footer surfaces |
+| Primary text | `#F2EFEA` | Main copy |
+| Secondary text | `#B8B0A5` | Muted copy on black |
+| Forest | `#033500` | WARENA and header surface |
+| Terracotta | `#E2725B` | Locs identity marker |
+| Ochre | `#D4AF37` | Price and restrained emphasis |
+| Sandstone | `#D6C6A5` | Secondary emphasis and focus |
+| Blue | `#3A6D8C` | Secondary interface accent only |
+
+Native ownership in dark mode: Locs uses black/near-black with terracotta; WARENA uses deep forest; Connect uses charcoal. The header and floating dock may use functional glass with opaque reduced-transparency fallbacks. Content panels remain opaque. Test every actual text, border, control and focus pairing; palette values alone do not establish WCAG conformance.
 
 ## 4. Native experience treatments
 
@@ -94,7 +114,7 @@ Use colours according to experience ownership. Do not make every section use eve
 
 ## 8. Responsive requirements
 
-Review at 320, 360, 390, 430, 760, 1024 CSS px and wide desktop.
+Review at 320, 360, 390, 430, 760/768, 1024, 1280 and 1440 CSS px.
 
 - No unintended horizontal scrolling.
 - No clipped lockup or navigation.
