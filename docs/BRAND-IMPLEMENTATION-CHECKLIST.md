@@ -99,7 +99,7 @@ Record the exact commit, test date, browsers/devices, routes tested, results, de
 
 - Stage A PR #112 was merged to `main` on 9 November 2026 at merge commit `e9a0c4c395a731f7082a80e85f88dfcf22ced64a`.
 - This confirms the source merge only; it does not by itself establish successful deployment or independent live-browser verification.
-- The current correction branch is `audit/website-accuracy-reconciliation`.
-- Current correction work is not merged or released. Do not change this status until the corresponding evidence exists.
+- The current implementation branch is `fix/nakebusen-site-quality-2026-11-18`; PR #129 is the review surface.
+- Current implementation work is not merged or released. Do not change this status until the corresponding evidence exists.
 - Use a reviewed pull request for material website changes. Do not merge or deploy based solely on a successful commit.
 - Keep specification, implementation, testing, verification and release states distinct.
