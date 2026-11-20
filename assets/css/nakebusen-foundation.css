@@ -94,6 +94,17 @@ section p{max-width:var(--reading-width)}
 .small{font-size:.91rem}
 .muted,.small{color:var(--sage-text)}
 .actions{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:1.15rem}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.45rem;
+  min-height:48px;max-width:100%;padding:.72rem 1rem;
+  border:1px solid var(--forest);border-radius:6px;
+  color:var(--forest);background:transparent;
+  font:700 .92rem/1.35 var(--sans);text-align:center;text-decoration:none;
+  overflow-wrap:anywhere;
+}
+.btn-fill{border-color:var(--action-bg);background:var(--action-bg);color:var(--action-ink)}
+.btn:active{background:rgba(214,198,165,.22)}
+:root[data-theme="dark"] .btn:not(.btn-fill){border-color:#D6C6A5;color:#F2EFEA}
 
 /* 3. Navigation: functional glass, never content glass */
 header{position:sticky;top:.65rem;z-index:30;pointer-events:none}
