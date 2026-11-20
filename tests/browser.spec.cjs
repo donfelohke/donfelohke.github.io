@@ -33,10 +33,10 @@ test("hero prioritises loc care while exposing the research destination", async 
   await expect(hero.locator("h1")).toHaveText("Your Beauty ° Your Way.");
   await expect(hero.locator(".lead")).toContainText("NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh)");
   await expect(hero.locator(".hero-overview .hero-path")).toHaveCount(3);
-  await expect(hero).toContainText("BEAUTY & LOC CARE");
+  await expect(hero).toContainText("NAKEBUSEN · BEAUTY & DIGITAL");
   await expect(hero).toContainText("DIGITAL · WARENA");
   await expect(hero).toContainText("RESEARCH & CREATIVE");
-  await expect(hero.getByRole("link", { name: "Explore research" })).toHaveAttribute("href", "/research/");
+  await expect(hero.getByRole("link", { name: "Explore research & creative work" })).toHaveAttribute("href", "/research/");
   await expect(page.locator("#connect")).toContainText("RESEARCH & CREATIVE");
   await expect(page.locator("#connect")).toContainText("not services for purchase");
   await expect(page.locator("#connect")).toContainText("ONLY NAKEBUSEN TRANSACTS.");
