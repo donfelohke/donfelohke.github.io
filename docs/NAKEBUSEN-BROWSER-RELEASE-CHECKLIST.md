@@ -18,7 +18,7 @@ Related implementation: homepage foundation PR #139 and consolidated design-syst
 
 ## Approved language policy
 
-English is the default and primary language. Kiswahili is available through the language toggle. Keep translations semantically equivalent, preserve service names/prices and business boundaries, and have Kiswahili copy reviewed by a fluent human before release.
+English is the default and primary language. Kiswahili is available through the homepage language toggle. The research archive is currently English-only and must not be presented as fully translated. Keep translations semantically equivalent, preserve service names/prices and business boundaries, and have Kiswahili copy reviewed by a fluent human before release.
 
 ## A. Candidate and automated baseline
 
