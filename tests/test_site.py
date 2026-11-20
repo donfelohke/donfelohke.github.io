@@ -119,7 +119,7 @@ check(':root[data-theme="dark"] .experience-author{background:#151515' in css, "
 check("radial-gradient(" not in css and "@keyframes" not in css and "perspective(" not in css, "Decorative glow, entrance and perspective motion are removed")
 check(':root[data-theme="dark"] header .nav{background:rgba(3,53,0,.94)' in css, "AMOLED header uses forest glass")
 
-check('#theme-toggle,#language-toggle{width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem' in css, "Theme and language controls meet 44px target")
+check(re.search(r'#theme-toggle,#language-toggle\\{\\s*width:2\\.75rem;height:2\\.75rem;min-width:2\\.75rem;min-height:2\\.75rem', css) is not None, "Theme and language controls meet 44px target")
 check("prefers-reduced-motion:reduce" in css, "Reduced-motion preference is respected")
 check(".btn{" in css and ".btn-fill{" in css and "min-height:48px" in css, "Primary and secondary enquiry actions have explicit accessible control surfaces")
 check("--glass-blur:20px" in css and "--glass-saturate:150%" in css, "Glass material tokens are defined")
