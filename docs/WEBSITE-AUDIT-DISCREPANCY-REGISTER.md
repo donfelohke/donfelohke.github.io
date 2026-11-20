@@ -118,8 +118,8 @@ These remain explicit verification tasks, not assumed successes.
 
 ## 8. Phase 2 copy and research-page update — 19 November 2026
 
-**Review branch:** `copy/research-page-homepage-refresh-2026-11-19`  
-**Status:** Implemented on branch; tests pending; not released.
+**Originating review branch:** `copy/research-page-homepage-refresh-2026-11-19`  
+**Status as of 20 November 2026:** The homepage/research-page implementation and related tests are present on `main` at baseline `d48fe4229d36d05fc7ae7200355c6dae656e4f03`. The baseline website-quality workflow exposed two failures, now tracked and corrected under WADR-021 and WADR-022 below. This branch name is historical provenance, not a claim that the branch remains active.
 
 | ID | Priority | Files | Update | Remaining evidence |
 |---|---|---|---|---|
@@ -128,7 +128,7 @@ These remain explicit verification tasks, not assumed successes.
 | WADR-019 | P1 | `README.md`, `docs/WEBCOPY.md`, `docs/UI-UX-RESEARCH-2026-11-19.md` | Reconciled the repository orientation and canonical copy with the new research destination. | Review documentation consistency after CI. |
 | WADR-020 | P1 | `tests/browser.spec.cjs` | Updated homepage hierarchy expectations and added research-page smoke, link, responsive-overflow and axe checks. | CI execution and defect resolution. |
 
-The review branch does not modify payment details, commercial boundaries, approved starting prices, the founder role or the three-item floating dock. The research page is not a checkout, booking path or released product catalogue.
+The implementation does not modify payment details, commercial boundaries, approved starting prices, the founder role or the three-item floating dock. The research page is not a checkout, booking path or released product catalogue.
 
 
 ## 9. Phase 3 quality remediation — 20 November 2026
