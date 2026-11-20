@@ -41,3 +41,15 @@ The source and test corrections are committed directly to `main`. The follow-up 
 4. verification of the exact deployed Pages artifact after an explicitly dispatched release.
 
 Do not mark any manual or live-site check as complete without evidence. No deployment is initiated by this remediation.
+
+
+## Follow-up implementation — 20 November 2026
+
+The original two-defect remediation was superseded by the reviewed homepage foundation and design-system changes:
+
+- PR #139 separated the static document, stylesheet and progressive-enhancement script; it also reconciled the hero copy and explicit NAKEBUSEN transaction boundary.
+- PR #142 replaced the historical CSS override cascade with canonical light/dark tokens and grouped responsive component rules. It corrected narrow-screen footer payment overflow, dark service-card surfaces and dark Connect CTA contrast.
+- Automated checks passed on candidate `10587cd0fae4dfb16cad7e2c782847eb3c5c47a1`: static run #563 (`44789211140`) and browser quality run #256 (`44789211087`).
+- The browser workflow uploaded responsive and interaction evidence. Its automated accessibility checks passed in both themes. Manual assistive-technology and physical-device checks remain outstanding.
+- The merge commits are `5303ba247df5a4a77fc26cb36f144f258283569f` and `89828556e41f3b5ade9830cb7a764f30b12a7434`.
+- The Pages deploy job was skipped; the manual release gate remains. No live-site deployment is claimed.
