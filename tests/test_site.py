@@ -70,6 +70,8 @@ p.close()
 
 check(html.count("<html") == 1, "Expected one html root")
 check('<html lang="en">' in html, "English must be the default document language")
+check('href="assets/css/nakebusen-foundation.css"' in html, "Extracted stylesheet is linked with a portable relative path")
+check('src="assets/js/nakebusen-experience.js"' in html, "Extracted application script is linked with a portable relative path")
 check(p.h1_count == 1, f"Expected one h1, found {p.h1_count}")
 check('id="site-navigation"' not in html, "No duplicate header section navigation")
 footer_nav = re.search(r'<nav\b(?=[^>]*class="[^"]*\bfooter-nav\b")[^>]*>(.*?)</nav>', html, re.S)
