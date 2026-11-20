@@ -132,7 +132,7 @@ header .nav{
     backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));
     -webkit-backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));
   }
-  .hero-path,.svc,.note,.footer-payment,.footer-support{
+    .hero-path,.svc,.note,.digital-process,.footer-payment,.footer-support{
     backdrop-filter:blur(14px) saturate(130%);
     -webkit-backdrop-filter:blur(14px) saturate(130%);
   }
