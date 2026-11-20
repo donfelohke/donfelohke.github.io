@@ -93,6 +93,9 @@ section p{max-width:var(--reading-width)}
 }
 .small{font-size:.91rem}
 .muted,.small{color:var(--sage-text)}
+.location-line{margin:.8rem 0 0;color:var(--muted);font-size:.86rem;font-weight:650}
+.toggle-icon{display:block;font:700 .72rem/1 var(--mono)}
+.digital-scope{max-width:var(--reading-width);margin:1.1rem 0;padding:.95rem 1rem;border-left:2px solid #D6C6A5;background:rgba(0,0,0,.12);color:#F3EEE4}
 .actions{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:1.15rem}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:.45rem;
