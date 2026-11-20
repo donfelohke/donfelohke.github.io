@@ -70,7 +70,7 @@ a:focus-visible,button:focus-visible{
   outline:3px solid var(--focus);
   outline-offset:3px;
 }
-.wrap{width:min(100% - 2rem,var(--layout-width));margin-inline:auto}
+.wrap{width:min(calc(100% - 2rem),var(--layout-width));min-width:0;margin-inline:auto}
 .skip{
   position:absolute;left:1rem;top:-5rem;z-index:60;
   padding:.65rem 1rem;border:2px solid var(--focus);border-radius:4px;
@@ -284,17 +284,18 @@ header .nav{
 
 /* 8. Footer: payment and voluntary support remain distinct */
 footer{
+  width:100%;min-width:0;
   padding:2.4rem 0 calc(2rem + env(safe-area-inset-bottom));
   border-top:1px solid rgba(243,238,228,.2);
   background:#242923;color:#F3EEE4;font-size:.91rem;
 }
 footer a{color:#F3EEE4}
-footer .wrap{max-width:900px}
+footer .wrap{width:min(calc(100% - 1.5rem),900px);max-width:900px;min-width:0}
 footer .small,footer .muted{color:#D6C6A5}
 footer section{padding:0;border:0;scroll-margin:0}
 .footer-lockup{margin:0;font:700 1.1rem var(--serif)}
 .footer-payment,.footer-support{
-  display:grid;gap:.8rem;margin:1.4rem 0;padding:1rem;
+  display:grid;grid-template-columns:minmax(0,1fr);gap:.8rem;margin:1.4rem 0;padding:1rem;min-width:0;max-width:100%;
   border:1px solid rgba(214,198,165,.5);border-radius:8px;
   background:#303A33;
 }
@@ -306,8 +307,8 @@ footer section{padding:0;border:0;scroll-margin:0}
   font-weight:800;letter-spacing:.04em;overflow-wrap:anywhere;
 }
 .footer-payment-name{font-weight:750}
-.footer-payment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}
-.footer-payment-panel{padding:.85rem;border-top:1px solid rgba(242,239,234,.22)}
+.footer-payment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;min-width:0;max-width:100%}
+.footer-payment-panel{min-width:0;padding:.85rem;border-top:1px solid rgba(242,239,234,.22);overflow-wrap:anywhere}
 .footer-payment ol{margin:.35rem 0;padding-left:1.3rem}
 .footer-payment li{padding:.2rem 0}
 .footer-payment-note{color:#D6C6A5;font-size:.84rem}
@@ -388,7 +389,7 @@ footer a:focus-visible,footer button:focus-visible{outline-color:#D6C6A5}
   .footer-payment-grid{grid-template-columns:1fr}
 }
 @media(max-width:420px){
-  .wrap{width:min(100% - 1.5rem,var(--layout-width))}
+  .wrap{width:min(calc(100% - 1.5rem),var(--layout-width))}
   .hero .wrap{padding:1rem 0}
   .hero .actions .btn{flex:1 1 100%}
   .floating-dock{max-width:calc(100vw - 1.25rem)}
