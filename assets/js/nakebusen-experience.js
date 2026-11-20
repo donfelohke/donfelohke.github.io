@@ -12,7 +12,7 @@ set(key,value){try{localStorage.setItem(key,value);}catch(error){}}
 const copy={
 en:{
 skip:'Skip to content',navMain:'Main navigation',navFooter:'Footer navigation',navQuick:'Section navigation',dockHome:'Home',dockEnquire:'Enquire',navLocs:'Locs',navDigital:'Digital',navAbout:'@donfeloh',navConnect:'Connect',footerSignature:'@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY / HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES',themeToLight:'Switch to light theme',themeToDark:'Switch to dark theme',
-eyebrow:'NAKEBUSEN · LOCS & PRACTICAL TECHNOLOGY · ELDORET, KENYA.',tagline:'Your Beauty ° Your Way.',
+eyebrow:'NAKEBUSEN · BEAUTY & DIGITAL · ELDORET, KENYA.',tagline:'Your Beauty ° Your Way.',
 heroLead:'NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh), bringing together natural loc care, practical computing and creative technology.',
 overviewBeautyTitle:'LOCS · CROWN',overviewBeauty:'Natural loc maintenance, retouching, styling, Sisterlocs retie and artificial loc installation.',overviewDigitalTitle:'DIGITAL · WARENA CAPABILITY',overviewDigital:'GNU/Linux, computer support, networking and local-first infrastructure. Freedom Is a System.',overviewResearchTitle:'RESEARCH & CREATIVE',overviewResearch:'IKAI · GENJE · FELOH Corpus — reflective computing, embodied practice and creative technology. Research and knowledge domains, not services for purchase.',researchExplore:'Explore research & creative work',digitalScope:'NAKEBUSEN handles commercial enquiries, agreements and transactions. WARENA is a distinct technical capability domain supporting eligible engagements; it is not a separate checkout. Scope, feasibility, deliverables and price are agreed before work begins.',
 
@@ -44,7 +44,7 @@ githubTitle:'Beyond the interface.',githubCopy:'Explore the code and documentati
 },
 sw:{
 skip:'Ruka hadi maudhui',navMain:'Urambazaji mkuu',navFooter:'Urambazaji wa chini',navQuick:'Urambazaji wa sehemu',dockHome:'Mwanzo',dockEnquire:'Uliza',navLocs:'Locs',navDigital:'Digital',navAbout:'@donfeloh',navConnect:'Wasiliana',footerSignature:'@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY / HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES',themeToLight:'Badilisha hadi mandhari mepesi',themeToDark:'Badilisha hadi mandhari meusi',
-eyebrow:'NAKEBUSEN · LOCS NA TEKNOLOJIA YA VITENDO · ELDORET, KENYA.',tagline:'Uzuri Wako ° Kwa Namna Yako.',
+eyebrow:'NAKEBUSEN · UREMBO NA TEKNOLOJIA · ELDORET, KENYA.',tagline:'Uzuri Wako ° Kwa Namna Yako.',
 heroLead:'NAKEBUSEN ni biashara ya urembo na huduma za teknolojia iliyoanzishwa na Felix Lwova (Don Feloh), inayounganisha utunzaji wa loc za asili, huduma za kompyuta na teknolojia bunifu.',
 overviewBeautyTitle:'LOCS · CROWN',overviewBeauty:'Utunzaji wa loc za asili, retouch, mitindo, Sisterlocs retie na uwekaji wa loc za bandia.',overviewDigitalTitle:'TEKNOLOJIA · UWEZO WA WARENA',overviewDigital:'GNU/Linux, usaidizi wa kompyuta, mitandao na miundombinu ya local-first. Uhuru ni Mfumo.',overviewResearchTitle:'UTAFITI NA UBUNIFU',overviewResearch:'IKAI · GENJE · FELOH Corpus — utafiti wa kompyuta tafakuri, maarifa ya mwili na teknolojia bunifu. Ni maeneo ya utafiti na maarifa, si huduma za kununua.',researchExplore:'Chunguza utafiti na kazi za ubunifu',digitalScope:'NAKEBUSEN hushughulikia maulizo, makubaliano na miamala ya kibiashara. WARENA ni eneo tofauti la uwezo wa kiteknolojia linalosaidia kazi zinazofaa; si sehemu tofauti ya malipo. Upeo, uwezekano, matokeo na gharama hukubaliwa kabla ya kazi kuanza.',
 
