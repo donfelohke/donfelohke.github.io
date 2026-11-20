@@ -7,7 +7,7 @@
 
 ## 1. LOCS · CROWN
 
-**Location:** Eldoret Town, Uasin Gishu County, Kenya  
+**Location:** Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya  
 **Primary enquiry:** WhatsApp · **+254 719 635 415**  
 **WhatsApp:** https://wa.me/254719635415  
 **Secondary contact:** +254 719 635 415
