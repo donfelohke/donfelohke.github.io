@@ -5,6 +5,8 @@ const fs = require("node:fs");
 const vm = require("node:vm");
 
 const html = fs.readFileSync("index.html", "utf8");
+const css = fs.readFileSync("assets/css/nakebusen-foundation.css", "utf8");
+const application = fs.readFileSync("assets/js/nakebusen-experience.js", "utf8");
 const scripts = [...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)];
 const bootstrapMatch = scripts.find(match => match[1].includes("nakebusen-theme") && match[1].includes("setAttribute('data-theme'"));
 const match = [null, application];
