@@ -112,7 +112,6 @@ footer a{color:#F3EEE4}
   .back{font-size:.8rem}
 }
 @media(hover:hover) and (pointer:fine){
-  .links a{transition:background-color .18s ease,border-color .18s ease,color .18s ease}
   .links a:hover{background:rgba(214,198,165,.18)}
 }
 @media(prefers-reduced-transparency:reduce){
