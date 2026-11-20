@@ -4,7 +4,7 @@ Status: proposed operational checklist; test evidence must be recorded per relea
 Scope: browser and end-to-end verification of the NAKEBUSEN Locs • Digital public site.
 Repository: `donfelohke/donfelohke.github.io`
 Public URL: https://donfelohke.github.io/
-Related review: consolidated website quality and accessibility PR #131.
+Related implementation: homepage foundation PR #139 and consolidated design-system PR #142. Candidate browser evidence: run #256 on commit `10587cd0fae4dfb16cad7e2c782847eb3c5c47a1`.
 
 ## How to use this checklist
 
@@ -106,8 +106,8 @@ Run after the default-language policy decision is resolved.
 
 - [ ] Retouch & Styling is shown at **from KES 700**.
 - [ ] Sisterlocs Retie is shown at **from KES 1,500**.
-- [ ] Artificial Locs Installation is shown at **from KES 3,500**.
-- [ ] Prices and service scope match across languages and any repeated page locations.
+- [ ] Artificial Locs Installation is shown at **KES 3,500** (no plus sign).
+- [ ] Prices and service scope match across languages and any repeated page locations. The current loc-care location is `Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya`.
 - [ ] Copy does not advertise braiding or other unapproved services.
 - [ ] Copy explains that prices are starting prices where applicable and final scope/price requires direct confirmation.
 - [ ] An enquiry is not represented as a confirmed appointment, accepted project, or payment.
