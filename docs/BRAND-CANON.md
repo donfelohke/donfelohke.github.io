@@ -1,4 +1,8 @@
-# NAKEBUSEN — Brand Canon
+> **Current constitutional alignment — 2026-11-20:** This brand document governs NAKEBUSEN's own public identity and commercial facts, but its old parent-enterprise diagram is superseded. NAKEBUSEN is the **ROOT** domain and only live commercial practice; WARENA is the separate **CAPABILITY** domain; IKAI is **MIRROR**; GENJE is **EXPRESSION**. F3L0H is the overarching authorship identity. See the [F3L0H Sovereign Master Corpus](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-SOVEREIGN-MASTER-CORPUS-2026-11-20.md).
+
+---
+
+# NAKEBUSEN — Brand Canon · ROOT Domain
 
 **Document ID:** NB-BC-01  
 **Version:** M1 · 30 October 2026  
@@ -6,7 +10,7 @@
 
 ## Identity
 
-**NAKEBUSEN** is the parent enterprise.
+**NAKEBUSEN** is the ROOT domain: grounded physical practice, beauty, heritage, craft and enterprise. It is the only live commercial practice and transaction interface.
 
 **Homepage:** Beautiful Roots. Sovereign Systems.  
 **Supporting statement:** Craft, technology and culture rooted in African ingenuity.
@@ -19,18 +23,16 @@ Supporting signature: `@donfelohke · #HisGenjeness`.
 
 The degree sign `°` is mandatory in the canonical lockup.
 
-## Architecture
+## Four-domain architecture
 
-```text
-NAKEBUSEN
-└── GENJE ZA WARENA
-    ├── NAKEBUSEN LOCS · CROWN
-    └── NAKEBUSEN DIGITAL · WARENA
-        ├── WARENA Systems
-        └── IKAI Mirror (Research)
+F3L0H / FELOH WARENA is the overarching human authorship and practice identity. The four practice domains are:
 
-by @donfelohke · #HisGenjeness
-```
+- **NAKEBUSEN / ROOT** — physical practice and only live commercial practice.
+- **IKAI / MIRROR** — reflective-computing research.
+- **GENJE / EXPRESSION** — creative and embodied practice.
+- **WARENA / CAPABILITY** — sovereign infrastructure and systems engineering.
+
+**GENJE NODE** is a WARENA manifestation, not a fifth domain. **ONLY NAKEBUSEN TRANSACTS.**
 
 ## Commercial rule
 
