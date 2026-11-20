@@ -339,6 +339,7 @@ test("AMOLED theme preserves native section surfaces and the light theme", async
 
 
 test("research archive shares theme, responsive layout and accessibility", async ({ page }) => {
+  await page.emulateMedia({ colorScheme: "light" });
   await page.goto("/research/");
   await expect(page.getByRole("heading", { name: "Research & Creative Practice", level: 1 })).toBeVisible();
   await expect(page.getByText("ONLY NAKEBUSEN TRANSACTS.", { exact: false })).toBeVisible();
