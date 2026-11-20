@@ -25,8 +25,8 @@ The site remains static HTML, CSS and progressive enhancement.
 
 - No application framework or build-time runtime is required to render the page.
 - No analytics, tracking pixels, advertising profiles, external font CDN or third-party UI runtime.
-- English is the default; Kiswahili is available through the language control.
-- Theme selection supports saved preference and system colour preference.
+- English is the default; Kiswahili is available through the homepage language control. The research archive is currently English-only and does not claim a full Kiswahili translation.
+- Theme selection supports saved preference and system colour preference; the research page shares the same `nakebusen-theme` preference key.
 - Content remains readable when the application script is unavailable; JavaScript enhances theme, language, WhatsApp message context and active dock state.
 - No customer data, payment credentials, PINs or one-time codes are collected by the page.
 
@@ -40,6 +40,8 @@ This public website's use of HTML/CSS/JavaScript is not a WARENA or IKAI applica
 | `assets/css/nakebusen-foundation.css` | Design tokens, layout, component states, theme surfaces, responsive rules and preference overrides |
 | `assets/js/nakebusen-experience.js` | Theme/language preference, translated copy, contextual WhatsApp links and active-section state |
 | `research/index.html` | Separate research and creative-practice information page |
+| `assets/css/research.css` | Research archive's editorial layout, theme surfaces, responsive rules and preference fallbacks |
+| `assets/js/research-experience.js` | Shared theme-preference control for the research archive |
 | `tests/test_site.py` | Structural, factual, link, metadata and token/contrast checks |
 | `tests/check-inline-js.cjs` | Syntax checks for the early inline bootstrap and external application script |
 | `tests/theme-toggle.test.cjs` | Theme, language, storage fallback and WhatsApp message behaviour |
@@ -55,7 +57,11 @@ The stylesheet has one canonical light token block and one canonical dark token 
 
 Do not append successive override patches at the end of the stylesheet. Change the owning component rule or token in its canonical section.
 
-### 3.3 Application script
+### 3.3 Research archive theme
+
+The research archive has a page-specific stylesheet and a small theme controller. It shares the homepage's `nakebusen-theme` local-storage key and resolves the saved/system theme before its stylesheet paints. It does not load the homepage's full application script or pretend to translate the research archive.
+
+### 3.4 Application script
 
 The application script is progressive enhancement, not a required content renderer. It may:
 - apply the user's saved theme or system preference;
