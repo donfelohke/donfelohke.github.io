@@ -6,6 +6,7 @@ const AxeBuilder = require("@axe-core/playwright").default;
 
 const root = path.resolve(__dirname, "..");
 const pageUrl = pathToFileURL(path.join(root, "index.html")).href;
+const researchPageUrl = pathToFileURL(path.join(root, "research", "index.html")).href;
 const evidenceDir = path.join(root, "test-results", "evidence");
 fs.mkdirSync(evidenceDir, { recursive: true });
 
@@ -340,7 +341,7 @@ test("AMOLED theme preserves native section surfaces and the light theme", async
 
 test("research archive shares theme, responsive layout and accessibility", async ({ page }) => {
   await page.emulateMedia({ colorScheme: "light" });
-  await page.goto("/research/");
+  await page.goto(researchPageUrl);
   await expect(page.getByRole("heading", { name: "Research & Creative Practice", level: 1 })).toBeVisible();
   await expect(page.getByText("ONLY NAKEBUSEN TRANSACTS.", { exact: false })).toBeVisible();
   await page.setViewportSize({ width: 320, height: 900 });
