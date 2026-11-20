@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050806">
+<meta name="description" content="Glass Terminal: research into native-first terminal computing, selective glass interfaces, spatial interaction and immersive XR across WARENA, IKAI and GENJE.">
+<link rel="canonical" href="https://donfelohke.github.io/research/glass-terminal/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Don Feloh · Research">
+<meta property="og:title" content="Glass Terminal — UI / UX / XR">
+<meta property="og:description" content="A research programme for reflective, programmable and embodied computing.">
+<meta property="og:url" content="https://donfelohke.github.io/research/glass-terminal/">
+<title>Glass Terminal · UI / UX / XR — Don Feloh</title>
+<style>
+:root{
+ color-scheme:dark;
+ --black:#050806;--panel:#0b100d;--panel-2:#101914;--forest:#123c2b;--forest-bright:#9eb9a6;
+ --ivory:#f2eee5;--muted:#b0b8af;--line:rgba(242,238,229,.16);
+ --amber:#d5b45d;--clay:#d4775c;--focus:#f0ca72;
+ --glass:rgba(13,23,17,.78);--glass-strong:rgba(8,14,10,.92);
+ --mono:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;
+ --serif:Georgia,"Times New Roman",serif;
+ --sans:system-ui,-apple-system,"Segoe UI",sans-serif;
+ --measure:68ch;--width:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:6rem;background:var(--black)}
+body{margin:0;min-height:100vh;padding-bottom:calc(5.8rem + env(safe-area-inset-bottom));background:var(--black);color:var(--ivory);font:16px/1.68 var(--sans)}
+a{color:var(--ivory);text-underline-offset:.22em}
+a:hover{color:var(--amber)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:4px;border-radius:3px}
+.wrap{width:min(calc(100% - 2rem),var(--width));margin-inline:auto}
+.skip{position:absolute;top:-5rem;left:1rem;z-index:100;padding:.7rem 1rem;background:var(--ivory);color:var(--black)}
+.skip:focus{top:1rem}
+.topbar{position:sticky;top:.65rem;z-index:30;margin-top:.65rem;pointer-events:none}
+.topbar-inner{pointer-events:auto;display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:3.7rem;padding:.55rem .85rem;border:1px solid var(--line);border-radius:14px;background:var(--glass-strong);box-shadow:0 8px 26px rgba(0,0,0,.28)}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ .topbar-inner{background:var(--glass);backdrop-filter:blur(18px) saturate(135%);-webkit-backdrop-filter:blur(18px) saturate(135%)}
+}
+.brand{font:700 .82rem/1.2 var(--mono);letter-spacing:.09em;text-decoration:none}
+.brand small{display:block;margin-top:.25rem;color:var(--muted);font:500 .65rem/1.2 var(--mono);letter-spacing:.04em}
+.top-links{display:flex;gap:.4rem;flex-wrap:wrap}
+.top-links a{display:inline-flex;align-items:center;min-height:42px;padding:.35rem .65rem;border:1px solid transparent;border-radius:9px;font-size:.78rem;font-weight:700;text-decoration:none}
+.top-links a:hover{border-color:var(--line);background:rgba(255,255,255,.05)}
+.hero{padding:clamp(3.5rem,8vw,7rem) 0 3.5rem}
+.eyebrow,.kicker,.micro{color:var(--amber);font:700 .7rem/1.45 var(--mono);letter-spacing:.13em;text-transform:uppercase}
+.eyebrow{margin:0 0 1rem}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.12}
+h1{max-width:11ch;margin:0;font-size:clamp(3.4rem,10vw,7.8rem);letter-spacing:-.055em}
+.hero-sub{max-width:60ch;margin:1.4rem 0;color:var(--muted);font-size:clamp(1.05rem,2vw,1.3rem)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(250px,.75fr);gap:1.2rem;align-items:stretch;margin-top:2rem}
+.glass-panel{min-width:0;padding:1.2rem;border:1px solid var(--line);border-radius:16px;background:var(--glass-strong)}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ .glass-panel{background:var(--glass);backdrop-filter:blur(14px) saturate(125%);-webkit-backdrop-filter:blur(14px) saturate(125%)}
+}
+.terminal-head{display:flex;justify-content:space-between;gap:1rem;align-items:center;padding-bottom:.75rem;border-bottom:1px solid var(--line);font:600 .7rem var(--mono);color:var(--muted)}
+.terminal-dots{display:flex;gap:.35rem}.terminal-dots i{width:.48rem;height:.48rem;border-radius:50%;background:var(--clay)}.terminal-dots i:nth-child(2){background:var(--amber)}.terminal-dots i:nth-child(3){background:var(--forest-bright)}
+.command{margin:1.1rem 0 .4rem;color:var(--forest-bright);font:600 clamp(.82rem,2vw,1rem)/1.8 var(--mono);overflow-wrap:anywhere}
+.command b{color:var(--amber);font-weight:700}
+.terminal-note{margin:.4rem 0 0;color:var(--muted);font-size:.86rem}
+.status-list{display:grid;gap:.7rem;margin:1rem 0 0;padding:0;list-style:none}
+.status-list li{display:flex;justify-content:space-between;gap:.8rem;padding-bottom:.65rem;border-bottom:1px solid var(--line);font-size:.86rem}
+.status-list li:last-child{border:0;padding-bottom:0}
+.status-list span:last-child{color:var(--amber);font:700 .67rem var(--mono);text-align:right}
+.section{padding:3.2rem 0;border-top:1px solid var(--line);scroll-margin-top:6rem}
+.section-head{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:2rem;align-items:start;margin-bottom:1.5rem}
+.kicker{margin:0 0 .55rem}
+h2{max-width:15ch;margin:0;font-size:clamp(2rem,5vw,3.7rem);letter-spacing:-.025em}
+.section-intro{max-width:var(--measure);margin:0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}
+.card{min-width:0;padding:1.1rem;border:1px solid var(--line);border-radius:13px;background:var(--panel)}
+.card:nth-child(3n+1){border-top:2px solid var(--forest-bright)}
+.card:nth-child(3n+2){border-top:2px solid var(--amber)}
+.card:nth-child(3n){border-top:2px solid var(--clay)}
+.card h3{margin:.25rem 0 .6rem;font-size:1.45rem}
+.card p{margin:.45rem 0;color:var(--muted);font-size:.92rem}
+.card .micro{font-size:.63rem}
+.principles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
+.principle{padding:1rem;border-left:2px solid var(--amber);background:var(--panel)}
+.principle strong{display:block;margin-bottom:.25rem;font:700 .78rem var(--mono)}
+.principle p{margin:0;color:var(--muted);font-size:.9rem}
+.stack{display:grid;gap:.55rem;max-width:850px}
+.layer{display:grid;grid-template-columns:180px 1fr;gap:1rem;align-items:center;padding:.9rem 1rem;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+.layer strong{font:700 .75rem var(--mono);color:var(--amber)}
+.layer span{color:var(--muted);font-size:.9rem}
+.layer:nth-child(2){margin-left:1.5rem}.layer:nth-child(3){margin-left:3rem}.layer:nth-child(4){margin-left:4.5rem}
+.boundary{padding:1.1rem 1.2rem;border-left:3px solid var(--clay);background:var(--panel);color:var(--muted);max-width:80ch}
+.boundary strong{color:var(--ivory)}
+ol.roadmap{counter-reset:phase;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin:0;padding:0;list-style:none}
+.roadmap li{counter-increment:phase;padding:1rem;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.roadmap li:before{content:"0" counter(phase);display:block;margin-bottom:.65rem;color:var(--amber);font:700 .72rem var(--mono)}
+.roadmap strong{display:block;margin-bottom:.3rem}
+.roadmap span{color:var(--muted);font-size:.9rem}
+.reading{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;margin:0;padding:0;list-style:none}
+.reading li{padding:.85rem 1rem;border-bottom:1px solid var(--line);font-size:.9rem}
+.reading a{font-weight:700}
+.reading small{display:block;margin-top:.2rem;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:.6rem}
+.links a{display:inline-flex;align-items:center;min-height:44px;padding:.55rem .8rem;border:1px solid var(--line);border-radius:9px;text-decoration:none;font-size:.85rem;font-weight:700}
+.links a.primary{border-color:var(--amber);background:var(--amber);color:#11160f}
+.dock{position:fixed;z-index:40;left:50%;bottom:calc(.65rem + env(safe-area-inset-bottom));display:flex;gap:.25rem;width:max-content;max-width:calc(100vw - 1rem);padding:.4rem;border:1px solid var(--line);border-radius:15px;background:rgba(8,14,10,.95);box-shadow:0 8px 25px rgba(0,0,0,.38);transform:translateX(-50%)}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.dock{background:rgba(8,14,10,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}}
+.dock a{display:flex;align-items:center;justify-content:center;min-width:5.2rem;min-height:44px;padding:.4rem .7rem;border-radius:10px;text-decoration:none;font:700 .7rem var(--mono)}
+.dock a:hover,.dock a:focus-visible{background:rgba(213,180,93,.14)}
+footer{padding:2rem 0 1rem;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+footer p{margin:.35rem 0}.signature{color:var(--amber);font:700 .72rem var(--mono);letter-spacing:.07em}
+@media(max-width:760px){
+ .hero-grid,.section-head{grid-template-columns:1fr}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .section-head{gap:.8rem}
+}
+@media(max-width:520px){
+ .wrap{width:min(calc(100% - 1.25rem),var(--width))}
+ .topbar-inner{align-items:flex-start}.top-links{justify-content:flex-end}
+ .top-links a{padding:.25rem .35rem;font-size:.68rem}
+ .grid,.principles,.roadmap,.reading{grid-template-columns:1fr}
+ .layer{grid-template-columns:1fr;gap:.25rem}.layer:nth-child(n){margin-left:0}
+ .dock a{min-width:4.6rem;padding-inline:.45rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(prefers-reduced-transparency:reduce){
+ .topbar-inner,.glass-panel,.dock{background:var(--glass-strong);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none}
+}
+@media(forced-colors:active){
+ .glass-panel,.card,.principle,.layer,.roadmap li,.boundary,.dock{border:1px solid CanvasText}
+ a:focus-visible,summary:focus-visible{outline:2px solid Highlight}
+}
+@media print{
+ body{background:#fff;color:#111;padding:0}.topbar,.dock{display:none}.glass-panel,.card,.principle,.layer,.roadmap li{background:#fff;color:#111;break-inside:avoid}
+ a{color:#111;text-decoration:underline}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="wrap topbar-inner">
+<a class="brand" href="/research/">DON FELOH <small>RESEARCH / GLASS TERMINAL</small></a>
+<nav class="top-links" aria-label="Project navigation">
+<a href="#architecture">Architecture</a><a href="#interaction">Interaction</a><a href="#roadmap">Roadmap</a><a href="/research/">Research index</a>
+</nav>
+</div></header>
+<main id="main">
+<section class="hero"><div class="wrap">
+<p class="eyebrow">WARENA × IKAI × GENJE · RESEARCH PROGRAMME · 2026.11</p>
+<h1>Glass<br>Terminal.</h1>
+<p class="hero-sub">A programmable, reflective and embodied computing environment — grounded in terminal precision, selective glass materials and spatial interaction.</p>
+<div class="hero-grid">
+<div class="glass-panel">
+<div class="terminal-head"><span>FELOH / GLASS-TERMINAL / 001</span><span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+<p class="command"><b>></b> inspect --system glass-terminal<br><b>></b> domains: desktop / spatial / embodied<br><b>></b> policy: native-first · local-first · libre-first</p>
+<p class="terminal-note">The interface is a research direction, not a released operating system, XR shell or commercial product.</p>
+</div>
+<aside class="glass-panel" aria-label="Programme status">
+<p class="kicker">Programme status</p>
+<ul class="status-list">
+<li><span>Desktop design system</span><span>PROPOSAL</span></li>
+<li><span>Native architecture</span><span>RESEARCH</span></li>
+<li><span>Spatial XR</span><span>RESEARCH</span></li>
+<li><span>IKAI reflective mirror</span><span>RESEARCH</span></li>
+<li><span>GENJE embodied interaction</span><span>RESEARCH</span></li>
+</ul>
+</aside>
+</div>
+</div></section>
+<section class="section" id="thesis"><div class="wrap">
+<div class="section-head"><div><p class="kicker">01 / Thesis</p><h2>Not a skin. An interaction system.</h2></div><p class="section-intro">Glass Terminal is the shared design and interaction research connecting three different environments. Glass is a material vocabulary; terminal is a computing philosophy; XR is an optional spatial modality. They must remain separate architectural concerns that can work together through explicit interfaces.</p></div>
+<div class="grid">
+<article class="card"><p class="micro">01 · MATERIAL</p><h3>Glass</h3><p>Selective translucency, reflection, diffusion, depth and occlusion. Surface treatment must never become a substitute for hierarchy or contrast.</p></article>
+<article class="card"><p class="micro">02 · COMPUTING</p><h3>Terminal</h3><p>Inspectable state, composable tools, keyboard precision, programmable behaviour, reproducible configuration and human control.</p></article>
+<article class="card"><p class="micro">03 · SPACE</p><h3>XR</h3><p>Spatial references, anchors, volumes, embodied input and immersive presentation. XR extends the desktop; it does not replace the conventional workstation.</p></article>
+</div>
+</div></section>
+<section class="section" id="architecture"><div class="wrap">
+<div class="section-head"><div><p class="kicker">02 / Architecture</p><h2>One philosophy. Separate layers.</h2></div><p class="section-intro">WARENA owns the computing and graphics foundation. IKAI owns reflective experience and participant authority. GENJE owns creative movement and performance semantics. FELOH Corpus governs shared terms, evidence and provenance.</p></div>
+<div class="stack">
+<div class="layer"><strong>HUMAN INPUT</strong><span>Keyboard · pointer · touch · accessible switches · optional gaze · optional gesture · performer-authored movement</span></div>
+<div class="layer"><strong>INTERACTION MODEL</strong><span>Focus · selection · navigation · command execution · spatial manipulation · undo and recovery</span></div>
+<div class="layer"><strong>2D / SPATIAL PRESENTATION</strong><span>Native desktop windows · terminal panes · panels · scene objects · spatial composition</span></div>
+<div class="layer"><strong>COMPUTING FOUNDATION</strong><span>GNU/Linux · X11-first desktop policy · native graphics · OpenXR research · Guix / reproducibility</span></div>
+</div>
+<p class="boundary" style="margin-top:1rem"><strong>Boundary:</strong> OpenXR is an application/runtime interoperability API, not a desktop compositor or complete shell. Browser CSS glass is a web presentation technique, not physical optics and not the implementation architecture for WARENA or IKAI.</p>
+</div></section>
+<section class="section" id="domains"><div class="wrap">
+<div class="section-head"><div><p class="kicker">03 / Project ownership</p><h2>Four domains. Clear authority.</h2></div><p class="section-intro">The work should not collapse into a single monolithic application or create duplicated ownership. Each project contributes a distinct layer.</p></div>
+<div class="grid">
+<article class="card"><p class="micro">CAPABILITY / SYSTEMS</p><h3>WARENA</h3><p>Native Linux desktop, graphics, window management, spatial services, runtime integration, Guix, packaging and reproducibility. X11-first remains the current desktop policy; Wayland remains experimental.</p><p><a href="https://github.com/donfelohke/WARENA">WARENA source and architecture →</a></p></article>
+<article class="card"><p class="micro">REFLECTION / HOME</p><h3>IKAI</h3><p>Reflective interaction, mirror optics, participant-controlled context, consent, privacy and memory semantics. IKAI is research / work in progress, not a released product.</p><p><a href="https://github.com/donfelohke/Ikai">IKAI research →</a></p></article>
+<article class="card"><p class="micro">EXPRESSION / EMBODIMENT</p><h3>GENJE</h3><p>Movement, choreography, sound, livecoding and authored spatial performance. Movement is not automatically converted into identity, emotion, health or ability labels.</p><p><a href="https://github.com/donfelohke/Genje">GENJE research →</a></p></article>
+</div>
+</div></section>
+<section class="section" id="interaction"><div class="wrap">
+<div class="section-head"><div><p class="kicker">04 / Interaction</p><h2>Multimodal, never gesture-only.</h2></div><p class="section-intro">Each input method has a bounded responsibility. Users must retain equivalent, discoverable paths for essential tasks. XR interaction should be evaluated for comfort, precision, latency, accessibility and error recovery.</p></div>
+<div class="principles">
+<div class="principle"><strong>KEYBOARD / POINTER</strong><p>Primary precision and command paths for desktop use. Keep focus visible and commands inspectable.</p></div>
+<div class="principle"><strong>GAZE / HAND</strong><p>Potential XR target-and-action pairing. Gaze does not silently execute destructive actions; hand input is not the only path.</p></div>
+<div class="principle"><strong>VOICE / SWITCHES</strong><p>Optional access paths for navigation and dictation, with explicit activation, privacy controls and alternatives.</p></div>
+<div class="principle"><strong>BODY / MOVEMENT</strong><p>Performer-authored movement and notation for GENJE. Capture, replay and sharing remain participant-controlled.</p></div>
+<div class="principle"><strong>SPATIAL CONTEXT</strong><p>Anchors and depth should communicate useful relationships, not add decorative complexity or cause visual fatigue.</p></div>
+<div class="principle"><strong>REVERSIBILITY</strong><p>Provide cancellation, undo, confirmation and recovery. Distinguish preview, selection and execution.</p></div>
+</div>
+</div></section>
+<section class="section" id="materials"><div class="wrap">
+<div class="section-head"><div><p class="kicker">05 / Material system</p><h2>Optics are not CSS.</h2></div><p class="section-intro">A visual glass effect and a physical reflective display are different engineering problems. The web page uses CSS only to demonstrate one presentation language; IKAI's mirror track requires optical and hardware research.</p></div>
+<div class="grid">
+<article class="card"><p class="micro">INTERFACE MATERIAL</p><h3>Frosted surface</h3><p>Backdrop blur and translucent fills simulate diffusion in a rendered interface. They need opaque fallbacks and must not carry essential text without contrast validation.</p></article>
+<article class="card"><p class="micro">PHYSICAL OPTICS</p><h3>Two-way mirror</h3><p>Partial reflection and transmission depend on illumination balance, coating, viewing geometry and display placement. This belongs to IKAI's optical validation track.</p></article>
+<article class="card"><p class="micro">DISPLAY HARDWARE</p><h3>Transparent OLED</h3><p>Emissive transparent displays have different black-level, contrast, ambient-light and integration constraints. Do not treat them as interchangeable with mirrors.</p></article>
+</div>
+</div></section>
+<section class="section" id="roadmap"><div class="wrap">
+<div class="section-head"><div><p class="kicker">06 / Roadmap</p><h2>Build evidence in layers.</h2></div><p class="section-intro">Start with a testable desktop design system and native interaction model. Do not make headset hardware, cameras, sensors or AI prerequisites for a useful workstation.</p></div>
+<ol class="roadmap">
+<li><strong>Desktop design and usability</strong><span>Define surface tokens, focus model, navigation, keyboard paths, contrast and responsive public-web expression.</span></li>
+<li><strong>Native desktop feasibility</strong><span>Evaluate X11-first composition, native graphics and Guile/Scheme integration without a web runtime dependency.</span></li>
+<li><strong>Spatial interaction prototype</strong><span>Evaluate OpenXR runtime availability, reference spaces, composition layers, input profiles and device compatibility.</span></li>
+<li><strong>IKAI optical experiment</strong><span>Validate mirror/display geometry, luminance, viewing angles, privacy and participant-directed reflection.</span></li>
+<li><strong>GENJE embodied experiment</strong><span>Use authored scores and synthetic movement first; measure timing, comfort, uncertainty and creative usefulness.</span></li>
+<li><strong>Cross-project integration</strong><span>Test shared contracts, data boundaries, recovery and reproducibility before considering a unified environment.</span></li>
+</ol>
+</div></section>
+<section class="section" id="evaluation"><div class="wrap">
+<div class="section-head"><div><p class="kicker">07 / Evaluation</p><h2>Measure the experience.</h2></div><p class="section-intro">Visual polish is not evidence of usability. Every prototype must state what was measured, under which conditions, with which hardware and which limitations.</p></div>
+<div class="principles">
+<div class="principle"><strong>READABILITY</strong><p>Contrast on real surfaces, text scaling, transparency and foreground/background variation.</p></div>
+<div class="principle"><strong>PERFORMANCE</strong><p>Frame pacing, GPU cost, input latency, startup and idle resource use.</p></div>
+<div class="principle"><strong>ACCESSIBILITY</strong><p>Keyboard equivalence, focus visibility, target size, captions, switch access and reduced motion.</p></div>
+<div class="principle"><strong>ERGONOMICS</strong><p>Posture, eye strain, head movement, arm fatigue, session duration and recovery.</p></div>
+<div class="principle"><strong>PRIVACY</strong><p>Data minimisation, local processing, consent, capture indicators, retention and deletion.</p></div>
+<div class="principle"><strong>REPRODUCIBILITY</strong><p>Versioned configurations, repeatable builds, documented hardware and reproducible test conditions.</p></div>
+</div>
+</div></section>
+<section class="section" id="sources"><div class="wrap">
+<div class="section-head"><div><p class="kicker">08 / Sources</p><h2>Standards before spectacle.</h2></div><p class="section-intro">The following primary sources establish technical boundaries and evaluation criteria. They do not validate a WARENA implementation or an IKAI/GENJE prototype.</p></div>
+<ul class="reading">
+<li><a href="https://registry.khronos.org/OpenXR/">Khronos OpenXR Registry</a><small>OpenXR 1.1 specifications, API references, extensions and conformance material.</small></li>
+<li><a href="https://registry.khronos.org/OpenXR/specs/1.1/html/xrspec.html">OpenXR 1.1 specification</a><small>Spaces, composition, sessions and interaction profiles.</small></li>
+<li><a href="https://www.w3.org/TR/WCAG22/">W3C WCAG 2.2</a><small>Contrast, focus, input modalities, target size and reflow requirements.</small></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/backdrop-filter">MDN: backdrop-filter</a><small>Browser rendering behaviour and compatibility considerations.</small></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/%40media/prefers-reduced-transparency">MDN: prefers-reduced-transparency</a><small>Useful progressive enhancement; browser support is not universal.</small></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/spatial-layout/">Apple: Spatial layout</a><small>Spatial window and volume layout reference; platform-specific guidance.</small></li>
+</ul>
+<p class="boundary" style="margin-top:1rem"><strong>Evidence rule:</strong> research documentation and a public design page do not establish implementation, user validation, hardware compatibility, deployment or product release. Those stages require separate artefacts and test evidence.</p>
+</div></section>
+<section class="section" id="repositories"><div class="wrap">
+<p class="kicker">09 / Source of record</p><h2>Follow the work.</h2>
+<div class="links">
+<a class="primary" href="https://github.com/donfelohke/WARENA">WARENA architecture</a>
+<a href="https://github.com/donfelohke/Ikai">IKAI mirror research</a>
+<a href="https://github.com/donfelohke/Genje">GENJE embodied practice</a>
+<a href="https://github.com/donfelohke/feloh-corpus">FELOH Corpus governance</a>
+<a href="https://donfelohke.github.io/">NAKEBUSEN website</a>
+</div>
+</div></section>
+</main>
+<nav class="dock" aria-label="Section navigation"><a href="#architecture">SYSTEM</a><a href="#interaction">INPUT</a><a href="#roadmap">ROADMAP</a></nav>
+<footer><div class="wrap">
+<p class="signature">NAKEBUSEN · WARENA · IKAI · GENJE · DON FELOH</p>
+<p>GRACE · GRIT · GLORY / HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES</p>
+<p><a href="/research/">Research index</a> · <a href="/">NAKEBUSEN home</a> · <a href="https://github.com/donfelohke/donfelohke.github.io">Page source</a></p>
+<p>RESEARCH / DESIGN DIRECTION · NOT A RELEASED PRODUCT</p>
+</div></footer>
+</body>
+</html>
