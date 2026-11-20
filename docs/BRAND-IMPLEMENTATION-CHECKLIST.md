@@ -1,8 +1,8 @@
 # NAKEBUSEN — Brand Implementation Checklist
 
 **Document ID:** NB-BIC-01  
-**Version:** M5 · 19 November 2026  
-**Status:** Implementation and verification checklist
+**Version:** M6 · 20 November 2026  
+**Status:** Implementation and automated verification baseline · manual release checks outstanding
 
 Status meanings: APPROVED = decision approved; IMPLEMENTED = code changed; TESTED = checks executed; VERIFIED = evidence supports acceptance; RELEASED = deployed and checked.
 
@@ -27,26 +27,26 @@ These checkboxes record approved decisions, not test results.
 
 ## 2. Homepage content
 
-- [ ] Hero headline, supporting statement and beauty-first information order match approved copy.
-- [ ] Enterprise introduction matches approved copy.
-- [ ] LOCS and DIGITAL are the two obvious service paths.
-- [ ] LOCS service descriptions and prices match SERVICE-CATALOG.md.
-- [ ] Sisterlocs Retie label and description are consistent across page, catalogue, facts register and WhatsApp message.
-- [ ] No braiding or shaving claims.
-- [ ] DIGITAL capability wording remains scoped and evidence-led.
-- [ ] Philosophy, GENJE and community copy do not displace service information or reintroduce retired homepage copy.
-- [ ] Founder public role line includes CTO; founder display-name and copyright evidence statuses remain explicit.
-- [ ] Enquiry is not described as a confirmed booking.
+- [x] Hero headline, supporting statement and beauty-first information order match approved copy.
+- [x] Enterprise introduction matches approved copy.
+- [x] LOCS and DIGITAL are the two obvious service paths.
+- [x] LOCS service descriptions and prices match SERVICE-CATALOG.md.
+- [x] Sisterlocs Retie label and description are consistent across page, catalogue, facts register and WhatsApp message.
+- [x] No braiding or shaving claims.
+- [x] DIGITAL capability wording remains scoped and evidence-led.
+- [x] Philosophy, GENJE and community copy do not displace service information or reintroduce retired homepage copy.
+- [x] Founder public role line includes CTO; founder display-name and copyright evidence statuses remain explicit.
+- [x] Enquiry is not described as a confirmed booking.
 
 ## 3. Brand and visual system
 
-- [ ] Exact lockup, including degree sign, in header and footer.
-- [ ] Palette tokens match approved hex values.
+- [x] Exact lockup, including degree sign, in header and footer.
+- [x] Palette tokens match approved hex values.
 - [ ] No unrelated colour families remain in active UI styling.
-- [ ] Typography uses approved roles and fallbacks.
-- [ ] No external font CDN.
-- [ ] Decorative artwork and unnecessary visual effects removed.
-- [ ] Functional icons remain accessible.
+- [x] Typography uses approved roles and fallbacks.
+- [x] No external font CDN.
+- [x] Decorative artwork and unnecessary visual effects removed.
+- [x] Functional icons remain accessible.
 - [ ] LOCS photography has documented permission.
 
 ### AMOLED-first theme decision — 19 November 2026
@@ -60,48 +60,48 @@ These checkboxes record approved decisions, not test results.
 - [ ] Verify all foreground/background pairs with automated WCAG 2.2 AA checks and manual review.
 - [ ] Measure real-device OLED power behaviour; do not publish a fixed battery-saving claim.
 
-Implementation state: AMOLED token changes and WARENA-section contrast correction are implemented on the PR branch. Automated verification is pending.
+Implementation state: the homepage structure, external asset separation and consolidated design system are merged to main. Static HTML checks and the browser quality workflow passed on the exact candidate commit. Manual screen-reader, physical-device and live Pages checks remain outstanding.
 
 ## 4. Navigation and interaction
 
-- [ ] Primary navigation destinations work.
-- [ ] Anchor targets clear sticky header.
-- [ ] Language control updates content, accessible labels and document lang.
-- [ ] Theme control works with system preference and user preference.
-- [ ] Language and theme controls remain functional when local storage is unavailable.
-- [ ] Every WhatsApp CTA updates its pre-filled message when the language changes.
+- [x] Primary navigation destinations work.
+- [x] Anchor targets clear sticky header.
+- [x] Language control updates content, accessible labels and document lang.
+- [x] Theme control works with system preference and user preference.
+- [x] Language and theme controls remain functional when local storage is unavailable.
+- [x] Every WhatsApp CTA updates its pre-filled message when the language changes.
 - [ ] WhatsApp, telephone and email destinations work.
 
 ## 5. Accessibility and responsive testing
 
-- [ ] 320, 360, 390, 430, 768, 1024 CSS px and desktop.
-- [ ] No horizontal overflow.
-- [ ] Visible focus and keyboard-only operation.
+- [x] 320, 360, 390, 430, 768, 1024 CSS px and desktop.
+- [x] No horizontal overflow.
+- [x] Visible focus and keyboard-only operation.
 - [ ] Screen-reader review.
-- [ ] Colour contrast in light and dark themes.
-- [ ] Reduced-motion support.
+- [x] Colour contrast in light and dark themes.
+- [x] Reduced-motion support.
 - [ ] Zoom and reflow.
 - [ ] Accessible labels and state.
 
 ## 6. Technical and factual checks
 
-- [ ] HTML validation.
-- [ ] JavaScript syntax and browser console.
-- [ ] Metadata and canonical URL.
+- [x] HTML validation.
+- [x] JavaScript syntax and browser console.
+- [x] Metadata and canonical URL.
 - [ ] Kiswahili translation reviewed for semantic parity.
-- [ ] Public facts match PUBLIC-FACTS-REGISTER.md.
+- [x] Public facts match PUBLIC-FACTS-REGISTER.md.
 - [ ] DIGITAL service availability confirmed before stronger claims.
-- [ ] Linguistic interpretations qualified.
-- [ ] Copyright attribution remains unchanged pending confirmation.
-- [ ] No unsupported security, uptime or reproducibility claims.
-- [ ] No placeholder or broken links.
+- [x] Linguistic interpretations qualified.
+- [x] Copyright attribution remains unchanged pending confirmation.
+- [x] No unsupported security, uptime or reproducibility claims.
+- [x] No placeholder or broken links.
 
 ## 7. Release evidence
 
 Record the exact commit, test date, browsers/devices, routes tested, results, defects and reviewer. Test evidence must refer to the exact release candidate.
 
-- [ ] Static HTML checks pass.
-- [ ] Browser tests pass.
+- [x] Static HTML checks pass.
+- [x] Browser tests pass.
 - [ ] Responsive screenshots reviewed.
 - [ ] Deployed page checked separately after an authorised merge.
 - [ ] Release explicitly authorised.
@@ -114,8 +114,8 @@ Record the exact commit, test date, browsers/devices, routes tested, results, de
 
 - Stage A PR #112 was merged to `main` on 9 November 2026 at merge commit `e9a0c4c395a731f7082a80e85f88dfcf22ced64a`.
 - This confirms the source merge only; it does not by itself establish successful deployment or independent live-browser verification.
-- The 19 November copy and research-page revision is on `copy/research-page-homepage-refresh-2026-11-19`; it is reviewed in [PR #133](https://github.com/donfelohke/donfelohke.github.io/pull/133) and is not yet released.
-- Current implementation work is not merged or released. Do not change this status until the corresponding evidence exists.
+- The research destination is present at `/research/` and is now included in the sitemap. The research index now has a shared theme control and page-specific styling; the Glass Terminal page remains dark-first. Manual screen-reader and physical-device checks remain outstanding.
+- Homepage foundation PR #139 and design-system PR #142 are merged. The source changes are not yet deployed; do not label the live site RELEASED until the manual Pages release and post-deployment checks are completed.
 - Use a reviewed pull request for material website changes. Do not merge or deploy based solely on a successful commit.
 - Keep specification, implementation, testing, verification and release states distinct.
 
@@ -129,3 +129,16 @@ Record the exact commit, test date, browsers/devices, routes tested, results, de
 - **Not verified:** live Pages route, browser rendering, screen-reader behaviour, contrast audit, social previews or production deployment.
 
 - PR #133 was opened against `main` on 19 November 2026. At the time of this record, the GitHub connector returned no workflow runs or combined commit statuses for the PR head; automated checks must be confirmed from the PR Checks tab before merge.
+
+
+## 9. Verified main-branch implementation snapshot — 20 November 2026
+
+- PR #139 — [separate structure, styles and interactions](https://github.com/donfelohke/donfelohke.github.io/pull/139), merge commit `5303ba247df5a4a77fc26cb36f144f258283569f`.
+- PR #142 — [consolidated responsive design system](https://github.com/donfelohke/donfelohke.github.io/pull/142), merge commit `89828556e41f3b5ade9830cb7a764f30b12a7434`.
+- Candidate commit tested: `10587cd0fae4dfb16cad7e2c782847eb3c5c47a1`.
+- Static HTML workflow #563: passed, run `44789211140`.
+- Browser quality workflow #256: passed, run `44789211087`.
+- Browser evidence was uploaded by the workflow. This is automated evidence, not a manual screen-reader or physical-device audit.
+- GitHub Pages deploy job was skipped under the existing manual release gate. The live site has not been declared updated by these merges.
+
+- PR #144 — [Glass Terminal research experience](https://github.com/donfelohke/donfelohke.github.io/pull/144), merge commit `e8e7a035dbe2f402a3a0a13494ac9f20e942e99b`. This is a research/design page, not a released WARENA/IKAI/GENJE runtime.
