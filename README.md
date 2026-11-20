@@ -86,6 +86,7 @@ Do not infer a street address or opening hours. The public founder display name 
 
 | [UI-UX-RESEARCH-2026-11-19.md](docs/UI-UX-RESEARCH-2026-11-19.md) | 2026 mobile UX, AMOLED, accessibility, performance and case-study decisions |
 | [WEBSITE-AUDIT-DISCREPANCY-REGISTER.md](docs/WEBSITE-AUDIT-DISCREPANCY-REGISTER.md) | Dated Phase 1 source-audit register; proposals are not approvals |
+| [WEBSITE-QUALITY-REMEDIATION-2026-11-20.md](docs/WEBSITE-QUALITY-REMEDIATION-2026-11-20.md) | Implemented footer-contrast and editorial-hover test corrections; CI and release evidence tracked separately |
 | [NAKEBUSEN-BROWSER-RELEASE-CHECKLIST.md](docs/NAKEBUSEN-BROWSER-RELEASE-CHECKLIST.md) | Evidence-based browser and release verification |
 | [HTML-CORPUS-EXTRACTION-REGISTER.md](docs/HTML-CORPUS-EXTRACTION-REGISTER.md) | Historical source-corpus inventory and reconciliation limits |
 | [NAKEBUSEN Market & Customer Research](research/nakebusen-market-customer-research-2026-10.md) | Historical market hypotheses and customer-validation plan |
