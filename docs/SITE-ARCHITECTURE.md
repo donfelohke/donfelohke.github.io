@@ -40,6 +40,10 @@ This public website's use of HTML/CSS/JavaScript is not a WARENA or IKAI applica
 | `assets/css/nakebusen-foundation.css` | Design tokens, layout, component states, theme surfaces, responsive rules and preference overrides |
 | `assets/js/nakebusen-experience.js` | Theme/language preference, translated copy, contextual WhatsApp links and active-section state |
 | `research/index.html` | Separate research and creative-practice information page |
+| `assets/css/research.css` | Research archive's editorial layout, theme surfaces, responsive rules and preference fallbacks |
+| `assets/js/research-experience.js` | Shared theme-preference control for the research archive |
+| `research/glass-terminal/index.html` | Dark-first Glass Terminal research presentation; not a released shell or XR product |
+| `research/glass-terminal/glass-terminal.css` | Glass Terminal page-specific spatial diagrams, surfaces and responsive layout |
 | `tests/test_site.py` | Structural, factual, link, metadata and token/contrast checks |
 | `tests/check-inline-js.cjs` | Syntax checks for the early inline bootstrap and external application script |
 | `tests/theme-toggle.test.cjs` | Theme, language, storage fallback and WhatsApp message behaviour |

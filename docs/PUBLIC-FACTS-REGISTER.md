@@ -33,13 +33,13 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-010 | GENJE is not a separate commercial division | F2 | Canonical |
 | PF-011 | WARENA is the distinct CAPABILITY domain; it may provide technical capability for NAKEBUSEN digital-service engagements | F2 | Not a NAKEBUSEN subdomain, parent enterprise or separate checkout; all commercial transactions remain through NAKEBUSEN |
 | PF-012 | IKAI is research, not a released product | F2 | Label research / WIP |
-| PF-013 | Location: Eldoret Town, Uasin Gishu County, Kenya | F1 | Do not invent a street address or map pin |
+| PF-013 | Current loc-care location: Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya | F1 | Do not invent a street address or map pin |
 | PF-014 | Phone: +254 719 635 415 | F1 | Verify before campaigns |
 | PF-015 | WhatsApp: https://wa.me/254719635415 | F1 | Enquiry channel |
 | PF-016 | Email: mela9ine@proton.me | F1 | Verify before campaigns |
 | PF-017 | Retouch & Styling from KES 700 | F1 | Starting price |
 | PF-018 | Sisterlocs Retie from KES 1,500 | F1 | Starting price; canonical public service label approved 9 November 2026 |
-| PF-019 | Artificial Locs Installation from KES 3,500 | F1 | Starting price |
+| PF-019 | Artificial Locs Installation KES 3,500 | F1 | Approved price; do not append a plus sign |
 | PF-020 | Final LOCS cost depends on scope, loc condition and materials | F1 | Publish with prices |
 | PF-021 | No braiding | F1 | Do not advertise braiding |
 | PF-022 | No shaving | F1 | Do not advertise shaving |

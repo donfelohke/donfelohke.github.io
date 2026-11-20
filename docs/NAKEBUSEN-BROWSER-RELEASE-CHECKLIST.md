@@ -4,7 +4,7 @@ Status: proposed operational checklist; test evidence must be recorded per relea
 Scope: browser and end-to-end verification of the NAKEBUSEN Locs • Digital public site.
 Repository: `donfelohke/donfelohke.github.io`
 Public URL: https://donfelohke.github.io/
-Related review: consolidated website quality and accessibility PR #131.
+Related implementation: homepage foundation PR #139, design-system PR #142, Glass Terminal integration PR #144 and completion candidate PR #145.
 
 ## How to use this checklist
 
@@ -18,7 +18,7 @@ Related review: consolidated website quality and accessibility PR #131.
 
 ## Approved language policy
 
-English is the default and primary language. Kiswahili is available through the language toggle. Keep translations semantically equivalent, preserve service names/prices and business boundaries, and have Kiswahili copy reviewed by a fluent human before release.
+English is the default and primary language. Kiswahili is available through the homepage language toggle. The Research & Creative index is currently English-only; Glass Terminal is a dark-first research presentation. Do not imply that either research route is fully translated. Keep homepage translations semantically equivalent and have Kiswahili copy reviewed by a fluent human before release.
 
 ## A. Candidate and automated baseline
 
@@ -54,18 +54,20 @@ For each browser/viewport, record browser version, OS/device, viewport, date, re
 - [ ] Header, navigation, hero and top-right theme/language controls do not overlap.
 - [ ] Long Kiswahili and English strings wrap without clipping or hiding controls.
 - [ ] Footer remains readable and reachable on narrow and wide screens.
+- [ ] Research index and Glass Terminal routes reflow without horizontal overflow.
 - [ ] Browser zoom at 200% remains usable without loss of content or functionality.
 - [ ] No unexpected layout shift, broken assets, blank regions or browser error overlays.
 - [ ] The no-embedded-graphics rule is respected: no inline images, SVG, canvas, video, iframe, CSS image backgrounds, graphic favicon, or social-image metadata.
 
 ## D. Language switching and localisation
 
-Run after the default-language policy decision is resolved.
+Run on the commercial homepage. Research routes have separate language coverage notes.
 
 - [ ] Initial page language matches the approved default.
 - [ ] Header language control changes the language and updates visible content.
 - [ ] Footer language control performs the same action and stays synchronised with the header.
-- [ ] Check all visible copy: navigation, hero, service descriptions, prices/caveats, CTAs, contact copy and footer.
+- [ ] Check all visible homepage copy: navigation, hero, service descriptions, prices/caveats, CTAs, contact copy and footer.
+- [ ] Confirm research index and Glass Terminal are clearly labelled as English research content.
 - [ ] Switch English → Kiswahili and then Kiswahili → English; verify both directions.
 - [ ] No untranslated keys, missing strings, stale mixed-language copy, or accidental translation of protected brand names.
 - [ ] `html lang` matches the selected language.
@@ -79,7 +81,8 @@ Run after the default-language policy decision is resolved.
 
 - [ ] Light theme is readable and all controls remain visible.
 - [ ] Dark theme is readable and all controls remain visible.
-- [ ] Theme toggle works by pointer/touch and keyboard.
+- [ ] Homepage and Research index theme toggles work by pointer/touch and keyboard.
+- [ ] Glass Terminal retains its documented dark-first research presentation.
 - [ ] Theme preference persists as documented, independently of language preference.
 - [ ] With storage unavailable, theme still works for the current session and content remains usable.
 - [ ] System colour preference behaviour matches the documented implementation.
@@ -106,7 +109,8 @@ Run after the default-language policy decision is resolved.
 
 - [ ] Retouch & Styling is shown at **from KES 700**.
 - [ ] Sisterlocs Retie is shown at **from KES 1,500**.
-- [ ] Artificial Locs Installation is shown at **from KES 3,500**.
+- [ ] Artificial Locs Installation is shown at **KES 3,500** (no plus sign).
+- [ ] Current loc-care location is shown as `Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya`.
 - [ ] Prices and service scope match across languages and any repeated page locations.
 - [ ] Copy does not advertise braiding or other unapproved services.
 - [ ] Copy explains that prices are starting prices where applicable and final scope/price requires direct confirmation.

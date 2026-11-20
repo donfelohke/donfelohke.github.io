@@ -41,3 +41,12 @@ The source and test corrections are committed directly to `main`. The follow-up 
 4. verification of the exact deployed Pages artifact after an explicitly dispatched release.
 
 Do not mark any manual or live-site check as complete without evidence. No deployment is initiated by this remediation.
+
+
+## Follow-up implementation — 20 November 2026
+
+- PR #139 separated homepage structure, styling and progressive enhancement; merge commit `5303ba247df5a4a77fc26cb36f144f258283569f`.
+- PR #142 consolidated the homepage design system; merge commit `89828556e41f3b5ade9830cb7a764f30b12a7434`.
+- PR #144 added the Glass Terminal research experience and linked it from the research index; merge commit `e8e7a035dbe2f402a3a0a13494ac9f20e942e99b`.
+- The completion candidate consolidates Glass Terminal visual refinements into canonical component rules, externalises both research-page stylesheets, shares the theme preference on the research index, and extends responsive/accessibility coverage.
+- These are source and automated-test changes. Manual assistive-technology, physical-device and live Pages checks remain outstanding. The manual Pages release gate remains in force.
