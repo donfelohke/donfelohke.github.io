@@ -96,6 +96,9 @@ footer a{color:#F3EEE4}
 :root[data-theme="dark"] footer a{color:#F2EFEA}
 :root[data-theme="dark"] .signature{color:#D6C6A5}
 @media(max-width:640px){
+  .top .wrap{flex-wrap:wrap;gap:.5rem}
+  .top-actions{margin-left:auto;gap:.35rem}
+  .back{max-width:none;font-size:.82rem}
   .grid{grid-template-columns:1fr}
   .card{border-right:0;border-bottom:1px solid var(--line)}
   .card:last-child{border-bottom:0}
