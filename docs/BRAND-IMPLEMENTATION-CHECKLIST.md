@@ -142,3 +142,13 @@ Record the exact commit, test date, browsers/devices, routes tested, results, de
 - GitHub Pages deploy job was skipped under the existing manual release gate. The live site has not been declared updated by these merges.
 
 - PR #144 — [Glass Terminal research experience](https://github.com/donfelohke/donfelohke.github.io/pull/144), merge commit `e8e7a035dbe2f402a3a0a13494ac9f20e942e99b`. This is a research/design page, not a released WARENA/IKAI/GENJE runtime.
+
+
+## 10. Glass Terminal and research-route implementation snapshot — 20 November 2026
+
+- PR #144 merged the Glass Terminal research presentation and added it to the research index and sitemap. It is labelled RESEARCH / DESIGN DIRECTION, not a released shell, XR platform or hardware implementation.
+- The research index shares the homepage's theme preference and remains explicitly English-only; no full Kiswahili translation is claimed.
+- The Glass Terminal page is dark-first and static. Its page stylesheet is externalised; no JavaScript runtime or third-party asset dependency is added.
+- Homepage Glass Terminal surface refinements are integrated into canonical component rules rather than appended override patches.
+- Responsive and automated accessibility coverage for both research routes is part of the current candidate; results are recorded only after the candidate workflow completes.
+- Manual screen-reader, physical-device and live Pages checks remain outstanding.
