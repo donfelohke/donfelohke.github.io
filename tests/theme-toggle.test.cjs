@@ -178,7 +178,7 @@ assert.match(language.translated[3].textContent, /^Nilianzisha NAKEBUSEN/);
 assert.equal(language.translated[4].textContent, "Sisterlocs Retie");
 assert.equal(language.translated[5].textContent, "Mwanzilishi · CTO · Loctician · Creative Technologist");
 assert.match(language.translated[6].textContent, /Bei ni za kuanzia/);
-assert.match(language.translated[7].textContent, /Usaidizi wa vitendo wa GNU\/Linux, workstation na mitandao/);
+assert.match(language.translated[7].textContent, /Usaidizi wa GNU\/Linux, workstation na mitandao/);
 assert.equal(language.translated[13].textContent, "Chunguza utafiti na kazi za ubunifu");
 assert.equal(language.translated[8].textContent, "@donfeloh");
 assert.match(language.translated[9].textContent, /HERITAGE.*BLACK EXCELLENCE.*SOVEREIGN FUTURES/);
