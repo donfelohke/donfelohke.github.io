@@ -132,3 +132,8 @@ WARENA and IKAI system architecture is native-first and excludes JavaScript and 
 ## IKAI Mirror research boundary — 2026-11-18
 
 IKAI Mirror is documented research, not a released product, public service or website feature. Its proposed Beauty Mirror application does not change NAKEBUSEN's service catalogue, availability or booking terms. The public site remains an audience view; **ONLY NAKEBUSEN TRANSACTS**. See [IKAI's specialist mirror research](https://github.com/donfelohke/Ikai/blob/main/docs/IKAI-MIRROR-TECHNOLOGY-AND-SCHOLARLY-RESEARCH-2026-11-18.md) and the [FELOH Corpus cross-project alignment](https://github.com/donfelohke/feloh-corpus/blob/main/docs/IKAI-MIRROR-CROSS-PROJECT-ALIGNMENT-2026-11-18.md). No website implementation is part of this documentation update.
+
+## Spatial/XR research boundary — 2026-11-20
+
+WARENA's spatial computing, immersive XR and opt-in AI architecture is documented as research, not as a public service or released product. GNU/MAVERIK and DEVA3 are historical architecture references; OpenXR/Monado are evaluation candidates. This does not change the NAKEBUSEN service offer, create an IKAI product or imply a deployed XR/AI capability. See [WARENA's architecture specification](https://github.com/donfelohke/WARENA/blob/main/docs/SPATIAL-COMPUTING-XR-AI-ARCHITECTURE-2026-11-20.md) and the [FELOH Corpus cross-project alignment](https://github.com/donfelohke/feloh-corpus/blob/main/docs/SPATIAL-XR-AI-CROSS-PROJECT-ALIGNMENT-2026-11-20.md).
+
