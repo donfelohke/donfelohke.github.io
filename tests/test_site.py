@@ -13,6 +13,8 @@ research_html = (ROOT / "research" / "index.html").read_text(encoding="utf-8")
 research_css = (ROOT / "assets" / "css" / "research.css").read_text(encoding="utf-8")
 research_js = (ROOT / "assets" / "js" / "research-experience.js").read_text(encoding="utf-8")
 sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+glass_html = (ROOT / "research" / "glass-terminal" / "index.html").read_text(encoding="utf-8")
+glass_css = (ROOT / "research" / "glass-terminal" / "glass-terminal.css").read_text(encoding="utf-8")
 
 
 class SiteParser(HTMLParser):
@@ -80,6 +82,10 @@ check('href="../assets/css/research.css"' in research_html and 'src="../assets/j
 check("<style>" not in research_html and "Research &amp; Creative Practice" in research_html, "Research page keeps semantic HTML separate from its design system")
 check('id="theme-toggle"' in research_html and 'data-theme' in research_js, "Research page exposes the shared theme control")
 check("https://donfelohke.github.io/research/" in sitemap, "Research destination is discoverable in the sitemap")
+check('href="glass-terminal.css"' in glass_html and "<style>" not in glass_html, "Glass Terminal page uses an external stylesheet")
+check("Glass Terminal" in glass_html and "RESEARCH / DESIGN DIRECTION" in glass_html, "Glass Terminal remains explicitly a research presentation")
+check("https://donfelohke.github.io/research/glass-terminal/" in sitemap, "Glass Terminal route is discoverable in the sitemap")
+check('--serif:"Cormorant Garamond"' in glass_css and "prefers-reduced-motion:reduce" in glass_css, "Glass Terminal uses local-first typography and reduced-motion support")
 check(p.h1_count == 1, f"Expected one h1, found {p.h1_count}")
 check('id="site-navigation"' not in html, "No duplicate header section navigation")
 footer_nav = re.search(r'<nav\b(?=[^>]*class="[^"]*\bfooter-nav\b")[^>]*>(.*?)</nav>', html, re.S)
