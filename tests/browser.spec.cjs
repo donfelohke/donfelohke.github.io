@@ -336,3 +336,21 @@ test("AMOLED theme preserves native section surfaces and the light theme", async
   await page.reload();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
 });
+
+
+test("research archive shares theme, responsive layout and accessibility", async ({ page }) => {
+  await page.goto("/research/");
+  await expect(page.getByRole("heading", { name: "Research & Creative Practice", level: 1 })).toBeVisible();
+  await expect(page.getByText("ONLY NAKEBUSEN TRANSACTS.", { exact: false })).toBeVisible();
+  await page.setViewportSize({ width: 320, height: 900 });
+  const narrow = await page.evaluate(() => ({ viewport: document.documentElement.clientWidth, document: document.documentElement.scrollWidth }));
+  expect(narrow.document, "research page must not overflow at 320px").toBeLessThanOrEqual(narrow.viewport);
+  await page.getByRole("button", { name: "Switch to dark theme" }).click();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  const dark = await new AxeBuilder({ page }).withTags(["wcag2a","wcag2aa","wcag21a","wcag21aa","wcag22aa"]).analyze();
+  expect(dark.violations, "research page dark theme accessibility violations").toEqual([]);
+  await page.getByRole("button", { name: "Switch to light theme" }).click();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  const light = await new AxeBuilder({ page }).withTags(["wcag2a","wcag2aa","wcag21a","wcag21aa","wcag22aa"]).analyze();
+  expect(light.violations, "research page light theme accessibility violations").toEqual([]);
+});
