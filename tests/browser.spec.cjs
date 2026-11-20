@@ -20,8 +20,12 @@ for (const width of widths) {
     const metrics = await page.evaluate(() => ({
       viewport: document.documentElement.clientWidth,
       document: document.documentElement.scrollWidth,
+      overflowing: [...document.querySelectorAll("body *")].map(el => {
+        const rect = el.getBoundingClientRect();
+        return { tag: el.tagName, id: el.id, className: typeof el.className === "string" ? el.className : "", left: Math.round(rect.left), right: Math.round(rect.right), width: Math.round(rect.width), text: (el.textContent || "").trim().slice(0, 70) };
+      }).filter(item => item.right > document.documentElement.clientWidth + 1 || item.left < -1).slice(0, 20),
     }));
-    expect(metrics.document, `no horizontal overflow at ${width}px`).toBeLessThanOrEqual(metrics.viewport);
+    expect(metrics.document, `no horizontal overflow at ${width}px: ${JSON.stringify(metrics.overflowing)}`).toBeLessThanOrEqual(metrics.viewport);
     await page.screenshot({ path: path.join(evidenceDir, `layout-${width}.png`), fullPage: true });
   });
 }
