@@ -12,7 +12,8 @@
 
 **NAKEBUSEN** is the ROOT domain: grounded physical practice, beauty, heritage, craft and enterprise. It is the only live commercial practice and transaction interface.
 
-**Homepage:** Beautiful Roots. Sovereign Systems.  
+**Brand positioning:** Beautiful Roots. Sovereign Systems.  
+**Homepage H1:** Your Beauty ° Your Way.  
 **Supporting statement:** Craft, technology and culture rooted in African ingenuity.
 
 ## Exact lockup
