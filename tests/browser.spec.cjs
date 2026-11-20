@@ -361,7 +361,7 @@ test("research archive shares theme, responsive layout and accessibility", async
 
 test("Glass Terminal research page remains responsive and accessible", async ({ page }) => {
   await page.goto(glassTerminalPageUrl);
-  await expect(page.getByRole("heading", { name: /Glass/ })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Glass Terminal.", level: 1 })).toBeVisible();
   await page.setViewportSize({ width: 320, height: 900 });
   const narrow = await page.evaluate(() => ({ viewport: document.documentElement.clientWidth, document: document.documentElement.scrollWidth }));
   expect(narrow.document, "Glass Terminal page must not overflow at 320px").toBeLessThanOrEqual(narrow.viewport);
