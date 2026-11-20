@@ -152,3 +152,14 @@ Record the exact commit, test date, browsers/devices, routes tested, results, de
 - Homepage Glass Terminal surface refinements are integrated into canonical component rules rather than appended override patches.
 - Responsive and automated accessibility coverage for both research routes is part of the current candidate; results are recorded only after the candidate workflow completes.
 - Manual screen-reader, physical-device and live Pages checks remain outstanding.
+
+
+## 11. Final source verification — 20 November 2026
+
+- PR #145 — [complete research routes and canonical Glass Terminal surfaces](https://github.com/donfelohke/donfelohke.github.io/pull/145), merge commit `cee99f686061f4e26533d398d0ce390f14ee32c2`.
+- Exact candidate tested: `0c0ba5a586949f9f5946bf96bf1dade94ed9dfa0`.
+- Static HTML workflow #585: passed, run `44793386056`.
+- Browser quality workflow #278: passed, run `44793386128`.
+- Browser coverage includes the homepage, research index and Glass Terminal page, narrow-screen reflow and automated WCAG accessibility checks.
+- Automated checks are not a substitute for manual TalkBack/screen-reader, physical-device, real-network WhatsApp and live GitHub Pages checks.
+- Pages build/deploy jobs were skipped under the manual release gate. Main contains the reviewed source; live deployment is not claimed.
