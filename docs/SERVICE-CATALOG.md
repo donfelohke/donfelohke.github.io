@@ -71,7 +71,7 @@ Technology services are quoted per engagement. Do not publish unsupported fixed 
 - Phone / WhatsApp: +254 719 635 415
 - WhatsApp URI: https://wa.me/254719635415
 - Email: mela9ine@proton.me
-- Location: Eldoret Town, Uasin Gishu County, Kenya
+- Location: Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya
 
 Do not invent a street address, business hours or map pin.
 
