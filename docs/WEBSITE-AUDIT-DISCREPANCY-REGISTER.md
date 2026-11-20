@@ -129,3 +129,19 @@ These remain explicit verification tasks, not assumed successes.
 | WADR-020 | P1 | `tests/browser.spec.cjs` | Updated homepage hierarchy expectations and added research-page smoke, link, responsive-overflow and axe checks. | CI execution and defect resolution. |
 
 The review branch does not modify payment details, commercial boundaries, approved starting prices, the founder role or the three-item floating dock. The research page is not a checkout, booking path or released product catalogue.
+
+
+## 9. Phase 3 quality remediation — 20 November 2026
+
+**Implementation target:** `main`  
+**Baseline:** `d48fe4229d36d05fc7ae7200355c6dae656e4f03`  
+**Scope:** Resolve the two reproducible defects from the latest website-quality workflow without changing the approved design or commercial content.
+
+| ID | Priority | Files | Resolution | Verification state |
+|---|---|---|---|---|
+| WADR-021 | P1 | `index.html`; `tests/browser.spec.cjs` | Scoped footer muted text to the approved sandstone/ivory family (`#D6C6A5`) because the footer is dark in both themes. This prevents the global sage text token from producing low-contrast copyright/footer copy. | Code correction committed to `main`; automated axe/Playwright rerun required. |
+| WADR-022 | P1 | `tests/browser.spec.cjs`; existing editorial hover CSS in `index.html` | Replaced the obsolete expectation of a card transform with an assertion that the existing background hover feedback is visible and that the card remains spatially stationary. Reduced-motion assertions remain in place. | Test aligned to the intentional design; automated browser rerun required. |
+
+The remediation does not change the global palette, service-card design, prices, service scope, WhatsApp destinations, founder identity, contact details, published M-PESA details, Support Us distinction, language policy, or research/commercial boundary. It does not add a framework, dependency, analytics, checkout, booking form, or external runtime.
+
+**Release status:** source corrections are committed to `main`; passing CI, real-device review, assistive-technology review and live Pages verification must be established independently. The existing manual GitHub Pages release gate remains in force.
