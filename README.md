@@ -90,6 +90,7 @@ Do not infer a street address or opening hours. The public founder display name 
 | [NAKEBUSEN-BROWSER-RELEASE-CHECKLIST.md](docs/NAKEBUSEN-BROWSER-RELEASE-CHECKLIST.md) | Evidence-based browser and release verification |
 | [HTML-CORPUS-EXTRACTION-REGISTER.md](docs/HTML-CORPUS-EXTRACTION-REGISTER.md) | Historical source-corpus inventory and reconciliation limits |
 | [NAKEBUSEN Market & Customer Research](research/nakebusen-market-customer-research-2026-10.md) | Historical market hypotheses and customer-validation plan |
+| [TAM, MVP & Sales Blueprint](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/MARKET-ENTRY-TAM-MVP-SALES-BLUEPRINT-2026-11-20.md) | Canonical commercial strategy: bottom-up market sizing, LOCS-first MVP, sales funnel, unit economics and validation gates |
 
 ## Website principles
 
@@ -138,3 +139,8 @@ IKAI Mirror is documented research, not a released product, public service or we
 
 WARENA's spatial computing, immersive XR and opt-in AI architecture is documented as research, not as a public service or released product. GNU/MAVERIK and DEVA3 are historical architecture references; OpenXR/Monado are evaluation candidates. This does not change the NAKEBUSEN service offer, create an IKAI product or imply a deployed XR/AI capability. See [WARENA's architecture specification](https://github.com/donfelohke/WARENA/blob/main/docs/SPATIAL-COMPUTING-XR-AI-ARCHITECTURE-2026-11-20.md) and the [FELOH Corpus cross-project alignment](https://github.com/donfelohke/feloh-corpus/blob/main/docs/SPATIAL-XR-AI-CROSS-PROJECT-ALIGNMENT-2026-11-20.md).
 
+
+
+## Commercial market strategy — 2026-11-20
+
+The canonical commercial strategy is maintained in the [NAKEBUSEN TAM, MVP & Sales Blueprint](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/MARKET-ENTRY-TAM-MVP-SALES-BLUEPRINT-2026-11-20.md). It is a strategy and validation plan, not a verified market-size study or financial forecast. It does not change the current public service catalogue, starting prices, booking terms, website design or live service availability. **ONLY NAKEBUSEN TRANSACTS.**
