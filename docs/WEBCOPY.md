@@ -37,7 +37,7 @@ Supporting signature: **@donfelohke · #HisGenjeness**
 **Signature:** GRACE · GRIT · GLORY / HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES.
 
 **Primary action:** WhatsApp — Enquire about loc care.  
-**Secondary actions:** Explore digital services · Explore the work on GitHub.
+**Secondary action:** Explore LOCS services. Digital enquiries are available in the Digital section; research and source links remain informational.
 
 **Enquiry boundary:** An enquiry does not confirm a booking. Availability and final terms are agreed directly.
 
@@ -155,7 +155,7 @@ Independent support: voluntary support for Don Feloh’s creative, cultural and 
 
 **Title:** NAKEBUSEN Loc Care & Digital Services · Eldoret, Kenya
 
-**Description:** NAKEBUSEN offers natural loc care in Eldoret Town, Kenya, alongside practical Linux, workstation and network support. Enquire directly on WhatsApp.
+**Description:** NAKEBUSEN is a beauty and digital-services practice in Eldoret Town, Kenya, bringing together natural loc care, practical computing and creative technology.
 
 Canonical URL: https://donfelohke.github.io/
 
