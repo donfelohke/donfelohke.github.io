@@ -275,13 +275,16 @@ test("research page explains the four domains and remains non-commercial", async
   }
 });
 
-test("depth interactions are tactile and respect reduced-motion preferences", async ({ page }) => {
+test("service hover feedback remains visible without spatial motion and respects reduced motion", async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.emulateMedia({ reducedMotion: "no-preference" });
   await page.goto(pageUrl);
   const service = page.locator(".svc").first();
+  const restingBackground = await service.evaluate(el => getComputedStyle(el).backgroundColor);
   await service.hover();
-  await expect.poll(() => service.evaluate(el => getComputedStyle(el).transform)).not.toBe("none");
+  await expect.poll(() => service.evaluate(el => getComputedStyle(el).backgroundColor)).not.toBe(restingBackground);
+  const hoverTransform = await service.evaluate(el => getComputedStyle(el).transform);
+  expect(hoverTransform).toBe("none");
   await page.emulateMedia({ reducedMotion: "reduce" });
   const reduced = await page.evaluate(() => ({
     heroAnimation: getComputedStyle(document.querySelector(".hero .wrap")).animationName,
