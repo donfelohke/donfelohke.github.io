@@ -9,6 +9,10 @@ html = (ROOT / "index.html").read_text(encoding="utf-8")
 css = (ROOT / "assets" / "css" / "nakebusen-foundation.css").read_text(encoding="utf-8")
 js = (ROOT / "assets" / "js" / "nakebusen-experience.js").read_text(encoding="utf-8")
 published = html + "\n" + js
+research_html = (ROOT / "research" / "index.html").read_text(encoding="utf-8")
+research_css = (ROOT / "assets" / "css" / "research.css").read_text(encoding="utf-8")
+research_js = (ROOT / "assets" / "js" / "research-experience.js").read_text(encoding="utf-8")
+sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
 
 
 class SiteParser(HTMLParser):
