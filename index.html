@@ -227,6 +227,8 @@ section p{max-width:var(--reading-width)}
 .enquiry-steps li{padding:1rem 1rem 1rem 2.8rem;border-left:0;border-right:1px solid var(--line);border-radius:0;background:transparent}
 .enquiry-steps li:last-child{border-right:0}
 footer{background:#242923;border-top:1px solid rgba(243,238,228,.2)}
+/* Footer sits on dark surfaces in both themes; override global muted text tokens. */
+footer .small,footer .muted{color:#D6C6A5}
 footer .wrap{max-width:900px}
 .footer-payment,.footer-support{border-radius:0;box-shadow:none}
 .floating-dock{border-radius:16px;box-shadow:0 10px 28px rgba(0,0,0,.24)}
