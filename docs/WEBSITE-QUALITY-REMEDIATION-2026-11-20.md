@@ -50,3 +50,8 @@ Do not mark any manual or live-site check as complete without evidence. No deplo
 - PR #144 added the Glass Terminal research experience and linked it from the research index; merge commit `e8e7a035dbe2f402a3a0a13494ac9f20e942e99b`.
 - The completion candidate consolidates Glass Terminal visual refinements into canonical component rules, externalises both research-page stylesheets, shares the theme preference on the research index, and extends responsive/accessibility coverage.
 - These are source and automated-test changes. Manual assistive-technology, physical-device and live Pages checks remain outstanding. The manual Pages release gate remains in force.
+
+
+## Final completion candidate — 20 November 2026
+
+PR #145 merged as `cee99f686061f4e26533d398d0ce390f14ee32c2`. The exact candidate `0c0ba5a586949f9f5946bf96bf1dade94ed9dfa0` passed static workflow #585 (`44793386056`) and browser quality workflow #278 (`44793386128`). Browser coverage includes the commercial homepage, Research & Creative index, and dark-first Glass Terminal research page, with 320px reflow and automated WCAG checks. The source changes are merged, but the GitHub Pages deployment gate was skipped; manual assistive-technology, physical-device, real-network and live-site checks remain outstanding.
