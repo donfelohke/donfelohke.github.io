@@ -1,3 +1,7 @@
+> **Current strategy pointer — 2026-11-20:** This 26 October document remains a historical hypothesis and discovery baseline, not a verified market-size study or financial forecast. The current owner-approved commercial sequence, bottom-up TAM/SAM/SOM method, LOCS-first MVP, sales funnel, unit economics and investment gates are maintained in the [NAKEBUSEN TAM, MVP & Sales Blueprint](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/MARKET-ENTRY-TAM-MVP-SALES-BLUEPRINT-2026-11-20.md). The newer blueprint supersedes any conflicting sequencing or portfolio assumptions here; this document's observations and hypotheses remain dated and must be re-verified before public use.
+
+---
+
 # NAKEBUSEN Market & Customer Research
 
 **Research date:** 26 October 2026  
