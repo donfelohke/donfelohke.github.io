@@ -1,4 +1,4 @@
-# NAKEBUSEN — Your Beauty ° Your Way.
+# NAKEBUSEN — ROOT · Your Beauty ° Your Way.
 
 **Natural loc care in Eldoret Town, Kenya. Practical technology powered by WARENA.**
 
@@ -9,20 +9,20 @@ Research and creative practice are documented separately from the commercial ser
 Public website: https://donfelohke.github.io/  
 Repository: `donfelohke/donfelohke.github.io`
 
-NAKEBUSEN brings together loc care and practical technology services in Eldoret Town, Kenya.
+NAKEBUSEN is the ROOT domain: the grounded physical practice, beauty and enterprise, and the only live commercial practice and transaction interface. Its current public focus is natural loc care in Eldoret Town, Kenya. Any digital service engagement is offered and transacted through NAKEBUSEN; WARENA remains the distinct CAPABILITY domain.
 
-## Enterprise architecture
+## Four-domain architecture
 
-```text
-NAKEBUSEN
-└── GENJE ZA WARENA
-    ├── NAKEBUSEN LOCS · CROWN
-    └── NAKEBUSEN DIGITAL · WARENA
-        ├── WARENA Systems
-        └── IKAI Mirror (Research)
+F3L0H / FELOH WARENA is the overarching human authorship and practice identity. The four practice domains are:
 
-by @donfelohke · #HisGenjeness
-```
+- **NAKEBUSEN / ROOT** — physical practice, beauty, heritage and enterprise; the only live commercial practice.
+- **IKAI / MIRROR** — reflective-computing and embodied spatial research; not a released product.
+- **GENJE / EXPRESSION** — Genge, movement, sound, livecoding and creative practice; not a checkout brand.
+- **WARENA / CAPABILITY** — sovereign infrastructure and systems engineering.
+
+**GENJE NODE** is a WARENA manifestation, not a fifth domain. **ONLY NAKEBUSEN TRANSACTS.**
+
+See the [F3L0H Sovereign Master Corpus](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-SOVEREIGN-MASTER-CORPUS-2026-11-20.md).
 
 **ONLY NAKEBUSEN TRANSACTS.**
 
@@ -32,7 +32,7 @@ by @donfelohke · #HisGenjeness
 - WARENA Systems — technical identity within DIGITAL.
 - IKAI Mirror — research, not a released product.
 
-Canonical lockup: **NAKEBUSEN Locs ° Powered by WARENA**.
+Public presentation is NAKEBUSEN-led. WARENA provides technical capability; it is not a competing commercial brand.
 
 ## LOCS starting prices
 
