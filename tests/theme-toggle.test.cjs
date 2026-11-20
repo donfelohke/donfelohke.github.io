@@ -7,10 +7,10 @@ const vm = require("node:vm");
 const html = fs.readFileSync("index.html", "utf8");
 const scripts = [...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)];
 const bootstrapMatch = scripts.find(match => match[1].includes("nakebusen-theme") && match[1].includes("setAttribute('data-theme'"));
-const match = scripts.find(match => match[1].includes("function applyTheme"));
+const match = [null, application];
 assert.ok(bootstrapMatch, "early theme bootstrap exists");
-assert.ok(match, "inline application script exists");
-assert.ok(html.indexOf(bootstrapMatch[0]) < html.indexOf("<style>"), "theme bootstrap runs before the main stylesheet");
+assert.ok(match[1].includes("function applyTheme"), "external application script exists");
+assert.ok(html.indexOf(bootstrapMatch[0]) < html.indexOf('rel="stylesheet"'), "theme bootstrap runs before the main stylesheet");
 
 function bootEarly({ storedTheme = null, systemDark = false, storageThrows = false } = {}) {
   const attrs = {};
@@ -36,9 +36,9 @@ const earlySystem = bootEarly({ storedTheme: "invalid", systemDark: true });
 assert.equal(earlySystem.attrs["data-theme"], "dark", "invalid preference falls back to system theme");
 const earlyFallback = bootEarly({ storageThrows: true, systemDark: true });
 assert.equal(earlyFallback.attrs["data-theme"], "dark", "system preference works when storage is unavailable");
-assert.ok(html.includes("bottom:calc(.65rem + env(safe-area-inset-bottom))"), "floating dock adds spacing above the device safe area");
-assert.ok(html.includes(':root[data-theme="dark"] header .nav{background:#033500}'), "reduced-transparency dark header uses opaque forest");
-assert.ok(html.includes(':root[data-theme="dark"] .floating-dock{background:#151515}'), "reduced-transparency dark dock uses opaque charcoal");
+assert.ok(css.includes("bottom:calc(.65rem + env(safe-area-inset-bottom))"), "floating dock adds spacing above the device safe area");
+assert.ok(css.includes(':root[data-theme="dark"] header .nav{background:#033500}'), "reduced-transparency dark header uses opaque forest");
+assert.ok(css.includes(':root[data-theme="dark"] .floating-dock{background:#151515}'), "reduced-transparency dark dock uses opaque charcoal");
 
 
 function element(attributes = {}) {
@@ -170,7 +170,7 @@ assert.equal(language.values["nakebusen-language"], "sw", "language preference p
 assert.equal(language.languageButton.attributes["aria-label"], "Badilisha lugha hadi Kiingereza");
 assert.equal(language.nav.attributes["aria-label"], "Urambazaji mkuu");
 assert.equal(language.translated[0].textContent, "Uzuri Wako ° Kwa Namna Yako.");
-assert.match(language.translated[1].textContent, /NAKEBUSEN ni huduma za urembo na teknolojia iliyoanzishwa na Felix Lwova/);
+assert.match(language.translated[1].textContent, /NAKEBUSEN ni biashara ya urembo na huduma za teknolojia iliyoanzishwa na Felix Lwova/);
 assert.match(language.translated[2].textContent, /bei za kuanzia na maulizo ya moja kwa moja/);
 assert.match(language.translated[3].textContent, /^Nilianzisha NAKEBUSEN/);
 assert.equal(language.translated[4].textContent, "Sisterlocs Retie");
