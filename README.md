@@ -40,7 +40,7 @@ Public presentation is NAKEBUSEN-led. WARENA provides technical capability; it i
 |---|---:|
 | Retouch & Styling | KES 700+ |
 | Sisterlocs Retie | KES 1,500+ |
-| Artificial Locs Installation | KES 3,500 |
+| Artificial Locs Installation | KES 3,500+ |
 
 No braiding or shaving. Final cost depends on scope, loc condition and materials. An enquiry does not confirm a booking; availability and final terms are agreed directly.
 
