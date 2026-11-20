@@ -342,6 +342,10 @@ footer a:focus-visible,footer button:focus-visible{outline-color:#D6C6A5}
 :root[data-theme="dark"] footer{background:#080808;color:#F2EFEA}
 :root[data-theme="dark"] .footer-payment,:root[data-theme="dark"] .footer-support{background:#151515;border-color:rgba(214,198,165,.35)}
 :root[data-theme="dark"] .floating-dock{background:rgba(21,21,21,.96);border-color:rgba(214,198,165,.32);box-shadow:0 10px 28px rgba(0,0,0,.55)}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  :root[data-theme="dark"] header .nav{background:rgba(3,53,0,.82)}
+  :root[data-theme="dark"] .floating-dock{background:rgba(21,21,21,.84)}
+}
 :root[data-theme="dark"] .floating-dock a[href="#crown"][aria-current="location"]{background:rgba(226,114,91,.20);box-shadow:inset 0 0 0 1px rgba(226,114,91,.65)}
 :root[data-theme="dark"] .floating-dock a[href="#code"][aria-current="location"]{background:rgba(169,187,169,.18);box-shadow:inset 0 0 0 1px rgba(169,187,169,.65)}
 :root[data-theme="dark"] .floating-dock a[href="#connect"][aria-current="location"]{background:rgba(214,175,55,.16);box-shadow:inset 0 0 0 1px rgba(214,175,55,.65)}
