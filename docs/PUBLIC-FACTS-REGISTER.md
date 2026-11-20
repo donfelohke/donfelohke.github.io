@@ -1,9 +1,11 @@
 # NAKEBUSEN — Public Facts Register
 
 **Document ID:** NB-PFR-01  
-**Version:** M6 · 10 November 2026  
-**Status:** Publication control  
+**Version:** M7 · 20 November 2026  
+**Status:** Publication control · aligned to current F3L0H constitution  
 **Authority:** @donfelohke
+
+**Shared constitutional authority:** [F3L0H Sovereign Master Corpus](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-SOVEREIGN-MASTER-CORPUS-2026-11-20.md). This register controls approved public facts; it does not redefine the four practice domains.
 
 This register controls factual claims used on the website, service catalogue, proposals and public profiles.
 
@@ -19,17 +21,17 @@ This register controls factual claims used on the website, service catalogue, pr
 
 | ID | Claim | Class | Publication rule |
 |---|---|---|---|
-| PF-001 | NAKEBUSEN is the parent enterprise | F2 | Canonical |
+| PF-001 | NAKEBUSEN is the ROOT domain: grounded physical practice, beauty, heritage, craft and enterprise; it is the only live commercial practice | F2 | Canonical under the 2026-11-20 F3L0H constitution; not a parent of the other practice domains |
 | PF-002 | ONLY NAKEBUSEN TRANSACTS | F2 | Canonical commercial boundary |
-| PF-003 | LOCS · CROWN and DIGITAL · WARENA are the two customer paths | F2 | Canonical |
+| PF-003 | NAKEBUSEN may present LOCS and DIGITAL service paths; all commercial enquiries, agreements and transactions remain through NAKEBUSEN | F2 | Canonical commercial boundary; WARENA is a separate capability domain, not a NAKEBUSEN sub-brand |
 | PF-004 | Lockup: NAKEBUSEN Locs ° Powered by WARENA | F2 | Preserve exact degree sign |
 | PF-005 | Supporting signature: @donfelohke · #HisGenjeness | F2 | Use where appropriate |
 | PF-006 | Homepage headline: Your Beauty ° Your Way. | F2 | Approved 9 November 2026; supersedes the previous editorial-first H1 |
-| PF-007 | Homepage supporting statement: NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh), bringing together natural loc care, practical computing and creative technology. | F2 | Approved unified hero copy, 10 November 2026 |
+| PF-007 | Homepage supporting statement: NAKEBUSEN is the ROOT practice for natural loc care and grounded enterprise; practical technology services, where offered, are provided through NAKEBUSEN with WARENA capability. | F2 | Current public-copy direction; preserve founder attribution separately and do not imply WARENA is a sub-brand |
 | PF-008 | NAKEBUSEN adopted meaning “Beautiful” in Turkana | F4 | Attribute as founder-supplied interpretation pending linguistic verification |
 | PF-009 | GENJE ZA WARENA interpreted as “THE FIRE OF THE FORMIDABLE” | F4 | Brand interpretation only; not verified etymology |
 | PF-010 | GENJE is not a separate commercial division | F2 | Canonical |
-| PF-011 | WARENA Systems belongs within NAKEBUSEN DIGITAL | F2 | Not a separate checkout |
+| PF-011 | WARENA is the distinct CAPABILITY domain; it may provide technical capability for NAKEBUSEN digital-service engagements | F2 | Not a NAKEBUSEN subdomain, parent enterprise or separate checkout; all commercial transactions remain through NAKEBUSEN |
 | PF-012 | IKAI is research, not a released product | F2 | Label research / WIP |
 | PF-013 | Location: Eldoret Town, Uasin Gishu County, Kenya | F1 | Do not invent a street address or map pin |
 | PF-014 | Phone: +254 719 635 415 | F1 | Verify before campaigns |
@@ -65,3 +67,8 @@ This register controls factual claims used on the website, service catalogue, pr
 8. The Sisterlocs Retie label does not itself imply trademark affiliation, official endorsement or certification.
 
 **Evidence discipline:** F1 means supplied by the operator, not independently verified.
+
+
+## Constitutional alignment — 2026-11-20
+
+The four practice domains are NAKEBUSEN / ROOT, IKAI / MIRROR, GENJE / EXPRESSION and WARENA / CAPABILITY. F3L0H is the overarching human authorship identity, not a fifth domain. **ONLY NAKEBUSEN TRANSACTS.** Historical claims in this register that describe NAKEBUSEN as the parent enterprise or WARENA as a sub-brand are superseded by PF-001, PF-003 and PF-011 above. This register remains the source of record for approved public facts such as service prices, contact details and payment wording.
