@@ -20,4 +20,6 @@ for (const [index, match] of scripts.entries()) {
 if (checked === 0) throw new Error("No executable inline scripts were checked");
 const application = fs.readFileSync("assets/js/nakebusen-experience.js", "utf8");
 new vm.Script(application, { filename: "assets/js/nakebusen-experience.js" });
-console.log("PASS: JavaScript syntax checked in " + checked + " inline script(s) and the external application script.");
+const research = fs.readFileSync("assets/js/research-experience.js", "utf8");
+new vm.Script(research, { filename: "assets/js/research-experience.js" });
+console.log("PASS: JavaScript syntax checked in " + checked + " inline script(s) and both external application scripts.");
