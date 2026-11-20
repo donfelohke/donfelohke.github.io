@@ -86,6 +86,8 @@ Run after the default-language policy decision is resolved.
 - [ ] No flash or transient unreadable state makes content inaccessible during load or preference changes.
 - [ ] Reduced-motion preference is respected wherever transitions or motion are used.
 - [ ] Contrast of text, links, borders, focus indicators and controls is checked against WCAG 2.2 AA targets.
+- [ ] Footer muted/copyright text is readable against the dark footer surface in both light and dark themes.
+- [ ] Service-card hover feedback is visible without spatial movement; reduced-motion mode suppresses transitions and transforms.
 
 ## F. Keyboard, semantics and assistive technology
 
