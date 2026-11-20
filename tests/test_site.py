@@ -125,6 +125,7 @@ check("--glass-blur:20px" in css and "--glass-saturate:150%" in css, "Glass mate
 check("prefers-reduced-transparency:reduce" in css, "Reduced-transparency preference is respected")
 root_blocks = re.findall(r":root\{([^}]*)\}", css)
 dark_blocks = re.findall(r':root\[data-theme="dark"\]\{([^}]*)\}', css)
+check(len(root_blocks) == 1 and len(dark_blocks) == 1, "Light and dark design tokens have one canonical definition each")
 light_root = next(block for block in reversed(root_blocks) if "--sage-text:" in block)
 dark_root = next(block for block in reversed(dark_blocks) if "--sage-text:" in block)
 def css_token(block, name):
