@@ -163,32 +163,48 @@ These are targets, not a claim that all gates currently pass.
 
 ---
 
-## 8. Implementation phases
+## 8. Implementation phases and current candidate
 
-| Phase | Work | Completion condition |
-|-------|------|----------------------|
-| **1** | Audit current source + live presentation | Baseline documented (this file + prior audits) |
-| **2** | Finalise sitemap + content model | Every future page has owner + audience |
-| **3** | Map GitHub docs → publication register | No invented facts; no duplicate sources of truth |
-| **4** | Domain / knowledge pages (static) | Substantive curated content; homepage still primary conversion |
-| **5** | Validation tooling extension | Automated checks pass on candidate branch |
-| **6** | Accessibility + device testing | Gate list signed |
-| **7** | Deploy + live inspection | Public site verified against reviewed commit |
+| Phase | Work | Current evidence |
+|-------|------|------------------|
+| **1** | Audit current source and existing publication architecture | Existing site, repository roles and canonical documents inspected |
+| **2** | Finalise content model | Project-record format established in `docs/PROJECT_TEMPLATE.md` |
+| **3** | Map canonical documents to publication decisions | Publication register expanded with explicit YES / NO / DEFERRED decisions |
+| **4** | Curated static publication page | `work/index.html` and `assets/css/work.css` created on a feature branch |
+| **5** | Validation tooling | Existing dependency-free tests extended to cover the homepage and Work page; CI result pending pull request |
+| **6** | Accessibility and device testing | Semantic structure, keyboard focus, responsive rules and reduced-motion support included; rendered device inspection still pending |
+| **7** | Deploy and live inspection | Not performed; requires review, merge and separately authorised deployment |
 
-**Production changes require separate explicit authorisation** after the specification is accepted.
+### Seed project records
+
+Three Markdown publication records have been seeded from their specialist source documents:
+
+- [REFLECTION±](./projects/REFLECTION-PLUS-MINUS.md) — IKAI.
+- [Sovereign Movement Systems](./projects/SOVEREIGN-MOVEMENT-SYSTEMS.md) — WARENA.
+- [GENJE Movement IR](./projects/GENJE-MOVEMENT-IR.md) — GENJE.
+
+The Work page presents concise, status-labelled summaries and links to canonical specialist sources. The records are editorial summaries, not implementation evidence.
+
+### Change boundary
+
+The candidate work is isolated on `feat/feloh-living-practice-atlas-2026-11-22`. The production homepage `index.html` and `assets/css/site.css` are unchanged. No new repository, framework, JavaScript runtime, CMS, payment integration or customer data collection has been introduced.
+
+The candidate sitemap includes `/work/`; it becomes a live sitemap entry only when the page is reviewed and published.
 
 ---
 
-## 9. Immediate next engineering step (not yet authorised)
+## 9. Remaining release work
 
-1. Create `docs/PUBLICATION-REGISTER.md` listing each candidate public entry with: slug, domain, status, canonical URL, last review, publish yes/no.  
-2. Seed 3–5 project records from existing Corpus/WARENA/IKAI docs (REFLECTION±, Sovereign Movement Systems, etc.) **as Markdown only**.  
-3. Keep `index.html` commercial path intact until Phase 4 review.
+1. Review the feature-branch page and publication records.
+2. Require the pull-request validation workflow to pass.
+3. Inspect rendered layout at small Android, tablet and desktop widths; check keyboard navigation, contrast, reduced motion and all links.
+4. Obtain explicit approval before merge or production publication.
+5. After publication, verify the live route and sitemap against the reviewed commit.
 
 ---
 
 ## 10. Non-claims
 
-This document does not alter `index.html`, does not enable payments, does not merge open PRs, and does not assert that multi-page routes already exist on the live site.
+The Work page is not live merely because it exists on a feature branch. No live deployment, rendered browser inspection, accessibility conformance audit or independent verification of research claims is asserted. `index.html` remains unchanged. No payment or booking behaviour is added.
 
 *End of specification.*
