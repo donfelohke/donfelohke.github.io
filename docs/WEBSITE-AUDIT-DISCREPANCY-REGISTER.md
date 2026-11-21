@@ -1,3 +1,5 @@
+> **Historical audit notice — 2026-11-21:** This register records a source baseline from 18 November 2026. Its original Section 4 invariants include the pre-2026-11-20 parent-enterprise hierarchy and are superseded by the current four-domain constitution in the [F3L0H Sovereign Master Corpus](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-SOVEREIGN-MASTER-CORPUS-2026-11-20.md). Preserve the original audit findings and baseline commit as historical evidence; do not use the old hierarchy as current policy. Current service prices and public claims are governed by the [Public Facts Register](PUBLIC-FACTS-REGISTER.md) and [Service Catalogue](SERVICE-CATALOG.md).
+
 # NAKEBUSEN Website — Phase 1 Discrepancy Register
 
 **Document ID:** NB-WADR-01  

@@ -1,3 +1,5 @@
+> **Current constitutional alignment — 2026-11-21:** This document is retained as a dated historical baseline. Its earlier enterprise hierarchy and brand architecture are superseded by the four-domain constitution: F3L0H is the overarching human authorship identity; NAKEBUSEN / ROOT, IKAI / MIRROR, GENJE / EXPRESSION and WARENA / CAPABILITY are the four practice domains. **ONLY NAKEBUSEN TRANSACTS.** Use the [F3L0H Sovereign Master Corpus](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-SOVEREIGN-MASTER-CORPUS-2026-11-20.md) for shared architecture, the [Public Facts Register](PUBLIC-FACTS-REGISTER.md) for public factual claims and the [Service Catalogue](SERVICE-CATALOG.md) for current service names and prices. Historical wording below is preserved for provenance, not as current policy.
+
 # NAKEBUSEN — Brand Research and Validation Register
 
 **Version:** M1 · 30 October 2026  
