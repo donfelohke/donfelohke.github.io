@@ -147,6 +147,7 @@ class SiteTests(unittest.TestCase):
             'href="#ikai"', 'href="#genje"', 'href="#feloh-corpus"',
         ):
             self.assertIn(anchor, HTML)
+        self.assertIn("FELOH CORPUS</a>", HTML)
         self.assertIn("GitHub · @donfelohke", HTML)
         self.assertIn("Back to top", HTML)
 
