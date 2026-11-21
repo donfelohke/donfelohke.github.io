@@ -4,7 +4,7 @@
  color-scheme:light dark;
  --canvas:#F3EEE4;--surface:#FFFFFF;--soft:#E9E1D3;--ink:#242923;--muted:#626B58;
  --forest:#173D32;--clay:#A34F3B;--ochre:#8B5E16;--line:rgba(36,41,35,.18);
- --action:#173D32;--action-ink:#F3EEE4;--focus:#102D25;
+ --action:#173D32;--action-ink:#F3EEE4;--focus:#102D25;--price:#173D32;
  --glass-top:rgba(23,61,50,.92);--glass-dock:rgba(25,29,26,.94);--glass-border:rgba(255,255,255,.22);
  --serif:Georgia,"Times New Roman",serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Consolas,monospace;
@@ -15,7 +15,7 @@
  :root{
   --canvas:#000000;--surface:#151515;--soft:#080808;--ink:#F2EFEA;--muted:#B8B0A5;
   --forest:#033500;--clay:#E2725B;--ochre:#D4AF37;--line:rgba(242,239,234,.2);
-  --action:#D4AF37;--action-ink:#151515;--focus:#D4AF37;
+  --action:#D4AF37;--action-ink:#151515;--focus:#D4AF37;--price:#D4AF37;
   --glass-top:rgba(3,53,0,.93);--glass-dock:rgba(15,17,15,.95);--glass-border:rgba(242,239,234,.2);
  }
 }
@@ -54,7 +54,7 @@ h2{margin:.4rem 0 0;font:500 clamp(2.5rem,6vw,4.5rem)/1.02 var(--serif);letter-s
 .service-card-featured{border-top-color:var(--ochre)}
 .service-index{margin:0 0 1.2rem;color:var(--muted);font-size:.65rem}
 .service-card h3{min-height:2.8em;margin:0;font:600 clamp(1.45rem,2vw,1.8rem)/1.1 var(--serif)}
-.price{margin:1.2rem 0 .8rem;color:var(--forest);font:700 clamp(1.8rem,3vw,2.25rem)/1 var(--mono);letter-spacing:-.06em}
+.price{margin:1.2rem 0 .8rem;color:var(--price);font:700 clamp(1.8rem,3vw,2.25rem)/1 var(--mono);letter-spacing:-.06em}
 .service-description{flex:1;margin:0 0 1.5rem;color:var(--muted);font-size:.92rem}
 .button-service{width:100%;min-height:48px;padding-inline:.8rem;background:var(--forest);color:#F3EEE4;font-size:.84rem;text-align:center}
 .trust-panel{display:grid;grid-template-columns:minmax(13rem,.75fr) minmax(0,1.25fr);gap:2rem;margin-top:2rem;padding:clamp(1.3rem,3vw,2rem);border:1px solid var(--line);border-radius:var(--radius);background:var(--canvas)}
