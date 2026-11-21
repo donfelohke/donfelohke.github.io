@@ -115,12 +115,18 @@ class SiteTests(unittest.TestCase):
 
     def test_domain_sections_and_hierarchy(self):
         expected = [
-            "nakebusen", "services", "warena", "don-feloh",
+            "nakebusen", "services", "don-feloh", "warena",
             "ikai", "genje", "feloh-corpus", "kiswahili",
         ]
         positions = [HTML.index(f'id="{section}"') for section in expected]
         self.assertEqual(sorted(positions), positions)
         self.assertIn("WARENA is the distinct CAPABILITY domain", HTML)
+        self.assertIn("Four distinct practices. One connected body of work.", HTML)
+        self.assertIn('class="practice-grid"', HTML)
+        for domain_anchor in ("#services", "#warena", "#ikai", "#genje"):
+            self.assertIn(f'href="{domain_anchor}"', HTML)
+        self.assertIn("How the work connects", HTML)
+        self.assertIn("FELOH Corpus keeps shared knowledge", HTML)
         self.assertIn("not a NAKEBUSEN sub-brand", HTML)
         self.assertIn("IKAI is a research track", HTML)
         self.assertIn("GENJE", HTML)
