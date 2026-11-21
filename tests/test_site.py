@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dependency-free publication and architecture checks for NAKEBUSEN."""
+"""Dependency-free publication and architecture checks for the Don Feloh site."""
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
@@ -23,6 +23,7 @@ class DocumentParser(HTMLParser):
         self.h1_count = 0
         self.landmarks = set()
         self.heading_levels = []
+        self.section_ids = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -30,6 +31,8 @@ class DocumentParser(HTMLParser):
             if attrs["id"] in self.ids:
                 self.duplicate_ids.append(attrs["id"])
             self.ids.add(attrs["id"])
+            if tag == "section":
+                self.section_ids.append(attrs["id"])
         if tag == "a" and attrs.get("href"):
             self.links.append(attrs["href"])
         if tag == "script":
@@ -89,6 +92,16 @@ class SiteTests(unittest.TestCase):
                 target = (ROOT / path.lstrip("/")).resolve()
                 self.assertTrue(target.exists(), f"Missing local link target: {href}")
 
+    def test_search_and_conversion_first_hero(self):
+        self.assertIn('<title>NAKEBUSEN Loc Care in Eldoret | Don Feloh</title>', HTML)
+        self.assertIn('name="description" content="Natural loc care in Eldoret Town, Kenya.', HTML)
+        self.assertIn('<h1 id="page-title">Natural Loc Care in Eldoret.</h1>', HTML)
+        self.assertIn('class="hero-service-list"', HTML)
+        for anchor in ("#service-retouch", "#service-sisterlocs", "#service-artificial"):
+            self.assertIn(f'href="{anchor}"', HTML)
+            self.assertIn(f'id="{anchor[1:]}"', HTML)
+        self.assertIn("Your Beauty", HTML)
+
     def test_canonical_service_facts(self):
         for phrase in (
             "Your Beauty", "Retouch &amp; Styling", "Sisterlocs Retie",
@@ -100,34 +113,60 @@ class SiteTests(unittest.TestCase):
         self.assertIn("An enquiry does not confirm a booking.", HTML)
         self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
 
-    def test_business_and_research_boundaries(self):
-        self.assertIn("WARENA is a distinct capability domain.", HTML)
-        self.assertIn("IKAI is not a released product.", HTML)
+    def test_domain_sections_and_hierarchy(self):
+        expected = [
+            "nakebusen", "services", "warena", "don-feloh",
+            "ikai", "genje", "feloh-corpus", "kiswahili",
+        ]
+        positions = [HTML.index(f'id="{section}"') for section in expected]
+        self.assertEqual(sorted(positions), positions)
+        self.assertIn("WARENA is a distinct technical capability domain", HTML)
+        self.assertIn("not a second live commercial brand", HTML)
+        self.assertIn("IKAI is a research track", HTML)
         self.assertIn("GENJE", HTML)
         self.assertIn("FELOH Corpus", HTML)
+        self.assertNotIn("Enquire about a technical project", HTML)
+
+    def test_corpus_author_and_footer_roles(self):
+        self.assertIn("Knowledge governance, documentation, research provenance and source repositories.", HTML)
+        self.assertIn("Founder · CTO · Loctician · Creative Technologist", HTML)
+        self.assertIn("Contact directory", HTML)
+        self.assertIn("NAKEBUSEN</strong> · <strong>WARENA</strong> · <strong>DON FELOH", HTML)
+        self.assertIn("Business information and service payments belong to NAKEBUSEN.", HTML)
+        self.assertIn("NAKEBUSEN · LOC CARE", HTML)
+        self.assertIn("Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya", HTML)
+
+    def test_business_and_research_boundaries(self):
+        self.assertIn("IKAI is a research track, not a released product", HTML)
+        self.assertIn("GENJE is a creative practice", HTML)
         self.assertNotIn("braiding service", HTML.lower())
         self.assertNotIn("shaving service", HTML.lower())
 
     def test_contact_payment_and_support(self):
         for phrase in (
             "https://wa.me/254719635415", "tel:+254719635415",
-            "mailto:mela9ine@proton.me", "Till 3511456",
+            "mailto:mela9ine@proton.me", "3511456",
             "FELIX LWOVA", "Never share your M-PESA PIN",
             "Support Us", "separate from NAKEBUSEN service payments",
         ):
             self.assertIn(phrase, HTML)
 
     def test_navigation_contract(self):
-        for anchor in ('href="#crown"', 'href="#code"', 'href="#connect"'):
+        for anchor in (
+            'href="#nakebusen"', 'href="#warena"', 'href="#don-feloh"',
+            'href="#ikai"', 'href="#genje"', 'href="#feloh-corpus"',
+        ):
             self.assertIn(anchor, HTML)
-        self.assertIn("GitHub repositories", HTML)
-        self.assertEqual(1, HTML.count("GitHub repositories"))
+        self.assertIn("FELOH CORPUS</a>", HTML)
+        self.assertIn("GitHub · @donfelohke", HTML)
+        self.assertIn("Back to top", HTML)
 
     def test_native_preferences_and_responsive_rules(self):
         self.assertIn("@media(prefers-color-scheme:dark)", CSS)
         self.assertIn("@media(prefers-reduced-motion:reduce)", CSS)
         self.assertIn("@media(prefers-reduced-transparency:reduce)", CSS)
         self.assertIn("min-height:44px", CSS)
+        self.assertIn("scroll-snap-type:x proximity", CSS)
         self.assertIn("backdrop-filter:blur(20px)", CSS)
         self.assertIn("@media(max-width:760px)", CSS)
 

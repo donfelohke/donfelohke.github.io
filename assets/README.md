@@ -36,9 +36,8 @@ If no asset meets the evidence and rights standard, publish no asset.
 
 Before changing the website, run:
 
-- `python3 tests/test_site.py`
-- `node tests/theme-toggle.test.cjs`
+- `python -m unittest discover -s tests -v`
 
-Review the diff for embedded graphics, image URLs, image social metadata, stale prices, unsupported claims, and accidental asset copies. A passing static test does not prove real-browser rendering or successful deployment; record those separately.
+Review the diff for embedded graphics, image URLs, image social metadata, stale prices, unsupported claims, and accidental asset copies. The public page remains text-only; no graphic favicon, Open Graph image or inline media is permitted. A passing static test does not prove real-browser rendering or successful deployment; record those separately.
 
 The governing principle is: **the website links to Gallery; the website does not display Gallery graphics.**
