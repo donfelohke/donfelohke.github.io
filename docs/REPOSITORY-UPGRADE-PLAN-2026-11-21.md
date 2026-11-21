@@ -1,0 +1,39 @@
+# Repository upgrade plan — 2026-11-21
+
+**Repository:** `donfelohke.github.io`  
+**Primary role:** Public NAKEBUSEN ROOT website  
+**Status:** Upgrade plan; implementation and verification must be evidenced separately.
+
+## Non-negotiable product boundaries
+
+- NAKEBUSEN leads the public experience; WARENA is supporting technical capability.
+- **ONLY NAKEBUSEN TRANSACTS.** IKAI, WARENA and GENJE are not alternative checkout or booking surfaces.
+- Enquiry does not confirm a booking; availability and final terms are agreed directly.
+- Preserve the current approved service facts, starting prices, M-PESA Support Us footer treatment and manual confirmation language. No payment API, STK push, automated verification or fabricated success state.
+- English remains the default; Kiswahili is an optional language path. Do not silently replace or auto-translate approved English copy.
+- Keep the site text-first; Gallery assets are linked, not embedded.
+
+## Upgrade workstreams
+
+1. **Information architecture:** retain the commercial-first, balanced hero; Locs and Digital remain distinct, with Locs primary and Digital secondary. Keep the floating Locs / Digital / Connect navigation and remove redundant controls only after mobile review.
+2. **Visual system:** preserve the Liquid Glass Terminal + Editorial Hybrid direction; forest-green top bar, terracotta/ochre accents, ochre/terracotta Locs cards and forest-green Digital card. Maintain readable contrast, expressive but restrained glass, and reduced-motion support.
+3. **Service accuracy:** validate service names, scope, starting prices, location and enquiry disclosure against the NAKEBUSEN source of record before changing public facts.
+4. **Accessibility:** keyboard navigation, visible focus, semantic landmarks, accessible names, 44px-class touch targets, contrast and reduced-motion behaviour.
+5. **Performance and resilience:** no mandatory third-party runtime, analytics or tracking; graceful operation on low-bandwidth mobile; local assets; no unnecessary dependencies.
+6. **Quality assurance:** run existing build, validation, Playwright and responsive checks; inspect mobile and desktop screenshots; verify all links and language controls.
+7. **Release discipline:** a successful build is not a deployment. Record commit, test evidence, Pages result and post-deployment smoke test.
+
+## Release gates
+
+- No unapproved commercial facts, payment details or claims.
+- No production deployment until the proposed diff and checks are reviewed.
+- Do not introduce JavaScript frameworks or application dependencies as a default; keep the published site lightweight and static.
+- Preserve customer privacy; do not add analytics, pixels or covert capture.
+
+## Immediate sequence
+
+1. Reconcile open website PRs and issue #35 against current `main`.
+2. Audit current HTML/CSS/JS and existing Playwright coverage before redesigning.
+3. Implement the smallest coherent visual/accessibility/performance changes in reviewable commits.
+4. Validate all public facts against NAKEBUSEN and Corpus records.
+5. Deploy only after checks pass; perform a live smoke test.
