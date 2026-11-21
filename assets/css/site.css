@@ -33,15 +33,21 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-off
 .brand-name{font:750 1rem/1.1 var(--sans);letter-spacing:.16em}
 .brand-sub{margin-top:.25rem;color:#E6DCC9;font:.62rem/1.2 var(--mono);letter-spacing:.04em}
 .language-link{min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;color:#F3EEE4;font-size:.82rem}
-.primary-nav{display:flex;gap:.2rem;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;padding:.15rem .65rem .45rem}
-.primary-nav a{flex:0 0 auto;min-height:38px;display:inline-flex;align-items:center;padding:.35rem .7rem;border-radius:999px;color:#F3EEE4;text-decoration:none;font:650 .67rem/1 var(--mono);letter-spacing:.035em}
+.primary-nav{display:flex;gap:.2rem;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scroll-snap-type:x proximity;padding:.15rem .65rem .45rem}
+.primary-nav a{flex:0 0 auto;min-height:44px;display:inline-flex;align-items:center;padding:.45rem .75rem;border-radius:999px;color:#F3EEE4;text-decoration:none;font:650 .67rem/1 var(--mono);letter-spacing:.035em;scroll-snap-align:start}
 .primary-nav a:hover,.primary-nav a:focus-visible{background:rgba(255,255,255,.13)}
 .hero{padding:clamp(11rem,19vw,14rem) 0 clamp(4rem,9vw,7rem)}
 .hero-inner{max-width:61rem}
 .eyebrow,.section-label,.service-index,.status-label{color:var(--clay);font:750 .7rem/1.45 var(--mono);letter-spacing:.12em;text-transform:uppercase}
-.hero h1{max-width:12ch;margin:1.15rem 0 1.4rem;font:500 clamp(3.5rem,10vw,7.8rem)/.94 var(--serif);letter-spacing:-.06em}
-.hero h1 span{color:var(--clay)}
-.hero-copy{max-width:44rem;margin:0;font-size:clamp(1.1rem,2.5vw,1.45rem);line-height:1.5}
+.hero-tagline{margin:1.4rem 0 -.55rem;color:var(--clay);font:750 .78rem/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.hero-tagline span{font-size:1.15em}
+.hero h1{max-width:13ch;margin:1rem 0 1.2rem;font:500 clamp(3.2rem,9vw,7.1rem)/.96 var(--serif);letter-spacing:-.06em}
+.hero-copy{max-width:44rem;margin:0;font-size:clamp(1.1rem,2.5vw,1.35rem);line-height:1.5}
+.hero-service-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.8rem 0 0;padding:0;list-style:none;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hero-service-list a{min-height:76px;display:flex;flex-direction:column;justify-content:center;gap:.3rem;padding:.65rem .2rem;text-decoration:none}
+.hero-service-list a:hover span,.hero-service-list a:focus-visible span{text-decoration:underline}
+.hero-service-list span{color:var(--muted);font-size:.82rem;line-height:1.35}
+.hero-service-list strong{color:var(--price);font:750 clamp(1rem,2vw,1.25rem)/1.2 var(--mono);letter-spacing:-.035em}
 .hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:1rem 1.5rem;margin-top:2rem}
 .button{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.8rem 1.15rem;border:1px solid transparent;border-radius:999px;font-weight:700;line-height:1.25;text-decoration:none}
 .button-primary{background:var(--action);color:var(--action-ink)}
@@ -90,7 +96,7 @@ h2{margin:.4rem 0 0;font:500 clamp(2.6rem,6vw,4.8rem)/1.02 var(--serif);letter-s
 .author-copy>p:first-child{margin-top:0}
 .author-copy h3{margin-top:2rem}
 .contact-list{display:grid;gap:.5rem;margin-top:1rem}
-.contact-list a{width:fit-content;min-height:36px;font-weight:700}
+.contact-list a{width:fit-content;min-height:44px;display:inline-flex;align-items:center;font-weight:700}
 .ikai-section{background:var(--soft)}
 .genje-section{background:var(--canvas)}
 .research-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(2rem,7vw,6rem)}
@@ -151,7 +157,10 @@ h2{margin:.4rem 0 0;font:500 clamp(2.6rem,6vw,4.8rem)/1.02 var(--serif);letter-s
  .service-grid{grid-template-columns:1fr}
  .service-card h3{min-height:0}
  .hero{padding-top:11rem}
- .hero h1{max-width:10ch}
+ .hero h1{max-width:11ch}
+ .hero-service-list{grid-template-columns:1fr;gap:0}
+ .hero-service-list li+li{border-top:1px solid var(--line)}
+ .hero-service-list a{min-height:58px;flex-direction:row;align-items:center;justify-content:space-between;gap:1rem}
  .domain-layout,.author-layout,.research-layout,.corpus-layout{gap:1.5rem}
  .primary-nav{padding-inline:.5rem}
 }
@@ -160,6 +169,7 @@ h2{margin:.4rem 0 0;font:500 clamp(2.6rem,6vw,4.8rem)/1.02 var(--serif);letter-s
  .hero-actions{align-items:stretch;flex-direction:column}
  .hero-actions .button{width:100%}
  .floating-dock a{font-size:.66rem}
+ .primary-nav a{padding-inline:.65rem}
  .footer-bottom{grid-template-columns:1fr}
  .footer-bottom a{grid-column:1;grid-row:auto}
 }
