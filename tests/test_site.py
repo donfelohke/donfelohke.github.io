@@ -92,6 +92,16 @@ class SiteTests(unittest.TestCase):
                 target = (ROOT / path.lstrip("/")).resolve()
                 self.assertTrue(target.exists(), f"Missing local link target: {href}")
 
+    def test_search_and_conversion_first_hero(self):
+        self.assertIn('<title>NAKEBUSEN Loc Care in Eldoret | Don Feloh</title>', HTML)
+        self.assertIn('name="description" content="Natural loc care in Eldoret Town, Kenya.', HTML)
+        self.assertIn('<h1 id="page-title">Natural Loc Care in Eldoret.</h1>', HTML)
+        self.assertIn('class="hero-service-list"', HTML)
+        for anchor in ("#service-retouch", "#service-sisterlocs", "#service-artificial"):
+            self.assertIn(f'href="{anchor}"', HTML)
+            self.assertIn(f'id="{anchor[1:]}"', HTML)
+        self.assertIn("Your Beauty", HTML)
+
     def test_canonical_service_facts(self):
         for phrase in (
             "Your Beauty", "Retouch &amp; Styling", "Sisterlocs Retie",
@@ -156,6 +166,7 @@ class SiteTests(unittest.TestCase):
         self.assertIn("@media(prefers-reduced-motion:reduce)", CSS)
         self.assertIn("@media(prefers-reduced-transparency:reduce)", CSS)
         self.assertIn("min-height:44px", CSS)
+        self.assertIn("scroll-snap-type:x proximity", CSS)
         self.assertIn("backdrop-filter:blur(20px)", CSS)
         self.assertIn("@media(max-width:760px)", CSS)
 
