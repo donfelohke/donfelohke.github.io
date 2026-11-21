@@ -37,7 +37,7 @@ The source audit inspected the actual `main` files:
 5. The hero's Locs and Digital overview panels are descriptive, not links. The hero already has a loc-care WhatsApp action, a Digital anchor action and a Research link. Do not add competing navigation controls without checking the one-dock navigation model and existing tests.
 6. The Open Graph image is absent. A social image is not part of this implementation until a genuine, approved, permission-cleared asset exists.
 7. The font stack names Cormorant Garamond, Inter and JetBrains Mono, but no font files are loaded. The approved standards require system fallbacks and prohibit external font CDNs. Do not claim those named fonts are loaded.
-8. A documentation inconsistency exists: `docs/NATIVE-EXPERIENCE-SYSTEM.md` describes Artificial Locs Installation as KES 3,500+, while `docs/PUBLIC-FACTS-REGISTER.md` and current site tests establish KES 3,500 (from KES 3,500). The Public Facts Register and current `tests/test_site.py` assertion govern publication. Resolve the stale documentation separately; do not silently change the public price.
+8. The earlier audit note about `docs/NATIVE-EXPERIENCE-SYSTEM.md` was inaccurate: that document already states Artificial Locs Installation as **KES 3,500**, without a plus sign, matching `docs/PUBLIC-FACTS-REGISTER.md`, `docs/SERVICE-CATALOG.md` and the current site test assertion. The stale `KES 3,500+` notation in `docs/NAV-STRUCTURE.md` and `docs/UI-UX-PRODUCT-SPEC.md` is corrected in the 2026-11-21 documentation reconciliation. The public price is unchanged.
 
 ## 3. Approved visual direction to implement
 
