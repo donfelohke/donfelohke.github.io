@@ -8,8 +8,12 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 HTML_PATH = ROOT / "index.html"
 CSS_PATH = ROOT / "assets/css/site.css"
+WORK_HTML_PATH = ROOT / "work/index.html"
+WORK_CSS_PATH = ROOT / "assets/css/work.css"
 HTML = HTML_PATH.read_text(encoding="utf-8")
 CSS = CSS_PATH.read_text(encoding="utf-8")
+WORK_HTML = WORK_HTML_PATH.read_text(encoding="utf-8")
+WORK_CSS = WORK_CSS_PATH.read_text(encoding="utf-8")
 
 
 class DocumentParser(HTMLParser):
@@ -48,49 +52,63 @@ class DocumentParser(HTMLParser):
             self.heading_levels.append(int(tag[1]))
 
 
+def parse_document(source):
+    parser = DocumentParser()
+    parser.feed(source)
+    parser.close()
+    return parser
+
+
 class SiteTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.parser = DocumentParser()
-        cls.parser.feed(HTML)
-        cls.parser.close()
+        cls.parser = parse_document(HTML)
+        cls.work_parser = parse_document(WORK_HTML)
 
-    def test_one_public_html_document(self):
-        pages = [p for p in ROOT.rglob("*.html") if ".git" not in p.parts]
-        self.assertEqual([HTML_PATH], pages)
+    def test_expected_static_html_documents(self):
+        pages = sorted(p.relative_to(ROOT).as_posix() for p in ROOT.rglob("*.html") if ".git" not in p.parts)
+        self.assertEqual(["index.html", "work/index.html"], pages)
 
     def test_no_javascript_or_node_runtime(self):
-        self.assertEqual([], self.parser.scripts)
-        self.assertEqual([], self.parser.inline_handlers)
-        self.assertNotIn("javascript:", HTML.lower())
+        for parser in (self.parser, self.work_parser):
+            self.assertEqual([], parser.scripts)
+            self.assertEqual([], parser.inline_handlers)
+        for source in (HTML, WORK_HTML):
+            self.assertNotIn("javascript:", source.lower())
         self.assertFalse((ROOT / "package.json").exists())
         self.assertFalse((ROOT / "node_modules").exists())
         self.assertFalse((ROOT / "assets/js").exists())
         runtime_suffixes = {".js", ".mjs", ".cjs"}
         self.assertFalse([p for p in ROOT.rglob("*") if p.is_file() and p.suffix in runtime_suffixes])
 
-    def test_semantic_document(self):
+    def test_semantic_documents(self):
+        for parser, source in ((self.parser, HTML), (self.work_parser, WORK_HTML)):
+            self.assertEqual(1, parser.h1_count)
+            self.assertTrue({"header", "nav", "main", "footer"}.issubset(parser.landmarks))
+            self.assertEqual([], parser.duplicate_ids)
+            for previous, current in zip(parser.heading_levels, parser.heading_levels[1:]):
+                self.assertLessEqual(current - previous, 1)
         self.assertIn('<html lang="en">', HTML)
-        self.assertEqual(1, self.parser.h1_count)
-        self.assertTrue({"header", "nav", "main", "footer"}.issubset(self.parser.landmarks))
-        self.assertEqual([], self.parser.duplicate_ids)
         self.assertIn('lang="sw"', HTML)
         self.assertIn("<details", HTML)
-        for previous, current in zip(self.parser.heading_levels, self.parser.heading_levels[1:]):
-            self.assertLessEqual(current - previous, 1)
+        self.assertIn('<html lang="en">', WORK_HTML)
 
     def test_local_links_and_anchor_targets(self):
-        for href in self.parser.links:
-            if href.startswith("#"):
-                self.assertIn(href[1:], self.parser.ids, f"Missing anchor: {href}")
-                continue
-            parsed = urlparse(href)
-            if parsed.scheme or parsed.netloc or not href:
-                continue
-            path = parsed.path
-            if path:
-                target = (ROOT / path.lstrip("/")).resolve()
-                self.assertTrue(target.exists(), f"Missing local link target: {href}")
+        for source, parser, page in (
+            (HTML, self.parser, HTML_PATH),
+            (WORK_HTML, self.work_parser, WORK_HTML_PATH),
+        ):
+            for href in parser.links:
+                if href.startswith("#"):
+                    self.assertIn(href[1:], parser.ids, f"Missing anchor in {page}: {href}")
+                    continue
+                parsed = urlparse(href)
+                if parsed.scheme or parsed.netloc or not href:
+                    continue
+                path = parsed.path
+                if path:
+                    target = (ROOT / path.lstrip("/")).resolve()
+                    self.assertTrue(target.exists(), f"Missing local link in {page}: {href}")
 
     def test_search_and_conversion_first_hero(self):
         self.assertIn('<title>Don Feloh · F3L0H / FELOH WARENA</title>', HTML)
@@ -173,17 +191,38 @@ class SiteTests(unittest.TestCase):
         self.assertIn("backdrop-filter:blur(20px)", CSS)
         self.assertIn("@media(max-width:760px)", CSS)
         self.assertIn(".digital-panel", CSS)
+        self.assertIn("@media(prefers-color-scheme:dark)", WORK_CSS)
+        self.assertIn("@media(prefers-reduced-motion:reduce)", WORK_CSS)
+        self.assertIn("@media(max-width:760px)", WORK_CSS)
+        self.assertIn("min-height:44px", WORK_CSS)
 
     def test_no_remote_runtime_dependencies(self):
-        self.assertNotIn("fonts.googleapis.com", HTML + CSS)
-        self.assertNotIn("googletagmanager", (HTML + CSS).lower())
-        self.assertNotIn("@import", CSS)
+        combined = HTML + CSS + WORK_HTML + WORK_CSS
+        self.assertNotIn("fonts.googleapis.com", combined)
+        self.assertNotIn("googletagmanager", combined.lower())
+        self.assertNotIn("@import", CSS + WORK_CSS)
         self.assertTrue(CSS_PATH.exists())
+        self.assertTrue(WORK_CSS_PATH.exists())
         self.assertTrue((ROOT / "assets/favicon.svg").exists())
 
-    def test_sitemap_only_lists_homepage(self):
+    def test_work_atlas_content_and_boundaries(self):
+        for phrase in (
+            "A body of work", "NAKEBUSEN", "WARENA", "IKAI", "GENJE",
+            "FELOH Corpus", "REFLECTION±", "Sovereign Movement Systems",
+            "Movement Intermediate Representation", "ONLY NAKEBUSEN TRANSACTS",
+            "Documentation is not deployment.",
+        ):
+            self.assertIn(phrase, WORK_HTML)
+        self.assertIn('rel="canonical" href="https://donfelohke.github.io/work/"', WORK_HTML)
+        self.assertIn('href="/#crown"', WORK_HTML)
+        self.assertIn('href="/#connect"', WORK_HTML)
+        self.assertNotIn("<script", WORK_HTML.lower())
+        self.assertNotIn("fonts.googleapis.com", WORK_HTML)
+
+    def test_sitemap_lists_published_static_routes(self):
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
         self.assertIn("https://donfelohke.github.io/", sitemap)
+        self.assertIn("https://donfelohke.github.io/work/", sitemap)
         self.assertNotIn("/research/", sitemap)
 
 
