@@ -1,189 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#173D32">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<script>
-/* Resolve the saved/system theme before the main stylesheet paints. */
-(function(){
-  var root=document.documentElement;
-  var selected=null;
-  try{
-    var saved=localStorage.getItem('nakebusen-theme');
-    if(saved==='light'||saved==='dark')selected=saved;
-  }catch(error){}
-  if(!selected){
-    try{selected=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
-    catch(error){selected='light';}
-  }
-  root.setAttribute('data-theme',selected);
-  var meta=document.querySelector('meta[name="theme-color"]');
-  if(meta)meta.setAttribute('content',selected==='dark'?'#000000':'#173D32');
-})();
-</script>
-<meta name="description" content="NAKEBUSEN is a beauty and digital-services practice in Eldoret Town, Kenya, bringing together natural loc care, practical computing and creative technology.">
+<meta name="theme-color" content="#173D32">
+<meta name="description" content="Natural loc care in Eldoret Town, Kenya. Explore Retouch & Styling, Sisterlocs Retie and Artificial Locs Installation, with clear starting prices and direct WhatsApp enquiries.">
 <link rel="canonical" href="https://donfelohke.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="NAKEBUSEN">
 <meta property="og:title" content="NAKEBUSEN — Your Beauty ° Your Way.">
-<meta property="og:description" content="NAKEBUSEN is a beauty and digital-services practice in Eldoret Town, Kenya, bringing together natural loc care, practical computing and creative technology.">
+<meta property="og:description" content="Natural loc care in Eldoret Town, Kenya. Clear service information, starting prices and direct enquiries.">
 <meta property="og:url" content="https://donfelohke.github.io/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NAKEBUSEN — Your Beauty ° Your Way.">
-<meta name="twitter:description" content="Beauty and loc care, practical computing and creative technology in Eldoret Town, Kenya. Enquire directly with NAKEBUSEN.">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"NAKEBUSEN","url":"https://donfelohke.github.io/","telephone":"+254719635415","email":"mela9ine@proton.me","areaServed":[{"@type":"City","name":"Eldoret"}]}</script>
+<meta name="twitter:description" content="Natural loc care in Eldoret Town, Kenya.">
 <title>NAKEBUSEN Loc Care in Eldoret, Kenya · Your Beauty ° Your Way</title>
-<link rel="stylesheet" href="assets/css/nakebusen-foundation.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
-<header>
-<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
-<div class="wrap nav">
-<a class="brand" href="#top">NAKEBUSEN<span class="brand-sub">Locs ° Powered by WARENA</span></a>
-<div class="nav-right">
-<button type="button" id="language-toggle" aria-label="Switch language to Kiswahili" title="Language"><span class="toggle-icon" aria-hidden="true">EN</span></button>
-<button type="button" id="theme-toggle" aria-label="Switch to dark theme" title="Theme"><span class="toggle-icon" aria-hidden="true">◐</span></button>
-</div>
-</div>
-</header>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar"><div class="topbar-inner">
+<a class="brand" href="#top"><span class="brand-name">NAKEBUSEN</span><span class="brand-sub">Locs ° Powered by WARENA</span></a>
+<a class="language-link" href="#kiswahili" lang="sw">Kiswahili ↓</a>
+</div></header>
 <main id="main">
-<section class="hero" id="top" aria-labelledby="page-title">
-<div class="wrap">
-<p class="eyebrow" data-i18n="eyebrow">NAKEBUSEN · BEAUTY &amp; DIGITAL · ELDORET, KENYA.</p>
-<h1 id="page-title" data-i18n="tagline">Your Beauty ° Your Way.</h1>
-<p class="lead" data-i18n="heroLead">NAKEBUSEN is a beauty and digital-services practice founded by Felix Lwova (Don Feloh), bringing together natural loc care, practical computing and creative technology.</p>
-<div class="actions">
-<a class="btn btn-fill" data-wa-purpose="loc" href="https://wa.me/254719635415" data-i18n="heroEnquire">WhatsApp — Enquire about loc care</a>
-<a class="btn" href="#crown" data-i18n="heroDigitalLink">Explore LOCS services</a>
+<section class="hero" id="top" aria-labelledby="page-title"><div class="container hero-inner">
+<p class="eyebrow">NAKEBUSEN · LOC CARE · ELDORET, KENYA</p>
+<h1 id="page-title">Your Beauty ° Your Way.</h1>
+<p class="hero-copy">Natural loc care in Eldoret Town, with retouching, styling, Sisterlocs retie and artificial loc installation.</p>
+<div class="hero-actions">
+<a class="button button-primary" href="https://wa.me/254719635415?text=Hello%20NAKEBUSEN%20%E2%80%94%20I%27m%20enquiring%20about%20loc%20care.%20I%27d%20like%20to%20discuss%20my%20requirements.">Enquire about loc care ↗</a>
+<a class="text-link" href="#crown">Explore LOCS services ↓</a>
 </div>
-<div class="hero-overview">
-<div class="hero-path hero-path-locs"><strong data-i18n="overviewBeautyTitle">LOCS · CROWN</strong><span data-i18n="overviewBeauty">Natural loc maintenance, retouching, styling, Sisterlocs retie and artificial loc installation.</span></div>
-<div class="hero-path hero-path-digital"><strong data-i18n="overviewDigitalTitle">DIGITAL · WARENA CAPABILITY</strong><span data-i18n="overviewDigital">GNU/Linux, computer support, networking and local-first infrastructure. Freedom Is a System.</span></div>
-<div class="hero-path hero-path-research"><strong data-i18n="overviewResearchTitle">RESEARCH &amp; CREATIVE</strong><span data-i18n="overviewResearch">IKAI · GENJE · FELOH Corpus — reflective computing, embodied practice and creative technology. Research and knowledge domains, not services for purchase.</span><a href="/research/" data-i18n="researchExplore">Explore research</a></div>
+<p class="location">Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya</p>
+<p class="hero-note">A grounded beauty practice, with practical technology capability and independent creative research beyond the service catalogue.</p>
+</div></section>
+
+<section class="section locs-section" id="crown" aria-labelledby="crown-title"><div class="container">
+<p class="section-label">01 / LOCS · CROWN</p>
+<div class="section-heading"><h2 id="crown-title">Your Crown. Your Craft.</h2><p>Care and maintenance for the locs you wear. Explore the services, understand the starting prices and enquire directly about the work you need.</p></div>
+<div class="service-grid">
+<article class="service-card"><p class="service-index">01 · MAINTENANCE</p><h3>Retouch &amp; Styling</h3><p class="price">KES 700+</p><p class="service-description">Refresh and maintain your existing locs with retouching and styling. Final scope depends on your loc condition and the work required.</p><a class="button button-service" href="https://wa.me/254719635415?text=Hello%20NAKEBUSEN%20%E2%80%94%20I%27m%20enquiring%20about%20Retouch%20%26%20Styling.">Enquire about this service ↗</a></article>
+<article class="service-card service-card-featured"><p class="service-index">02 · SISTERLOCS</p><h3>Sisterlocs Retie</h3><p class="price">KES 1,500+</p><p class="service-description">Careful retightening for established Sisterlocs. Share their current condition and your maintenance needs when enquiring.</p><a class="button button-service" href="https://wa.me/254719635415?text=Hello%20NAKEBUSEN%20%E2%80%94%20I%27m%20enquiring%20about%20Sisterlocs%20Retie.">Enquire about this service ↗</a></article>
+<article class="service-card"><p class="service-index">03 · INSTALLATION</p><h3>Artificial Locs Installation</h3><p class="price">KES 3,500</p><p class="service-description">Artificial loc installation. The method, materials and final scope are agreed before work begins.</p><a class="button button-service" href="https://wa.me/254719635415?text=Hello%20NAKEBUSEN%20%E2%80%94%20I%27m%20enquiring%20about%20Artificial%20Locs%20Installation.">Enquire about this service ↗</a></article>
 </div>
+<div class="trust-panel" id="trust"><div><p class="section-label">A CLEAR ENQUIRY</p><h3>A considered plan, before a booking.</h3></div><div>
+<p>Prices are starting points where indicated. Final cost depends on the service, loc condition, materials and work required.</p>
+<p><strong>An enquiry does not confirm a booking.</strong> Availability and final terms are agreed directly.</p>
+<ol class="steps"><li>Tell us which service you are interested in.</li><li>Share your loc condition, maintenance needs or installation preferences.</li><li>We discuss suitability, availability, scope and final price before a booking is agreed.</li></ol>
+</div></div>
+</div></section>
+
+<section class="section digital-section" id="code" aria-labelledby="digital-title"><div class="container">
+<p class="section-label">02 / DIGITAL · WARENA CAPABILITY</p>
+<div class="digital-layout"><div>
+<h2 id="digital-title">Freedom Is a System.</h2>
+<p class="digital-lead">Practical GNU/Linux, computer and network support, with WARENA providing the systems-engineering capability.</p>
+<p>WARENA is a distinct capability domain. Commercial enquiries, agreements and transactions remain through NAKEBUSEN.</p>
+<a class="button button-light" href="https://wa.me/254719635415?text=Hello%20NAKEBUSEN%20%E2%80%94%20I%27m%20enquiring%20about%20a%20technology%20project.">Discuss a technical project ↗</a>
+</div><div class="capability-panel"><h3>Technical capability</h3>
+<ul><li>GNU/Linux and workstation support</li><li>Computer diagnostics and maintenance</li><li>Small-office networking and Wi-Fi</li><li>Local-first and offline-capable systems</li><li>Infrastructure planning and documented handover</li></ul>
+<p class="scope-note">These are capability areas, not a guarantee that every engagement is immediately available. Feasibility, scope, deliverables, price and support terms are agreed before work begins.</p>
+</div></div>
+<div class="technical-process"><h3>How a technical engagement works</h3><ol><li>Describe the system, issue and outcome you need.</li><li>We assess feasibility and agree the scope, deliverables and price.</li><li>Work proceeds on agreement, with a practical handover of what was completed.</li></ol></div>
+<div class="source-links"><p class="section-label">SOURCE &amp; TECHNICAL WORK</p><p>GitHub is the evidence and exploration layer for source code, technical documentation and project history—not a separate booking or checkout channel.</p>
+<div class="inline-links"><a href="https://github.com/donfelohke/WARENA">WARENA · Systems engineering ↗</a><a href="https://github.com/donfelohke/feloh-corpus">FELOH Corpus · Canon and documentation ↗</a><a href="https://github.com/donfelohke">GitHub portfolio ↗</a></div></div>
+</div></section>
+
+<section class="section research-section" id="research" aria-labelledby="research-title"><div class="container">
+<p class="section-label">03 / RESEARCH &amp; CREATIVE PRACTICE</p><h2 id="research-title">Beyond the service catalogue.</h2>
+<p class="research-intro">Independent inquiry across reflective computing, embodied knowledge, African-centred scholarship and technological freedom. These are research and creative domains—not services or products for purchase.</p>
+<div class="research-grid">
+<article><p class="research-tag">MIRROR · RESEARCH / WIP</p><h3>IKAI</h3><p>Research into reflective environments, mirror systems and human-computer interaction. IKAI is not a released product.</p><a href="https://github.com/donfelohke/Ikai">Explore IKAI research ↗</a></article>
+<article><p class="research-tag">EXPRESSION · CREATIVE PRACTICE</p><h3>GENJE</h3><p>Genge, electronic music, livecoding, choreography and the exploration of sound, movement and creative technology.</p><a href="https://github.com/donfelohke/Genje">Explore GENJE ↗</a></article>
+<article><p class="research-tag">KNOWLEDGE · PROVENANCE</p><h3>FELOH Corpus</h3><p>Research documentation, source material, knowledge governance and the record of the wider body of work.</p><a href="https://github.com/donfelohke/feloh-corpus">Explore the Corpus ↗</a></article>
 </div>
-</section>
-<section id="crown" class="experience experience-locs" aria-labelledby="crown-title">
-<div class="wrap">
-<p class="section-kicker" data-i18n="crownKicker">LOCS · CROWN</p>
-<h2 id="crown-title" data-i18n="crownTitle">Your Crown. Your Craft.</h2>
-<p data-i18n="crownIntro">Natural loc care, maintenance and styling, Sisterlocs Retie and artificial loc installation. Clear service scope, starting prices and direct enquiries.</p>
-<p class="small muted location-line" data-i18n="location">Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya</p>
-<div class="services">
-<article class="svc"><h3 data-i18n="svcRetouch">Retouch &amp; Styling</h3><p class="price" data-i18n="price700">KES 700+</p><p class="small muted" data-i18n="svcRetouchDesc">Refresh and maintain your existing locs with retouching and styling. Final scope depends on your loc condition and the work required.</p><div class="actions"><a class="btn btn-fill" data-wa-service="retouch" href="https://wa.me/254719635415" data-i18n="enquireRetouch">Enquire about Retouch &amp; Styling</a></div></article>
-<article class="svc"><h3 data-i18n="svcRetie">Sisterlocs Retie</h3><p class="price" data-i18n="price1500">KES 1,500+</p><p class="small muted" data-i18n="svcRetieDesc">Careful retightening for established Sisterlocs. Share their current condition and your maintenance needs when enquiring.</p><div class="actions"><a class="btn btn-fill" data-wa-service="retie" href="https://wa.me/254719635415" data-i18n="enquireRetie">Enquire about Sisterlocs Retie</a></div></article>
-<article class="svc"><h3 data-i18n="svcArtificial">Artificial Locs Installation</h3><p class="price" data-i18n="price3500">KES 3,500</p><p class="small muted" data-i18n="svcArtificialDesc">Artificial loc installation, with the method, materials and scope confirmed before work begins.</p><div class="actions"><a class="btn btn-fill" data-wa-service="artificial" href="https://wa.me/254719635415" data-i18n="enquireArtificial">Enquire about Artificial Locs Installation</a></div></article>
-</div>
-<p class="note"><span data-i18n="bookingNote">Prices are starting points. Final cost depends on condition, scope and materials. An enquiry does not confirm a booking. Availability and final terms are agreed directly.</span></p>
-<div class="enquiry-guide" aria-labelledby="enquiry-guide-title">
-<h3 id="enquiry-guide-title" data-i18n="enquiryTitle">A clear enquiry, a considered plan.</h3>
-<ol class="enquiry-steps">
-<li data-i18n="enquiryStep1">Choose the service you are interested in and tell us what you need.</li>
-<li data-i18n="enquiryStep2">Share your loc condition, maintenance needs or preferred installation details.</li>
-<li data-i18n="enquiryStep3">We discuss suitability, availability, scope and the final price directly before any booking is agreed.</li>
-</ol>
-</div>
-</div>
-</section>
-<section id="code" class="experience experience-warena" aria-labelledby="digital-title">
-<div class="wrap">
-<p class="section-kicker" data-i18n="digitalKicker">DIGITAL · WARENA</p>
-<h2 id="digital-title" data-i18n="digitalTitle">Freedom Is a System.</h2>
-<p data-i18n="digitalIntro">Practical GNU/Linux, workstation and network support, powered by WARENA. We discuss the problem, assess what is practical and agree on the scope before work begins.</p>
-<ul class="list-plain">
-<li data-i18n="dig1">GNU/Linux and workstation support</li>
-<li data-i18n="dig2">Computer diagnostics and maintenance</li>
-<li data-i18n="dig3">Small-office networking and Wi-Fi</li>
-<li data-i18n="dig4">Local-first and offline-capable systems</li>
-<li data-i18n="dig5">Infrastructure planning and documented handover</li>
-</ul>
-<p class="digital-scope" data-i18n="digitalScope">WARENA powers technical work within NAKEBUSEN; it is not a separate checkout. Services are scoped per engagement, with feasibility, deliverables, price and support agreed before work begins.</p>
-<div class="digital-process" aria-labelledby="digital-process-title">
-<h3 id="digital-process-title" data-i18n="digitalProcessTitle">How a technical engagement works</h3>
-<ol>
-<li data-i18n="digitalProcess1">Describe the system, issue and outcome you need.</li>
-<li data-i18n="digitalProcess2">We assess feasibility and agree the scope, deliverables and price.</li>
-<li data-i18n="digitalProcess3">Work proceeds on agreement, with a practical handover of what was completed.</li>
-</ol>
-</div>
-<div class="actions">
-<a class="btn btn-fill" data-wa-purpose="tech" href="https://wa.me/254719635415" data-i18n="bookTech">Discuss a technical project</a>
-</div>
-<aside class="note" aria-labelledby="github-title">
-<h3 id="github-title" data-i18n="githubTitle">Beyond the interface.</h3>
-<p data-i18n="githubCopy">The website introduces the services. GitHub makes the underlying technical work, source code and project documentation available to explore.</p>
-<ul class="list-plain">
-<li><a href="https://github.com/donfelohke/WARENA" data-i18n="githubWarena">WARENA · Systems engineering and infrastructure</a></li>
-<li><a href="https://github.com/donfelohke/feloh-corpus" data-i18n="githubCorpus">FELOH Corpus · Project canon and documentation</a></li>
-<li><a href="https://github.com/donfelohke/donfelohke.github.io" data-i18n="githubSource">Website source · Code and change history</a></li>
-</ul>
-<p><a href="https://github.com/donfelohke" data-i18n="githubProfile">Explore the wider @donfelohke portfolio</a></p>
-</aside>
-</div>
-</section>
-<section id="connect" class="experience experience-author" aria-labelledby="founder">
-<div class="wrap">
-<p class="section-kicker" data-i18n="connectKicker">Connect</p>
-<h2 id="founder" data-i18n="founderTitle">Felix Lwova — Don Feloh</h2>
-<p class="muted" data-i18n="role">Founder · CTO · Loctician · Creative Technologist</p>
-<p data-i18n="founderDesc">I founded NAKEBUSEN to bring together personal care, skilled craft and practical technology. My work spans natural loc care, GNU/Linux systems, infrastructure and creative technology. WARENA provides the systems-engineering foundation behind the technical services.</p>
-<p data-i18n="connectDesc">Whether you are enquiring about loc care or a technology project, get in touch. We will discuss suitability, availability, scope and next steps before agreeing on any work.</p>
-<p class="section-kicker" data-i18n="overviewResearchTitle">RESEARCH &amp; CREATIVE</p>
-<p class="small muted" data-i18n="overviewResearch">IKAI · GENJE · FELOH Corpus — reflective computing, embodied practice and creative technology. Research and knowledge domains, not services for purchase.</p>
-<p class="small"><a href="/research/glass-terminal/">Explore Glass Terminal UI / UX / XR research →</a></p>
-<div class="actions">
-<a class="btn btn-fill" data-wa-purpose="general" href="https://wa.me/254719635415">WhatsApp +254 719 635 415</a>
-<a class="btn" href="tel:+254719635415" data-i18n="call2">Call 0719 635 415</a>
-<a class="btn" href="mailto:mela9ine@proton.me" data-i18n="email">Email</a>
-</div>
-<p class="small muted" data-i18n="boundary">Commercial enquiries route through NAKEBUSEN. An enquiry is not a confirmed booking.</p>
-</div>
-</section>
+</div></section>
+
+<section class="section connect-section" id="connect" aria-labelledby="connect-title"><div class="container connect-layout">
+<div><p class="section-label">04 / CONNECT</p><h2 id="connect-title">The person behind the practice.</h2><p class="founder-name">Felix Lwova — Don Feloh</p><p class="role">Founder · CTO · Loctician · Creative Technologist</p></div>
+<div class="connect-copy"><p>I founded NAKEBUSEN to bring together personal care, skilled craft and practical technology. My work spans natural loc care, GNU/Linux systems, infrastructure and creative technology.</p><p>Whether you are enquiring about loc care or a technical project, get in touch. We will discuss suitability, availability, scope and next steps before agreeing on any work.</p>
+<div class="contact-list"><a href="https://wa.me/254719635415">WhatsApp · +254 719 635 415 ↗</a><a href="tel:+254719635415">Call · 0719 635 415</a><a href="mailto:mela9ine@proton.me">Email · mela9ine@proton.me</a></div>
+<p class="location">Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya</p><p class="boundary">ONLY NAKEBUSEN TRANSACTS. An enquiry is not a confirmed booking.</p>
+</div></div></section>
+
+<section class="section kiswahili-section" id="kiswahili" aria-labelledby="sw-title"><div class="container">
+<details class="language-disclosure"><summary lang="sw">Soma maelezo ya Kiswahili</summary><div class="language-copy" lang="sw">
+<p class="section-label">NAKEBUSEN · UTUNZAJI WA LOC · ELDORET, KENYA</p><h2 id="sw-title">Uzuri Wako ° Kwa Namna Yako.</h2>
+<p>Huduma za utunzaji wa loc za asili mjini Eldoret: retouch, mitindo, Sisterlocs Retie na uwekaji wa loc za bandia.</p>
+<h3>Huduma za LOCS · CROWN</h3>
+<div class="sw-service"><strong>Retouch &amp; Styling — KES 700+</strong><p>Matengenezo na umaliziaji wa loc zako zilizopo. Upeo wa kazi hutegemea hali ya loc na huduma inayohitajika.</p></div>
+<div class="sw-service"><strong>Sisterlocs Retie — KES 1,500+</strong><p>Kukaza upya Sisterlocs zilizokomaa. Eleza hali yake ya sasa na mahitaji ya matengenezo unapoulizia.</p></div>
+<div class="sw-service"><strong>Artificial Locs Installation — KES 3,500</strong><p>Ufungaji wa loc za bandia. Njia, vifaa na upeo wa kazi hukubaliwa kabla ya kuanza.</p></div>
+<p>Bei zilizo na alama ya + ni bei za kuanzia. Gharama ya mwisho hutegemea huduma, hali ya loc, vifaa na kazi inayohitajika.</p>
+<p><strong>Kuulizia huduma hakuthibitishi nafasi.</strong> Upatikanaji na masharti ya mwisho hukubaliwa moja kwa moja.</p>
+<h3>DIGITAL · UWEZO WA WARENA</h3>
+<p>Usaidizi wa GNU/Linux, kompyuta na mitandao. WARENA ni eneo tofauti la uwezo wa kiteknolojia, si sehemu tofauti ya malipo. Maulizo, makubaliano na miamala ya kibiashara hupitia NAKEBUSEN pekee.</p>
+<p>Huduma hizi hutegemea uwezekano na upatikanaji. Upeo wa kazi, matokeo, gharama na masharti hukubaliwa kabla ya kuanza.</p>
+<h3>WASILIANА</h3><p>Felix Lwova — Don Feloh<br>Mwanzilishi · CTO · Loctician · Creative Technologist</p>
+<p>WhatsApp / Simu: +254 719 635 415<br>Barua pepe: mela9ine@proton.me</p>
+<p>Utunzaji wa loc · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya</p>
+<h3>MALIPO YA M-PESA BUY GOODS</h3><p>Till: 3511456<br>Jina la akaunti / mfanyabiashara: FELIX LWOVA</p>
+<p>Lipa tu baada ya kukubaliana moja kwa moja na NAKEBUSEN kuhusu huduma na jumla ya kiasi. Kabla ya kuweka PIN, hakikisha jina la mfanyabiashara na kiasi kinachoonyeshwa na M-PESA vinalingana na makubaliano yenu. Usishiriki PIN au msimbo wa uthibitisho.</p>
+<p>Msaada wa hiari kwa kazi huru za ubunifu, utamaduni na teknolojia umetenganishwa na malipo ya huduma za NAKEBUSEN.</p>
+<p><a href="https://wa.me/254719635415?text=Habari%20NAKEBUSEN%20%E2%80%94%20ninaulizia%20huduma%20za%20utunzaji%20wa%20loc.">Uliza kupitia WhatsApp ↗</a></p>
+</div></details>
+</div></section>
 </main>
-<footer>
-<div class="wrap">
-<p class="footer-lockup"><strong>NAKEBUSEN</strong> Locs ° Powered by WARENA</p>
-<section class="footer-payment" aria-labelledby="footer-payment-title">
-<h2 id="footer-payment-title" data-i18n="paymentTitle">M-PESA Buy Goods · Published payment details</h2>
-<p data-i18n="paymentIntro">For an agreed NAKEBUSEN service, pay using the published merchant details below after confirming the service and total amount directly.</p>
-<p class="footer-payment-number" data-i18n="paymentTill">Buy Goods Till Number: 3511456</p>
-<p class="footer-payment-name" data-i18n="paymentMerchant">Account / Merchant name: FELIX LWOVA</p>
-<p class="footer-payment-note" data-i18n="paymentSteps">Open M-PESA → Lipa na M-PESA → Buy Goods and Services → enter Till 3511456. Confirm FELIX LWOVA and the agreed amount before entering your PIN.</p>
-<div class="footer-payment-grid">
-<div class="footer-payment-panel">
-<h3 data-i18n="paymentHowTitle">Before you pay</h3>
-<ol>
-<li data-i18n="paymentStep1">Confirm the service and total amount directly with NAKEBUSEN.</li>
-<li data-i18n="paymentStep2">Use the published Buy Goods Till and merchant name shown above.</li>
-<li data-i18n="paymentStep3">Before entering your PIN, check that the merchant name shown by M-PESA matches the details confirmed directly.</li>
-<li data-i18n="paymentStep4">Keep your M-PESA confirmation message.</li>
-</ol>
-</div>
-<div class="footer-payment-panel">
-<h3 data-i18n="paymentSafetyTitle">Payment safety</h3>
-<p data-i18n="paymentSafety">Never share your M-PESA PIN or one-time code. Do not pay an amount that has not been agreed directly with NAKEBUSEN.</p>
-<a href="https://wa.me/254719635415" data-wa-purpose="payment" data-i18n="paymentAction">Contact NAKEBUSEN about payment</a>
-</div>
-</div>
-<p class="footer-payment-note" data-i18n="paymentBoundary">An enquiry is not a booking or payment request. Pay only after the service and total amount are agreed directly with NAKEBUSEN.</p>
+
+<footer class="site-footer"><div class="container">
+<div class="footer-brand"><p class="footer-lockup"><strong>NAKEBUSEN</strong> Locs ° Powered by WARENA</p><p>GRACE · GRIT · GLORY</p><p>HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES</p></div>
+<section class="payment-section" aria-labelledby="payment-title"><p class="section-label">PAYMENT INFORMATION</p><h2 id="payment-title">M-PESA Buy Goods</h2>
+<p>For an agreed NAKEBUSEN service, payment is made only after the service and total amount have been agreed directly.</p>
+<dl class="payment-details"><div><dt>Buy Goods Till</dt><dd>3511456</dd></div><div><dt>Account / Merchant name</dt><dd>FELIX LWOVA</dd></div></dl>
+<p>Open M-PESA → Lipa na M-PESA → Buy Goods and Services → enter Till 3511456. Confirm FELIX LWOVA and the agreed amount before entering your PIN.</p>
+<p class="payment-safety">Never share your M-PESA PIN or one-time code. Do not pay an amount that has not been agreed directly with NAKEBUSEN.</p>
+<p class="payment-boundary">An enquiry is not a booking or payment request. Pay only after the service and total amount are agreed directly with NAKEBUSEN.</p>
 </section>
-<section class="footer-support" aria-labelledby="footer-support-title">
-<h2 id="footer-support-title" data-i18n="supportTitle">Support Us · Support independent work</h2>
-<p data-i18n="supportCopy">Support Don Feloh’s independent creative, cultural and technical work. Support is voluntary and separate from NAKEBUSEN service payments; contact us first for available arrangements.</p>
-<a href="https://wa.me/254719635415" data-wa-purpose="support" data-i18n="supportAction">Ask about supporting the work</a>
+<section class="support-section" aria-labelledby="support-title"><p class="section-label">INDEPENDENT WORK</p><h2 id="support-title">Support Us</h2>
+<p>Support Don Feloh’s independent creative, cultural and technical work. Support is voluntary and separate from NAKEBUSEN service payments; contact us first for available arrangements.</p>
+<a href="https://wa.me/254719635415?text=Hello%20Don%20Feloh%20%E2%80%94%20I%20would%20like%20to%20support%20your%20independent%20creative%20and%20technical%20work.">Ask about supporting the work ↗</a>
 </section>
-<nav class="footer-nav" aria-label="Repository navigation" data-i18n-aria="navFooter"><a href="https://github.com/donfelohke?tab=repositories" data-i18n="githubRepositories">GitHub repositories ↗</a></nav>
-<p class="footer-signature" data-i18n="footerSignature">@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY</p>
-<p class="small">© Felix Lwova · Don Feloh</p>
-</div>
-</footer>
-<nav class="floating-dock" aria-label="Section navigation" data-i18n-aria="navQuick">
-<a href="#crown" data-dock-target="crown"><span class="dock-icon" aria-hidden="true">✳</span><span data-i18n="navLocs">Locs</span></a>
-<a href="#code" data-dock-target="code"><span class="dock-icon" aria-hidden="true">⌘</span><span data-i18n="navDigital">Digital</span></a>
-<a href="#connect" data-dock-target="connect"><span class="dock-icon" aria-hidden="true">↗</span><span data-i18n="navConnect">Connect</span></a>
-</nav>
-<script src="assets/js/nakebusen-experience.js" defer></script>
-</body>
-</html>
+<div class="footer-bottom"><a href="https://github.com/donfelohke?tab=repositories">GitHub repositories ↗</a><p>@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY</p><p>© Felix Lwova · Don Feloh</p></div>
+</div></footer>
+
+<nav class="floating-dock" aria-label="Section navigation"><a href="#crown"><span aria-hidden="true">✳</span> Locs</a><a href="#code"><span aria-hidden="true">⌘</span> Digital</a><a href="#connect"><span aria-hidden="true">↗</span> Connect</a></nav>
+</body></html>
