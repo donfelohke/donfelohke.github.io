@@ -1,9 +1,33 @@
-# Architecture and boundaries
+# NAKEBUSEN Website Architecture
 
-FELOH / DonFeloh is Glory / Author: human authorship and expression. NAKEBUSEN is Grace / Crown: loc care, craft, livelihood and customer contact. WARENA is Grit / Enable: GNU/Linux, reproducible/local-first computing and infrastructure. IKAI is Mirror / Reflect: reflexive-compute research and embodied interaction. GENJE / GENJE ZA WARENA is Wave / Embody: AfroTech, Genge, live coding, movement and choreohacking.
+**Status:** Native static architecture · 22 November 2026  
+**Public surface:** https://donfelohke.github.io/
 
-Canonical formula: FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
+The homepage is a one-page public service-discovery interface. It is not an ecommerce checkout, automated booking system, research-product storefront or WARENA application runtime.
 
-This site shows enquiries and service descriptions but does not confirm appointments, process payments, store customer histories or guarantee availability. The implementation is static HTML with embedded CSS and no build system. Minimise dependencies and network calls, use Git history for provenance, and avoid telemetry or hidden data collection.
+## Hierarchy
+1. NAKEBUSEN Locs — primary customer proposition.
+2. Digital — secondary technical capability path, with WARENA clearly identified as distinct capability.
+3. IKAI, GENJE and FELOH Corpus — research, creative-practice and knowledge domains.
+4. Connect — human authorship and direct contact.
+5. Footer — service-payment safeguards and voluntary Support Us, kept separate.
 
-Evidence stages: proposed, researched, designed, prototyped, tested, deployed. State limitations and never claim deployment without evidence.
+**ONLY NAKEBUSEN TRANSACTS.** An enquiry does not confirm a booking.
+
+## Runtime
+- One hand-authored public HTML document: `index.html`.
+- One primary stylesheet: `assets/css/site.css`.
+- No JavaScript, framework, generator, package manager or build step.
+- No external fonts, scripts, analytics, tracking pixels or third-party UI runtime.
+- Theme follows `prefers-color-scheme`; no stored theme state or manual toggle.
+- English is the document language. Kiswahili is available through native `details/summary`; no persistent language preference is claimed.
+- Native anchors and direct telephone, email and WhatsApp links provide interaction.
+- No customer data, payment credentials, PINs or one-time codes are collected.
+
+## Research preservation
+The former research HTML presentations are retained as non-rendered source snapshots in `docs/archive/`. Research summaries and repository links remain on the homepage. Markdown research records remain in `research/`.
+
+## Accessibility and release
+Semantic landmarks, one H1, logical headings, visible focus, responsive reflow, 44px-class targets, reduced-motion support and reduced-transparency fallbacks are implementation requirements. Automated source checks do not replace manual browser, screen-reader or WCAG contrast evaluation.
+
+A passing Python test is not proof of deployment. Pages artifact creation, manual deployment authorization, deployment result and post-deployment inspection are separate evidence stages.
