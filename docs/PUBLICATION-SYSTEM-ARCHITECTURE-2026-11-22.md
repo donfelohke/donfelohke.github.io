@@ -1,13 +1,13 @@
 # Public Website — Resilient Publication System
 
 **Date:** 22 November 2026  
-**Status:** APPROVED DIRECTION · Implementation specification · **Production HTML not changed by this document**  
-**Public surface today:** https://donfelohke.github.io/ (single-page commercial discovery)  
+**Status:** APPROVED DIRECTION · Single-homepage publication model · implementation in review  
+**Public surface:** https://donfelohke.github.io/ (one author-led homepage; commercial discovery and practice orientation)  
 **Related:** [SITE-ARCHITECTURE.md](./SITE-ARCHITECTURE.md) · [ARCHITECTURE.md](./ARCHITECTURE.md) · [NAV-STRUCTURE.md](./NAV-STRUCTURE.md) · [CONTENT-GOVERNANCE.md](./CONTENT-GOVERNANCE.md)
 
 ## Decision locked
 
-Keep the current homepage as the **front door**. Do not redesign for novelty. Upgrade what sits **behind** it into a resilient, evidence-backed publication system.
+Keep and strengthen the **existing homepage itself**. It must communicate the author, the four practices, their relationships and public status while preserving NAKEBUSEN's commercial path. Do not create another website, a `/work/` page, or separate domain pages as part of this direction. Upgrade the documentation and publication controls behind the homepage.
 
 > No website is literally foolproof. Design for safe failure, maintainability, and content that is hard to misrepresent.
 
@@ -28,52 +28,40 @@ The 22 Nov migration record preserved a one-page service-discovery focus. Multi-
 
 ---
 
-## 2. Target information architecture
+## 2. One-page information architecture
+
+The public experience remains **one homepage**. The four practices are explained on that page, with native in-page anchors and links to their canonical repositories.
 
 ```text
-DON FELOH — PUBLIC WEBSITE
+DON FELOH — ONE HOMEPAGE
 │
-├── HOME                         ← keep / strengthen current index.html role
-│   ├── Identity and introduction
-│   ├── Four-domain overview (short)
-│   ├── Featured research / work
-│   └── Path to LOCS · DIGITAL · CONNECT
+├── NAKEBUSEN / ROOT                 ← commercial-first entry
+│   ├── LOCS                         ← service cards, starting prices, enquiry
+│   └── DIGITAL                      ← scoped technical-service enquiry
 │
-├── PRACTICE DOMAINS             ← new pages (Phase 4+); link out to GitHub until ready
-│   ├── NAKEBUSEN — ROOT
-│   │   ├── LOCS (prices, enquiry)
-│   │   └── DIGITAL (WARENA-powered services)
-│   ├── WARENA — CAPABILITY
-│   ├── IKAI — MIRROR
-│   └── GENJE — EXPRESSION
+├── DON FELOH / F3L0H                ← human author, role, contact
+│   └── FOUR-PRACTICE MAP            ← compact orientation and status
 │
-├── KNOWLEDGE                    ← curated; never auto-mirror every Markdown file
-│   ├── Research index
-│   ├── Project records
-│   ├── Publications / dossiers
-│   └── Sources pointer → feloh-corpus
+├── WARENA / CAPABILITY              ← systems and infrastructure
+├── IKAI / MIRROR                    ← reflective-computing research
+├── GENJE / EXPRESSION               ← creative and embodied practice
+├── FELOH CORPUS                     ← shared knowledge governance
 │
-├── ABOUT
-│   ├── Don Feloh / Feloh Warena
-│   ├── Authorship and selected work
-│   └── GitHub portfolio links
-│
-└── CONNECT
-    ├── NAKEBUSEN enquiries (WhatsApp)
-    ├── Contact directory
-    └── Voluntary support (non-transactional)
+└── CONNECT / FOOTER                 ← business, payment, support, source
 ```
 
 ### Visitor intents (must not collide)
 
 | Intent | Primary path |
 |--------|----------------|
-| Loc care / booking enquiry | HOME → LOCS / WhatsApp |
-| Technical project enquiry | HOME → DIGITAL / WhatsApp |
-| Engineering depth | Domain page or GitHub WARENA |
-| Research trail | Knowledge index → project record → canonical repo |
+| Loc care / booking enquiry | Homepage → LOCS → NAKEBUSEN WhatsApp |
+| Technical-service enquiry | Homepage → DIGITAL → NAKEBUSEN WhatsApp |
+| Engineering depth | Homepage → WARENA → canonical GitHub repository |
+| Reflective research | Homepage → IKAI → canonical GitHub research |
+| Creative practice | Homepage → GENJE → canonical GitHub repository |
+| Authorship / full source index | Homepage → Don Feloh / FELOH Corpus → GitHub |
 
----
+The floating dock remains exactly **LOCS · DIGITAL · CONNECT**. Practice cards are orientation links to sections on the same page, not new routes. GitHub remains the canonical home for code, research records, issues, history and detailed documentation.
 
 ## 3. Repository publication roles (10 public repos)
 
@@ -90,7 +78,7 @@ DON FELOH — PUBLIC WEBSITE
 | **dwl-guile** | Supporting WARENA engineering (fork) |
 | **home-service-dwl-guile** | Supporting WARENA engineering (fork) |
 
-**Rule:** The website **points to** canonical GitHub sources. It does **not** copy entire repositories or auto-publish every Markdown file.
+**Rule:** The homepage **explains and points to** canonical GitHub sources. It does **not** copy entire repositories, auto-publish every Markdown file, or create a second publication surface.
 
 ---
 
@@ -170,7 +158,7 @@ These are targets, not a claim that all gates currently pass.
 | **1** | Audit current source + live presentation | Baseline documented (this file + prior audits) |
 | **2** | Finalise sitemap + content model | Every future page has owner + audience |
 | **3** | Map GitHub docs → publication register | No invented facts; no duplicate sources of truth |
-| **4** | Domain / knowledge pages (static) | Substantive curated content; homepage still primary conversion |
+| **4** | Refine the existing homepage narrative and practice map | One-page hierarchy is clear; no additional public pages |
 | **5** | Validation tooling extension | Automated checks pass on candidate branch |
 | **6** | Accessibility + device testing | Gate list signed |
 | **7** | Deploy + live inspection | Public site verified against reviewed commit |
@@ -181,14 +169,14 @@ These are targets, not a claim that all gates currently pass.
 
 ## 9. Immediate next engineering step (not yet authorised)
 
-1. Create `docs/PUBLICATION-REGISTER.md` listing each candidate public entry with: slug, domain, status, canonical URL, last review, publish yes/no.  
-2. Seed 3–5 project records from existing Corpus/WARENA/IKAI docs (REFLECTION±, Sovereign Movement Systems, etc.) **as Markdown only**.  
-3. Keep `index.html` commercial path intact until Phase 4 review.
+1. Maintain `docs/PUBLICATION-REGISTER.md` as an editorial control for what the homepage may reference.  
+2. Seed project records from existing Corpus/WARENA/IKAI docs **as Markdown in their canonical repositories**; publish only concise, reviewed summaries and source links on the homepage.  
+3. Keep the homepage as one HTML document. Do not add `/work/`, separate practice pages, a CMS or a new repository.
 
 ---
 
 ## 10. Non-claims
 
-This document does not alter `index.html`, does not enable payments, does not merge open PRs, and does not assert that multi-page routes already exist on the live site.
+This document does not enable payments, does not merge open PRs, and does not claim that additional public pages or routes exist. The approved direction is a single, strengthened homepage.
 
 *End of specification.*
