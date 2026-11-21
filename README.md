@@ -1,10 +1,11 @@
 # Don Feloh — F3L0H / FELOH WARENA
 
 **Public website:** https://donfelohke.github.io/  
+**Practice atlas:** https://donfelohke.github.io/work/ (candidate route; publish after review and merge)  
 **Repository:** `donfelohke/donfelohke.github.io`  
 **Human author:** Felix Lwova · Don Feloh · Feloh Warena · @donfelohke · #HisGenjeness
 
-The website is the public gateway to one author-led ecosystem, not a collection of unrelated brands or independent checkout destinations.
+The website is the public gateway to one author-led ecosystem, not a collection of unrelated brands or independent checkout destinations. The existing homepage remains the commercial discovery front door. The separate Work page is a curated editorial atlas to the wider body of work.
 
 ## Constitutional architecture
 
@@ -53,15 +54,23 @@ Founder · CTO · Loctician · Creative Technologist.
 - Email: mela9ine@proton.me
 - GitHub: https://github.com/donfelohke
 
-## Site architecture
+## Publication architecture
 
-- One hand-authored HTML document and one primary CSS stylesheet.
-- No JavaScript, framework, generator, package manager or remote font dependency.
+- `/` — existing NAKEBUSEN commercial discovery homepage; preserve its role and approved copy.
+- `/work/` — curated F3L0H Living Practice Atlas, with links to canonical repositories and research sources.
+- `docs/projects/` — editorial publication records; these do not automatically become public pages.
+- `docs/PUBLICATION-REGISTER.md` — YES / NO / DEFERRED publication decisions.
+- The site points to canonical repository sources; it does not auto-publish every README or Markdown file.
+
+## Runtime and delivery
+
+- Hand-authored static HTML and CSS; no JavaScript, framework, generator, package manager or build step.
+- Homepage and atlas use separate page stylesheets; no remote font dependency.
 - No analytics, tracking pixels or third-party UI runtime.
-- English default; optional Kiswahili native disclosure.
+- English default; optional Kiswahili native disclosure on the homepage.
 - Theme follows operating-system colour preference.
-- Three-destination floating dock: LOCS / DIGITAL / CONNECT.
-- Responsive, semantic and keyboard-accessible; reduced-motion support.
+- Native anchors and direct contact URLs only.
+- No forms, customer database, payment APIs, STK push or automated payment verification.
 - Gallery and source material are linked, not required as remote visual dependencies.
 
 Run source checks:
@@ -70,7 +79,7 @@ Run source checks:
 python -m unittest discover -s tests -v
 ```
 
-See [site architecture](docs/SITE-ARCHITECTURE.md), [canonical copy](docs/WEBCOPY.md), [public facts](docs/PUBLIC-FACTS-REGISTER.md), [service catalogue](docs/SERVICE-CATALOG.md), [content governance](docs/CONTENT-GOVERNANCE.md), [accessibility](docs/ACCESSIBILITY.md) and [release checklist](docs/NAKEBUSEN-BROWSER-RELEASE-CHECKLIST.md).
+See [site architecture](docs/SITE-ARCHITECTURE.md), [publication system architecture](docs/PUBLICATION-SYSTEM-ARCHITECTURE-2026-11-22.md), [publication register](docs/PUBLICATION-REGISTER.md), [canonical copy](docs/WEBCOPY.md), [public facts](docs/PUBLIC-FACTS-REGISTER.md), [service catalogue](docs/SERVICE-CATALOG.md), [content governance](docs/CONTENT-GOVERNANCE.md), [accessibility](docs/ACCESSIBILITY.md) and [release checklist](docs/NAKEBUSEN-BROWSER-RELEASE-CHECKLIST.md).
 
 M-PESA Buy Goods: Till 3511456 · Account / Merchant name FELIX LWOVA. Payment is due only after the service and total amount are agreed directly with NAKEBUSEN; confirm the displayed merchant and amount before PIN entry. Never share a PIN or one-time code. Voluntary Support Us is separate from service payments.
 
