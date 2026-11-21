@@ -1,4 +1,4 @@
-name: Website quality and GitHub Pages
+name: GitHub Pages
 on:
   push:
     branches: [main]
@@ -11,31 +11,19 @@ concurrency:
   group: pages-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  quality:
-    runs-on: ubuntu-24.04
-    timeout-minutes: 20
+  validate:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-node@v7
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          node-version: 22
-      - name: Install browser test dependencies
-        run: npm install
-      - name: Install Chromium
-        run: npx playwright install --with-deps chromium
-      - name: Run responsive, interaction and accessibility tests
-        run: npx playwright test
-      - name: Upload browser evidence
-        if: always()
-        uses: actions/upload-artifact@v7
-        with:
-          name: nakebusen-browser-evidence
-          path: test-results/
-          if-no-files-found: warn
-          retention-days: 7
+          python-version: "3.x"
+      - name: Validate static site
+        run: python -m unittest discover -s tests -v
   build:
     if: github.event_name != 'pull_request'
-    needs: quality
+    needs: validate
     permissions:
       contents: read
       pages: read
