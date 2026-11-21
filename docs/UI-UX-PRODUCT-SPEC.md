@@ -115,7 +115,7 @@ Keep the three approved service entries and starting prices visible and scannabl
 
 - Retouch & Styling — KES 700+
 - Sisterlocs Retie — KES 1,500+
-- Artificial Locs Installation — KES 3,500+
+- Artificial Locs Installation — KES 3,500
 
 Preserve the service scope, price qualifiers and current approved copy. No braiding. Do not substitute historical prices.
 
