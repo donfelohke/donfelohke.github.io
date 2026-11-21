@@ -1,15 +1,20 @@
-# NAKEBUSEN — ROOT · Your Beauty ° Your Way.
+# Don Feloh — NAKEBUSEN · WARENA · IKAI · GENJE
 
-**Natural loc care in Eldoret Town, Kenya.**
+**Public website:** https://donfelohke.github.io/  
+**Repository:** `donfelohke/donfelohke.github.io`
 
-Public website: https://donfelohke.github.io/  
-Repository: `donfelohke/donfelohke.github.io`
+An author-led body of work with a clear commercial entry point. The website presents six distinct domains without treating them as competing brands or businesses:
 
-NAKEBUSEN is the ROOT practice for natural loc care and grounded enterprise. Practical technology services, where offered, are provided through NAKEBUSEN with WARENA capability.
+1. **NAKEBUSEN** — the only live commercial practice: natural loc care in Eldoret Town, Kenya.
+2. **WARENA** — a distinct technical capability domain: systems engineering, GNU/Linux, infrastructure and reproducible computing.
+3. **Don Feloh** — human author, Founder · CTO · Loctician · Creative Technologist, and contact directory.
+4. **IKAI** — mirror systems and reflective-computing research / WIP; not a released product.
+5. **GENJE** — Genge, music, choreography, movement, livecoding and embodied knowledge.
+6. **FELOH Corpus** — knowledge governance, documentation, research provenance and source repositories.
 
 **ONLY NAKEBUSEN TRANSACTS.** An enquiry does not confirm a booking.
 
-## LOCS starting prices
+## NAKEBUSEN · LOCS starting prices
 
 | Service | Starting price |
 |---|---:|
@@ -19,18 +24,6 @@ NAKEBUSEN is the ROOT practice for natural loc care and grounded enterprise. Pra
 
 Final cost depends on service scope, loc condition and materials. Location: Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
 
-## DIGITAL · WARENA
-
-Practical GNU/Linux, computer and network support. WARENA is a distinct technical capability domain, not a separate checkout. Feasibility, availability, scope, deliverables and price are agreed per engagement.
-
-## Research and creative practice
-
-- **IKAI:** reflective-computing and mirror research; not a released product.
-- **GENJE:** Genge, sound, movement, livecoding and creative practice.
-- **FELOH Corpus:** shared canon, documentation and provenance.
-
-Specialist repositories: [WARENA](https://github.com/donfelohke/WARENA) · [IKAI](https://github.com/donfelohke/Ikai) · [GENJE](https://github.com/donfelohke/Genje) · [FELOH Corpus](https://github.com/donfelohke/feloh-corpus).
-
 ## Contact
 
 Felix Lwova — Don Feloh  
@@ -39,6 +32,7 @@ Founder · CTO · Loctician · Creative Technologist
 - WhatsApp / telephone: +254 719 635 415
 - WhatsApp: https://wa.me/254719635415
 - Email: mela9ine@proton.me
+- GitHub: https://github.com/donfelohke
 
 ## Architecture
 
@@ -50,8 +44,8 @@ Run source checks:
 python -m unittest discover -s tests -v
 ```
 
-See [site architecture](docs/SITE-ARCHITECTURE.md), [design standards](docs/WEB-DESIGN-STANDARDS.md), [content governance](docs/CONTENT-GOVERNANCE.md), [accessibility](docs/ACCESSIBILITY.md), [migration](docs/MIGRATION.md) and [release checklist](docs/RELEASE-CHECKLIST.md).
+See [site architecture](docs/SITE-ARCHITECTURE.md), [canonical copy](docs/WEBCOPY.md), [content governance](docs/CONTENT-GOVERNANCE.md), [accessibility](docs/ACCESSIBILITY.md), [privacy](docs/PRIVACY.md) and [release checklist](docs/NAKEBUSEN-BROWSER-RELEASE-CHECKLIST.md).
 
-Published M-PESA Buy Goods details: Till 3511456 · Account / Merchant name FELIX LWOVA. Payment is due only after service and total amount are agreed directly; confirm the displayed merchant and amount before PIN entry. Never share a PIN or one-time code. Voluntary Support Us is separate from service payments.
+M-PESA Buy Goods: Till 3511456 · Account / Merchant name FELIX LWOVA. Payment is due only after service and total amount are agreed directly with NAKEBUSEN; confirm the displayed merchant and amount before PIN entry. Never share a PIN or one-time code. Voluntary Support Us is separate from service payments.
 
 Preserve the existing GPL-3.0 license. Do not invent prices, testimonials, credentials, customer details or deployment claims.
