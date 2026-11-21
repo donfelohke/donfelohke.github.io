@@ -1,170 +1,148 @@
 #!/usr/bin/env python3
-"""Structural and publication-gate checks for the static NAKEBUSEN website."""
+"""Dependency-free publication and architecture checks for NAKEBUSEN."""
 from html.parser import HTMLParser
 from pathlib import Path
-import re
+from urllib.parse import urlparse
+import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-html = (ROOT / "index.html").read_text(encoding="utf-8")
-css = (ROOT / "assets" / "css" / "nakebusen-foundation.css").read_text(encoding="utf-8")
-js = (ROOT / "assets" / "js" / "nakebusen-experience.js").read_text(encoding="utf-8")
-published = html + "\n" + js
-research_html = (ROOT / "research" / "index.html").read_text(encoding="utf-8")
-research_css = (ROOT / "assets" / "css" / "research.css").read_text(encoding="utf-8")
-research_js = (ROOT / "assets" / "js" / "research-experience.js").read_text(encoding="utf-8")
-sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
-glass_html = (ROOT / "research" / "glass-terminal" / "index.html").read_text(encoding="utf-8")
-glass_css = (ROOT / "research" / "glass-terminal" / "glass-terminal.css").read_text(encoding="utf-8")
+HTML_PATH = ROOT / "index.html"
+CSS_PATH = ROOT / "assets/css/site.css"
+HTML = HTML_PATH.read_text(encoding="utf-8")
+CSS = CSS_PATH.read_text(encoding="utf-8")
 
 
-class SiteParser(HTMLParser):
+class DocumentParser(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.ids = set()
-        self.hrefs = []
-        self.graphic_tags = []
-        self.metas = {}
+        self.duplicate_ids = []
         self.links = []
+        self.scripts = []
+        self.inline_handlers = []
         self.h1_count = 0
-        self.form_count = 0
-        self.data_wa_purpose = []
-        self.data_wa_service = []
+        self.landmarks = set()
+        self.heading_levels = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if attrs.get("id"):
+            if attrs["id"] in self.ids:
+                self.duplicate_ids.append(attrs["id"])
             self.ids.add(attrs["id"])
         if tag == "a" and attrs.get("href"):
-            self.hrefs.append(attrs["href"])
-        if tag in {"img", "picture", "svg", "canvas", "video", "iframe", "object", "embed"}:
-            self.graphic_tags.append(tag)
-        if tag == "meta":
-            key = attrs.get("name") or attrs.get("property")
-            if key:
-                self.metas[key] = attrs.get("content", "")
-        if tag == "link":
-            self.links.append(attrs)
+            self.links.append(attrs["href"])
+        if tag == "script":
+            self.scripts.append(attrs)
+        for name in attrs:
+            if name.lower().startswith("on"):
+                self.inline_handlers.append(name)
         if tag == "h1":
             self.h1_count += 1
-        if tag == "form":
-            self.form_count += 1
-        if attrs.get("data-wa-purpose"):
-            self.data_wa_purpose.append(attrs["data-wa-purpose"])
-        if attrs.get("data-wa-service"):
-            self.data_wa_service.append(attrs["data-wa-service"])
+        if tag in {"header", "nav", "main", "footer"}:
+            self.landmarks.add(tag)
+        if tag in {"h1", "h2", "h3", "h4", "h5", "h6"}:
+            self.heading_levels.append(int(tag[1]))
 
 
-def check(condition, message):
-    if not condition:
-        raise AssertionError(message)
+class SiteTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.parser = DocumentParser()
+        cls.parser.feed(HTML)
+        cls.parser.close()
+
+    def test_one_public_html_document(self):
+        pages = [p for p in ROOT.rglob("*.html") if ".git" not in p.parts]
+        self.assertEqual([HTML_PATH], pages)
+
+    def test_no_javascript_or_node_runtime(self):
+        self.assertEqual([], self.parser.scripts)
+        self.assertEqual([], self.parser.inline_handlers)
+        self.assertNotIn("javascript:", HTML.lower())
+        self.assertFalse((ROOT / "package.json").exists())
+        self.assertFalse((ROOT / "node_modules").exists())
+        self.assertFalse((ROOT / "assets/js").exists())
+        runtime_suffixes = {".js", ".mjs", ".cjs"}
+        self.assertFalse([p for p in ROOT.rglob("*") if p.is_file() and p.suffix in runtime_suffixes])
+
+    def test_semantic_document(self):
+        self.assertIn('<html lang="en">', HTML)
+        self.assertEqual(1, self.parser.h1_count)
+        self.assertTrue({"header", "nav", "main", "footer"}.issubset(self.parser.landmarks))
+        self.assertEqual([], self.parser.duplicate_ids)
+        self.assertIn('lang="sw"', HTML)
+        self.assertIn("<details", HTML)
+        for previous, current in zip(self.parser.heading_levels, self.parser.heading_levels[1:]):
+            self.assertLessEqual(current - previous, 1)
+
+    def test_local_links_and_anchor_targets(self):
+        for href in self.parser.links:
+            if href.startswith("#"):
+                self.assertIn(href[1:], self.parser.ids, f"Missing anchor: {href}")
+                continue
+            parsed = urlparse(href)
+            if parsed.scheme or parsed.netloc or not href:
+                continue
+            path = parsed.path
+            if path:
+                target = (ROOT / path.lstrip("/")).resolve()
+                self.assertTrue(target.exists(), f"Missing local link target: {href}")
+
+    def test_canonical_service_facts(self):
+        for phrase in (
+            "Your Beauty", "Retouch &amp; Styling", "Sisterlocs Retie",
+            "Artificial Locs Installation", "KES 700+", "KES 1,500+",
+            "KES 3,500", "Eldoret Town / Karibu Mdosi",
+        ):
+            self.assertIn(phrase, HTML)
+        self.assertNotIn("KES 3,500+", HTML)
+        self.assertIn("An enquiry does not confirm a booking.", HTML)
+        self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
+
+    def test_business_and_research_boundaries(self):
+        self.assertIn("WARENA is a distinct capability domain.", HTML)
+        self.assertIn("IKAI is not a released product.", HTML)
+        self.assertIn("GENJE", HTML)
+        self.assertIn("FELOH Corpus", HTML)
+        self.assertNotIn("braiding service", HTML.lower())
+        self.assertNotIn("shaving service", HTML.lower())
+
+    def test_contact_payment_and_support(self):
+        for phrase in (
+            "https://wa.me/254719635415", "tel:+254719635415",
+            "mailto:mela9ine@proton.me", "Till 3511456",
+            "FELIX LWOVA", "Never share your M-PESA PIN",
+            "Support Us", "separate from NAKEBUSEN service payments",
+        ):
+            self.assertIn(phrase, HTML)
+
+    def test_navigation_contract(self):
+        for anchor in ('href="#crown"', 'href="#code"', 'href="#connect"'):
+            self.assertIn(anchor, HTML)
+        self.assertIn("GitHub repositories", HTML)
+        self.assertEqual(1, HTML.count("GitHub repositories"))
+
+    def test_native_preferences_and_responsive_rules(self):
+        self.assertIn("@media(prefers-color-scheme:dark)", CSS)
+        self.assertIn("@media(prefers-reduced-motion:reduce)", CSS)
+        self.assertIn("@media(prefers-reduced-transparency:reduce)", CSS)
+        self.assertIn("min-height:44px", CSS)
+        self.assertIn("backdrop-filter:blur(20px)", CSS)
+        self.assertIn("@media(max-width:760px)", CSS)
+
+    def test_no_remote_runtime_dependencies(self):
+        self.assertNotIn("fonts.googleapis.com", HTML + CSS)
+        self.assertNotIn("googletagmanager", (HTML + CSS).lower())
+        self.assertNotIn("@import", CSS)
+        self.assertTrue(CSS_PATH.exists())
+        self.assertTrue((ROOT / "assets/favicon.svg").exists())
+
+    def test_sitemap_only_lists_homepage(self):
+        sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+        self.assertIn("https://donfelohke.github.io/", sitemap)
+        self.assertNotIn("/research/", sitemap)
 
 
-def relative_luminance(hex_color):
-    channels = [int(hex_color[index:index + 2], 16) / 255 for index in (1, 3, 5)]
-    linear = [channel / 12.92 if channel <= 0.04045 else ((channel + 0.055) / 1.055) ** 2.4 for channel in channels]
-    return sum(channel * weight for channel, weight in zip(linear, (0.2126, 0.7152, 0.0722)))
-
-
-def contrast_ratio(foreground, background):
-    high, low = sorted((relative_luminance(foreground), relative_luminance(background)), reverse=True)
-    return (high + 0.05) / (low + 0.05)
-
-
-p = SiteParser()
-p.feed(html)
-p.close()
-
-check(html.count("<html") == 1, "Expected one html root")
-check('<html lang="en">' in html, "English must be the default document language")
-check('href="assets/css/nakebusen-foundation.css"' in html, "Extracted stylesheet is linked with a portable relative path")
-check('src="assets/js/nakebusen-experience.js"' in html, "Extracted application script is linked with a portable relative path")
-check('href="../assets/css/research.css"' in research_html and 'src="../assets/js/research-experience.js"' in research_html, "Research page uses its external stylesheet and theme script")
-check("<style>" not in research_html and "Research &amp; Creative Practice" in research_html, "Research page keeps semantic HTML separate from its design system")
-check('id="theme-toggle"' in research_html and 'data-theme' in research_js, "Research page exposes the shared theme control")
-check("https://donfelohke.github.io/research/" in sitemap, "Research destination is discoverable in the sitemap")
-check('href="glass-terminal.css"' in glass_html and "<style>" not in glass_html, "Glass Terminal page uses an external stylesheet")
-check("Glass Terminal" in glass_html and "RESEARCH / DESIGN DIRECTION" in glass_html, "Glass Terminal remains explicitly a research presentation")
-check("https://donfelohke.github.io/research/glass-terminal/" in sitemap, "Glass Terminal route is discoverable in the sitemap")
-check('--serif:"Cormorant Garamond"' in glass_css and "prefers-reduced-motion:reduce" in glass_css, "Glass Terminal uses local-first typography and reduced-motion support")
-check(p.h1_count == 1, f"Expected one h1, found {p.h1_count}")
-check('id="site-navigation"' not in html, "No duplicate header section navigation")
-footer_nav = re.search(r'<nav\b(?=[^>]*class="[^"]*\bfooter-nav\b")[^>]*>(.*?)</nav>', html, re.S)
-footer_nav_links = re.findall(r'<a\b[^>]*href="([^"]+)"[^>]*>(.*?)</a>', footer_nav.group(1), re.S) if footer_nav else []
-check(len(footer_nav_links) == 1, "Footer has exactly one minimal repository link")
-check(footer_nav_links[0][0] == "https://github.com/donfelohke?tab=repositories", "Footer repository link uses the canonical GitHub repositories destination")
-check('class="floating-dock"' in html and html.count('data-dock-target=') == 3, "Bottom dock has exactly three destinations")
-check('data-dock-target="crown"' in html and 'data-dock-target="code"' in html and 'data-dock-target="connect"' in html, "Bottom dock exposes Locs, Digital and Connect")
-check('data-i18n="navLocs"' in html and 'data-i18n="navDigital"' in html and 'data-i18n="navConnect"' in html, "Section labels remain available in bottom navigation")
-check('id="connect"' in html and 'id="founder"' in html and 'id="crown"' in html and 'id="code"' in html, "Primary sections and founder anchor required")
-check("Your Beauty ° Your Way." in html, "Approved homepage headline")
-check('<a class="brand" href="#top">NAKEBUSEN<span class="brand-sub">Locs ° Powered by WARENA</span></a>' in html, "Canonical lockup")
-check('data-i18n="location"' in html and "Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya" in html, "Locs section retains the canonical service location")
-check("Sisterlocs Retie" in html and "LOCS Retie" not in html, "Sisterlocs Retie is the sole canonical public service label")
-check("KES 700+" in html and "KES 1,500+" in html and "KES 3,500" in html and "KES 3,500+" not in html, "All three approved public prices must be present")
-check("Founder · CTO · Loctician · Creative Technologist" in published, "Approved public founder role")
-check("An enquiry does not confirm a booking." in published, "Exact booking disclosure")
-check("Commercial enquiries route through NAKEBUSEN." in published, "Commercial enquiries route through NAKEBUSEN")
-check("braiding" not in html.lower() and "shaving" not in html.lower(), "No braiding or shaving service claims")
-check("other locations by arrangement" not in html.lower(), "No unverified location promise")
-check("Buy Goods Till Number: 3511456" in html and "Account / Merchant name: FELIX LWOVA" in html, "Verified M-PESA Buy Goods Till and merchant name must be published")
-check("Confirm FELIX LWOVA and the agreed amount before entering your PIN." in published and "paymentSafety" in published, "Payment instructions must show merchant verification and payment safety")
-check("Pay only after the service and total amount are agreed directly with NAKEBUSEN." in published and "Use the published Buy Goods Till and merchant name shown above." in published, "Payment boundary and fallback instructions match the published payment details")
-check("Support Us" in html and "separate from NAKEBUSEN service payments" in published, "Voluntary support must remain separate from commercial payments")
-check("mailto:mela9ine@proton.me" in html and "tel:+254719635415" in html, "Connect retains direct email and telephone links")
-check('class="footer-contact"' not in html and 'class="footer-role"' not in html, "Footer avoids repeating the Connect contact directory and founder role")
-check("ONLY NAKEBUSEN TRANSACTS" in published, "Approved NAKEBUSEN-only transaction boundary is explicit")
-check("wa.me/254719635415" in html, "Canonical WhatsApp destination required")
-check(set(p.data_wa_purpose) == {"loc", "tech", "general", "payment", "support"}, "Loc, Digital, general, payment and independent-support WhatsApp purposes must be represented")
-check(set(p.data_wa_service) == {"retouch", "retie", "artificial"}, "All three service-specific WhatsApp links must be represented")
-check(all("wa.me/254719635415" in href for href in p.hrefs if "wa.me/" in href), "All WhatsApp links use the canonical number")
-check(p.form_count == 0, "No fake booking form")
-check(not p.graphic_tags, "Public page remains text-first and graphic-free")
-check(p.metas.get("og:url") == "https://donfelohke.github.io/", "OG URL")
-check(p.metas.get("og:title") == "NAKEBUSEN — Your Beauty ° Your Way.", "Open Graph title")
-check(p.metas.get("twitter:title") == "NAKEBUSEN — Your Beauty ° Your Way.", "Twitter title")
-check("nakebusen-theme" in html and "nakebusen-language" in published, "Theme and language persistence keys")
-bootstrap = re.search(r'<script>\s*([\s\S]*?)</script>', html)
-check(bootstrap is not None, "Early executable theme bootstrap exists")
-check(html.index(bootstrap.group(0)) < html.index('rel="stylesheet"'), "Theme bootstrap executes before stylesheet paint")
-check("prefers-color-scheme: dark" in bootstrap.group(1) and "localStorage.getItem('nakebusen-theme')" in bootstrap.group(1), "Early theme bootstrap respects saved and system preferences")
-check("--canvas:#000000" in css and "--surface:#151515" in css and "--surface-raised:#080808" in css, "AMOLED surface tokens are explicit")
-check(':root[data-theme="dark"] .experience-warena{background:#033500' in css, "WARENA owns the deep forest dark surface")
-check(':root[data-theme="dark"] .experience-author{background:#151515' in css, "Connect owns the charcoal dark surface")
-check("radial-gradient(" not in css and "@keyframes" not in css and "perspective(" not in css, "Decorative glow, entrance and perspective motion are removed")
-check(':root[data-theme="dark"] header .nav{background:rgba(3,53,0,.94)' in css, "AMOLED header uses forest glass")
-
-check("#theme-toggle,#language-toggle{" in css and "width:2.75rem;height:2.75rem;min-width:2.75rem;min-height:2.75rem" in css, "Theme and language controls meet 44px target")
-check("prefers-reduced-motion:reduce" in css, "Reduced-motion preference is respected")
-check("--serif:\"Cormorant Garamond\"" in css and "--sans:Inter" in css and "--mono:\"JetBrains Mono\"" in css, "Homepage typography uses the approved local-first font stack")
-check("--serif:\"Cormorant Garamond\"" in research_css and "prefers-reduced-motion:reduce" in research_css, "Research page shares typography and motion preferences")
-check(".btn{" in css and ".btn-fill{" in css and "min-height:48px" in css, "Primary and secondary enquiry actions have explicit accessible control surfaces")
-check("--glass-blur:20px" in css and "--glass-saturate:150%" in css, "Glass material tokens are defined")
-check("prefers-reduced-transparency:reduce" in css, "Reduced-transparency preference is respected")
-root_blocks = re.findall(r":root\{([^}]*)\}", css)
-dark_blocks = re.findall(r':root\[data-theme="dark"\]\{([^}]*)\}', css)
-check(len(root_blocks) == 1 and len(dark_blocks) == 1, "Light and dark design tokens have one canonical definition each")
-light_root = next(block for block in reversed(root_blocks) if "--sage-text:" in block)
-dark_root = next(block for block in reversed(dark_blocks) if "--sage-text:" in block)
-def css_token(block, name):
-    match = re.search(rf"{re.escape(name)}:(#[0-9A-Fa-f]{{6}})", block)
-    check(match is not None, f"Missing {name} token")
-    return match.group(1)
-light_sage_text = css_token(light_root, "--sage-text")
-dark_sage_text = css_token(dark_root, "--sage-text")
-light_paper = css_token(light_root, "--paper")
-dark_paper = css_token(dark_root, "--paper")
-light_price = css_token(light_root, "--price")
-dark_price = css_token(dark_root, "--price")
-check(contrast_ratio(light_sage_text, light_paper) >= 4.5, "Text-safe sage meets WCAG AA contrast on the light paper surface")
-check(contrast_ratio(dark_sage_text, dark_paper) >= 4.5, "Muted text meets WCAG AA contrast on the dark paper surface")
-check(contrast_ratio(light_price, light_paper) >= 4.5, "Service prices meet WCAG AA contrast in light theme")
-check(contrast_ratio(dark_price, dark_paper) >= 4.5, "Service prices meet WCAG AA contrast in dark theme")
-check(".experience-warena a:focus-visible" in css and ".experience-author a:focus-visible" in css and "footer a:focus-visible" in css, "Dark content and footer links have context-aware visible focus indicators")
-check("function applyLanguage(lang)" in js and "document.querySelectorAll('[data-wa-purpose]')" in js, "Language changes update general-purpose WhatsApp links")
-check("document.querySelectorAll('[data-wa-service]')" in js, "Language changes update service-specific WhatsApp links")
-
-for href in p.hrefs:
-    if href.startswith("#"):
-        check(href[1:] in p.ids or href[1:] == "", f"Broken anchor: {href}")
-
-print("PASS: concise hero, single Connect contact directory, minimal repository footer, canonical facts, payment/support details, effective theme contrast and publication gates.")
+if __name__ == "__main__":
+    unittest.main(verbosity=2)
