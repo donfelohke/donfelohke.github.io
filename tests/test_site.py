@@ -93,8 +93,8 @@ class SiteTests(unittest.TestCase):
                 self.assertTrue(target.exists(), f"Missing local link target: {href}")
 
     def test_search_and_conversion_first_hero(self):
-        self.assertIn('<title>NAKEBUSEN Loc Care in Eldoret | Don Feloh</title>', HTML)
-        self.assertIn('name="description" content="Natural loc care in Eldoret Town, Kenya.', HTML)
+        self.assertIn('<title>Don Feloh · F3L0H / FELOH WARENA</title>', HTML)
+        self.assertIn('name="description" content="Don Feloh’s author-led ecosystem:', HTML)
         self.assertIn('<h1 id="page-title">Natural Loc Care in Eldoret.</h1>', HTML)
         self.assertIn('class="hero-service-list"', HTML)
         for anchor in ("#service-retouch", "#service-sisterlocs", "#service-artificial"):
@@ -120,8 +120,8 @@ class SiteTests(unittest.TestCase):
         ]
         positions = [HTML.index(f'id="{section}"') for section in expected]
         self.assertEqual(sorted(positions), positions)
-        self.assertIn("WARENA is a distinct technical capability domain", HTML)
-        self.assertIn("not a second live commercial brand", HTML)
+        self.assertIn("WARENA is the distinct CAPABILITY domain", HTML)
+        self.assertIn("not a NAKEBUSEN sub-brand", HTML)
         self.assertIn("IKAI is a research track", HTML)
         self.assertIn("GENJE", HTML)
         self.assertIn("FELOH Corpus", HTML)
@@ -153,12 +153,15 @@ class SiteTests(unittest.TestCase):
 
     def test_navigation_contract(self):
         for anchor in (
-            'href="#nakebusen"', 'href="#warena"', 'href="#don-feloh"',
-            'href="#ikai"', 'href="#genje"', 'href="#feloh-corpus"',
+            'href="#crown"', 'href="#code"', 'href="#connect"',
         ):
             self.assertIn(anchor, HTML)
-        self.assertIn("FELOH CORPUS</a>", HTML)
+        self.assertIn('aria-label="Quick navigation"', HTML)
+        self.assertIn("NAKEBUSEN DIGITAL", HTML)
+        self.assertIn("Gallery · supporting visual archive", HTML)
         self.assertIn("GitHub · @donfelohke", HTML)
+        self.assertIn("Digital service areas", HTML)
+        self.assertIn("Computer care", HTML)
         self.assertIn("Back to top", HTML)
 
     def test_native_preferences_and_responsive_rules(self):
@@ -169,6 +172,7 @@ class SiteTests(unittest.TestCase):
         self.assertIn("scroll-snap-type:x proximity", CSS)
         self.assertIn("backdrop-filter:blur(20px)", CSS)
         self.assertIn("@media(max-width:760px)", CSS)
+        self.assertIn(".digital-panel", CSS)
 
     def test_no_remote_runtime_dependencies(self):
         self.assertNotIn("fonts.googleapis.com", HTML + CSS)
