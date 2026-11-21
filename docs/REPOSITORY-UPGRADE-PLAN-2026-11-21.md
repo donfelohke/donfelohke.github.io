@@ -37,3 +37,7 @@
 3. Implement the smallest coherent visual/accessibility/performance changes in reviewable commits.
 4. Validate all public facts against NAKEBUSEN and Corpus records.
 5. Deploy only after checks pass; perform a live smoke test.
+
+## Release evidence record
+
+Use the [website release evidence matrix](SITE-RELEASE-EVIDENCE-MATRIX-2026-11-21.md) to record source review, automated checks, manual accessibility/browser review, Pages deployment and live smoke testing separately. It is a checklist template; it does not authorize deployment or claim a release.
