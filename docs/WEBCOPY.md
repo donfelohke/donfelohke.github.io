@@ -7,8 +7,10 @@
 ## 1. NAKEBUSEN · ROOT — live commercial practice
 
 **Eyebrow:** NAKEBUSEN · LOC CARE · ELDORET, KENYA  
-**H1:** Your Beauty ° Your Way.  
-**Supporting copy:** Natural loc care in Eldoret Town. A grounded beauty practice within a wider body of technical, research and creative work.  
+**Brand line:** Your Beauty ° Your Way.  
+**H1:** Natural Loc Care in Eldoret.  
+**Supporting copy:** Care for the locs you wear, in Eldoret Town. Explore services and starting prices, then speak directly with NAKEBUSEN about your requirements.  
+**Above-the-fold service preview:** Retouch & Styling — KES 700+ · Sisterlocs Retie — KES 1,500+ · Artificial Locs Installation — KES 3,500.  
 **Primary action:** Enquire about loc care.  
 **Location:** Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
 
@@ -38,7 +40,7 @@ These describe the technical domain and documented areas of exploration; they ar
 **Name line:** Felix Lwova · #HisGenjeness  
 **Role:** Founder · CTO · Loctician · Creative Technologist.
 
-I am the human author connecting these practices. My work moves between loc care and craft, computing systems, reflective research, music, movement and the documentation of knowledge.
+I’m Felix Lwova, known as Don Feloh. I connect these practices through hands-on work in loc care and craft, computing systems, reflective research, music, movement and the documentation of knowledge.
 
 Contact directory:
 - WhatsApp: +254 719 635 415
