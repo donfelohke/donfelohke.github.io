@@ -123,6 +123,8 @@ class SiteTests(unittest.TestCase):
         self.assertIn("Contact directory", HTML)
         self.assertIn("NAKEBUSEN</strong> · <strong>WARENA</strong> · <strong>DON FELOH", HTML)
         self.assertIn("Business information and service payments belong to NAKEBUSEN.", HTML)
+        self.assertIn("NAKEBUSEN · LOC CARE", HTML)
+        self.assertIn("Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya", HTML)
 
     def test_business_and_research_boundaries(self):
         self.assertIn("IKAI is a research track, not a released product", HTML)
