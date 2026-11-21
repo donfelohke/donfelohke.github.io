@@ -1,9 +1,11 @@
+> **Current constitutional alignment — 2026-11-21:** NAKEBUSEN DIGITAL is a NAKEBUSEN customer-service path; WARENA is the distinct CAPABILITY domain that supplies technical capability. WARENA is not a NAKEBUSEN sub-brand or parent. All commercial enquiries, agreements and transactions remain through NAKEBUSEN. See the [F3L0H Sovereign Master Corpus](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-SOVEREIGN-MASTER-CORPUS-2026-11-20.md) and [Public Facts Register](PUBLIC-FACTS-REGISTER.md). The M1 copy below is retained as a historical messaging baseline; its former parent/brand framing is superseded.
+
 # NAKEBUSEN DIGITAL — Technical Copy
 
 **Document ID:** WS-TC-01  
 **Version:** M1 · 30 October 2026  
 **Status:** Approved technical messaging baseline  
-**Parent:** NAKEBUSEN DIGITAL · WARENA Systems
+**Commercial interface:** NAKEBUSEN · **Technical capability:** WARENA
 
 ## 1. Positioning
 
