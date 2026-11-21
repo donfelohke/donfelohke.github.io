@@ -145,3 +145,8 @@ WARENA's spatial computing, immersive XR and opt-in AI architecture is documente
 ## Commercial market strategy — 2026-11-20
 
 The canonical commercial strategy is maintained in the [NAKEBUSEN TAM, MVP & Sales Blueprint](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/MARKET-ENTRY-TAM-MVP-SALES-BLUEPRINT-2026-11-20.md). It is a strategy and validation plan, not a verified market-size study or financial forecast. It does not change the current public service catalogue, starting prices, booking terms, website design or live service availability. **ONLY NAKEBUSEN TRANSACTS.**
+
+
+## Repository upgrade plan
+
+See [the donfelohke.github.io repository upgrade plan](docs/REPOSITORY-UPGRADE-PLAN-2026-11-21.md). This plan records the next maintenance and quality gates without claiming unfinished work is complete.
