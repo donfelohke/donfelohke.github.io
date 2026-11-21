@@ -182,3 +182,18 @@ h2{margin:.4rem 0 0;font:500 clamp(2.6rem,6vw,4.8rem)/1.02 var(--serif);letter-s
  .topbar,.floating-dock,.hero-actions{display:none!important}
  .section,.site-footer{break-inside:avoid;background:#fff;color:#111}
 }
+/* Ecosystem redefinition · 22 November 2026 */
+.author-kicker{margin:0 0 1.25rem;color:var(--muted);font:750 .68rem/1.5 var(--mono);letter-spacing:.12em}
+.author-kicker a{color:var(--clay);text-decoration-thickness:1px;text-underline-offset:.25em}
+.digital-panel{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(1.5rem,5vw,4rem);margin-top:clamp(3rem,6vw,5rem);padding:clamp(1.25rem,3vw,2.25rem);border:1px solid var(--line);border-radius:calc(var(--radius) + .25rem);background:var(--surface);scroll-margin-top:8rem}
+.digital-heading h3{max-width:13ch;margin:.6rem 0 1rem;font:500 clamp(2rem,4vw,3.2rem)/1.04 var(--serif);letter-spacing:-.035em}
+.digital-heading>p:last-child{max-width:34rem;color:var(--muted)}
+.digital-detail{padding:clamp(1rem,2.5vw,1.5rem);border-radius:var(--radius);background:var(--forest);color:#F3EEE4}
+.digital-detail h4{margin:0 0 1rem;color:#F0C477;font:650 1.25rem/1.2 var(--serif)}
+.digital-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem 1.2rem;margin:0;padding:0;list-style:none}
+.digital-list li{display:grid;gap:.2rem;align-content:start}
+.digital-list strong{font-size:.9rem}
+.digital-list span{color:#E0E8DD;font-size:.82rem;line-height:1.45}
+.digital-detail .scope-note{border-color:rgba(243,238,228,.28);color:#E0E8DD}
+.button-digital{background:#F0C477;color:#202522}
+@media(max-width:760px){.digital-panel{grid-template-columns:1fr;gap:1rem}.digital-list{grid-template-columns:1fr}}
