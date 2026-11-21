@@ -1,8 +1,9 @@
 # Don Feloh Website — Site Architecture
 
 **Date:** 22 November 2026  
-**Status:** F3L0H ecosystem gateway · commercial-first, author-led static site  
-**Public surface:** https://donfelohke.github.io/
+**Status:** F3L0H ecosystem gateway · commercial-first homepage + curated practice atlas  
+**Public surface:** https://donfelohke.github.io/  
+**Candidate route:** `/work/` · feature branch until reviewed, merged and deployed
 
 ## Purpose and constitutional domain model
 
@@ -21,29 +22,35 @@ The site is the public gateway to one human author's connected body of work. F3L
 
 ## Information architecture
 
-1. **Home / NAKEBUSEN LOCS:** approved commercial hero, location, current starting prices and direct enquiry.
-2. **NAKEBUSEN DIGITAL:** GNU/Linux, computer care, networking, infrastructure and local-first computing capability areas; per-engagement scope and quotation.
-3. **WARENA / CAPABILITY:** technical identity, systems principles and source repository.
-4. **Don Feloh / F3L0H:** human authorship, founder role, biography and contact directory.
-5. **IKAI / MIRROR:** reflective-computing and mirror research with maturity disclosure.
-6. **GENJE / EXPRESSION:** creative and embodied practice.
-7. **FELOH Corpus:** shared canon, documentation, research provenance and repository index.
-8. **Kiswahili:** optional native disclosure, never the default language.
-9. **Connect / footer:** NAKEBUSEN business information, M-PESA manual payment instructions, separate voluntary Support Us, source and copyright links.
+1. **Home `/`:** preserve the existing NAKEBUSEN commercial discovery experience, approved service facts, contact routes and three-destination LOCS / DIGITAL / CONNECT dock.
+2. **Work `/work/`:** curated F3L0H Living Practice Atlas; explains the author, four practices, selected research trails and source governance.
+3. **Canonical domains:** detailed specialist work remains in NAKEBUSEN, WARENA, IKAI and GENJE repositories until dedicated domain pages are separately curated.
+4. **Knowledge governance:** FELOH Corpus owns shared canon, cross-domain research synthesis, evidence and provenance.
+5. **About / Connect:** the existing homepage remains the primary author and contact directory; future dedicated pages require separate publication decisions.
+
+## Work page publication contract
+
+- The Work page is an editorial index, not a replacement homepage, checkout or application.
+- Four practice domains remain distinct: NAKEBUSEN / ROOT, WARENA / CAPABILITY, IKAI / MIRROR and GENJE / EXPRESSION.
+- FELOH Corpus is a shared governance layer, not a fifth practice domain.
+- Selected research entries are labelled RESEARCH or ARCHITECTURE PROPOSAL and link to canonical specialist sources.
+- A publication record is an editorial summary, not evidence of implementation or validation.
+- The two WARENA supporting forks remain infrastructure links, not independent domains.
+- Only approved summaries and source links are published; repository content is not mirrored automatically.
 
 ## Navigation
 
-- Topbar: F3L0H / FELOH WARENA identity anchor and optional Kiswahili jump.
-- Floating dock: exactly three destinations — LOCS (#crown), DIGITAL (#code), CONNECT (#connect).
-- Domain and repository destinations remain contextual links in their respective content sections.
-- No duplicated six-item top navigation.
+- Homepage topbar and floating dock remain unchanged.
+- Work page has its own compact native navigation: Home, Practices, Research and Sources.
+- Work page contextual links point to the homepage or canonical repositories.
+- No JavaScript navigation, scroll observer or dynamically maintained active state.
 
 ## Runtime and delivery
 
-- One public HTML document and one primary CSS stylesheet.
-- No JavaScript, framework, static-site generator, package manager or build step.
+- Hand-authored static HTML and CSS; no JavaScript, framework, static-site generator, package manager or build step.
+- Homepage uses `assets/css/site.css`; Work page uses `assets/css/work.css`.
 - No analytics, tracking, remote fonts or third-party UI runtime.
-- English default; Kiswahili native disclosure.
+- English default; Kiswahili native disclosure remains on the homepage.
 - Theme follows operating-system colour preference.
 - Native anchors and direct contact URLs only.
 - No forms, customer database, payment APIs, STK push or automated payment verification.
@@ -63,4 +70,4 @@ The site is the public gateway to one human author's connected body of work. F3L
 
 ## Release control
 
-Source tests, artifact creation, manual deployment, deployment result and live inspection are separate evidence stages. Do not claim a live release without evidence. Deployment remains a separately authorized action.
+Source tests, artifact creation, manual deployment, deployment result and live inspection are separate evidence stages. The Work page remains a feature-branch candidate until reviewed and merged. Do not claim a live release without deployment evidence and rendered live inspection. Deployment remains separately authorized.
