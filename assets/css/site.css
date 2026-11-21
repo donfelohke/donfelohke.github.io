@@ -197,3 +197,29 @@ h2{margin:.4rem 0 0;font:500 clamp(2.6rem,6vw,4.8rem)/1.02 var(--serif);letter-s
 .digital-detail .scope-note{border-color:rgba(243,238,228,.28);color:#E0E8DD}
 .button-digital{background:#F0C477;color:#202522}
 @media(max-width:760px){.digital-panel{grid-template-columns:1fr;gap:1rem}.digital-list{grid-template-columns:1fr}}
+
+
+/* Four-practice map · author-led orientation */
+.practice-map{margin-top:clamp(3rem,6vw,5rem);padding-top:2rem;border-top:1px solid var(--line)}
+.practice-map-heading{max-width:48rem;margin-bottom:1.5rem}
+.practice-map-heading h3{max-width:22ch;margin:.55rem 0 .8rem;font:500 clamp(1.9rem,4vw,3rem)/1.06 var(--serif);letter-spacing:-.035em}
+.practice-map-heading>p:last-child{max-width:43rem;color:var(--muted)}
+.practice-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem}
+.practice-card{min-width:0;min-height:13rem;display:flex;flex-direction:column;align-items:flex-start;gap:.65rem;padding:1.1rem;border:1px solid var(--line);border-top:4px solid var(--clay);border-radius:var(--radius);background:var(--surface);text-decoration:none;transition:transform .18s ease,border-color .18s ease}
+.practice-card:hover{transform:translateY(-2px);border-color:var(--clay)}
+.practice-card:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.practice-card strong{font:750 1.15rem/1.15 var(--sans);letter-spacing:.08em}
+.practice-card>span:not(.practice-code){color:var(--muted);font-size:.86rem;line-height:1.45}
+.practice-card small{margin-top:auto;color:var(--muted);font:.66rem/1.45 var(--mono)}
+.practice-code{color:var(--clay);font:750 .63rem/1.4 var(--mono);letter-spacing:.08em}
+.practice-capability{border-top-color:var(--forest)}
+.practice-capability .practice-code{color:var(--forest)}
+.practice-mirror{border-top-color:var(--ochre)}
+.practice-mirror .practice-code{color:var(--ochre)}
+.practice-expression{border-top-color:var(--clay)}
+.practice-connection{max-width:55rem;margin-top:1.5rem;padding:1.2rem 1.35rem;border-left:3px solid var(--ochre);background:var(--soft)}
+.practice-connection h4{margin:0 0 .45rem;font:650 1.3rem/1.2 var(--serif)}
+.practice-connection p{margin:0;color:var(--muted);font-size:.92rem}
+@media(max-width:900px){.practice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:420px){.practice-grid{grid-template-columns:1fr}.practice-card{min-height:10rem}}
+@media(prefers-reduced-motion:reduce){.practice-card{transition:none}.practice-card:hover{transform:none}}
