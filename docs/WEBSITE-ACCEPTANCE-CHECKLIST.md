@@ -1,53 +1,48 @@
-# Website acceptance checklist
+# Website Acceptance Checklist
 
-Mark after real checks. Spec alone is not pass.
+Mark an item only after the check is performed against a named commit.
 
-## Brand & copy
+## Brand and copy
+- [ ] NAKEBUSEN and loc care are immediately clear.
+- [ ] Approved headline and brand lockup are retained.
+- [ ] Locs is primary; Digital is secondary.
+- [ ] WARENA is a distinct capability domain, not a separate checkout.
+- [ ] IKAI is labelled research / WIP; GENJE creative practice.
+- [ ] English default; Kiswahili disclosure is complete and readable.
 
-- [ ] NAKEBUSEN dominant  
-- [ ] Locs and Digital clear  
-- [ ] WARENA endorsement only  
-- [ ] English default; Kiswahili real  
-- [ ] GRACE · GRIT · GLORY with About context  
+## Services and trust
+- [ ] Retouch & Styling — KES 700+.
+- [ ] Sisterlocs Retie — KES 1,500+.
+- [ ] Artificial Locs Installation — KES 3,500.
+- [ ] Location matches the facts register.
+- [ ] Enquiry-not-booking disclosure is visible.
+- [ ] Digital feasibility, scope and availability are qualified.
+- [ ] Payment details and safety instructions match the register.
+- [ ] Support Us remains separate from service payment.
 
-## Mobile & nav
-
-- [ ] Header fits narrow Android  
-- [ ] WA / language / theme usable  
-- [ ] Anchors do not hide headings  
-- [ ] No horizontal scroll at 320px  
-- [ ] Visible focus  
-
-## Services & trust
-
-- [ ] Prices 700 / 1,500 / 3,500  
-- [ ] No braiding  
-- [ ] Enquiry ≠ booking  
-- [ ] Digital scope honest  
-- [ ] IKAI WIP  
+## Architecture and mobile
+- [ ] Exactly one public HTML document.
+- [ ] One primary CSS stylesheet.
+- [ ] No JavaScript, Node, generator or package-manager dependency.
+- [ ] No broken internal links or anchor targets.
+- [ ] No horizontal overflow at 320px.
+- [ ] Floating dock does not obscure content or footer.
 
 ## Accessibility
+- [ ] Semantic landmarks and one H1.
+- [ ] Keyboard-only navigation works.
+- [ ] Focus is visible.
+- [ ] Contrast checked in light and dark modes.
+- [ ] Reduced motion and reduced transparency checked.
+- [ ] Screen-reader landmark and heading order reviewed.
+- [ ] Primary controls retain 44px-class targets.
 
-- [ ] Keyboard all controls  
-- [ ] Contrast checked both themes  
-- [ ] `lang` correct  
-- [ ] Reduced motion respected  
+## Release
+- [ ] Python tests pass.
+- [ ] Diff reviewed.
+- [ ] Pages artifact succeeds.
+- [ ] Deployment separately authorized.
+- [ ] Live page inspected after deployment.
+- [ ] Evidence record includes commit, date, browser, viewport, procedure and result.
 
-## Technical & release
-
-- [ ] No broken internal links / console errors  
-- [ ] Title, description, canonical correct  
-- [ ] Theme ⊥ language  
-- [ ] Pages serves intended commit   
-- [ ] WhatsApp tested on real device  
-
-## Priority
-
-P0 trust → P1 mobile journeys → P2 a11y/tech → P3 polish  
-
-
-## Evidence record required for each release
-
-For every checked item, record the tested commit, date/time, browser and version, device/viewport, procedure, expected result, observed result, pass/fail, defect reference and retest. For production checks, record the deployed Pages commit and verify the public URL after deployment. Keep source-level workflow results separate from manual browser, real-device, accessibility and payment-provider verification.
-
-Do not mark an item complete from a code review alone. No checklist item is implicitly passed by this document.
+Source checks do not imply browser, accessibility or deployment verification.
