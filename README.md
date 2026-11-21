@@ -3,7 +3,7 @@
 **Public website:** https://donfelohke.github.io/  
 **Repository:** `donfelohke/donfelohke.github.io`
 
-An author-led body of work with a clear commercial entry point. The website presents six distinct domains without treating them as competing brands or businesses:
+An author-led body of work with a clear commercial entry point. The homepage leads with natural loc care in Eldoret, shows the three approved service prices immediately, and then introduces six distinct domains without treating them as competing brands or businesses:
 
 1. **NAKEBUSEN** — the only live commercial practice: natural loc care in Eldoret Town, Kenya.
 2. **WARENA** — a distinct technical capability domain: systems engineering, GNU/Linux, infrastructure and reproducible computing.
