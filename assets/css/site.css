@@ -120,7 +120,10 @@ h2{margin:.4rem 0 0;font:500 clamp(2.6rem,6vw,4.8rem)/1.02 var(--serif);letter-s
 .footer-lockup strong{font:750 .82em/1 var(--sans);letter-spacing:.1em}
 .footer-heading>p:not(.footer-lockup){margin:.35rem 0;color:#C5BDAF;font:.7rem/1.5 var(--mono);letter-spacing:.06em}
 .footer-boundary{max-width:44rem;margin-top:1rem!important;font: .88rem/1.55 var(--sans)!important;letter-spacing:0!important}
-.payment-section,.support-section{max-width:54rem;padding-block:2rem;border-bottom:1px solid rgba(242,239,234,.2)}
+.business-information,.payment-section,.support-section{max-width:54rem;padding-block:2rem;border-bottom:1px solid rgba(242,239,234,.2)}
+.business-information h2{font-size:clamp(1.6rem,3vw,2.3rem)}
+.business-information p{color:#D4D0C7}
+.business-information a{color:#FFF4D8;font-weight:750}
 .site-footer .section-label{color:#E5BE68}
 .site-footer h2{font-size:clamp(2rem,4vw,3rem)}
 .payment-section>p,.support-section>p{color:#D4D0C7}
