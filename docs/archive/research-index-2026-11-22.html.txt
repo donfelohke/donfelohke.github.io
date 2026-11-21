@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#173D32">
+<script>
+/* Resolve the shared theme preference before the research stylesheet paints. */
+(function(){
+  var root=document.documentElement,selected=null;
+  try{var saved=localStorage.getItem('nakebusen-theme');if(saved==='light'||saved==='dark')selected=saved;}catch(error){}
+  if(!selected){try{selected=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}catch(error){selected='light';}}
+  root.setAttribute('data-theme',selected);
+  var meta=document.querySelector('meta[name="theme-color"]');
+  if(meta)meta.setAttribute('content',selected==='dark'?'#000000':'#173D32');
+})();
+</script>
+<meta name="description" content="Research and creative practice by Don Feloh: African-centred scholarship, reflective computing, embodied practice, XR and technological freedom.">
+<link rel="canonical" href="https://donfelohke.github.io/research/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NAKEBUSEN · Don Feloh">
+<meta property="og:title" content="Research & Creative Practice · Don Feloh">
+<meta property="og:description" content="African-centred scholarship, reflective computing, embodied practice and technological freedom.">
+<meta property="og:url" content="https://donfelohke.github.io/research/">
+<title>Research &amp; Creative Practice · Don Feloh</title>
+<link rel="stylesheet" href="../assets/css/research.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="/">NAKEBUSEN · Powered by WARENA</a><div class="top-actions"><a class="back" href="/">← Return to homepage</a><button id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme"><span class="toggle-icon" aria-hidden="true">◐</span></button></div></div></header>
+<main>
+<section class="hero"><div class="wrap">
+<p class="eyebrow">DON FELOH · RESEARCH / CREATIVE PRACTICE</p>
+<h1>Research &amp; Creative Practice</h1>
+<p class="intro">Independent inquiry across African-centred scholarship, reflective computing, embodied practice and technological freedom.</p>
+<p>Research is how we examine inherited assumptions, document what we learn and develop possibilities with care. This page brings together research notes, scholarly reading, technical investigations and creative practice associated with Don Feloh and the wider NAKEBUSEN, WARENA, IKAI and GENJE ecosystem.</p>
+<div class="boundary"><strong>Research is not a service catalogue.</strong> The work presented here includes research, working ideas, technical experiments and creative practice. A proposal is not an implementation; a prototype is not a released product. Commercial enquiries remain with NAKEBUSEN. <strong>ONLY NAKEBUSEN TRANSACTS.</strong></div>
+</div></section>
+<section class="section"><div class="wrap">
+<p class="kicker">01 · Research domains</p><h2>Four connected fields</h2>
+<div class="grid">
+<article class="card"><p class="kicker">KNOWLEDGE · CANON</p><h3>FELOH Corpus</h3><p>The shared source of record for terminology, provenance, evidence standards, governance and cross-domain knowledge. Research includes African histories, philosophy, cultural memory and knowledge systems.</p><p><a href="https://github.com/donfelohke/feloh-corpus">Explore FELOH Corpus →</a></p></article>
+<article class="card"><p class="kicker">REFLECTION · COMPUTING</p><h3>IKAI</h3><p>IKAI is a Turkana female name meaning “home”; that meaning informs research into belonging, reflection, embodiment, memory, continuity, privacy and personally controlled environments. The IKAI Mirror track investigates optics, displays, sensing, spatial interaction and embodied reflection.</p><p class="meta">Status: RESEARCH / WORK IN PROGRESS · Not a released product.</p><p><a href="https://github.com/donfelohke/Ikai">Explore IKAI research →</a></p><p><a href="https://github.com/donfelohke/Ikai/blob/main/docs/IKAI-MIRROR-TECHNOLOGY-AND-SCHOLARLY-RESEARCH-2026-11-18.md">IKAI Mirror technology and scholarly research →</a></p>
+<p><a href="https://github.com/donfelohke/Ikai/blob/main/wiki/engineering/optical-compute/">REFLECTION± — Light In, Light Out, Compute →</a></p>
+<p><a href="https://github.com/donfelohke/Ikai/blob/main/docs/REFLECTION-PLUS-MINUS-LIGHT-IN-LIGHT-OUT-COMPUTE-RESEARCH-2026-11-21.md">Full REFLECTION± research dossier →</a></p></article>
+<article class="card"><p class="kicker">EMBODIMENT · CREATIVE PRACTICE</p><h3>GENJE</h3><p>Genge-rooted sound and aesthetics, AfroTech, livecoding, audiovisual experimentation, movement, choreography and choreohacking. Sound, code and embodied movement meet as authored creative practice.</p><p class="meta">Status: Creative practice / research · Not a checkout brand.</p><p><a href="https://github.com/donfelohke/Genje">Explore GENJE →</a></p></article>
+<article class="card"><p class="kicker">SYSTEMS · INFRASTRUCTURE</p><h3>WARENA</h3><p>Libre software, GNU/Linux, local-first computing, reproducible systems, infrastructure engineering and maintainable technical environments. WARENA provides the systems capability behind NAKEBUSEN Digital.</p><p class="meta">Status varies by project: distinguish LIVE, PROTOTYPE, RESEARCH and PROPOSAL.</p><p><a href="https://github.com/donfelohke/WARENA">Explore WARENA →</a></p></article>
+</div>
+</div></section>
+<section class="section"><div class="wrap">
+<p class="kicker">01A · Spatial interface research</p><h2>Glass Terminal · UI / UX / XR</h2>
+<p>A cross-project research programme exploring terminal precision, selective glass materials, native desktop computing, reflective interfaces and embodied spatial interaction. It connects WARENA infrastructure, IKAI reflective computing and GENJE creative practice while keeping their technical and governance boundaries distinct.</p>
+<p class="meta">Status: RESEARCH / DESIGN DIRECTION · No released shell, XR platform or hardware implementation is claimed.</p>
+<p><a href="/research/glass-terminal/">Explore the Glass Terminal research experience →</a></p>
+</div></section>
+<section class="section"><div class="wrap">
+<p class="kicker">02 · Current investigations</p><h2>Questions under examination</h2>
+<ul class="list">
+<li><strong>XR and reflective environments:</strong> mirror optics, two-way mirror displays, augmented-reality mirrors and spatially extended interaction.</li>
+<li><strong>Embodied interaction:</strong> movement traces, reflected-body interaction, choreography and relationships between physical and computational representation.</li>
+<li><strong>Reflective computing:</strong> personal observation, context, journaling and interfaces that support reflection without judging or scoring people.</li>
+<li><strong>Technological independence:</strong> local-first GNU/Linux systems, reproducible environments, libre software and human-controlled infrastructure.</li>
+<li><strong>African-centred knowledge:</strong> historical inquiry, philosophy, language, cultural memory, attribution and the stewardship of knowledge.</li>
+</ul>
+<p class="meta">These are research directions, not claims that every capability has been implemented or validated.</p>
+</div></section>
+<section class="section"><div class="wrap">
+<p class="kicker">03 · Selected scholarly reading</p><h2>Research informing the IKAI mirror track</h2>
+<ol class="reading">
+<li><a href="https://doi.org/10.1145/3544548.3580666">Here and Now: Creating Improvisational Dance Movements with a Mixed Reality Mirror</a> <span class="meta">· CHI 2023 · Embodied interaction and improvisational movement.</span></li>
+<li><a href="https://doi.org/10.1145/3631431">Reflected Reality: Augmented Reality through the Mirror</a> <span class="meta">· IMWUT 2023 · Reflected-body interaction and spatial references.</span></li>
+<li><a href="https://doi.org/10.3390/mti9090093">Augminded: Ambient Mirror Display Notifications</a> <span class="meta">· 2025 · Ambient, context-sensitive mirror interfaces.</span></li>
+<li><a href="https://doi.org/10.1038/s41746-018-0068-7">Reflecting Health: Smart Mirrors for Personalized Medicine</a> <span class="meta">· 2018 · Smart-mirror architecture and sensing landscape; health-related claims require independent clinical scrutiny.</span></li>
+<li><a href="https://doi.org/10.1007/978-3-031-84158-3_12">Smart Mirrors and Data Protection Regulation</a> <span class="meta">· 2025 · Privacy, consent and data protection considerations.</span></li>
+</ol>
+<p class="meta">This is a selected reading list, not a systematic review. Interpretations and design decisions are documented in the linked project research records.</p>
+</div></section>
+<section class="section"><div class="wrap">
+<p class="kicker">04 · Methods and principles</p><h2>Evidence before claims</h2>
+<ul class="list">
+<li>Distinguish published evidence, founder interpretation, hypothesis, proposal, implementation and verified result.</li>
+<li>Attribute ideas, quotations, research and creative contributions to their authors.</li>
+<li>Preserve source links, dates, versions and relevant limitations.</li>
+<li>Prefer reproducible technical work and documented experiments.</li>
+<li>Respect privacy, consent, local control and data minimisation.</li>
+<li>Do not turn people into scores, hidden profiles or diagnostic outputs.</li>
+<li>Record negative results and unresolved questions, not only successful demonstrations.</li>
+</ul>
+</div></section>
+<section class="section"><div class="wrap">
+<p class="kicker">05 · Reading project status</p><h2>What each status means</h2>
+<p>Project labels describe the maturity of a particular artefact or claim, not the overall maturity of an entire research domain.</p>
+<div class="status-key">
+<div><strong>LIVE</strong><p>Available and in use in the stated context. Availability does not imply universal support.</p></div>
+<div><strong>PROTOTYPE</strong><p>An implemented experiment for evaluation; not necessarily stable or suitable for general use.</p></div>
+<div><strong>RESEARCH</strong><p>An active investigation, literature review or technical exploration without a released product claim.</p></div>
+<div><strong>PROPOSAL</strong><p>A documented possibility or design direction that has not yet been implemented.</p></div>
+</div>
+<p class="meta">When a status is unknown or evidence is incomplete, it should remain explicitly unclassified rather than being promoted to LIVE.</p>
+</div></section>
+<section class="section"><div class="wrap">
+<p class="kicker">06 · Research archive</p><h2>Follow the source material</h2>
+<p>Specialist repositories hold the working documents, source references, experiments and project histories. FELOH Corpus coordinates shared canon and provenance; each project repository documents its own research domain.</p>
+<div class="links">
+<a class="primary" href="https://github.com/donfelohke/feloh-corpus">FELOH Corpus</a>
+<a href="https://github.com/donfelohke/Ikai">IKAI</a>
+<a href="https://github.com/donfelohke/Genje">GENJE</a>
+<a href="https://github.com/donfelohke/WARENA">WARENA</a>
+<a href="https://github.com/donfelohke">GitHub profile</a>
+</div>
+</div></section>
+</main>
+<footer class="footer"><div class="wrap">
+<p class="signature">NAKEBUSEN · WARENA · DON FELOH</p>
+<p>GRACE · GRIT · GLORY / HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES</p>
+<p><a href="/">Return to NAKEBUSEN</a> · <a href="https://github.com/donfelohke">Source and project archive</a></p>
+<p>Felix Lwova · Don Feloh · Founder · CTO · Loctician · Creative Technologist</p>
+</div></footer>
+<script src="../assets/js/research-experience.js" defer></script>
+</body>
+</html>
