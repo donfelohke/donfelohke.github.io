@@ -21,15 +21,18 @@ The site is the public gateway to one human author's connected body of work. F3L
 
 ## Information architecture
 
-1. **Home / NAKEBUSEN LOCS:** approved commercial hero, location, current starting prices and direct enquiry.
+1. **Home / NAKEBUSEN LOCS:** commercial-first hero, location, current starting prices and direct enquiry.
 2. **NAKEBUSEN DIGITAL:** GNU/Linux, computer care, networking, infrastructure and local-first computing capability areas; per-engagement scope and quotation.
-3. **WARENA / CAPABILITY:** technical identity, systems principles and source repository.
-4. **Don Feloh / F3L0H:** human authorship, founder role, biography and contact directory.
-5. **IKAI / MIRROR:** reflective-computing and mirror research with maturity disclosure.
-6. **GENJE / EXPRESSION:** creative and embodied practice.
-7. **FELOH Corpus:** shared canon, documentation, research provenance and repository index.
-8. **Kiswahili:** optional native disclosure, never the default language.
-9. **Connect / footer:** NAKEBUSEN business information, M-PESA manual payment instructions, separate voluntary Support Us, source and copyright links.
+3. **Don Feloh / F3L0H:** human author and founder identity, role, biography and contact directory; placed immediately after the commercial introduction.
+4. **Four-practice map:** a compact, linked orientation to NAKEBUSEN / ROOT, WARENA / CAPABILITY, IKAI / MIRROR and GENJE / EXPRESSION, with each domain's public status made explicit.
+5. **WARENA / CAPABILITY:** technical identity, systems principles and source repository.
+6. **IKAI / MIRROR:** reflective-computing and mirror research with maturity disclosure.
+7. **GENJE / EXPRESSION:** creative and embodied practice.
+8. **FELOH Corpus:** shared canon, documentation, research provenance and repository index.
+9. **Kiswahili:** optional native disclosure, never the default language.
+10. **Connect / footer:** NAKEBUSEN business information, M-PESA manual payment instructions, separate voluntary Support Us, source and copyright links.
+
+The four-practice map is an orientation layer, not a replacement for the detailed domain sections or canonical GitHub repositories. The homepage remains one HTML document and retains the three-destination LOCS / DIGITAL / CONNECT dock.
 
 ## Navigation
 
