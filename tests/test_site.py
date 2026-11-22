@@ -146,7 +146,8 @@ class PublicationTests(unittest.TestCase):
 
     def test_business_payment_and_support_boundaries(self):
         for phrase in (
-            "Eldoret Town / Karibu Mdosi", "+254719635415", "mela9ine@proton.me",
+            "Near King's Square", "Kisumu Road", "F743+R35", "wider Eldoret Town service area",
+            "https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6", "+254719635415", "mela9ine@proton.me",
             "3511456", "FELIX LWOVA", "Never share your M-PESA PIN",
             "Manual payment information only", "Support Us",
             "separate from NAKEBUSEN service payments",
