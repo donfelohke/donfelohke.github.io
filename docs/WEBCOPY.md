@@ -23,15 +23,21 @@ F3L0H / FELOH WARENA is the overarching human authorship and practice identity, 
 **Supporting copy:** Care for the locs you wear, in Eldoret Town. Explore services and starting prices, then speak directly with NAKEBUSEN about your requirements.  
 **Location:** Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
 
+### NAKEBUSEN business history
+
+NAKEBUSEN began in Lodwar, Turkana County, Kenya. Its loc-care practice continues in Eldoret. This is the business's history and must not be presented as the founder's personal birthplace, ancestry or roots.
+
 ### LOCS
 
 | Service | Public price |
 |---|---:|
-| Retouch & Styling | KES 700+ |
-| Sisterlocs Retie | KES 1,500+ |
+| Retouch & Styling | KES 700 |
+| Sisterlocs Retie | KES 1,500 |
 | Artificial Locs Installation | KES 3,500 |
 
-Prices are starting points where indicated. Final cost depends on the service, loc condition, materials and work required. No braiding or shaving services are advertised.
+Published prices are indicative. Final cost depends on service scope, loc condition, materials and work required; the final amount is agreed before work begins. No braiding or shaving services are advertised.
+
+**Service descriptions:** Retouch & Styling refreshes and maintains existing locs. Sisterlocs Retie is retightening for established Sisterlocs. Artificial Locs Installation is scoped around the preferred style, materials and requirements. Do not imply washing, crochet or other unapproved inclusions.
 
 **Enquiry boundary:** An enquiry does not confirm a booking. Availability and final terms are agreed directly.
 
@@ -111,3 +117,11 @@ Support Us: voluntary support for independent creative, cultural and technical w
 NAKEBUSEN is the only live commercial practice. LOCS and DIGITAL are its two customer service paths. WARENA is distinct capability. IKAI is research / WIP. GENJE is creative practice. FELOH Corpus is shared knowledge governance. Don Feloh is the human author.
 
 Do not invent availability, hours, street address, credentials, testimonials, outcomes or customer identities. Do not advertise braiding, shaving or unconfirmed home visits. Do not present IKAI, GENJE, WARENA or FELOH Corpus as separate checkout destinations. Do not alter payment details or copyright attribution without the required evidence and review.
+
+## Service-specific enquiry copy
+
+- Retouch & Styling: `Hello NAKEBUSEN. I would like to enquire about Retouch & Styling. I can share details about my current locs and the work required.`
+- Sisterlocs Retie: `Hello NAKEBUSEN. I would like to enquire about Sisterlocs Retie. I can share details about my Sisterlocs and their current condition.`
+- Artificial Locs Installation: `Hello NAKEBUSEN. I would like to enquire about Artificial Locs Installation. I would like to discuss the preferred style, materials and requirements.`
+
+Kiswahili equivalents are authored in the corresponding service cards in `index.html`. These links initiate enquiries only; they do not confirm bookings.
