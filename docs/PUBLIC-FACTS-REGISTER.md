@@ -33,7 +33,7 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-010 | GENJE is not a separate commercial division | F2 | Canonical |
 | PF-011 | WARENA is the distinct CAPABILITY domain; it may provide technical capability for NAKEBUSEN digital-service engagements | F2 | Not a NAKEBUSEN subdomain, parent enterprise or separate checkout; all commercial transactions remain through NAKEBUSEN |
 | PF-012 | IKAI is research, not a released product | F2 | Label research / WIP |
-| PF-013 | Current loc-care locality: Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya | F1 | Use the supplied Plus Code and Google Maps link below for directions; do not invent a street address or coordinates |
+| PF-013 | Current loc-care locality: Near King's Square on Kisumu Road · Eldoret Town · Uasin Gishu · Kenya | F1 | Founder-supplied location description; pair with the supplied Plus Code and map pin for directions. Do not invent a street address or coordinates |
 | PF-014 | Phone: +254 719 635 415 | F1 | Verify before campaigns |
 | PF-015 | WhatsApp: https://wa.me/254719635415 | F1 | Enquiry channel |
 | PF-016 | Email: mela9ine@proton.me | F1 | Verify before campaigns |
@@ -58,7 +58,7 @@ This register controls factual claims used on the website, service catalogue, pr
 
 | PF-034 | NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret | F1 | Founder-supplied business-history fact. Keep distinct from founder biography, birthplace and ancestry. |
 | PF-035 | Public directions reference: F743+R35, Eldoret, Kenya; supplied Google Maps pin: https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6 | F1 | Owner-supplied map reference. Publish the short Plus Code with Eldoret locality. Do not claim an independently verified street address, entrance, coordinates or transit stage. |
-| PF-036 | Loc-care home calls may be arranged within the wider Eldoret Town area | F1 | Confirm exact location, service suitability, availability and travel arrangements directly before confirming a visit; no fixed kilometre radius is asserted. |
+| PF-036 | Loc-care home calls may be arranged across the wider Eldoret Town service area | F1 | Confirm exact location, service suitability, availability and any travel costs directly before confirming a visit. Coverage is assessed by location; no fixed kilometre radius or universal coverage is promised. |
 
 ## Publication controls
 
