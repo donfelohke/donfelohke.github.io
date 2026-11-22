@@ -36,3 +36,13 @@ Glass only on functional navigation. Content, prices and payment instructions re
 
 ## Native interaction
 One HTML document, one CSS stylesheet, no JavaScript. System theme preference, native Kiswahili disclosure, native anchors and direct contact links. Respect reduced motion and reduced transparency.
+
+
+## Homepage revamp · 22 November 2026
+- Hero hierarchy: canonical H1 “Your Beauty ° Your Way.”, followed by the loc-care proposition “Natural loc care in Eldoret.” and direct service-price links.
+- LOCS uses warm paper surfaces, editorial serif headings, terracotta/ochre markers and three service cards with clear starting prices.
+- DIGITAL remains a distinct capability path, visually grounded in forest green and qualified as assessed-per-engagement.
+- Founder authorship, the four practice domains, research status, source links, Kiswahili disclosure, contact, M-PESA and voluntary support remain in the single-page structure.
+- Glass is reserved for functional top and bottom navigation. Content, prices and payment instructions remain opaque.
+- Preserve native anchors, 44px-class controls, safe-area spacing, visible focus, system colour-scheme support, reduced-motion and reduced-transparency fallbacks.
+- No scripts, remote fonts, stock imagery, trackers, CMS, generated pages or external runtime dependencies.
