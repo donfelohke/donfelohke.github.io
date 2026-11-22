@@ -147,3 +147,8 @@ The implementation does not modify payment details, commercial boundaries, appro
 The remediation does not change the global palette, service-card design, prices, service scope, WhatsApp destinations, founder identity, contact details, published M-PESA details, Support Us distinction, language policy, or research/commercial boundary. It does not add a framework, dependency, analytics, checkout, booking form, or external runtime.
 
 **Release status:** source corrections are committed to `main`; passing CI, real-device review, assistive-technology review and live Pages verification must be established independently. The existing manual GitHub Pages release gate remains in force.
+
+
+## Current service-fact reconciliation — 2026-11-22
+
+The current NAKEBUSEN source of record confirms Retouch & Styling KES 700+ and Sisterlocs Retie KES 1,500+ as starting prices; Artificial Locs Installation remains KES 3,500 without a plus sign. Older values in this dated audit are historical snapshots and are superseded for current publication by the [NAKEBUSEN service catalogue](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/service-catalogue.md) and the current [public facts register](PUBLIC-FACTS-REGISTER.md).
