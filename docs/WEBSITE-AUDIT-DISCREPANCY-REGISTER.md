@@ -151,4 +151,4 @@ The remediation does not change the global palette, service-card design, prices,
 
 ## Current service-fact reconciliation — 2026-11-22
 
-The current NAKEBUSEN source of record confirms Retouch & Styling KES 700+ and Sisterlocs Retie KES 1,500+ as starting prices; Artificial Locs Installation remains KES 3,500 without a plus sign. Older values in this dated audit are historical snapshots and are superseded for current publication by the [NAKEBUSEN service catalogue](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/service-catalogue.md) and the current [public facts register](PUBLIC-FACTS-REGISTER.md).
+The current NAKEBUSEN source of record confirms Retouch & Styling KES 700 and Sisterlocs Retie KES 1,500 as published prices; Artificial Locs Installation remains KES 3,500 without a plus sign. Older values in this dated audit are historical snapshots and are superseded for current publication by the [NAKEBUSEN service catalogue](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/service-catalogue.md) and the current [public facts register](PUBLIC-FACTS-REGISTER.md).
