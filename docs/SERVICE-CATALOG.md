@@ -8,6 +8,8 @@
 ## 1. LOCS · CROWN
 
 **Location:** Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya  
+**Directions:** F743+R35, Eldoret, Kenya · [Open NAKEBUSEN in Google Maps](https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6)  
+**From Eldoret CBD:** [Driving directions](https://www.google.com/maps/dir/?api=1&origin=Eldoret%20CBD%2C%20Eldoret%2C%20Kenya&destination=F743%2BR35%2C%20Eldoret%2C%20Kenya&travelmode=driving) · [Walking directions](https://www.google.com/maps/dir/?api=1&origin=Eldoret%20CBD%2C%20Eldoret%2C%20Kenya&destination=F743%2BR35%2C%20Eldoret%2C%20Kenya&travelmode=walking)  
 **Primary enquiry:** WhatsApp · **+254 719 635 415**  
 **WhatsApp:** https://wa.me/254719635415  
 **Secondary contact:** +254 719 635 415
@@ -26,7 +28,7 @@ Published prices are indicative, not guaranteed final quotes. Retouch & Styling 
 
 - No braiding.
 - No shaving.
-- Do not promise home visits without confirmation.
+- Loc-care home calls may be arranged within the wider Eldoret Town area. Confirm the customer's exact location, service suitability, availability and travel arrangements directly before confirming a visit. No fixed kilometre radius or universal coverage is promised.
 - Do not claim an appointment is confirmed when a WhatsApp enquiry is sent.
 - Use **Sisterlocs Retie** as the canonical public service label. Do not alternate between LOCS Retie, Sisterlocs Retie and Sisterlocks Retie.
 - Do not imply official Sisterlocks/Sisterlocs certification, affiliation or endorsement unless independently substantiated and expressly approved.
@@ -34,6 +36,12 @@ Published prices are indicative, not guaranteed final quotes. Retouch & Styling 
 ### Enquiry boundary
 
 An enquiry does not confirm a booking. Availability and final terms are agreed directly.
+
+## Home calls and local coverage
+
+NAKEBUSEN accepts enquiries for loc-care home calls within the wider Eldoret Town area. Customers should share their location so the exact area, service suitability, availability and travel arrangements can be confirmed directly. This is a town-wide service area, not a published fixed-kilometre radius; do not promise every address or an unconfirmed visit.
+
+For customers travelling to the mapped location, use **F743+R35, Eldoret, Kenya** and the [Google Maps pin](https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6). From Eldoret CBD, use live [driving](https://www.google.com/maps/dir/?api=1&origin=Eldoret%20CBD%2C%20Eldoret%2C%20Kenya&destination=F743%2BR35%2C%20Eldoret%2C%20Kenya&travelmode=driving) or [walking directions](https://www.google.com/maps/dir/?api=1&origin=Eldoret%20CBD%2C%20Eldoret%2C%20Kenya&destination=F743%2BR35%2C%20Eldoret%2C%20Kenya&travelmode=walking). Matatu passengers must confirm a suitable drop-off with the conductor; “Malel Stage” is not listed as a verified stop.
 
 ## 2. DIGITAL · WARENA
 
