@@ -11,8 +11,8 @@ Mark an item only after the check is performed against a named commit.
 - [ ] English default; Kiswahili disclosure is complete, readable and consistent with canonical web copy.
 
 ## Services and trust
-- [ ] Retouch & Styling — KES 700+.
-- [ ] Sisterlocs Retie — KES 1,500+.
+- [ ] Retouch & Styling — From KES 700.
+- [ ] Sisterlocs Retie — From KES 1,500.
 - [ ] Artificial Locs Installation — KES 3,500 (no plus sign).
 - [ ] Location matches the facts register.
 - [ ] Enquiry-not-booking disclosure is visible.
