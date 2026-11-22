@@ -1,7 +1,7 @@
 # Distinct Native Experience System
 
 **Document ID:** EC-DNES-01  
-**Version:** M1 · 10 November 2026  
+**Version:** M2 · 22 November 2026  
 **Status:** Implemented and merged to `main`; browser, keyboard and assistive-technology verification remains pending  
 **Implementation:** `index.html`  
 **Scope:** Public NAKEBUSEN gateway and its Locs, Digital and founder sections
@@ -35,19 +35,20 @@ The current site is a single-page NAKEBUSEN gateway. These are native section ex
 | Deep forest | `#102D25` | WARENA base surface |
 | Charcoal | `#242923` | Don Feloh and dock surface |
 | Warm paper | `#F3EEE4` | Editorial canvas |
-| Terracotta | `#A34F3B` | NAKEBUSEN identity and selected action accents |
-| Deep ochre | `#8B5E16` | Heritage accent; use carefully for text contrast |
-| Muted sage | `#87917A` | Decorative technical accent; not normal-sized text on warm paper |
-| Text-safe sage | `#626B58` | Muted text on warm paper; approximately 4.83:1 contrast |
-| Sandstone | `#D6C6A5` | Warm secondary text and highlights |
+| Terracotta | `#87402F` (light) / `#E2725B` (dark) | NAKEBUSEN identity and selected action accents |
+| Ochre | `#80540F` (light) / `#D4AF37` (dark) | Heritage accent and price emphasis |
+| Muted sage | `#596252` (light) / `#C6C0B4` (dark) | Secondary text; validate actual foreground/background pairings |
+| Soft surface | `#E9E1D3` (light) / `#0E120F` (dark) | Editorial separation and quiet content surfaces |
+| Surface | `#FFFDF8` (light) / `#151815` (dark) | Opaque reading surfaces |
 
 Colour ownership:
-- Locs: warm paper canvas; terracotta section marker and service-card edge; ochre highlights.
+- Locs: warm paper canvas; terracotta section marker and service-card edge; ochre price and heritage highlights.
 - Digital: deep forest canvas; warm ivory text; sage and sandstone supporting accents.
-- Founder: charcoal canvas; warm ivory text; sandstone secondary text; terracotta identity marker.
+- Founder: warm editorial surfaces; charcoal text; terracotta identity marker.
 - Header: dark forest glass in both themes, with a solid fallback.
 - Floating dock: charcoal glass, with a solid fallback and destination-specific active treatment.
 - Hero, service cards and payment instructions: opaque content surfaces; do not apply glass blur to content.
+- Glass intensity is immersive but limited to the forest topbar and charcoal floating dock; canvas is hybrid, motion ambient and density balanced.
 
 Do not use palette membership as proof of contrast. Verify every actual foreground/background pair, including focus, hover, active and disabled states, against WCAG 2.2 AA.
 
@@ -63,7 +64,7 @@ Do not use palette membership as proof of contrast. Verify every actual foregrou
 ## 5. Native interaction patterns
 
 ### Locs
-- Service cards retain the approved names, starting prices and WhatsApp enquiry paths.
+- Service cards retain the approved names, published prices without plus signs and WhatsApp enquiry paths.
 - Service-specific enquiry links retain language-aware prefilled messages.
 - The enquiry boundary remains visible.
 - No simulated booking calendar, checkout or availability claim.
@@ -82,9 +83,9 @@ Do not use palette membership as proof of contrast. Verify every actual foregrou
 
 ## 6. Typography and implementation
 
-- Editorial headings: Georgia/system serif fallback.
-- Body and controls: system sans-serif.
-- Technical labels: system monospace.
+- Editorial headings: Cormorant Garamond with Georgia/system serif fallback.
+- Body and controls: Inter with system sans-serif fallback.
+- Technical labels: JetBrains Mono with system monospace fallback.
 - No external font CDN or new runtime dependency.
 - Use semantic HTML, existing section anchors, progressive enhancement and the existing language/theme controls.
 - Keep text-first content and avoid decorative imagery, fake terminal interfaces, fake dashboards and unnecessary animation.
@@ -106,9 +107,9 @@ Automated static checks do not establish screen-reader, browser, device or WCAG 
 ## 8. Content and factual invariants
 
 Preserve:
-- Retouch & Styling — KES 700+.
-- Sisterlocs Retie — KES 1,500+.
-- Artificial Locs Installation — KES 3,500 (starting price).
+- Retouch & Styling — KES 700.
+- Sisterlocs Retie — KES 1,500.
+- Artificial Locs Installation — KES 3,500.
 - Loc care · Eldoret Town / Karibu Mdosi · Kenya.
 - No braiding or shaving claims.
 - No unverified address, opening hours, availability, certification or customer outcomes.
