@@ -1,25 +1,30 @@
-# Don Feloh — F3L0H / FELOH WARENA
+# DonFelohke — Personal Hub and Four Public Destinations
 
-**Public website:** https://donfelohke.github.io/  
-**Repository:** `donfelohke/donfelohke.github.io`  
+**Public hub:** https://donfelohke.github.io/  
 **Human author:** Felix Lwova · Don Feloh · Feloh Warena · @donfelohke · #HisGenjeness
 
-The website is the public gateway to one author-led ecosystem, not a collection of unrelated brands or independent checkout destinations.
+This repository publishes four distinct static destinations under one existing GitHub Pages host. They share human authorship and a visual foundation; they do not collapse into one business or one checkout.
 
-## Constitutional architecture
+## Public architecture
 
-**F3L0H / FELOH WARENA** is the overarching human authorship and practice identity, not a fifth domain.
-
-| Domain | Role | Canonical repository | Public maturity |
+| Destination | Public path | Purpose | Status |
 |---|---|---|---|
-| **NAKEBUSEN** | **ROOT** — beauty, loc care, craft and grounded enterprise | [NAKEBUSEN](https://github.com/donfelohke/NAKEBUSEN) | Only live commercial practice |
-| **WARENA** | **CAPABILITY** — systems engineering, GNU/Linux, infrastructure and reproducibility | [WARENA](https://github.com/donfelohke/WARENA) | Technical capability and research |
-| **IKAI** | **MIRROR** — reflective computing and embodied spatial research | [Ikai](https://github.com/donfelohke/Ikai) | Research / WIP; not a released product |
-| **GENJE** | **EXPRESSION** — Genge, sound, movement, livecoding and choreography | [Genje](https://github.com/donfelohke/Genje) | Creative practice / research |
+| DonFelohke | / | Personal identity, authorship, three pillars and ecosystem navigation | Public hub |
+| NAKEBUSEN | /nakebusen/ | Loc-care services, About, enquiry and payment information | Live commercial practice |
+| Technical / WARENA | /technical/ | Systems engineering, GNU/Linux, infrastructure and reproducible computing | Technical practice / research |
+| Creative / GENJE + IKAI | /creative/ | GENJE sound and movement; IKAI reflective-computing research | Creative practice / research |
 
-**FELOH Corpus** is the shared knowledge-governance and provenance record, not another practice domain: [feloh-corpus](https://github.com/donfelohke/feloh-corpus).
+FELOH Corpus remains the shared source of record for terminology, governance, research, decisions and provenance. It is linked from the hub and destination pages; it is not a fifth website or commercial brand.
 
-**ONLY NAKEBUSEN TRANSACTS.** NAKEBUSEN has two public service paths: LOCS and DIGITAL. WARENA supplies technical capability for DIGITAL engagements; enquiries, agreements and transactions remain with NAKEBUSEN. IKAI, GENJE, WARENA and FELOH Corpus are not separate checkout destinations.
+## Identity and pillars
+
+- BLACK EXCELLENCE — GRACE — NAKEBUSEN: beauty, heritage, craft, dignity and crown.
+- DIGITAL SOVEREIGNTY — GRIT — WARENA: technology, infrastructure, freedom, code and enablement.
+- CREATIVE EXPRESSION — GLORY — DON FELOH: human authorship, sound, movement, reflection and embodied practice.
+
+FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
+
+ONLY NAKEBUSEN TRANSACTS. Technical and creative destinations are not separate booking, checkout or payment interfaces.
 
 ## NAKEBUSEN · LOCS · Eldoret
 
@@ -29,49 +34,37 @@ The website is the public gateway to one author-led ecosystem, not a collection 
 | Sisterlocs Retie | KES 1,500+ |
 | Artificial Locs Installation | KES 3,500 |
 
-Prices are starting points where marked. Final scope and price are agreed directly. No braiding or shaving services are advertised. An enquiry does not confirm a booking.
+Prices marked + are starting prices. Final scope and price are agreed directly. No braiding is offered. The founder does not cut clients' natural hair. An enquiry does not confirm a booking.
 
 Location: Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
 
-## NAKEBUSEN · DIGITAL
+M-PESA Buy Goods information is published on the NAKEBUSEN page for manually agreed service payments only. No API, STK push, automated verification, checkout or payment-success state is implemented. Voluntary Support Us remains separate from service payments.
 
-Practical computing and infrastructure for individuals, homes, businesses and organisations:
+## Technical and creative boundaries
 
-- GNU/Linux installation, administration and troubleshooting.
-- Computer diagnostics, recovery and maintenance.
-- Wi-Fi, router configuration and LAN networking.
-- Small-office servers, laboratory, classroom and cybercafé systems.
-- Local-first/offline-capable computing and reproducible development environments where appropriate.
+WARENA is libre-first, not GNU-exclusive. GNU is foundational; other free-software ecosystems may be evaluated on technical and ethical merit. Prefer reuse, adaptation, interoperability and creator attribution before new invention. Keep systems local-first, inspectable, reproducible and human-controlled.
 
-These are capability areas, not a guarantee of immediate availability. Each engagement is scoped directly before work begins. No unsupported fixed prices, warranties or security guarantees are published.
+GENJE documents Genge-rooted music, livecoding, sound, movement, choreography and embodied knowledge. IKAI is a Turkana female name meaning “home” and remains reflective-computing research / work in progress—not a released product. IKAI must remain a mirror, not a judge: no identification, ranking, diagnosis, covert monitoring or hidden profiling.
 
-## Don Feloh · contact
+## Publication implementation
 
-Founder · CTO · Loctician · Creative Technologist.
+- Hand-authored static HTML and CSS; no JavaScript runtime, framework, CMS or third-party UI runtime.
+- No trackers, analytics, remote fonts or CDN dependencies.
+- English default; optional Kiswahili disclosure on NAKEBUSEN.
+- System colour-scheme preference, keyboard focus, semantic landmarks, responsive layout and reduced-motion support.
+- Four routes share the existing host and repository; no new repositories or domains are introduced.
+- Gallery remains approval-controlled; no unapproved images or recordings are published.
 
-- WhatsApp / telephone: +254 719 635 415 — https://wa.me/254719635415
-- Email: mela9ine@proton.me
-- GitHub: https://github.com/donfelohke
+Run dependency-free source checks with: python -m unittest discover -s tests -v
 
-## Site architecture
+The source tests are a gate, not a substitute for keyboard, screen-reader, device, browser and live Pages verification.
 
-- One hand-authored HTML document and one primary CSS stylesheet.
-- No JavaScript, framework, generator, package manager or remote font dependency.
-- No analytics, tracking pixels or third-party UI runtime.
-- English default; optional Kiswahili native disclosure.
-- Theme follows operating-system colour preference.
-- Three-destination floating dock: LOCS / DIGITAL / CONNECT.
-- Responsive, semantic and keyboard-accessible; reduced-motion support.
-- Gallery and source material are linked, not required as remote visual dependencies.
+Preserve the existing GPL-3.0 license. Do not invent prices, testimonials, credentials, customer details, capabilities or deployment claims.
 
-Run source checks:
+## Source repositories
 
-```sh
-python -m unittest discover -s tests -v
-```
-
-See [site architecture](docs/SITE-ARCHITECTURE.md), [canonical copy](docs/WEBCOPY.md), [public facts](docs/PUBLIC-FACTS-REGISTER.md), [service catalogue](docs/SERVICE-CATALOG.md), [content governance](docs/CONTENT-GOVERNANCE.md), [accessibility](docs/ACCESSIBILITY.md) and [release checklist](docs/NAKEBUSEN-BROWSER-RELEASE-CHECKLIST.md).
-
-M-PESA Buy Goods: Till 3511456 · Account / Merchant name FELIX LWOVA. Payment is due only after the service and total amount are agreed directly with NAKEBUSEN; confirm the displayed merchant and amount before PIN entry. Never share a PIN or one-time code. Voluntary Support Us is separate from service payments.
-
-Preserve the existing GPL-3.0 license. Do not invent prices, testimonials, credentials, customer details or deployment claims.
+- https://github.com/donfelohke/NAKEBUSEN
+- https://github.com/donfelohke/WARENA
+- https://github.com/donfelohke/Genje
+- https://github.com/donfelohke/Ikai
+- https://github.com/donfelohke/feloh-corpus
