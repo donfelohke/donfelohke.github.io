@@ -93,6 +93,9 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("#language-sw:checked~footer .lang-sw", CSS)
         self.assertIn("#language-sw:checked~header .lang-sw", CSS)
         self.assertIn("#language-sw:checked~.floating-dock .lang-sw", CSS)
+        self.assertIn("#language-sw:checked~.skip-link .lang-sw", CSS)
+        self.assertIn("Ruka hadi kwenye maudhui", HTML)
+        self.assertIn("Choose language / Chagua lugha", HTML)
         self.assertNotIn("<script", HTML.lower())
         self.assertEqual(0, self.parser.scripts)
 
