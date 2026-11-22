@@ -37,8 +37,8 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-014 | Phone: +254 719 635 415 | F1 | Verify before campaigns |
 | PF-015 | WhatsApp: https://wa.me/254719635415 | F1 | Enquiry channel |
 | PF-016 | Email: mela9ine@proton.me | F1 | Verify before campaigns |
-| PF-017 | Retouch & Styling from KES 700 | F1 | Published indicative price; final scope and amount are agreed directly |
-| PF-018 | Sisterlocs Retie from KES 1,500 | F1 | Published indicative price; final scope and amount are agreed directly; canonical public service label approved 9 November 2026 |
+| PF-017 | Retouch & Styling KES 700 | F1 | Published indicative price; final scope and amount are agreed directly |
+| PF-018 | Sisterlocs Retie KES 1,500 | F1 | Published indicative price; final scope and amount are agreed directly; canonical public service label approved 9 November 2026 |
 | PF-019 | Artificial Locs Installation KES 3,500 | F1 | Approved price; do not append a plus sign |
 | PF-020 | Final LOCS cost depends on scope, loc condition and materials | F1 | Publish with prices |
 | PF-021 | No braiding | F1 | Do not advertise braiding |
