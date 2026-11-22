@@ -1,151 +1,145 @@
 #!/usr/bin/env python3
-"""Dependency-free publication checks for the consolidated single-page site."""
+"""Dependency-free structural and publication checks for the Don Feloh site."""
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urlparse
+import re
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-HTML_FILES = sorted(ROOT.rglob("*.html"))
+HTML = (ROOT / "index.html").read_text(encoding="utf-8")
 CSS = (ROOT / "assets/css/site.css").read_text(encoding="utf-8")
 
 
-class AuditParser(HTMLParser):
+class SiteParser(HTMLParser):
     def __init__(self):
-        super().__init__(convert_charrefs=True)
-        self.links, self.ids, self.duplicates = [], set(), []
-        self.scripts, self.handlers, self.landmarks = [], [], set()
-        self.h1_count = 0
-        self.language_blocks = set()
-        self.buttons = set()
+        super().__init__()
+        self.ids = []
+        self.hrefs = []
+        self.h1 = 0
+        self.dock = False
+        self.dock_links = []
+        self.in_dock = False
+        self.scripts = 0
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
-        if attrs.get("id"):
-            if attrs["id"] in self.ids:
-                self.duplicates.append(attrs["id"])
-            self.ids.add(attrs["id"])
-        if tag == "a" and attrs.get("href"):
-            self.links.append(attrs["href"])
-        if tag == "script":
-            self.scripts.append(attrs)
-        if tag == "button" and attrs.get("id"):
-            self.buttons.add(attrs["id"])
-        if attrs.get("data-language"):
-            self.language_blocks.add(attrs["data-language"])
+        if "id" in attrs:
+            self.ids.append(attrs["id"])
+        if tag == "a" and "href" in attrs:
+            self.hrefs.append(attrs["href"])
+            if self.in_dock:
+                self.dock_links.append(attrs["href"])
         if tag == "h1":
-            self.h1_count += 1
-        if tag in {"header", "nav", "main", "footer"}:
-            self.landmarks.add(tag)
-        self.handlers.extend(k for k in attrs if k.lower().startswith("on"))
+            self.h1 += 1
+        if tag == "script":
+            self.scripts += 1
+        if tag == "nav" and attrs.get("class") == "floating-dock":
+            self.dock = True
+            self.in_dock = True
+
+    def handle_endtag(self, tag):
+        if tag == "nav" and self.in_dock:
+            self.in_dock = False
 
 
 class PublicationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.html = (ROOT / "index.html").read_text(encoding="utf-8")
-        cls.parser = AuditParser()
-        cls.parser.feed(cls.html)
-        cls.parser.close()
+        cls.parser = SiteParser()
+        cls.parser.feed(HTML)
 
-    def test_exactly_one_public_html_document(self):
-        self.assertEqual(["index.html"], [p.relative_to(ROOT).as_posix() for p in HTML_FILES])
+    def test_one_page_and_semantic_identity(self):
+        self.assertEqual(1, len(list(ROOT.glob("*.html"))))
+        self.assertIn('<html lang="en">', HTML)
+        self.assertIn("<main id=\"main\">", HTML)
+        self.assertEqual(2, self.parser.h1)  # one H1 in each mutually exclusive language view
+        self.assertIn("NAKEBUSEN Locs ° Powered by WARENA", HTML)
+        self.assertIn("Your Beauty", HTML)
+        self.assertIn("Your Way.", HTML)
+        self.assertIn("Founder · CTO · Loctician · Creative Technologist", HTML)
+        self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
 
-    def test_semantics_and_bilingual_fallback(self):
-        parser = self.parser
-        self.assertIn('<html lang="en">', self.html)
-        self.assertEqual(2, parser.h1_count)  # one H1 in each mutually exclusive language view
-        self.assertTrue({"header", "nav", "main", "footer"}.issubset(parser.landmarks))
-        self.assertEqual([], parser.duplicates)
-        self.assertEqual([], parser.handlers)
-        self.assertEqual({"en", "sw"}, parser.language_blocks)
-        self.assertIn('data-language="en"', self.html)
-        self.assertIn('data-language="sw" hidden lang="sw"', self.html)
-
-    def test_only_two_explicit_controls_and_minimal_script(self):
-        self.assertEqual({"language-toggle", "theme-toggle"}, self.parser.buttons)
-        self.assertEqual(1, len(self.parser.scripts))
-        self.assertNotIn("src", self.parser.scripts[0])
-        self.assertNotIn("javascript:", self.html.lower())
-        self.assertIn("setLanguage", self.html)
-        self.assertIn("setTheme", self.html)
-        self.assertIn("window.matchMedia", self.html)
-        self.assertNotIn("localStorage", self.html)
-        self.assertNotIn("fetch(", self.html)
-        self.assertNotIn("XMLHttpRequest", self.html)
-
-    def test_four_primary_anchors_and_local_links(self):
-        for anchor in ("locs", "digital", "about", "connect"):
-            self.assertIn(f'href="#{anchor}"', self.html)
-            self.assertIn(anchor, self.parser.ids)
-        for href in self.parser.links:
+    def test_fragment_integrity(self):
+        ids = self.parser.ids
+        self.assertEqual(len(ids), len(set(ids)), "HTML IDs must be unique")
+        required = {
+            "top", "main", "nakebusen", "services", "crown", "service-retouch",
+            "service-sisterlocs", "service-artificial", "booking", "code", "digital",
+            "don-feloh", "thought", "warena", "ikai", "genje", "feloh-corpus",
+            "publications", "kiswahili", "connect", "footer",
+        }
+        self.assertTrue(required.issubset(set(ids)))
+        for href in self.parser.hrefs:
             if href.startswith("#"):
-                self.assertIn(href[1:], self.parser.ids, f"missing anchor {href}")
-                continue
-            parsed = urlparse(href)
-            if parsed.scheme or parsed.netloc or not href:
-                continue
-            target = (ROOT / parsed.path.lstrip("/")).resolve()
-            if parsed.path:
-                self.assertTrue(target.exists(), f"missing local link {href}")
+                self.assertIn(href[1:], ids, f"Unresolved fragment: {href}")
 
-    def test_language_navigation_tracks_active_language(self):
-        for pair in ('data-anchor-en="#locs" data-anchor-sw="#locs-sw"',
-                     'data-anchor-en="#digital" data-anchor-sw="#kidijitali"',
-                     'data-anchor-en="#about" data-anchor-sw="#kuhusu"',
-                     'data-anchor-en="#connect" data-anchor-sw="#wasiliana"'):
-            self.assertIn(pair, self.html)
-        self.assertIn("data-anchor-en][data-anchor-sw]", self.html)
+    def test_mobile_navigation_is_exactly_three_items(self):
+        self.assertTrue(self.parser.dock)
+        self.assertEqual(["#crown", "#code", "#connect"], self.parser.dock_links)
+        self.assertIn("grid-template-columns:repeat(3,minmax(0,1fr))", CSS)
+        dock_rule = next(line for line in CSS.splitlines() if line.startswith(".floating-dock{"))
+        self.assertIn("grid-template-columns:repeat(3,minmax(0,1fr))", dock_rule)
+        self.assertNotIn("repeat(4", dock_rule)
 
-    def test_public_facts_and_commercial_boundaries(self):
+    def test_language_switch_is_static_and_bilingual(self):
+        self.assertIn('id="language-en"', HTML)
+        self.assertIn('id="language-sw"', HTML)
+        self.assertIn('lang="sw"', HTML)
+        self.assertIn('lang="en"', HTML)
+        self.assertIn("#language-sw:checked~main .lang-en", CSS)
+        self.assertIn("#language-sw:checked~main .lang-sw", CSS)
+        self.assertNotIn("<script", HTML.lower())
+        self.assertEqual(0, self.parser.scripts)
+
+    def test_services_and_booking_are_source_aligned(self):
         for phrase in (
-            "Your Beauty", "KES 700+", "KES 1,500+", "KES 3,500",
-            "Sisterlocs Retie", "Artificial Locs Installation",
-            "Eldoret Town / Karibu Mdosi", "An enquiry does not confirm a booking.",
+            "Retouch &amp; Styling", "KES 700", "Sisterlocs Retie",
+            "KES 1,500", "Artificial Locs Installation", "KES 3,500",
+            "An enquiry does not confirm a booking.",
+            "Availability and final terms are agreed directly.",
+            "does not offer braiding or shaving",
+            "does not cut clients’ natural hair",
+        ):
+            self.assertIn(phrase, HTML)
+        self.assertNotIn("Book now", HTML)
+        self.assertNotIn("Home visits available", HTML)
+
+    def test_business_payment_and_support_boundaries(self):
+        for phrase in (
+            "Eldoret Town / Karibu Mdosi", "+254719635415", "mela9ine@proton.me",
             "3511456", "FELIX LWOVA", "Never share your M-PESA PIN",
-            "Support Us", "ONLY NAKEBUSEN TRANSACTS",
+            "Manual payment information only", "Support Us",
+            "separate from NAKEBUSEN service payments",
         ):
-            self.assertIn(phrase, self.html)
-        self.assertIn("does not offer braiding or shaving", self.html)
-        self.assertIn("does not cut clients’ natural hair", self.html)
-        self.assertIn("manual payment information", self.html)
-        self.assertIn("separate from NAKEBUSEN service payments", self.html)
+            self.assertIn(phrase, HTML)
 
-    def test_domain_maturity_and_identity(self):
+    def test_practice_identity_and_maturity(self):
         for phrase in (
-            "Freedom Is a System", "libre-first systems engineering",
-            "IKAI is a Turkana female name meaning “home.”",
-            "A mirror, not a judge.", "not a released product",
-            "Genge-rooted creative practice", "livecoding",
-            "FELOH Corpus", "Founder · CTO · Loctician · Creative Technologist",
-            "Kanamkemer and Lodwar, Turkana County",
+            "Freedom", "WARENA", "IKAI", "meaning “home”",
+            "Not a released product", "GENJE", "Genge-rooted sound",
+            "AfroTech", "livecoding", "FELOH Corpus",
+            "Worldview", "Philosophy", "Opinion", "Reflection",
         ):
-            self.assertIn(phrase, self.html)
+            self.assertIn(phrase, HTML)
 
-    def test_architecture_docs_and_sitemap(self):
-        readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        nav = (ROOT / "docs/NAV-STRUCTURE.md").read_text(encoding="utf-8")
-        architecture = (ROOT / "docs/PUBLICATION-SYSTEM-ARCHITECTURE-2026-11-22.md").read_text(encoding="utf-8")
-        sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
-        self.assertIn("Single-Page Public Website", readme)
-        self.assertIn("Single-page architecture", nav)
-        self.assertIn("Single-Page Architecture", architecture)
-        self.assertEqual(1, sitemap.count("<loc>"))
-
-    def test_static_accessible_design(self):
-        self.assertIn("@media(prefers-color-scheme:dark)", CSS)
-        self.assertIn("@media(prefers-reduced-motion:reduce)", CSS)
+    def test_accessibility_and_responsive_design(self):
+        self.assertIn('class="skip-link"', HTML)
+        self.assertIn('aria-label="Primary page navigation"', HTML)
         self.assertIn("min-height:44px", CSS)
-        self.assertIn("backdrop-filter:blur(20px)", CSS)
-        self.assertIn("grid-template-columns:repeat(4,minmax(0,1fr))", CSS)
-        self.assertIn('html[data-theme="light"]', CSS)
-        self.assertIn('html[data-theme="dark"]', CSS)
+        self.assertIn(":focus-visible", CSS)
+        self.assertIn("@media(prefers-reduced-motion:reduce)", CSS)
+        self.assertIn("@media(prefers-reduced-transparency:reduce)", CSS)
+        self.assertIn("env(safe-area-inset-bottom)", CSS)
+        self.assertIn("@media(max-width:760px)", CSS)
         self.assertNotIn("fonts.googleapis.com", CSS)
-        self.assertNotIn("googletagmanager", CSS.lower())
         self.assertNotIn("@import", CSS)
+        self.assertNotIn("googletagmanager", CSS.lower())
         self.assertFalse((ROOT / "package.json").exists())
-        self.assertFalse((ROOT / "node_modules").exists())
         self.assertTrue((ROOT / "LICENSE").exists())
+
+    def test_sitemap_is_one_page(self):
+        sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+        self.assertEqual(1, sitemap.count("<loc>"))
 
 
 if __name__ == "__main__":
