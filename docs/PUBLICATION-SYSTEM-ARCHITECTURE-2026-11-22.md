@@ -1,35 +1,28 @@
-# Public Website — Four-Destination Architecture
+# Public Website — Single-Page Architecture
 
 **Date:** 22 November 2026  
-**Status:** APPROVED FOR IMPLEMENTATION  
+**Status:** Approved for implementation · feature branch review  
 **Public host:** https://donfelohke.github.io/  
 **Repository:** donfelohke/donfelohke.github.io
 
 ## Decision
 
-The public site is organised as a personal DonFelohke hub with three dedicated destination pages. All four use the existing GitHub Pages host and repository. No new domain or repository is introduced.
+The public site is a single, deep page at the root URL. It consolidates the material previously published across the DonFelohke hub and the NAKEBUSEN, Technical / WARENA and Creative / GENJE + IKAI routes. No new domain or repository is introduced.
 
-- DonFelohke personal hub: /
-- NAKEBUSEN commercial destination: /nakebusen/
-- Technical / WARENA destination: /technical/
-- Creative / GENJE + IKAI destination: /creative/
-- FELOH Corpus: shared source of record, linked but not a fifth public destination
+## Public information architecture
 
-## 1. DonFelohke — personal hub
+| Anchor | Purpose | Content |
+|---|---|---|
+| `#locs` | NAKEBUSEN / ROOT | Loc-care services, starting prices, scope and enquiry boundary |
+| `#digital` | DIGITAL / WARENA capability | Practical computing and infrastructure capability areas, qualification and enquiry path |
+| `#about` | Don Feloh / human authorship | Founder identity, GRACE · GRIT · GLORY, WARENA, IKAI, GENJE and FELOH Corpus |
+| `#connect` | Contact | Direct NAKEBUSEN contact and source links |
 
-The root page is the human-author identity and navigation hub.
+The hero is balanced: the approved headline “Your Beauty ° Your Way.” and loc-care entry point remain prominent while Don Feloh's authorship and the wider practice are visible in the same first-screen hierarchy.
 
-Identity: Felix Lwova · Feloh Warena · Don Feloh · #HisGenjeness  
-Roles: Founder · CTO · Loctician · Creative Technologist  
-Hero: “Black Excellence. Digital Sovereignty. Creative Expression.”
+## 1. NAKEBUSEN — ROOT and commercial practice
 
-The page introduces the three pillars, explains the author-led relationship between practices, and routes visitors to dedicated destinations. It is not a checkout or commercial transaction interface.
-
-## 2. NAKEBUSEN — commercial website
-
-Purpose: natural loc-care sales information, About, service prices, direct enquiry and manually confirmed payment information.
-
-Location: Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
+NAKEBUSEN is the only live commercial practice. LOCS and DIGITAL are customer-facing service paths; WARENA remains a distinct technical capability domain, not a NAKEBUSEN sub-brand.
 
 | Service | Public price |
 |---|---:|
@@ -37,55 +30,50 @@ Location: Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
 | Sisterlocs Retie | KES 1,500+ |
 | Artificial Locs Installation | KES 3,500 |
 
-Preserve the service scope: Retouch & Styling (wash, retouch, styling); Sisterlocs Retie (wash, crocheted retie, styling); Artificial Locs Installation (all-inclusive, with method, materials and preferences agreed). No braiding. The founder does not cut clients' natural hair.
+Location: Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
 
-NAKEBUSEN is a Turkana name meaning “beautiful”. Its origin connects Turkana roots, Black Beauty, a case for Black awakening and renaissance, a return to where we started, and a future built with memory and dignity. The founder's three convictions are Black Beauty, Digital Sovereignty and Creative Expression. The practice itself is grounded in beauty, loc care, heritage and craft.
+No braiding or shaving. The founder does not cut clients' natural hair. Booking boundary: “An enquiry does not confirm a booking. Availability and final terms are agreed directly.”
 
-Booking boundary: “An enquiry does not confirm a booking. Availability and final terms are agreed directly.”
+The footer retains M-PESA Buy Goods Till 3511456 and account / merchant name FELIX LWOVA. Payment is manual and only after service and total amount are agreed directly. Never request or share a PIN or one-time code. No API, STK push, automated verification, checkout or payment-success state. Voluntary Support Us remains separate from service payments and in the footer.
 
-Keep approved M-PESA Buy Goods details on the page footer: Till 3511456; account / merchant name FELIX LWOVA. Payment is manual and only after service and total amount are agreed directly. No API, STK push, automated verification, checkout or payment-success state. Keep voluntary Support Us separate from service payments and in the footer.
+## 2. DIGITAL — WARENA capability
 
-## 3. Technical — WARENA
+WARENA is a distinct technical capability domain: libre-first systems engineering, GNU/Linux, infrastructure, networks, local-first computing and reproducible development environments. Capability areas are not blanket claims of immediate availability. Confirm scope, feasibility, location and schedule before accepting work. Commercial enquiries and agreements remain through NAKEBUSEN.
 
-Positioning: “Freedom Is a System.”
+## 3. Don Feloh, IKAI and GENJE
 
-WARENA is the distinct technical practice: libre-first systems engineering, GNU/Linux, infrastructure, networks, local-first computing, reproducible builds and native systems research. GNU is foundational but not an exclusive ecosystem boundary. Reuse, adapt, interoperate and credit existing work before proposing new invention.
+Don Feloh is the human author. Public role line: Founder · CTO · Loctician · Creative Technologist.
 
-Use maturity labels honestly: AVAILABLE, DEMONSTRATED, RESEARCH, WIP, PROPOSED. Do not imply all research topics are services or currently available. Technical enquiries, if offered commercially, route through NAKEBUSEN. WARENA has no separate checkout.
+- GENJE: Genge-rooted sound and music, electronic African club music, livecoding, choreography, movement, choreohacking and embodied knowledge. Creative practice, not a separate commercial service.
+- IKAI: Turkana female name meaning “home”; reflective computing, mirror engineering, optics, displays, sensing and embodied environments. Research / WIP, not a released product. Governing principle: “a mirror, not a judge”; no identification, ranking, diagnosis, covert monitoring or hidden profiling.
+- FELOH Corpus: shared knowledge governance and provenance, not another practice domain or checkout.
 
-## 4. Creative — GENJE + IKAI
+Gallery remains approval-controlled. No unapproved images, recordings or third-party works are published.
 
-GENJE and IKAI share the Creative Expression destination but remain distinct practices.
+## 4. Language, theme and implementation
 
-- GENJE: Genge-rooted sound and music, electronic African club music, livecoding, choreography, movement, choreohacking and embodied knowledge.
-- IKAI: Turkana female name meaning “home”; reflective computing, mirror engineering, optics, displays, sensing and embodied environments. Research / WIP, not a released product.
+- One hand-authored `index.html`, existing CSS and a small inline JavaScript controller.
+- JavaScript is limited to the independent English / Kiswahili and light / dark toggles.
+- English is the no-script default. CSS system colour preference is respected until a visitor explicitly changes the theme.
+- Native anchors for page navigation. No framework, package manager, build system, analytics, trackers, remote fonts, CDNs or third-party UI runtime.
+- Semantic HTML, keyboard focus, readable contrast, responsive layout, reduced-motion and reduced-transparency support.
+- No external imagery or unapproved Gallery assets.
 
-IKAI's governing principle is “a mirror, not a judge”: no face identification, biometric identity matching, scoring, diagnosis, covert recording or hidden profiling. GENJE preserves human authorship, collaborator attribution, cultural context, rights and provenance.
+## 5. Repository and publication scope
 
-Gallery remains approval-controlled. Do not publish unapproved images, recordings or third-party works.
+The public site remains the audience view. Canon, evidence and deeper research remain in the existing repositories: NAKEBUSEN, WARENA, Genje, Ikai and feloh-corpus. The site links to those sources contextually rather than duplicating their full contents. No new repository is introduced.
 
-## 5. FELOH Corpus
+The former `/nakebusen/`, `/technical/` and `/creative/` page files are removed in this migration; their substantive approved content is consolidated at the root page. Historical links should be updated to the root page.
 
-FELOH Corpus remains the shared knowledge-governance and provenance record for canonical terminology, evidence, research, decisions and cross-project alignment. It is linked from all relevant destinations, not turned into another brand or checkout.
+## 6. Release gates
 
-## 6. Shared publication rules
-
-- Existing host and repository only; no new domain or repository.
-- Static, hand-authored HTML/CSS. No JavaScript runtime, framework, analytics, trackers, remote fonts or CDN dependency.
-- English default; Kiswahili disclosure only on NAKEBUSEN, retaining reviewed wording.
-- Semantic HTML, keyboard focus, readable contrast, responsive layout and reduced-motion support.
-- Preserve GPL-3.0.
-- Do not invent services, prices, credentials, testimonials, availability, partnerships, validation or deployment.
-- Preserve canonical source repositories and label research maturity accurately.
-
-## 7. Release gates
-
-1. Source tests pass.
-2. All internal links and destination routes resolve.
-3. Keyboard and mobile navigation are usable.
-4. Contrast, focus, landmarks and reduced-motion behaviour are checked.
-5. No secrets, private customer data, unapproved assets or third-party material are added.
-6. GitHub Pages workflow and live routes are checked after merge; do not claim deployment until observed.
+1. Dependency-free source tests pass.
+2. Only one HTML document remains; all four page anchors resolve.
+3. English and Kiswahili content are independently toggleable; light and dark themes are independent.
+4. All local links resolve and all external destinations are intentional.
+5. Keyboard controls, focus, mobile navigation, contrast, reduced motion and no-script fallback are reviewed.
+6. Prices, contact information and payment details match the Public Facts Register and Service Catalogue.
+7. GitHub Pages workflow and live root page are checked after merge; do not claim deployment until observed.
 
 Canonical refrain: FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
 

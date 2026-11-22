@@ -412,3 +412,19 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
  .topbar,.floating-dock,.hero-actions{display:none!important}
  .section,.site-footer{break-inside:avoid;background:#fff;color:#111}
 }
+
+/* Single-page controls and explicit theme overrides. */
+.site-controls{display:flex;align-items:center;gap:.45rem}
+.control-button{min-width:44px;min-height:44px;padding:.55rem .7rem;border:1px solid rgba(255,255,255,.3);border-radius:999px;background:rgba(0,0,0,.12);color:#F3EEE4;font:700 .62rem/1.2 var(--mono);letter-spacing:.04em;cursor:pointer}
+.control-button:hover{background:rgba(255,255,255,.16)}
+.control-button:focus-visible{outline:3px solid #F0C477;outline-offset:3px}
+.floating-dock{grid-template-columns:repeat(4,minmax(0,1fr))}
+html[data-theme="light"]{color-scheme:light;--canvas:#F2EFEA;--surface:#FFFDF8;--soft:#E9E1D3;--ink:#242923;--muted:#596252;--forest:#173D32;--forest-deep:#102D25;--clay:#87402F;--ochre:#80540F;--line:rgba(36,41,35,.19);--action:#173D32;--action-ink:#F3EEE4;--focus:#102D25;--price:#173D32;--footer:#171C18;--footer-muted:#D4D0C7;--glass-top:rgba(23,61,50,.96);--glass-dock:rgba(25,29,26,.97)}
+html[data-theme="dark"]{color-scheme:dark;--canvas:#050706;--surface:#151815;--soft:#0E120F;--ink:#F2EFEA;--muted:#C6C0B4;--forest:#033500;--forest-deep:#022900;--clay:#E2725B;--ochre:#D4AF37;--line:rgba(242,239,234,.2);--action:#D4AF37;--action-ink:#151515;--focus:#F2C85D;--price:#E5C15A;--footer:#090C0A;--footer-muted:#D4D0C7;--glass-top:rgba(3,53,0,.97);--glass-dock:rgba(15,17,15,.98)}
+html[data-theme="dark"] .practice-capability .practice-code{color:#9CC99A}
+html[data-theme="dark"] .practice-capability{border-top-color:#9CC99A}
+html[data-theme="light"] .practice-capability .practice-code{color:#173D32}
+html[data-theme="light"] .practice-capability{border-top-color:#173D32}
+[hidden]{display:none!important}
+@media(max-width:520px){.topbar-inner{gap:.5rem}.brand-name{font-size:.82rem}.brand-sub{font-size:.52rem}.site-controls{gap:.25rem}.control-button{padding:.45rem .5rem;font-size:.56rem}.floating-dock a{font-size:.58rem;letter-spacing:.02em}}
+@media(prefers-reduced-motion:reduce){.control-button{transition:none}}
