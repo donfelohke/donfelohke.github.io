@@ -102,11 +102,27 @@ The Corpus is the shared documentary record across the work: its canon, research
 
 ## 7. Shared footer — NAKEBUSEN · WARENA · DON FELOH
 
-Business information, M-PESA, voluntary Support Us, GitHub and copyright.
+The footer presents business contact information, manual M-PESA service-payment safeguards, voluntary Support Us, repository links and authorship in both language states. The service-payment and voluntary-support boundaries must remain distinct.
 
-M-PESA Buy Goods: Till 3511456 · Account / Merchant name FELIX LWOVA. Payment is due only after service and total amount are agreed directly with NAKEBUSEN. Confirm merchant name and amount before PIN entry. Never share a PIN or one-time code.
+### English
 
-Support Us: voluntary support for independent creative, cultural and technical work, separate from NAKEBUSEN service payments.
+- NAKEBUSEN · BUSINESS — Loc care · Eldoret.
+- MANUAL SERVICE PAYMENT · M-PESA — Buy Goods. Pay only after the service and total amount have been agreed directly with NAKEBUSEN.
+- Till: 3511456 · Account / merchant name: FELIX LWOVA.
+- Before entering a PIN, confirm the displayed merchant name and agreed amount. Never share an M-PESA PIN or one-time code.
+- Manual payment information only. No API, STK push, automated verification or payment-success state.
+- INDEPENDENT WORK · VOLUNTARY SUPPORT — Support Us. Voluntary support helps independent creative, cultural and technology work. It is separate from NAKEBUSEN service payments. Contact Don Feloh first to confirm the correct support reference; do not assume the service-payment reference applies.
+
+### Kiswahili
+
+- NAKEBUSEN · BIASHARA — Utunzaji wa loc · Eldoret.
+- MALIPO YA HUDUMA KWA MKONO · M-PESA — Buy Goods. Lipa tu baada ya kukubaliana moja kwa moja na NAKEBUSEN kuhusu huduma na kiasi chote cha malipo.
+- Nambari ya Till: 3511456 · Jina la akaunti / mfanyabiashara: FELIX LWOVA.
+- Kabla ya kuweka PIN yako, hakikisha jina la mfanyabiashara lililoonyeshwa na kiasi kilichokubaliwa ni sahihi. Usishiriki PIN yako ya M-PESA au msimbo wa matumizi ya mara moja.
+- Maelezo ya malipo ya kawaida pekee. Hakuna API, STK Push, uthibitishaji wa kiotomatiki au hali ya mafanikio ya malipo.
+- KAZI HURU · MSAADA WA HIARI — Tuunge Mkono. Msaada wa hiari huchangia kazi huru za ubunifu, utamaduni na teknolojia. Ni tofauti na malipo ya huduma za NAKEBUSEN. Wasiliana na Don Feloh kwanza ili kuthibitisha rejea sahihi ya msaada; usidhani kuwa rejea ya malipo ya huduma inatumika.
+
+The Till and account / merchant name are operational payment details: preserve the exact approved values and do not copy them into unrelated repositories or publications.
 
 **@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY**  
 **HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES**  
