@@ -193,5 +193,20 @@ class SiteTests(unittest.TestCase):
         self.assertNotIn("/research/", sitemap)
 
 
+    def test_canonical_nakebusen_lockup(self):
+        self.assertIn("NAKEBUSEN Locs ° Powered by WARENA", HTML)
+        self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
+        self.assertIn("not a NAKEBUSEN sub-brand", HTML)
+
+    def test_publication_architecture_is_single_homepage(self):
+        path = ROOT / "docs/PUBLICATION-SYSTEM-ARCHITECTURE-2026-11-22.md"
+        architecture = path.read_text(encoding="utf-8")
+        self.assertIn("single-homepage information architecture", architecture)
+        self.assertIn("one public HTML homepage", architecture)
+        self.assertNotIn("target multi-page IA", architecture)
+        self.assertNotIn("Multi-page expansion", architecture)
+        self.assertIn("one-page section map", architecture)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
