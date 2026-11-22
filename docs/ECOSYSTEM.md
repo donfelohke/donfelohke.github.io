@@ -21,7 +21,7 @@ Signature: **GRACE · GRIT · GLORY**
 
 | Item | Value |
 |------|--------|
-| Loc starting prices | From From KES 700 · 1,500 · 3,500 |
+| Loc starting prices | From KES 700 · From 1,500 · 3,500 |
 | Primary loc messaging location | Eldoret Town / Karibu Mdosi |
 | Contact | WhatsApp +254 719 635 415 |
 | Boundary | Enquiry ≠ confirmed booking |
