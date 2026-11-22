@@ -46,3 +46,8 @@ One HTML document, one CSS stylesheet, no JavaScript. System theme preference, n
 - Glass is reserved for functional top and bottom navigation. Content, prices and payment instructions remain opaque.
 - Preserve native anchors, 44px-class controls, safe-area spacing, visible focus, system colour-scheme support, reduced-motion and reduced-transparency fallbacks.
 - No scripts, remote fonts, stock imagery, trackers, CMS, generated pages or external runtime dependencies.
+
+
+## Current accepted implementation direction — 2026-11-22
+
+The current implementation uses the established forest-green / charcoal / warm-off-white / ochre / terracotta palette; Cormorant Garamond, Inter and JetBrains Mono; an editorial reading canvas with selective immersive glass navigation; ambient, slow background drift; and balanced content density. Keep pricing and long-form reading surfaces opaque. Preserve the static one-page architecture, authored English/Kiswahili, and LOCS / DIGITAL / CONNECT dock. See [the current implementation update](ECOSYSTEM-UPDATE-2026-11-22.md).
