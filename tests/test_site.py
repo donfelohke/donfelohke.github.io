@@ -174,6 +174,19 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("SOURCE REPOSITORY", HTML)
         self.assertIn("CREATIVE PRACTICE REPOSITORY", HTML)
 
+    def test_current_brand_palette_and_hybrid_surfaces(self):
+        for token in (
+            "--canvas:#F2EFEA", "--ink:#111111", "--forest:#123B2D",
+            "--forest-deep:#033500", "--brand-ochre:#D4AF37",
+            "--brand-terracotta:#E2725B", "--glass-blur:28px",
+            "--glass-saturation:180%",
+        ):
+            self.assertIn(token, CSS)
+        self.assertIn("background:var(--surface)", CSS)
+        self.assertIn("background:var(--soft)", CSS)
+        self.assertIn("animation:glass-drift 32s", CSS)
+        self.assertIn("animation:glass-drift 36s", CSS)
+
     def test_glass_terminal_visual_system(self):
         self.assertIn("blur(28px) saturate(180%)", CSS)
         self.assertIn("--glass-top:rgba(23,61,50,.80)", CSS)
