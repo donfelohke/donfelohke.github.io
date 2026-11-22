@@ -29,7 +29,7 @@ The site is the public gateway to one human author's connected body of work. F3L
 6. **IKAI / MIRROR:** reflective-computing and mirror research with maturity disclosure.
 7. **GENJE / EXPRESSION:** creative and embodied practice.
 8. **FELOH Corpus:** shared canon, documentation, research provenance and repository index.
-9. **Kiswahili:** optional native disclosure, never the default language.
+9. **Kiswahili:** optional native radio-control language selection, never the default language; CSS toggles translated content in the main page and footer.
 10. **Connect / footer:** NAKEBUSEN business information, M-PESA manual payment instructions, separate voluntary Support Us, source and copyright links.
 
 The four-practice map is an orientation layer, not a replacement for the detailed domain sections or canonical GitHub repositories. The homepage remains one HTML document and retains the three-destination LOCS / DIGITAL / CONNECT dock.
