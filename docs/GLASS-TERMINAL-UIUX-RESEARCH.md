@@ -167,3 +167,15 @@ The commercial homepage remains NAKEBUSEN-led. The research dossier is a source 
 - FELOH Corpus — Spatial XR and AI Cross-Project Alignment (2026-11-20)
 
 No implementation, headset qualification, optical validation, user study, commercial release or deployment is claimed by this document.
+
+
+## Accepted design parameters — 2026-11-22
+
+- Glass intensity: immersive, restricted to navigation and selected framing surfaces.
+- Canvas: hybrid editorial surfaces with selective glass; reading and price cards remain opaque.
+- Motion: ambient and slow; respect reduced-motion and reduced-transparency preferences.
+- Density: balanced; preserve whitespace and clear service hierarchy.
+- Palette: #123B2D, #111111, #F2EFEA, #D4AF37, #E2725B, #033500.
+- Type: Cormorant Garamond / Inter / JetBrains Mono.
+
+The design does not authorize a new page, framework, JavaScript runtime, remote font or image-heavy homepage. The commercial single-page structure and mobile dock remain intact.
