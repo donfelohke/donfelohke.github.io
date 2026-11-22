@@ -126,7 +126,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("IKAI is a Turkana female name meaning “home.”", creative)
         self.assertIn("mirror, not a judge", creative.lower())
         self.assertIn("not a released product", creative.lower())
-        self.assertIn("Gallery remains approval-controlled", creative)
+        self.assertIn("Gallery remains an approval-controlled archive", creative)
 
     def test_publication_docs_and_sitemap_match(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
