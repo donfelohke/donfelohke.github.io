@@ -99,7 +99,7 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("<script", HTML.lower())
         self.assertEqual(0, self.parser.scripts)
 
-    def test_service_prices_are_published_without_plus_signs(self):
+    def test_service_prices_use_approved_starting_price_notation(self):
         webcopy = (ROOT / "docs/WEBCOPY.md").read_text(encoding="utf-8")
         for amount in ("KES 700", "KES 1,500", "KES 3,500"):
             self.assertIn(amount, HTML)
