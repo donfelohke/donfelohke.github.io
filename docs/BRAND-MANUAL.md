@@ -90,12 +90,12 @@ No external font CDN. Self-hosted font files may be used only after their files 
 
 ### LOCS · CROWN
 
-Services and approved starting prices:
+Services and approved published prices:
 
 | Service | Starting price |
 |---|---:|
-| Retouch & Styling | From KES 700 |
-| LOCS Retie | From KES 1,500 |
+| Retouch & Styling | KES 700 |
+| LOCS Retie | KES 1,500 |
 | Artificial Locs Installation | KES 3,500 |
 
 Prices are starting points. Final cost depends on service scope, loc condition and materials. No braiding or shaving. Do not promise unverified home visits or appointment availability.
