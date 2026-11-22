@@ -18,13 +18,13 @@ Key findings:
 1. The homepage hero was loc-care-led but its lead copy did not match the approved founder/practice statement.
 2. Research and creative work was described in the Connect section but had no dedicated public destination.
 3. The README's opening headline did not match the current homepage H1.
-4. The canonical website copy listed Artificial Locs Installation as KES 3,500+ although the approved catalogue and facts register state KES 3,500.
+4. The canonical website copy listed Artificial Locs Installation as KES 3,500 although the approved catalogue and facts register state KES 3,500.
 5. Existing UX research already defined a service-discovery journey: Discover → Evaluate → Trust → Enquire → Human confirmation.
 
 ## Content strategy
 
 - **Primary audience:** people seeking loc care in Eldoret Town / Karibu Mdosi.
-- **Primary task:** understand service options and starting prices, then make a direct WhatsApp enquiry.
+- **Primary task:** understand service options and published prices, then make a direct WhatsApp enquiry.
 - **Secondary audience:** people seeking scoped GNU/Linux, workstation, computer and network support.
 - **Research audience:** readers, collaborators and technical peers exploring scholarship, reflective computing, embodied creative practice and infrastructure research.
 
@@ -79,8 +79,8 @@ Added `research/index.html` at `/research/`, with:
 
 ## Canonical facts preserved
 
-- Retouch & Styling — KES 700+
-- Sisterlocs Retie — KES 1,500+
+- Retouch & Styling — KES 700
+- Sisterlocs Retie — KES 1,500
 - Artificial Locs Installation — KES 3,500
 - Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya
 - Founder role: Founder · CTO · Loctician · Creative Technologist
