@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-22 — Full homepage revamp
+- Rebuild the hero around the approved “Your Beauty ° Your Way.” headline and natural loc-care proposition.
+- Redesign service discovery, pricing links, service cards and enquiry guidance with a mobile-first editorial layout.
+- Refine the DIGITAL capability panel, founder authorship, four-practice map, WARENA, IKAI, GENJE, Corpus and Kiswahili sections.
+- Rework contact and footer hierarchy while preserving NAKEBUSEN-only transactions, M-PESA safety wording and separate voluntary support.
+- Replace accumulated presentation rules with a coherent responsive design system, retaining static HTML/CSS, system fonts, no-JavaScript operation and reduced-motion/transparency support.
+- Update regression tests and canonical web copy/design standards to match the approved homepage hierarchy.
+- Validation and Pages deployment remain distinct release checks.
+
+
 ## 2026-11-22 — Author-led domain architecture
 - Reorder the public narrative as NAKEBUSEN, WARENA, Don Feloh, IKAI, GENJE and FELOH Corpus, followed by the shared footer.
 - Keep NAKEBUSEN as the only live commercial practice and make its loc-care proposition, prices, location and enquiry boundary immediately clear.
