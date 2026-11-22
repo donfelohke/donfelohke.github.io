@@ -18,3 +18,8 @@ Run `python -m unittest discover -s tests -v`. The suite checks structure, links
 
 ## Manual checks still required
 Inspect 320–1440px widths, both system themes, keyboard-only operation and language switching, screen-reader landmarks/headings, actual contrast, glass readability, 44px language/dock targets, reduced motion/transparency, real-device contact handoff and payment wording. Record browser, version, viewport, commit, procedure, result and defects. Automated source checks do not prove WCAG conformance.
+
+
+## Current visual-system implementation checks — 2026-11-22
+
+Glass is decorative framing, never a prerequisite for reading or navigation. Verify text contrast against the translucent top bar and dock in both colour schemes; retain opaque fallback surfaces when backdrop-filter is unavailable or reduced transparency is requested. Confirm keyboard focus, 44px-class controls, skip navigation, reduced motion, safe-area spacing and readable service-price cards. Automated source tests do not replace browser, keyboard and screen-reader review.
