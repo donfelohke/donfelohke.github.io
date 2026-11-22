@@ -13,9 +13,9 @@ The public site is a single, deep page at the root URL. It consolidates the mate
 
 | Anchor | Purpose | Content |
 |---|---|---|
-| `#locs` | NAKEBUSEN / ROOT | Loc-care services, starting prices, scope and enquiry boundary |
-| `#digital` | DIGITAL / WARENA capability | Practical computing and infrastructure capability areas, qualification and enquiry path |
-| `#about` | Don Feloh / human authorship | Founder identity, GRACE · GRIT · GLORY, WARENA, IKAI, GENJE and FELOH Corpus |
+| `#crown` | NAKEBUSEN / ROOT | Loc-care services, starting prices, scope and enquiry boundary |
+| `#code` | DIGITAL / WARENA capability | Practical computing and infrastructure capability areas, qualification and enquiry path |
+| `#don-feloh` | Don Feloh / human authorship | Founder identity, GRACE · GRIT · GLORY, WARENA, IKAI, GENJE and FELOH Corpus |
 | `#connect` | Contact | Direct NAKEBUSEN contact and source links |
 
 The hero is balanced: the approved headline “Your Beauty ° Your Way.” and loc-care entry point remain prominent while Don Feloh's authorship and the wider practice are visible in the same first-screen hierarchy.
@@ -26,8 +26,8 @@ NAKEBUSEN is the only live commercial practice. LOCS and DIGITAL are customer-fa
 
 | Service | Public price |
 |---|---:|
-| Retouch & Styling | KES 700 (indicative) |
-| Sisterlocs Retie | KES 1,500 (indicative) |
+| Retouch & Styling | KES 700+ |
+| Sisterlocs Retie | KES 1,500+ |
 | Artificial Locs Installation | KES 3,500 |
 
 Location: Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
@@ -81,4 +81,11 @@ Commercial boundary: ONLY NAKEBUSEN TRANSACTS.
 
 ## Correction-release factual controls
 
-NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret. This business-history fact must not be attributed to the founder as personal roots, birthplace or ancestry. Public prices are indicative and displayed without plus signs. Service descriptions must not promise washing, crochet or other unapproved inclusions. Service enquiry links must identify the selected service and must not imply a confirmed booking.
+NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret. This business-history fact must not be attributed to the founder as personal roots, birthplace or ancestry. Retouch & Styling and Sisterlocs Retie are starting prices displayed with plus signs; Artificial Locs Installation is KES 3,500 without a plus sign. Service descriptions must not promise washing, crochet or other unapproved inclusions. Service enquiry links must identify the selected service and must not imply a confirmed booking.
+
+
+## 2026-11-22 implementation alignment
+
+The current visual direction is Liquid Glass Terminal + Editorial Hybrid: immersive glass for navigation and selected framing, a hybrid editorial canvas, ambient motion and balanced density. The canonical palette is #123B2D / #111111 / #F2EFEA / #D4AF37 / #E2725B / #033500; typography is Cormorant Garamond / Inter / JetBrains Mono. Long-form reading and service/pricing surfaces remain opaque. The one-page static architecture, English-default authored Kiswahili toggle and LOCS / DIGITAL / CONNECT mobile dock remain unchanged.
+
+The implementation keeps HTML/CSS and dependency-free Python checks. Source validation is separate from browser accessibility review and GitHub Pages deployment. No deployment is claimed by this design addendum.
