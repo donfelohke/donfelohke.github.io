@@ -12,7 +12,7 @@
 **WhatsApp:** https://wa.me/254719635415  
 **Secondary contact:** +254 719 635 415
 
-### Published starting prices
+### Published published prices
 
 | Service | Published indicative price (KES) | Scope note |
 |---|---:|---|
