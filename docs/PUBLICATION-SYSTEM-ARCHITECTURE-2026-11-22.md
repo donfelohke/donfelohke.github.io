@@ -22,9 +22,9 @@ Keep and strengthen the **existing homepage itself**. It must communicate the au
 | Live entry | One-page `index.html` · commercial-first NAKEBUSEN |
 | Stack | Static HTML/CSS · GitHub Pages · existing tests under `tests/` |
 | Docs already present | SERVICE-CATALOG · PUBLIC-FACTS-REGISTER · WEBCOPY · ACCESSIBILITY · RELEASE-CHECKLIST · PROJECT_TEMPLATE |
-| This document | Adds **target multi-page IA**, **publication register**, **project-record standard**, **repo roles**, **gates** |
+| This document | Defines the **single-homepage information architecture**, **publication register**, **project-record standard**, **repository roles**, and **release gates** |
 
-The 22 Nov migration record preserved a one-page service-discovery focus. Multi-page expansion is an **evolution**, not a replacement of that commercial path.
+The 22 Nov migration record and this publication architecture preserve one public HTML homepage. The information architecture evolves the homepage's section hierarchy and publication controls; it does not expand the public site into multiple pages or routes.
 
 ---
 
@@ -156,7 +156,7 @@ These are targets, not a claim that all gates currently pass.
 | Phase | Work | Completion condition |
 |-------|------|----------------------|
 | **1** | Audit current source + live presentation | Baseline documented (this file + prior audits) |
-| **2** | Finalise sitemap + content model | Every future page has owner + audience |
+| **2** | Finalise the one-page section map + content model | Every homepage section and linked canonical source has an owner, audience and publication status |
 | **3** | Map GitHub docs → publication register | No invented facts; no duplicate sources of truth |
 | **4** | Refine the existing homepage narrative and practice map | One-page hierarchy is clear; no additional public pages |
 | **5** | Validation tooling extension | Automated checks pass on candidate branch |
