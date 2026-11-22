@@ -1,13 +1,13 @@
 # NAKEBUSEN Design Proposal
 ## Editorial Rooted × Selective Glassmorphism × GLASS TERMINAL
 
-**Status:** Design proposal for review — not yet approved  
+**Status:** Historical design proposal — superseded 22 November 2026 by the approved immersive Glass Terminal implementation in PR #169  
 **Repository:** `donfelohke/donfelohke.github.io`  
 **Design branch:** `design/editorial-rooted-glass-terminal`  
 **Related issue:** [#51 — Design: Editorial Rooted × Selective Glassmorphism × Glass Terminal](https://github.com/donfelohke/donfelohke.github.io/issues/51)  
 **Related implementation PR:** [#50 — Responsive GLASS TERMINAL navigation](https://github.com/donfelohke/donfelohke.github.io/pull/50)
 
-> This document is a design deliverable. It does not change website source code, approve PR #50, or authorise merge or deployment.
+> Historical record only. Its earlier “selective glass” recommendation is not the current direction. The current homepage uses immersive glass on the fixed topbar and three-item dock, with editorial content surfaces kept readable and mostly opaque. See `docs/GLASS-TERMINAL-UIUX-RESEARCH.md` and the merged implementation in PR #169.
 
 ---
 
