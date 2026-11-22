@@ -26,8 +26,8 @@ NAKEBUSEN is the only live commercial practice. LOCS and DIGITAL are customer-fa
 
 | Service | Public price |
 |---|---:|
-| Retouch & Styling | KES 700+ |
-| Sisterlocs Retie | KES 1,500+ |
+| Retouch & Styling | From KES 700 |
+| Sisterlocs Retie | From KES 1,500 |
 | Artificial Locs Installation | KES 3,500 |
 
 Location: Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
