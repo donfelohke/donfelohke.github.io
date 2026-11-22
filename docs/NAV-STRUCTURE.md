@@ -1,32 +1,34 @@
 # Website Navigation Contract
 
-**Status:** Canonical native-anchor architecture · 22 November 2026
+**Status:** Single-page architecture · 22 November 2026
 
-## Primary navigation
+## Public navigation
 
-The floating bottom dock has exactly three destinations:
-- LOCS → `#crown`
-- DIGITAL → `#code`
+The website is one page at the root URL. Its four primary anchors are:
+
+- LOCS → `#locs`
+- DIGITAL → `#digital`
+- ABOUT → `#about`
 - CONNECT → `#connect`
 
-The topbar contains the F3L0H / FELOH WARENA identity anchor and an optional Kiswahili jump link. It does not duplicate section navigation. Domain and repository destinations are linked contextually from their own sections.
+The floating bottom dock contains the four anchors. The compact top bar contains the Don Feloh identity and two independent controls: English / Kiswahili and light / dark appearance.
 
 ## Information hierarchy
 
-NAKEBUSEN / ROOT is the only live commercial practice and exposes LOCS and DIGITAL service paths. WARENA / CAPABILITY is distinct technical capability, not a sub-brand or separate checkout. IKAI / MIRROR is research / WIP. GENJE / EXPRESSION is creative practice. FELOH Corpus is shared knowledge governance, not another practice domain. F3L0H is the overarching human authorship identity.
+The hero balances NAKEBUSEN's approved headline and loc-care entry point with Don Feloh's human authorship and the wider body of work. NAKEBUSEN / ROOT is the only live commercial practice and exposes LOCS and DIGITAL service paths. WARENA / CAPABILITY is distinct technical capability, not a sub-brand or separate checkout. IKAI / MIRROR is research / WIP. GENJE / EXPRESSION is creative practice. FELOH Corpus is shared knowledge governance.
 
-## Native language and theme
+## Language and theme
 
 - English is the default document language.
-- Kiswahili is available in a native `details/summary` disclosure.
-- No JavaScript language toggle or saved language preference.
-- Light/dark appearance follows `prefers-color-scheme`.
-- Section navigation uses native fragment links; no scroll observer or script-maintained active state.
+- English / Kiswahili is a minimal JavaScript toggle; both language versions are authored in the page.
+- Light / dark appearance is a separate minimal JavaScript toggle.
+- Without JavaScript, English remains readable and the CSS system colour preference is respected.
+- No analytics, tracking, framework, remote font, CDN, scroll observer or third-party runtime.
 
 ## Accessibility
 
-Labelled navigation landmark, visible link text, 44px-class targets, safe-area spacing, anchor offsets, visible focus, reduced motion and reduced-transparency fallbacks.
+Semantic landmarks, one page-level H1 per active language view, visible focus, 44px-class controls, safe-area spacing, native anchor navigation, reduced-motion support and reduced-transparency fallbacks. Controls have accessible labels and pressed states.
 
 ## Commercial boundary
 
-**ONLY NAKEBUSEN TRANSACTS.** The dock has no checkout, booking, payment or research destination. LOCS and DIGITAL enquiries are directed to NAKEBUSEN. An enquiry is not a confirmed booking.
+**ONLY NAKEBUSEN TRANSACTS.** LOCS and DIGITAL enquiries route through NAKEBUSEN. An enquiry is not a confirmed booking. The footer retains the approved manual M-PESA information and separate voluntary Support Us statement.
