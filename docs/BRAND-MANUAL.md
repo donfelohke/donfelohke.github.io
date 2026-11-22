@@ -94,8 +94,8 @@ Services and approved starting prices:
 
 | Service | Starting price |
 |---|---:|
-| Retouch & Styling | KES 700+ |
-| LOCS Retie | KES 1,500+ |
+| Retouch & Styling | From KES 700 |
+| LOCS Retie | From KES 1,500 |
 | Artificial Locs Installation | KES 3,500 |
 
 Prices are starting points. Final cost depends on service scope, loc condition and materials. No braiding or shaving. Do not promise unverified home visits or appointment availability.
