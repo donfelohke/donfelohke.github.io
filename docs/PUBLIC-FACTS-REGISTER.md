@@ -33,7 +33,7 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-010 | GENJE is not a separate commercial division | F2 | Canonical |
 | PF-011 | WARENA is the distinct CAPABILITY domain; it may provide technical capability for NAKEBUSEN digital-service engagements | F2 | Not a NAKEBUSEN subdomain, parent enterprise or separate checkout; all commercial transactions remain through NAKEBUSEN |
 | PF-012 | IKAI is research, not a released product | F2 | Label research / WIP |
-| PF-013 | Current loc-care location: Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya | F1 | Do not invent a street address or map pin |
+| PF-013 | Current loc-care locality: Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya | F1 | Use the supplied Plus Code and Google Maps link below for directions; do not invent a street address or coordinates |
 | PF-014 | Phone: +254 719 635 415 | F1 | Verify before campaigns |
 | PF-015 | WhatsApp: https://wa.me/254719635415 | F1 | Enquiry channel |
 | PF-016 | Email: mela9ine@proton.me | F1 | Verify before campaigns |
@@ -43,7 +43,7 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-020 | Final LOCS cost depends on scope, loc condition and materials | F1 | Publish with prices |
 | PF-021 | No braiding | F1 | Do not advertise braiding |
 | PF-022 | No shaving | F1 | Do not advertise shaving |
-| PF-023 | Home visits | F5 | Do not promise without confirmation |
+| PF-023 | Loc-care home calls within the wider Eldoret Town area | F1 | Founder-supplied current service mode; confirm the exact customer location, suitability, availability and travel arrangements directly. Do not imply a fixed kilometre radius or universal coverage. |
 | PF-024 | DIGITAL service areas include GNU/Linux, computer maintenance and networking | F3 | Scope and availability must be confirmed |
 | PF-025 | Local-first and offline-capable systems | F3 | Describe as service area; no blanket guarantees |
 | PF-026 | Reproducible development environments | F3 | Do not claim verified reproducibility without evidence |
@@ -57,6 +57,8 @@ This register controls factual claims used on the website, service catalogue, pr
 
 
 | PF-034 | NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret | F1 | Founder-supplied business-history fact. Keep distinct from founder biography, birthplace and ancestry. |
+| PF-035 | Public directions reference: F743+R35, Eldoret, Kenya; supplied Google Maps pin: https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6 | F1 | Owner-supplied map reference. Publish the short Plus Code with Eldoret locality. Do not claim an independently verified street address, entrance, coordinates or transit stage. |
+| PF-036 | Loc-care home calls may be arranged within the wider Eldoret Town area | F1 | Confirm exact location, service suitability, availability and travel arrangements directly before confirming a visit; no fixed kilometre radius is asserted. |
 
 ## Publication controls
 
