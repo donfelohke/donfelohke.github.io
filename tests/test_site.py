@@ -1,216 +1,158 @@
 #!/usr/bin/env python3
-"""Dependency-free publication and architecture checks for the Don Feloh site."""
+"""Dependency-free publication checks for the four-destination DonFelohke site."""
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-HTML_PATH = ROOT / "index.html"
-CSS_PATH = ROOT / "assets/css/site.css"
-HTML = HTML_PATH.read_text(encoding="utf-8")
-CSS = CSS_PATH.read_text(encoding="utf-8")
+PAGES = {
+    "personal": ROOT / "index.html",
+    "nakebusen": ROOT / "nakebusen/index.html",
+    "technical": ROOT / "technical/index.html",
+    "creative": ROOT / "creative/index.html",
+}
+CSS = (ROOT / "assets/css/site.css").read_text(encoding="utf-8")
+DESTINATION_CSS = (ROOT / "assets/css/destinations.css").read_text(encoding="utf-8")
 
 
-class DocumentParser(HTMLParser):
+class AuditParser(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
-        self.ids = set()
-        self.duplicate_ids = []
-        self.links = []
-        self.scripts = []
-        self.inline_handlers = []
+        self.links, self.ids, self.duplicates = [], set(), []
+        self.scripts, self.handlers, self.landmarks = [], [], set()
         self.h1_count = 0
-        self.landmarks = set()
-        self.heading_levels = []
-        self.section_ids = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if attrs.get("id"):
             if attrs["id"] in self.ids:
-                self.duplicate_ids.append(attrs["id"])
+                self.duplicates.append(attrs["id"])
             self.ids.add(attrs["id"])
-            if tag == "section":
-                self.section_ids.append(attrs["id"])
         if tag == "a" and attrs.get("href"):
             self.links.append(attrs["href"])
         if tag == "script":
             self.scripts.append(attrs)
-        for name in attrs:
-            if name.lower().startswith("on"):
-                self.inline_handlers.append(name)
         if tag == "h1":
             self.h1_count += 1
         if tag in {"header", "nav", "main", "footer"}:
             self.landmarks.add(tag)
-        if tag in {"h1", "h2", "h3", "h4", "h5", "h6"}:
-            self.heading_levels.append(int(tag[1]))
+        self.handlers.extend(k for k in attrs if k.lower().startswith("on"))
 
 
-class SiteTests(unittest.TestCase):
+class PublicationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.parser = DocumentParser()
-        cls.parser.feed(HTML)
-        cls.parser.close()
+        cls.documents = {}
+        cls.parsers = {}
+        for name, path in PAGES.items():
+            source = path.read_text(encoding="utf-8")
+            parser = AuditParser()
+            parser.feed(source)
+            parser.close()
+            cls.documents[name] = source
+            cls.parsers[name] = parser
 
-    def test_one_public_html_document(self):
-        pages = [p for p in ROOT.rglob("*.html") if ".git" not in p.parts]
-        self.assertEqual([HTML_PATH], pages)
+    def test_exact_four_routes(self):
+        pages = sorted(p.relative_to(ROOT).as_posix() for p in ROOT.rglob("*.html"))
+        self.assertEqual(["creative/index.html", "index.html", "nakebusen/index.html", "technical/index.html"], pages)
+        for name, path in PAGES.items():
+            self.assertTrue(path.is_file(), name)
 
-    def test_no_javascript_or_node_runtime(self):
-        self.assertEqual([], self.parser.scripts)
-        self.assertEqual([], self.parser.inline_handlers)
-        self.assertNotIn("javascript:", HTML.lower())
-        self.assertFalse((ROOT / "package.json").exists())
-        self.assertFalse((ROOT / "node_modules").exists())
-        self.assertFalse((ROOT / "assets/js").exists())
-        runtime_suffixes = {".js", ".mjs", ".cjs"}
-        self.assertFalse([p for p in ROOT.rglob("*") if p.is_file() and p.suffix in runtime_suffixes])
+    def test_each_page_is_semantic_and_script_free(self):
+        for name, html in self.documents.items():
+            parser = self.parsers[name]
+            self.assertIn('<html lang="en">', html, name)
+            self.assertEqual(1, parser.h1_count, name)
+            self.assertTrue({"header", "nav", "main", "footer"}.issubset(parser.landmarks), name)
+            self.assertEqual([], parser.duplicates, name)
+            self.assertEqual([], parser.scripts, name)
+            self.assertEqual([], parser.handlers, name)
+            self.assertNotIn("javascript:", html.lower(), name)
+            for previous, current in zip(
+                [int(x) for x in __import__("re").findall(r"<h([1-6])\b", html, flags=__import__("re").I)],
+                [int(x) for x in __import__("re").findall(r"<h([1-6])\b", html, flags=__import__("re").I)][1:],
+            ):
+                self.assertLessEqual(current - previous, 1, name)
 
-    def test_semantic_document(self):
-        self.assertIn('<html lang="en">', HTML)
-        self.assertEqual(1, self.parser.h1_count)
-        self.assertTrue({"header", "nav", "main", "footer"}.issubset(self.parser.landmarks))
-        self.assertEqual([], self.parser.duplicate_ids)
-        self.assertIn('lang="sw"', HTML)
-        self.assertIn("<details", HTML)
-        for previous, current in zip(self.parser.heading_levels, self.parser.heading_levels[1:]):
-            self.assertLessEqual(current - previous, 1)
+    def test_local_links_resolve(self):
+        for name, parser in self.parsers.items():
+            for href in parser.links:
+                if href.startswith("#"):
+                    self.assertIn(href[1:], parser.ids, f"{name}: missing anchor {href}")
+                    continue
+                parsed = urlparse(href)
+                if parsed.scheme or parsed.netloc or not href:
+                    continue
+                path = parsed.path
+                if path:
+                    target = (ROOT / path.lstrip("/")).resolve()
+                    self.assertTrue(target.exists(), f"{name}: missing local link {href}")
 
-    def test_local_links_and_anchor_targets(self):
-        for href in self.parser.links:
-            if href.startswith("#"):
-                self.assertIn(href[1:], self.parser.ids, f"Missing anchor: {href}")
-                continue
-            parsed = urlparse(href)
-            if parsed.scheme or parsed.netloc or not href:
-                continue
-            path = parsed.path
-            if path:
-                target = (ROOT / path.lstrip("/")).resolve()
-                self.assertTrue(target.exists(), f"Missing local link target: {href}")
+    def test_personal_hub_positioning(self):
+        html = self.documents["personal"]
+        self.assertIn("<title>Don Feloh · Black Excellence, Digital Sovereignty, Creative Expression</title>", html)
+        self.assertIn("Black Excellence. Digital Sovereignty. Creative Expression.", html)
+        self.assertIn("Founder · CTO · Loctician · Creative Technologist", html)
+        self.assertIn("Kanamkemer and Lodwar, Turkana County", html)
+        for route in ("/nakebusen/", "/technical/", "/creative/"):
+            self.assertIn(f'href="{route}"', html)
+        self.assertIn("FELOH Corpus", html)
+        self.assertIn("ONLY NAKEBUSEN TRANSACTS.", html)
 
-    def test_search_and_conversion_first_hero(self):
-        self.assertIn('<title>NAKEBUSEN · Your Beauty ° Your Way | Don Feloh</title>', HTML)
-        self.assertIn('name="description" content="NAKEBUSEN natural loc care in Eldoret', HTML)
-        self.assertIn('<h1 id="page-title">Your Beauty <span class="degree">°</span> Your Way.</h1>', HTML)
-        self.assertIn('<p class="hero-lead">Natural loc care in Eldoret.</p>', HTML)
-        self.assertIn('class="hero-prices"', HTML)
-        for anchor in ("#service-retouch", "#service-sisterlocs", "#service-artificial"):
-            self.assertIn(f'href="{anchor}"', HTML)
-            self.assertIn(f'id="{anchor[1:]}"', HTML)
-        self.assertIn("Your Beauty", HTML)
+    def test_nakebusen_service_facts_and_boundaries(self):
+        html = self.documents["nakebusen"]
+        for phrase in ("KES 700+", "KES 1,500+", "KES 3,500", "Sisterlocs Retie",
+                       "Artificial Locs Installation", "Eldoret Town / Karibu Mdosi",
+                       "An enquiry does not confirm a booking.", "3511456", "FELIX LWOVA",
+                       "Never share your M-PESA PIN", "Support Us"):
+            self.assertIn(phrase, html)
+        self.assertIn("NAKEBUSEN is a Turkana name meaning", html)
+        self.assertIn("Black Beauty, Digital Sovereignty and Creative Expression", html)
+        self.assertIn("does not offer braiding", html)
+        self.assertIn("does not cut clients’ natural hair", html)
+        self.assertIn("manual payment information", html)
+        self.assertNotIn("STK push", html)
+        self.assertNotIn("payment-success state", html)
 
-    def test_canonical_service_facts(self):
-        for phrase in (
-            "Your Beauty", "Retouch &amp; Styling", "Sisterlocs Retie",
-            "Artificial Locs Installation", "KES 700+", "KES 1,500+",
-            "KES 3,500", "Eldoret Town / Karibu Mdosi",
-        ):
-            self.assertIn(phrase, HTML)
-        self.assertNotIn("KES 3,500+", HTML)
-        self.assertIn("An enquiry does not confirm a booking.", HTML)
-        self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
+    def test_technical_and_creative_boundaries(self):
+        technical = self.documents["technical"]
+        creative = self.documents["creative"]
+        self.assertIn("Freedom Is a System", technical)
+        self.assertIn("libre-first, not GNU-exclusive", technical)
+        self.assertIn("ONLY NAKEBUSEN TRANSACTS", technical)
+        self.assertIn("Genge-rooted", creative)
+        self.assertIn("livecoding", creative)
+        self.assertIn("IKAI is a Turkana female name meaning “home.”", creative)
+        self.assertIn("a mirror, not a judge", creative)
+        self.assertIn("not a released product", creative)
+        self.assertIn("Gallery remains approval-controlled", creative)
 
-    def test_domain_sections_and_hierarchy(self):
-        expected = [
-            "nakebusen", "services", "don-feloh", "warena",
-            "ikai", "genje", "feloh-corpus", "kiswahili",
-        ]
-        positions = [HTML.index(f'id="{section}"') for section in expected]
-        self.assertEqual(sorted(positions), positions)
-        self.assertIn("WARENA is the distinct CAPABILITY domain", HTML)
-        self.assertIn("Different purposes.", HTML)
-        self.assertIn("Shared ground.", HTML)
-        self.assertIn('class="practice-grid"', HTML)
-        for domain_anchor in ("#services", "#warena", "#ikai", "#genje"):
-            self.assertIn(f'href="{domain_anchor}"', HTML)
-        self.assertIn("How the work connects", HTML)
-        self.assertIn("FELOH Corpus keeps shared knowledge", HTML)
-        self.assertIn("not a NAKEBUSEN sub-brand", HTML)
-        self.assertIn("IKAI is a research track", HTML)
-        self.assertIn("GENJE", HTML)
-        self.assertIn("FELOH Corpus", HTML)
-        self.assertNotIn("Enquire about a technical project", HTML)
+    def test_publication_docs_and_sitemap_match(self):
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        doc = (ROOT / "docs/PUBLICATION-SYSTEM-ARCHITECTURE-2026-11-22.md").read_text(encoding="utf-8")
+        sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+        for route in ("/nakebusen/", "/technical/", "/creative/"):
+            self.assertIn(route, readme)
+            self.assertIn(route, doc)
+            self.assertIn(f"https://donfelohke.github.io{route}", sitemap)
+        self.assertIn("Four Public Destinations", readme)
+        self.assertIn("Four-Destination Architecture", doc)
+        self.assertNotIn("single-homepage information architecture", doc)
 
-    def test_corpus_author_and_footer_roles(self):
-        self.assertIn("Knowledge governance, documentation, research provenance and source repositories.", HTML)
-        self.assertIn("Founder · CTO · Loctician · Creative Technologist", HTML)
-        self.assertIn("Contact directory", HTML)
-        self.assertIn("<strong>NAKEBUSEN</strong> <span>·</span> <strong>WARENA</strong> <span>·</span> <strong>DON FELOH", HTML)
-        self.assertIn("Business information and service payments belong to NAKEBUSEN.", HTML)
-        self.assertIn("NAKEBUSEN · LOC CARE", HTML)
-        self.assertIn("Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya", HTML)
-
-    def test_business_and_research_boundaries(self):
-        self.assertIn("IKAI is a research track, not a released product", HTML)
-        self.assertIn("GENJE is a creative practice", HTML)
-        self.assertNotIn("braiding service", HTML.lower())
-        self.assertNotIn("shaving service", HTML.lower())
-
-    def test_contact_payment_and_support(self):
-        for phrase in (
-            "https://wa.me/254719635415", "tel:+254719635415",
-            "mailto:mela9ine@proton.me", "3511456",
-            "FELIX LWOVA", "Never share your M-PESA PIN",
-            "Support Us", "separate from NAKEBUSEN service payments",
-        ):
-            self.assertIn(phrase, HTML)
-
-    def test_navigation_contract(self):
-        for anchor in (
-            'href="#crown"', 'href="#code"', 'href="#connect"',
-        ):
-            self.assertIn(anchor, HTML)
-        self.assertIn('aria-label="Quick navigation"', HTML)
-        self.assertIn("NAKEBUSEN DIGITAL", HTML)
-        self.assertIn("Gallery · supporting visual archive", HTML)
-        self.assertIn("@donfelohke", HTML)
-        self.assertIn("GitHub", HTML)
-        self.assertIn("Digital service areas", HTML)
-        self.assertIn("Computer care", HTML)
-        self.assertIn("Back to top", HTML)
-
-    def test_native_preferences_and_responsive_rules(self):
+    def test_static_responsive_accessible_design(self):
+        combined = CSS + DESTINATION_CSS
         self.assertIn("@media(prefers-color-scheme:dark)", CSS)
-        self.assertIn("@media(prefers-reduced-motion:reduce)", CSS)
-        self.assertIn("@media(prefers-reduced-transparency:reduce)", CSS)
+        self.assertIn("@media(prefers-reduced-motion:reduce)", combined)
         self.assertIn("min-height:44px", CSS)
         self.assertIn("backdrop-filter:blur(20px)", CSS)
-        self.assertIn("@media(max-width:760px)", CSS)
-        self.assertIn("@media(max-width:440px)", CSS)
-        self.assertIn(".digital-panel", CSS)
-        self.assertIn(".hero-prices", CSS)
-        self.assertIn(".floating-dock", CSS)
-
-    def test_no_remote_runtime_dependencies(self):
-        self.assertNotIn("fonts.googleapis.com", HTML + CSS)
-        self.assertNotIn("googletagmanager", (HTML + CSS).lower())
-        self.assertNotIn("@import", CSS)
-        self.assertTrue(CSS_PATH.exists())
-        self.assertTrue((ROOT / "assets/favicon.svg").exists())
-
-    def test_sitemap_only_lists_homepage(self):
-        sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
-        self.assertIn("https://donfelohke.github.io/", sitemap)
-        self.assertNotIn("/research/", sitemap)
-
-
-    def test_canonical_nakebusen_lockup(self):
-        self.assertIn("NAKEBUSEN Locs ° Powered by WARENA", HTML)
-        self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
-        self.assertIn("not a NAKEBUSEN sub-brand", HTML)
-
-    def test_publication_architecture_is_single_homepage(self):
-        path = ROOT / "docs/PUBLICATION-SYSTEM-ARCHITECTURE-2026-11-22.md"
-        architecture = path.read_text(encoding="utf-8")
-        self.assertIn("single-homepage information architecture", architecture)
-        self.assertIn("one public HTML homepage", architecture)
-        self.assertNotIn("target multi-page IA", architecture)
-        self.assertNotIn("Multi-page expansion", architecture)
-        self.assertIn("one-page section map", architecture)
+        self.assertIn("@media(max-width:700px)", DESTINATION_CSS)
+        self.assertNotIn("fonts.googleapis.com", combined)
+        self.assertNotIn("googletagmanager", combined.lower())
+        self.assertNotIn("@import", combined)
+        self.assertFalse((ROOT / "package.json").exists())
+        self.assertFalse((ROOT / "node_modules").exists())
+        self.assertTrue((ROOT / "LICENSE").exists())
 
 
 if __name__ == "__main__":

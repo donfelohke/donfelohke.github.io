@@ -1,182 +1,92 @@
-# Public Website — Resilient Publication System
+# Public Website — Four-Destination Architecture
 
 **Date:** 22 November 2026  
-**Status:** APPROVED DIRECTION · Single-homepage publication model · implementation in review  
-**Public surface:** https://donfelohke.github.io/ (one author-led homepage; commercial discovery and practice orientation)  
-**Related:** [SITE-ARCHITECTURE.md](./SITE-ARCHITECTURE.md) · [ARCHITECTURE.md](./ARCHITECTURE.md) · [NAV-STRUCTURE.md](./NAV-STRUCTURE.md) · [CONTENT-GOVERNANCE.md](./CONTENT-GOVERNANCE.md)
+**Status:** APPROVED FOR IMPLEMENTATION  
+**Public host:** https://donfelohke.github.io/  
+**Repository:** donfelohke/donfelohke.github.io
 
-## Decision locked
+## Decision
 
-Keep and strengthen the **existing homepage itself**. It must communicate the author, the four practices, their relationships and public status while preserving NAKEBUSEN's commercial path. Do not create another website, a `/work/` page, or separate domain pages as part of this direction. Upgrade the documentation and publication controls behind the homepage.
+The public site is organised as a personal DonFelohke hub with three dedicated destination pages. All four use the existing GitHub Pages host and repository. No new domain or repository is introduced.
 
-> No website is literally foolproof. Design for safe failure, maintainability, and content that is hard to misrepresent.
+- DonFelohke personal hub: /
+- NAKEBUSEN commercial destination: /nakebusen/
+- Technical / WARENA destination: /technical/
+- Creative / GENJE + IKAI destination: /creative/
+- FELOH Corpus: shared source of record, linked but not a fifth public destination
 
-**Constitutional refrain:** FELOH generates · NAKEBUSEN grounds · IKAI reflects · WARENA enables · GENJE embodies.
+## 1. DonFelohke — personal hub
 
----
+The root page is the human-author identity and navigation hub.
 
-## 1. Relationship to the live site (as of this date)
+Identity: Felix Lwova · Feloh Warena · Don Feloh · #HisGenjeness  
+Roles: Founder · CTO · Loctician · Creative Technologist  
+Hero: “Black Excellence. Digital Sovereignty. Creative Expression.”
 
-| Fact | Status |
-|------|--------|
-| Live entry | One-page `index.html` · commercial-first NAKEBUSEN |
-| Stack | Static HTML/CSS · GitHub Pages · existing tests under `tests/` |
-| Docs already present | SERVICE-CATALOG · PUBLIC-FACTS-REGISTER · WEBCOPY · ACCESSIBILITY · RELEASE-CHECKLIST · PROJECT_TEMPLATE |
-| This document | Defines the **single-homepage information architecture**, **publication register**, **project-record standard**, **repository roles**, and **release gates** |
+The page introduces the three pillars, explains the author-led relationship between practices, and routes visitors to dedicated destinations. It is not a checkout or commercial transaction interface.
 
-The 22 Nov migration record and this publication architecture preserve one public HTML homepage. The information architecture evolves the homepage's section hierarchy and publication controls; it does not expand the public site into multiple pages or routes.
+## 2. NAKEBUSEN — commercial website
 
----
+Purpose: natural loc-care sales information, About, service prices, direct enquiry and manually confirmed payment information.
 
-## 2. One-page information architecture
+Location: Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
 
-The public experience remains **one homepage**. The four practices are explained on that page, with native in-page anchors and links to their canonical repositories.
+| Service | Public price |
+|---|---:|
+| Retouch & Styling | KES 700+ |
+| Sisterlocs Retie | KES 1,500+ |
+| Artificial Locs Installation | KES 3,500 |
 
-```text
-DON FELOH — ONE HOMEPAGE
-│
-├── NAKEBUSEN / ROOT                 ← commercial-first entry
-│   ├── LOCS                         ← service cards, starting prices, enquiry
-│   └── DIGITAL                      ← scoped technical-service enquiry
-│
-├── DON FELOH / F3L0H                ← human author, role, contact
-│   └── FOUR-PRACTICE MAP            ← compact orientation and status
-│
-├── WARENA / CAPABILITY              ← systems and infrastructure
-├── IKAI / MIRROR                    ← reflective-computing research
-├── GENJE / EXPRESSION               ← creative and embodied practice
-├── FELOH CORPUS                     ← shared knowledge governance
-│
-└── CONNECT / FOOTER                 ← business, payment, support, source
-```
+Preserve the service scope: Retouch & Styling (wash, retouch, styling); Sisterlocs Retie (wash, crocheted retie, styling); Artificial Locs Installation (all-inclusive, with method, materials and preferences agreed). No braiding. The founder does not cut clients' natural hair.
 
-### Visitor intents (must not collide)
+NAKEBUSEN is a Turkana name meaning “beautiful”. Its origin connects Turkana roots, Black Beauty, a case for Black awakening and renaissance, a return to where we started, and a future built with memory and dignity. The founder's three convictions are Black Beauty, Digital Sovereignty and Creative Expression. The practice itself is grounded in beauty, loc care, heritage and craft.
 
-| Intent | Primary path |
-|--------|----------------|
-| Loc care / booking enquiry | Homepage → LOCS → NAKEBUSEN WhatsApp |
-| Technical-service enquiry | Homepage → DIGITAL → NAKEBUSEN WhatsApp |
-| Engineering depth | Homepage → WARENA → canonical GitHub repository |
-| Reflective research | Homepage → IKAI → canonical GitHub research |
-| Creative practice | Homepage → GENJE → canonical GitHub repository |
-| Authorship / full source index | Homepage → Don Feloh / FELOH Corpus → GitHub |
+Booking boundary: “An enquiry does not confirm a booking. Availability and final terms are agreed directly.”
 
-The floating dock remains exactly **LOCS · DIGITAL · CONNECT**. Practice cards are orientation links to sections on the same page, not new routes. GitHub remains the canonical home for code, research records, issues, history and detailed documentation.
+Keep approved M-PESA Buy Goods details on the page footer: Till 3511456; account / merchant name FELIX LWOVA. Payment is manual and only after service and total amount are agreed directly. No API, STK push, automated verification, checkout or payment-success state. Keep voluntary Support Us separate from service payments and in the footer.
 
-## 3. Repository publication roles (10 public repos)
+## 3. Technical — WARENA
 
-| Repository | Publication responsibility |
-|------------|------------------------------|
-| **donfelohke.github.io** | Website and curated publication |
-| **NAKEBUSEN** | Commercial source of record |
-| **WARENA** | Systems and infrastructure |
-| **Ikai** | Reflective computing research |
-| **Genje** | Creative and embodied research |
-| **feloh-corpus** | Shared governance and provenance |
-| **donfelohke** | Author profile and portfolio index |
-| **Gallery** | Asset provenance |
-| **dwl-guile** | Supporting WARENA engineering (fork) |
-| **home-service-dwl-guile** | Supporting WARENA engineering (fork) |
+Positioning: “Freedom Is a System.”
 
-**Rule:** The homepage **explains and points to** canonical GitHub sources. It does **not** copy entire repositories, auto-publish every Markdown file, or create a second publication surface.
+WARENA is the distinct technical practice: libre-first systems engineering, GNU/Linux, infrastructure, networks, local-first computing, reproducible builds and native systems research. GNU is foundational but not an exclusive ecosystem boundary. Reuse, adapt, interoperate and credit existing work before proposing new invention.
 
----
+Use maturity labels honestly: AVAILABLE, DEMONSTRATED, RESEARCH, WIP, PROPOSED. Do not imply all research topics are services or currently available. Technical enquiries, if offered commercially, route through NAKEBUSEN. WARENA has no separate checkout.
 
-## 4. Project record standard
+## 4. Creative — GENJE + IKAI
 
-Every featured programme uses a consistent record (extends [PROJECT_TEMPLATE.md](./PROJECT_TEMPLATE.md)):
+GENJE and IKAI share the Creative Expression destination but remain distinct practices.
 
-| Field | Content |
-|-------|---------|
-| Title | e.g. REFLECTION± |
-| Domain owner | IKAI · WARENA · GENJE · NAKEBUSEN |
-| Status | RESEARCH / PROPOSED / IMPLEMENTED / VALIDATED / … |
-| 01 Proposition | What is investigated |
-| 02 Research questions | Technical or human problems |
-| 03 Existing work | Scholarship, standards, upstream projects |
-| 04 Architecture | Components and boundaries |
-| 05 Experiments | Proposed vs completed (labelled) |
-| 06 Findings and limitations | Established vs UNKNOWN |
-| 07 References and provenance | Canonical path, revision, last review |
+- GENJE: Genge-rooted sound and music, electronic African club music, livecoding, choreography, movement, choreohacking and embodied knowledge.
+- IKAI: Turkana female name meaning “home”; reflective computing, mirror engineering, optics, displays, sensing and embodied environments. Research / WIP, not a released product.
 
-**Owner · status · source repo · last review date** are mandatory on every published entry.
+IKAI's governing principle is “a mirror, not a judge”: no face identification, biometric identity matching, scoring, diagnosis, covert recording or hidden profiling. GENJE preserves human authorship, collaborator attribution, cultural context, rights and provenance.
 
----
+Gallery remains approval-controlled. Do not publish unapproved images, recordings or third-party works.
 
-## 5. Technical posture (resilient, not heavy)
+## 5. FELOH Corpus
 
-| Layer | Recommendation |
-|-------|----------------|
-| Hosting | GitHub Pages |
-| Publication | Static HTML + CSS |
-| Content records | Structured Markdown + simple metadata |
-| Validation | Python standard-library tooling (extend existing `tests/`) |
-| Runtime JS | No dependency for core content (preserve current constraint unless explicitly revised) |
-| External deps | Minimise |
-| Payments / forms | No sensitive automation on this host |
-| Accessibility | WCAG 2.2 AA target |
-| Recovery | Git history · known-good release · no force-push of `main` |
+FELOH Corpus remains the shared knowledge-governance and provenance record for canonical terminology, evidence, research, decisions and cross-project alignment. It is linked from all relevant destinations, not turned into another brand or checkout.
 
----
+## 6. Shared publication rules
 
-## 6. Publication quality gates (acceptance checklist)
+- Existing host and repository only; no new domain or repository.
+- Static, hand-authored HTML/CSS. No JavaScript runtime, framework, analytics, trackers, remote fonts or CDN dependency.
+- English default; Kiswahili disclosure only on NAKEBUSEN, retaining reviewed wording.
+- Semantic HTML, keyboard focus, readable contrast, responsive layout and reduced-motion support.
+- Preserve GPL-3.0.
+- Do not invent services, prices, credentials, testimonials, availability, partnerships, validation or deployment.
+- Preserve canonical source repositories and label research maturity accurately.
 
-A page or release is not “done” until:
+## 7. Release gates
 
-1. **Architecture** — role, audience, navigation path defined  
-2. **Source integrity** — substantive claims point to canonical sources  
-3. **Content maturity** — research ≠ product ≠ live service  
-4. **Navigation** — no orphan pages or broken mobile paths  
-5. **Accessibility** — keyboard, focus, contrast, landmarks  
-6. **Technical validation** — HTML/CSS/link checks  
-7. **Responsive** — small Android through desktop  
-8. **Security / privacy** — no secrets, trackers, customer data  
-9. **Recovery** — restorability from versioned source  
-10. **Deployment verification** — workflow success **and** live inspection  
+1. Source tests pass.
+2. All internal links and destination routes resolve.
+3. Keyboard and mobile navigation are usable.
+4. Contrast, focus, landmarks and reduced-motion behaviour are checked.
+5. No secrets, private customer data, unapproved assets or third-party material are added.
+6. GitHub Pages workflow and live routes are checked after merge; do not claim deployment until observed.
 
-These are targets, not a claim that all gates currently pass.
+Canonical refrain: FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
 
----
-
-## 7. Deliberately avoid
-
-- Visual redesign that discards approved identity  
-- Framework/CMS overhead without a proven need  
-- Auto-mirroring every GitHub README  
-- Presenting research as finished products  
-- Commercialising IKAI or GENJE prematurely  
-- Promoting Gallery or compositor forks as practice domains  
-- Infinite homepage length as a substitute for IA  
-- Overloading mobile nav with every research topic  
-
----
-
-## 8. Implementation phases
-
-| Phase | Work | Completion condition |
-|-------|------|----------------------|
-| **1** | Audit current source + live presentation | Baseline documented (this file + prior audits) |
-| **2** | Finalise the one-page section map + content model | Every homepage section and linked canonical source has an owner, audience and publication status |
-| **3** | Map GitHub docs → publication register | No invented facts; no duplicate sources of truth |
-| **4** | Refine the existing homepage narrative and practice map | One-page hierarchy is clear; no additional public pages |
-| **5** | Validation tooling extension | Automated checks pass on candidate branch |
-| **6** | Accessibility + device testing | Gate list signed |
-| **7** | Deploy + live inspection | Public site verified against reviewed commit |
-
-**Production changes require separate explicit authorisation** after the specification is accepted.
-
----
-
-## 9. Immediate next engineering step (not yet authorised)
-
-1. Maintain `docs/PUBLICATION-REGISTER.md` as an editorial control for what the homepage may reference.  
-2. Seed project records from existing Corpus/WARENA/IKAI docs **as Markdown in their canonical repositories**; publish only concise, reviewed summaries and source links on the homepage.  
-3. Keep the homepage as one HTML document. Do not add `/work/`, separate practice pages, a CMS or a new repository.
-
----
-
-## 10. Non-claims
-
-This document does not enable payments, does not merge open PRs, and does not claim that additional public pages or routes exist. The approved direction is a single, strengthened homepage.
-
-*End of specification.*
+Commercial boundary: ONLY NAKEBUSEN TRANSACTS.
