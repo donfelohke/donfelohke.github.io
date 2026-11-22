@@ -2,7 +2,7 @@
 
 **Date:** 2026-11-20  
 **Status:** RESEARCH / DESIGN DIRECTION  
-**Public experience:** https://donfelohke.github.io/research/glass-terminal/  
+**Publication status:** Research document only; no standalone Glass Terminal page is currently published. An earlier page candidate is retained in `docs/archive/`.  
 **Scope:** Cross-project interface research, native desktop architecture, spatial interaction, reflective optics, accessibility and embodied creative computing.
 
 ## 1. Executive thesis
@@ -145,9 +145,11 @@ Maturity labels must be attached to individual artefacts: RESEARCH, PROPOSAL, PR
 
 ## 10. Public webpage implementation boundary
 
-The public Glass Terminal page is a static HTML/CSS research presentation. It uses system fonts, no remote assets, no trackers, no external runtime dependencies and no application JavaScript. Its glass surfaces are progressive enhancement with opaque fallbacks. It does not implement an XR shell, desktop compositor, optical mirror or sensing system.
+The current public homepage implements the visual treatment only: immersive glass on the fixed topbar and three-item dock, with the commercial and editorial reading surfaces kept largely opaque. It uses static HTML/CSS, system-font fallbacks, no remote assets, no trackers and no application JavaScript. Glass is progressive enhancement with opaque fallbacks.
 
-The commercial homepage remains NAKEBUSEN-led. The research page is linked from the existing Research & Creative Practice area; it does not displace the service catalogue, contact paths, payment disclosure or booking boundary.
+A separate Glass Terminal research-page candidate exists only as archived source in `docs/archive/glass-terminal-2026-11-22.html.txt` and `docs/archive/glass-terminal-css-2026-11-22.css.txt`; it is not a deployed public page. Do not cite its former canonical URL as a live experience. Neither the current homepage nor the archived candidate implements an XR shell, desktop compositor, physical optical mirror or sensing system.
+
+The commercial homepage remains NAKEBUSEN-led. The research dossier is a source document, not a separate commercial destination; it does not displace the service catalogue, contact paths, payment disclosure or booking boundary.
 
 ## 11. Primary references
 

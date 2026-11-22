@@ -31,13 +31,13 @@ NAKEBUSEN began in Lodwar, Turkana County, Kenya. Its loc-care practice continue
 
 | Service | Public price |
 |---|---:|
-| Retouch & Styling | KES 700 |
-| Sisterlocs Retie | KES 1,500 |
-| Artificial Locs Installation | KES 3,500 |
+| Retouch & Styling | KES 700+ |
+| Sisterlocs Retie | KES 1,500+ |
+| Artificial Locs Installation | KES 3,500+ |
 
 Published prices are indicative. Final cost depends on service scope, loc condition, materials and work required; the final amount is agreed before work begins. No braiding or shaving services are advertised.
 
-**Service descriptions:** Retouch & Styling refreshes and maintains existing locs. Sisterlocs Retie is retightening for established Sisterlocs. Artificial Locs Installation is scoped around the preferred style, materials and requirements. Do not imply washing, crochet or other unapproved inclusions.
+**Service descriptions:** Retouch & Styling refreshes and maintains existing locs. In Kiswahili, use “Matengenezo na upangaji wa loc”; the description is “Panga upya mwonekano na utunze loc zilizopo. Kazi itategemea hali ya loc na mahitaji yako.” Do not use the literal “Onyesha upya”, which does not mean refreshing hair. Sisterlocs Retie is retightening for established Sisterlocs; use “Kukaza upya Sisterlocs zilizokwishawekwa.” Artificial Locs Installation is scoped around the preferred style, materials and requirements; use “Uwekaji wa loc za bandia.” Do not imply washing, crochet or other unapproved inclusions.
 
 **Enquiry boundary:** An enquiry does not confirm a booking. Availability and final terms are agreed directly.
 
@@ -89,7 +89,28 @@ Knowledge governance, documentation, research provenance and source repositories
 
 The Corpus is the shared documentary record across the work: its canon, research notes, source material, decisions, references and provenance. It makes the relationship between ideas, evidence, repositories and authored artefacts traceable. It is not another practice domain, product or commercial destination.
 
-## 6. Source directory
+## 6. THOUGHT & REFLECTION — core ideas
+
+**Heading:** Core ideas.  
+**Kiswahili heading:** Misingi ya fikra.
+
+These are working commitments, not final answers. They remain open to evidence, argument and revision.
+
+1. Freedom is lived through human agency and material capability, not declarations alone.
+2. Knowledge must answer to evidence, context and traceable sources.
+3. Dignity requires consent, responsibility and the ability to shape one's own life.
+4. Sovereignty is the capacity to shape our institutions, culture and technology.
+5. Creative work should deepen life without displacing human authorship.
+
+**Kiswahili:** Hii ni misingi ya kazi ya fikra, si majibu ya mwisho. Inaweza kuchunguzwa, kujadiliwa na kurekebishwa kwa kuzingatia ushahidi.
+
+1. Uhuru hutekelezwa kupitia uwezo wa binadamu kuamua na kuwa na nyenzo za kutenda, si matamko pekee.
+2. Maarifa lazima yazingatie ushahidi, muktadha na vyanzo vinavyoweza kufuatiliwa.
+3. Heshima ya binadamu inahitaji ridhaa, uwajibikaji na uwezo wa mtu kuamua kuhusu maisha yake.
+4. Ujitawala ni uwezo wa kuunda taasisi, utamaduni na teknolojia zetu.
+5. Kazi ya ubunifu inapaswa kuboresha maisha bila kuchukua nafasi ya binadamu kama mwandishi na muumbaji.
+
+## 7. Source directory
 
 - [Don Feloh GitHub profile](https://github.com/donfelohke)
 - [NAKEBUSEN](https://github.com/donfelohke/NAKEBUSEN)
@@ -100,7 +121,7 @@ The Corpus is the shared documentary record across the work: its canon, research
 - [Gallery](https://github.com/donfelohke/Gallery)
 - [Website source](https://github.com/donfelohke/donfelohke.github.io)
 
-## 7. Shared footer — NAKEBUSEN · WARENA · DON FELOH
+## 8. Shared footer — NAKEBUSEN · WARENA · DON FELOH
 
 The footer presents business contact information, manual M-PESA service-payment safeguards, voluntary Support Us, repository links and authorship in both language states. The service-payment and voluntary-support boundaries must remain distinct.
 
