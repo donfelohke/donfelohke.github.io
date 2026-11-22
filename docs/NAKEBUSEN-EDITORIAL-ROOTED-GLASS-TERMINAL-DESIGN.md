@@ -155,8 +155,8 @@ The hero should feel rooted and human, not like a software dashboard. Use an aut
 
 Display the exact service names and prices:
 
-- **Retouch & Styling — KES 700+**
-- **Sisterlocs Retie — KES 1,500+**
+- **Retouch & Styling — From KES 700**
+- **Sisterlocs Retie — From KES 1,500**
 - **Artificial Locs Installation — KES 3,500**
 
 Use a simple list or three clear rows on mobile; avoid a dense pricing matrix. Include “No braiding” where service scope is explained. Provide a clear enquiry action and the notice: **“An enquiry does not confirm an appointment. Your appointment is confirmed separately.”**
