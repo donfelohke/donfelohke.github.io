@@ -1,5 +1,5 @@
 /* Don Feloh · Editorial Rooted Glass
-   Static, text-first publication. No JavaScript or remote assets. */
+   Static, text-first publication. Minimal inline preference controls; no remote assets. */
 :root{
  color-scheme:light dark;
  --canvas:#F3EEE4;
@@ -428,3 +428,50 @@ html[data-theme="light"] .practice-capability{border-top-color:#173D32}
 [hidden]{display:none!important}
 @media(max-width:520px){.topbar-inner{gap:.5rem}.brand-name{font-size:.82rem}.brand-sub{font-size:.52rem}.site-controls{gap:.25rem}.control-button{padding:.45rem .5rem;font-size:.56rem}.floating-dock a{font-size:.58rem;letter-spacing:.02em}}
 @media(prefers-reduced-motion:reduce){.control-button{transition:none}}
+
+
+/* Compact desktop navigation and icon-only preference controls. */
+.desktop-nav{display:flex;align-items:center;gap:clamp(.7rem,1.6vw,1.5rem);margin-inline:auto}
+.desktop-nav a{
+ min-height:44px;display:inline-flex;align-items:center;color:#F3EEE4;
+ font:750 .66rem/1.2 var(--mono);letter-spacing:.07em;text-decoration:none;
+}
+.desktop-nav a:hover,.desktop-nav a:focus-visible{text-decoration:underline;text-underline-offset:.3em}
+.desktop-nav a:focus-visible{outline:2px solid #F0C477;outline-offset:3px;border-radius:.2rem}
+.site-controls[hidden]{display:none}
+.site-controls:not([hidden]){display:flex}
+.control-button{
+ width:44px;height:44px;min-width:44px;min-height:44px;
+ display:inline-flex;align-items:center;justify-content:center;padding:0;
+}
+.control-icon{
+ width:21px;height:21px;display:block;fill:none;stroke:currentColor;
+ stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;
+}
+.icon-sun{display:none}
+.icon-moon{display:block}
+@media(prefers-color-scheme:dark){
+ .icon-sun{display:block}
+ .icon-moon{display:none}
+}
+html[data-theme="light"] .icon-sun{display:none}
+html[data-theme="light"] .icon-moon{display:block}
+html[data-theme="dark"] .icon-sun{display:block}
+html[data-theme="dark"] .icon-moon{display:none}
+.floating-dock{display:none}
+@media(max-width:760px){
+ .desktop-nav{display:none}
+ .floating-dock{display:grid}
+}
+@media(max-width:520px){
+ .topbar-inner{gap:.35rem}
+ .brand-name{font-size:.78rem;letter-spacing:.11em}
+ .brand-sub{font-size:.48rem;letter-spacing:.015em}
+ .site-controls{gap:.2rem}
+ .control-button{width:44px;height:44px;min-width:44px;padding:0}
+ .control-icon{width:19px;height:19px}
+}
+@media(max-width:360px){
+ .brand-sub{display:none}
+ .brand-name{font-size:.76rem}
+}
