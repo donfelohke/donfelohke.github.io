@@ -2,11 +2,11 @@
    One-page, text-first publication. Native HTML/CSS; no runtime dependencies. */
 :root{
   color-scheme:light dark;
-  --canvas:#F3EEE4;--surface:#FFFDF8;--soft:#E9E1D3;--ink:#242923;--muted:#596252;
-  --forest:#173D32;--forest-deep:#102D25;--clay:#87402F;--ochre:#80540F;
+  --canvas:#F2EFEA;--surface:#FFFEFA;--soft:#E9E1D3;--ink:#111111;--muted:#596252;
+  --forest:#123B2D;--forest-deep:#033500;--clay:#87402F;--ochre:#80540F;--brand-ochre:#D4AF37;--brand-terracotta:#E2725B;
   --line:rgba(36,41,35,.18);--action:#173D32;--action-ink:#F3EEE4;--focus:#102D25;
   --price:#173D32;--footer:#111713;--footer-muted:#D4D0C7;
-  --glass-top:rgba(23,61,50,.80);--glass-dock:rgba(17,23,19,.82);--glass-border:rgba(255,255,255,.34);
+  --glass-top:rgba(18,59,45,.82);--glass-dock:rgba(17,17,17,.84);--glass-border:rgba(255,255,255,.34);--glass-blur:28px;--glass-saturation:180%;
   --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Consolas,monospace;
   --content:78rem;--gutter:clamp(1rem,4vw,2.7rem);--section:clamp(4.5rem,9vw,8rem);
@@ -15,10 +15,10 @@
 @media(prefers-color-scheme:dark){
  :root{
   --canvas:#050706;--surface:#151815;--soft:#0E120F;--ink:#F2EFEA;--muted:#C6C0B4;
-  --forest:#033500;--forest-deep:#022900;--clay:#E2725B;--ochre:#D4AF37;
+  --forest:#033500;--forest-deep:#022900;--clay:#E2725B;--ochre:#D4AF37;--brand-ochre:#D4AF37;--brand-terracotta:#E2725B;
   --line:rgba(242,239,234,.2);--action:#D4AF37;--action-ink:#151515;--focus:#F2C85D;
   --price:#E5C15A;--footer:#090C0A;--footer-muted:#D4D0C7;
-  --glass-top:rgba(3,53,0,.82);--glass-dock:rgba(9,12,10,.84);--glass-border:rgba(242,239,234,.34);
+  --glass-top:rgba(3,53,0,.86);--glass-dock:rgba(17,17,17,.88);--glass-border:rgba(242,239,234,.34);
  }
 }
 *{box-sizing:border-box}
@@ -39,7 +39,7 @@ a:focus-visible,label:focus-visible{outline:3px solid var(--focus);outline-offse
 #language-sw:checked~main .lang-sw,#language-sw:checked~footer .lang-sw{display:revert}
 #language-sw:checked~header .lang-sw,#language-sw:checked~.floating-dock .lang-sw,#language-sw:checked~.skip-link .lang-sw{display:inline-block}
 #language-sw:checked~.skip-link .lang-en{display:none!important}
-.topbar{position:fixed;z-index:50;top:.65rem;left:50%;width:min(calc(100% - 1.2rem),82rem);transform:translateX(-50%);border:1px solid var(--glass-border);border-radius:1.15rem;background-color:#173D32;background-image:linear-gradient(115deg,rgba(255,255,255,.10),transparent 38%,rgba(212,175,55,.10) 72%,transparent);background-size:220% 220%;animation:glass-drift 26s ease-in-out infinite alternate;color:#F3EEE4;box-shadow:0 12px 34px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.12)}
+.topbar{position:fixed;z-index:50;top:.65rem;left:50%;width:min(calc(100% - 1.2rem),82rem);transform:translateX(-50%);border:1px solid var(--glass-border);border-radius:1.15rem;background-color:#173D32;background-image:linear-gradient(115deg,rgba(255,255,255,.10),transparent 38%,rgba(212,175,55,.16) 72%,transparent);background-size:220% 220%;animation:glass-drift 32s ease-in-out infinite alternate;color:#F3EEE4;box-shadow:0 12px 34px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.12)}
 .topbar-inner{min-height:4rem;padding:.48rem clamp(.85rem,2.5vw,1.5rem);display:flex;align-items:center;justify-content:space-between;gap:1rem}
 .brand{display:flex;flex-direction:column;color:#F3EEE4;text-decoration:none;line-height:1.12}
 .brand-name{font:850 1.02rem/1.1 var(--sans);letter-spacing:.17em}
@@ -193,12 +193,12 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 .footer-bottom{display:flex;justify-content:space-between;gap:1rem;padding-top:1.3rem;color:var(--footer-muted);font-size:.7rem}
 .footer-bottom p{margin:0}
 .footer-bottom a{color:#F0C477}
-.floating-dock{position:fixed;z-index:60;left:50%;bottom:calc(.65rem + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(calc(100% - 1.2rem),29rem);min-height:4rem;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.2rem;padding:.35rem;border:1px solid var(--glass-border);border-radius:1.2rem;background-color:#111713;background-image:linear-gradient(115deg,rgba(226,114,91,.13),transparent 42%,rgba(212,175,55,.14) 76%,transparent);background-size:220% 220%;animation:glass-drift 30s ease-in-out infinite alternate;box-shadow:0 12px 36px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.10);color:#F2EFEA}
+.floating-dock{position:fixed;z-index:60;left:50%;bottom:calc(.65rem + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(calc(100% - 1.2rem),29rem);min-height:4rem;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.2rem;padding:.35rem;border:1px solid var(--glass-border);border-radius:1.2rem;background-color:#111713;background-image:linear-gradient(115deg,rgba(226,114,91,.17),transparent 42%,rgba(212,175,55,.14) 76%,transparent);background-size:220% 220%;animation:glass-drift 36s ease-in-out infinite alternate;box-shadow:0 12px 36px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.10);color:#F2EFEA}
 .floating-dock a{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;gap:.45rem;border-radius:.9rem;color:#F2EFEA;font:750 .72rem/1 var(--mono);letter-spacing:.045em;text-decoration:none}
 .floating-dock a span{color:#E2725B;font-size:.56rem}
 .floating-dock a:hover,.floating-dock a:focus-visible{background:rgba(255,255,255,.13)}
 @media(prefers-color-scheme:dark){.topbar{background-color:#033500}.floating-dock{background-color:#090C0A}}
-@supports(backdrop-filter:blur(20px)){.topbar{background-color:var(--glass-top)}.floating-dock{background-color:var(--glass-dock)}.topbar,.floating-dock{backdrop-filter:blur(28px) saturate(180%);-webkit-backdrop-filter:blur(28px) saturate(180%)}}
+@supports(backdrop-filter:blur(20px)){.topbar{background-color:var(--glass-top)}.floating-dock{background-color:var(--glass-dock)}.topbar,.floating-dock{backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturation));-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturation))}}
 @keyframes glass-drift{from{background-position:0% 50%}to{background-position:100% 50%}}
 @media(prefers-reduced-transparency:reduce){.topbar,.floating-dock{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;animation:none;background-image:none}.topbar{background:#173D32}.floating-dock{background:#111713}}
 @media(prefers-color-scheme:dark) and (prefers-reduced-transparency:reduce){.topbar,.floating-dock{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;animation:none;background-image:none}.topbar{background:#033500}.floating-dock{background:#090C0A}}
