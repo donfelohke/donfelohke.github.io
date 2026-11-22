@@ -4,30 +4,40 @@
 
 ## Public navigation
 
-The website is one page at the root URL. Its four primary anchors are:
+The website is one page at the root URL. Its four primary destinations are:
 
-- LOCS → `#locs`
-- DIGITAL → `#digital`
-- ABOUT → `#about`
-- CONNECT → `#connect`
+- LOCS → `#locs` (Kiswahili: `#locs-sw`)
+- DIGITAL → `#digital` (Kiswahili: `#kidijitali`)
+- ABOUT → `#about` (Kiswahili: `#kuhusu`)
+- CONNECT → `#connect` (Kiswahili: `#wasiliana`)
 
-The floating bottom dock contains the four anchors. The compact top bar contains the Don Feloh identity and two independent controls: English / Kiswahili and light / dark appearance.
+Desktop uses four visible text links in the compact top bar. Mobile uses the same four destinations in a floating bottom dock. There is no hamburger menu or duplicate route system.
+
+## Header controls
+
+The compact header contains the Don Feloh identity and two independent icon-only controls:
+
+- Languages icon: English ↔ Kiswahili.
+- Sun / Moon icon: light ↔ dark appearance.
+
+Both controls use native buttons, accessible names, pressed states, visible keyboard focus and 44px touch targets. The theme follows the system preference until the visitor explicitly selects a theme. No selection is stored or transmitted.
 
 ## Information hierarchy
 
-The hero balances NAKEBUSEN's approved headline and loc-care entry point with Don Feloh's human authorship and the wider body of work. NAKEBUSEN / ROOT is the only live commercial practice and exposes LOCS and DIGITAL service paths. WARENA / CAPABILITY is distinct technical capability, not a sub-brand or separate checkout. IKAI / MIRROR is research / WIP. GENJE / EXPRESSION is creative practice. FELOH Corpus is shared knowledge governance.
+The hero follows the canonical webcopy: approved headline and NAKEBUSEN loc-care entry point first, then starting prices and direct enquiry. Don Feloh's human authorship remains visible in the same first-screen hierarchy. NAKEBUSEN / ROOT is the only live commercial practice and exposes LOCS and DIGITAL service paths. WARENA / CAPABILITY is distinct technical capability, not a sub-brand or separate checkout. IKAI / MIRROR is research / WIP. GENJE / EXPRESSION is creative practice. FELOH Corpus is shared knowledge governance.
 
-## Language and theme
+## Language and progressive enhancement
 
-- English is the default document language.
-- English / Kiswahili is a minimal JavaScript toggle; both language versions are authored in the page.
-- Light / dark appearance is a separate minimal JavaScript toggle.
-- Without JavaScript, English remains readable and the CSS system colour preference is respected.
-- No analytics, tracking, framework, remote font, CDN, scroll observer or third-party runtime.
+- English is the default document language and no-JavaScript fallback.
+- English and Kiswahili content are authored in the same page.
+- The language control changes the visible language, root `lang`, navigation labels and fragment destinations together.
+- Preference controls are hidden unless the small inline controller successfully initializes.
+- Without JavaScript, English remains readable and CSS respects the system colour preference.
+- No analytics, tracking, framework, remote fonts, CDN, scroll observer or third-party runtime.
 
 ## Accessibility
 
-Semantic landmarks, one page-level H1 per active language view, visible focus, 44px-class controls, safe-area spacing, native anchor navigation, reduced-motion support and reduced-transparency fallbacks. Controls have accessible labels and pressed states.
+Semantic landmarks, one H1 per mutually exclusive language view, visible focus, 44px-class controls, safe-area spacing, native anchor navigation, reduced-motion support and reduced-transparency fallbacks. Icon artwork is decorative; button labels are available to assistive technology.
 
 ## Commercial boundary
 
