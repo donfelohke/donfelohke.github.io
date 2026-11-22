@@ -100,8 +100,10 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(0, self.parser.scripts)
 
     def test_service_prices_are_published_as_starting_prices(self):
+        webcopy = (ROOT / "docs/WEBCOPY.md").read_text(encoding="utf-8")
         for amount in ("KES 700+", "KES 1,500+", "KES 3,500+"):
             self.assertIn(amount, HTML)
+            self.assertIn(amount, webcopy)
         self.assertIn("Published prices are indicative", HTML)
         self.assertIn("the final amount is agreed before work begins", HTML)
 
@@ -122,6 +124,9 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("MAWAZO NA TAFAKARI", HTML)
         self.assertIn("Misingi ya", HTML)
         self.assertNotIn("Vishawishi", HTML)
+        self.assertNotIn("Worldview", HTML)
+        self.assertNotIn("Opinion", HTML)
+        self.assertNotIn("Influences", HTML)
         self.assertNotIn("Wash, retouch", HTML)
         self.assertNotIn("Wash, crocheted retie", HTML)
         self.assertNotIn("Kuosha, kukaza upya kwa crochet", HTML)
