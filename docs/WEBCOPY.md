@@ -31,13 +31,13 @@ NAKEBUSEN began in Lodwar, Turkana County, Kenya. Its loc-care practice continue
 
 | Service | Public price |
 |---|---:|
-| Retouch & Styling | KES 700 |
-| Sisterlocs Retie | KES 1,500 |
-| Artificial Locs Installation | KES 3,500 |
+| Retouch & Styling | KES 700+ |
+| Sisterlocs Retie | KES 1,500+ |
+| Artificial Locs Installation | KES 3,500+ |
 
 Published prices are indicative. Final cost depends on service scope, loc condition, materials and work required; the final amount is agreed before work begins. No braiding or shaving services are advertised.
 
-**Service descriptions:** Retouch & Styling refreshes and maintains existing locs. Sisterlocs Retie is retightening for established Sisterlocs. Artificial Locs Installation is scoped around the preferred style, materials and requirements. Do not imply washing, crochet or other unapproved inclusions.
+**Service descriptions:** Retouch & Styling refreshes and maintains existing locs. In Kiswahili, use “Matengenezo na upangaji wa loc”; avoid the literal “Onyesha upya”, which does not mean refreshing hair. Sisterlocs Retie is retightening for established Sisterlocs. Artificial Locs Installation is scoped around the preferred style, materials and requirements. Do not imply washing, crochet or other unapproved inclusions.
 
 **Enquiry boundary:** An enquiry does not confirm a booking. Availability and final terms are agreed directly.
 
