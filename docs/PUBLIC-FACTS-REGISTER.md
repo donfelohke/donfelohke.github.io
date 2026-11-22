@@ -55,6 +55,9 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-032 | M-PESA Buy Goods Till: 3511456; account / merchant name: FELIX LWOVA | F1 | Published payment details restored from the previously published verified record on 10 November 2026; changes require re-verification of merchant authority and payment purpose |
 | PF-033 | Payment is due only after the service and total amount are agreed directly with NAKEBUSEN | F1 | Customer must confirm the displayed merchant name and amount before entering a PIN; never request or share a PIN or one-time code |
 
+
+| PF-034 | NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret | F1 | Founder-supplied business-history fact. Keep distinct from founder biography, birthplace and ancestry. |
+
 ## Publication controls
 
 1. Prices, contact details and published M-PESA payment details must match this register and SERVICE-CATALOG. Re-verify the Till/merchant pairing before any change or paid campaign.

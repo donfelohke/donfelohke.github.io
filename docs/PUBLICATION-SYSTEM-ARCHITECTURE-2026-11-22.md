@@ -1,7 +1,7 @@
 # Public Website — Single-Page Architecture
 
 **Date:** 22 November 2026  
-**Status:** Approved for implementation · feature branch review  
+**Status:** Approved architecture · implementation merged to main; correction release under review  
 **Public host:** https://donfelohke.github.io/  
 **Repository:** donfelohke/donfelohke.github.io
 
@@ -26,8 +26,8 @@ NAKEBUSEN is the only live commercial practice. LOCS and DIGITAL are customer-fa
 
 | Service | Public price |
 |---|---:|
-| Retouch & Styling | KES 700+ |
-| Sisterlocs Retie | KES 1,500+ |
+| Retouch & Styling | KES 700 (indicative) |
+| Sisterlocs Retie | KES 1,500 (indicative) |
 | Artificial Locs Installation | KES 3,500 |
 
 Location: Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
@@ -52,9 +52,9 @@ Gallery remains approval-controlled. No unapproved images, recordings or third-p
 
 ## 4. Language, theme and implementation
 
-- One hand-authored `index.html`, existing CSS and a small inline JavaScript controller.
-- JavaScript is limited to the independent English / Kiswahili and light / dark toggles.
-- English is the no-script default. CSS system colour preference is respected until a visitor explicitly changes the theme.
+- One hand-authored `index.html` and existing CSS.
+- English / Kiswahili selection uses native radio controls and CSS; the document remains static with no JavaScript runtime.
+- English is the default. CSS system colour preference controls the theme.
 - Native anchors for page navigation. No framework, package manager, build system, analytics, trackers, remote fonts, CDNs or third-party UI runtime.
 - Semantic HTML, keyboard focus, readable contrast, responsive layout, reduced-motion and reduced-transparency support.
 - No external imagery or unapproved Gallery assets.
@@ -78,3 +78,7 @@ The former `/nakebusen/`, `/technical/` and `/creative/` page files are removed 
 Canonical refrain: FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
 
 Commercial boundary: ONLY NAKEBUSEN TRANSACTS.
+
+## Correction-release factual controls
+
+NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret. This business-history fact must not be attributed to the founder as personal roots, birthplace or ancestry. Public prices are indicative and displayed without plus signs. Service descriptions must not promise washing, crochet or other unapproved inclusions. Service enquiry links must identify the selected service and must not imply a confirmed booking.

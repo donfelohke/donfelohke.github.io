@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Dependency-free structural and publication checks for the Don Feloh site."""
+"""Dependency-free structural, factual and publication checks for the Don Feloh site."""
 from html.parser import HTMLParser
 from pathlib import Path
 import re
 import unittest
+from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 HTML = (ROOT / "index.html").read_text(encoding="utf-8")
@@ -51,8 +52,8 @@ class PublicationTests(unittest.TestCase):
     def test_one_page_and_semantic_identity(self):
         self.assertEqual(1, len(list(ROOT.glob("*.html"))))
         self.assertIn('<html lang="en">', HTML)
-        self.assertIn("<main id=\"main\">", HTML)
-        self.assertEqual(2, self.parser.h1)  # one H1 in each mutually exclusive language view
+        self.assertIn('<main id="main">', HTML)
+        self.assertEqual(2, self.parser.h1)
         self.assertIn("NAKEBUSEN Locs ° Powered by WARENA", HTML)
         self.assertIn("Your Beauty", HTML)
         self.assertIn("Your Way.", HTML)
@@ -91,18 +92,39 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("<script", HTML.lower())
         self.assertEqual(0, self.parser.scripts)
 
-    def test_services_and_booking_are_source_aligned(self):
-        for phrase in (
-            "Retouch &amp; Styling", "KES 700", "Sisterlocs Retie",
-            "KES 1,500", "Artificial Locs Installation", "KES 3,500",
-            "An enquiry does not confirm a booking.",
-            "Availability and final terms are agreed directly.",
-            "does not offer braiding or shaving",
-            "does not cut clients’ natural hair",
-        ):
-            self.assertIn(phrase, HTML)
-        self.assertNotIn("Book now", HTML)
-        self.assertNotIn("Home visits available", HTML)
+    def test_service_prices_are_exact_and_plus_free(self):
+        for amount in ("KES 700", "KES 1,500", "KES 3,500"):
+            self.assertIn(amount, HTML)
+        self.assertNotRegex(HTML, r"KES\s*(?:700|1,500|3,500)\s*\+")
+        self.assertNotIn("Prices marked +", HTML)
+        self.assertIn("Published prices are indicative", HTML)
+        self.assertIn("the final amount is agreed before work begins", HTML)
+
+    def test_biography_and_business_history_are_separate(self):
+        self.assertNotIn("My roots are in Kanamkemer", HTML)
+        self.assertNotIn("Mizizi yangu ni Kanamkemer", HTML)
+        self.assertNotIn("My roots are in Lodwar", HTML)
+        self.assertIn("NAKEBUSEN began in Lodwar, Turkana County, Kenya.", HTML)
+        self.assertIn("NAKEBUSEN ilianza Lodwar", HTML)
+        self.assertIn("I am Kenyan", HTML)
+        self.assertIn("Mimi ni Mkenya", HTML)
+
+    def test_service_scope_has_no_unapproved_inclusions(self):
+        self.assertIn("Refresh and maintain existing locs", HTML)
+        self.assertIn("Retightening for established Sisterlocs", HTML)
+        self.assertNotIn("Wash, retouch", HTML)
+        self.assertNotIn("Wash, crocheted retie", HTML)
+        self.assertNotIn("Kuosha, kukaza upya kwa crochet", HTML)
+
+    def test_service_enquiry_links_are_distinct(self):
+        hrefs = re.findall(r'<a class="service-link" href="([^"]+)"', HTML)
+        self.assertEqual(6, len(hrefs))
+        messages = [unquote(h.split("text=", 1)[1]) for h in hrefs]
+        self.assertEqual(6, len(set(messages)))
+        self.assertTrue(any("Retouch & Styling" in m for m in messages))
+        self.assertTrue(any("Sisterlocs Retie" in m for m in messages))
+        self.assertTrue(any("Artificial Locs Installation" in m for m in messages))
+        self.assertTrue(all(h.startswith("https://wa.me/254719635415?text=") for h in hrefs))
 
     def test_business_payment_and_support_boundaries(self):
         for phrase in (
@@ -122,6 +144,12 @@ class PublicationTests(unittest.TestCase):
         ):
             self.assertIn(phrase, HTML)
 
+    def test_publication_section_classifies_sources(self):
+        self.assertIn("SELECTED RESEARCH &amp; SOURCE RECORDS", HTML)
+        self.assertIn("RESEARCH DOSSIER", HTML)
+        self.assertIn("SOURCE REPOSITORY", HTML)
+        self.assertIn("CREATIVE PRACTICE REPOSITORY", HTML)
+
     def test_accessibility_and_responsive_design(self):
         self.assertIn('class="skip-link"', HTML)
         self.assertIn('aria-label="Primary page navigation"', HTML)
@@ -140,6 +168,18 @@ class PublicationTests(unittest.TestCase):
     def test_sitemap_is_one_page(self):
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
         self.assertEqual(1, sitemap.count("<loc>"))
+
+    def test_publication_register_table_is_well_formed(self):
+        register = (ROOT / "docs/PUBLICATION-REGISTER.md").read_text(encoding="utf-8")
+        self.assertNotIn("|-------------|n|", register)
+        self.assertIn("Research dossier", register)
+        self.assertIn("Creative-practice source repository", register)
+
+    def test_public_facts_register_records_business_origin_separately(self):
+        register = (ROOT / "docs/PUBLIC-FACTS-REGISTER.md").read_text(encoding="utf-8")
+        self.assertIn("| PF-034 | NAKEBUSEN began in Lodwar", register)
+        self.assertLess(register.index("| PF-034 |"), register.index("## Publication controls"))
+        self.assertIn("Keep distinct from founder biography", register)
 
 
 if __name__ == "__main__":

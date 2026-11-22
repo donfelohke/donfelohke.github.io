@@ -27,11 +27,11 @@ The fixed mobile dock has exactly three destinations: LOCS, DIGITAL and CONNECT.
 
 | Service | Public price |
 |---|---:|
-| Retouch & Styling | KES 700+ |
-| Sisterlocs Retie | KES 1,500+ |
+| Retouch & Styling | KES 700 |
+| Sisterlocs Retie | KES 1,500 |
 | Artificial Locs Installation | KES 3,500 |
 
-Prices marked + are starting prices. Final scope and price are agreed directly. No braiding or shaving is offered. The founder does not cut clients' natural hair. An enquiry does not confirm a booking.
+Published prices are indicative. Final scope and price depend on loc condition, materials and work required and are agreed directly before work begins. No braiding or shaving is offered. The founder does not cut clients' natural hair. An enquiry does not confirm a booking.
 
 Location: Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
 
@@ -68,3 +68,5 @@ Source checks do not replace manual browser, keyboard, screen-reader and live Pa
 - https://github.com/donfelohke/Gallery
 
 See [docs/NAV-STRUCTURE.md](docs/NAV-STRUCTURE.md), [docs/PUBLIC-FACTS-REGISTER.md](docs/PUBLIC-FACTS-REGISTER.md), [docs/SERVICE-CATALOG.md](docs/SERVICE-CATALOG.md) and [docs/CONTENT-GOVERNANCE.md](docs/CONTENT-GOVERNANCE.md) for source authority and publication controls.
+
+NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret. This is the business's history, not a claim about the founder's personal roots.

@@ -12,15 +12,15 @@
 **WhatsApp:** https://wa.me/254719635415  
 **Secondary contact:** +254 719 635 415
 
-### Starting prices
+### Published indicative prices
 
 | Service | Starting price (KES) | Scope note |
 |---|---:|---|
-| Retouch & Styling | **700+** | Final scope depends on loc condition and work required |
-| Sisterlocs Retie | **1,500+** | Retightening for established Sisterlocs; confirm suitability and requirements before work |
-| Artificial Locs Installation | **3,500** | Final scope depends on preferred style, materials and installation requirements |
+| Retouch & Styling | **700** | Refresh and maintain existing locs; final scope depends on condition and work required |
+| Sisterlocs Retie | **1,500** | Retightening for established Sisterlocs; confirm suitability and requirements before work |
+| Artificial Locs Installation | **3,500** | Discuss preferred style, materials and installation requirements before work |
 
-Prices are starting points, not fixed quotes. Confirm the actual scope and final price directly before work begins.
+Published prices are indicative, not guaranteed final quotes. Final cost depends on service scope, loc condition, materials and work required. Agree the final amount directly before work begins.
 
 ### Service boundaries
 
@@ -78,3 +78,7 @@ Do not invent a street address, business hours or map pin.
 ## 5. Change control
 
 Any price or service-scope change must update this file, PUBLIC-FACTS-REGISTER.md, WEBCOPY.md and index.html in one reviewed change set. Re-verify public ads and profile copy separately.
+
+## NAKEBUSEN business history
+
+NAKEBUSEN began in Lodwar, Turkana County, Kenya. Its loc-care practice continues in Eldoret. This founder-supplied business-history fact is not a statement about the founder's birthplace, ancestry or personal roots.
