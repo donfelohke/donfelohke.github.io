@@ -68,3 +68,9 @@ Preserve the existing GPL-3.0 license. Do not invent prices, testimonials, crede
 - https://github.com/donfelohke/Genje
 - https://github.com/donfelohke/Ikai
 - https://github.com/donfelohke/feloh-corpus
+
+
+
+## BLACK HINTERLAND — research publication boundary
+
+The [BLACK HINTERLAND — BEFORE AFRICA master dossier](https://github.com/donfelohke/feloh-corpus/blob/main/docs/BLACK-HINTERLAND-BEFORE-AFRICA-MASTER-DOSSIER-2026-11-22.md) is maintained in FELOH Corpus. This website repository records only the publication boundary in [docs/BLACK-HINTERLAND-PUBLICATION-BOUNDARY-2026-11-22.md](docs/BLACK-HINTERLAND-PUBLICATION-BOUNDARY-2026-11-22.md). No public page, commercial facts, site navigation, language/theme controls or deployed content is changed by this documentation pointer.
