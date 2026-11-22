@@ -175,6 +175,12 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("Research dossier", register)
         self.assertIn("Creative-practice source repository", register)
 
+    def test_public_facts_register_records_business_origin_separately(self):
+        register = (ROOT / "docs/PUBLIC-FACTS-REGISTER.md").read_text(encoding="utf-8")
+        self.assertIn("| PF-034 | NAKEBUSEN began in Lodwar", register)
+        self.assertLess(register.index("| PF-034 |"), register.index("## Publication controls"))
+        self.assertIn("Keep distinct from founder biography", register)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
