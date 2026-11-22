@@ -128,6 +128,10 @@ The Till and account / merchant name are operational payment details: preserve t
 **HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES**  
 **© Felix Lwova · Don Feloh** — retain current public attribution pending the copyright-holder evidence control in PUBLIC-FACTS-REGISTER.md.
 
+## Language coverage
+
+The public page defaults to English and provides Kiswahili through the native language selector. Both language states cover the hero and business history, service names and descriptions, booking disclosures, DIGITAL capability labels and descriptions, author biography and role, THOUGHT & REFLECTION, the four practice domains, IKAI and GENJE research/creative copy, FELOH Corpus, selected source records, contact links, footer payment safeguards and voluntary Support Us. The skip link, primary dock and accessible language-control labels are also bilingual. Canonical project names, technical terms, service prices, contact details and the M-PESA menu label “Buy Goods” remain unchanged where translation would reduce precision or alter an official name.
+
 ## Editorial rules
 
 NAKEBUSEN is the only live commercial practice. LOCS and DIGITAL are its two customer service paths. WARENA is distinct capability. IKAI is research / WIP. GENJE is creative practice. FELOH Corpus is shared knowledge governance. Don Feloh is the human author.

@@ -20,7 +20,7 @@ The homepage is a one-page public service-discovery interface. It is not an ecom
 - No JavaScript, framework, generator, package manager or build step.
 - No external fonts, scripts, analytics, tracking pixels or third-party UI runtime.
 - Theme follows `prefers-color-scheme`; no stored theme state or manual toggle.
-- English is the default document language. Kiswahili is available through native radio inputs with associated labels; CSS switches the `.lang-en` and `.lang-sw` blocks in the main content and footer. No JavaScript runtime or persistent language preference is claimed.
+- English is the default document language. Kiswahili is available through native radio inputs with bilingual accessible labels; CSS switches `.lang-en` and `.lang-sw` blocks across the skip link, header, main content, footer and floating dock. No JavaScript runtime or persistent language preference is claimed.
 - Native anchors and direct telephone, email and WhatsApp links provide interaction.
 - No customer data, payment credentials, PINs or one-time codes are collected.
 
