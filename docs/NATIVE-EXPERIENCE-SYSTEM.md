@@ -107,8 +107,8 @@ Automated static checks do not establish screen-reader, browser, device or WCAG 
 ## 8. Content and factual invariants
 
 Preserve:
-- Retouch & Styling — KES 700.
-- Sisterlocs Retie — KES 1,500.
+- Retouch & Styling — KES 700+.
+- Sisterlocs Retie — KES 1,500+.
 - Artificial Locs Installation — KES 3,500.
 - Loc care · Eldoret Town / Karibu Mdosi · Kenya.
 - No braiding or shaving claims.
