@@ -189,8 +189,8 @@ class PublicationTests(unittest.TestCase):
 
     def test_glass_terminal_visual_system(self):
         self.assertIn("blur(28px) saturate(180%)", CSS)
-        self.assertIn("--glass-top:rgba(23,61,50,.80)", CSS)
-        self.assertIn("--glass-dock:rgba(17,23,19,.82)", CSS)
+        self.assertIn("--glass-top:rgba(18,59,45,.82)", CSS)
+        self.assertIn("--glass-dock:rgba(17,17,17,.84)", CSS)
         self.assertIn("@keyframes glass-drift", CSS)
         self.assertIn("animation:glass-drift", CSS)
         self.assertIn("Cormorant Garamond", CSS)
