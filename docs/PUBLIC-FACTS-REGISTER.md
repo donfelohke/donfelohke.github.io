@@ -33,7 +33,7 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-010 | GENJE is not a separate commercial division | F2 | Canonical |
 | PF-011 | WARENA is the distinct CAPABILITY domain; it may provide technical capability for NAKEBUSEN digital-service engagements | F2 | Not a NAKEBUSEN subdomain, parent enterprise or separate checkout; all commercial transactions remain through NAKEBUSEN |
 | PF-012 | IKAI is research, not a released product | F2 | Label research / WIP |
-| PF-013 | Current loc-care locality: Near King's Square on Kisumu Road · Eldoret Town · Uasin Gishu · Kenya | F1 | Founder-supplied location description; pair with the supplied Plus Code and map pin for directions. Do not invent a street address or coordinates |
+| PF-013 | Current loc-care locality: Beside King's Square on Kisumu Road · Eldoret Town · Uasin Gishu · Kenya | F1 | Founder-supplied location description; pair with the supplied Plus Code and map pin for directions. Do not invent a street address or coordinates |
 | PF-014 | Phone: +254 719 635 415 | F1 | Verify before campaigns |
 | PF-015 | WhatsApp: https://wa.me/254719635415 | F1 | Enquiry channel |
 | PF-016 | Email: mela9ine@proton.me | F1 | Verify before campaigns |
