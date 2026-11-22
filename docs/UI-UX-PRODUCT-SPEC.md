@@ -47,7 +47,7 @@ Needs to understand the relationship between NAKEBUSEN, WARENA and the founder, 
 Retain the existing lightweight single-page architecture and section anchors:
 
 1. **Top / Hero** — NAKEBUSEN identity, value proposition, location and primary enquiry route.
-2. **LOCS · CROWN** — service scope, starting prices and contextual enquiry actions.
+2. **LOCS · CROWN** — service scope, published prices and contextual enquiry actions.
 3. **DIGITAL · WARENA** — practical technical service categories, assessment-to-quote workflow and GitHub bridge.
 4. **Connect** — founder identity, direct contact, location and footer information.
 
@@ -113,11 +113,11 @@ Do not put repository lists, extended founder biography or brand philosophy ahea
 
 Keep the three approved service entries and published prices visible and scannable:
 
-- Retouch & Styling — From KES 700
-- Sisterlocs Retie — From KES 1,500
+- Retouch & Styling — KES 700
+- Sisterlocs Retie — KES 1,500
 - Artificial Locs Installation — KES 3,500
 
-Use “From” for Retouch & Styling and Sisterlocs Retie starting prices; keep Artificial Locs Installation at KES 3,500 without a plus sign. Explain that Retouch & Styling and Sisterlocs Retie may vary with loc condition and work required; Artificial Locs Installation is published at KES 3,500. Confirm the agreed scope and amount directly. No braiding or shaving.
+Use “From” for Retouch & Styling and Sisterlocs Retie published prices; keep Artificial Locs Installation at KES 3,500 without a plus sign. Explain that Retouch & Styling and Sisterlocs Retie may vary with loc condition and work required; Artificial Locs Installation is published at KES 3,500. Confirm the agreed scope and amount directly. No braiding or shaving.
 
 ### DIGITAL · WARENA
 
@@ -201,7 +201,7 @@ Target WCAG 2.2 AA.
 
 ## 10. Trust, privacy and transaction safeguards
 
-- Publish only verified service facts and approved starting prices.
+- Publish only verified service facts and approved published prices.
 - Do not invent testimonials, credentials, capability claims, availability or payment details.
 - Make clear that an enquiry does not confirm a booking.
 - Do not imply a web interaction completes a booking or payment.
