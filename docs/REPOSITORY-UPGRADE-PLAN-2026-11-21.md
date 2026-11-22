@@ -41,3 +41,10 @@
 ## Release evidence record
 
 Use the [website release evidence matrix](SITE-RELEASE-EVIDENCE-MATRIX-2026-11-21.md) to record source review, automated checks, manual accessibility/browser review, Pages deployment and live smoke testing separately. It is a checklist template; it does not authorize deployment or claim a release.
+
+
+## Execution addendum — 2026-11-22
+
+Direct-to-main implementation was authorised and applied. The site remains a single static HTML/CSS page: canonical forest/ivory/charcoal/ochre/terracotta tokens, immersive navigation glass, hybrid opaque editorial/pricing surfaces and slower ambient motion were reconciled. The public starting prices now match NAKEBUSEN's source catalogue: Retouch & Styling KES 700+, Sisterlocs Retie KES 1,500+, Artificial Locs Installation KES 3,500. The browser theme colour and dependency-free assertions were updated. Active design, accessibility, publication and service-fact documents were reconciled.
+
+**Verification:** source validation passed and the GitHub Pages validate/build/deploy workflow completed successfully on 2026-11-22. This is deployment evidence, not a manual browser, keyboard, screen-reader or device QA report; those reviews remain outstanding.
