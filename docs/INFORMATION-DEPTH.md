@@ -28,6 +28,6 @@ Depth standard: https://github.com/donfelohke/feloh-corpus/blob/main/docs/INFORM
 ## Live public facts
 
 - Hero: Your beauty. Your way.  
-- Prices from From KES 700 / 1,500 / 3,500  
+- Prices KES 700 / 1,500 / 3,500  
 - ONLY NAKEBUSEN TRANSACTS  
 - English default · Kiswahili toggle  
