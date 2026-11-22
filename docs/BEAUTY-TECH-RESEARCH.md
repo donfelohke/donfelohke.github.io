@@ -8,7 +8,7 @@
 
 Build a beauty business enabled by technology—not a technology brand disguised as a salon. NAKEBUSEN is the customer-facing brand with two clear paths: **Locs** and **Digital**. WARENA powers the technical practice. Felix Lwova / Don Feloh is the human founder, author and point of contact. GENJE and IKAI remain supporting creative/research context rather than competing primary calls to action.
 
-The website's job is to help a visitor understand the offer, trust the work, find starting prices and make the correct enquiry quickly on a phone.
+The website's job is to help a visitor understand the offer, trust the work, find published prices and make the correct enquiry quickly on a phone.
 
 ## 1. Brand and information architecture
 
@@ -32,17 +32,17 @@ Do not place a long founder biography, ecosystem manifesto, or research project 
 
 ## 2. Beauty offer and booking experience
 
-### Verified starting-price catalogue
+### Verified published-price catalogue
 | Service | Starting price |
 | --- | ---: |
-| Retouch & Styling | From KES 700 |
-| Sisterlocs Retie | From KES 1,500 |
+| Retouch & Styling | KES 700 |
+| Sisterlocs Retie | KES 1,500 |
 | Artificial Locs Install | KES 3,500 |
 
 Prices are starting points. Confirm scope, loc condition, materials, final quote and appointment timing directly. Do not advertise braiding, home visits, same-day availability, fixed completion times or free extras unless separately verified and approved.
 
 ### Booking journey
-1. Visitor sees the service, starting price and service area.
+1. Visitor sees the service, published price and service area.
 2. Visitor taps a WhatsApp link with a clear prefilled enquiry.
 3. NAKEBUSEN responds and confirms suitability, availability, final quote and appointment details.
 4. Appointment is treated as confirmed only after direct confirmation.
@@ -88,7 +88,7 @@ For each technical project, agree the problem, environment, feasibility, scope, 
 ### Copy direction
 **Primary line:** “Your beauty. Your way.”  
 **Supporting line:** “Loc care. Practical technology.”  
-**Locs:** “Loc care in Eldoret Town / Karibu Mdosi. Retouching, styling, Sisterlocs reties and artificial loc installation, with clear starting prices.”  
+**Locs:** “Loc care in Eldoret Town / Karibu Mdosi. Retouching, styling, Sisterlocs reties and artificial loc installation, with clear published prices.”  
 **Digital:** “Practical GNU/Linux, computer systems, networking and systems engineering for people, businesses and institutions. Work is scoped and confirmed case by case.”  
 **Booking boundary:** “Availability, suitability and appointment details are confirmed directly. An enquiry is not a confirmed booking.”
 
@@ -99,7 +99,7 @@ English is the default on first visit. Kiswahili is available through a persiste
 ### P0 — Fix the public experience
 - English-first content even before JavaScript runs.
 - Clear Locs / Digital / About navigation.
-- Consistent service names and starting prices.
+- Consistent service names and published prices.
 - Remove unsupported home-visit and availability claims.
 - Test WhatsApp links, theme switch, language switch, anchors, metadata and small-screen layout.
 
