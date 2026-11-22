@@ -83,9 +83,9 @@ Navigation should remain short and descriptive. Each page must answer: What is o
 ## 7. Current service catalogue and enquiry process
 
 The existing README records these starting prices, subject to confirmation before release:
-- Retouch & Styling — from KES 700.
-- Sisterlocs Retie — from KES 1,500.
-- Artificial Locs Installation — from KES 3,500.
+- Retouch & Styling — KES 700.
+- Sisterlocs Retie — KES 1,500.
+- Artificial Locs Installation — KES 3,500.
 
 Location phrase: Eldoret Town / Karibu Mdosi. Contact: 0719 635 415. The public site routes enquiries; it does not automatically confirm bookings or process payments. No braiding service should be advertised unless explicitly approved later.
 
