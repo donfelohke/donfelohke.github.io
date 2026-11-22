@@ -36,7 +36,7 @@ The fixed mobile dock has exactly three destinations: LOCS, DIGITAL and CONNECT.
 
 Published prices are indicative. Final scope and price depend on loc condition, materials and work required and are agreed directly before work begins. No braiding or shaving is offered. The founder does not cut clients' natural hair. An enquiry does not confirm a booking.
 
-Location: Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
+Location: Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya. Plus Code: **F743+R35, Eldoret, Kenya** · [Open NAKEBUSEN in Google Maps](https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6). From Eldoret CBD, use the [driving route](https://www.google.com/maps/dir/?api=1&origin=Eldoret%20CBD%2C%20Eldoret%2C%20Kenya&destination=F743%2BR35%2C%20Eldoret%2C%20Kenya&travelmode=driving) or [walking route](https://www.google.com/maps/dir/?api=1&origin=Eldoret%20CBD%2C%20Eldoret%2C%20Kenya&destination=F743%2BR35%2C%20Eldoret%2C%20Kenya&travelmode=walking). For matatu travel, confirm the destination area with the conductor; do not rely on “Malel Stage” as a verified stop. **Loc-care home calls** may be arranged within the wider Eldoret Town area, subject to confirmation of exact location, suitability, availability and travel arrangements.
 
 The footer retains manual M-PESA Buy Goods information for agreed service payments: Till 3511456; account / merchant name FELIX LWOVA. Confirm the displayed merchant and agreed amount before entering a PIN. Never share a PIN or one-time code. No API, STK push, automated verification, checkout or payment-success state is implemented. Voluntary Support Us is separate from service payments.
 
