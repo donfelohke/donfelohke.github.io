@@ -101,9 +101,12 @@ class PublicationTests(unittest.TestCase):
 
     def test_service_prices_are_published_as_starting_prices(self):
         webcopy = (ROOT / "docs/WEBCOPY.md").read_text(encoding="utf-8")
-        for amount in ("KES 700+", "KES 1,500+", "KES 3,500+"):
+        for amount in ("KES 700", "KES 1,500", "KES 3,500"):
             self.assertIn(amount, HTML)
             self.assertIn(amount, webcopy)
+        self.assertNotIn("KES 700+", HTML + webcopy)
+        self.assertNotIn("KES 1,500+", HTML + webcopy)
+        self.assertNotIn("KES 3,500+", HTML + webcopy)
         self.assertIn("Published prices are indicative", HTML)
         self.assertIn("the final amount is agreed before work begins", HTML)
 
@@ -181,7 +184,7 @@ class PublicationTests(unittest.TestCase):
 
     def test_accessibility_and_responsive_design(self):
         self.assertIn('class="skip-link"', HTML)
-        self.assertIn('aria-label="Primary page navigation"', HTML)
+        self.assertIn('aria-label="Primary navigation / Urambazaji mkuu"', HTML)
         self.assertIn("min-height:44px", CSS)
         self.assertIn(":focus-visible", CSS)
         self.assertIn("@media(prefers-reduced-motion:reduce)", CSS)
