@@ -52,7 +52,7 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(1, len(list(ROOT.glob("*.html"))))
         self.assertIn('<html lang="en">', HTML)
         self.assertIn("<main id=\"main\">", HTML)
-        self.assertEqual(1, self.parser.h1)
+        self.assertEqual(2, self.parser.h1)  # one H1 in each mutually exclusive language view
         self.assertIn("NAKEBUSEN Locs ° Powered by WARENA", HTML)
         self.assertIn("Your Beauty", HTML)
         self.assertIn("Your Way.", HTML)
