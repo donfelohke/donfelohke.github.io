@@ -262,8 +262,8 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
   overflow:hidden;
   padding-block:clamp(10.5rem,17vw,14rem) clamp(5.5rem,10vw,8.5rem);
   background:
-    radial-gradient(ellipse at 82% 18%,rgba(198,154,67,.19),transparent 34%),
-    radial-gradient(ellipse at 12% 88%,rgba(185,107,75,.16),transparent 38%),
+    radial-gradient(ellipse at 82% 18%,rgba(212,175,55,.19),transparent 34%),
+    radial-gradient(ellipse at 12% 88%,rgba(226,114,91,.16),transparent 38%),
     linear-gradient(128deg,#102D25 0%,#123B2D 54%,#214B3B 100%);
   color:#F2EFEA;
 }
@@ -272,7 +272,7 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
   position:absolute;
   z-index:-1;
   pointer-events:none;
-  border:1px solid rgba(243,238,228,.12);
+  border:1px solid rgba(242,239,234,.12);
   border-radius:50%;
 }
 .hero:before{
@@ -280,21 +280,21 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
   aspect-ratio:1;
   right:-24%;
   top:-56%;
-  background:radial-gradient(circle,rgba(243,238,228,.08),transparent 66%);
-  box-shadow:0 0 0 2.5rem rgba(243,238,228,.018),0 0 0 5rem rgba(243,238,228,.014);
+  background:radial-gradient(circle,rgba(242,239,234,.08),transparent 66%);
+  box-shadow:0 0 0 2.5rem rgba(242,239,234,.018),0 0 0 5rem rgba(242,239,234,.014);
 }
 .hero:after{
   width:min(40vw,34rem);
   aspect-ratio:1;
   left:-18%;
   bottom:-62%;
-  background:radial-gradient(circle,rgba(185,107,75,.13),transparent 68%);
+  background:radial-gradient(circle,rgba(226,114,91,.13),transparent 68%);
 }
 .hero .container{position:relative;z-index:1}
 .hero .eyebrow{color:#E8C77D}
 .hero .brand-lockup{
-  border-color:rgba(243,238,228,.24);
-  background:rgba(243,238,228,.075);
+  border-color:rgba(242,239,234,.24);
+  background:rgba(242,239,234,.075);
   color:#F2EFEA;
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
@@ -302,9 +302,9 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 .hero h1{color:#F2EFEA}
 .hero h1 span{color:#D9AA54}
 .hero .hero-lead{color:#E8C77D}
-.hero .hero-copy,.hero .location{color:rgba(243,238,228,.82)}
+.hero .hero-copy,.hero .location{color:rgba(242,239,234,.82)}
 .hero .button-primary{
-  background:#D4AF62;
+  background:#D4AF37;
   color:#172A21;
   box-shadow:0 12px 28px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.38);
 }
@@ -312,7 +312,7 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 .hero .text-link{color:#F2EFEA}
 .hero-aside{
   padding:1.5rem;
-  border:1px solid rgba(243,238,228,.23);
+  border:1px solid rgba(242,239,234,.23);
   border-radius:1.35rem;
   background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.045));
   box-shadow:0 22px 55px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.16);
@@ -321,12 +321,12 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 }
 .hero .aside-index{color:#E8C77D}
 .hero .aside-statement,.hero .aside-author{color:#F2EFEA}
-.hero .aside-copy,.hero .aside-role{color:rgba(243,238,228,.78)}
-.hero .aside-rule{background:#D4AF62}
+.hero .aside-copy,.hero .aside-role{color:rgba(242,239,234,.78)}
+.hero .aside-rule{background:#D4AF37}
 
 .locs-section{
   background:
-    radial-gradient(ellipse at 4% 8%,rgba(185,107,75,.075),transparent 32%),
+    radial-gradient(ellipse at 4% 8%,rgba(226,114,91,.075),transparent 32%),
     linear-gradient(180deg,#EEE7DA 0%,#F2EFEA 100%);
 }
 .service-card{
@@ -342,7 +342,7 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
   position:absolute;
   inset:0 0 auto;
   height:4px;
-  background:linear-gradient(90deg,#123B2D,#C69A43,#B96B4B);
+  background:linear-gradient(90deg,#123B2D,#D4AF37,#E2725B);
   opacity:.78;
 }
 .service-card-featured{
@@ -350,7 +350,7 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
   border-top:1px solid rgba(128,84,15,.28);
   background:linear-gradient(145deg,rgba(255,253,248,.98),rgba(230,218,194,.62));
 }
-.service-card-featured:before{height:5px;background:linear-gradient(90deg,#C69A43,#B96B4B)}
+.service-card-featured:before{height:5px;background:linear-gradient(90deg,#D4AF37,#E2725B)}
 .service-card h3{max-width:14ch}
 .booking-panel{
   border-color:rgba(23,61,50,.18);
@@ -362,7 +362,7 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
   isolation:isolate;
   border:1px solid rgba(255,255,255,.18);
   background:
-    radial-gradient(ellipse at 92% 0%,rgba(198,154,67,.18),transparent 36%),
+    radial-gradient(ellipse at 92% 0%,rgba(212,175,55,.18),transparent 36%),
     linear-gradient(130deg,#102D25,#123B2D 62%,#1C4938);
   box-shadow:0 28px 70px rgba(12,28,20,.2),inset 0 1px 0 rgba(255,255,255,.12);
 }
@@ -379,7 +379,7 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 }
 .author-section{
   background:
-    radial-gradient(ellipse at 92% 12%,rgba(198,154,67,.08),transparent 30%),
+    radial-gradient(ellipse at 92% 12%,rgba(212,175,55,.08),transparent 30%),
     #E9E1D3;
 }
 .constitution>div{background:rgba(255,253,248,.9)}
@@ -388,18 +388,18 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 }
 .site-footer{
   background:
-    radial-gradient(ellipse at 92% 0%,rgba(185,107,75,.12),transparent 30%),
+    radial-gradient(ellipse at 92% 0%,rgba(226,114,91,.12),transparent 30%),
     #111713;
 }
 .topbar,.floating-dock{
-  border-color:rgba(243,238,228,.28);
+  border-color:rgba(242,239,234,.28);
   box-shadow:0 16px 42px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.16);
 }
 .floating-dock{
-  background-image:linear-gradient(115deg,rgba(185,107,75,.18),transparent 42%,rgba(198,154,67,.17) 76%,transparent);
+  background-image:linear-gradient(115deg,rgba(226,114,91,.18),transparent 42%,rgba(212,175,55,.17) 76%,transparent);
 }
 :where(.service-card,.booking-panel,.digital-panel,.hero-aside) a:focus-visible{
-  outline-color:#D4AF62;
+  outline-color:#D4AF37;
 }
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
   .hero .brand-lockup,.hero-aside{background:#214B3B}
