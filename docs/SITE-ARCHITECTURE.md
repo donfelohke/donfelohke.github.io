@@ -36,7 +36,7 @@ The four-practice map is an orientation layer, not a replacement for the detaile
 
 ## Navigation
 
-- Topbar: F3L0H / FELOH WARENA identity anchor and optional Kiswahili jump.
+- Topbar: NAKEBUSEN brand lockup, Don Feloh authorship mark, and English / Kiswahili selector. The header leads with the approved NAKEBUSEN homepage identity; authorship remains visible without replacing the commercial lead.
 - Floating dock: exactly three destinations — LOCS (#crown), DIGITAL (#code), CONNECT (#connect).
 - Domain and repository destinations remain contextual links in their respective content sections.
 - No duplicated six-item top navigation.
@@ -46,7 +46,7 @@ The four-practice map is an orientation layer, not a replacement for the detaile
 - One public HTML document and one primary CSS stylesheet.
 - No JavaScript, framework, static-site generator, package manager or build step.
 - No analytics, tracking, remote fonts or third-party UI runtime.
-- English default; Kiswahili native disclosure.
+- English default; Kiswahili selected through native radio controls and CSS visibility across the main content and footer. No JavaScript language runtime or saved preference is used.
 - Theme follows operating-system colour preference.
 - Native anchors and direct contact URLs only.
 - No forms, customer database, payment APIs, STK push or automated payment verification.
