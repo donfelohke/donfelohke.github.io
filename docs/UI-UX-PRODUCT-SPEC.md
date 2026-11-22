@@ -113,11 +113,11 @@ Do not put repository lists, extended founder biography or brand philosophy ahea
 
 Keep the three approved service entries and published prices visible and scannable:
 
-- Retouch & Styling — KES 700
-- Sisterlocs Retie — KES 1,500
+- Retouch & Styling — KES 700+
+- Sisterlocs Retie — KES 1,500+
 - Artificial Locs Installation — KES 3,500
 
-Show the prices without plus signs. Explain that Retouch & Styling and Sisterlocs Retie may vary with loc condition and work required; Artificial Locs Installation is published at KES 3,500. Confirm the agreed scope and amount directly. No braiding or shaving.
+Show plus signs for Retouch & Styling and Sisterlocs Retie starting prices; keep Artificial Locs Installation at KES 3,500 without a plus sign. Explain that Retouch & Styling and Sisterlocs Retie may vary with loc condition and work required; Artificial Locs Installation is published at KES 3,500. Confirm the agreed scope and amount directly. No braiding or shaving.
 
 ### DIGITAL · WARENA
 
