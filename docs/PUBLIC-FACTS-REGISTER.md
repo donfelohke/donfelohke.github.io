@@ -43,7 +43,7 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-020 | Final LOCS cost depends on scope, loc condition and materials | F1 | Publish with prices |
 | PF-021 | No braiding | F1 | Do not advertise braiding |
 | PF-022 | No shaving | F1 | Do not advertise shaving |
-| PF-023 | Loc-care home calls within the wider Eldoret Town area | F1 | Founder-supplied current service mode; confirm the exact customer location, suitability, availability and travel arrangements directly. Do not imply a fixed kilometre radius or universal coverage. |
+| PF-023 | Loc-care home calls across the wider Eldoret Town service area | F1 | Founder-supplied current service mode; confirm the exact customer location, suitability, availability and any travel costs directly. Do not imply a fixed kilometre radius or universal coverage. |
 | PF-024 | DIGITAL service areas include GNU/Linux, computer maintenance and networking | F3 | Scope and availability must be confirmed |
 | PF-025 | Local-first and offline-capable systems | F3 | Describe as service area; no blanket guarantees |
 | PF-026 | Reproducible development environments | F3 | Do not claim verified reproducibility without evidence |
