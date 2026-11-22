@@ -1,5 +1,8 @@
 # Don Feloh — Public Home
 
+> Current alignment: [Ecosystem update — 2026-11-22](docs/ECOSYSTEM-UPDATE-2026-11-22.md). This dated record supplements this README; it does not replace the canonical source documents.
+
+
 **Website:** https://donfelohke.github.io/  
 **Human author:** Felix Lwova · Don Feloh · Feloh Warena · @donfelohke · #HisGenjeness
 
