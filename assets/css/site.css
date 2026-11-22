@@ -254,8 +254,7 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 @media print{body{padding:0;background:#fff;color:#111}.topbar,.floating-dock,.hero-actions{display:none!important}.section,.site-footer{break-inside:avoid;background:#fff;color:#111}}
 
 
-/* Emerald Living Studio — incremental homepage revamp.
-   Existing HTML, language controls, anchors and business facts remain authoritative. */
+/* Editorial Rooted Glass — expressive hero and section-specific surface treatments. */
 .hero{
   position:relative;
   isolation:isolate;
@@ -432,4 +431,99 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 }
 @media(prefers-reduced-motion:reduce){
   .hero:before,.hero:after{display:none}
+}
+
+
+/* Page-wide alignment layer: one editorial grammar, distinct section identities. */
+.section-topline{
+  padding-bottom:.9rem;
+  border-bottom:1px solid var(--line);
+}
+.section-label,.section-note,.aside-index,.service-meta,.practice-index,.status-label,.author-pretitle,.digital-kicker{
+  font-variant-numeric:tabular-nums;
+}
+.section-note,.status-label{
+  letter-spacing:.09em;
+}
+.research-section .research-grid,
+.genje-feature .research-grid{
+  align-items:start;
+}
+.research-copy>div>p:first-child,
+.corpus-copy>div>p:first-child{
+  margin-top:0;
+}
+.status-label{
+  padding:.48rem .72rem;
+  border-radius:999px;
+  background:rgba(255,255,255,.24);
+}
+.practice-card{
+  border-radius:1.15rem;
+  box-shadow:0 14px 35px rgba(23,39,30,.055),inset 0 1px 0 rgba(255,255,255,.72);
+}
+.practice-card h3{
+  text-wrap:balance;
+}
+.source-links a,
+.publication-list>a,
+.contact-list a{
+  text-underline-offset:.24em;
+  transition:color .18s ease,background-color .18s ease,padding-left .18s ease;
+}
+.source-links a:focus-visible,
+.publication-list>a:focus-visible,
+.contact-list a:focus-visible,
+.secondary-link:focus-visible,
+.service-link:focus-visible,
+.digital-contact:focus-visible,
+.footer-repositories a:focus-visible{
+  outline:3px solid var(--focus);
+  outline-offset:4px;
+}
+.footer-grid>section{
+  min-width:0;
+}
+.footer-grid>section+section{
+  padding-left:clamp(0rem,1.8vw,1.5rem);
+  border-left:1px solid rgba(255,255,255,.14);
+}
+.payment-details dd{
+  overflow-wrap:anywhere;
+}
+.aside-role,.role-line{
+  max-width:32rem;
+  text-wrap:pretty;
+}
+@media(prefers-color-scheme:dark){
+  .status-label{
+    background:rgba(242,239,234,.045);
+  }
+  .practice-card{
+    box-shadow:0 14px 35px rgba(0,0,0,.18),inset 0 1px 0 rgba(242,239,234,.045);
+  }
+}
+@media(max-width:760px){
+  .section-topline{
+    align-items:flex-start;
+    flex-wrap:wrap;
+    row-gap:.4rem;
+  }
+  .footer-grid>section+section{
+    padding-left:0;
+    border-left:0;
+    border-top:1px solid rgba(255,255,255,.14);
+    padding-top:1.5rem;
+  }
+}
+@media(max-width:480px){
+  .section-note{
+    font-size:.58rem;
+  }
+  .aside-role,.role-line{
+    max-width:100%;
+  }
+}
+@media(prefers-reduced-transparency:reduce){
+  .status-label{background:var(--surface)}
 }
