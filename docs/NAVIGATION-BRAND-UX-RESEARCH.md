@@ -41,7 +41,7 @@ Reviewed the current `index.html`, `README.md`, `docs/WEB-DESIGN-STANDARDS.md`, 
 
 - Brand: **NAKEBUSEN Locs • Digital**
 - Current primary local service context: **Eldoret Town / Karibu Mdosi**
-- Service price cues remain starting prices: Retouch & Styling — **KES 700**; Sisterlocs Retie — **KES 1,500**; Artificial Locs Installation — **KES 3,500**.
+- Service price cues remain starting prices: Retouch & Styling — **KES 700+**; Sisterlocs Retie — **KES 1,500+**; Artificial Locs Installation — **KES 3,500**.
 - Primary action: WhatsApp loc-care enquiry.
 - Booking boundary: an enquiry is not a confirmed booking; availability, suitability, final price and appointment details are confirmed directly.
 
