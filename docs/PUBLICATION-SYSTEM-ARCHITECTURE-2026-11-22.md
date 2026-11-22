@@ -13,7 +13,7 @@ The public site is a single, deep page at the root URL. It consolidates the mate
 
 | Anchor | Purpose | Content |
 |---|---|---|
-| `#crown` | NAKEBUSEN / ROOT | Loc-care services, starting prices, scope and enquiry boundary |
+| `#crown` | NAKEBUSEN / ROOT | Loc-care services, published prices, scope and enquiry boundary |
 | `#code` | DIGITAL / WARENA capability | Practical computing and infrastructure capability areas, qualification and enquiry path |
 | `#don-feloh` | Don Feloh / human authorship | Founder identity, GRACE · GRIT · GLORY, WARENA, IKAI, GENJE and FELOH Corpus |
 | `#connect` | Contact | Direct NAKEBUSEN contact and source links |
@@ -26,8 +26,8 @@ NAKEBUSEN is the only live commercial practice. LOCS and DIGITAL are customer-fa
 
 | Service | Public price |
 |---|---:|
-| Retouch & Styling | From KES 700 |
-| Sisterlocs Retie | From KES 1,500 |
+| Retouch & Styling | KES 700 |
+| Sisterlocs Retie | KES 1,500 |
 | Artificial Locs Installation | KES 3,500 |
 
 Location: Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
@@ -81,7 +81,7 @@ Commercial boundary: ONLY NAKEBUSEN TRANSACTS.
 
 ## Correction-release factual controls
 
-NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret. This business-history fact must not be attributed to the founder as personal roots, birthplace or ancestry. Retouch & Styling and Sisterlocs Retie are starting prices displayed with plus signs; Artificial Locs Installation is KES 3,500 without a plus sign. Service descriptions must not promise washing, crochet or other unapproved inclusions. Service enquiry links must identify the selected service and must not imply a confirmed booking.
+NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret. This business-history fact must not be attributed to the founder as personal roots, birthplace or ancestry. Retouch & Styling and Sisterlocs Retie are published prices displayed with plus signs; Artificial Locs Installation is KES 3,500 without a plus sign. Service descriptions must not promise washing, crochet or other unapproved inclusions. Service enquiry links must identify the selected service and must not imply a confirmed booking.
 
 
 ## 2026-11-22 implementation alignment
