@@ -157,6 +157,18 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("SOURCE REPOSITORY", HTML)
         self.assertIn("CREATIVE PRACTICE REPOSITORY", HTML)
 
+    def test_glass_terminal_visual_system(self):
+        self.assertIn("blur(28px) saturate(180%)", CSS)
+        self.assertIn("--glass-top:rgba(23,61,50,.80)", CSS)
+        self.assertIn("--glass-dock:rgba(17,23,19,.82)", CSS)
+        self.assertIn("@keyframes glass-drift", CSS)
+        self.assertIn("animation:glass-drift", CSS)
+        self.assertIn("Cormorant Garamond", CSS)
+        self.assertIn("JetBrains Mono", CSS)
+        self.assertIn("min-width:2.75rem;min-height:2.75rem", CSS)
+        self.assertIn("prefers-reduced-transparency:reduce", CSS)
+        self.assertIn("prefers-reduced-motion:reduce", CSS)
+
     def test_accessibility_and_responsive_design(self):
         self.assertIn('class="skip-link"', HTML)
         self.assertIn('aria-label="Primary page navigation"', HTML)
