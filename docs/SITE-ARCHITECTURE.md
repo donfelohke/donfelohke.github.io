@@ -54,8 +54,8 @@ The four-practice map is an orientation layer, not a replacement for the detaile
 
 ## Publication invariants
 
-- Retouch & Styling — KES 700+.
-- Sisterlocs Retie — KES 1,500+.
+- Retouch & Styling — KES 700 (published indicative price).
+- Sisterlocs Retie — KES 1,500 (published indicative price).
 - Artificial Locs Installation — KES 3,500.
 - Location: Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
 - No braiding, shaving, invented street address, opening hours, appointment availability, testimonials or credentials.
@@ -67,3 +67,7 @@ The four-practice map is an orientation layer, not a replacement for the detaile
 ## Release control
 
 Source tests, artifact creation, manual deployment, deployment result and live inspection are separate evidence stages. Do not claim a live release without evidence. Deployment remains a separately authorized action.
+
+## Business-history and biography distinction
+
+NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret. This is the business's history and must not be attributed to the founder as personal roots, birthplace or ancestry.
