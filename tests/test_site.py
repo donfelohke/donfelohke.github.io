@@ -66,7 +66,7 @@ class PublicationTests(unittest.TestCase):
         required = {
             "top", "main", "nakebusen", "services", "crown", "service-retouch",
             "service-sisterlocs", "service-artificial", "booking", "code", "digital",
-            "don-feloh", "thought", "warena", "ikai", "genje", "feloh-corpus",
+            "don-feloh", "warena", "ikai", "genje", "feloh-corpus",
             "publications", "kiswahili", "connect", "footer",
         }
         self.assertTrue(required.issubset(set(ids)))
@@ -124,8 +124,8 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("Retightening for established Sisterlocs", HTML)
         self.assertNotIn("Onyesha upya", HTML)
         self.assertIn("Matengenezo na upangaji wa loc", HTML)
-        self.assertIn("MAWAZO NA TAFAKARI", HTML)
-        self.assertIn("Misingi ya", HTML)
+        self.assertNotIn("MAWAZO NA TAFAKARI", HTML)
+        self.assertNotIn("Misingi ya", HTML)
         self.assertNotIn("Vishawishi", HTML)
         self.assertNotIn("Worldview", HTML)
         self.assertNotIn("Opinion", HTML)
@@ -153,16 +153,20 @@ class PublicationTests(unittest.TestCase):
         ):
             self.assertIn(phrase, HTML)
 
-    def test_practice_identity_and_maturity(self):
+    def test_public_research_and_creative_work_are_described_plainly(self):
         for phrase in (
             "Freedom", "WARENA", "IKAI", "meaning “home”",
-            "Not a released product", "GENJE", "Genge-rooted sound",
-            "AfroTech", "livecoding", "FELOH Corpus",
-            "Core", "ideas.", "Freedom is lived through human agency",
+            "GENJE", "Genge-rooted creative practice", "livecoding",
+            "FELOH Corpus", "Research &amp;<br><em>records.</em>",
+        ):
+            self.assertIn(phrase, HTML)
+        for removed_phrase in (
+            "ONE AUTHOR / FOUR PRACTICES", "Different purposes. Shared ground.",
+            "Freedom is lived through human agency",
             "Knowledge must answer to evidence", "Dignity requires consent",
             "Sovereignty is the capacity", "Creative work should deepen life",
         ):
-            self.assertIn(phrase, HTML)
+            self.assertNotIn(removed_phrase, HTML)
 
     def test_publication_section_classifies_sources(self):
         self.assertIn("SELECTED RESEARCH &amp; SOURCE RECORDS", HTML)
