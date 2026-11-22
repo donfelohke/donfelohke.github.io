@@ -11,6 +11,7 @@
 | PF-01 | Public facts register | Cross-domain | Approved factual authority | [PUBLIC-FACTS-REGISTER.md](./PUBLIC-FACTS-REGISTER.md) | Source facts only | 2026-11-22 |
 | CORPUS-01 | F3L0H Sovereign Master Corpus | FELOH Corpus | Published source record | [Canonical corpus](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-SOVEREIGN-MASTER-CORPUS-2026-11-20.md) | Link only | 2026-11-20 |
 | MRD-01 | F3L0H Master Research Dossier | FELOH Corpus | Research dossier | [Canonical dossier](https://github.com/donfelohke/feloh-corpus/blob/main/docs/F3L0H-MASTER-RESEARCH-DOSSIER-2026-11-21.md) | Link / summary after curation | 2026-11-21 |
+| BH-01 | BLACK HINTERLAND — BEFORE AFRICA | FELOH Corpus | Research dossier · 22 Nov 2026 | [Canonical master dossier](https://github.com/donfelohke/feloh-corpus/blob/main/docs/BLACK-HINTERLAND-BEFORE-AFRICA-MASTER-DOSSIER-2026-11-22.md) | Source record only; no copied claims or imagery | 2026-11-22 |
 | IKAI-MIRROR-01 | Mirror Technology & Scholarly Research | IKAI | Research dossier · 18 Nov 2026 | [Canonical research note](https://github.com/donfelohke/Ikai/blob/main/docs/IKAI-MIRROR-TECHNOLOGY-AND-SCHOLARLY-RESEARCH-2026-11-18.md) | Linked research entry | 2026-11-18 |
 | GENJE-01 | Sound, movement and code | GENJE | Creative-practice source repository | [GENJE](https://github.com/donfelohke/Genje) | Linked source repository; not a publication claim | — |
 | IKAI-WIP | Reflective computing research | IKAI | Work in progress | [IKAI](https://github.com/donfelohke/Ikai) | Research status only | — |
