@@ -132,13 +132,13 @@ class PublicationTests(unittest.TestCase):
     def test_architecture_docs_and_sitemap(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         nav = (ROOT / "docs/NAV-STRUCTURE.md").read_text(encoding="utf-8")
-        architecture = (ROOT / "docs/PUBLICATION-SYSTEM-ARCHITECTURE-2026-11-22.md").read_text(encoding="utf-8")
+        architecture = (ROOT / "docs/ARCHITECTURE.md").read_text(encoding="utf-8")
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
         self.assertIn("Single-Page Public Website", readme)
         self.assertIn("Single-page architecture", nav)
         self.assertIn("icon-only", nav)
         self.assertIn("icon-only preference controls", architecture)
-        self.assertIn("Single-Page Architecture", architecture)
+        self.assertIn("Public Website Architecture", architecture)
         self.assertEqual(1, sitemap.count("<loc>"))
 
     def test_static_accessible_design(self):
