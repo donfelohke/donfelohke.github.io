@@ -99,11 +99,9 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("<script", HTML.lower())
         self.assertEqual(0, self.parser.scripts)
 
-    def test_service_prices_are_exact_and_plus_free(self):
-        for amount in ("KES 700", "KES 1,500", "KES 3,500"):
+    def test_service_prices_are_published_as_starting_prices(self):
+        for amount in ("KES 700+", "KES 1,500+", "KES 3,500+"):
             self.assertIn(amount, HTML)
-        self.assertNotRegex(HTML, r"KES\s*(?:700|1,500|3,500)\s*\+")
-        self.assertNotIn("Prices marked +", HTML)
         self.assertIn("Published prices are indicative", HTML)
         self.assertIn("the final amount is agreed before work begins", HTML)
 
@@ -119,6 +117,11 @@ class PublicationTests(unittest.TestCase):
     def test_service_scope_has_no_unapproved_inclusions(self):
         self.assertIn("Refresh and maintain existing locs", HTML)
         self.assertIn("Retightening for established Sisterlocs", HTML)
+        self.assertNotIn("Onyesha upya", HTML)
+        self.assertIn("Matengenezo na upangaji wa loc", HTML)
+        self.assertIn("MAWAZO NA TAFAKARI", HTML)
+        self.assertIn("Misingi ya", HTML)
+        self.assertNotIn("Vishawishi", HTML)
         self.assertNotIn("Wash, retouch", HTML)
         self.assertNotIn("Wash, crocheted retie", HTML)
         self.assertNotIn("Kuosha, kukaza upya kwa crochet", HTML)
@@ -147,7 +150,9 @@ class PublicationTests(unittest.TestCase):
             "Freedom", "WARENA", "IKAI", "meaning “home”",
             "Not a released product", "GENJE", "Genge-rooted sound",
             "AfroTech", "livecoding", "FELOH Corpus",
-            "Worldview", "Philosophy", "Opinion", "Reflection",
+            "Core", "ideas.", "Freedom is lived through human agency",
+            "Knowledge must answer to evidence", "Dignity requires consent",
+            "Sovereignty is the capacity", "Creative work should deepen life",
         ):
             self.assertIn(phrase, HTML)
 
