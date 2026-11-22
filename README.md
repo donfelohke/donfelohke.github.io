@@ -7,6 +7,8 @@ This repository publishes one static, text-first page under the existing GitHub 
 
 ## Public navigation
 
+Desktop uses four visible top-bar links; mobile uses the same four destinations in a floating bottom dock. The compact header provides two icon-only controls: English / Kiswahili and light / dark. The controls have accessible names and remain hidden if JavaScript is unavailable; English content and the system colour preference remain the fallback.
+
 | Anchor | Purpose | Status |
 |---|---|---|
 | #locs | NAKEBUSEN / ROOT · loc-care services and prices | Live commercial practice |
