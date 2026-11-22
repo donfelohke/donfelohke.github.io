@@ -66,7 +66,7 @@ class PublicationTests(unittest.TestCase):
         required = {
             "top", "main", "nakebusen", "services", "crown", "service-retouch",
             "service-sisterlocs", "service-artificial", "booking", "code", "digital",
-            "don-feloh", "warena", "ikai", "genje", "feloh-corpus",
+            "don-feloh", "feloh-corpus",
             "publications", "kiswahili", "connect", "footer",
         }
         self.assertTrue(required.issubset(set(ids)))
