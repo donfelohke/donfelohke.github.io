@@ -188,7 +188,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("animation:glass-drift 36s", CSS)
 
     def test_glass_terminal_visual_system(self):
-        self.assertIn("blur(28px) saturate(180%)", CSS)
+        self.assertIn("backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturation))", CSS)
         self.assertIn("--glass-top:rgba(18,59,45,.82)", CSS)
         self.assertIn("--glass-dock:rgba(17,17,17,.84)", CSS)
         self.assertIn("@keyframes glass-drift", CSS)
