@@ -93,10 +93,11 @@ class SiteTests(unittest.TestCase):
                 self.assertTrue(target.exists(), f"Missing local link target: {href}")
 
     def test_search_and_conversion_first_hero(self):
-        self.assertIn('<title>Don Feloh · F3L0H / FELOH WARENA</title>', HTML)
-        self.assertIn('name="description" content="Don Feloh’s author-led ecosystem:', HTML)
-        self.assertIn('<h1 id="page-title">Natural Loc Care in Eldoret.</h1>', HTML)
-        self.assertIn('class="hero-service-list"', HTML)
+        self.assertIn('<title>NAKEBUSEN · Your Beauty ° Your Way | Don Feloh</title>', HTML)
+        self.assertIn('name="description" content="NAKEBUSEN natural loc care in Eldoret', HTML)
+        self.assertIn('<h1 id="page-title">Your Beauty <span class="degree">°</span> Your Way.</h1>', HTML)
+        self.assertIn('<p class="hero-lead">Natural loc care in Eldoret.</p>', HTML)
+        self.assertIn('class="hero-prices"', HTML)
         for anchor in ("#service-retouch", "#service-sisterlocs", "#service-artificial"):
             self.assertIn(f'href="{anchor}"', HTML)
             self.assertIn(f'id="{anchor[1:]}"', HTML)
@@ -137,7 +138,7 @@ class SiteTests(unittest.TestCase):
         self.assertIn("Knowledge governance, documentation, research provenance and source repositories.", HTML)
         self.assertIn("Founder · CTO · Loctician · Creative Technologist", HTML)
         self.assertIn("Contact directory", HTML)
-        self.assertIn("NAKEBUSEN</strong> · <strong>WARENA</strong> · <strong>DON FELOH", HTML)
+        self.assertIn("<strong>NAKEBUSEN</strong> <span>·</span> <strong>WARENA</strong> <span>·</span> <strong>DON FELOH", HTML)
         self.assertIn("Business information and service payments belong to NAKEBUSEN.", HTML)
         self.assertIn("NAKEBUSEN · LOC CARE", HTML)
         self.assertIn("Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya", HTML)
@@ -165,7 +166,8 @@ class SiteTests(unittest.TestCase):
         self.assertIn('aria-label="Quick navigation"', HTML)
         self.assertIn("NAKEBUSEN DIGITAL", HTML)
         self.assertIn("Gallery · supporting visual archive", HTML)
-        self.assertIn("GitHub · @donfelohke", HTML)
+        self.assertIn("@donfelohke", HTML)
+        self.assertIn("GitHub", HTML)
         self.assertIn("Digital service areas", HTML)
         self.assertIn("Computer care", HTML)
         self.assertIn("Back to top", HTML)
@@ -175,10 +177,12 @@ class SiteTests(unittest.TestCase):
         self.assertIn("@media(prefers-reduced-motion:reduce)", CSS)
         self.assertIn("@media(prefers-reduced-transparency:reduce)", CSS)
         self.assertIn("min-height:44px", CSS)
-        self.assertIn("scroll-snap-type:x proximity", CSS)
         self.assertIn("backdrop-filter:blur(20px)", CSS)
         self.assertIn("@media(max-width:760px)", CSS)
+        self.assertIn("@media(max-width:440px)", CSS)
         self.assertIn(".digital-panel", CSS)
+        self.assertIn(".hero-prices", CSS)
+        self.assertIn(".floating-dock", CSS)
 
     def test_no_remote_runtime_dependencies(self):
         self.assertNotIn("fonts.googleapis.com", HTML + CSS)
