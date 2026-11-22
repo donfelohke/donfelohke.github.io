@@ -34,6 +34,16 @@ The site is the public gateway to one human author's connected body of work. F3L
 
 The four-practice map is an orientation layer, not a replacement for the detailed domain sections or canonical GitHub repositories. The homepage remains one HTML document and retains the three-destination LOCS / DIGITAL / CONNECT dock.
 
+## Visual system and interaction
+
+- **Direction:** immersive Liquid Glass Terminal with an editorial hybrid canvas; expressive glass is reserved for the fixed topbar and three-destination dock so service and research content stays readable.
+- **Palette:** retain the established warm canvas, forest-green digital panel and topbar, terracotta editorial accents, and ochre highlights. System dark mode uses the established dark palette rather than introducing a separate brand.
+- **Typography:** prefer locally installed Cormorant Garamond, Inter and JetBrains Mono, with Georgia, system UI and platform monospace fallbacks. No remote font requests are made.
+- **Glass:** use translucent forest/charcoal surfaces, 28px backdrop blur, saturation and restrained inner highlights; solid colour fallbacks remain available where backdrop filtering or reduced transparency is unavailable or disabled.
+- **Motion:** ambient, low-frequency gradient drift on the glass controls; restrained pointer feedback on service and practice cards. All motion respects `prefers-reduced-motion`.
+- **Density:** balanced editorial spacing, clear section hierarchy and compact service cards; no decorative imagery, unnecessary controls or duplicated navigation.
+- **Touch:** language controls and primary dock destinations meet a 44px minimum target.
+
 ## Navigation
 
 - Topbar: NAKEBUSEN brand lockup, Don Feloh authorship mark, and English / Kiswahili selector. The header leads with the approved NAKEBUSEN homepage identity; authorship remains visible without replacing the commercial lead.
