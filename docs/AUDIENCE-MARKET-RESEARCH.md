@@ -42,7 +42,7 @@ Reviewed the current `index.html` and `README.md` in this repository. Existing a
 
 - Public identity: **NAKEBUSEN @donfelohke — WARENA powered**.
 - Primary local market phrase: **Eldoret Town / Karibu Mdosi**. Lodwar/Turkana can remain secondary context, but current service availability must be confirmed directly.
-- Loc-care starting prices: **Retouch & Styling — KES 700+; Sisterlocs Retie — KES 1,500+; Artificial Locs Installation — KES 3,500**.
+- Loc-care starting prices: **Retouch & Styling — From KES 700; Sisterlocs Retie — From KES 1,500; Artificial Locs Installation — KES 3,500**.
 - Contact: **+254 719 635 415**, WhatsApp and telephone.
 - Technical offer includes GNU/Linux support, computer maintenance, networking, routers/servers, small-office and lab systems, and local-first/offline-capable environments.
 - IKAI is research and development, not a released product.
@@ -68,8 +68,8 @@ Reviewed the current `index.html` and `README.md` in this repository. Existing a
 > Loc care in Eldoret Town / Karibu Mdosi. Retouching, styling, Sisterlocs retightening and artificial loc installation, with the work and price discussed clearly before you commit.
 >
 > **Starting prices**  
-> Retouch & Styling — KES 700+  
-> Sisterlocs Retie — KES 1,500+  
+> Retouch & Styling — From KES 700  
+> Sisterlocs Retie — From KES 1,500  
 > Artificial Locs Installation — KES 3,500
 >
 > Send a WhatsApp enquiry to discuss your locs, preferred style, availability and final quote. An enquiry is not a confirmed booking.
