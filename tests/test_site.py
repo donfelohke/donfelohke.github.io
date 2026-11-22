@@ -77,7 +77,9 @@ class PublicationTests(unittest.TestCase):
         self.assertTrue(self.parser.dock)
         self.assertEqual(["#crown", "#code", "#connect"], self.parser.dock_links)
         self.assertIn("grid-template-columns:repeat(3,minmax(0,1fr))", CSS)
-        self.assertNotIn("repeat(4,minmax(0,1fr))", CSS)
+        dock_rule = re.search(r"\\.floating-dock\\{([^}]*)\\}", CSS).group(1)
+        self.assertIn("grid-template-columns:repeat(3,minmax(0,1fr))", dock_rule)
+        self.assertNotIn("repeat(4", dock_rule)
 
     def test_language_switch_is_static_and_bilingual(self):
         self.assertIn('id="language-en"', HTML)
