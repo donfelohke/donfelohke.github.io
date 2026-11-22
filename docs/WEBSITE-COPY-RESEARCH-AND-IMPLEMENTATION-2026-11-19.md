@@ -79,8 +79,8 @@ Added `research/index.html` at `/research/`, with:
 
 ## Canonical facts preserved
 
-- Retouch & Styling — KES 700
-- Sisterlocs Retie — KES 1,500
+- Retouch & Styling — KES 700+
+- Sisterlocs Retie — KES 1,500+
 - Artificial Locs Installation — KES 3,500
 - Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya
 - Founder role: Founder · CTO · Loctician · Creative Technologist
