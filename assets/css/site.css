@@ -475,3 +475,5 @@ html[data-theme="dark"] .icon-moon{display:none}
  .brand-sub{display:none}
  .brand-name{font-size:.76rem}
 }
+
+.control-button[aria-pressed="true"]{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.72)}
