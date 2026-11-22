@@ -13,7 +13,7 @@ This repository publishes one static, text-first page. NAKEBUSEN is the welcomin
 | Destination | Anchor | Purpose |
 |---|---|---|
 | NAKEBUSEN hero | `#nakebusen` | Brand identity and natural loc-care entry point |
-| LOCS | `#crown` | Services, starting prices and booking disclosure |
+| LOCS | `#crown` | Services, published prices and booking disclosure |
 | DIGITAL | `#code` | Qualified GNU/Linux, computer and network capability |
 | Don Feloh | `#don-feloh` | Human authorship, biography and GRACE · GRIT · GLORY |
 | Thought & Reflection | `#thought` | Worldview, philosophy, ideas, opinion and reflection |
@@ -30,8 +30,8 @@ The fixed mobile dock has exactly three destinations: LOCS, DIGITAL and CONNECT.
 
 | Service | Public price |
 |---|---:|
-| Retouch & Styling | From KES 700 |
-| Sisterlocs Retie | From KES 1,500 |
+| Retouch & Styling | KES 700 |
+| Sisterlocs Retie | KES 1,500 |
 | Artificial Locs Installation | KES 3,500 |
 
 Published prices are indicative. Final scope and price depend on loc condition, materials and work required and are agreed directly before work begins. No braiding or shaving is offered. The founder does not cut clients' natural hair. An enquiry does not confirm a booking.
