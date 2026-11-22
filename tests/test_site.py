@@ -122,7 +122,8 @@ class SiteTests(unittest.TestCase):
         positions = [HTML.index(f'id="{section}"') for section in expected]
         self.assertEqual(sorted(positions), positions)
         self.assertIn("WARENA is the distinct CAPABILITY domain", HTML)
-        self.assertIn("Four distinct practices. One connected body of work.", HTML)
+        self.assertIn("Different purposes.", HTML)
+        self.assertIn("Shared ground.", HTML)
         self.assertIn('class="practice-grid"', HTML)
         for domain_anchor in ("#services", "#warena", "#ikai", "#genje"):
             self.assertIn(f'href="{domain_anchor}"', HTML)
