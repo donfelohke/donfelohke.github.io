@@ -21,6 +21,7 @@ F3L0H / FELOH WARENA is the overarching human authorship and practice identity, 
 **H1:** Your Beauty ° Your Way.  
 **Lead:** Natural loc care in Eldoret.  
 **Supporting copy:** Care for the locs you wear, in Eldoret Town. Explore services and starting prices, then speak directly with NAKEBUSEN about your requirements.  
+**Founder attribution:** Don Feloh · Founder · CTO · Loctician · Creative Technologist.  
 **Location:** Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
 
 ### LOCS
