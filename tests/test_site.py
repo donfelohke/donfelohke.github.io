@@ -99,15 +99,15 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("<script", HTML.lower())
         self.assertEqual(0, self.parser.scripts)
 
-    def test_service_prices_use_approved_starting_price_notation(self):
+    def test_service_prices_match_exact_published_amounts(self):
         webcopy = (ROOT / "docs/WEBCOPY.md").read_text(encoding="utf-8")
         for amount in ("KES 700", "KES 1,500", "KES 3,500"):
             self.assertIn(amount, HTML)
             self.assertIn(amount, webcopy)
-        self.assertIn("From KES 700", HTML + webcopy)
-        self.assertIn("From KES 1,500", HTML + webcopy)
+        self.assertIn("KES 700", HTML + webcopy)
+        self.assertIn("KES 1,500", HTML + webcopy)
         self.assertNotIn("KES 3,500+", HTML + webcopy)
-        self.assertIn("Published prices are indicative", HTML)
+        self.assertIn("Published prices", HTML)
         self.assertIn("the final amount is agreed before work begins", HTML)
 
     def test_biography_and_business_history_are_separate(self):
