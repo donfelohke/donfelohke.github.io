@@ -1,7 +1,7 @@
 # NAKEBUSEN — UI/UX Product Specification
 
 **Document ID:** NB-UX-01  
-**Version:** 1.0 · 10 November 2026  
+**Version:** 1.1 · 22 November 2026  
 **Status:** Strategy baseline · implementation not yet authorised by this document  
 **Product:** https://donfelohke.github.io/  
 **Repository:** `donfelohke/donfelohke.github.io`  
@@ -32,7 +32,7 @@ Preserve the governing boundary: **ONLY NAKEBUSEN TRANSACTS.**
 
 ### A. Loc-care customer — primary audience
 
-Needs to understand services, starting prices, location, practitioner and how to enquire. The website should not require technical knowledge or GitHub navigation.
+Needs to understand services, published prices, location, practitioner and how to enquire. The website should not require technical knowledge or GitHub navigation.
 
 ### B. Digital-services customer — secondary audience
 
@@ -61,7 +61,7 @@ Do not add sections or pages solely to accommodate brand language. Expand the in
 
 1. Arrive and recognise NAKEBUSEN, loc care and Eldoret location.
 2. Open LOCS · CROWN.
-3. Compare service descriptions and starting prices.
+3. Compare service descriptions and published prices.
 4. Select a service and activate its contextual WhatsApp enquiry.
 5. Discuss loc condition, requirements, availability, final cost and terms directly.
 6. Confirm the booking only after availability and terms are agreed.
@@ -111,13 +111,13 @@ Do not put repository lists, extended founder biography or brand philosophy ahea
 
 ### LOCS · CROWN
 
-Keep the three approved service entries and starting prices visible and scannable:
+Keep the three approved service entries and published prices visible and scannable:
 
-- Retouch & Styling — KES 700+
-- Sisterlocs Retie — KES 1,500+
+- Retouch & Styling — KES 700
+- Sisterlocs Retie — KES 1,500
 - Artificial Locs Installation — KES 3,500
 
-Preserve the service scope, price qualifiers and current approved copy. No braiding. Do not substitute historical prices.
+Show the prices without plus signs. Explain that Retouch & Styling and Sisterlocs Retie may vary with loc condition and work required; Artificial Locs Installation is published at KES 3,500. Confirm the agreed scope and amount directly. No braiding or shaving.
 
 ### DIGITAL · WARENA
 
@@ -145,7 +145,9 @@ Use a compact, contact-first information hierarchy. Do not duplicate the floatin
 
 ## 8. Visual direction
 
-**Direction:** Floating Glassmorphism Terminal × Editorial Hybrid.
+**Direction:** Immersive Liquid Glass Terminal × Editorial Hybrid.
+
+**Current interaction decisions:** glass intensity immersive; hybrid canvas; ambient motion; balanced visual density. Keep glass concentrated on the forest topbar and charcoal floating dock. Service and editorial content remain legible on opaque surfaces; do not blur every card.
 
 Glass is a purposeful surface treatment, not the information architecture. Do not apply blur or translucency indiscriminately.
 
@@ -166,7 +168,7 @@ Glass is a purposeful surface treatment, not the information architecture. Do no
 - Inter: body copy, service descriptions and interface labels.
 - JetBrains Mono: prices, metadata and technical identifiers.
 
-Use available local/system fallbacks and avoid making external font delivery a performance dependency without testing.
+Use available local/system fallbacks. Do not introduce remote font delivery; bundle fonts only after licence, subset size and performance have been verified.
 
 ### Motion
 

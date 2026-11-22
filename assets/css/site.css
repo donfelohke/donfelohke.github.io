@@ -181,7 +181,7 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 .footer-grid h2,.footer-grid h3{margin:.7rem 0;font:500 2rem/1 var(--serif)}
 .footer-grid p:not(.section-label){color:var(--footer-muted);font-size:.8rem}
 .footer-grid a{display:block;margin:.5rem 0;color:#F0C477;font-size:.82rem}
-.footer-grid .section-label{color:#E2725B;font-size:.6rem}
+.footer-grid .section-label{color:#E2725B;font-size:.65rem}
 .payment-details{margin:1.2rem 0;border-top:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2)}
 .payment-details>div{display:flex;justify-content:space-between;gap:1rem;padding:.6rem 0}
 .payment-details>div+div{border-top:1px solid rgba(255,255,255,.15)}
@@ -200,8 +200,8 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 @media(prefers-color-scheme:dark){.topbar{background-color:#033500}.floating-dock{background-color:#090C0A}}
 @supports(backdrop-filter:blur(20px)){.topbar{background-color:var(--glass-top)}.floating-dock{background-color:var(--glass-dock)}.topbar,.floating-dock{backdrop-filter:blur(28px) saturate(180%);-webkit-backdrop-filter:blur(28px) saturate(180%)}}
 @keyframes glass-drift{from{background-position:0% 50%}to{background-position:100% 50%}}
-@media(prefers-reduced-transparency:reduce){.topbar{background:#173D32;background-image:none;animation:none}.floating-dock{background:#111713;background-image:none;animation:none}}
-@media(prefers-color-scheme:dark) and (prefers-reduced-transparency:reduce){.topbar{background:#033500;background-image:none;animation:none}.floating-dock{background:#090C0A;background-image:none;animation:none}}
+@media(prefers-reduced-transparency:reduce){.topbar,.floating-dock{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;animation:none;background-image:none}.topbar{background:#173D32}.floating-dock{background:#111713}}
+@media(prefers-color-scheme:dark) and (prefers-reduced-transparency:reduce){.topbar,.floating-dock{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;animation:none;background-image:none}.topbar{background:#033500}.floating-dock{background:#090C0A}}
 @media(max-width:1050px){.practice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{grid-template-columns:minmax(0,1.4fr) minmax(13rem,.6fr)}.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.support-section{grid-column:1/-1}}
 @media(max-width:760px){
  :root{--section:4.8rem}

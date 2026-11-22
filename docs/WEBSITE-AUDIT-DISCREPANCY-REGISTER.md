@@ -32,7 +32,7 @@ Use the following order when resolving conflicting statements:
 
 1. `docs/BRAND-CANON.md` — enterprise identity and non-negotiable boundaries.
 2. `docs/PUBLIC-FACTS-REGISTER.md` — factual publication claims and evidence class.
-3. `docs/SERVICE-CATALOG.md` — commercial service scope and starting prices.
+3. `docs/SERVICE-CATALOG.md` — commercial service scope and published prices.
 4. `docs/WEBCOPY.md` — approved public wording.
 5. `docs/NAV-STRUCTURE.md` and `docs/NATIVE-EXPERIENCE-SYSTEM.md` — information architecture and interaction ownership.
 6. `docs/WEB-DESIGN-STANDARDS.md` — visual, responsive and accessibility requirements.
@@ -71,7 +71,7 @@ Historical briefs and superseded brand documents remain useful for provenance bu
 - Two commercial paths: **LOCS · CROWN** and **DIGITAL · WARENA**.
 - Canonical lockup: **NAKEBUSEN Locs ° Powered by WARENA**.
 - Homepage H1: **Your Beauty ° Your Way.**
-- LOCS: Retouch & Styling **KES 700+**; Sisterlocs Retie **KES 1,500+**; Artificial Locs Installation **KES 3,500**.
+- LOCS: Retouch & Styling **KES 700**; Sisterlocs Retie **KES 1,500**; Artificial Locs Installation **KES 3,500**.
 - No braiding or shaving claims.
 - An enquiry is not a confirmed booking.
 - Digital services are scoped per engagement; no blanket availability, security, uptime or warranty claims.
@@ -130,7 +130,7 @@ These remain explicit verification tasks, not assumed successes.
 | WADR-019 | P1 | `README.md`, `docs/WEBCOPY.md`, `docs/UI-UX-RESEARCH-2026-11-19.md` | Reconciled the repository orientation and canonical copy with the new research destination. | Review documentation consistency after CI. |
 | WADR-020 | P1 | `tests/browser.spec.cjs` | Updated homepage hierarchy expectations and added research-page smoke, link, responsive-overflow and axe checks. | CI execution and defect resolution. |
 
-The implementation does not modify payment details, commercial boundaries, approved starting prices, the founder role or the three-item floating dock. The research page is not a checkout, booking path or released product catalogue.
+The implementation does not modify payment details, commercial boundaries, approved published prices, the founder role or the three-item floating dock. The research page is not a checkout, booking path or released product catalogue.
 
 
 ## 9. Phase 3 quality remediation — 20 November 2026

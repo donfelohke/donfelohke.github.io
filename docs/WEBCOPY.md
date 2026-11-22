@@ -20,7 +20,7 @@ F3L0H / FELOH WARENA is the overarching human authorship and practice identity, 
 **Brand line:** Your Beauty ° Your Way.  
 **H1:** Your Beauty ° Your Way.  
 **Lead:** Natural loc care in Eldoret.  
-**Supporting copy:** Care for the locs you wear, in Eldoret Town. Explore services and starting prices, then speak directly with NAKEBUSEN about your requirements.  
+**Supporting copy:** Care for the locs you wear, in Eldoret Town. Explore the services and published prices, then contact NAKEBUSEN to discuss suitability, availability and the work you have in mind.  
 **Location:** Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
 
 ### NAKEBUSEN business history
@@ -31,11 +31,11 @@ NAKEBUSEN began in Lodwar, Turkana County, Kenya. Its loc-care practice continue
 
 | Service | Public price |
 |---|---:|
-| Retouch & Styling | KES 700+ |
-| Sisterlocs Retie | KES 1,500+ |
-| Artificial Locs Installation | KES 3,500+ |
+| Retouch & Styling | KES 700 |
+| Sisterlocs Retie | KES 1,500 |
+| Artificial Locs Installation | KES 3,500 |
 
-Published prices are indicative. Final cost depends on service scope, loc condition, materials and work required; the final amount is agreed before work begins. No braiding or shaving services are advertised.
+Published prices are indicative. Retouch & Styling and Sisterlocs Retie may vary with loc condition and the work required. Artificial Locs Installation is published at KES 3,500; confirm the agreed scope and amount directly before work begins. No braiding or shaving services are advertised.
 
 **Service descriptions:** Retouch & Styling refreshes and maintains existing locs. In Kiswahili, use “Matengenezo na upangaji wa loc”; the description is “Panga upya mwonekano na utunze loc zilizopo. Kazi itategemea hali ya loc na mahitaji yako.” Do not use the literal “Onyesha upya”, which does not mean refreshing hair. Sisterlocs Retie is retightening for established Sisterlocs; use “Kukaza upya Sisterlocs zilizokwishawekwa.” Artificial Locs Installation is scoped around the preferred style, materials and requirements; use “Uwekaji wa loc za bandia.” Do not imply washing, crochet or other unapproved inclusions.
 
@@ -43,7 +43,7 @@ Published prices are indicative. Final cost depends on service scope, loc condit
 
 ### DIGITAL
 
-Practical computing and infrastructure for individuals, homes, businesses and organisations.
+Practical GNU/Linux, computer and network support for individuals, homes, businesses and organisations. Each engagement is assessed and scoped around the equipment, needs and intended outcome.
 
 - GNU/Linux installation, administration and troubleshooting.
 - Computer diagnostics, recovery and maintenance.

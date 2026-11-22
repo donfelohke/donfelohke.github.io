@@ -8,12 +8,12 @@ Mark an item only after the check is performed against a named commit.
 - [ ] Locs is primary; Digital is secondary.
 - [ ] WARENA is a distinct capability domain, not a separate checkout.
 - [ ] IKAI is labelled research / WIP; GENJE creative practice.
-- [ ] English default; Kiswahili disclosure is complete and readable.
+- [ ] English default; Kiswahili disclosure is complete, readable and consistent with canonical web copy.
 
 ## Services and trust
-- [ ] Retouch & Styling — KES 700+.
-- [ ] Sisterlocs Retie — KES 1,500+.
-- [ ] Artificial Locs Installation — KES 3,500.
+- [ ] Retouch & Styling — KES 700.
+- [ ] Sisterlocs Retie — KES 1,500.
+- [ ] Artificial Locs Installation — KES 3,500 (no plus sign).
 - [ ] Location matches the facts register.
 - [ ] Enquiry-not-booking disclosure is visible.
 - [ ] Digital feasibility, scope and availability are qualified.

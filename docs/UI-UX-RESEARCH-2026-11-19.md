@@ -14,7 +14,7 @@ The homepage is a service-discovery and enquiry interface, not a portfolio landi
 The primary task is to help a visitor answer, quickly and confidently:
 
 1. Does NAKEBUSEN offer the service I need?
-2. What is the starting price and what affects the final quote?
+2. What is the published price and what affects the final quote?
 3. Where is the service offered?
 4. How do I make an enquiry?
 5. What happens after I enquire?
@@ -45,7 +45,7 @@ This record separates platform guidance, standards, controlled or observational 
 **Discover → Evaluate → Trust → Enquire → Human confirmation**
 
 - Discover: show NAKEBUSEN loc care and Eldoret service area without requiring a scroll through the founder's wider ecosystem.
-- Evaluate: show all three current services, plain-language scope and starting prices together.
+- Evaluate: show all three current services, plain-language scope and published prices together.
 - Trust: make location, contact identity, business boundaries and relevant terms easy to verify.
 - Enquire: launch a service-specific WhatsApp message with the selected service and useful context.
 - Confirm: a person confirms suitability, final price, availability and appointment details directly.
@@ -66,7 +66,7 @@ Recommended order:
 
 1. Header: NAKEBUSEN identity, theme/language controls and clear section navigation.
 2. Hero: concise loc-care proposition, Eldoret context and one primary enquiry action.
-3. Locs: three approved services, starting prices, concise inclusions/qualification and service-specific enquiry links.
+3. Locs: three approved services, published prices, concise inclusions/qualification and service-specific enquiry links.
 4. Trust and practical information: location, what happens after enquiry, and the booking boundary.
 5. Digital / WARENA: secondary technical service discovery with scoped engagement language.
 6. About / research / creative: founder identity and accurately labelled research/creative work.
@@ -76,10 +76,10 @@ Do not add a separate booking form, calendar, checkout, testimonials, customer c
 
 ### Service facts to preserve
 
-| Service | Public starting price |
+| Service | Public published price |
 |---|---:|
-| Retouch & Styling | KES 700+ |
-| Sisterlocs Retie | KES 1,500+ |
+| Retouch & Styling | KES 700 |
+| Sisterlocs Retie | KES 1,500 |
 | Artificial Locs Installation | KES 3,500 |
 
 The final quote and suitability are agreed directly. No braiding. Service location: **Loc care · Eldoret Town / Karibu Mdosi · Kenya**.
@@ -91,7 +91,7 @@ Preserve the published Support Us section and payment information. Do not add AP
 Design and verify from narrow viewports upward. Recommended test widths: 320, 360, 390, 430, 768, 1024 and 1280 CSS pixels.
 
 - At 320px, the page must not require horizontal scrolling.
-- The service name, starting price and enquiry action should be visible without card-to-card ambiguity.
+- The service name, published price and enquiry action should be visible without card-to-card ambiguity.
 - Avoid a hero that consumes the first screen with biography, abstract slogans or multiple equal-weight actions.
 - Keep the floating Locs / Digital / Connect dock only if it does not obscure content, focused elements, browser controls or WhatsApp actions.
 - Account for device safe areas and sticky-header anchor offsets.
@@ -286,7 +286,7 @@ Establish a baseline before claiming improvement. Track aggregate, privacy-respe
 | Task | Measure | Acceptance |
 |---|---|---|
 | Find loc services | Time and successful completion in moderated tests | At least 4/5 representative testers find the service list without assistance |
-| Identify price | Correct recall of starting prices | At least 4/5 testers identify all relevant starting prices correctly |
+| Identify price | Correct recall of published prices | At least 4/5 testers identify all relevant published prices correctly |
 | Find location | Correct recall of service area | At least 4/5 testers identify Eldoret Town / Karibu Mdosi |
 | Start enquiry | Correct service-specific WhatsApp handoff | 100% of tested service actions open the correct intent and message |
 | Understand booking state | Correct explanation of enquiry vs confirmation | No tester interprets enquiry as confirmed booking |
@@ -335,7 +335,7 @@ Use a small, diverse local usability sample as formative research, not as a stat
 9. Baymard Institute, Product Page UX 2026: https://baymard.com/research-articles/current-state-ecommerce-product-page-ux
 10. Doman Digital, MMM Beauty case study: https://www.domandigital.co.uk/work/mmm-beauty
 
-**Research conclusion:** NAKEBUSEN should be recognisable and expressive, but the highest-performing design is the one that helps a customer confidently understand the service, starting price, location and next step—with no unnecessary friction or false promises.
+**Research conclusion:** NAKEBUSEN should be recognisable and expressive, but the highest-performing design is the one that helps a customer confidently understand the service, published price, location and next step—with no unnecessary friction or false promises.
 
 
 ## 10. Comparative case-study synthesis and implementation priorities — 19 November 2026
@@ -348,14 +348,14 @@ This section translates current platform guidance and published UX benchmarks in
 |---|---|---|---|
 | Apple Human Interface Guidelines — Liquid Glass | Apple defines Liquid Glass as a functional layer for navigation and controls, separate from the content layer; it cautions against overuse and prioritises legibility. | Keep glass on the sticky header and floating section dock. Keep service descriptions and prices on stable, opaque surfaces. Honour reduced-transparency settings with opaque, unblurred controls. | Do not reproduce iOS system materials or assume browser CSS can match native platform rendering. |
 | Google Material 3 Expressive research | Google describes 46 studies and 18,000+ participants; its design principles use colour, shape, size, motion and containment to direct attention and group related elements. | Use section-specific colour roles and strong, consistent CTA treatment; let terracotta identify Locs and forest identify WARENA. | Do not interpret the aggregate research summary as evidence of a guaranteed fourfold improvement or copy a mobile-app component system into a static website. |
-| Baymard Travel Accommodations UX Benchmark 2026 | The benchmark covers 9 accommodation case studies and reports recurring problems around homepage task priority and transparent pricing. It is ecommerce/reservation research, not salon research. | Put the primary customer task first; state starting prices, what affects the final quote, service location and what happens after enquiry. Avoid hidden costs and ambiguous CTA labels. | Do not add hotel-style filters, availability search, checkout, reviews or reservation widgets to a service enquiry page. |
+| Baymard Travel Accommodations UX Benchmark 2026 | The benchmark covers 9 accommodation case studies and reports recurring problems around homepage task priority and transparent pricing. It is ecommerce/reservation research, not salon research. | Put the primary customer task first; state published prices, what affects the final quote, service location and what happens after enquiry. Avoid hidden costs and ambiguous CTA labels. | Do not add hotel-style filters, availability search, checkout, reviews or reservation widgets to a service enquiry page. |
 | W3C WCAG 2.2 and mobile guidance | Normative requirements cover keyboard focus, target size, reflow, focus not obscured, input modalities and accessible status. | Test at 320 CSS px, preserve visible 44px practical touch targets, make fixed navigation safe-area-aware, and ensure focus is not covered by the dock or sticky header. | A screenshot or automated axe pass alone cannot establish WCAG conformance. |
 | Google Core Web Vitals | Field targets at the 75th percentile: LCP ≤2.5s, INP ≤200ms and CLS ≤0.1. | Keep the static text-first page, avoid remote font and media dependencies, reserve layout space for any future assets, and measure field performance when enough traffic exists. | A local Playwright timing or Lighthouse lab score is not a substitute for field data. |
 
 ### Verified design decisions
 
 1. **Service-first first impression.** The loc-care offer and WhatsApp enquiry remain the primary customer path. WARENA remains visible but secondary; IKAI, GENJE and research/creative identity remain outside the primary commercial journey.
-2. **Price transparency.** Keep the approved public prices exact: Retouch & Styling KES 700+, Sisterlocs Retie KES 1,500+, Artificial Locs Installation KES 3,500. Explain that scope and final terms are agreed directly. Do not imply a fixed quote where the price is a starting point.
+2. **Price transparency.** Keep the approved public prices exact: Retouch & Styling KES 700, Sisterlocs Retie KES 1,500, Artificial Locs Installation KES 3,500. Explain that scope and final terms are agreed directly. Do not imply a fixed quote where the price is a starting point.
 3. **Location and confirmation.** Show Eldoret Town / Karibu Mdosi in the loc-care context. A WhatsApp enquiry is not a booking; a person confirms availability and final terms.
 4. **Glass is functional, not content decoration.** Header and floating dock may use glass where supported. Cards, service copy, prices and payment details stay legible on stable surfaces.
 5. **Respect display preferences.** Keep light and dark themes complete. When reduced transparency is requested, remove both translucency and backdrop blur rather than merely making the surface more opaque. Place the floating dock above the device safe-area inset plus a small visual gap.

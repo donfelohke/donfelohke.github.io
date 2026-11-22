@@ -14,13 +14,13 @@
 
 ### Published indicative prices
 
-| Service | Starting price (KES) | Scope note |
+| Service | Published indicative price (KES) | Scope note |
 |---|---:|---|
 | Retouch & Styling | **700** | Refresh and maintain existing locs; final scope depends on condition and work required |
 | Sisterlocs Retie | **1,500** | Retightening for established Sisterlocs; confirm suitability and requirements before work |
 | Artificial Locs Installation | **3,500** | Discuss preferred style, materials and installation requirements before work |
 
-Published prices are indicative, not guaranteed final quotes. Final cost depends on service scope, loc condition, materials and work required. Agree the final amount directly before work begins.
+Published prices are indicative, not guaranteed final quotes. Retouch & Styling and Sisterlocs Retie may vary with loc condition and work required. Artificial Locs Installation is published at KES 3,500. Agree the final scope and amount directly before work begins.
 
 ### Service boundaries
 

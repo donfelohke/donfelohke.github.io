@@ -37,7 +37,7 @@ The source audit inspected the actual `main` files:
 5. The hero's Locs and Digital overview panels are descriptive, not links. The hero already has a loc-care WhatsApp action, a Digital anchor action and a Research link. Do not add competing navigation controls without checking the one-dock navigation model and existing tests.
 6. The Open Graph image is absent. A social image is not part of this implementation until a genuine, approved, permission-cleared asset exists.
 7. The font stack names Cormorant Garamond, Inter and JetBrains Mono, but no font files are loaded. The approved standards require system fallbacks and prohibit external font CDNs. Do not claim those named fonts are loaded.
-8. The earlier audit note about `docs/NATIVE-EXPERIENCE-SYSTEM.md` was inaccurate: that document already states Artificial Locs Installation as **KES 3,500**, without a plus sign, matching `docs/PUBLIC-FACTS-REGISTER.md`, `docs/SERVICE-CATALOG.md` and the current site test assertion. The stale `KES 3,500+` notation in `docs/NAV-STRUCTURE.md` and `docs/UI-UX-PRODUCT-SPEC.md` is corrected in the 2026-11-21 documentation reconciliation. The public price is unchanged.
+8. The earlier audit note about `docs/NATIVE-EXPERIENCE-SYSTEM.md` was inaccurate: that document already states Artificial Locs Installation as **KES 3,500**, without a plus sign, matching `docs/PUBLIC-FACTS-REGISTER.md`, `docs/SERVICE-CATALOG.md` and the current site test assertion. The stale `KES 3,500` notation in `docs/NAV-STRUCTURE.md` and `docs/UI-UX-PRODUCT-SPEC.md` is corrected in the 2026-11-21 documentation reconciliation. The public price is unchanged.
 
 ## 3. Approved visual direction to implement
 
@@ -78,7 +78,7 @@ Remove the later decorative cascade that adds radial page glows, gradient hero/c
 | `index.html` — `<head>` | Add a small synchronous theme bootstrap before the main stylesheet. Resolve valid saved theme first, otherwise `prefers-color-scheme`; set `data-theme` and the matching initial colour-scheme metadata before CSS paint. | Catch storage errors. No external script, network call or dependency. Preserve manual override semantics. |
 | `index.html` — CSS tokens | Consolidate duplicated CSS into one authoritative token/component definition. Define paired light/dark variables and context-specific focus tokens. | Keep CSS inline unless a separate asset is approved. No late override pile. Preserve all current component selectors or update tests with the reviewed change. |
 | `index.html` — header / hero | Preserve canonical lockup and current H1/copy. Keep one clear primary Locs enquiry and one secondary Digital path; preserve the Research destination. | No invented emblem, new claim or competing navigation system. |
-| `index.html` — Locs section | Preserve service names, scope descriptions and service-specific WhatsApp links. Render starting prices consistently as KES 700+, KES 1,500+ and KES 3,500 (from KES 3,500). | Do not change the amounts, introduce braiding/shaving, or imply booking/availability. |
+| `index.html` — Locs section | Preserve service names, scope descriptions and service-specific WhatsApp links. Render published prices consistently as KES 700, KES 1,500 and KES 3,500 (KES 3,500). | Do not change the amounts, introduce braiding/shaving, or imply booking/availability. |
 | `index.html` — Digital / Connect / footer | Apply native dark surfaces and contrast-safe text, focus and link states. Preserve payment and merchant safety instructions. | ONLY NAKEBUSEN TRANSACTS. No new checkout, STK Push or automated payment verification. |
 | `index.html` — application JavaScript | Retain the existing preference controller and language-aware WhatsApp message generation. Reconcile it with the early bootstrap so there is one source of truth and no flash or preference overwrite. | Preserve English/Kiswahili, storage-failure behaviour, aria labels, metadata and dock observer. |
 | `tests/theme-toggle.test.cjs` | Extend unit coverage for early bootstrap: stored light/dark preference, system light/dark fallback, invalid stored value and unavailable storage. Verify the later controller does not override the resolved initial theme. | Keep current language, WhatsApp, theme metadata and storage exception assertions. |
@@ -125,7 +125,7 @@ The implementation must preserve:
 
 - Canonical lockup: **NAKEBUSEN Locs ° Powered by WARENA**.
 - Homepage H1: **Your Beauty ° Your Way.**
-- Approved service labels and amounts: Retouch & Styling KES 700+; Sisterlocs Retie KES 1,500+; Artificial Locs Installation KES 3,500.
+- Approved service labels and amounts: Retouch & Styling KES 700; Sisterlocs Retie KES 1,500; Artificial Locs Installation KES 3,500.
 - Location: Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
 - WhatsApp `+254 719 635 415`, telephone and email as currently registered.
 - Published Buy Goods Till 3511456 and merchant name FELIX LWOVA, with the existing payment safety language.
@@ -189,6 +189,6 @@ Approval authorises the implementation branch only; it does not authorise deploy
 - [x] Approve CSS consolidation and removal of decorative gradient/shadow/scroll animation cascade.
 - [x] Approve early synchronous theme bootstrap and the stated preference precedence.
 - [x] Approve the file-by-file scope and automated/manual acceptance gates.
-- [x] Approve documentation-only correction of the stale KES 3,500+ notation to KES 3,500.
+- [x] Approve documentation-only correction of the stale KES 3,500 notation to KES 3,500.
 
 **Approval recorded:** all six decisions above were approved on 19 November 2026. Implementation is limited to this review branch. Merge and deployment require separate approval.
