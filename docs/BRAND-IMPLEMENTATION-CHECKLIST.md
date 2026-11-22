@@ -20,7 +20,7 @@ Status meanings: APPROVED = decision approved; IMPLEMENTED = code changed; TESTE
 - [x] GENJE ZA WARENA is governing intention, not a separate commercial division.
 - [x] WARENA Systems belongs within DIGITAL.
 - [x] IKAI is research, not a released product.
-- [x] Sisterlocs Retie is the canonical public service label; KES 1,500+ remains the starting price.
+- [x] Sisterlocs Retie is the canonical public service label; From KES 1,500 remains the starting price.
 - [x] Public role line: Founder · CTO · Loctician · Creative Technologist.
 
 These checkboxes record approved decisions, not test results.
