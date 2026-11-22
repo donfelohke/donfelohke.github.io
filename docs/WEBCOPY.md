@@ -21,7 +21,11 @@ F3L0H / FELOH WARENA is the overarching human authorship and practice identity, 
 **H1:** Your Beauty ° Your Way.  
 **Lead:** Natural loc care in Eldoret.  
 **Supporting copy:** Care for the locs you wear, in Eldoret Town. Explore the services and published prices, then contact NAKEBUSEN to discuss suitability, availability and the work you have in mind.  
-**Location:** Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
+**Location:** Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.  
+**Map pin:** F743+R35, Eldoret, Kenya · [Open NAKEBUSEN in Google Maps](https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6).  
+**CBD directions:** [Driving](https://www.google.com/maps/dir/?api=1&origin=Eldoret%20CBD%2C%20Eldoret%2C%20Kenya&destination=F743%2BR35%2C%20Eldoret%2C%20Kenya&travelmode=driving) · [Walking](https://www.google.com/maps/dir/?api=1&origin=Eldoret%20CBD%2C%20Eldoret%2C%20Kenya&destination=F743%2BR35%2C%20Eldoret%2C%20Kenya&travelmode=walking).  
+**Text directions:** From Eldoret CBD, open the pin and select Directions. For matatu travel, confirm the drop-off with the conductor; do not treat “Malel Stage” as a verified stop. Share the pin with a boda boda rider for the final leg.  
+**Home calls:** Loc-care home visits may be arranged within the wider Eldoret Town area after direct confirmation of the exact location, service suitability, availability and travel arrangements.
 
 ### NAKEBUSEN business history
 
