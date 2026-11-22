@@ -89,6 +89,13 @@ class PublicationTests(unittest.TestCase):
         self.assertIn('lang="en"', HTML)
         self.assertIn("#language-sw:checked~main .lang-en", CSS)
         self.assertIn("#language-sw:checked~main .lang-sw", CSS)
+        self.assertIn("#language-sw:checked~footer .lang-en", CSS)
+        self.assertIn("#language-sw:checked~footer .lang-sw", CSS)
+        self.assertIn("#language-sw:checked~header .lang-sw", CSS)
+        self.assertIn("#language-sw:checked~.floating-dock .lang-sw", CSS)
+        self.assertIn("#language-sw:checked~.skip-link .lang-sw", CSS)
+        self.assertIn("Ruka hadi kwenye maudhui", HTML)
+        self.assertIn("Choose language / Chagua lugha", HTML)
         self.assertNotIn("<script", HTML.lower())
         self.assertEqual(0, self.parser.scripts)
 
@@ -164,6 +171,36 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("googletagmanager", CSS.lower())
         self.assertFalse((ROOT / "package.json").exists())
         self.assertTrue((ROOT / "LICENSE").exists())
+
+    def test_footer_language_parity_and_payment_safety(self):
+        for phrase in (
+            "NAKEBUSEN · BIASHARA", "Utunzaji wa loc · Eldoret.",
+            "MALIPO YA HUDUMA KWA MKONO · M-PESA", "Buy Goods",
+            "Nambari ya Till", "Jina la akaunti / mfanyabiashara",
+            "Usishiriki PIN yako ya M-PESA",
+            "KAZI HURU · MSAADA WA HIARI", "Tuunge Mkono",
+            "Uliza kuhusu kusaidia kazi",
+        ):
+            self.assertIn(phrase, HTML)
+        self.assertIn('class="lang-en" lang="en"', HTML)
+        self.assertIn('class="lang-sw" lang="sw"', HTML)
+        self.assertEqual(2, HTML.count("<dd>3511456</dd>"))
+        self.assertIn("separate from NAKEBUSEN service payments", HTML)
+        self.assertIn("Ni tofauti na malipo ya huduma za NAKEBUSEN", HTML)
+
+    def test_social_metadata_is_accurate_and_has_no_unapproved_image(self):
+        for phrase in (
+            'property="og:type" content="website"',
+            'property="og:site_name" content="NAKEBUSEN · Don Feloh"',
+            'property="og:url" content="https://donfelohke.github.io/"',
+            'property="og:locale" content="en_KE"',
+            'property="og:locale:alternate" content="sw_KE"',
+            'name="twitter:card" content="summary"',
+            'name="description"',
+        ):
+            self.assertIn(phrase, HTML)
+        self.assertNotIn('property="og:image"', HTML)
+        self.assertNotIn('name="twitter:image"', HTML)
 
     def test_sitemap_is_one_page(self):
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")

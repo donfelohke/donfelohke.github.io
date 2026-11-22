@@ -29,14 +29,14 @@ The site is the public gateway to one human author's connected body of work. F3L
 6. **IKAI / MIRROR:** reflective-computing and mirror research with maturity disclosure.
 7. **GENJE / EXPRESSION:** creative and embodied practice.
 8. **FELOH Corpus:** shared canon, documentation, research provenance and repository index.
-9. **Kiswahili:** optional native disclosure, never the default language.
+9. **Kiswahili:** optional native radio-control language selection, never the default language; CSS toggles translated content in the skip link, header, main page, footer and floating dock.
 10. **Connect / footer:** NAKEBUSEN business information, M-PESA manual payment instructions, separate voluntary Support Us, source and copyright links.
 
 The four-practice map is an orientation layer, not a replacement for the detailed domain sections or canonical GitHub repositories. The homepage remains one HTML document and retains the three-destination LOCS / DIGITAL / CONNECT dock.
 
 ## Navigation
 
-- Topbar: F3L0H / FELOH WARENA identity anchor and optional Kiswahili jump.
+- Topbar: NAKEBUSEN brand lockup, Don Feloh authorship mark, and English / Kiswahili selector. The header leads with the approved NAKEBUSEN homepage identity; authorship remains visible without replacing the commercial lead.
 - Floating dock: exactly three destinations — LOCS (#crown), DIGITAL (#code), CONNECT (#connect).
 - Domain and repository destinations remain contextual links in their respective content sections.
 - No duplicated six-item top navigation.
@@ -46,7 +46,7 @@ The four-practice map is an orientation layer, not a replacement for the detaile
 - One public HTML document and one primary CSS stylesheet.
 - No JavaScript, framework, static-site generator, package manager or build step.
 - No analytics, tracking, remote fonts or third-party UI runtime.
-- English default; Kiswahili native disclosure.
+- English default; Kiswahili selected through native radio controls and CSS visibility across the skip link, header, main content, footer and floating dock. No JavaScript language runtime or saved preference is used.
 - Theme follows operating-system colour preference.
 - Native anchors and direct contact URLs only.
 - No forms, customer database, payment APIs, STK push or automated payment verification.
