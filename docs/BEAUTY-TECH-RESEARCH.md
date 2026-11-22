@@ -35,8 +35,8 @@ Do not place a long founder biography, ecosystem manifesto, or research project 
 ### Verified starting-price catalogue
 | Service | Starting price |
 | --- | ---: |
-| Retouch & Styling | KES 700+ |
-| Sisterlocs Retie | KES 1,500+ |
+| Retouch & Styling | From KES 700 |
+| Sisterlocs Retie | From KES 1,500 |
 | Artificial Locs Install | KES 3,500 |
 
 Prices are starting points. Confirm scope, loc condition, materials, final quote and appointment timing directly. Do not advertise braiding, home visits, same-day availability, fixed completion times or free extras unless separately verified and approved.
