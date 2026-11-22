@@ -21,7 +21,7 @@ The site is the public gateway to one human author's connected body of work. F3L
 
 ## Information architecture
 
-1. **Home / NAKEBUSEN LOCS:** commercial-first hero, location, current starting prices and direct enquiry.
+1. **Home / NAKEBUSEN LOCS:** commercial-first hero, location, current published prices and direct enquiry.
 2. **NAKEBUSEN DIGITAL:** GNU/Linux, computer care, networking, infrastructure and local-first computing capability areas; per-engagement scope and quotation.
 3. **Don Feloh / F3L0H:** human author and founder identity, role, biography and contact directory; placed immediately after the commercial introduction.
 4. **Four-practice map:** a compact, linked orientation to NAKEBUSEN / ROOT, WARENA / CAPABILITY, IKAI / MIRROR and GENJE / EXPRESSION, with each domain's public status made explicit.
@@ -64,8 +64,8 @@ The four-practice map is an orientation layer, not a replacement for the detaile
 
 ## Publication invariants
 
-- Retouch & Styling — From KES 700 (published indicative price).
-- Sisterlocs Retie — From KES 1,500 (published indicative price).
+- Retouch & Styling — KES 700 (published indicative price).
+- Sisterlocs Retie — KES 1,500 (published indicative price).
 - Artificial Locs Installation — KES 3,500.
 - Location: Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
 - No braiding, shaving, invented street address, opening hours, appointment availability, testimonials or credentials.
