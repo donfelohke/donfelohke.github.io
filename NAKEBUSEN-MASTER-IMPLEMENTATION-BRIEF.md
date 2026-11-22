@@ -44,12 +44,12 @@ Preserve the degree sign `°`. Do not substitute a bullet or middle dot.
 
 ## 4. LOCS services and prices
 
-All prices are starting prices in Kenyan shillings.
+All prices are published prices in Kenyan shillings.
 
 | Service | Starting price |
 |---|---:|
-| Retouch & Styling | From KES 700 |
-| Sisterlocs Retie | From KES 1,500 |
+| Retouch & Styling | KES 700 |
+| Sisterlocs Retie | KES 1,500 |
 | Artificial Locs Installation | KES 3,500 |
 
 Final cost depends on service scope, loc condition and materials. No braiding or shaving. Do not promise unverified home visits or appointment availability. An enquiry is not a confirmed booking.
