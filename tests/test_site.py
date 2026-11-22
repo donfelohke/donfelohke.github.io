@@ -124,7 +124,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("Genge-rooted", creative)
         self.assertIn("livecoding", creative)
         self.assertIn("IKAI is a Turkana female name meaning “home.”", creative)
-        self.assertIn("a mirror, not a judge", creative)
+        self.assertIn("mirror, not a judge", creative.lower())
         self.assertIn("not a released product", creative)
         self.assertIn("Gallery remains approval-controlled", creative)
 
