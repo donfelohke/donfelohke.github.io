@@ -6,7 +6,7 @@
 
 ## Executive decision
 
-Keep the site as a lightweight, text-first single page. Make the navigation more descriptive without adding a menu drawer, external assets, analytics, a booking form or new brand divisions. The primary customer journey is loc care → understand starting prices → enquire on WhatsApp → confirm suitability, price and availability directly.
+Keep the site as a lightweight, text-first single page. Make the navigation more descriptive without adding a menu drawer, external assets, analytics, a booking form or new brand divisions. The primary customer journey is loc care → understand published prices → enquire on WhatsApp → confirm suitability, price and availability directly.
 
 The navigation labels are now explicitly separated from internal section/brand terminology:
 
@@ -41,7 +41,7 @@ Reviewed the current `index.html`, `README.md`, `docs/WEB-DESIGN-STANDARDS.md`, 
 
 - Brand: **NAKEBUSEN Locs • Digital**
 - Current primary local service context: **Eldoret Town / Karibu Mdosi**
-- Service price cues remain starting prices: Retouch & Styling — **From KES 700**; Sisterlocs Retie — **From KES 1,500**; Artificial Locs Installation — **KES 3,500**.
+- Service price cues remain published prices: Retouch & Styling — **KES 700**; Sisterlocs Retie — **KES 1,500**; Artificial Locs Installation — **KES 3,500**.
 - Primary action: WhatsApp loc-care enquiry.
 - Booking boundary: an enquiry is not a confirmed booking; availability, suitability, final price and appointment details are confirmed directly.
 
@@ -86,7 +86,7 @@ For each viewport, verify:
 - 200% browser zoom and text resizing without loss of content or functionality.
 - Sticky-header anchor positioning after selecting every navigation link.
 - WhatsApp links open the correct prefilled language and enquiry purpose; verify actual handoff on a real device.
-- Starting prices and booking disclaimer remain visible and consistent.
+- Published prices and booking disclaimer remain visible and consistent.
 - No horizontal overflow, clipped focus indicator, duplicate IDs or console errors.
 - The deployed source corresponds to the reviewed commit.
 
