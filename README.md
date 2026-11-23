@@ -73,3 +73,23 @@ Source checks do not replace manual browser, keyboard, screen-reader and live Pa
 See [docs/NAV-STRUCTURE.md](docs/NAV-STRUCTURE.md), [docs/PUBLIC-FACTS-REGISTER.md](docs/PUBLIC-FACTS-REGISTER.md), [docs/SERVICE-CATALOG.md](docs/SERVICE-CATALOG.md) and [docs/CONTENT-GOVERNANCE.md](docs/CONTENT-GOVERNANCE.md) for source authority and publication controls.
 
 NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret. This is the business's history, not a claim about the founder's personal roots.
+
+
+## GRACE · GRIT · GLORY — master identity
+
+The public hero expresses one human author and distinct practices:
+
+- **DON FELOH / @donfelohke** — human authorship and accountability.
+- **GRACE → NAKEBUSEN** — beauty, heritage, craft and dignity.
+- **GRIT → WARENA** — freedom, technology, infrastructure and independent works.
+- **GLORY → DON FELOH** — creative expression, authorship and becoming.
+- **GENJE** — embodied creative practice: Genge, sound, livecoding, movement and choreography.
+- **IKAI** — reflective computing, home, existence and knowledge; research / work in progress.
+
+**GENJE ZA WARENA | NAKEBUSEN** is the shared expressive signature, not a merger of the operating identities.
+
+> FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
+
+**ONLY NAKEBUSEN TRANSACTS.** Keep service enquiries, availability and agreed terms within NAKEBUSEN. Preserve published service facts, the enquiry-not-booking disclosure, manual payment safeguards and the text-first native HTML/CSS publication model.
+
+Canonical identity specification: [GRACE · GRIT · GLORY — GENJE ZA WARENA | NAKEBUSEN](docs/GRACE-GRIT-GLORY-GENJE-ZA-WARENA-IDENTITY-SYSTEM-2026-11-23.md).

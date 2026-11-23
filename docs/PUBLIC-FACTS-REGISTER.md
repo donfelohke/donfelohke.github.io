@@ -1,7 +1,7 @@
 # NAKEBUSEN — Public Facts Register
 
 **Document ID:** NB-PFR-01  
-**Version:** M7 · 20 November 2026  
+**Version:** M8 · 23 November 2026  
 **Status:** Publication control · aligned to current F3L0H constitution  
 **Authority:** @donfelohke
 
@@ -24,9 +24,9 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-001 | NAKEBUSEN is the ROOT domain: grounded physical practice, beauty, heritage, craft and enterprise; it is the only live commercial practice | F2 | Canonical under the 2026-11-20 F3L0H constitution; not a parent of the other practice domains |
 | PF-002 | ONLY NAKEBUSEN TRANSACTS | F2 | Canonical commercial boundary |
 | PF-003 | NAKEBUSEN may present LOCS and DIGITAL service paths; all commercial enquiries, agreements and transactions remain through NAKEBUSEN | F2 | Canonical commercial boundary; WARENA is a separate capability domain, not a NAKEBUSEN sub-brand |
-| PF-004 | Lockup: NAKEBUSEN Locs ° Powered by WARENA | F2 | Preserve exact degree sign |
+| PF-004 | Historical lockup: NAKEBUSEN Locs ° Powered by WARENA | F2 | Superseded as the master hero lockup on 23 November 2026; retain only where NAKEBUSEN-specific context calls for it |
 | PF-005 | Supporting signature: @donfelohke · #HisGenjeness | F2 | Use where appropriate |
-| PF-006 | Homepage headline: Your Beauty ° Your Way. | F2 | Approved 9 November 2026; supersedes the previous editorial-first H1 |
+| PF-006 | NAKEBUSEN brand line: Your Beauty ° Your Way. | F2 | Retained as the NAKEBUSEN brand line; no longer the master homepage H1 |
 | PF-007 | Homepage supporting statement: NAKEBUSEN is the ROOT practice for natural loc care and grounded enterprise; practical technology services, where offered, are provided through NAKEBUSEN with WARENA capability. | F2 | Current public-copy direction; preserve founder attribution separately and do not imply WARENA is a sub-brand |
 | PF-008 | NAKEBUSEN adopted meaning “Beautiful” in Turkana | F4 | Attribute as founder-supplied interpretation pending linguistic verification |
 | PF-009 | GENJE ZA WARENA interpreted as “THE FIRE OF THE FORMIDABLE” | F4 | Brand interpretation only; not verified etymology |
@@ -51,7 +51,7 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-028 | Copyright holder | F4 | Confirm before changing legal attribution |
 | PF-029 | Opening hours and street address | F5 | Do not invent |
 | PF-030 | Appointment availability | F5 | An enquiry is not a confirmed booking |
-| PF-031 | Public role line: Founder · CTO · Loctician · Creative Technologist | F2 | Approved for public presentation 9 November 2026; role wording is not a certification claim |
+| PF-031 | Public role line: Founder, NAKEBUSEN · Founder & CTO, WARENA · Loctician · Creative Technologist | F2 | Approved explicit role attribution for public presentation 23 November 2026; not a certification claim |
 | PF-032 | M-PESA Buy Goods Till: 3511456; account / merchant name: FELIX LWOVA | F1 | Published payment details restored from the previously published verified record on 10 November 2026; changes require re-verification of merchant authority and payment purpose |
 | PF-033 | Payment is due only after the service and total amount are agreed directly with NAKEBUSEN | F1 | Customer must confirm the displayed merchant name and amount before entering a PIN; never request or share a PIN or one-time code |
 
@@ -59,6 +59,9 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-034 | NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret | F1 | Founder-supplied business-history fact. Keep distinct from founder biography, birthplace and ancestry. |
 | PF-035 | Public directions reference: F743+R35, Eldoret, Kenya; supplied Google Maps pin: https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6 | F1 | Owner-supplied map reference. Publish the short Plus Code with Eldoret locality. Do not claim an independently verified street address, entrance, coordinates or transit stage. |
 | PF-036 | Loc-care home calls may be arranged across the wider Eldoret Town service area | F1 | Confirm exact location, service suitability, availability and any travel costs directly before confirming a visit. Coverage is assessed by location; no fixed kilometre radius or universal coverage is promised. |
+
+| PF-037 | Master identity: DON FELOH / @donfelohke · GRACE · GRIT · GLORY · GENJE ZA WARENA | NAKEBUSEN | F2 | Canonical identity system approved 23 November 2026; see FELOH Corpus identity constitution |
+| PF-038 | GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → DON FELOH | F2 | Governing philosophy; distinct practices remain independently described and governed |
 
 ## Publication controls
 
@@ -77,3 +80,8 @@ This register controls factual claims used on the website, service catalogue, pr
 ## Constitutional alignment — 2026-11-20
 
 The four practice domains are NAKEBUSEN / ROOT, IKAI / MIRROR, GENJE / EXPRESSION and WARENA / CAPABILITY. F3L0H is the overarching human authorship identity, not a fifth domain. **ONLY NAKEBUSEN TRANSACTS.** Historical claims in this register that describe NAKEBUSEN as the parent enterprise or WARENA as a sub-brand are superseded by PF-001, PF-003 and PF-011 above. This register remains the source of record for approved public facts such as service prices, contact details and payment wording.
+
+
+## Master identity update — 2026-11-23
+
+The master homepage hero is **DON FELOH / @donfelohke · GRACE · GRIT · GLORY · GENJE ZA WARENA | NAKEBUSEN**. GRACE maps to NAKEBUSEN; GRIT maps to WARENA; GLORY expresses DON FELOH's human authorship. GENJE remains embodied creative practice and IKAI remains reflective research. **ONLY NAKEBUSEN TRANSACTS.** The master identity does not change the service catalogue or payment boundary.

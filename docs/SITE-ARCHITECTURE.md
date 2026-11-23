@@ -81,3 +81,8 @@ Source tests, artifact creation, manual deployment, deployment result and live i
 ## Business-history and biography distinction
 
 NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret. This is the business's history and must not be attributed to the founder as personal roots, birthplace or ancestry.
+
+
+## Identity architecture — 2026-11-23
+
+The master hero belongs to DON FELOH / @donfelohke and balances GRACE · GRIT · GLORY. NAKEBUSEN remains the commercial entry point; WARENA, GENJE and IKAI retain distinct technical, creative and research roles. **ONLY NAKEBUSEN TRANSACTS.**
