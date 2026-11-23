@@ -1,6 +1,6 @@
 # Don Feloh Website — Canonical Copy
 
-**Version:** 22 November 2026  
+**Version:** 23 November 2026  
 **Factual authority:** PUBLIC-FACTS-REGISTER.md · SERVICE-CATALOG.md  
 **Constitutional authority:** FELOH Sovereign Master Corpus
 
@@ -12,13 +12,13 @@
 
 F3L0H / FELOH WARENA is the overarching human authorship and practice identity, not a fifth practice domain.
 
-**Philosophy:** GRACE · GRIT · GLORY.\n\n- GRACE → NAKEBUSEN: beauty, heritage, craft and dignity.\n- GRIT → WARENA: freedom, technology and infrastructure.\n- GLORY → DON FELOH: human authorship, expression and becoming.\n\n**Signature:** GENJE ZA WARENA | NAKEBUSEN.\n\n**Relationship:** FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
+**Philosophy:** GRACE · GRIT · GLORY.\n\n- GRACE → NAKEBUSEN: beauty, heritage, craft and dignity.\n- GRIT → WARENA: freedom, technology and infrastructure.\n- GLORY → DON FELOH: human authorship, expression and becoming.\n\n**Signature:** GENJE ZA WARENA | NAKEBUSEN.\n\n**Philosophy:** GRACE · GRIT · GLORY.\n\n- GRACE → NAKEBUSEN: beauty, heritage, craft and dignity.\n- GRIT → WARENA: freedom, technology and infrastructure.\n- GLORY → DON FELOH: human authorship, expression and becoming.\n\n**Hero signature:** GENJE ZA WARENA | NAKEBUSEN.\n\n**Relationship:** FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
 
-## 1. NAKEBUSEN · ROOT — only live commercial practice\n\nNAKEBUSEN is the GRACE expression: beauty, heritage, craft and dignity. It remains the commercial lead and the only live commercial practice.
+## 1. NAKEBUSEN · ROOT — only live commercial practice\n\nNAKEBUSEN is the GRACE expression: beauty, heritage, craft and dignity. It remains the commercial lead and the only live commercial practice.\n\nNAKEBUSEN is the GRACE expression: beauty, heritage, craft and dignity. It remains the commercial lead and the only live commercial practice.
 
 **Eyebrow:** NAKEBUSEN · ROOT · LOC CARE · ELDORET, KENYA  
 **Brand line:** Your Beauty ° Your Way.  
-**H1:** Your Beauty ° Your Way.  
+**Master hero H1:** GRACE. GRIT. GLORY.\n**Hero signature:** GENJE ZA WARENA | NAKEBUSEN.\n**NAKEBUSEN brand line:** Your Beauty ° Your Way.  
 **Lead:** Natural loc care in Eldoret.  
 **Supporting copy:** Care for the locs you wear, in Eldoret Town. Explore the services and published prices, then contact NAKEBUSEN to discuss suitability, availability and the work you have in mind.  
 **Location:** Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.  
@@ -35,8 +35,8 @@ NAKEBUSEN began in Lodwar, Turkana County, Kenya. Its loc-care practice continue
 
 | Service | Public price |
 |---|---:|
-| Retouch & Styling | KES 700 |
-| Sisterlocs Retie | KES 1,500 |
+| Retouch & Styling | KES 700+ |
+| Sisterlocs Retie | KES 1,500+ |
 | Artificial Locs Installation | KES 3,500 |
 
 Published prices are indicative. Retouch & Styling and Sisterlocs Retie may vary with loc condition and the work required. Artificial Locs Installation is published at KES 3,500; confirm the agreed scope and amount directly before work begins. No braiding or shaving services are advertised.
@@ -61,7 +61,7 @@ These are capability areas, not a guarantee that every engagement is immediately
 
 **Commercial process:** The customer describes the problem; NAKEBUSEN assesses requirements and feasibility; scope, deliverables, price and support terms are agreed; work begins only after direct agreement.
 
-## 2. WARENA · CAPABILITY\n\nWARENA is the GRIT expression: freedom, engineering, technical infrastructure and independent works. It remains distinct from NAKEBUSEN.
+## 2. WARENA · CAPABILITY\n\nWARENA is the GRIT expression: freedom, engineering, technical infrastructure and independent works. It remains distinct from NAKEBUSEN.\n\nWARENA is the GRIT expression: freedom, engineering, technical infrastructure and independent works. It remains distinct from NAKEBUSEN.
 
 **Heading:** WARENA — Freedom Is a System.
 
@@ -71,7 +71,7 @@ Areas of work include GNU/Linux systems, workstation environments, infrastructur
 
 These describe the technical domain and documented areas of exploration; they are not a promise of immediate service availability or a separate checkout path.
 
-## 3. IKAI · MIRROR — research / work in progress\n\nIKAI is the reflective research dimension. It remains research / work in progress, not a released product.
+## 3. IKAI · MIRROR — research / work in progress\n\nIKAI is the reflective research dimension. It remains research / work in progress, not a released product.\n\nIKAI is the reflective research dimension. It remains research / work in progress, not a released product.
 
 IKAI explores mirror systems, optics, displays, sensing and human-computer interaction. Its research asks how reflective environments can support presence, expression and embodied interaction.
 
@@ -81,7 +81,7 @@ IKAI is a research track, not a released product or a commercial service. IKAI i
 
 Primary source: [IKAI Mirror Technology and Scholarly Research](https://github.com/donfelohke/Ikai/blob/main/docs/IKAI-MIRROR-TECHNOLOGY-AND-SCHOLARLY-RESEARCH-2026-11-18.md).
 
-## 4. GENJE · EXPRESSION — creative practice\n\nGENJE is the embodied creative expression in the shared identity signature **GENJE ZA WARENA | NAKEBUSEN**. This relationship does not make GENJE a WARENA product or a commercial checkout.
+## 4. GENJE · EXPRESSION — creative practice\n\nGENJE is the embodied creative expression in the shared identity signature **GENJE ZA WARENA | NAKEBUSEN**. This relationship does not make GENJE a WARENA product or a commercial checkout.\n\nGENJE is the embodied creative expression in the shared identity signature **GENJE ZA WARENA | NAKEBUSEN**. This relationship does not make GENJE a WARENA product or a commercial checkout.
 
 Genge, music, choreography, movement, livecoding and embodied knowledge. GENJE is a creative practice where sound, code, rhythm and the moving body meet.
 
