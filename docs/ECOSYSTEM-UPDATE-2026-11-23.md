@@ -7,7 +7,7 @@
 
 ## Scope
 
-The authenticated GitHub inventory contains eleven public repositories:
+The authenticated GitHub inventory contains ten public repositories:
 
 1. [donfelohke.github.io](https://github.com/donfelohke/donfelohke.github.io) — public website and publication controls.
 2. [feloh-corpus](https://github.com/donfelohke/feloh-corpus) — shared canon, governance, evidence and provenance.
