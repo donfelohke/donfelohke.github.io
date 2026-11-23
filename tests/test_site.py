@@ -60,7 +60,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("Sovereign", HTML)
         self.assertIn("GRACE · GRIT · GLORY", HTML)
         self.assertIn("professional loc care and practical technology services in Eldoret Town, Kenya", HTML)
-        self.assertIn("Utunzaji wa loc za asili Eldoret.", HTML)
+        self.assertIn("NAKEBUSEN inaunganisha huduma za kitaalamu za loc", HTML)
         self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
         self.assertIn("Founder, NAKEBUSEN · Founder &amp; CTO, WARENA · Loctician · Creative Technologist", HTML)
         self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
@@ -260,8 +260,8 @@ class PublicationTests(unittest.TestCase):
         for phrase in (
             'property="og:type" content="website"',
             'property="og:site_name" content="NAKEBUSEN · DON FELOH"',
-            'property="og:title" content="NAKEBUSEN · Natural Loc Care in Eldoret — Don Feloh"',
-            'name="twitter:title" content="NAKEBUSEN · Natural Loc Care in Eldoret — Don Feloh"',
+            'property="og:title" content="NAKEBUSEN × WARENA POWERED · Beautiful Roots. Sovereign Systems."',
+            'name="twitter:title" content="NAKEBUSEN × WARENA POWERED · Beautiful Roots. Sovereign Systems."',
             'property="og:url" content="https://donfelohke.github.io/"',
             'property="og:locale" content="en_KE"',
             'property="og:locale:alternate" content="sw_KE"',
@@ -271,8 +271,9 @@ class PublicationTests(unittest.TestCase):
             self.assertIn(phrase, HTML)
         self.assertNotIn('property="og:image"', HTML)
         self.assertNotIn('name="twitter:image"', HTML)
-        self.assertIn("NAKEBUSEN | Natural Loc Care in Eldoret, Kenya · Don Feloh", HTML)
-        self.assertIn("Sisterlocs Retie and Artificial Locs Installation", HTML)
+        self.assertIn("NAKEBUSEN × WARENA POWERED | Beautiful Roots. Sovereign Systems.", HTML)
+        self.assertIn("Sisterlocs Retie", HTML)
+        self.assertIn("Artificial Locs Installation", HTML)
         self.assertIn('media="(prefers-color-scheme: light)"', HTML)
         self.assertIn('media="(prefers-color-scheme: dark)"', HTML)
         self.assertNotIn('rel="icon"', HTML)
