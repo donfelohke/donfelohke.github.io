@@ -54,10 +54,13 @@ class PublicationTests(unittest.TestCase):
         self.assertIn('<html lang="en">', HTML)
         self.assertIn('<main id="main">', HTML)
         self.assertEqual(2, self.parser.h1)
-        self.assertIn("NAKEBUSEN Locs ° Powered by WARENA", HTML)
-        self.assertIn("Your Beauty", HTML)
+        self.assertIn("Locs · GRACE · GRIT · GLORY", HTML)
+        self.assertIn("GENJE ZA WARENA", HTML)
+        self.assertIn("Grace.", HTML)
+        self.assertIn("Grit.", HTML)
+        self.assertIn("Glory.", HTML)
         self.assertIn("Your Way.", HTML)
-        self.assertIn("Founder · CTO · Loctician · Creative Technologist", HTML)
+        self.assertIn("Founder, NAKEBUSEN · Founder &amp; CTO, WARENA · Loctician · Creative Technologist", HTML)
         self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
 
     def test_fragment_integrity(self):
@@ -234,7 +237,7 @@ class PublicationTests(unittest.TestCase):
     def test_social_metadata_is_accurate_and_has_no_unapproved_image(self):
         for phrase in (
             'property="og:type" content="website"',
-            'property="og:site_name" content="NAKEBUSEN · Don Feloh"',
+            'property="og:site_name" content="DON FELOH · GRACE · GRIT · GLORY"',
             'property="og:url" content="https://donfelohke.github.io/"',
             'property="og:locale" content="en_KE"',
             'property="og:locale:alternate" content="sw_KE"',
