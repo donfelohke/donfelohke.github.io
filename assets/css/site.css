@@ -554,3 +554,15 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 @media(prefers-reduced-transparency:reduce){
  .hero .hero-aside{backdrop-filter:none;-webkit-backdrop-filter:none;background:#214B3B}
 }
+
+/* Light/dark contrast pairing for the new editorial hero. */
+.hero .hero-proposition{color:var(--ink)}
+.hero .hero-intro{color:var(--muted)}
+.hero .hero-lead{color:var(--clay)}
+.hero h1 em{color:var(--ochre)}
+@media(prefers-color-scheme:dark){
+ .hero .hero-proposition{color:#F2EFEA}
+ .hero .hero-intro{color:rgba(242,239,234,.86)}
+ .hero .hero-lead{color:#E8C77D}
+ .hero h1 em{color:var(--brand-ochre)}
+}
