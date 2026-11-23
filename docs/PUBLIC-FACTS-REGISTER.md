@@ -77,3 +77,8 @@ This register controls factual claims used on the website, service catalogue, pr
 ## Constitutional alignment — 2026-11-20
 
 The four practice domains are NAKEBUSEN / ROOT, IKAI / MIRROR, GENJE / EXPRESSION and WARENA / CAPABILITY. F3L0H is the overarching human authorship identity, not a fifth domain. **ONLY NAKEBUSEN TRANSACTS.** Historical claims in this register that describe NAKEBUSEN as the parent enterprise or WARENA as a sub-brand are superseded by PF-001, PF-003 and PF-011 above. This register remains the source of record for approved public facts such as service prices, contact details and payment wording.
+
+
+## Identity publication note — 2026-11-23
+
+The master identity is DON FELOH / @donfelohke, expressed through GRACE · GRIT · GLORY: GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → DON FELOH. GENJE is embodied creative practice; IKAI is reflective research. **GENJE ZA WARENA | NAKEBUSEN** is the shared signature. **ONLY NAKEBUSEN TRANSACTS.** This identity note does not supersede service facts or payment controls.
