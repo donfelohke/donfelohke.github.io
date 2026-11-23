@@ -480,3 +480,6 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 @media(prefers-reduced-motion:reduce){.hero-identity:before{display:none}}
 
 .hero-nakebusen-line{margin:.7rem 0 0;color:#F2EFEA;font:600 .86rem/1.35 var(--serif);letter-spacing:.015em}
+
+/* Plain-language service proposition directly follows the page H1. */
+.hero-proposition{margin:.9rem 0 .25rem;color:var(--ink);font:650 clamp(1.05rem,2vw,1.35rem)/1.35 var(--sans);letter-spacing:-.015em}
