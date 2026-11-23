@@ -101,7 +101,7 @@ class PublicationTests(unittest.TestCase):
 
     def test_service_prices_match_exact_published_amounts(self):
         webcopy = (ROOT / "docs/WEBCOPY.md").read_text(encoding="utf-8")
-        for amount in ("KES 700+", "KES 1,500+", "KES 3,500"): 
+        for amount in ("KES 700+", "KES 1,500+", "KES 3,500"):
             self.assertIn(amount, HTML)
             self.assertIn(amount, webcopy)
         self.assertIn("KES 700+", HTML + webcopy)
