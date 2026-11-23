@@ -503,3 +503,19 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 @media(prefers-reduced-transparency:reduce){
   .hero-identity .hero-aside-panel{background:var(--forest)}
 }
+
+/* Keep the hero lockup editorial and opaque; glass belongs to navigation. */
+.hero-identity .brand-lockup{
+  border-color:var(--line);
+  background:var(--soft);
+  color:var(--forest);
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+}
+@media(prefers-color-scheme:dark){
+  .hero-identity .brand-lockup{
+    border-color:var(--line);
+    background:var(--surface);
+    color:var(--ink);
+  }
+}
