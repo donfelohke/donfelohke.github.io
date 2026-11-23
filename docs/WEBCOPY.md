@@ -10,22 +10,45 @@
 **Name line:** Felix Lwova · Feloh Warena · #HisGenjeness  
 **Role:** Founder, NAKEBUSEN · Founder & CTO, WARENA · Loctician · Creative Technologist.
 
-F3L0H / FELOH WARENA is the overarching human authorship and practice identity, not a fifth practice domain.
+DON FELOH is the human author connecting distinct practices, not a fifth practice domain.
 
-**Philosophy:** GRACE · GRIT · GLORY.\n\n- GRACE → NAKEBUSEN: beauty, heritage, craft and dignity.\n- GRIT → WARENA: freedom, technology and infrastructure.\n- GLORY → DON FELOH: human authorship, expression and becoming.\n\n**Signature:** GENJE ZA WARENA | NAKEBUSEN.\n\n**Philosophy:** GRACE · GRIT · GLORY.\n\n- GRACE → NAKEBUSEN: beauty, heritage, craft and dignity.\n- GRIT → WARENA: freedom, technology and infrastructure.\n- GLORY → DON FELOH: human authorship, expression and becoming.\n\n**Hero signature:** GENJE ZA WARENA | NAKEBUSEN.\n\n**Relationship:** FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
+**Philosophy:** GRACE · GRIT · GLORY.
 
-## 1. NAKEBUSEN · ROOT — only live commercial practice\n\nNAKEBUSEN is the GRACE expression: beauty, heritage, craft and dignity. It remains the commercial lead and the only live commercial practice.\n\nNAKEBUSEN is the GRACE expression: beauty, heritage, craft and dignity. It remains the commercial lead and the only live commercial practice.
+- **GRACE → NAKEBUSEN:** beauty, heritage, craft and dignity.
+- **GRIT → WARENA:** freedom, technology and infrastructure.
+- **GLORY → DON FELOH:** human authorship, expression and becoming.
 
-**Eyebrow:** NAKEBUSEN · ROOT · LOC CARE · ELDORET, KENYA  
-**Brand line:** Your Beauty ° Your Way.  
-**Master hero H1:** GRACE. GRIT. GLORY.\n**Hero signature:** GENJE ZA WARENA | NAKEBUSEN.\n**NAKEBUSEN brand line:** Your Beauty ° Your Way.  
+**Hero signature:** GENJE ZA WARENA | NAKEBUSEN.
+
+**Relationship:** FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
+
+## 1. NAKEBUSEN · ROOT — only live commercial practice
+
+NAKEBUSEN is the GRACE expression and remains the commercial lead and only live commercial practice.
+
+**Hero eyebrow:** DON FELOH · @donfelohke · KENYA  
+**Master hero H1:** GRACE. GRIT. GLORY.  
+**Hero signature:** GENJE ZA WARENA | NAKEBUSEN.  
+**NAKEBUSEN brand line:** Your Beauty ° Your Way.  
 **Lead:** Natural loc care in Eldoret.  
-**Supporting copy:** Care for the locs you wear, in Eldoret Town. Explore the services and published prices, then contact NAKEBUSEN to discuss suitability, availability and the work you have in mind.  
-**Location:** Loc care · Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.  
+**Supporting copy:** I am Don Feloh — founder, CTO, loctician and creative technologist. I work across heritage, beauty, free technology, infrastructure, music, movement and embodied knowledge. NAKEBUSEN is the commercial home for loc care. WARENA enables independent systems and technical work. GENJE embodies creative practice. IKAI reflects through research.  
+**Location:** Loc care · Beside King's Square, Kisumu Road · Eldoret Town · Uasin Gishu · Kenya.  
 **Map pin:** F743+R35, Eldoret, Kenya · [Open NAKEBUSEN in Google Maps](https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6).  
 **CBD directions:** [Driving](https://www.google.com/maps/dir/?api=1&origin=Eldoret%20CBD%2C%20Eldoret%2C%20Kenya&destination=F743%2BR35%2C%20Eldoret%2C%20Kenya&travelmode=driving) · [Walking](https://www.google.com/maps/dir/?api=1&origin=Eldoret%20CBD%2C%20Eldoret%2C%20Kenya&destination=F743%2BR35%2C%20Eldoret%2C%20Kenya&travelmode=walking).  
 **Text directions:** From Eldoret CBD, open the pin and select Directions. For matatu travel, confirm the drop-off with the conductor; do not treat “Malel Stage” as a verified stop. Share the pin with a boda boda rider for the final leg.  
 **Home calls:** Loc-care home visits may be arranged within the wider Eldoret Town area after direct confirmation of the exact location, service suitability, availability and travel arrangements.
+
+### LOCS
+
+| Service | Public price |
+|---|---:|
+| Retouch & Styling | KES 700+ |
+| Sisterlocs Retie | KES 1,500+ |
+| Artificial Locs Installation | KES 3,500 |
+
+Published prices are indicative starting prices for Retouch & Styling and Sisterlocs Retie. Final scope and price depend on loc condition and the work required. Artificial Locs Installation is published at KES 3,500 without a plus sign. Confirm the agreed scope and amount directly before work begins. No braiding or shaving services are advertised.
+
+**Enquiry boundary:** An enquiry does not confirm a booking. Availability and final terms are agreed directly.
 
 ### NAKEBUSEN business history
 
