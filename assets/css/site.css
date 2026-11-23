@@ -478,3 +478,5 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
  .hero-glass-panel{background:var(--forest);backdrop-filter:none;-webkit-backdrop-filter:none}
 }
 @media(prefers-reduced-motion:reduce){.hero-identity:before{display:none}}
+
+.hero-nakebusen-line{margin:.7rem 0 0;color:#F2EFEA;font:600 .86rem/1.35 var(--serif);letter-spacing:.015em}
