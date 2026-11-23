@@ -183,9 +183,10 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("RESEARCH DOSSIER", HTML)
         self.assertNotIn("CREATIVE PRACTICE REPOSITORY", HTML)
         self.assertNotIn("Loc-care home calls may be arranged across the wider Eldoret Town service area, subject to confirmation", HTML)
-        self.assertEqual(1, HTML.count("WhatsApp · +254 719 635 415 ↗"))
-        self.assertEqual(1, HTML.count("Call · 0719 635 415 ↗"))
-        self.assertEqual(1, HTML.count("Email · mela9ine@proton.me ↗"))
+        footer_business = HTML.split('<section class="footer-business">', 1)[1].split("</section>", 1)[0]
+        self.assertNotIn("wa.me/", footer_business)
+        self.assertNotIn("tel:", footer_business)
+        self.assertNotIn("mailto:", footer_business)
 
     def test_current_brand_palette_and_hybrid_surfaces(self):
         for token in (
