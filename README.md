@@ -109,3 +109,14 @@ Canonical identity specification: [GRACE · GRIT · GLORY — GENJE ZA WARENA | 
 The public hierarchy is NAKEBUSEN first, WARENA as its technical-capability endorsement, GENJE as creative expression, and Don Feloh as human author. **ONLY NAKEBUSEN TRANSACTS.** This README documents the publication architecture; it does not itself prove that every proposed copy change is deployed on the live page.
 
 See the [NAKEBUSEN × WARENA Brand Platform](https://github.com/donfelohke/feloh-corpus/blob/main/docs/NAKEBUSEN-WARENA-BRAND-PLATFORM-2026-11-24.md) for the canonical narrative, mission, vision, values, About copy and editorial rules.
+
+
+## Editorial website improvement — 24 November 2026
+
+The active implementation is being developed on `feat/editorial-brand-led-website-2026-11`; the live `main` branch is not changed by this work. The current public platform is:
+
+**NAKEBUSEN × WARENA POWERED** · **GRACE · GRIT · GLORY** · **BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**
+
+NAKEBUSEN remains the sole customer-facing transaction and booking point. WARENA is a distinct technical capability domain; GENJE is creative practice; IKAI is research / work in progress; FELOH is the human author. Existing services, prices, contact routes, language controls and payment safeguards remain publication constraints.
+
+See [the editorial website improvement specification](docs/EDITORIAL-WEBSITE-IMPROVEMENT-2026-11-24.md) for the information architecture, design and technical constraints, and release gates.
