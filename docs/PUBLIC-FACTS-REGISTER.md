@@ -24,9 +24,9 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-001 | NAKEBUSEN is the ROOT domain: grounded physical practice, beauty, heritage, craft and enterprise; it is the only live commercial practice | F2 | Canonical under the 2026-11-20 F3L0H constitution; not a parent of the other practice domains |
 | PF-002 | ONLY NAKEBUSEN TRANSACTS | F2 | Canonical commercial boundary |
 | PF-003 | NAKEBUSEN may present LOCS and DIGITAL service paths; all commercial enquiries, agreements and transactions remain through NAKEBUSEN | F2 | Canonical commercial boundary; WARENA is a separate capability domain, not a NAKEBUSEN sub-brand |
-| PF-004 | Lockup: NAKEBUSEN Locs ° Powered by WARENA | F2 | Preserve exact degree sign |
+| PF-004 | Historical lockup: NAKEBUSEN Locs ° Powered by WARENA | F2 | Superseded as the master hero lockup on 23 November 2026; retain only where NAKEBUSEN-specific context calls for it |
 | PF-005 | Supporting signature: @donfelohke · #HisGenjeness | F2 | Use where appropriate |
-| PF-006 | Homepage headline: Your Beauty ° Your Way. | F2 | Approved 9 November 2026; supersedes the previous editorial-first H1 |
+| PF-006 | NAKEBUSEN brand line: Your Beauty ° Your Way. | F2 | Retained as the NAKEBUSEN brand line; no longer the master homepage H1 |
 | PF-007 | Homepage supporting statement: NAKEBUSEN is the ROOT practice for natural loc care and grounded enterprise; practical technology services, where offered, are provided through NAKEBUSEN with WARENA capability. | F2 | Current public-copy direction; preserve founder attribution separately and do not imply WARENA is a sub-brand |
 | PF-008 | NAKEBUSEN adopted meaning “Beautiful” in Turkana | F4 | Attribute as founder-supplied interpretation pending linguistic verification |
 | PF-009 | GENJE ZA WARENA interpreted as “THE FIRE OF THE FORMIDABLE” | F4 | Brand interpretation only; not verified etymology |
@@ -37,8 +37,8 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-014 | Phone: +254 719 635 415 | F1 | Verify before campaigns |
 | PF-015 | WhatsApp: https://wa.me/254719635415 | F1 | Enquiry channel |
 | PF-016 | Email: mela9ine@proton.me | F1 | Verify before campaigns |
-| PF-017 | Retouch & Styling KES 700 | F1 | Published indicative price; final scope and amount are agreed directly |
-| PF-018 | Sisterlocs Retie KES 1,500 | F1 | Published indicative price; final scope and amount are agreed directly; canonical public service label approved 9 November 2026 |
+| PF-017 | Retouch & Styling KES 700+ | F1 | Approved starting price; final scope and amount are agreed directly |
+| PF-018 | Sisterlocs Retie KES 1,500+ | F1 | Approved starting price; final scope and amount are agreed directly; canonical public service label approved 9 November 2026 |
 | PF-019 | Artificial Locs Installation KES 3,500 | F1 | Approved price; do not append a plus sign |
 | PF-020 | Final LOCS cost depends on scope, loc condition and materials | F1 | Publish with prices |
 | PF-021 | No braiding | F1 | Do not advertise braiding |
@@ -51,7 +51,7 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-028 | Copyright holder | F4 | Confirm before changing legal attribution |
 | PF-029 | Opening hours and street address | F5 | Do not invent |
 | PF-030 | Appointment availability | F5 | An enquiry is not a confirmed booking |
-| PF-031 | Public role line: Founder · CTO · Loctician · Creative Technologist | F2 | Approved for public presentation 9 November 2026; role wording is not a certification claim |
+| PF-031 | Public role line: Founder, NAKEBUSEN · Founder & CTO, WARENA · Loctician · Creative Technologist | F2 | Approved explicit role attribution for public presentation 23 November 2026; not a certification claim |
 | PF-032 | M-PESA Buy Goods Till: 3511456; account / merchant name: FELIX LWOVA | F1 | Published payment details restored from the previously published verified record on 10 November 2026; changes require re-verification of merchant authority and payment purpose |
 | PF-033 | Payment is due only after the service and total amount are agreed directly with NAKEBUSEN | F1 | Customer must confirm the displayed merchant name and amount before entering a PIN; never request or share a PIN or one-time code |
 
@@ -82,3 +82,10 @@ The four practice domains are NAKEBUSEN / ROOT, IKAI / MIRROR, GENJE / EXPRESSIO
 ## Identity publication note — 2026-11-23
 
 The master identity is DON FELOH / @donfelohke, expressed through GRACE · GRIT · GLORY: GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → DON FELOH. GENJE is embodied creative practice; IKAI is reflective research. **GENJE ZA WARENA | NAKEBUSEN** is the shared signature. **ONLY NAKEBUSEN TRANSACTS.** This identity note does not supersede service facts or payment controls.
+
+| PF-037 | Master identity: DON FELOH / @donfelohke · GRACE · GRIT · GLORY · GENJE ZA WARENA | NAKEBUSEN | F2 | Canonical identity system approved 23 November 2026; see FELOH Corpus identity constitution |
+| PF-038 | GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → DON FELOH | F2 | Governing philosophy; distinct practices remain independently described and governed |
+
+## Master identity update — 2026-11-23
+
+The master homepage hero is **DON FELOH / @donfelohke · GRACE · GRIT · GLORY · GENJE ZA WARENA | NAKEBUSEN**. GRACE maps to NAKEBUSEN; GRIT maps to WARENA; GLORY expresses DON FELOH's human authorship. GENJE remains embodied creative practice and IKAI remains reflective research. **ONLY NAKEBUSEN TRANSACTS.** The master identity does not change the service catalogue or payment boundary.
