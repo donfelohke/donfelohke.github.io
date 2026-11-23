@@ -266,6 +266,7 @@ class PublicationTests(unittest.TestCase):
             'property="og:locale" content="en_KE"',
             'property="og:locale:alternate" content="sw_KE"',
             'name="twitter:card" content="summary"',
+            'name="twitter:description" content="Professional loc care and practical technology services in Eldoret Town, Kenya. Enquire directly with NAKEBUSEN."',
             'name="description"',
         ):
             self.assertIn(phrase, HTML)
