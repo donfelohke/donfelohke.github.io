@@ -1,53 +1,41 @@
-# NAKEBUSEN — Web Design Standards
+# Don Feloh Website — Design and Publication Standards
 
-**Status:** Editorial Rooted Glass · 22 November 2026
+**Status:** Current implementation standard · 23 November 2026
 
 ## Design thesis
-An independent, craft-led loc-care practice with a serious technical and creative identity. Avoid generic salon luxury, default Rasta palettes, neon hacker clichés, fake terminal interfaces and excessive blur.
+One human author; distinct practices. NAKEBUSEN leads the commercial experience, with loc care as the primary customer journey. WARENA communicates technical capability. IKAI remains research / work in progress. GENJE is creative practice. FELOH Corpus is the shared knowledge and provenance record.
 
-## Palette
-| Token | Light | Dark |
-|---|---|---|
-| Canvas | #F3EEE4 | #000000 |
-| Surface | #FFFFFF | #151515 |
-| Soft surface | #E9E1D3 | #080808 |
-| Text | #242923 | #F2EFEA |
-| Muted | #626B58 | #B8B0A5 |
-| Forest | #173D32 | #033500 |
-| Terracotta | #A34F3B | #E2725B |
-| Ochre | #8B5E16 | #D4AF37 |
+## Visual system
+- Editorial Rooted Glass: warm ivory reading canvas, forest-green technical surfaces, terracotta and ochre accents.
+- Cormorant Garamond for expressive headings; Inter/system sans-serif for reading; JetBrains Mono/system monospace for technical labels.
+- Glass is reserved for functional navigation. Content, prices, contact and payment instructions remain opaque.
+- Text-first publication. No rendered images, SVG artwork, graphic favicons, CSS image assets, social-preview images, stock imagery or unapproved customer photography.
+- No external fonts, analytics, trackers, JavaScript runtime, CMS or external runtime dependencies.
 
-All text/control pairings require measured contrast evaluation.
+## Experience hierarchy
+1. Hero: Don Feloh authorship and GRACE · GRIT · GLORY, with the plain-language proposition “Natural loc care in Eldoret.”
+2. NAKEBUSEN LOCS: the primary commercial path, approved services and prices, enquiry boundary.
+3. DIGITAL / WARENA: practical technical capability, scoped per engagement.
+4. About and the distinct IKAI, GENJE and FELOH Corpus research/creative paths.
+5. Connect and footer: contact, manual service-payment safeguards and voluntary support kept separate.
 
-## Typography
-- Headlines: Georgia / system serif.
-- Body: system sans-serif.
-- Technical labels: system monospace.
-- No external font CDN; local font use requires license and performance review.
+## Business and editorial invariants
+- ONLY NAKEBUSEN TRANSACTS.
+- Retouch & Styling — KES 700+; Sisterlocs Retie — KES 1,500+; Artificial Locs Installation — KES 3,500.
+- An enquiry does not confirm a booking. Availability and final terms are agreed directly.
+- No braiding or shaving claims. Do not invent availability, credentials, testimonials, service inclusions or guarantees.
+- Service payments and voluntary support are distinct. Preserve approved payment facts and manual verification safeguards.
+- English is the default; Kiswahili is available through native controls. Mark language changes with correct lang attributes.
 
-## Experience ownership
-- NAKEBUSEN / Locs: warm paper, terracotta and restrained ochre.
-- Digital / WARENA: deep forest and warm ivory.
-- IKAI / GENJE / FELOH Corpus: editorial research and creative summaries, not sales cards.
-- Connect: charcoal, warm ivory and sandstone.
+## Accessibility and responsive behaviour
+- One descriptive H1, logical heading hierarchy, semantic landmarks and skip navigation.
+- Keyboard access and visible focus; primary targets at least 44 × 44 CSS pixels.
+- Reflow at 320 CSS pixels without horizontal scrolling; fixed navigation must not obscure focused content.
+- Respect system colour scheme, reduced motion and reduced transparency.
+- Test both languages, light/dark modes, zoom/reflow, keyboard flow, contrast and screen-reader landmarks. Automated tests are not a WCAG conformance claim.
 
-## Materials and responsive behaviour
-Glass only on functional navigation. Content, prices and payment instructions remain opaque. Text-first; no stock imagery or unapproved customer photography. Test 320, 360, 390, 430, 768, 1024, 1280 and 1440 CSS-pixel widths. No horizontal overflow or dock obstruction.
-
-## Native interaction
-One HTML document, one CSS stylesheet, no JavaScript. System theme preference, native Kiswahili disclosure, native anchors and direct contact links. Respect reduced motion and reduced transparency.
-
-
-## Homepage revamp · 22 November 2026
-- Hero hierarchy: canonical H1 “Your Beauty ° Your Way.”, followed by the loc-care proposition “Natural loc care in Eldoret.” and direct service-price links.
-- LOCS uses warm paper surfaces, editorial serif headings, terracotta/ochre markers and three service cards with clear starting prices.
-- DIGITAL remains a distinct capability path, visually grounded in forest green and qualified as assessed-per-engagement.
-- Founder authorship, the four practice domains, research status, source links, Kiswahili disclosure, contact, M-PESA and voluntary support remain in the single-page structure.
-- Glass is reserved for functional top and bottom navigation. Content, prices and payment instructions remain opaque.
-- Preserve native anchors, 44px-class controls, safe-area spacing, visible focus, system colour-scheme support, reduced-motion and reduced-transparency fallbacks.
-- No scripts, remote fonts, stock imagery, trackers, CMS, generated pages or external runtime dependencies.
-
-
-## Current accepted implementation direction — 2026-11-22
-
-The current implementation uses the established forest-green / charcoal / warm-off-white / ochre / terracotta palette; Cormorant Garamond, Inter and JetBrains Mono; an editorial reading canvas with selective immersive glass navigation; ambient, slow background drift; and balanced content density. Keep pricing and long-form reading surfaces opaque. Preserve the static one-page architecture, authored English/Kiswahili, and LOCS / DIGITAL / CONNECT dock. See [the current implementation update](ECOSYSTEM-UPDATE-2026-11-22.md).
+## Architecture and publication
+- One static HTML page and one authored CSS stylesheet; no client-side script.
+- GitHub Pages workflow stages an explicit public allowlist: index.html, assets/css/site.css, and optional robots.txt, sitemap.xml, CNAME, .nojekyll.
+- Tests, internal documentation, repository metadata and unapproved assets are not included in the Pages artifact.
+- A passing source test does not establish browser behaviour or deployment. Record the deployed commit and inspect the live URL separately.

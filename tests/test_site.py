@@ -53,12 +53,14 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(1, len(list(ROOT.glob("*.html"))))
         self.assertIn('<html lang="en">', HTML)
         self.assertIn('<main id="main">', HTML)
-        self.assertEqual(2, self.parser.h1)
+        self.assertEqual(1, self.parser.h1)
         self.assertIn("Locs · GRACE · GRIT · GLORY", HTML)
         self.assertIn("GENJE ZA WARENA", HTML)
         self.assertIn("Grace.", HTML)
         self.assertIn("Grit.", HTML)
         self.assertIn("Glory.", HTML)
+        self.assertIn("Natural loc care in Eldoret.", HTML)
+        self.assertIn("Utunzaji wa loc za asili Eldoret.", HTML)
         self.assertIn("Your Way.", HTML)
         self.assertIn("Founder, NAKEBUSEN · Founder &amp; CTO, WARENA · Loctician · Creative Technologist", HTML)
         self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
@@ -247,6 +249,16 @@ class PublicationTests(unittest.TestCase):
             self.assertIn(phrase, HTML)
         self.assertNotIn('property="og:image"', HTML)
         self.assertNotIn('name="twitter:image"', HTML)
+        self.assertNotIn('rel="icon"', HTML)
+        self.assertNotIn("favicon.svg", HTML)
+
+    def test_pages_artifact_uses_explicit_public_allowlist(self):
+        workflow = (ROOT / ".github/workflows/pages.yml").read_text(encoding="utf-8")
+        self.assertIn("Stage approved public files", workflow)
+        self.assertIn("cp index.html _site/index.html", workflow)
+        self.assertIn("cp assets/css/site.css _site/assets/css/site.css", workflow)
+        self.assertIn("path: _site", workflow)
+        self.assertNotIn("path: .", workflow)
 
     def test_sitemap_is_one_page(self):
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
