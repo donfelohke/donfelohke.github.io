@@ -208,6 +208,10 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("@keyframes glass-drift", CSS)
         self.assertIn("animation:glass-drift", CSS)
         self.assertIn("Cormorant Garamond", CSS)
+        self.assertIn(".hero-identity h1{color:var(--ink)}", CSS)
+        self.assertIn(".hero-identity .hero-copy,.hero-identity .location{color:var(--muted)}", CSS)
+        self.assertIn(".hero-identity .hero-aside-panel{background:var(--forest)}", CSS)
+        self.assertNotIn(".hero-glass-panel", CSS)
         self.assertIn("JetBrains Mono", CSS)
         self.assertIn("min-width:2.75rem;min-height:2.75rem", CSS)
         self.assertIn("prefers-reduced-transparency:reduce", CSS)
@@ -247,7 +251,9 @@ class PublicationTests(unittest.TestCase):
     def test_social_metadata_is_accurate_and_has_no_unapproved_image(self):
         for phrase in (
             'property="og:type" content="website"',
-            'property="og:site_name" content="DON FELOH · GRACE · GRIT · GLORY"',
+            'property="og:site_name" content="NAKEBUSEN · DON FELOH"',
+            'property="og:title" content="NAKEBUSEN · Natural Loc Care in Eldoret — Don Feloh"',
+            'name="twitter:title" content="NAKEBUSEN · Natural Loc Care in Eldoret — Don Feloh"',
             'property="og:url" content="https://donfelohke.github.io/"',
             'property="og:locale" content="en_KE"',
             'property="og:locale:alternate" content="sw_KE"',
@@ -257,6 +263,10 @@ class PublicationTests(unittest.TestCase):
             self.assertIn(phrase, HTML)
         self.assertNotIn('property="og:image"', HTML)
         self.assertNotIn('name="twitter:image"', HTML)
+        self.assertIn("NAKEBUSEN | Natural Loc Care in Eldoret, Kenya · Don Feloh", HTML)
+        self.assertIn("Sisterlocs Retie and Artificial Locs Installation", HTML)
+        self.assertIn('media="(prefers-color-scheme: light)"', HTML)
+        self.assertIn('media="(prefers-color-scheme: dark)"', HTML)
         self.assertNotIn('rel="icon"', HTML)
         self.assertNotIn("favicon.svg", HTML)
 
