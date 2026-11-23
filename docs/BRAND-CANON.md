@@ -65,3 +65,13 @@ F3L0H / FELOH WARENA is the overarching human authorship and practice identity. 
 ## Founder
 
 Public About treatment: **Felix Lwova — Don Feloh**, provisional. Copyright rights-holder requires separate confirmation.
+
+
+## Current public lockup and precedence — 2026-11-24
+
+**NAKEBUSEN · WARENA POWERED**  
+**GRACE · GRIT · GLORY | GENJE ZA WARENA**  
+**BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**  
+**@donfelohke · #HisGenjeness**
+
+NAKEBUSEN is the primary enterprise and customer-facing commercial identity. WARENA POWERED is a technical-capability endorsement. GENJE ZA WARENA is creative expression, not a separate commercial unit. **ONLY NAKEBUSEN TRANSACTS.** This current lockup supersedes older lockup phrasing in this document where public presentation hierarchy differs. See the [canonical Brand Platform](https://github.com/donfelohke/feloh-corpus/blob/main/docs/NAKEBUSEN-WARENA-BRAND-PLATFORM-2026-11-24.md).
