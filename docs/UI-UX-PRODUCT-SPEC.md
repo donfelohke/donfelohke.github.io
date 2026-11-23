@@ -288,3 +288,7 @@ The experience is ready for release when:
 ---
 
 **Change control:** This document records the approved strategic direction and implementation gates. It does not itself authorise a visual redesign, alter live UI code, or supersede the canonical copy and public-facts registers.
+
+## Master identity hero — 2026-11-23
+
+Lead with DON FELOH / @donfelohke, GRACE · GRIT · GLORY, and **GENJE ZA WARENA | NAKEBUSEN**. Keep the hero balanced while the customer-facing commercial path remains NAKEBUSEN LOCS. WARENA is technical capability; GENJE is embodied creative practice; IKAI is research. Preserve native HTML/CSS, bilingual content, accessibility and the three-item mobile dock.
