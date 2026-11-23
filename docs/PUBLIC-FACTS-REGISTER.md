@@ -60,6 +60,9 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-035 | Public directions reference: F743+R35, Eldoret, Kenya; supplied Google Maps pin: https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6 | F1 | Owner-supplied map reference. Publish the short Plus Code with Eldoret locality. Do not claim an independently verified street address, entrance, coordinates or transit stage. |
 | PF-036 | Loc-care home calls may be arranged across the wider Eldoret Town service area | F1 | Confirm exact location, service suitability, availability and any travel costs directly before confirming a visit. Coverage is assessed by location; no fixed kilometre radius or universal coverage is promised. |
 
+| PF-037 | Master identity: DON FELOH / @donfelohke · GRACE · GRIT · GLORY · GENJE ZA WARENA | NAKEBUSEN | F2 | Canonical identity system approved 23 November 2026; see FELOH Corpus identity constitution |
+| PF-038 | GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → DON FELOH | F2 | Governing philosophy; distinct practices remain independently described and governed |
+
 ## Publication controls
 
 1. Prices, contact details and published M-PESA payment details must match this register and SERVICE-CATALOG. Re-verify the Till/merchant pairing before any change or paid campaign.
@@ -79,12 +82,6 @@ This register controls factual claims used on the website, service catalogue, pr
 The four practice domains are NAKEBUSEN / ROOT, IKAI / MIRROR, GENJE / EXPRESSION and WARENA / CAPABILITY. F3L0H is the overarching human authorship identity, not a fifth domain. **ONLY NAKEBUSEN TRANSACTS.** Historical claims in this register that describe NAKEBUSEN as the parent enterprise or WARENA as a sub-brand are superseded by PF-001, PF-003 and PF-011 above. This register remains the source of record for approved public facts such as service prices, contact details and payment wording.
 
 
-## Identity publication note — 2026-11-23
-
-The master identity is DON FELOH / @donfelohke, expressed through GRACE · GRIT · GLORY: GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → DON FELOH. GENJE is embodied creative practice; IKAI is reflective research. **GENJE ZA WARENA | NAKEBUSEN** is the shared signature. **ONLY NAKEBUSEN TRANSACTS.** This identity note does not supersede service facts or payment controls.
-
-| PF-037 | Master identity: DON FELOH / @donfelohke · GRACE · GRIT · GLORY · GENJE ZA WARENA | NAKEBUSEN | F2 | Canonical identity system approved 23 November 2026; see FELOH Corpus identity constitution |
-| PF-038 | GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → DON FELOH | F2 | Governing philosophy; distinct practices remain independently described and governed |
 
 ## Master identity update — 2026-11-23
 
