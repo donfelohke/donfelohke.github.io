@@ -59,7 +59,6 @@ a:focus-visible,label:focus-visible{outline:3px solid var(--focus);outline-offse
 .hero h1{max-width:10ch;margin:1.15rem 0 .5rem;font:500 clamp(4.3rem,10.5vw,9rem)/.86 var(--serif);letter-spacing:-.08em}
 .hero h1 span{color:var(--clay)}
 .hero-lead{margin:1.6rem 0 .45rem;color:var(--clay);font:750 clamp(1rem,2vw,1.25rem)/1.35 var(--mono);letter-spacing:.015em}
-.hero-copy{max-width:42rem;margin:0;color:var(--muted);font-size:clamp(1.03rem,1.8vw,1.18rem);line-height:1.6}
 .hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:1rem 1.5rem;margin-top:1.9rem}
 .button{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:.7rem;padding:.82rem 1.2rem;border:1px solid transparent;border-radius:999px;font-size:.9rem;font-weight:750;line-height:1.2;text-decoration:none;transition:transform .18s ease,background-color .18s ease}
 .button:hover{transform:translateY(-1px)}
@@ -302,7 +301,7 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 .hero h1{color:#F2EFEA}
 .hero h1 span{color:#D9AA54}
 .hero .hero-lead{color:#E8C77D}
-.hero .hero-copy,.hero .location{color:rgba(242,239,234,.82)}
+.hero .location{color:rgba(242,239,234,.82)}
 .hero .button-primary{
   background:#D4AF37;
   color:#172A21;
@@ -449,7 +448,6 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 .hero-identity h1{max-width:8ch;font-size:clamp(4.6rem,10.8vw,9.5rem);line-height:.79;letter-spacing:-.075em;text-transform:uppercase}
 .hero-identity h1 em{color:var(--brand-ochre);font-style:normal}
 .hero-identity .hero-lead{margin-top:1.45rem;color:var(--clay);letter-spacing:.07em}
-.hero-copy-secondary{margin-top:.8rem}
 .hero-aside-panel{
   padding:clamp(1.2rem,2.5vw,2rem);border:1px solid var(--glass-border);border-radius:1.55rem;
   background:var(--glass-top);color:#F2EFEA;box-shadow:0 24px 70px rgba(0,0,0,.16),inset 0 1px 0 rgba(255,255,255,.16);
@@ -489,7 +487,7 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 .hero-identity h1{color:var(--ink)}
 .hero-identity h1 em{color:var(--ochre)}
 .hero-identity .eyebrow{color:var(--clay)}
-.hero-identity .hero-copy,.hero-identity .location{color:var(--muted)}
+.hero-identity .location{color:var(--muted)}
 .hero-identity .text-link{color:var(--forest)}
 .hero-identity .hero-aside-panel{background:var(--forest)}
 @media(prefers-color-scheme:dark){
