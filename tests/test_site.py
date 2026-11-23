@@ -176,7 +176,10 @@ class PublicationTests(unittest.TestCase):
 
     def test_homepage_avoids_repeated_identity_publications_and_contact_copy(self):
         self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
-        self.assertIn("I am Don Feloh, the human author behind these distinct practices.", HTML)
+        self.assertNotIn("I am Don Feloh, the human author behind these distinct practices.", HTML)
+        self.assertNotIn("Mimi ni Don Feloh — mwanzilishi", HTML)
+        self.assertIn("PRACTICE ARCHITECTURE", HTML)
+        self.assertNotIn("ONE AUTHOR · DISTINCT PRACTICES", HTML)
         self.assertNotIn("hero-copy-secondary", HTML)
         self.assertNotIn("class=" + '"publications"', HTML)
         self.assertNotIn("SELECTED RESEARCH &amp; SOURCE RECORDS", HTML)
@@ -209,7 +212,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("animation:glass-drift", CSS)
         self.assertIn("Cormorant Garamond", CSS)
         self.assertIn(".hero-identity h1{color:var(--ink)}", CSS)
-        self.assertIn(".hero-identity .hero-copy,.hero-identity .location{color:var(--muted)}", CSS)
+        self.assertIn(".hero-identity .location{color:var(--muted)}", CSS)
         self.assertIn(".hero-identity .hero-aside-panel{background:var(--forest)}", CSS)
         self.assertNotIn(".hero-glass-panel", CSS)
         self.assertIn(".hero-identity .brand-lockup{", CSS)
