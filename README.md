@@ -97,3 +97,15 @@ The public hero expresses one human author and distinct practices:
 **ONLY NAKEBUSEN TRANSACTS.** Keep service enquiries, availability and agreed terms within NAKEBUSEN. Preserve published service facts, the enquiry-not-booking disclosure, manual payment safeguards and the text-first native HTML/CSS publication model.
 
 Canonical identity specification: [GRACE · GRIT · GLORY — GENJE ZA WARENA | NAKEBUSEN](docs/GRACE-GRIT-GLORY-GENJE-ZA-WARENA-IDENTITY-SYSTEM-2026-11-23.md).
+
+
+## Current public brand platform — 2026-11-24
+
+**NAKEBUSEN · WARENA POWERED**  
+**GRACE · GRIT · GLORY | GENJE ZA WARENA**  
+**BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**  
+**@donfelohke · #HisGenjeness**
+
+The public hierarchy is NAKEBUSEN first, WARENA as its technical-capability endorsement, GENJE as creative expression, and Don Feloh as human author. **ONLY NAKEBUSEN TRANSACTS.** This README documents the publication architecture; it does not itself prove that every proposed copy change is deployed on the live page.
+
+See the [NAKEBUSEN × WARENA Brand Platform](https://github.com/donfelohke/feloh-corpus/blob/main/docs/NAKEBUSEN-WARENA-BRAND-PLATFORM-2026-11-24.md) for the canonical narrative, mission, vision, values, About copy and editorial rules.
