@@ -252,6 +252,14 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn('rel="icon"', HTML)
         self.assertNotIn("favicon.svg", HTML)
 
+    def test_pages_artifact_uses_explicit_public_allowlist(self):
+        workflow = (ROOT / ".github/workflows/pages.yml").read_text(encoding="utf-8")
+        self.assertIn("Stage approved public files", workflow)
+        self.assertIn("cp index.html _site/index.html", workflow)
+        self.assertIn("cp assets/css/site.css _site/assets/css/site.css", workflow)
+        self.assertIn("path: _site", workflow)
+        self.assertNotIn("path: .", workflow)
+
     def test_sitemap_is_one_page(self):
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
         self.assertEqual(1, sitemap.count("<loc>"))
