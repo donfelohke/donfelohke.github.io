@@ -8,7 +8,8 @@ One human author; distinct practices. NAKEBUSEN leads the commercial experience,
 ## Visual system
 - Editorial Rooted Glass: warm ivory reading canvas, forest-green technical surfaces, terracotta and ochre accents.
 - Cormorant Garamond for expressive headings; Inter/system sans-serif for reading; JetBrains Mono/system monospace for technical labels.
-- Glass is reserved for functional navigation. Content, prices, contact and payment instructions remain opaque.
+- Expressive glass is reserved for functional navigation. The hero identity panel, service cards, prices, contact and payment instructions use opaque surfaces for legibility and predictable contrast.
+- The hero uses the editorial canvas with ink-coloured display type; its emphasis colour adapts between light and dark system themes.
 - Text-first publication. No rendered images, SVG artwork, graphic favicons, CSS image assets, social-preview images, stock imagery or unapproved customer photography.
 - No external fonts, analytics, trackers, JavaScript runtime, CMS or external runtime dependencies.
 
