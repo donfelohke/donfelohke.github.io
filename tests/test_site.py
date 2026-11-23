@@ -107,7 +107,8 @@ class PublicationTests(unittest.TestCase):
         for amount in ("KES 700", "KES 1,500", "KES 3,500"):
             self.assertIn(amount, HTML)
             self.assertIn(amount, webcopy)
-        self.assertIn("KES 700", HTML + webcopy)
+        self.assertIn("KES 700+", HTML + webcopy)
+        self.assertIn("KES 1,500+", HTML + webcopy)
         self.assertIn("KES 1,500", HTML + webcopy)
         self.assertNotIn("KES 3,500+", HTML + webcopy)
         self.assertIn("Published prices", HTML)
