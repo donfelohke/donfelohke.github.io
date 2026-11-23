@@ -22,7 +22,7 @@ This repository publishes one static, text-first page. NAKEBUSEN is the welcomin
 | Connect | `#connect` | Location, contact and project links |
 | Footer | `#footer` | Business details, manual payments and voluntary support |
 
-The mobile dock has three destinations: LOCS, DIGITAL and CONNECT. English is the default; Kiswahili is available through native radio controls and CSS. Colour appearance follows the operating-system preference.
+The mobile dock has three destinations: LOCS, DIGITAL and CONNECT. English is the default; Kiswahili is available through native radio controls and CSS. Colour appearance follows the operating-system preference. The hero foreground and emphasis colours are theme-aware; the hero identity panel remains an opaque forest-green surface.
 
 ## NAKEBUSEN · LOCS · Eldoret
 
