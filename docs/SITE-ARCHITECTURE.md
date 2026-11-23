@@ -64,8 +64,8 @@ The four-practice map is an orientation layer, not a replacement for the detaile
 
 ## Publication invariants
 
-- Retouch & Styling — KES 700 (published indicative price).
-- Sisterlocs Retie — KES 1,500 (published indicative price).
+- Retouch & Styling — KES 700+ (approved starting price).
+- Sisterlocs Retie — KES 1,500+ (approved starting price).
 - Artificial Locs Installation — KES 3,500.
 - Location: Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
 - No braiding, shaving, invented street address, opening hours, appointment availability, testimonials or credentials.
