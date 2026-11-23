@@ -212,6 +212,8 @@ class PublicationTests(unittest.TestCase):
         self.assertIn(".hero-identity .hero-copy,.hero-identity .location{color:var(--muted)}", CSS)
         self.assertIn(".hero-identity .hero-aside-panel{background:var(--forest)}", CSS)
         self.assertNotIn(".hero-glass-panel", CSS)
+        self.assertIn(".hero-identity .brand-lockup{", CSS)
+        self.assertIn("backdrop-filter:none;", CSS)
         self.assertIn("JetBrains Mono", CSS)
         self.assertIn("min-width:2.75rem;min-height:2.75rem", CSS)
         self.assertIn("prefers-reduced-transparency:reduce", CSS)
