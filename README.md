@@ -12,19 +12,17 @@ This repository publishes one static, text-first page. NAKEBUSEN is the welcomin
 
 | Destination | Anchor | Purpose |
 |---|---|---|
-| NAKEBUSEN hero | `#nakebusen` | Brand identity and natural loc-care entry point |
-| LOCS | `#crown` | Services, published prices and booking disclosure |
-| DIGITAL | `#code` | Qualified GNU/Linux, computer and network capability |
-| Don Feloh | `#don-feloh` | Human authorship, biography and GRACE · GRIT · GLORY |
-| Thought & Reflection | `#thought` | Worldview, philosophy, ideas, opinion and reflection |
-| WARENA | `#warena` | Libre-first systems engineering and infrastructure |
+| NAKEBUSEN hero | `#nakebusen` | Identity and loc-care entry point |
+| LOCS | `#crown` | Services, prices and enquiry boundary |
+| DIGITAL / WARENA | `#code` | Practical GNU/Linux, computer and network capability |
+| Don Feloh | `#don-feloh` | Human authorship and biography |
 | IKAI | `#ikai` | Reflective-computing research / WIP |
 | GENJE | `#genje` | Genge-rooted creative and embodied practice |
 | FELOH Corpus | `#feloh-corpus` | Shared knowledge governance and provenance |
-| Publications | `#publications` | Curated links to canonical source records |
-| Connect | `#connect` | Business contact and source repositories |
+| Connect | `#connect` | Location, contact and project links |
+| Footer | `#footer` | Business details, manual payments and voluntary support |
 
-The fixed mobile dock has exactly three destinations: LOCS, DIGITAL and CONNECT. The language selector switches English and Kiswahili using native radio controls and CSS; the default document language is English. Colour appearance follows the operating system preference.
+The mobile dock has three destinations: LOCS, DIGITAL and CONNECT. English is the default; Kiswahili is available through native radio controls and CSS. Colour appearance follows the operating-system preference.
 
 ## NAKEBUSEN · LOCS · Eldoret
 
@@ -40,14 +38,20 @@ Location: **Beside King's Square, Kisumu Road · Eldoret Town · Uasin Gishu · 
 
 The footer retains manual M-PESA Buy Goods information for agreed service payments: Till 3511456; account / merchant name FELIX LWOVA. Confirm the displayed merchant and agreed amount before entering a PIN. Never share a PIN or one-time code. No API, STK push, automated verification, checkout or payment-success state is implemented. Voluntary Support Us is separate from service payments.
 
-## Four practice domains
+## Identity and practice model
 
-- **NAKEBUSEN / ROOT:** the only live commercial practice.
-- **WARENA / CAPABILITY:** distinct libre-first systems and infrastructure practice; not a sub-brand or separate checkout. Slogan: **Freedom Is a System.**
-- **IKAI / MIRROR:** research / work in progress, not a released product. IKAI is a Turkana female name meaning “home.”
-- **GENJE / EXPRESSION:** Genge-rooted sound and aesthetics, AfroTech, livecoding, audiovisual experimentation, movement, choreography and choreohacking.
+- **DON FELOH / @donfelohke:** the human author and accountable founder.
+- **GRACE → NAKEBUSEN:** beauty, heritage, craft and dignity; the only live commercial practice.
+- **GRIT → WARENA:** libre-first systems, technology and infrastructure. **Freedom Is a System.**
+- **IKAI:** reflective computing and research / work in progress. The name is a Turkana female name meaning “home”.
+- **GENJE:** Genge-rooted sound, livecoding, movement, choreography and embodied creative practice.
+- **FELOH Corpus:** shared source of record for canon, governance, research and provenance; not a fifth practice.
 
-**FELOH Corpus** is the shared source of record for canon, governance, research and provenance; it is not a fifth practice. Gallery remains approval-controlled.
+**GENJE ZA WARENA | NAKEBUSEN** is the shared expressive signature, not a merger of the operating identities.
+
+> FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
+
+**ONLY NAKEBUSEN TRANSACTS.** Keep service enquiries, availability and agreed terms within NAKEBUSEN.
 
 ## Implementation
 

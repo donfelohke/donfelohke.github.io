@@ -71,8 +71,8 @@ class PublicationTests(unittest.TestCase):
         required = {
             "top", "main", "nakebusen", "services", "crown", "service-retouch",
             "service-sisterlocs", "service-artificial", "booking", "code", "digital",
-            "don-feloh", "feloh-corpus",
-            "publications", "kiswahili", "connect", "footer",
+            "don-feloh", "ikai", "genje", "feloh-corpus",
+            "kiswahili", "connect", "footer",
         }
         self.assertTrue(required.issubset(set(ids)))
         for href in self.parser.hrefs:
@@ -174,11 +174,19 @@ class PublicationTests(unittest.TestCase):
         ):
             self.assertNotIn(removed_phrase, HTML)
 
-    def test_publication_section_classifies_sources(self):
-        self.assertIn("SELECTED RESEARCH &amp; SOURCE RECORDS", HTML)
-        self.assertIn("RESEARCH DOSSIER", HTML)
-        self.assertIn("SOURCE REPOSITORY", HTML)
-        self.assertIn("CREATIVE PRACTICE REPOSITORY", HTML)
+    def test_homepage_avoids_repeated_identity_publications_and_contact_copy(self):
+        self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
+        self.assertIn("I am Don Feloh, the human author behind these distinct practices.", HTML)
+        self.assertNotIn("hero-copy-secondary", HTML)
+        self.assertNotIn("class=" + '"publications"', HTML)
+        self.assertNotIn("SELECTED RESEARCH &amp; SOURCE RECORDS", HTML)
+        self.assertNotIn("RESEARCH DOSSIER", HTML)
+        self.assertNotIn("CREATIVE PRACTICE REPOSITORY", HTML)
+        self.assertNotIn("Loc-care home calls may be arranged across the wider Eldoret Town service area, subject to confirmation", HTML)
+        footer_business = HTML.split('<section class="footer-business">', 1)[1].split("</section>", 1)[0]
+        self.assertNotIn("wa.me/", footer_business)
+        self.assertNotIn("tel:", footer_business)
+        self.assertNotIn("mailto:", footer_business)
 
     def test_current_brand_palette_and_hybrid_surfaces(self):
         for token in (
