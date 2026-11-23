@@ -1,6 +1,6 @@
 # Don Feloh — Public Home
 
-> Current alignment: [Ecosystem update — 2026-11-22](docs/ECOSYSTEM-UPDATE-2026-11-22.md). This dated record supplements this README; it does not replace the canonical source documents.
+> Current alignment: [Ecosystem update — 2026-11-23](docs/ECOSYSTEM-UPDATE-2026-11-23.md). This dated record supplements this README; it does not replace the canonical source documents.
 
 
 **Website:** https://donfelohke.github.io/  
@@ -30,8 +30,8 @@ The fixed mobile dock has exactly three destinations: LOCS, DIGITAL and CONNECT.
 
 | Service | Public price |
 |---|---:|
-| Retouch & Styling | KES 700 |
-| Sisterlocs Retie | KES 1,500 |
+| Retouch & Styling | KES 700+ |
+| Sisterlocs Retie | KES 1,500+ |
 | Artificial Locs Installation | KES 3,500 |
 
 Published prices are indicative. Final scope and price depend on loc condition, materials and work required and are agreed directly before work begins. No braiding or shaving is offered. The founder does not cut clients' natural hair. An enquiry does not confirm a booking.
