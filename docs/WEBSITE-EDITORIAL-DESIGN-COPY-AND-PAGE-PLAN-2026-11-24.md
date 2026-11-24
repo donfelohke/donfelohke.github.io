@@ -1,9 +1,10 @@
 # Website Editorial, Design Copy and Page Plan
 
 **Date:** 24 November 2026  
-**Status:** Proposed refinement for the active website review  
+**Status:** Historical proposal retained for provenance; current hero and design direction are superseded by the consolidated portal research  
 **Publication model:** One static, text-first page with anchored editorial sections  
-**Visual direction:** African Desert editorial × Ghetto-Luxe Dark Academia × Silicon Savannah neo-naturalism  
+**Current direction:** The implementation uses “Loc care in Eldoret.” as the task-first H1, a compact first-screen published-price panel and the existing LOCS / DIGITAL / CONNECT dock. See [consolidated portal research](../research/FRONT-PAGE-PORTAL-DESIGN-COPY-AND-STANDARDS-2026-11-24.md).  
+**Visual direction:** Rooted Editorial Service Portal — a task-first service front door with restrained glass and the existing brand palette  
 **Technical baseline:** Native HTML and CSS; no application framework or JavaScript runtime.
 
 ## 1. Page recommendation

@@ -24,22 +24,29 @@ NAKEBUSEN is the primary customer-facing commercial entry and the only transacti
 
 **ONLY NAKEBUSEN TRANSACTS.**
 
-## Hero
+## Hero — current task-first implementation
 
 **Eyebrow:** NAKEBUSEN · WARENA POWERED  
-**Pillar line:** GRACE · GRIT · GLORY  
-**H1:** Beautiful Roots. Sovereign Systems.  
-**Proposition:** Professional loc care in Eldoret. Practical computing and network support.  
-**Lead:** NAKEBUSEN · LOC CARE FIRST · DIGITAL BY WARENA
+**Brand line:** GRACE · GRIT · GLORY  
+**H1:** Loc care in Eldoret.  
+**Proposition:** Retouch & Styling, Sisterlocs Retie and Artificial Locs Installation.  
+**Supporting line:** Practical GNU/Linux, computer and network support through WARENA.  
+**Brand signature:** Beautiful Roots. Sovereign Systems.
 
-NAKEBUSEN is the direct point of contact for loc-care and technical enquiries. WARENA supplies the systems capability; scope and availability are agreed directly before work begins.
+Loc care leads. For technical enquiries, contact NAKEBUSEN directly; WARENA supplies systems capability. Scope and availability are agreed before work begins.
 
 **Primary CTA:** Enquire about loc care  
 **Secondary CTA:** View services & prices
 
-**Kiswahili proposition:** Utunzaji wa loc wa kitaalamu mjini Eldoret. Msaada wa kompyuta na mitandao.  
-**Kiswahili introduction:** NAKEBUSEN ndiyo sehemu ya moja kwa moja ya kuulizia huduma za loc na teknolojia. WARENA hutoa uwezo wa mifumo; upeo wa kazi na upatikanaji hukubaliwa moja kwa moja kabla ya kazi kuanza.  
+**First-screen price cue:** Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Installation — KES 3,500. These are the exact published prices, not “from” prices.
+
+**Kiswahili H1:** Utunzaji wa loc mjini Eldoret.  
+**Kiswahili proposition:** Matengenezo na upangaji wa loc, kukaza upya Sisterlocs na uwekaji wa loc za bandia.  
+**Kiswahili supporting line:** Msaada wa vitendo wa GNU/Linux, kompyuta na mitandao kupitia WARENA.  
+**Kiswahili introduction:** Huduma za loc ndizo zinazoongoza. Kwa maswali ya teknolojia, wasiliana moja kwa moja na NAKEBUSEN; WARENA hutoa uwezo wa mifumo. Upeo wa kazi na upatikanaji hukubaliwa kabla ya kazi kuanza.  
 **Kiswahili CTAs:** Ulizia utunzaji wa loc · Tazama huduma na bei
+
+**Operational boundary:** ONLY NAKEBUSEN TRANSACTS. An enquiry does not confirm a booking.
 
 ## NAKEBUSEN · LOCS
 

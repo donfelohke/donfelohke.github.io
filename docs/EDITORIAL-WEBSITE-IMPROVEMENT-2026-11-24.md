@@ -3,7 +3,8 @@
 **Repository:** `donfelohke/donfelohke.github.io`  
 **Implementation branch:** `feat/editorial-brand-led-website-2026-11`  
 **Publication model:** static GitHub Pages; branch review before merge  
-**Scope:** brand hierarchy, homepage editorial copy, conversion path, responsive visual refinement and publication checks.
+**Scope:** historical brand hierarchy, homepage editorial copy, conversion path, responsive visual refinement and publication checks.  
+**Current implementation authority:** Superseded for hero hierarchy and first-screen composition by [Front-Page Portal — Consolidated Design, Copy and Standards Research](../research/FRONT-PAGE-PORTAL-DESIGN-COPY-AND-STANDARDS-2026-11-24.md). Keep its technical, commercial and release constraints where they remain consistent.
 
 ## Governing identity
 
