@@ -129,7 +129,11 @@ The FELOH Corpus contains research notes, references, definitions, source record
 
 ## Connect and footer
 
-Use one clear customer-facing contact path through NAKEBUSEN. Keep manual M-PESA service-payment information distinct from voluntary support. Confirm the agreed service and amount directly; verify the displayed merchant name and amount before entering a PIN. Never share a PIN or one-time code. Do not imply that an API, STK push, automated verification, checkout or payment-success state exists unless implemented and verified.
+**Connect is the sole contact directory.** Keep the practical Eldoret location, Plus Code/map pin, travel guidance, conditional home-call information, WhatsApp, phone and email together in Connect. The service cards and hero may retain contextual enquiry links, but do not repeat the contact directory in the booking panel or footer.
+
+**Footer:** retain the brand signature, manual M-PESA service-payment information, separate voluntary Support Us treatment, copyright and one clearly labelled GitHub repositories link. Do not repeat the location cue, directions, phone number or email in the footer.
+
+Keep manual M-PESA service-payment information distinct from voluntary support. Confirm the agreed service and amount directly; verify the displayed merchant name and amount before entering a PIN. Never share a PIN or one-time code. Do not imply that an API, STK push, automated verification, checkout or payment-success state exists unless implemented and verified.
 
 ## Translation and publication rules
 
