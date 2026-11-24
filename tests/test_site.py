@@ -107,6 +107,19 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("<script", HTML.lower())
         self.assertEqual(0, self.parser.scripts)
 
+    def test_digital_section_uses_engagement_framing(self):
+        self.assertIn("PRACTICAL ENGAGEMENTS", HTML)
+        self.assertIn("HUDUMA NA UWEZO", HTML)
+        self.assertIn("SCOPE AND AVAILABILITY CONFIRMED PER ENGAGEMENT", HTML)
+        self.assertIn("UPEO NA UPATIKANAJI HUTHIBITISHWA KWA KILA KAZI", HTML)
+        self.assertNotIn("CAPABILITY AREAS", HTML)
+        self.assertNotIn("These are capability areas, not a guarantee", HTML)
+        self.assertIn(
+            "https://github.com/donfelohke/feloh-corpus/blob/main/docs/F3L0H-SOVEREIGN-MASTER-CORPUS-2026-11-20.md",
+            HTML,
+        )
+        self.assertNotIn("FELOH-FOUNDATIONAL-CASE-AND-EVIDENCE-PROGRAMME", HTML)
+
     def test_service_prices_match_exact_published_amounts(self):
         webcopy = (ROOT / "docs/WEBCOPY.md").read_text(encoding="utf-8")
         for amount in ("KES 700", "KES 1,500", "KES 3,500"):
