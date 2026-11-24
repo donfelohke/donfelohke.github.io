@@ -1,3 +1,7 @@
+## 2026-11-24 — Phase 2 link-integrity correction
+- Replace the obsolete FELOH foundational-case URL with the verified F3L0H Sovereign Master Corpus document in both language states.
+- Add a source regression check for the canonical repository document link.
+
 ## 2026-11-24 — Research-led homepage refinement
 - Refine the hero proposition around the two real entry points: professional loc care in Eldoret and practical computing/network support.
 - Make the primary call to action specific to loc-care enquiries and the secondary action explicit about services and published prices.
