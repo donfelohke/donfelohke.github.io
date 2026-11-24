@@ -517,3 +517,52 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
     color:var(--ink);
   }
 }
+
+
+/* NAKEBUSEN × WARENA POWERED — editorial hierarchy and conversion clarity. */
+.hero .hero-proposition{max-width:39rem;margin:1.1rem 0 .35rem;color:#F2EFEA;font:500 clamp(1.45rem,3vw,2.25rem)/1.12 var(--serif);letter-spacing:-.025em}
+.hero .hero-intro{max-width:42rem;margin:.8rem 0 0;color:rgba(242,239,234,.86);font-size:.94rem;line-height:1.65}
+.hero .hero-lead{max-width:45rem;margin:1rem 0 .45rem;color:#E8C77D;font-size:clamp(.76rem,1.4vw,.96rem);letter-spacing:.055em}
+.hero h1{max-width:9.5ch;font-size:clamp(4rem,8.8vw,7.7rem);line-height:.84;letter-spacing:-.075em}
+.hero h1 em{color:#E8C77D;font-weight:400}
+.hero .hero-aside{display:grid;gap:.65rem}
+.hero-pillar{display:grid;grid-template-columns:4.8rem 1fr;gap:.12rem .8rem;padding:.8rem 0;border-bottom:1px solid rgba(242,239,234,.14)}
+.pillar-name{grid-row:span 2;color:#E8C77D;font:800 .78rem/1.4 var(--mono);letter-spacing:.08em}
+.pillar-domain{color:#F2EFEA;font:750 .7rem/1.4 var(--mono);letter-spacing:.045em}
+.pillar-detail{color:rgba(242,239,234,.72);font-size:.76rem;line-height:1.45}
+.hero .hero-genje{margin:.35rem 0 0;color:#E8C77D;font:750 .9rem/1.4 var(--mono);letter-spacing:.06em}
+.hero .hero-genje span{color:#F2EFEA;font-weight:500}
+.hero .hero-ikai,.hero .hero-boundary{margin:.15rem 0;color:rgba(242,239,234,.8);font-size:.78rem}
+.hero .hero-boundary{color:#F0C477;font:800 .68rem/1.4 var(--mono);letter-spacing:.08em}
+.hero .hero-nakebusen-line{margin:.25rem 0;color:#F2EFEA;font:500 1.2rem/1.2 var(--serif)}
+.digital-principle{padding:.8rem 1rem;border-left:2px solid #D4AF37;background:rgba(255,255,255,.055);color:#F2EFEA!important;font-size:.82rem!important}
+.digital-status{display:inline-block;margin:.6rem 0 0;padding:.45rem .65rem;border:1px solid rgba(240,196,119,.45);border-radius:999px;color:#F0C477!important;font:750 .6rem/1.45 var(--mono);letter-spacing:.045em}
+.hero .button-primary{min-height:52px}
+@media(max-width:760px){
+ .hero{padding-top:9.5rem;padding-bottom:4.5rem}
+ .hero h1{max-width:8.5ch;font-size:clamp(3.8rem,14vw,6.3rem)}
+ .hero .hero-aside{padding:1rem;border:1px solid rgba(242,239,234,.2);border-radius:1rem}
+ .hero-pillar{grid-template-columns:4.1rem 1fr}
+ .hero .hero-intro{font-size:.88rem}
+}
+@media(max-width:380px){
+ .hero h1{font-size:clamp(3.45rem,13.5vw,4.6rem)}
+ .hero-pillar{grid-template-columns:3.7rem 1fr;gap:.1rem .5rem}
+ .pillar-domain{font-size:.62rem}
+ .pillar-detail{font-size:.72rem}
+}
+@media(prefers-reduced-transparency:reduce){
+ .hero .hero-aside{backdrop-filter:none;-webkit-backdrop-filter:none;background:#214B3B}
+}
+
+/* Light/dark contrast pairing for the new editorial hero. */
+.hero .hero-proposition{color:var(--ink)}
+.hero .hero-intro{color:var(--muted)}
+.hero .hero-lead{color:var(--clay)}
+.hero h1 em{color:var(--ochre)}
+@media(prefers-color-scheme:dark){
+ .hero .hero-proposition{color:#F2EFEA}
+ .hero .hero-intro{color:rgba(242,239,234,.86)}
+ .hero .hero-lead{color:#E8C77D}
+ .hero h1 em{color:var(--brand-ochre)}
+}

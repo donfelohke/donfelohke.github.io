@@ -1,195 +1,126 @@
-# Don Feloh Website — Canonical Copy
+# Website Copy — NAKEBUSEN · WARENA POWERED
 
-**Version:** 23 November 2026  
-**Factual authority:** PUBLIC-FACTS-REGISTER.md · SERVICE-CATALOG.md  
-**Constitutional authority:** FELOH Sovereign Master Corpus
+**Review date:** 24 November 2026  
+**Publication:** One-page static website · English / Kiswahili  
+**Factual authority:** `PUBLIC-FACTS-REGISTER.md` · `SERVICE-CATALOG.md` · current operations records  
+**Constitutional authority:** FELOH Corpus  
+**Status:** Editorial copy for review on the active website pull request; live publication is not implied.
 
-## DON FELOH / F3L0H — human authorship
+## Master identity
 
-**Display:** Don Feloh  
-**Name line:** Felix Lwova · Feloh Warena · #HisGenjeness  
-**Role:** Founder, NAKEBUSEN · Founder & CTO, WARENA · Loctician · Creative Technologist.
+**NAKEBUSEN · WARENA POWERED**  
+**GRACE · GRIT · GLORY**  
+**BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**  
+**GENJE ZA WARENA**  
+**@donfelohke · #HisGenjeness**
 
-DON FELOH is the human author connecting distinct practices, not a fifth practice domain.
+NAKEBUSEN is the enterprise and sole customer-facing transaction interface. WARENA is distinct technical capability. GENJE is creative and embodied practice. IKAI is reflective-computing research / work in progress. FELOH is the human author and constitutional centre.
 
-**Philosophy:** GRACE · GRIT · GLORY.
+**FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.**
 
-- **GRACE → NAKEBUSEN:** beauty, heritage, craft and dignity.
-- **GRIT → WARENA:** freedom, technology and infrastructure.
-- **GLORY → DON FELOH:** human authorship, expression and becoming.
+**ONLY NAKEBUSEN TRANSACTS.**
 
-**Hero signature:** GENJE ZA WARENA | NAKEBUSEN.
+## Hero
 
-**Relationship:** FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
+**Eyebrow:** NAKEBUSEN · WARENA POWERED  
+**Pillar line:** GRACE · GRIT · GLORY  
+**H1:** Beautiful Roots. Sovereign Systems.  
+**Proposition:** A beauty house grounded in craft, community and practical technology.  
+**Lead:** NAKEBUSEN · LOC CARE FIRST · DIGITAL BY WARENA
 
-## 1. NAKEBUSEN · ROOT — only live commercial practice
+NAKEBUSEN brings together professional loc care and practical technology services in Eldoret Town, Kenya. Loc care leads; technical work is scoped through NAKEBUSEN with WARENA systems capability.
 
-NAKEBUSEN is the GRACE expression and remains the commercial lead and only live commercial practice.
+**Primary CTA:** Enquire with NAKEBUSEN  
+**Secondary CTA:** Explore loc services
 
-**Hero eyebrow:** DON FELOH · @donfelohke · KENYA  
-**Master hero H1:** GRACE. GRIT. GLORY.  
-**Hero signature:** GENJE ZA WARENA | NAKEBUSEN.  
-**NAKEBUSEN brand line:** Your Beauty ° Your Way.  
-**Lead:** Natural loc care in Eldoret.  
-**Supporting copy:** I am Don Feloh — founder, CTO, loctician and creative technologist. I work across heritage, beauty, free technology, infrastructure, music, movement and embodied knowledge. NAKEBUSEN is the commercial home for loc care. WARENA enables independent systems and technical work. GENJE embodies creative practice. IKAI reflects through research.  
-**Location:** Loc care · Beside King's Square, Kisumu Road · Eldoret Town · Uasin Gishu · Kenya.  
-**Map pin:** F743+R35, Eldoret, Kenya · [Open NAKEBUSEN in Google Maps](https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6).  
-**CBD directions:** [Driving](https://www.google.com/maps/dir/?api=1&origin=Eldoret%20CBD%2C%20Eldoret%2C%20Kenya&destination=F743%2BR35%2C%20Eldoret%2C%20Kenya&travelmode=driving) · [Walking](https://www.google.com/maps/dir/?api=1&origin=Eldoret%20CBD%2C%20Eldoret%2C%20Kenya&destination=F743%2BR35%2C%20Eldoret%2C%20Kenya&travelmode=walking).  
-**Text directions:** From Eldoret CBD, open the pin and select Directions. For matatu travel, confirm the drop-off with the conductor; do not treat “Malel Stage” as a verified stop. Share the pin with a boda boda rider for the final leg.  
-**Home calls:** Loc-care home visits may be arranged within the wider Eldoret Town area after direct confirmation of the exact location, service suitability, availability and travel arrangements.
+## NAKEBUSEN · LOCS
 
-### LOCS
+**Heading:** Care for the locs you wear.
 
-| Service | Public price |
+Considered loc maintenance and installation in Eldoret Town. Share your requirements so the service scope, availability and final price can be agreed directly.
+
+| Service | Published price |
 |---|---:|
-| Retouch & Styling | KES 700+ |
-| Sisterlocs Retie | KES 1,500+ |
+| Retouch & Styling | KES 700 |
+| Sisterlocs Retie | KES 1,500 |
 | Artificial Locs Installation | KES 3,500 |
 
-Published prices are indicative starting prices for Retouch & Styling and Sisterlocs Retie. Final scope and price depend on loc condition and the work required. Artificial Locs Installation is published at KES 3,500 without a plus sign. Confirm the agreed scope and amount directly before work begins. No braiding or shaving services are advertised.
+These are the approved public prices. Any additional work, materials or changes in scope are discussed and agreed before work begins. Final scope and price depend on loc condition, materials and work required; the final amount is agreed before work begins. NAKEBUSEN does not offer braiding or shaving. The founder does not cut clients' natural hair.
 
 **Enquiry boundary:** An enquiry does not confirm a booking. Availability and final terms are agreed directly.
 
-### NAKEBUSEN business history
+**Booking sequence:** Tell us the service; share the loc condition and requirements; discuss suitability, availability, scope and final price.
 
-NAKEBUSEN began in Lodwar, Turkana County, Kenya. Its loc-care practice continues in Eldoret. This is the business's history and must not be presented as the founder's personal birthplace, ancestry or roots.
+## NAKEBUSEN DIGITAL · WARENA
 
-### LOCS
+**Heading:** Freedom is a system.
 
-| Service | Public price |
-|---|---:|
-| Retouch & Styling | KES 700+ |
-| Sisterlocs Retie | KES 1,500+ |
-| Artificial Locs Installation | KES 3,500 |
+Practical GNU/Linux, computer and network support for individuals, homes, businesses and organisations. WARENA addresses fragile setups, fragmented devices and dependence on opaque systems through libre-first, local-first and maintainable approaches.
 
-Published prices are indicative starting prices. Retouch & Styling (KES 700+) and Sisterlocs Retie (KES 1,500+) may vary with loc condition and the work required. Artificial Locs Installation is published at KES 3,500; confirm the agreed scope and amount directly before work begins. No braiding or shaving services are advertised.
+**Principle:** Reuse first · Adapt second · Implement last.
 
-**Service descriptions:** Retouch & Styling refreshes and maintains existing locs. In Kiswahili, use “Matengenezo na upangaji wa loc”; the description is “Panga upya mwonekano na utunze loc zilizopo. Kazi itategemea hali ya loc na mahitaji yako.” Do not use the literal “Onyesha upya”, which does not mean refreshing hair. Sisterlocs Retie is retightening for established Sisterlocs; use “Kukaza upya Sisterlocs zilizokwishawekwa.” Artificial Locs Installation is scoped around the preferred style, materials and requirements; use “Uwekaji wa loc za bandia.” Do not imply washing, crochet or other unapproved inclusions.
+Human decisions remain authoritative; each engagement is assessed and scoped around the customer's equipment, needs and intended outcome.
 
-**Enquiry boundary:** An enquiry does not confirm a booking. Availability and final terms are agreed directly.
+**Status disclosure:** Practical capability · Scope and availability confirmed per engagement.
 
-### DIGITAL
+Potential areas include GNU/Linux administration, workstation support, computer diagnostics and recovery, Wi-Fi and small-office networking, local-first systems and technical guidance. These are potential engagement areas, not guarantees of immediate availability, compatibility or outcome. Do not publish fixed prices, warranties, certifications, uptime commitments or security guarantees without current evidence.
 
-Practical GNU/Linux, computer and network support for individuals, homes, businesses and organisations. Each engagement is assessed and scoped around the equipment, needs and intended outcome.
+**CTA:** Technical enquiry via NAKEBUSEN.
 
-- GNU/Linux installation, administration and troubleshooting.
-- Computer diagnostics, recovery and maintenance.
-- Wi-Fi, router configuration and LAN networking.
-- Small-office servers and infrastructure.
-- Laboratory, classroom and cybercafé systems.
-- Local-first and offline-capable computing environments.
-- Reproducible development environments and systems engineering practice.
+## About · DON FELOH / F3L0H
 
-These are capability areas, not a guarantee that every engagement is immediately available. Confirm capability, location, feasibility and schedule before accepting work. Digital services are quoted per engagement; do not publish unsupported fixed prices, warranties, certifications, uptime commitments or security guarantees.
+**Name line:** Felix Lwova · Feloh Warena · Don Feloh · @donfelohke · #HisGenjeness  
+**Role line:** Founder, NAKEBUSEN · Founder & CTO, WARENA · Loctician · Creative Technologist
 
-**Commercial process:** The customer describes the problem; NAKEBUSEN assesses requirements and feasibility; scope, deliverables, price and support terms are agreed; work begins only after direct agreement.
+I am Kenyan. I’m Felix Lwova, known as Don Feloh.
 
-## 2. WARENA · CAPABILITY
+I’m a founder, systems practitioner, loctician and creative technologist. My work moves between community-based physical care, GNU/Linux systems, reflective-computing research, sound and movement. NAKEBUSEN is the grounded enterprise; WARENA develops technical capability; GENJE carries creative expression; IKAI holds reflective-computing inquiry.
 
-**Heading:** WARENA — Freedom Is a System.
+My practice is guided by human authorship, local-first infrastructure, craft, cultural continuity and the belief that technology should extend human agency rather than replace it. AI may suggest; the human decides.
 
-Systems engineering, GNU/Linux, infrastructure and reproducible computing. WARENA is a distinct technical capability domain, not a NAKEBUSEN sub-brand or a separate checkout identity. Its capability may support NAKEBUSEN DIGITAL engagements.
+These are connected practices, not one undifferentiated company. NAKEBUSEN is the only commercial transaction point. WARENA supplies capability; IKAI remains research; GENJE remains creative practice. The FELOH Corpus records shared decisions, sources and evidence.
 
-Areas of work include GNU/Linux systems, workstation environments, infrastructure, networking, local-first computing, reproducible development environments, free-software engineering, system integration and technical documentation.
+## IKAI · MIRROR
 
-These describe the technical domain and documented areas of exploration; they are not a promise of immediate service availability or a separate checkout path.
+**Heading:** A mirror, not a judge.  
+**Status:** RESEARCH · WORK IN PROGRESS
 
-## 3. IKAI · MIRROR — research / work in progress
+IKAI investigates reflective computing: the integration of reflective optics, sensing, displays, local computation and human-directed interaction in physical environments.
 
-IKAI explores mirror systems, optics, displays, sensing and human-computer interaction. Its research asks how reflective environments can support presence, expression and embodied interaction.
+The name IKAI has a proposed Turkana association with “home”; the language variety, spelling, pronunciation and community usage remain to be verified. The mirror is an initial experimental embodiment, not the limit of the research.
 
-Current research directions include two-way mirror displays, digital and virtual mirrors, transparent displays, spatial interfaces and the relationship between light, reflection and real-time input/output.
+Any future sensing or collection must be transparent, consent-based, purpose-limited and documented. IKAI must not identify, rank, diagnose, covertly monitor or secretly profile people.
 
-IKAI is a research track, not a released product or a commercial service. IKAI is a Turkana name meaning “home”.
+## GENJE · EXPRESSION
 
-Primary source: [IKAI Mirror Technology and Scholarly Research](https://github.com/donfelohke/Ikai/blob/main/docs/IKAI-MIRROR-TECHNOLOGY-AND-SCHOLARLY-RESEARCH-2026-11-18.md).
+**Heading:** Rhythm made embodied.  
+**Status:** CREATIVE PRACTICE
 
-## 4. GENJE · EXPRESSION — creative practice
+GENJE is a Genge-rooted creative practice where sound, code, rhythm, movement and the body meet. It explores E-Genge, livecoding, audiovisual experimentation, algorithmic improvisation, choreography, movement notation, Laban-informed analysis and choreohacking.
 
-Genge, music, choreography, movement, livecoding and embodied knowledge. GENJE is a creative practice where sound, code, rhythm and the moving body meet.
+Technology serves the creative work; it does not replace the human author, dancer or practitioner.
 
-It connects electronic and African club music with performance, choreographic inquiry and creative technology—documenting practice rather than presenting a service catalogue.
+“THE FIRE OF THE FORMIDABLE” is an adopted creative interpretation, not a universal etymology.
 
-## 5. FELOH CORPUS · shared knowledge governance
+## FELOH CORPUS · KNOWLEDGE
 
-Knowledge governance, documentation, research provenance and source repositories.
+**Heading:** Research & records.
 
-The Corpus is the shared documentary record across the work: its canon, research notes, source material, decisions, references and provenance. It makes the relationship between ideas, evidence, repositories and authored artefacts traceable. It is not another practice domain, product or commercial destination.
+The FELOH Corpus contains research notes, references, definitions, source records and documented decisions. It is the shared knowledge and provenance system, not a fifth practice domain.
 
-## 6. THOUGHT & REFLECTION — core ideas
+**CTA:** Read the foundational case and evidence programme · Explore the Corpus.
 
-**Heading:** Core ideas.  
-**Kiswahili heading:** Misingi ya fikra.
+## Connect and footer
 
-These are working commitments, not final answers. They remain open to evidence, argument and revision.
+Use one clear customer-facing contact path through NAKEBUSEN. Keep manual M-PESA service-payment information distinct from voluntary support. Confirm the agreed service and amount directly; verify the displayed merchant name and amount before entering a PIN. Never share a PIN or one-time code. Do not imply that an API, STK push, automated verification, checkout or payment-success state exists unless implemented and verified.
 
-1. Freedom is lived through human agency and material capability, not declarations alone.
-2. Knowledge must answer to evidence, context and traceable sources.
-3. Dignity requires consent, responsibility and the ability to shape one's own life.
-4. Sovereignty is the capacity to shape our institutions, culture and technology.
-5. Creative work should deepen life without displacing human authorship.
+## Translation and publication rules
 
-**Kiswahili:** Hii ni misingi ya kazi ya fikra, si majibu ya mwisho. Inaweza kuchunguzwa, kujadiliwa na kurekebishwa kwa kuzingatia ushahidi.
-
-1. Uhuru hutekelezwa kupitia uwezo wa binadamu kuamua na kuwa na nyenzo za kutenda, si matamko pekee.
-2. Maarifa lazima yazingatie ushahidi, muktadha na vyanzo vinavyoweza kufuatiliwa.
-3. Heshima ya binadamu inahitaji ridhaa, uwajibikaji na uwezo wa mtu kuamua kuhusu maisha yake.
-4. Ujitawala ni uwezo wa kuunda taasisi, utamaduni na teknolojia zetu.
-5. Kazi ya ubunifu inapaswa kuboresha maisha bila kuchukua nafasi ya binadamu kama mwandishi na muumbaji.
-
-## 7. Source directory
-
-- [Don Feloh GitHub profile](https://github.com/donfelohke)
-- [NAKEBUSEN](https://github.com/donfelohke/NAKEBUSEN)
-- [WARENA](https://github.com/donfelohke/WARENA)
-- [IKAI](https://github.com/donfelohke/Ikai)
-- [GENJE](https://github.com/donfelohke/Genje)
-- [FELOH Corpus](https://github.com/donfelohke/feloh-corpus)
-- [Gallery](https://github.com/donfelohke/Gallery)
-- [Website source](https://github.com/donfelohke/donfelohke.github.io)
-
-## 8. Shared footer — NAKEBUSEN · WARENA · DON FELOH
-
-The footer presents business contact information, manual M-PESA service-payment safeguards, voluntary Support Us, repository links and authorship in both language states. The service-payment and voluntary-support boundaries must remain distinct.
-
-### English
-
-- NAKEBUSEN · BUSINESS — Loc care · Eldoret.
-- MANUAL SERVICE PAYMENT · M-PESA — Buy Goods. Pay only after the service and total amount have been agreed directly with NAKEBUSEN.
-- Till: 3511456 · Account / merchant name: FELIX LWOVA.
-- Before entering a PIN, confirm the displayed merchant name and agreed amount. Never share an M-PESA PIN or one-time code.
-- Manual payment information only. No API, STK push, automated verification or payment-success state.
-- INDEPENDENT WORK · VOLUNTARY SUPPORT — Support Us. Voluntary support helps independent creative, cultural and technology work. It is separate from NAKEBUSEN service payments. Contact Don Feloh first to confirm the correct support reference; do not assume the service-payment reference applies.
-
-### Kiswahili
-
-- NAKEBUSEN · BIASHARA — Utunzaji wa loc · Eldoret.
-- MALIPO YA HUDUMA KWA MKONO · M-PESA — Buy Goods. Lipa tu baada ya kukubaliana moja kwa moja na NAKEBUSEN kuhusu huduma na kiasi chote cha malipo.
-- Nambari ya Till: 3511456 · Jina la akaunti / mfanyabiashara: FELIX LWOVA.
-- Kabla ya kuweka PIN yako, hakikisha jina la mfanyabiashara lililoonyeshwa na kiasi kilichokubaliwa ni sahihi. Usishiriki PIN yako ya M-PESA au msimbo wa matumizi ya mara moja.
-- Maelezo ya malipo ya kawaida pekee. Hakuna API, STK Push, uthibitishaji wa kiotomatiki au hali ya mafanikio ya malipo.
-- KAZI HURU · MSAADA WA HIARI — Tuunge Mkono. Msaada wa hiari huchangia kazi huru za ubunifu, utamaduni na teknolojia. Ni tofauti na malipo ya huduma za NAKEBUSEN. Wasiliana na Don Feloh kwanza ili kuthibitisha rejea sahihi ya msaada; usidhani kuwa rejea ya malipo ya huduma inatumika.
-
-The Till and account / merchant name are operational payment details: preserve the exact approved values and do not copy them into unrelated repositories or publications.
-
-**@donfelohke · #HisGenjeness · GRACE · GRIT · GLORY**  
-**HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES**  
-**© Felix Lwova · Don Feloh** — retain current public attribution pending the copyright-holder evidence control in PUBLIC-FACTS-REGISTER.md.
-
-## Language coverage
-
-The public page defaults to English and provides Kiswahili through the native language selector. Both language states cover the hero and business history, service names and descriptions, booking disclosures, DIGITAL capability labels and descriptions, author biography and role, THOUGHT & REFLECTION, the four practice domains, IKAI and GENJE research/creative copy, FELOH Corpus, selected source records, contact links, footer payment safeguards and voluntary Support Us. The skip link, primary dock and accessible language-control labels are also bilingual. Canonical project names, technical terms, service prices, contact details and the M-PESA menu label “Buy Goods” remain unchanged where translation would reduce precision or alter an official name.
-
-## Editorial rules
-
-NAKEBUSEN is the only live commercial practice. LOCS and DIGITAL are its two customer service paths. WARENA is distinct capability. IKAI is research / WIP. GENJE is creative practice. FELOH Corpus is shared knowledge governance. Don Feloh is the human author.
-
-Do not invent availability, hours, street address, credentials, testimonials, outcomes or customer identities. Do not advertise braiding, shaving or unconfirmed home visits. Do not present IKAI, GENJE, WARENA or FELOH Corpus as separate checkout destinations. Do not alter payment details or copyright attribution without the required evidence and review.
-
-## Service-specific enquiry copy
-
-- Retouch & Styling: `Hello NAKEBUSEN. I would like to enquire about Retouch & Styling. I can share details about my current locs and the work required.`
-- Sisterlocs Retie: `Hello NAKEBUSEN. I would like to enquire about Sisterlocs Retie. I can share details about my Sisterlocs and their current condition.`
-- Artificial Locs Installation: `Hello NAKEBUSEN. I would like to enquire about Artificial Locs Installation. I would like to discuss the preferred style, materials and requirements.`
-
-Kiswahili equivalents are authored in the corresponding service cards in `index.html`. These links initiate enquiries only; they do not confirm bookings.
+- English is the default; Kiswahili is a complete authored language state, not machine-translated filler.
+- Keep the service names, prices, scope and booking disclosures consistent across both languages.
+- Use “Sisterlocs”, not “Sisterlocks”.
+- Do not add braiding, shaving, washing, crochet or other services unless the approved catalogue changes.
+- Do not state the proposed IKAI etymology as established fact.
+- Separate NAKEBUSEN's business history from the founder's personal biography.
+- Do not publish unapproved client images, testimonials, credentials, guarantees or availability.
+- The website is one static page; section anchors are preferred over a new application or unnecessary route.

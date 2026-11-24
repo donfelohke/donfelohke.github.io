@@ -54,16 +54,19 @@ class PublicationTests(unittest.TestCase):
         self.assertIn('<html lang="en">', HTML)
         self.assertIn('<main id="main">', HTML)
         self.assertEqual(1, self.parser.h1)
-        self.assertIn("Locs · GRACE · GRIT · GLORY", HTML)
+        self.assertIn("NAKEBUSEN · WARENA POWERED", HTML)
         self.assertIn("GENJE ZA WARENA", HTML)
-        self.assertIn("Grace.", HTML)
-        self.assertIn("Grit.", HTML)
-        self.assertIn("Glory.", HTML)
-        self.assertIn("Natural loc care in Eldoret.", HTML)
-        self.assertIn("Utunzaji wa loc za asili Eldoret.", HTML)
-        self.assertIn("Your Way.", HTML)
+        self.assertIn("Beautiful", HTML)
+        self.assertIn("Sovereign", HTML)
+        self.assertIn("GRACE · GRIT · GLORY", HTML)
+        self.assertIn("professional loc care and practical technology services in Eldoret Town, Kenya", HTML)
+        self.assertIn("NAKEBUSEN inaunganisha huduma za kitaalamu za loc", HTML)
+        self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
         self.assertIn("Founder, NAKEBUSEN · Founder &amp; CTO, WARENA · Loctician · Creative Technologist", HTML)
         self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
+        self.assertIn("Reuse first", HTML)
+        self.assertIn("AI may suggest; the human decides.", HTML)
+        self.assertIn("E-Genge", HTML)
 
     def test_fragment_integrity(self):
         ids = self.parser.ids
@@ -106,11 +109,13 @@ class PublicationTests(unittest.TestCase):
 
     def test_service_prices_match_exact_published_amounts(self):
         webcopy = (ROOT / "docs/WEBCOPY.md").read_text(encoding="utf-8")
-        for amount in ("KES 700+", "KES 1,500+", "KES 3,500"):
+        for amount in ("KES 700", "KES 1,500", "KES 3,500"):
             self.assertIn(amount, HTML)
             self.assertIn(amount, webcopy)
-        self.assertIn("KES 700+", HTML + webcopy)
-        self.assertIn("KES 1,500+", HTML + webcopy)
+        self.assertIn("KES 700", HTML + webcopy)
+        self.assertIn("KES 1,500", HTML + webcopy)
+        self.assertNotIn("KES 700+", HTML + webcopy)
+        self.assertNotIn("KES 1,500+", HTML + webcopy)
         self.assertNotIn("KES 3,500+", HTML + webcopy)
         self.assertIn("Published prices", HTML)
         self.assertIn("the final amount is agreed before work begins", HTML)
@@ -161,7 +166,7 @@ class PublicationTests(unittest.TestCase):
 
     def test_public_research_and_creative_work_are_described_plainly(self):
         for phrase in (
-            "Freedom", "WARENA", "IKAI", "meaning “home”",
+            "Freedom", "WARENA", "IKAI", "proposed Turkana association with “home”",
             "GENJE", "Genge-rooted creative practice", "livecoding",
             "FELOH Corpus", "Research &amp;<br><em>records.</em>",
         ):
@@ -257,19 +262,21 @@ class PublicationTests(unittest.TestCase):
         for phrase in (
             'property="og:type" content="website"',
             'property="og:site_name" content="NAKEBUSEN · DON FELOH"',
-            'property="og:title" content="NAKEBUSEN · Natural Loc Care in Eldoret — Don Feloh"',
-            'name="twitter:title" content="NAKEBUSEN · Natural Loc Care in Eldoret — Don Feloh"',
+            'property="og:title" content="NAKEBUSEN · WARENA POWERED · Beautiful Roots. Sovereign Systems."',
+            'name="twitter:title" content="NAKEBUSEN · WARENA POWERED · Beautiful Roots. Sovereign Systems."',
             'property="og:url" content="https://donfelohke.github.io/"',
             'property="og:locale" content="en_KE"',
             'property="og:locale:alternate" content="sw_KE"',
             'name="twitter:card" content="summary"',
+            'name="twitter:description" content="Professional loc care and practical technology services in Eldoret Town, Kenya. Enquire directly with NAKEBUSEN."',
             'name="description"',
         ):
             self.assertIn(phrase, HTML)
         self.assertNotIn('property="og:image"', HTML)
         self.assertNotIn('name="twitter:image"', HTML)
-        self.assertIn("NAKEBUSEN | Natural Loc Care in Eldoret, Kenya · Don Feloh", HTML)
-        self.assertIn("Sisterlocs Retie and Artificial Locs Installation", HTML)
+        self.assertIn("NAKEBUSEN · WARENA POWERED | Beautiful Roots. Sovereign Systems.", HTML)
+        self.assertIn("Sisterlocs Retie", HTML)
+        self.assertIn("Artificial Locs Installation", HTML)
         self.assertIn('media="(prefers-color-scheme: light)"', HTML)
         self.assertIn('media="(prefers-color-scheme: dark)"', HTML)
         self.assertNotIn('rel="icon"', HTML)
