@@ -153,7 +153,7 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("My roots are in Kanamkemer", HTML)
         self.assertNotIn("Mizizi yangu ni Kanamkemer", HTML)
         self.assertNotIn("My roots are in Lodwar", HTML)
-        self.assertIn("NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret.", HTML)
+        self.assertIn("NAKEBUSEN began in Lodwar, Turkana County, and its loc-care practice continues in Eldoret.", HTML)
         self.assertIn("NAKEBUSEN ilianza Lodwar", HTML)
         self.assertIn("I’m Felix Lwova, known as Don Feloh. I founded NAKEBUSEN and WARENA; my work spans loc care, GNU/Linux systems and creative technology.", HTML)
         self.assertIn("Mimi ni Mkenya. Ninaitwa Felix Lwova, Don Feloh. Kazi yangu inahusisha utunzaji wa loc, mifumo ya GNU/Linux na teknolojia ya ubunifu.", HTML)
@@ -452,7 +452,8 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("<strong>Describe:</strong>", HTML)
         self.assertIn("<strong>Agree:</strong>", HTML)
         self.assertIn("<strong>Confirm:</strong>", HTML)
-        self.assertIn("An enquiry does not confirm a booking. Availability and final terms are agreed directly.", HTML)
+        self.assertIn("An enquiry does not confirm a booking.", HTML)
+        self.assertIn("Availability and final terms are agreed directly.", HTML)
         order = [HTML.index('id="services"'), HTML.index('id="code"'), HTML.index('id="connect"'), HTML.index('id="don-feloh"'), HTML.index('id="projects"')]
         self.assertEqual(order, sorted(order))
         self.assertIn("Research &amp;<br><em>creative practice.</em>", HTML)
