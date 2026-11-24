@@ -1,7 +1,7 @@
 # Distinct Native Experience System
 
 **Document ID:** EC-DNES-01  
-**Version:** M2 · 22 November 2026  
+**Version:** M3 · 24 November 2026  
 **Status:** Implemented and merged to `main`; browser, keyboard and assistive-technology verification remains pending  
 **Implementation:** `index.html`  
 **Scope:** Public NAKEBUSEN gateway and its Locs, Digital and founder sections
@@ -64,7 +64,7 @@ Do not use palette membership as proof of contrast. Verify every actual foregrou
 ## 5. Native interaction patterns
 
 ### Locs
-- Service cards retain the approved names, published prices without plus signs and WhatsApp enquiry paths.
+- Service cards retain the approved names and published prices: Retouch & Styling KES 700; Sisterlocs Retie KES 1,500; Artificial Locs Installation KES 3,500. No plus sign is appended to the first two prices.
 - Service-specific enquiry links retain language-aware prefilled messages.
 - The enquiry boundary remains visible.
 - No simulated booking calendar, checkout or availability claim.
@@ -110,7 +110,7 @@ Preserve:
 - Retouch & Styling — KES 700.
 - Sisterlocs Retie — KES 1,500.
 - Artificial Locs Installation — KES 3,500.
-- Loc care · Eldoret Town / Karibu Mdosi · Kenya.
+- Loc care · Beside King's Square · Kisumu Road · Eldoret Town · Uasin Gishu · Kenya. F743+R35 is a directions reference, not a street address.
 - No braiding or shaving claims.
 - No unverified address, opening hours, availability, certification or customer outcomes.
 - An enquiry does not confirm a booking.
