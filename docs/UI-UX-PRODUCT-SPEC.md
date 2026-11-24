@@ -1,8 +1,8 @@
 # NAKEBUSEN — UI/UX Product Specification
 
 **Document ID:** NB-UX-01  
-**Version:** 1.1 · 22 November 2026  
-**Status:** Strategy baseline · implementation not yet authorised by this document  
+**Version:** 1.2 · 24 November 2026  
+**Status:** Strategy baseline · current publication facts reconciled 24 November 2026  
 **Product:** https://donfelohke.github.io/  
 **Repository:** `donfelohke/donfelohke.github.io`  
 **Authority:** @donfelohke
@@ -113,11 +113,11 @@ Do not put repository lists, extended founder biography or brand philosophy ahea
 
 Keep the three approved service entries and published prices visible and scannable:
 
-- Retouch & Styling — KES 700+
-- Sisterlocs Retie — KES 1,500+
+- Retouch & Styling — KES 700
+- Sisterlocs Retie — KES 1,500
 - Artificial Locs Installation — KES 3,500
 
-Use “From” for Retouch & Styling and Sisterlocs Retie published prices; keep Artificial Locs Installation at KES 3,500 without a plus sign. Explain that Retouch & Styling and Sisterlocs Retie may vary with loc condition and work required; Artificial Locs Installation is published at KES 3,500. Confirm the agreed scope and amount directly. No braiding or shaving.
+These are the approved published prices, not starting-price estimates. Discuss any additional work, materials or change in scope directly before work begins. Confirm the agreed scope and amount. No braiding or shaving.
 
 ### DIGITAL · WARENA
 
