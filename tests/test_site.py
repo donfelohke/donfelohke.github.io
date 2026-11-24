@@ -408,7 +408,7 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("KES 400", HTML)
         self.assertNotIn("Manicure &amp; pedicure", HTML)
         self.assertNotIn("guaranteed outcome", HTML)
-        self.assertNotIn("motion-capture pipeline", HTML)
+        self.assertIn("not proof of a released motion-capture pipeline", HTML)
         self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
 
 
