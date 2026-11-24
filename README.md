@@ -37,7 +37,7 @@ This repository publishes one bilingual, text-first static page. **NAKEBUSEN is 
 | Connect | `#connect` | Location, contact and project links |
 | Footer | `#footer` | Manual payment information and voluntary support |
 
-The mobile dock has three destinations: LOCS, DIGITAL and CONNECT. English is the default; Kiswahili is available as a complete authored language state. Theme follows the operating-system preference with user control.
+The mobile dock has three destinations: LOCS, DIGITAL and CONNECT. English is the default; Kiswahili is available as a complete authored language state. Theme follows the operating-system preference; there is no independent theme control.
 
 ## NAKEBUSEN · LOCS · Eldoret
 
