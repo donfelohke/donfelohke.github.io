@@ -1,3 +1,12 @@
+## 2026-11-24 — Research-led homepage refinement
+- Refine the hero proposition around the two real entry points: professional loc care in Eldoret and practical computing/network support.
+- Make the primary call to action specific to loc-care enquiries and the secondary action explicit about services and published prices.
+- Improve the page title and social descriptions for clear local relevance without keyword stuffing.
+- Keep **Beautiful Roots. Sovereign Systems.** as the master positioning; reserve **Sovereign Futures** for supporting horizon language and retain **Freedom Is a System.** for WARENA.
+- Move NAKEBUSEN business-origin context out of the hero panel and into the founder/about narrative.
+- Document dated local competitor, brand, search and accessibility research with explicit evidence limitations.
+- No service price, payment detail, booking boundary, contact path, runtime dependency or transaction model changed.
+
 # Changelog
 
 This file records material changes to the published website and its operating documentation. Detailed implementation history, review discussion and exact diffs remain in Git commits and pull requests. A merged source change is not, by itself, proof of live deployment.

@@ -13,6 +13,7 @@
 **NAKEBUSEN** is the ROOT domain: grounded physical practice, beauty, heritage, craft and enterprise. It is the only live commercial practice and transaction interface.
 
 **Brand positioning:** Beautiful Roots. Sovereign Systems.  
+**Supporting horizon:** Sovereign Futures may be used as supporting vision language; it does not replace the master positioning. WARENA retains its own line: Freedom Is a System.  
 **Homepage H1:** Your Beauty ° Your Way.  
 **Supporting statement:** Craft, technology and culture rooted in African ingenuity.
 

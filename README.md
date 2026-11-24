@@ -9,7 +9,9 @@ This repository publishes one bilingual, text-first static page. **NAKEBUSEN is 
 
 **NAKEBUSEN · WARENA POWERED**  
 **GRACE · GRIT · GLORY | GENJE ZA WARENA**  
-**BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**  
+**BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**
+
+The homepage leads with the loc-care offer in Eldoret and a direct service-enquiry path; WARENA's practical technical capability remains clearly separate. “Sovereign Futures” is supporting horizon language, not a replacement for the master positioning.  
 **@donfelohke · #HisGenjeness**
 
 - **GRACE → NAKEBUSEN:** beauty, heritage, craft, dignity and grounded enterprise.
@@ -37,7 +39,7 @@ This repository publishes one bilingual, text-first static page. **NAKEBUSEN is 
 | Connect | `#connect` | Location, contact and project links |
 | Footer | `#footer` | Manual payment information and voluntary support |
 
-The mobile dock has three destinations: LOCS, DIGITAL and CONNECT. English is the default; Kiswahili is available as a complete authored language state. Theme follows the operating-system preference with user control.
+The mobile dock has three destinations: LOCS, DIGITAL and CONNECT. English is the default; Kiswahili is available as a complete authored language state. Theme follows the operating-system preference; there is no independent theme control.
 
 ## NAKEBUSEN · LOCS · Eldoret
 
@@ -86,13 +88,14 @@ Source checks do not replace manual browser, keyboard, screen-reader, real-devic
 
 The README is an orientation document, not a competing specification. Use these sources in order:
 
-1. [Public facts register](docs/PUBLIC-FACTS-REGISTER.md) — approved public facts, evidence classes and publication constraints.
-2. [Service catalogue](docs/SERVICE-CATALOG.md) — NAKEBUSEN service names, prices, scope and enquiry rules; the NAKEBUSEN source catalogue remains the service-specific authority.
-3. [Website copy](docs/WEBCOPY.md) — approved website language and translation rules.
-4. [Content governance](docs/CONTENT-GOVERNANCE.md) — source authority and publication control.
-5. [Navigation structure](docs/NAV-STRUCTURE.md) and [native experience system](docs/NATIVE-EXPERIENCE-SYSTEM.md) — information architecture and interaction principles.
-6. [Release checklist](docs/RELEASE-CHECKLIST.md) and [roadmap](docs/ROADMAP.md) — validation, deployment and stewardship evidence.
-7. [Website audit discrepancy register](docs/WEBSITE-AUDIT-DISCREPANCY-REGISTER.md) — historical findings and current resolution status.
+1. [Research-led website revamp dossier](research/website-revamp-research-2026-11-24.md) — dated market, brand, accessibility and search research with limitations.
+2. [Public facts register](docs/PUBLIC-FACTS-REGISTER.md) — approved public facts, evidence classes and publication constraints.
+3. [Service catalogue](docs/SERVICE-CATALOG.md) — NAKEBUSEN service names, prices, scope and enquiry rules; the NAKEBUSEN source catalogue remains the service-specific authority.
+4. [Website copy](docs/WEBCOPY.md) — approved website language and translation rules.
+5. [Content governance](docs/CONTENT-GOVERNANCE.md) — source authority and publication control.
+6. [Navigation structure](docs/NAV-STRUCTURE.md) and [native experience system](docs/NATIVE-EXPERIENCE-SYSTEM.md) — information architecture and interaction principles.
+7. [Release checklist](docs/RELEASE-CHECKLIST.md) and [roadmap](docs/ROADMAP.md) — validation, deployment and stewardship evidence.
+8. [Website audit discrepancy register](docs/WEBSITE-AUDIT-DISCREPANCY-REGISTER.md) — historical findings and current resolution status.
 
 Historical briefs and audit recommendations are retained for provenance; they must not override current approved records. The earlier four-destination proposal was superseded by the single-page architecture on 22 November 2026.
 

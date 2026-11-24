@@ -25,13 +25,17 @@ NAKEBUSEN is the primary customer-facing commercial entry and the only transacti
 **Eyebrow:** NAKEBUSEN · WARENA POWERED  
 **Pillar line:** GRACE · GRIT · GLORY  
 **H1:** Beautiful Roots. Sovereign Systems.  
-**Proposition:** A beauty house grounded in craft, community and practical technology.  
+**Proposition:** Professional loc care in Eldoret. Practical computing and network support.  
 **Lead:** NAKEBUSEN · LOC CARE FIRST · DIGITAL BY WARENA
 
-NAKEBUSEN brings together professional loc care and practical technology services in Eldoret Town, Kenya. Loc care leads; technical work is scoped through NAKEBUSEN with WARENA systems capability.
+NAKEBUSEN is the direct point of contact for loc-care and technical enquiries. WARENA supplies the systems capability; scope and availability are agreed directly before work begins.
 
-**Primary CTA:** Enquire with NAKEBUSEN  
-**Secondary CTA:** Explore loc services
+**Primary CTA:** Enquire about loc care  
+**Secondary CTA:** View services & prices
+
+**Kiswahili proposition:** Utunzaji wa loc wa kitaalamu mjini Eldoret. Msaada wa kompyuta na mitandao.  
+**Kiswahili introduction:** NAKEBUSEN ndiyo sehemu ya moja kwa moja ya kuulizia huduma za loc na teknolojia. WARENA hutoa uwezo wa mifumo; upeo wa kazi na upatikanaji hukubaliwa moja kwa moja kabla ya kazi kuanza.  
+**Kiswahili CTAs:** Ulizia utunzaji wa loc · Tazama huduma na bei
 
 ## NAKEBUSEN · LOCS
 
