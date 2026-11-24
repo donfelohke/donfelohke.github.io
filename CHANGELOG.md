@@ -2,6 +2,12 @@
 
 This file records material changes to the published website and its operating documentation. Detailed implementation history, review discussion and exact diffs remain in Git commits and pull requests. A merged source change is not, by itself, proof of live deployment.
 
+## 2026-11-24 — Opaque content surfaces across the page
+- Use solid theme tokens for LOCS service cards, featured service, booking panel and founder constitution cards.
+- Give WARENA capability surfaces solid forest layers in light and dark schemes.
+- Keep glass restricted to the topbar and floating navigation; remove translucent content-card fills.
+- Add source regression assertions for the opaque service and booking surfaces.
+
 ## 2026-11-24 — Connect and footer hierarchy refinement
 - Keep location, directions, home-call conditions, WhatsApp, phone and email in Connect as the single contact directory.
 - Remove duplicated location and contact information from the footer and booking panel.
