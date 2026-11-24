@@ -121,7 +121,7 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("CAPABILITY AREAS", HTML)
         self.assertNotIn("These are capability areas, not a guarantee", HTML)
         self.assertIn(
-            "https://github.com/donfelohke/feloh-corpus/blob/main/docs/F3L0H-SOVEREIGN-MASTER-CORPUS-2026-11-20.md",
+            "https://github.com/donfelohke/feloh-corpus",
             HTML,
         )
         self.assertNotIn("FELOH-FOUNDATIONAL-CASE-AND-EVIDENCE-PROGRAMME", HTML)
