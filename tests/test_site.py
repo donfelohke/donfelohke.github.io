@@ -148,7 +148,7 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("My roots are in Lodwar", HTML)
         self.assertIn("NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret.", HTML)
         self.assertIn("NAKEBUSEN ilianza Lodwar", HTML)
-        self.assertIn("I’m Felix Lwova, a Kenyan known as Don Feloh.", HTML)
+        self.assertIn("I am Kenyan. I’m Felix Lwova, known as Don Feloh.", HTML)
         self.assertIn("Mimi ni Mkenya. Ninaitwa Felix Lwova, Don Feloh.", HTML)
         self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
 
