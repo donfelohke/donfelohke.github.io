@@ -198,7 +198,7 @@ class PublicationTests(unittest.TestCase):
             "GNU/Linux, computers", "FREEDOM IS A SYSTEM", "WARENA", "IKAI", "a Turkana female name meaning “home”",
             "jina la kike la Kiturkana lenye maana ya “nyumbani”",
             "GENJE", "Genge-rooted creative practice", "E-Genge", "livecoding",
-            "FELOH Corpus", "RESEARCH &amp; CREATIVE PRACTICE", "Beyond<br><em>services.</em>",
+            "FELOH Corpus", "RESEARCH &amp; CREATIVE PRACTICE", "Research &amp;<br><em>creative practice.</em>",
         ):
             self.assertIn(phrase, HTML)
         for removed_phrase in (
