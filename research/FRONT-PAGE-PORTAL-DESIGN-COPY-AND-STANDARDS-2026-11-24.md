@@ -205,7 +205,7 @@ Retain:
 - ochre/gold and terracotta as restrained accents
 - Cormorant Garamond for display, Inter/system sans for reading and controls, JetBrains Mono/system monospace for metadata
 - asymmetric editorial grid, strong hierarchy and generous negative space
-- glass as progressive enhancement for the header/dock or small identity accents only
+- glass only for the topbar and floating dock; all hero, price, service and payment content surfaces remain opaque
 
 Improve:
 - shorten the hero's visual height
@@ -333,3 +333,12 @@ This is source-grounded desk research. No recruited visitor testing, live conver
 - Use inline operational disclosures and contextual research references, not decorative footnote clutter.
 - Consolidate CSS rather than stacking overrides.
 - Preserve **ONLY NAKEBUSEN TRANSACTS.**
+
+
+## 11. Proposal and discrepancy reconciliation
+
+The current disposition of historical website proposals and the Phase 1 discrepancy register is maintained in [Website Proposal and Discrepancy Disposition — 24 November 2026](WEBSITE-PROPOSAL-AND-DISCREPANCY-STATUS-2026-11-24.md). That record distinguishes current decisions, superseded proposals, implemented source changes, partially resolved findings and manual verification still outstanding.
+
+The active visual rule is now explicit: **glass belongs to navigation; information belongs on opaque surfaces.** The hero price panel is an opaque forest surface. Decorative hero circles and radial artwork are removed. The forest gradient remains as a restrained background surface. This is aligned with the native-experience specification and is covered by source regression checks.
+
+The standalone research-page proposal is not current: no `research/index.html` exists in the repository and the Pages workflow stages only the root homepage and primary stylesheet. The single page exposes dated research links in context; repository documents remain the deeper source records.
