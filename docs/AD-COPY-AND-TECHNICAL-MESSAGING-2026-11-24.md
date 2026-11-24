@@ -96,7 +96,7 @@ Suggested structure:
 3. **CAPABILITY — WARENA:** systems engineering and technical research; link to technical records.
 4. **MIRROR — IKAI:** reflective-computing research, clearly marked WIP.
 5. **EXPRESSION — GENJE:** Genge, sound, movement and creative practice.
-6. **The relationship:** FELOH generates; NAKEBUSEN grounds; IKAI reflects; WARENA enables; GENJE embodies.
+6. **The identity architecture:** FELOH / AUTHORSHIP; NAKEBUSEN / ROOT; IKAI / REFLECTION; WARENA / CAPABILITY; GENJE / EXPRESSION.
 7. **Evidence and source records:** link to the FELOH Corpus and specialist repositories.
 
 Keep the homepage focused on service discovery, current offers, direct NAKEBUSEN enquiries and concise introductions. Do not add a second page until analytics-free usability review or user feedback demonstrates a need; no tracking should be introduced merely to justify the page.
