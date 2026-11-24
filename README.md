@@ -100,6 +100,8 @@ Source checks do not replace manual browser, keyboard, screen-reader, real-devic
 
 ## Repository authority and documentation
 
+- [Design Research & Reference Audit](research/DESIGN-RESEARCH-AND-REFERENCE-AUDIT-2026-11-24.md) — task-based design, accessibility, mobile hierarchy and performance criteria.
+- [Copy & Content Research Audit](research/COPY-AND-CONTENT-RESEARCH-AUDIT-2026-11-24.md) — content hierarchy, English/Kiswahili editorial questions, factual consistency and enquiry clarity.
  [Five-identity architecture & copy standard](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-FIVE-IDENTITY-ARCHITECTURE-AND-COPY-STANDARD-2026-11-24.md).
 
 The README is an orientation document, not a competing specification. Use these sources in order:
