@@ -176,7 +176,7 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 .footer-lockup{color:#F2EFEA;font-size:.9rem;letter-spacing:.12em}
 .footer-signature p:not(.footer-lockup){margin:.35rem 0;color:var(--footer-muted);font:650 .65rem/1.5 var(--mono);letter-spacing:.08em}
 .footer-signature strong{display:inline-block;margin-top:1rem;color:#E2725B;font:800 .7rem/1.4 var(--mono);letter-spacing:.08em}
-.footer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;padding:2.5rem 0}
+.footer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;padding:2.5rem 0}
 .footer-grid h2,.footer-grid h3{margin:.7rem 0;font:500 2rem/1 var(--serif)}
 .footer-grid p:not(.section-label){color:var(--footer-muted);font-size:.8rem}
 .footer-grid a{display:block;margin:.5rem 0;color:#F0C477;font-size:.82rem}
@@ -201,7 +201,7 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 @keyframes glass-drift{from{background-position:0% 50%}to{background-position:100% 50%}}
 @media(prefers-reduced-transparency:reduce){.topbar,.floating-dock{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;animation:none;background-image:none}.topbar{background:#123B2D}.floating-dock{background:#111713}}
 @media(prefers-color-scheme:dark) and (prefers-reduced-transparency:reduce){.topbar,.floating-dock{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;animation:none;background-image:none}.topbar{background:#033500}.floating-dock{background:#090C0A}}
-@media(max-width:1050px){.practice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{grid-template-columns:minmax(0,1.4fr) minmax(13rem,.6fr)}.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.support-section{grid-column:1/-1}}
+@media(max-width:1050px){.practice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{grid-template-columns:minmax(0,1.4fr) minmax(13rem,.6fr)}.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){
  :root{--section:4.8rem}
  .hero{padding-top:9.5rem}
@@ -405,11 +405,8 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
   .service-card,.booking-panel{background:#FFFDF8}
 }
 @media(prefers-color-scheme:dark){
-  .hero{background:
-    radial-gradient(ellipse at 82% 18%,rgba(212,175,55,.16),transparent 34%),
-    radial-gradient(ellipse at 12% 88%,rgba(226,114,91,.13),transparent 38%),
-    linear-gradient(128deg,#022900 0%,#033500 58%,#10430D 100%)}
-  .hero-aside{background:linear-gradient(145deg,rgba(242,239,234,.12),rgba(242,239,234,.035))}
+  .hero{background:linear-gradient(128deg,#022900 0%,#033500 58%,#10430D 100%)}
+  .hero-price-panel{background:#022900}
   .locs-section{background:linear-gradient(180deg,#101510,#151815)}
   .service-card,.service-card-featured{
     border-color:rgba(242,239,234,.15);
