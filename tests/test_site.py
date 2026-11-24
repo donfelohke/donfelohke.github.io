@@ -229,10 +229,17 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("RESEARCH DOSSIER", HTML)
         self.assertNotIn("CREATIVE PRACTICE REPOSITORY", HTML)
         self.assertNotIn("Loc-care home calls may be arranged across the wider Eldoret Town service area, subject to confirmation", HTML)
-        footer_business = HTML.split('<section class="footer-business">', 1)[1].split("</section>", 1)[0]
-        self.assertNotIn("wa.me/", footer_business)
-        self.assertNotIn("tel:", footer_business)
-        self.assertNotIn("mailto:", footer_business)
+        footer = HTML.split('<footer class="site-footer"', 1)[1].split("</footer>", 1)[0]
+        self.assertNotIn('class="footer-business"', HTML)
+        self.assertNotIn("Beside King's Square", footer)
+        self.assertNotIn("F743+R35", footer)
+        self.assertNotIn("+254 719 635 415", footer)
+        self.assertNotIn("mela9ine@proton.me", footer)
+        self.assertEqual(1, footer.count('href="https://github.com/donfelohke"'))
+        connect = HTML.split('<section class="section connect-section"', 1)[1].split("</section>", 1)[0]
+        self.assertIn("F743+R35", connect)
+        self.assertIn("+254 719 635 415", connect)
+        self.assertIn("mela9ine@proton.me", connect)
 
     def test_current_brand_palette_and_hybrid_surfaces(self):
         for token in (
@@ -259,6 +266,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn(".hero-price-panel{", CSS)
         self.assertIn("background:#214B3B", CSS)
         self.assertNotIn(".hero:before", CSS)
+        self.assertNotIn("radial-gradient(ellipse at 82% 18%", CSS)
         self.assertNotRegex(CSS, r"\.hero-price-panel\{[^}]*backdrop-filter")
         self.assertIn("Published", HTML)
         self.assertNotIn(".hero-glass-panel", CSS)
@@ -286,8 +294,8 @@ class PublicationTests(unittest.TestCase):
 
     def test_footer_language_parity_and_payment_safety(self):
         for phrase in (
-            "NAKEBUSEN · BIASHARA", "Utunzaji wa loc · Eldoret.",
             "MALIPO YA HUDUMA KWA MKONO · M-PESA", "Buy Goods",
+            "GitHub repositories · @donfelohke",
             "Nambari ya Till", "Jina la akaunti / mfanyabiashara",
             "Usishiriki PIN yako ya M-PESA",
             "KAZI HURU · MSAADA WA HIARI", "Tuunge Mkono",
