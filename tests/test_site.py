@@ -66,14 +66,15 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("GRACE · GRIT · GLORY", HTML)
         self.assertIn("Loc care", HTML)
         self.assertIn("in Eldoret.", HTML)
-        self.assertIn("Maintenance for existing locs, Sisterlocs retie and artificial loc installation. See each price upfront; agree any additional work or materials before work begins.", HTML)
+        self.assertIn("Retouch &amp; Styling, Sisterlocs Retie and Artificial Locs Installation—with published prices and direct WhatsApp enquiries.", HTML)
+        self.assertIn("Need GNU/Linux, computer or network support?", HTML)
         self.assertNotIn("Practical GNU/Linux, computer and network support is also available through WARENA.", HTML)
         self.assertIn("PUBLISHED PRICES", HTML)
         self.assertIn("KES 700", HTML)
         self.assertIn("KES 1,500", HTML)
         self.assertIn("KES 3,500", HTML)
         self.assertIn("Angalia bei za kila huduma mapema; kazi au vifaa vya ziada hukubaliwa kabla ya kuanza.", HTML)
-        self.assertIn("WARENA provides practical support for individuals, homes, businesses and organisations.", HTML)
+        self.assertIn("Practical GNU/Linux, computer and network support for individuals, homes, businesses and organisations.", HTML)
         self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
         self.assertIn("Founder, NAKEBUSEN · Founder &amp; CTO, WARENA · Loctician · Creative Technologist", HTML)
         self.assertIn("Reuse first", HTML)
@@ -146,21 +147,21 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("BEI ZILIZOCHAPISHWA", HTML)
         self.assertNotIn("Published prices are indicative", HTML)
         self.assertNotIn("Bei zilizochapishwa ni za kuanzia", HTML)
-        self.assertIn("See each price upfront; agree any additional work or materials before work begins.", HTML)
+        self.assertIn("published prices and direct WhatsApp enquiries.", HTML)
 
     def test_biography_and_business_history_are_separate(self):
         self.assertNotIn("My roots are in Kanamkemer", HTML)
         self.assertNotIn("Mizizi yangu ni Kanamkemer", HTML)
         self.assertNotIn("My roots are in Lodwar", HTML)
-        self.assertIn("NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret.", HTML)
+        self.assertIn("NAKEBUSEN began in Lodwar, Turkana County, and its loc-care practice continues in Eldoret.", HTML)
         self.assertIn("NAKEBUSEN ilianza Lodwar", HTML)
-        self.assertIn("I am Kenyan. I’m Felix Lwova, known as Don Feloh. My work spans loc care, GNU/Linux systems and creative technology.", HTML)
+        self.assertIn("I’m Felix Lwova, known as Don Feloh. I founded NAKEBUSEN and WARENA; my work spans loc care, GNU/Linux systems and creative technology.", HTML)
         self.assertIn("Mimi ni Mkenya. Ninaitwa Felix Lwova, Don Feloh. Kazi yangu inahusisha utunzaji wa loc, mifumo ya GNU/Linux na teknolojia ya ubunifu.", HTML)
         self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
 
     def test_service_scope_has_no_unapproved_inclusions(self):
-        self.assertIn("Maintenance and styling for existing locs", HTML)
-        self.assertIn("Retightening for established Sisterlocs", HTML)
+        self.assertIn("For maintenance and styling of locs you already have.", HTML)
+        self.assertIn("For retightening an established Sisterlocs installation.", HTML)
         self.assertNotIn("Onyesha upya", HTML)
         self.assertIn("Matengenezo na upangaji wa loc", HTML)
         self.assertNotIn("MAWAZO NA TAFAKARI", HTML)
@@ -349,7 +350,7 @@ class PublicationTests(unittest.TestCase):
             'property="og:locale" content="en_KE"',
             'property="og:locale:alternate" content="sw_KE"',
             'name="twitter:card" content="summary"',
-            'name="twitter:description" content="Loc care in Eldoret Town: published prices, service details and direct WhatsApp enquiries with NAKEBUSEN."',
+            'name="twitter:description" content="Retouch & Styling, Sisterlocs Retie and Artificial Locs Installation in Eldoret. See prices and enquire directly with NAKEBUSEN."',
             'name="description"',
         ):
             self.assertIn(phrase, HTML)
@@ -360,8 +361,8 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("Artificial Locs Installation", HTML)
         self.assertIn("https://github.com/donfelohke/feloh-corpus", HTML)
         self.assertNotIn("FELOH-FOUNDATIONAL-CASE-AND-EVIDENCE-PROGRAMME", HTML)
-        self.assertIn("Enquire on WhatsApp", HTML)
-        self.assertIn("See service details", HTML)
+        self.assertIn("Enquire about loc care", HTML)
+        self.assertIn("Compare services &amp; prices", HTML)
         self.assertIn("Ulizia kupitia WhatsApp", HTML)
         self.assertIn("Tazama maelezo ya huduma", HTML)
         self.assertIn('media="(prefers-color-scheme: light)"', HTML)
@@ -396,9 +397,8 @@ class PublicationTests(unittest.TestCase):
 
     def test_content_depth_and_operational_boundaries(self):
         for phrase in (
-            "Choose by the work", "Retightening", "existing Sisterlocs installation",
-            "What to include in your message", "Agree the details before work",
-            "The published prices are not a substitute for an agreed scope.",
+            "Not sure which service", "Retightening", "established Sisterlocs installation",
+            "What to include in your message", "exact work is agreed after we discuss their condition.",
             "A responsible technical engagement", "Discover", "Change &amp; verify",
             "Handover", "Do not send passwords, private keys, PINs or one-time codes",
             "Permission is required before anyone accesses, copies, moves or deletes client data.",
@@ -452,7 +452,8 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("<strong>Describe:</strong>", HTML)
         self.assertIn("<strong>Agree:</strong>", HTML)
         self.assertIn("<strong>Confirm:</strong>", HTML)
-        self.assertIn("Do not treat a date, price estimate or message as confirmation", HTML)
+        self.assertIn("An enquiry does not confirm a booking.", HTML)
+        self.assertIn("Availability and final terms are agreed directly.", HTML)
         order = [HTML.index('id="services"'), HTML.index('id="code"'), HTML.index('id="connect"'), HTML.index('id="don-feloh"'), HTML.index('id="projects"')]
         self.assertEqual(order, sorted(order))
         self.assertIn("Research &amp;<br><em>creative practice.</em>", HTML)
