@@ -188,7 +188,7 @@ class PublicationTests(unittest.TestCase):
             "Beside King's Square", "Kisumu Road", "F743+R35", "wider Eldoret Town service area",
             "https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6", "+254719635415", "mela9ine@proton.me",
             "3511456", "FELIX LWOVA", "Never share your M-PESA PIN",
-            "Manual payment information only", "Support Us",
+            "This page does not confirm a booking or payment.", "Support Us",
             "separate from NAKEBUSEN service payments",
         ):
             self.assertIn(phrase, HTML)
@@ -408,9 +408,27 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("KES 400", HTML)
         self.assertNotIn("Manicure &amp; pedicure", HTML)
         self.assertNotIn("guaranteed outcome", HTML)
-        self.assertIn("not proof of a released motion-capture pipeline", HTML)
+        self.assertIn("not proof of a released performance system, motion-capture pipeline or completed work.", HTML)
         self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
 
+
+    def test_faq_privacy_and_customer_boundaries(self):
+        for phrase in (
+            'id="service-faq"', "Does an enquiry confirm an appointment?",
+            "Are additional materials or work automatically included?",
+            "Is Sisterlocs Retie a new installation?", "Can I request a home call?",
+            "No standard duration is published.", "Your image is yours",
+            "A photo shared to discuss a service is not permission to publish it.",
+            "NAKEBUSEN does not diagnose scalp or medical conditions",
+            "This page does not confirm a booking or payment.",
+        ):
+            self.assertIn(phrase, HTML)
+        self.assertIn("Huduma nyingine za urembo au kucha zimeorodheshwa hapa?", HTML)
+        self.assertIn("Picha unayotuma kujadili huduma si ruhusa ya kuichapisha.", HTML)
+        self.assertIn(".faq-grid{", CSS)
+        self.assertIn(".customer-care-grid{", CSS)
+        self.assertNotIn("No API", HTML)
+        self.assertNotIn("STK push", HTML)
 
 
 if __name__ == "__main__":
