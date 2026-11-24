@@ -121,7 +121,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("bei zilizoidhinishwa za huduma", HTML)
         self.assertNotIn("Published prices are indicative", HTML)
         self.assertNotIn("Bei zilizochapishwa ni za kuanzia", HTML)
-        self.assertIn("the final amount is agreed before work begins", HTML)
+        self.assertIn("additional work, materials or changes in scope are discussed and agreed before work begins", HTML)
 
     def test_biography_and_business_history_are_separate(self):
         self.assertNotIn("My roots are in Kanamkemer", HTML)
