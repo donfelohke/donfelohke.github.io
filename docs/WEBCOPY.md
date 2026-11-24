@@ -216,3 +216,14 @@ The page order is intentionally commercial-first and task-oriented:
 
 The appointment path is expressed as four explicit stages: Choose, Describe, Agree and Confirm. The final stage requires direct agreement by both sides; an enquiry, proposed date or estimate is not a booking confirmation. The floating dock remains limited to Locs, Digital and Visit; the in-page index provides the additional Founder & Work route without overloading the fixed mobile controls.
 
+
+
+## Selected dated evidence links
+
+The public page links directly to three current specialist records while preserving their actual maturity:
+
+- **WARENA — Reproducible Systems and Real-Time I/O Validation (24 November 2026):** proposed validation protocol; no completed benchmark or qualified workstation is claimed. https://github.com/donfelohke/WARENA/blob/main/docs/REPRODUCIBLE-SYSTEMS-AND-REALTIME-IO-VALIDATION-2026-11-24.md
+- **IKAI — Mirror M1 Optical and Display Bench Addendum (24 November 2026):** proposed test protocol; no mirror assembly, optical measurement or display calibration is claimed. https://github.com/donfelohke/Ikai/blob/main/docs/IKAI-M1-OPTICAL-AND-DISPLAY-BENCH-ADDENDUM-2026-11-24.md
+- **GENJE — Movement Notation and Interoperability Validation (24 November 2026):** proposed validation protocol; no parser, converter, motion-capture pipeline or round-trip benchmark is claimed. https://github.com/donfelohke/Genje/blob/main/docs/GENJE-MOVEMENT-NOTATION-AND-INTEROPERABILITY-VALIDATION-2026-11-24.md
+
+These links make the research inspectable; they are not testimonials, completed client case studies or proof of a released product. Keep the full research catalogue in the specialist repositories, not on the commercial homepage.
