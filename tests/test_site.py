@@ -54,7 +54,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn('<html lang="en">', HTML)
         self.assertIn('<main id="main">', HTML)
         self.assertEqual(1, self.parser.h1)
-        self.assertIn("NAKEBUSEN × WARENA POWERED", HTML)
+        self.assertIn("NAKEBUSEN · WARENA POWERED", HTML)
         self.assertIn("GENJE ZA WARENA", HTML)
         self.assertIn("Beautiful", HTML)
         self.assertIn("Sovereign", HTML)
@@ -260,8 +260,8 @@ class PublicationTests(unittest.TestCase):
         for phrase in (
             'property="og:type" content="website"',
             'property="og:site_name" content="NAKEBUSEN · DON FELOH"',
-            'property="og:title" content="NAKEBUSEN × WARENA POWERED · Beautiful Roots. Sovereign Systems."',
-            'name="twitter:title" content="NAKEBUSEN × WARENA POWERED · Beautiful Roots. Sovereign Systems."',
+            'property="og:title" content="NAKEBUSEN · WARENA POWERED · Beautiful Roots. Sovereign Systems."',
+            'name="twitter:title" content="NAKEBUSEN · WARENA POWERED · Beautiful Roots. Sovereign Systems."',
             'property="og:url" content="https://donfelohke.github.io/"',
             'property="og:locale" content="en_KE"',
             'property="og:locale:alternate" content="sw_KE"',
@@ -272,7 +272,7 @@ class PublicationTests(unittest.TestCase):
             self.assertIn(phrase, HTML)
         self.assertNotIn('property="og:image"', HTML)
         self.assertNotIn('name="twitter:image"', HTML)
-        self.assertIn("NAKEBUSEN × WARENA POWERED | Beautiful Roots. Sovereign Systems.", HTML)
+        self.assertIn("NAKEBUSEN · WARENA POWERED | Beautiful Roots. Sovereign Systems.", HTML)
         self.assertIn("Sisterlocs Retie", HTML)
         self.assertIn("Artificial Locs Installation", HTML)
         self.assertIn('media="(prefers-color-scheme: light)"', HTML)
