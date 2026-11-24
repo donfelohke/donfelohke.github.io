@@ -410,7 +410,7 @@ Record where they hesitate, misread a price, choose the wrong service, mistake a
 
 ## 11. Change-control boundaries
 
-- This document is **PROPOSED**, not APPROVED.
+- This document is the **OWNER-APPROVED DESIGN AND COPY DIRECTION** as of 24 November 2026. The production refinement is tracked separately in the release record; the research limitations and manual verification requirements remain in force.
 - `docs/WEBCOPY.md` remains the current published-copy reference until a revision is approved.
 - `docs/SERVICE-CATALOG.md` and the NAKEBUSEN source catalogue remain authoritative for service names, prices and scope.
 - Do not change prices, payment information, merchant wording, support details, phone, email, location, booking terms or service boundaries as part of copy editing.
