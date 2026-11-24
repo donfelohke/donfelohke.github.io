@@ -1,10 +1,10 @@
 # Website Copy — NAKEBUSEN · WARENA POWERED
 
 **Review date:** 24 November 2026  
-**Publication:** One-page static website · English / Kiswahili  
-**Factual authority:** `PUBLIC-FACTS-REGISTER.md` · `SERVICE-CATALOG.md` · current operations records  
+**Publication architecture:** One-page static website · English / Kiswahili  
+**Factual authority:** `PUBLIC-FACTS-REGISTER.md` · `SERVICE-CATALOG.md` · NAKEBUSEN source catalogue  
 **Constitutional authority:** FELOH Corpus  
-**Status:** Editorial copy for review on the active website pull request; live publication is not implied.
+**Status:** Approved source copy merged to `main`; live deployment and final public-page inspection remain separate release checks.
 
 ## Master identity
 
@@ -14,7 +14,7 @@
 **GENJE ZA WARENA**  
 **@donfelohke · #HisGenjeness**
 
-NAKEBUSEN is the enterprise and sole customer-facing transaction interface. WARENA is distinct technical capability. GENJE is creative and embodied practice. IKAI is reflective-computing research / work in progress. FELOH is the human author and constitutional centre.
+NAKEBUSEN is the primary customer-facing commercial entry and the only transaction point. WARENA is distinct technical capability. GENJE is creative and embodied practice. IKAI is reflective-computing research / work in progress. FELOH is the human author.
 
 **FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.**
 
@@ -87,7 +87,9 @@ These are connected practices, not one undifferentiated company. NAKEBUSEN is th
 
 IKAI investigates reflective computing: the integration of reflective optics, sensing, displays, local computation and human-directed interaction in physical environments.
 
-The name IKAI has a proposed Turkana association with “home”; the language variety, spelling, pronunciation and community usage remain to be verified. The mirror is an initial experimental embodiment, not the limit of the research.
+**IKAI is a Turkana female name meaning “home”.** This is the founder-approved identity meaning. It should not be presented as independent linguistic certification or as a claim that every language variety, spelling, pronunciation or community usage has been independently documented.
+
+The mirror is an initial experimental embodiment, not the limit of the research.
 
 Any future sensing or collection must be transparent, consent-based, purpose-limited and documented. IKAI must not identify, rank, diagnose, covertly monitor or secretly profile people.
 
@@ -117,10 +119,10 @@ Use one clear customer-facing contact path through NAKEBUSEN. Keep manual M-PESA
 ## Translation and publication rules
 
 - English is the default; Kiswahili is a complete authored language state, not machine-translated filler.
-- Keep the service names, prices, scope and booking disclosures consistent across both languages.
+- Keep service names, prices, scope and booking disclosures consistent across both languages.
 - Use “Sisterlocs”, not “Sisterlocks”.
 - Do not add braiding, shaving, washing, crochet or other services unless the approved catalogue changes.
-- Do not state the proposed IKAI etymology as established fact.
+- Keep IKAI's founder-approved name meaning distinct from independent linguistic verification.
 - Separate NAKEBUSEN's business history from the founder's personal biography.
 - Do not publish unapproved client images, testimonials, credentials, guarantees or availability.
 - The website is one static page; section anchors are preferred over a new application or unnecessary route.

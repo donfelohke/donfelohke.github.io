@@ -1,7 +1,7 @@
 # Don Feloh Website — Site Architecture
 
-**Date:** 22 November 2026  
-**Status:** F3L0H ecosystem gateway · commercial-first, author-led static site  
+**Date:** 24 November 2026  
+**Status:** Current source architecture · one-page, bilingual, commercial-first static site  
 **Public surface:** https://donfelohke.github.io/
 
 ## Purpose and constitutional domain model
@@ -64,10 +64,10 @@ The four-practice map is an orientation layer, not a replacement for the detaile
 
 ## Publication invariants
 
-- Retouch & Styling — KES 700+ (approved starting price).
-- Sisterlocs Retie — KES 1,500+ (approved starting price).
+- Retouch & Styling — KES 700 (approved published price; no plus sign).
+- Sisterlocs Retie — KES 1,500 (approved published price; no plus sign).
 - Artificial Locs Installation — KES 3,500.
-- Location: Eldoret Town / Karibu Mdosi · Uasin Gishu · Kenya.
+- Location: Beside King's Square · Kisumu Road · Eldoret Town · Uasin Gishu · Kenya. F743+R35 is a directions reference, not a street-address claim.
 - No braiding, shaving, invented street address, opening hours, appointment availability, testimonials or credentials.
 - DIGITAL areas are GNU/Linux, computer diagnostics/recovery/maintenance, Wi-Fi/router/LAN, small-office infrastructure, learning-space systems and local-first/reproducible environments where appropriate. They are not guaranteed availability or fixed-price offers.
 - M-PESA Buy Goods Till 3511456; account / merchant name FELIX LWOVA. Confirm service, total and displayed merchant before PIN entry. Never request a PIN or one-time code.
@@ -76,7 +76,7 @@ The four-practice map is an orientation layer, not a replacement for the detaile
 
 ## Release control
 
-Source tests, artifact creation, manual deployment, deployment result and live inspection are separate evidence stages. Do not claim a live release without evidence. Deployment remains a separately authorized action.
+Source tests, artifact creation, deployment result and live inspection are separate evidence stages. Pull-request workflows validate but do not publish; pushes to `main` trigger the Pages build/deploy workflow, and `workflow_dispatch` is available as an alternative trigger. Do not claim a live release until the deployment job and live inspection are evidenced.
 
 ## Business-history and biography distinction
 

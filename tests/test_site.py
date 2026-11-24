@@ -169,7 +169,8 @@ class PublicationTests(unittest.TestCase):
 
     def test_public_research_and_creative_work_are_described_plainly(self):
         for phrase in (
-            "Freedom", "WARENA", "IKAI", "proposed Turkana association with “home”",
+            "Freedom", "WARENA", "IKAI", "IKAI is a Turkana female name meaning “home”",
+            "IKAI ni jina la kike la Kiturkana lenye maana ya “nyumbani”",
             "GENJE", "Genge-rooted creative practice", "livecoding",
             "FELOH Corpus", "Research &amp;<br><em>records.</em>",
         ):
@@ -307,7 +308,7 @@ class PublicationTests(unittest.TestCase):
         register = (ROOT / "docs/PUBLIC-FACTS-REGISTER.md").read_text(encoding="utf-8")
         self.assertIn("| PF-034 | NAKEBUSEN began in Lodwar", register)
         self.assertLess(register.index("| PF-034 |"), register.index("## Publication controls"))
-        self.assertIn("Keep distinct from founder biography", register)
+        self.assertIn("keep distinct from founder biography", register)
 
 
 if __name__ == "__main__":

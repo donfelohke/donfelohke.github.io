@@ -1,165 +1,107 @@
-# NAKEBUSEN — Brand Implementation Checklist
+# NAKEBUSEN — Brand and Website Implementation Checklist
 
 **Document ID:** NB-BIC-01  
-**Version:** M6 · 20 November 2026  
-**Status:** Implementation and automated verification baseline · manual release checks outstanding
+**Version:** M7 · 24 November 2026  
+**Status:** Current source baseline · automated checks passed for the latest recorded main candidate · manual live and assistive-technology checks remain outstanding
 
-Status meanings: APPROVED = decision approved; IMPLEMENTED = code changed; TESTED = checks executed; VERIFIED = evidence supports acceptance; RELEASED = deployed and checked.
+Status meanings: APPROVED = decision approved; IMPLEMENTED = code changed; TESTED = checks executed; VERIFIED = evidence supports acceptance; RELEASED = deployed and inspected. A checked approval or implementation item is not automatically a verified or released outcome.
 
-## 1. Approved brand decisions
+## 1. Current approved identity and publication decisions
 
-- [x] Homepage H1: Your Beauty ° Your Way. (approved 9 November 2026; supersedes the M1 editorial-first H1)
-- [x] Supporting statement: Craft, technology and culture rooted in African ingenuity.
-- [x] Six-colour palette approved.
-- [x] Typography strategy approved.
-- [x] Text-first graphics policy approved.
-- [x] Canonical lockup: NAKEBUSEN Locs ° Powered by WARENA.
-- [x] Supporting signature: @donfelohke · #HisGenjeness.
-- [x] Two commercial paths: LOCS · CROWN and DIGITAL · WARENA.
-- [x] ONLY NAKEBUSEN TRANSACTS.
-- [x] GENJE ZA WARENA is governing intention, not a separate commercial division.
-- [x] WARENA Systems belongs within DIGITAL.
-- [x] IKAI is research, not a released product.
-- [x] Sisterlocs Retie is the canonical public service label; From KES 1,500 remains the starting price.
-- [x] Public role line: Founder · CTO · Loctician · Creative Technologist.
+- [x] Master platform: **NAKEBUSEN · WARENA POWERED**.
+- [x] Pillar line: **GRACE · GRIT · GLORY**.
+- [x] Public statement: **BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**
+- [x] Supporting signature: **GENJE ZA WARENA** and **@donfelohke · #HisGenjeness**.
+- [x] GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → DON FELOH.
+- [x] NAKEBUSEN is the primary customer-facing commercial entry and the only transaction point.
+- [x] WARENA is a distinct technical capability domain, not a NAKEBUSEN sub-brand or separate checkout.
+- [x] GENJE is creative and embodied practice, not a separate commercial division.
+- [x] IKAI is reflective-computing research / work in progress, not a released product.
+- [x] FELOH Corpus is shared knowledge, governance and provenance, not a fifth practice domain.
+- [x] Public role line: Founder, NAKEBUSEN · Founder & CTO, WARENA · Loctician · Creative Technologist.
 
-These checkboxes record approved decisions, not test results.
+## 2. Public offer and factual invariants
 
-## 2. Homepage content
+- [x] Retouch & Styling — **KES 700**.
+- [x] Sisterlocs Retie — **KES 1,500**.
+- [x] Artificial Locs Installation — **KES 3,500**.
+- [x] The first two prices are published amounts without a plus sign; do not describe them as starting prices.
+- [x] No braiding or shaving.
+- [x] The founder does not cut clients' natural hair.
+- [x] An enquiry does not confirm a booking; availability and final terms are agreed directly.
+- [x] Location wording: Beside King's Square · Kisumu Road · Eldoret Town · Uasin Gishu · Kenya.
+- [x] F743+R35 and the supplied map pin are directions references, not a claim of an independently verified street address.
+- [x] Loc-care home calls are subject to exact-location, suitability, availability and travel-cost confirmation.
+- [x] Digital service capability is scoped per engagement; no unsupported fixed prices, warranties, certifications, uptime or security guarantees.
+- [x] Manual M-PESA details and the voluntary Support Us distinction are preserved; changes require separate merchant-authority verification.
+- [x] IKAI's “home” meaning is a founder-approved identity statement, not independent linguistic certification.
 
-- [x] Hero headline, supporting statement and beauty-first information order match approved copy.
-- [x] Enterprise introduction matches approved copy.
-- [x] LOCS and DIGITAL are the two obvious service paths.
-- [x] LOCS service descriptions and prices match SERVICE-CATALOG.md.
-- [x] Sisterlocs Retie label and description are consistent across page, catalogue, facts register and WhatsApp message.
-- [x] No braiding or shaving claims.
-- [x] DIGITAL capability wording remains scoped and evidence-led.
-- [x] Philosophy, GENJE and community copy do not displace service information or reintroduce retired homepage copy.
-- [x] Founder public role line includes CTO; founder display-name and copyright evidence statuses remain explicit.
-- [x] Enquiry is not described as a confirmed booking.
+## 3. Architecture and visual system
 
-## 3. Brand and visual system
+- [x] One-page, text-first static publication with section anchors.
+- [x] English default and authored Kiswahili language state.
+- [x] Three-destination mobile dock: LOCS / DIGITAL / CONNECT.
+- [x] Native HTML and CSS; no JavaScript application runtime, framework, package manager, analytics, tracking, remote fonts, CDN or third-party runtime.
+- [x] System light/dark preference, reduced-motion and reduced-transparency support are implemented in source.
+- [ ] Complete manual contrast review across all foreground/background and interaction states.
+- [ ] Complete physical-device visual review, including OLED/dark and light themes.
+- [ ] Confirm text scaling, zoom and reflow at supported viewport sizes.
+- [ ] Confirm touch-target behaviour and safe-area layout on target devices.
 
-- [x] Exact lockup, including degree sign, in header and footer.
-- [x] Palette tokens match approved hex values.
-- [ ] No unrelated colour families remain in active UI styling.
-- [x] Typography uses approved roles and fallbacks.
-- [x] No external font CDN.
-- [x] Decorative artwork and unnecessary visual effects removed.
-- [x] Functional icons remain accessible.
-- [ ] LOCS photography has documented permission.
+## 4. Navigation, language and interaction
 
-### AMOLED-first theme decision — 19 November 2026
+- [x] Primary anchor destinations and floating dock are implemented.
+- [x] Language control updates authored content and document language.
+- [x] Theme control follows system preference and supports user preference.
+- [x] Language and theme controls have storage-failure fallbacks.
+- [x] WhatsApp enquiry messages are language-aware.
+- [ ] Complete manual keyboard-only review on current desktop and mobile browsers.
+- [ ] Complete TalkBack and at least one desktop screen-reader review.
+- [ ] Verify real WhatsApp, telephone and email handoff from target devices.
 
-- [x] Dark theme uses a true-black `#000000` page canvas for OLED displays.
-- [x] Dark theme uses layered `#151515` card surfaces and the established forest-green WARENA section.
-- [x] Warm ivory `#F2EFEA` is the primary dark-theme text colour; muted warm grey `#B8B0A5` is reserved for secondary text.
-- [x] Terracotta `#E2725B`, ochre `#D4AF37` and forest green `#173D32` for primary brand actions and `#033500` for the WARENA surface provide restrained brand accents in dark mode.
-- [x] Light theme remains a complete, user-selectable warm-paper experience.
-- [x] Green-section supporting text and links use accessible high-contrast ivory.
-- [ ] Verify all foreground/background pairs with automated WCAG 2.2 AA checks and manual review.
-- [ ] Measure real-device OLED power behaviour; do not publish a fixed battery-saving claim.
+## 5. Automated verification
 
-Implementation state: the homepage structure, external asset separation and consolidated design system are merged to main. Static HTML checks and the browser quality workflow passed on the exact candidate commit. Manual screen-reader, physical-device and live Pages checks remain outstanding.
+- [x] Static HTML/source validation workflow passed for the latest recorded main candidate.
+- [x] Browser quality workflow passed for the latest recorded main candidate.
+- [x] GitHub Pages build/deploy workflow passed for the latest recorded main candidate.
+- [ ] Re-run and record source/browser workflows for this documentation-only pull request.
+- [ ] Confirm the Pages deployment commit and inspect the live page after merge.
 
-## 4. Navigation and interaction
+Latest recorded workflow evidence at the audit snapshot:
+- Static validation: https://github.com/donfelohke/donfelohke.github.io/actions/runs/45310391052
+- GitHub Pages build/deploy: https://github.com/donfelohke/donfelohke.github.io/actions/runs/45310391092
 
-- [x] Primary navigation destinations work.
-- [x] Anchor targets clear sticky header.
-- [x] Language control updates content, accessible labels and document lang.
-- [x] Theme control works with system preference and user preference.
-- [x] Language and theme controls remain functional when local storage is unavailable.
-- [x] Every WhatsApp CTA updates its pre-filled message when the language changes.
-- [ ] WhatsApp, telephone and email destinations work.
+Automated browser and accessibility checks do not replace manual screen-reader, physical-device, real-network handoff or live-page review.
 
-## 5. Accessibility and responsive testing
+## 6. Release and governance
 
-- [x] 320, 360, 390, 430, 768, 1024 CSS px and desktop.
-- [x] No horizontal overflow.
-- [x] Visible focus and keyboard-only operation.
-- [ ] Screen-reader review.
-- [x] Colour contrast in light and dark themes.
-- [x] Reduced-motion support.
-- [ ] Zoom and reflow.
-- [ ] Accessible labels and state.
+- [x] Material changes are prepared through reviewed pull requests.
+- [x] GitHub Pages deploys on pushes to `main`; pull-request checks do not publish.
+- [x] `workflow_dispatch` is available as an alternative workflow trigger.
+- [ ] Verify required status checks and branch protection/rulesets on the repository settings.
+- [ ] Record live post-deployment inspection for the current public page.
+- [ ] Establish a backup maintainer and periodic access review.
+- [ ] Test repository backup, recovery and publishing procedures.
+- [ ] Review historical branches for unique work before considering deletion.
 
-## 6. Technical and factual checks
+## 7. Current source-of-truth documents
 
-- [x] HTML validation.
-- [x] JavaScript syntax and browser console.
-- [x] Metadata and canonical URL.
-- [ ] Kiswahili translation reviewed for semantic parity.
-- [x] Public facts match PUBLIC-FACTS-REGISTER.md.
-- [ ] DIGITAL service availability confirmed before stronger claims.
-- [x] Linguistic interpretations qualified.
-- [x] Copyright attribution remains unchanged pending confirmation.
-- [x] No unsupported security, uptime or reproducibility claims.
-- [x] No placeholder or broken links.
+- `docs/PUBLIC-FACTS-REGISTER.md` — approved public facts and evidence classes.
+- `docs/SERVICE-CATALOG.md` — current public services, prices, scope and booking boundary.
+- `docs/WEBCOPY.md` — approved website copy and translation rules.
+- `CHANGELOG.md` — material publication and documentation changes.
+- `docs/RELEASE-CHECKLIST.md` — current Pages workflow and release evidence.
+- `docs/ROADMAP.md` — remaining site and stewardship work.
+- `docs/WEBSITE-AUDIT-DISCREPANCY-REGISTER.md` — historical findings plus current resolution record.
 
-## 7. Release evidence
+Historical design briefs and audit recommendations remain provenance records. Do not treat superseded hero copy, lockups, prices, location wording or architecture as current requirements.
 
-Record the exact commit, test date, browsers/devices, routes tested, results, defects and reviewer. Test evidence must refer to the exact release candidate.
+## 8. Change-control rules
 
-- [x] Static HTML checks pass.
-- [x] Browser tests pass.
-- [ ] Responsive screenshots reviewed.
-- [ ] Deployed page checked separately after an authorised merge.
-- [ ] Release explicitly authorised.
+- Keep source facts, approved copy, implementation, automated tests, manual verification and deployment as separate states.
+- A price or service-scope change must update the NAKEBUSEN source catalogue, this repository's facts register, service catalogue, website copy and page in one reviewed change set.
+- Do not alter payment details without separate owner verification of merchant authority and payment purpose.
+- Do not introduce checkout, appointment booking, payment automation, tracking, analytics, a JavaScript runtime or third-party runtime without a separate explicit decision and review.
+- Do not delete historical branches or audit records until unique work and provenance have been assessed.
 
-## 8. Change control and current status
-
-- 19 November 2026: approved AMOLED-first direction implemented on the PR branch: true-black dark-theme canvas, layered charcoal surfaces, warm ivory text, terracotta/ochre accents, and corrected high-contrast WARENA section links. Light theme remains available. Browser accessibility verification is pending; no OLED battery-saving percentage is claimed.
-
-- 18 November 2026: research-led refinements prepared on `fix/nakebusen-site-quality-2026-11-18`: consolidated the stylesheet, aligned hero copy and practice overview to WEBCOPY, corrected Artificial Locs Installation to KES 3,500, made the ONLY NAKEBUSEN TRANSACTS boundary explicit, clarified WARENA's non-checkout role and per-engagement DIGITAL scope, and added automated responsive, interaction, anchor, storage-fallback and axe accessibility coverage. These are implementation changes; test execution and release remain pending.
-
-- Stage A PR #112 was merged to `main` on 9 November 2026 at merge commit `e9a0c4c395a731f7082a80e85f88dfcf22ced64a`.
-- This confirms the source merge only; it does not by itself establish successful deployment or independent live-browser verification.
-- The research destination is present at `/research/` and is now included in the sitemap. The research index now has a shared theme control and page-specific styling; the Glass Terminal page remains dark-first. Manual screen-reader and physical-device checks remain outstanding.
-- Homepage foundation PR #139 and design-system PR #142 are merged. The source changes are not yet deployed; do not label the live site RELEASED until the manual Pages release and post-deployment checks are completed.
-- Use a reviewed pull request for material website changes. Do not merge or deploy based solely on a successful commit.
-- Keep specification, implementation, testing, verification and release states distinct.
-
-
-### Homepage copy and research destination — 19 November 2026
-
-- Implemented on review branch `copy/research-page-homepage-refresh-2026-11-19`: aligned the hero lead to the approved practice statement, retained loc care as the primary customer proposition, added a third informational research discovery card, and refined WARENA's scoped technical-services explanation.
-- Added `research/index.html` as a dedicated Research & Creative Practice page covering FELOH Corpus, IKAI, GENJE and WARENA, selected scholarly reading, source repositories and evidence principles.
-- Updated `README.md` and `docs/WEBCOPY.md` to link and define the new destination. Added `docs/WEBSITE-COPY-RESEARCH-AND-IMPLEMENTATION-2026-11-19.md` as the audit and implementation record.
-- Added Playwright expectations for the new hero hierarchy and research page. CI execution is pending.
-- **Not verified:** live Pages route, browser rendering, screen-reader behaviour, contrast audit, social previews or production deployment.
-
-- PR #133 was opened against `main` on 19 November 2026. At the time of this record, the GitHub connector returned no workflow runs or combined commit statuses for the PR head; automated checks must be confirmed from the PR Checks tab before merge.
-
-
-## 9. Verified main-branch implementation snapshot — 20 November 2026
-
-- PR #139 — [separate structure, styles and interactions](https://github.com/donfelohke/donfelohke.github.io/pull/139), merge commit `5303ba247df5a4a77fc26cb36f144f258283569f`.
-- PR #142 — [consolidated responsive design system](https://github.com/donfelohke/donfelohke.github.io/pull/142), merge commit `89828556e41f3b5ade9830cb7a764f30b12a7434`.
-- Candidate commit tested: `10587cd0fae4dfb16cad7e2c782847eb3c5c47a1`.
-- Static HTML workflow #563: passed, run `44789211140`.
-- Browser quality workflow #256: passed, run `44789211087`.
-- Browser evidence was uploaded by the workflow. This is automated evidence, not a manual screen-reader or physical-device audit.
-- GitHub Pages deploy job was skipped under the existing manual release gate. The live site has not been declared updated by these merges.
-
-- PR #144 — [Glass Terminal research experience](https://github.com/donfelohke/donfelohke.github.io/pull/144), merge commit `e8e7a035dbe2f402a3a0a13494ac9f20e942e99b`. This is a research/design page, not a released WARENA/IKAI/GENJE runtime.
-
-
-## 10. Glass Terminal and research-route implementation snapshot — 20 November 2026
-
-- PR #144 merged the Glass Terminal research presentation and added it to the research index and sitemap. It is labelled RESEARCH / DESIGN DIRECTION, not a released shell, XR platform or hardware implementation.
-- The research index shares the homepage's theme preference and remains explicitly English-only; no full Kiswahili translation is claimed.
-- The Glass Terminal page is dark-first and static. Its page stylesheet is externalised; no JavaScript runtime or third-party asset dependency is added.
-- Homepage Glass Terminal surface refinements are integrated into canonical component rules rather than appended override patches.
-- Responsive and automated accessibility coverage for both research routes is part of the current candidate; results are recorded only after the candidate workflow completes.
-- Manual screen-reader, physical-device and live Pages checks remain outstanding.
-
-
-## 11. Final source verification — 20 November 2026
-
-- PR #145 — [complete research routes and canonical Glass Terminal surfaces](https://github.com/donfelohke/donfelohke.github.io/pull/145), merge commit `cee99f686061f4e26533d398d0ce390f14ee32c2`.
-- Exact candidate tested: `0c0ba5a586949f9f5946bf96bf1dade94ed9dfa0`.
-- Static HTML workflow #585: passed, run `44793386056`.
-- Browser quality workflow #278: passed, run `44793386128`.
-- Browser coverage includes the homepage, research index and Glass Terminal page, narrow-screen reflow and automated WCAG accessibility checks.
-- Automated checks are not a substitute for manual TalkBack/screen-reader, physical-device, real-network WhatsApp and live GitHub Pages checks.
-- Pages build/deploy jobs were skipped under the manual release gate. Main contains the reviewed source; live deployment is not claimed.
+**Release status:** The source and automated workflow evidence are established. Manual live-page, screen-reader and physical-device checks remain open; this checklist does not certify WCAG conformance, current merchant authority or service availability.

@@ -185,3 +185,14 @@ Static tests cannot detect all visual overlap, contrast, or browser interaction 
 ## Evidence boundaries
 
 Source inspection confirms the markup and CSS rules described above. It does not establish live rendering, actual customer conversion, search ranking, or formal WCAG conformance. Verify those separately before describing them as facts.
+
+
+---
+
+## Historical baseline notice — 24 November 2026
+
+This document records an earlier HTML/page audit and its recommendations. It is retained for provenance, not as a statement that every finding still applies to the current implementation. The current baseline is the latest `main` source and its merged pull requests. Re-check each recommendation against the current source before reopening it.
+
+For current public facts and approved copy, defer to `docs/PUBLIC-FACTS-REGISTER.md`, `docs/SERVICE-CATALOG.md` and `docs/WEBCOPY.md`. For current release behaviour, defer to `docs/RELEASE-CHECKLIST.md` and `.github/workflows/pages.yml`.
+
+No historical recommendation authorises a new visual redesign, payment change, checkout, booking system, JavaScript runtime or third-party dependency.

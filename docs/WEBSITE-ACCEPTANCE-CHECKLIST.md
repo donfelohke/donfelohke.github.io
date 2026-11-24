@@ -11,9 +11,9 @@ Mark an item only after the check is performed against a named commit.
 - [ ] English default; Kiswahili disclosure is complete, readable and consistent with canonical web copy.
 
 ## Services and trust
-- [ ] Retouch & Styling — KES 700+.
-- [ ] Sisterlocs Retie — KES 1,500+.
-- [ ] Artificial Locs Installation — KES 3,500 (no plus sign).
+- [ ] Retouch & Styling — KES 700 (no plus sign).
+- [ ] Sisterlocs Retie — KES 1,500 (no plus sign).
+- [ ] Artificial Locs Installation — KES 3,500.
 - [ ] Location matches the facts register.
 - [ ] Enquiry-not-booking disclosure is visible.
 - [ ] Digital feasibility, scope and availability are qualified.
@@ -41,7 +41,7 @@ Mark an item only after the check is performed against a named commit.
 - [ ] Python tests pass.
 - [ ] Diff reviewed.
 - [ ] Pages artifact succeeds.
-- [ ] Deployment separately authorized.
+- [ ] Confirm the Pages workflow triggered by the merge-to-main push and that build/deploy jobs succeeded.
 - [ ] Live page inspected after deployment.
 - [ ] Evidence record includes commit, date, browser, viewport, procedure and result.
 
