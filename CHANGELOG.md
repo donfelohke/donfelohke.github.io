@@ -8,6 +8,7 @@ This file records material changes to the published website and its operating do
 - Add a consolidated proposal/discrepancy disposition for the historical website briefs and WADR findings.
 - Record that the standalone research-page proposal is superseded; current research is surfaced contextually from the one-page portal.
 - Keep rendered contrast, manual accessibility, Kiswahili review and post-merge Pages verification as outstanding release gates.
+- PR #195 merged this refinement after its Python static validation passed; pull-request Pages build/deploy jobs were correctly skipped.
 
 ## 2026-11-24 — Task-first front-page portal implementation
 - Replace the brand-slogan H1 with “Loc care in Eldoret.” while retaining “Beautiful Roots. Sovereign Systems.” as the supporting signature.
