@@ -105,7 +105,7 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 .digital-intro h2 em{color:#E2725B}
 .digital-intro p:not(.digital-kicker){max-width:32rem;color:#E1E4DB}
 .button-light{margin-top:1.4rem;background:#F2EFEA;color:#123B2D}
-.digital-capabilities{padding:clamp(1.5rem,3vw,2.8rem);background:rgba(0,0,0,.16)}
+.digital-capabilities{padding:clamp(1.5rem,3vw,2.8rem);background:#0B261B}
 .digital-capabilities ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.15rem 1.4rem;margin:1.4rem 0;padding:0;list-style:none}
 .digital-capabilities li{display:flex;flex-direction:column;gap:.18rem}
 .digital-capabilities li strong{color:#F2EFEA;font-size:.9rem}
@@ -330,7 +330,7 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
   overflow:hidden;
   border-color:rgba(23,61,50,.16);
   border-radius:1.45rem;
-  background:linear-gradient(155deg,rgba(255,253,248,.96),rgba(255,253,248,.78));
+  background:var(--surface);
   box-shadow:0 18px 42px rgba(23,39,30,.075),inset 0 1px 0 rgba(255,255,255,.85);
 }
 .service-card:before{
@@ -344,13 +344,13 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 .service-card-featured{
   border-color:rgba(128,84,15,.28);
   border-top:1px solid rgba(128,84,15,.28);
-  background:linear-gradient(145deg,rgba(255,253,248,.98),rgba(230,218,194,.62));
+  background:var(--soft);
 }
 .service-card-featured:before{height:5px;background:linear-gradient(90deg,#D4AF37,#E2725B)}
 .service-card h3{max-width:14ch}
 .booking-panel{
   border-color:rgba(23,61,50,.18);
-  background:linear-gradient(135deg,rgba(255,253,248,.82),rgba(233,225,211,.82));
+  background:var(--surface);
   box-shadow:0 18px 45px rgba(23,39,30,.055),inset 0 1px 0 rgba(255,255,255,.8);
 }
 .digital-panel{
@@ -371,14 +371,14 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
   padding:.85rem;
   border:1px solid rgba(255,255,255,.12);
   border-radius:.8rem;
-  background:rgba(255,255,255,.045);
+  background:#123B2D;
 }
 .author-section{
   background:
     radial-gradient(ellipse at 92% 12%,rgba(212,175,55,.08),transparent 30%),
     #E9E1D3;
 }
-.constitution>div{background:rgba(255,253,248,.9)}
+.constitution>div{background:var(--surface)}
 .practice-card,.editorial-note{
   box-shadow:0 14px 35px rgba(23,39,30,.045);
 }
@@ -410,13 +410,14 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
   .locs-section{background:linear-gradient(180deg,#101510,#151815)}
   .service-card,.service-card-featured{
     border-color:rgba(242,239,234,.15);
-    background:linear-gradient(155deg,rgba(27,34,28,.97),rgba(18,24,19,.94));
+    background:var(--surface);
   }
-  .booking-panel{border-color:rgba(242,239,234,.15);background:linear-gradient(135deg,#171D18,#101510)}
+  .booking-panel{border-color:rgba(242,239,234,.15);background:var(--surface)}
   .author-section{background:linear-gradient(135deg,#111713,#171D18)}
-  .constitution>div{background:#151815}
+  .constitution>div{background:var(--surface)}
   .digital-panel{background:linear-gradient(130deg,#022900,#033500 62%,#10430D)}
-  .digital-capabilities li{background:rgba(0,0,0,.16)}
+  .digital-capabilities{background:#011A0B}
+  .digital-capabilities li{background:#022900}
 }
 @media(max-width:760px){
   .hero{padding-top:8.5rem;padding-bottom:3.8rem}
