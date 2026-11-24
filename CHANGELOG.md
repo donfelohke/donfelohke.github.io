@@ -7,6 +7,7 @@ This file records material changes to the published website and its operating do
 - Give WARENA capability surfaces solid forest layers in light and dark schemes.
 - Keep glass restricted to the topbar and floating navigation; remove translucent content-card fills.
 - Add source regression assertions for the opaque service and booking surfaces.
+- PR #200 merged after the dependency-free Python validation passed; pull-request Pages build/deploy jobs were skipped.
 
 ## 2026-11-24 — Connect and footer hierarchy refinement
 - Keep location, directions, home-call conditions, WhatsApp, phone and email in Connect as the single contact directory.
