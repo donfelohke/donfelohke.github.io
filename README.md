@@ -90,6 +90,8 @@ Source checks do not replace manual browser, keyboard, screen-reader, real-devic
 
 ## Repository authority and documentation
 
+ [Five-identity architecture & copy standard](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-FIVE-IDENTITY-ARCHITECTURE-AND-COPY-STANDARD-2026-11-24.md).
+
 The README is an orientation document, not a competing specification. Use these sources in order:
 
 1. [Research-led website revamp dossier](research/website-revamp-research-2026-11-24.md) — dated market, brand, accessibility and search research with limitations.
