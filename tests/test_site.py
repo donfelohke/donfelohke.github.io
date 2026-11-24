@@ -188,7 +188,7 @@ class PublicationTests(unittest.TestCase):
             "Beside King's Square", "Kisumu Road", "F743+R35", "wider Eldoret Town service area",
             "https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6", "+254719635415", "mela9ine@proton.me",
             "3511456", "FELIX LWOVA", "Never share your M-PESA PIN",
-            "Manual payment information only", "Support Us",
+            "This page does not confirm a booking or payment.", "Support Us",
             "separate from NAKEBUSEN service payments",
         ):
             self.assertIn(phrase, HTML)
@@ -382,6 +382,53 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("| PF-034 | NAKEBUSEN began in Lodwar", register)
         self.assertLess(register.index("| PF-034 |"), register.index("## Publication controls"))
         self.assertIn("keep distinct from founder biography", register)
+
+
+    def test_content_depth_and_operational_boundaries(self):
+        for phrase in (
+            "Choose by the work", "Retightening", "existing Sisterlocs installation",
+            "What to include in your message", "Agree the details before work",
+            "The published prices are not a substitute for an agreed scope.",
+            "A responsible technical engagement", "Discover", "Change &amp; verify",
+            "Handover", "Do not send passwords, private keys, PINs or one-time codes",
+            "Permission is required before anyone accesses, copies, moves or deletes client data.",
+            "IKAI · MIRROR · RESEARCH / WORK IN PROGRESS", "A mirror, not a judge.",
+            "No released mirror, validated sensor pipeline or deployed beauty-tech system is claimed.",
+            "GENJE · EXPRESSION · CREATIVE PRACTICE", "Choreohacking",
+            "FELOH CORPUS · GOVERNANCE · PROVENANCE", "One corpus. Many views.",
+        ):
+            self.assertIn(phrase, HTML)
+        self.assertIn("Huhitaji kujitambua mwenyewe", HTML)
+        self.assertIn("Usitume nywila, funguo za siri, PIN", HTML)
+        self.assertIn("Hakuna kazi au gharama ya ziada inayopaswa kudhaniwa.", HTML)
+        self.assertIn(".service-guide{", CSS)
+        self.assertIn(".digital-method{", CSS)
+        self.assertIn(".research-detail-grid{", CSS)
+        self.assertIn("grid-template-columns:repeat(4,minmax(0,1fr))", CSS)
+        self.assertNotIn("KES 400", HTML)
+        self.assertNotIn("Manicure &amp; pedicure", HTML)
+        self.assertNotIn("guaranteed outcome", HTML)
+        self.assertIn("not proof of a released performance system, motion-capture pipeline or completed work.", HTML)
+        self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
+
+
+    def test_faq_privacy_and_customer_boundaries(self):
+        for phrase in (
+            'id="service-faq"', "Does an enquiry confirm an appointment?",
+            "Are additional materials or work automatically included?",
+            "Is Sisterlocs Retie a new installation?", "Can I request a home call?",
+            "No standard duration is published.", "Your image is yours",
+            "A photo shared to discuss a service is not permission to publish it.",
+            "NAKEBUSEN does not diagnose scalp or medical conditions",
+            "This page does not confirm a booking or payment.",
+        ):
+            self.assertIn(phrase, HTML)
+        self.assertIn("Huduma nyingine za urembo au kucha zimeorodheshwa hapa?", HTML)
+        self.assertIn("Picha unayotuma kujadili huduma si ruhusa ya kuichapisha.", HTML)
+        self.assertIn(".faq-grid{", CSS)
+        self.assertIn(".customer-care-grid{", CSS)
+        self.assertNotIn("No API", HTML)
+        self.assertNotIn("STK push", HTML)
 
 
 if __name__ == "__main__":
