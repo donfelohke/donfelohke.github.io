@@ -101,6 +101,7 @@ Source checks do not replace manual browser, keyboard, screen-reader, real-devic
 ## Repository authority and documentation
 
 - [Front-Page Portal — Consolidated Design, Copy and Standards Research](research/FRONT-PAGE-PORTAL-DESIGN-COPY-AND-STANDARDS-2026-11-24.md) — consolidated source audit, page architecture, design direction, copy, international standards and validation gates.
+- [Website Proposal and Discrepancy Disposition](research/WEBSITE-PROPOSAL-AND-DISCREPANCY-STATUS-2026-11-24.md) — current decisions, superseded proposals, discrepancy status and remaining verification.
 - [Design Research & Reference Audit](research/DESIGN-RESEARCH-AND-REFERENCE-AUDIT-2026-11-24.md) — task-based design, accessibility, mobile hierarchy and performance criteria.
 - [Copy & Content Research Audit](research/COPY-AND-CONTENT-RESEARCH-AUDIT-2026-11-24.md) — content hierarchy, English/Kiswahili editorial questions, factual consistency and enquiry clarity.
 - [Five-identity architecture & copy standard](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-FIVE-IDENTITY-ARCHITECTURE-AND-COPY-STANDARD-2026-11-24.md).

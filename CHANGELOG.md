@@ -2,6 +2,13 @@
 
 This file records material changes to the published website and its operating documentation. Detailed implementation history, review discussion and exact diffs remain in Git commits and pull requests. A merged source change is not, by itself, proof of live deployment.
 
+## 2026-11-24 — Opaque content surfaces and proposal reconciliation
+- Remove decorative radial hero circles and keep the hero background to a restrained forest gradient.
+- Make the hero brand lockup and first-screen price panel opaque; reserve glass for the topbar and floating dock.
+- Add a consolidated proposal/discrepancy disposition for the historical website briefs and WADR findings.
+- Record that the standalone research-page proposal is superseded; current research is surfaced contextually from the one-page portal.
+- Keep rendered contrast, manual accessibility, Kiswahili review and post-merge Pages verification as outstanding release gates.
+
 ## 2026-11-24 — Task-first front-page portal implementation
 - Replace the brand-slogan H1 with “Loc care in Eldoret.” while retaining “Beautiful Roots. Sovereign Systems.” as the supporting signature.
 - Bring all three exact published service prices into the first-screen price panel.
