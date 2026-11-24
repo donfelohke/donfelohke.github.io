@@ -1,4 +1,4 @@
-# Website Copy — NAKEBUSEN × WARENA POWERED
+# Website Copy — NAKEBUSEN · WARENA POWERED
 
 **Review date:** 24 November 2026  
 **Publication:** One-page static website · English / Kiswahili  
@@ -8,7 +8,7 @@
 
 ## Master identity
 
-**NAKEBUSEN × WARENA POWERED**  
+**NAKEBUSEN · WARENA POWERED**  
 **GRACE · GRIT · GLORY**  
 **BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**  
 **GENJE ZA WARENA**  
@@ -22,7 +22,7 @@ NAKEBUSEN is the enterprise and sole customer-facing transaction interface. WARE
 
 ## Hero
 
-**Eyebrow:** NAKEBUSEN × WARENA POWERED  
+**Eyebrow:** NAKEBUSEN · WARENA POWERED  
 **Pillar line:** GRACE · GRIT · GLORY  
 **H1:** Beautiful Roots. Sovereign Systems.  
 **Proposition:** A beauty house grounded in craft, community and practical technology.  
