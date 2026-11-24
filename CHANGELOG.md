@@ -8,7 +8,7 @@ This file records material changes to the published website and its operating do
 - Consolidate Hook / Line / Sinker and Top / Middle / Footer into one information architecture; retain LOCS / DIGITAL / CONNECT floating navigation with narrow/zoom fallback and focus-obstruction tests.
 - Define a consistent source-note approach: operational disclosures inline; research references contextual and dated; avoid print-style footnotes in ordinary web copy.
 - Record WCAG 2.2, W3C WAI, GOV.UK content design, Google Search Central and Core Web Vitals references and explicit research limitations.
-- Proposed H1 and copy direction are documented for implementation; no production HTML/CSS or service facts changed in this documentation-only update.
+- The task-first H1 and first-screen price cue were subsequently implemented in website PR #202; the source change remains subject to review, CI and deployment verification.
 
 ## 2026-11-24 — Design and copy research baseline
 - Add a source-grounded design audit covering user tasks, page hierarchy, WCAG 2.2, fixed navigation, glass fallbacks and performance.
