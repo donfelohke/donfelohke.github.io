@@ -2,42 +2,37 @@
 
 **Review date:** 24 November 2026  
 **Publication architecture:** One-page static website · English / Kiswahili  
-**Status:** Editorially revised on branch `revamp/service-first-content-2026-11-24`; awaiting validation and merge.
+**Editorial direction:** Loc-care service first; research and creative work secondary.
 
-## Identity and hierarchy
+## Page hierarchy
 
-**NAKEBUSEN · WARENA POWERED**  
-**GRACE · GRIT · GLORY**  
-**BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**  
-**GENJE ZA WARENA**  
-**@donfelohke · #HisGenjeness**
-
-NAKEBUSEN leads the commercial offer and is the only transaction point. WARENA supplies technical capability. IKAI remains reflective-computing research. GENJE remains creative practice. FELOH Corpus records research, sources and decisions.
-
-**ONLY NAKEBUSEN TRANSACTS.**
+1. Hero — loc-care proposition, published prices, WhatsApp enquiry and Eldoret location.
+2. Services — scope and restrictions for each loc-care service; booking conditions.
+3. WARENA — practical GNU/Linux, computer and network engagements.
+4. About — concise founder introduction and NAKEBUSEN's Lodwar-to-Eldoret history.
+5. Research & Creative Practice — IKAI, GENJE, FELOH Corpus and Gallery.
+6. Visit & Contact — map, directions, home-visit conditions and direct contact details.
+7. Footer — canonical brand signature, NAKEBUSEN transaction boundary, manual M-PESA instructions and separate voluntary support.
 
 ## Hero
 
-**Eyebrow:** NAKEBUSEN · WARENA POWERED  
+**Eyebrow:** NAKEBUSEN · LOC CARE  
 **H1:** Loc care in Eldoret.  
-**Proposition:** Retouch & Styling, Sisterlocs Retie and Artificial Locs Installation.  
-**Secondary offer:** Practical GNU/Linux, computer and network support is also available through WARENA.  
-**Primary CTA:** Enquire about loc care  
-**Secondary CTA:** View services & prices  
-**Location:** Beside King's Square · Kisumu Road · Eldoret Town · Uasin Gishu · Kenya  
-**Signature:** Beautiful Roots. Sovereign Systems.
+**Proposition:** Retouch & Styling, Sisterlocs Retie and Artificial Locs Installation. Any additional work or materials are agreed before work begins.  
+**Primary CTA:** Enquire on WhatsApp  
+**Secondary CTA:** See service details  
+**Location line:** King's Square · Kisumu Road · Eldoret Town
 
-The first screen presents the loc-care offer and its three published prices. WARENA is explicitly secondary.
+The hero price panel is a quick-reference summary. The service cards repeat the prices beside their descriptions so visitors who jump directly to the services section still see the amount. This is intentional functional repetition; do not add another price list elsewhere.
 
 **Kiswahili H1:** Utunzaji wa loc mjini Eldoret.  
-**Kiswahili proposition:** Matengenezo na upangaji wa loc, kukaza upya Sisterlocs na uwekaji wa loc za bandia.  
-**Kiswahili secondary offer:** Msaada wa GNU/Linux, kompyuta na mitandao unapatikana pia kupitia WARENA.
+**Kiswahili proposition:** Matengenezo na upangaji wa loc, kukaza upya Sisterlocs na uwekaji wa loc za bandia. Kazi au vifaa vya ziada hukubaliwa kabla ya kuanza.  
+**Primary CTA:** Ulizia kupitia WhatsApp  
+**Secondary CTA:** Tazama maelezo ya huduma
 
-## Loc care and prices
+## Services & prices
 
-**Heading:** Care for the locs you wear.
-
-Loc maintenance and installation in Eldoret Town. Choose a service below and enquire directly.
+**Heading:** Choose your service.
 
 | Service | Published price |
 |---|---:|
@@ -45,54 +40,51 @@ Loc maintenance and installation in Eldoret Town. Choose a service below and enq
 | Sisterlocs Retie | KES 1,500 |
 | Artificial Locs Installation | KES 3,500 |
 
-- **Retouch & Styling:** Refresh and maintain existing locs. Final scope depends on loc condition and the work required.
-- **Sisterlocs Retie:** Retightening for established Sisterlocs. Share their current condition and maintenance needs when enquiring.
-- **Artificial Locs Installation:** Discuss preferred style, materials and requirements before work begins.
+- **Retouch & Styling:** Maintenance and styling for existing locs. Final scope depends on their condition and the work required.
+- **Sisterlocs Retie:** Retightening for established Sisterlocs. Share their current condition when enquiring.
+- **Artificial Locs Installation:** Agree the preferred style, materials and installation requirements before work begins.
 
-These are the approved service prices. Any additional work, materials or changes in scope are discussed and agreed before work begins. NAKEBUSEN does not offer braiding or shaving. The founder does not cut clients' natural hair.
+NAKEBUSEN does not offer braiding or shaving. The founder does not cut clients’ natural hair.
 
-**Booking:** An enquiry does not confirm a booking. Availability and final terms are agreed directly.
+**Booking:** Tell us which service interests you; share the condition of your locs or installation preferences; then agree suitability, availability, scope and final price. An enquiry does not confirm a booking. Availability and final terms are agreed directly.
 
-## Digital support · WARENA
+## WARENA · Digital
 
-**Heading:** Freedom is a system.
+**Heading:** GNU/Linux, computers and networks.
 
-Practical GNU/Linux, computer and network support for homes, individuals, businesses and organisations. WARENA favours libre-first, local-first and maintainable systems.
+WARENA provides practical support for individuals, homes, businesses and organisations. Work centres on libre-first, local-first and maintainable computing and networked systems.
 
 **Principle:** Reuse first · Adapt second · Implement last. Human decisions remain authoritative.
 
-Potential engagement areas: GNU/Linux installation, administration and troubleshooting; computer diagnostics, recovery and maintenance; Wi-Fi, router configuration and LAN networking; small-office servers and shared systems; laboratory, classroom and cybercafé systems; offline-capable environments where appropriate.
+Potential engagements include:
+- GNU/Linux installation, administration and troubleshooting.
+- Computer diagnostics, recovery and maintenance.
+- Wi-Fi, router configuration and LAN networking.
+- Small-office servers and shared systems.
+- Laboratory, classroom and cybercafé systems.
+- Offline-capable environments where appropriate.
 
-These are potential engagement areas, not a guarantee that every service is immediately available. Scope, feasibility, schedule and cost are agreed directly through NAKEBUSEN.
+Availability, scope, feasibility, schedule and cost are agreed per engagement through NAKEBUSEN.
 
 ## About · Don Feloh
 
 **Felix Lwova · Don Feloh**  
 **Founder, NAKEBUSEN · Founder & CTO, WARENA · Loctician · Creative Technologist**
 
-I am Kenyan. I’m Felix Lwova, known as Don Feloh, a founder, systems practitioner, loctician and creative technologist.
+I’m Felix Lwova, known as Don Feloh. I founded NAKEBUSEN and WARENA, and work across loc care, GNU/Linux systems and creative technology.
 
-My work spans loc care, GNU/Linux systems, reflective-computing research, sound and movement. NAKEBUSEN is the grounded enterprise; WARENA develops technical capability; IKAI is research; GENJE is creative practice.
+My practice is grounded in craft, human authorship and technology that strengthens human agency. NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret.
 
-My practice is guided by human authorship, local-first infrastructure, craft and cultural continuity. Technology should extend human agency, not replace it. AI may suggest; the human decides.
+## Research & creative practice
 
-These are connected practices, not one undifferentiated company. NAKEBUSEN is the only commercial transaction point. The FELOH Corpus records shared decisions, sources and evidence.
-
-NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret.
-
-## Projects & research
-
-- **WARENA** — libre-first systems, computing and infrastructure.
-- **IKAI** — a Turkana female name meaning “home”; reflective-computing research into optics, displays and human-directed interaction. This is the founder-approved identity meaning, not an assertion of independent linguistic certification.
+- **IKAI** — a Turkana female name meaning “home”; reflective-computing research into optics, displays and human-directed interaction. This is the founder-approved identity meaning, not a claim of independent linguistic certification.
 - **GENJE** — Genge-rooted creative practice exploring E-Genge, livecoding, sound, code and movement.
-- **FELOH Corpus** — research notes, references, standards and documented decisions.
-- **Gallery** — an approval-controlled archive; publication depends on rights, attribution and explicit approval.
+- **FELOH Corpus** — research notes, sources and documented decisions.
+- **Gallery** — an archive published only with the necessary rights, attribution and explicit approval.
 
-The dated research register and detailed protocols belong in FELOH Corpus and specialist project repositories, not the business homepage.
+WARENA is described in its own Digital section and is not repeated in this project list. Dated research registers and detailed protocols belong in FELOH Corpus and specialist project repositories, not the business homepage.
 
-## Connect
-
-Keep the practical Eldoret location, Plus Code/map pin, directions, conditional home-call information, WhatsApp, phone and email together in Connect.
+## Visit & contact
 
 **Location:** Beside King's Square · Kisumu Road · Eldoret Town, Uasin Gishu County, Kenya.  
 **Plus Code:** F743+R35, Eldoret, Kenya.  
@@ -100,26 +92,36 @@ Keep the practical Eldoret location, Plus Code/map pin, directions, conditional 
 **Call:** 0719 635 415  
 **Email:** mela9ine@proton.me
 
+Map pin and driving / walking directions remain available. Matatu visitors should ask for King's Square on Kisumu Road and confirm the route with the conductor before boarding. Boda boda visitors can show the map pin to the rider. From King's Square, use the pin for the final approach; contact NAKEBUSEN if an entrance cue is needed.
+
 Home visits may be arranged across the wider Eldoret Town service area. Confirm coverage, service suitability, availability and any travel costs before agreeing a visit.
 
-## Footer and payment
+## Footer, payment and support
 
-Retain the brand signature, manual M-PESA service-payment information, separate voluntary Support Us treatment, copyright and one clearly labelled GitHub repositories link.
+Keep one canonical brand lockup:
+- NAKEBUSEN · WARENA · F3L0H / DON FELOH
+- GRACE · GRIT · GLORY
+- GENJE ZA WARENA
+- BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.
+- HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES
 
-**Till:** 3511456  
-**Account / merchant name:** FELIX LWOVA
+**ONLY NAKEBUSEN TRANSACTS.**
+
+**Manual M-PESA Buy Goods**
+- Till: 3511456
+- Account / merchant name: FELIX LWOVA
 
 Pay only after the service and total amount have been agreed directly with NAKEBUSEN. Before entering a PIN, confirm the displayed merchant name and agreed amount. Never share a PIN or one-time code.
 
 Manual payment information only. No API, STK push, automated verification or payment-success state.
 
-Voluntary support is separate from NAKEBUSEN service payments. Contact Don Feloh first to confirm the correct support reference.
+Voluntary Support Us is separate from NAKEBUSEN service payments. Contact Don Feloh first to confirm the correct support reference; do not assume the service-payment reference applies.
 
 ## Publication rules
 
 - English is the default; Kiswahili remains a complete authored language state.
-- Keep service names, prices, scope and booking disclosures consistent across both languages.
+- Keep service names, prices, scope and booking disclosures consistent in both languages.
 - Use “Sisterlocs”, not “Sisterlocks”.
 - Do not add braiding, shaving, washing, crochet or other services without an approved catalogue change.
 - Do not publish unapproved client images, testimonials, credentials, guarantees or availability.
-- Preserve the static HTML/CSS implementation and existing navigation anchors.
+- Preserve the static HTML/CSS implementation, existing navigation anchors and no-tracking policy.
