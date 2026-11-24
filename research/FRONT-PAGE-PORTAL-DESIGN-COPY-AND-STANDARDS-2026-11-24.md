@@ -1,7 +1,7 @@
 # Front-Page Portal — Consolidated Design, Copy and Standards Research
 
 **Date:** 24 November 2026  
-**Status:** Consolidated research and design direction; implementation proposal, not yet deployed  
+**Status:** Consolidated research and design direction; first-screen implementation proposed in PR #202, pending review and deployment  
 **Repository:** `donfelohke/donfelohke.github.io`  
 **Programme:** [FELOH Corpus issue #78](https://github.com/donfelohke/feloh-corpus/issues/78)  
 **Scope:** Public front page / portal, information architecture, visual system, copy, navigation, source notes and international accessibility/search standards
