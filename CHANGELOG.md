@@ -1,3 +1,8 @@
+## 2026-11-24 — Design and copy research baseline
+- Add a source-grounded design audit covering user tasks, page hierarchy, WCAG 2.2, fixed navigation, glass fallbacks and performance.
+- Add a copy/content audit covering user needs, English/Kiswahili consistency, service facts, enquiry boundaries and research maturity.
+- Keep these documents as desk-research baselines; participant testing, translation review, browser/device QA and conformance evidence remain separate gates.
+
 ## 2026-11-24 — Phase 2 link-integrity correction
 - Replace the obsolete FELOH foundational-case URL with the verified F3L0H Sovereign Master Corpus document in both language states.
 - Add a source regression check for the canonical repository document link.
