@@ -54,25 +54,24 @@ class PublicationTests(unittest.TestCase):
         self.assertIn('<html lang="en">', HTML)
         self.assertIn('<main id="main">', HTML)
         self.assertEqual(1, self.parser.h1)
-        self.assertIn("NAKEBUSEN · WARENA POWERED", HTML)
+        self.assertIn("NAKEBUSEN · WARENA · F3L0H / DON FELOH", HTML)
         self.assertIn("GENJE ZA WARENA", HTML)
-        self.assertIn("Beautiful", HTML)
-        self.assertIn("Sovereign", HTML)
+        self.assertIn("BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.", HTML)
         self.assertIn("GRACE · GRIT · GLORY", HTML)
         self.assertIn("Loc care", HTML)
         self.assertIn("in Eldoret.", HTML)
-        self.assertIn("Retouch &amp; Styling, Sisterlocs Retie and Artificial Locs Installation.", HTML)
-        self.assertIn("Practical GNU/Linux, computer and network support is also available through WARENA.", HTML)
-        self.assertIn("Published", HTML)
+        self.assertIn("Maintenance for existing locs, Sisterlocs retie and artificial loc installation. See each price upfront; agree any additional work or materials before work begins.", HTML)
+        self.assertNotIn("Practical GNU/Linux, computer and network support is also available through WARENA.", HTML)
+        self.assertIn("PUBLISHED PRICES", HTML)
         self.assertIn("KES 700", HTML)
         self.assertIn("KES 1,500", HTML)
         self.assertIn("KES 3,500", HTML)
-        self.assertIn("Msaada wa GNU/Linux, kompyuta na mitandao unapatikana pia kupitia WARENA.", HTML)
-        self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
+        self.assertIn("Angalia bei za kila huduma mapema; kazi au vifaa vya ziada hukubaliwa kabla ya kuanza.", HTML)
+        self.assertIn("WARENA provides practical support for individuals, homes, businesses and organisations.", HTML)
+        self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
         self.assertIn("Founder, NAKEBUSEN · Founder &amp; CTO, WARENA · Loctician · Creative Technologist", HTML)
-        self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
         self.assertIn("Reuse first", HTML)
-        self.assertIn("AI may suggest; the human decides.", HTML)
+        self.assertIn("Human decisions remain authoritative.", HTML)
         self.assertIn("E-Genge", HTML)
 
     def test_fragment_integrity(self):
@@ -117,12 +116,12 @@ class PublicationTests(unittest.TestCase):
     def test_digital_section_uses_engagement_framing(self):
         self.assertIn("PRACTICAL ENGAGEMENTS", HTML)
         self.assertIn("HUDUMA NA UWEZO", HTML)
-        self.assertIn("SCOPE AND AVAILABILITY CONFIRMED PER ENGAGEMENT", HTML)
-        self.assertIn("UPEO NA UPATIKANAJI HUTHIBITISHWA KWA KILA KAZI", HTML)
+        self.assertIn("Availability, scope, feasibility, schedule and cost are agreed per engagement through NAKEBUSEN.", HTML)
+        self.assertIn("Upatikanaji, upeo wa kazi, uwezekano, ratiba na gharama hukubaliwa kwa kila kazi kupitia NAKEBUSEN.", HTML)
         self.assertNotIn("CAPABILITY AREAS", HTML)
         self.assertNotIn("These are capability areas, not a guarantee", HTML)
         self.assertIn(
-            "https://github.com/donfelohke/feloh-corpus/blob/main/docs/F3L0H-SOVEREIGN-MASTER-CORPUS-2026-11-20.md",
+            "https://github.com/donfelohke/feloh-corpus",
             HTML,
         )
         self.assertNotIn("FELOH-FOUNDATIONAL-CASE-AND-EVIDENCE-PROGRAMME", HTML)
@@ -137,11 +136,11 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("KES 700+", HTML + webcopy)
         self.assertNotIn("KES 1,500+", HTML + webcopy)
         self.assertNotIn("KES 3,500+", HTML + webcopy)
-        self.assertIn("approved service prices", HTML)
-        self.assertIn("bei zilizoidhinishwa za huduma", HTML)
+        self.assertIn("PUBLISHED PRICES", HTML)
+        self.assertIn("BEI ZILIZOCHAPISHWA", HTML)
         self.assertNotIn("Published prices are indicative", HTML)
         self.assertNotIn("Bei zilizochapishwa ni za kuanzia", HTML)
-        self.assertIn("additional work, materials or changes in scope are discussed and agreed before work begins", HTML)
+        self.assertIn("See each price upfront; agree any additional work or materials before work begins.", HTML)
 
     def test_biography_and_business_history_are_separate(self):
         self.assertNotIn("My roots are in Kanamkemer", HTML)
@@ -149,12 +148,12 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("My roots are in Lodwar", HTML)
         self.assertIn("NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret.", HTML)
         self.assertIn("NAKEBUSEN ilianza Lodwar", HTML)
-        self.assertIn("I am Kenyan", HTML)
-        self.assertIn("Mimi ni Mkenya", HTML)
-        self.assertIn("only commercial transaction point", HTML)
+        self.assertIn("I am Kenyan. I’m Felix Lwova, known as Don Feloh. My work spans loc care, GNU/Linux systems and creative technology.", HTML)
+        self.assertIn("Mimi ni Mkenya. Ninaitwa Felix Lwova, Don Feloh. Kazi yangu inahusisha utunzaji wa loc, mifumo ya GNU/Linux na teknolojia ya ubunifu.", HTML)
+        self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
 
     def test_service_scope_has_no_unapproved_inclusions(self):
-        self.assertIn("Refresh and maintain existing locs", HTML)
+        self.assertIn("Maintenance and styling for existing locs", HTML)
         self.assertIn("Retightening for established Sisterlocs", HTML)
         self.assertNotIn("Onyesha upya", HTML)
         self.assertIn("Matengenezo na upangaji wa loc", HTML)
@@ -190,10 +189,10 @@ class PublicationTests(unittest.TestCase):
 
     def test_public_research_and_creative_work_are_described_plainly(self):
         for phrase in (
-            "Freedom", "WARENA", "IKAI", "a Turkana female name meaning “home”",
+            "GNU/Linux, computers", "FREEDOM IS A SYSTEM", "WARENA", "IKAI", "a Turkana female name meaning “home”",
             "jina la kike la Kiturkana lenye maana ya “nyumbani”",
             "GENJE", "Genge-rooted creative practice", "E-Genge", "livecoding",
-            "FELOH Corpus", "PROJECTS &amp; RESEARCH", "Connected<br><em>practices.</em>",
+            "FELOH Corpus", "RESEARCH &amp; CREATIVE PRACTICE", "Beyond<br><em>services.</em>",
         ):
             self.assertIn(phrase, HTML)
         for removed_phrase in (
@@ -206,7 +205,7 @@ class PublicationTests(unittest.TestCase):
 
     def test_current_research_register_is_kept_off_the_business_homepage(self):
         self.assertIn("https://github.com/donfelohke/feloh-corpus", HTML)
-        self.assertIn("Research notes, references, standards and documented decisions", HTML)
+        self.assertIn("Research notes, sources and documented decisions", HTML)
         self.assertNotIn("CURRENT RESEARCH · 24 NOVEMBER 2026", HTML)
         self.assertNotIn("UTAFITI WA SASA · 24 NOVEMBA 2026", HTML)
         self.assertNotIn("ELDORET-LOC-CARE-OPERATIONS-AND-REGULATORY-VERIFICATION-2026-11-24.md", HTML)
@@ -219,6 +218,11 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("PRACTICE ARCHITECTURE", HTML)
         self.assertIn("hero-price-panel", HTML)
         self.assertNotIn("ONE AUTHOR · DISTINCT PRACTICES", HTML)
+        self.assertNotIn("hero-signature", HTML)
+        self.assertNotIn("Start with a", HTML)
+        self.assertNotIn("Connected<br><em>practices.</em>", HTML)
+        self.assertNotIn("Practical GNU/Linux, computer and network support is also available through WARENA.", HTML)
+        self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
         self.assertNotIn("hero-copy-secondary", HTML)
         self.assertNotIn("class=" + '"publications"', HTML)
         self.assertNotIn("SELECTED RESEARCH &amp; SOURCE RECORDS", HTML)
@@ -270,7 +274,7 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("rgba(230,218,194,.62)", CSS)
         self.assertNotIn("rgba(233,225,211,.82)", CSS)
         self.assertNotIn("rgba(27,34,28,.97)", CSS)
-        self.assertIn("Published", HTML)
+        self.assertIn("PUBLISHED PRICES", HTML)
         self.assertNotIn(".hero-glass-panel", CSS)
         self.assertIn(".hero .brand-lockup{", CSS)
         self.assertIn("backdrop-filter:none;", CSS)
@@ -334,12 +338,12 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("<title>NAKEBUSEN | Loc Care in Eldoret · WARENA Powered</title>", HTML)
         self.assertIn("Sisterlocs Retie", HTML)
         self.assertIn("Artificial Locs Installation", HTML)
-        self.assertIn("https://github.com/donfelohke/feloh-corpus/blob/main/docs/F3L0H-SOVEREIGN-MASTER-CORPUS-2026-11-20.md", HTML)
+        self.assertIn("https://github.com/donfelohke/feloh-corpus", HTML)
         self.assertNotIn("FELOH-FOUNDATIONAL-CASE-AND-EVIDENCE-PROGRAMME", HTML)
-        self.assertIn("Enquire about loc care", HTML)
-        self.assertIn("View services &amp; prices", HTML)
-        self.assertIn("Ulizia utunzaji wa loc", HTML)
-        self.assertIn("Tazama huduma na bei", HTML)
+        self.assertIn("Enquire on WhatsApp", HTML)
+        self.assertIn("See service details", HTML)
+        self.assertIn("Ulizia kupitia WhatsApp", HTML)
+        self.assertIn("Tazama maelezo ya huduma", HTML)
         self.assertIn('media="(prefers-color-scheme: light)"', HTML)
         self.assertIn('media="(prefers-color-scheme: dark)"', HTML)
         self.assertNotIn('rel="icon"', HTML)
