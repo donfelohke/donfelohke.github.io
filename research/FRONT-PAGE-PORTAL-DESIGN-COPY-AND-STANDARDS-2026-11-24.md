@@ -6,6 +6,8 @@
 **Programme:** [FELOH Corpus issue #78](https://github.com/donfelohke/feloh-corpus/issues/78)  
 **Scope:** Public front page / portal, information architecture, visual system, copy, navigation, source notes and international accessibility/search standards
 
+> **Supersession note — 24 November 2026:** This is an earlier consolidated research record. Its hero-copy proposal and several page-composition recommendations are not the current implementation baseline. The live/source H1 is **“Loc care in Eldoret.”** and the current page order is recorded in `docs/WEBCOPY.md`. For the current design and copy proposal, use [NAKEBUSEN Page Design, Copy and Experience Research](NAKEBUSEN-PAGE-DESIGN-COPY-RESEARCH-2026-11-24.md). Retain this document for research provenance; do not copy its older hero direction into the website.
+
 ## 1. Executive decision
 
 **Keep one page. Redesign it as a task-first editorial service portal.**

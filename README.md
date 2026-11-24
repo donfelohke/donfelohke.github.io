@@ -100,7 +100,8 @@ Source checks do not replace manual browser, keyboard, screen-reader, real-devic
 
 ## Repository authority and documentation
 
-- [Front-Page Portal — Consolidated Design, Copy and Standards Research](research/FRONT-PAGE-PORTAL-DESIGN-COPY-AND-STANDARDS-2026-11-24.md) — consolidated source audit, page architecture, design direction, copy, international standards and validation gates.
+- [NAKEBUSEN Page Design, Copy and Experience Research](research/NAKEBUSEN-PAGE-DESIGN-COPY-RESEARCH-2026-11-24.md) — current source-based design direction, proposed English copy, page composition, navigation recommendation, content budget and validation plan. Proposal only; not implemented.
+- [Front-Page Portal — Initial Consolidated Research](research/FRONT-PAGE-PORTAL-DESIGN-COPY-AND-STANDARDS-2026-11-24.md) — earlier research record; its older hero-copy direction is superseded by the current source and the new proposal.
 - [Website Proposal and Discrepancy Disposition](research/WEBSITE-PROPOSAL-AND-DISCREPANCY-STATUS-2026-11-24.md) — current decisions, superseded proposals, discrepancy status and remaining verification.
 - [Design Research & Reference Audit](research/DESIGN-RESEARCH-AND-REFERENCE-AUDIT-2026-11-24.md) — task-based design, accessibility, mobile hierarchy and performance criteria.
 - [Copy & Content Research Audit](research/COPY-AND-CONTENT-RESEARCH-AUDIT-2026-11-24.md) — content hierarchy, English/Kiswahili editorial questions, factual consistency and enquiry clarity.
@@ -108,7 +109,7 @@ Source checks do not replace manual browser, keyboard, screen-reader, real-devic
 
 The README is an orientation document, not a competing specification. Use these sources in order:
 
-1. [Research-led website revamp dossier](research/website-revamp-research-2026-11-24.md) — dated market, brand, accessibility and search research with limitations.
+1. [NAKEBUSEN Page Design, Copy and Experience Research](research/NAKEBUSEN-PAGE-DESIGN-COPY-RESEARCH-2026-11-24.md) — current proposal for page design and copy; not approved implementation.
 2. [Public facts register](docs/PUBLIC-FACTS-REGISTER.md) — approved public facts, evidence classes and publication constraints.
 3. [Service catalogue](docs/SERVICE-CATALOG.md) — NAKEBUSEN service names, prices, scope and enquiry rules; the NAKEBUSEN source catalogue remains the service-specific authority.
 4. [Website copy](docs/WEBCOPY.md) — approved website language and translation rules.
