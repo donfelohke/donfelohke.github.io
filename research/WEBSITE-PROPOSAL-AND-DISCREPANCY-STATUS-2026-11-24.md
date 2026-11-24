@@ -56,7 +56,7 @@ The original [Website Audit Discrepancy Register](../docs/WEBSITE-AUDIT-DISCREPA
 |---|---|---|
 | WADR-001 — previous hero copy and hierarchy | Superseded | PR #194 introduces one task-first H1 and current approved service proposition. Manual visual review remains. |
 | WADR-002 — overview of practice domains | Reconciled in structure | Page retains separate WARENA, IKAI, GENJE and Corpus sections; no additional hero taxonomy is needed. |
-| WADR-003 — Connect/footer ownership | Retained | Connect remains the contact directory; footer retains manual payment, support distinction, signature and source links. Recheck rendered duplication manually. |
+| WADR-003 — Connect/footer ownership | Implemented in PR #198 | Connect is the sole contact directory; footer contains manual payment, voluntary support, signature/copyright and one GitHub repositories link. Duplicated location/contact copy is removed. Rendered review remains. |
 | WADR-004 — CSS override accumulation | Partially resolved | PR #194 removes historical hero override layers and reduces stylesheet from 642 to 463 lines. PR #195 further removes decorative hero rules; full token/component audit remains open. |
 | WADR-005 — decorative hero gradients/circles and glass on content | Implemented in PR #195 | Remove hero radial circles; keep price panel and brand lockup opaque; glass remains a navigation treatment. Verify rendered contrast and reduced-transparency behaviour. |
 | WADR-006 — stale sage tokens | Not observed in current active stylesheet | Current stylesheet does not contain cited blue-sage token values. Full palette/contrast matrix remains open. |
@@ -82,7 +82,7 @@ The original [Website Audit Discrepancy Register](../docs/WEBSITE-AUDIT-DISCREPA
 - PR #194 merged the task-first hero, first-screen price panel, CSS hero-layer cleanup, canonical copy updates and regression-test updates.
 - The PR #194 GitHub Actions validation workflow completed successfully. The `validate` job passed; Pages build/deploy jobs were skipped because this was a pull request.
 - Static source checks after PR #194 confirmed one H1, unique IDs, valid fragment targets, three dock destinations, exact prices, one transaction statement, no script tags and a static-dock fallback at narrow widths.
-- PR #195 merged the opaque-content / decorative-hero refinement. Its GitHub Actions validation completed successfully; Pages build/deploy jobs were skipped on the pull request.
+- PR #195 merged the opaque-content / decorative-hero refinement. Its GitHub Actions validation completed successfully; Pages build/deploy jobs were skipped on the pull request. PR #198 reconciles Connect/footer ownership and removes duplicate contact/location details.
 - A successful PR validation does not prove a GitHub Pages deployment. The exact post-merge Pages run and deployed commit still require verification.
 
 ## 5. Remaining work

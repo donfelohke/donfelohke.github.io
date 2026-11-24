@@ -2,6 +2,13 @@
 
 This file records material changes to the published website and its operating documentation. Detailed implementation history, review discussion and exact diffs remain in Git commits and pull requests. A merged source change is not, by itself, proof of live deployment.
 
+## 2026-11-24 — Connect and footer hierarchy refinement
+- Keep location, directions, home-call conditions, WhatsApp, phone and email in Connect as the single contact directory.
+- Remove duplicated location and contact information from the footer and booking panel.
+- Keep the footer focused on the brand signature, manual service-payment safeguards, separate voluntary Support Us and one GitHub repositories link.
+- Remove the remaining dark-mode hero radial gradients; keep the hero price panel opaque in both themes.
+- Add regression checks for the Connect/footer boundary and dark-mode hero surface.
+
 ## 2026-11-24 — Opaque content surfaces and proposal reconciliation
 - Remove decorative radial hero circles and keep the hero background to a restrained forest gradient.
 - Make the hero brand lockup and first-screen price panel opaque; reserve glass for the topbar and floating dock.
