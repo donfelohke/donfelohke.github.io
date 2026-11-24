@@ -180,3 +180,15 @@ This section supersedes older findings wherever they conflict with the current m
 ### Current evidence and related records
 
 See [CHANGELOG.md](../CHANGELOG.md), [PUBLIC-FACTS-REGISTER.md](PUBLIC-FACTS-REGISTER.md), [SERVICE-CATALOG.md](SERVICE-CATALOG.md), [WEBCOPY.md](WEBCOPY.md), [ROADMAP.md](ROADMAP.md) and [RELEASE-CHECKLIST.md](RELEASE-CHECKLIST.md). Current source changes are grouped in the pull request titled “Reconcile website documentation, changelog and release governance”.
+
+
+## 9. Current portal proposal and discrepancy disposition — 24 November 2026
+
+The current proposal decisions, historical proposal dispositions and WADR-001–WADR-022 status assessment are consolidated in [Website Proposal and Discrepancy Disposition](../research/WEBSITE-PROPOSAL-AND-DISCREPANCY-STATUS-2026-11-24.md).
+
+Key source changes since the earlier audit:
+- PR #193 consolidated the front-page research and normalised the changelog.
+- PR #194 made the hero task-first, surfaced exact published prices, updated canonical copy and removed historical hero override layers. Its Python static validation passed.
+- PR #195 is intended to finish the opaque-content treatment by removing decorative hero circles and keeping glass on navigation surfaces only; its validation and merge state must be confirmed before marking it resolved.
+
+The historical rows above remain evidence of earlier baselines. Current defects must be determined from the current `main` source and the current disposition record, not from an older row read in isolation.
