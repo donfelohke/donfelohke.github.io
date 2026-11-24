@@ -2,6 +2,14 @@
 
 This file records material changes to the published website and its operating documentation. Detailed implementation history, review discussion and exact diffs remain in Git commits and pull requests. A merged source change is not, by itself, proof of live deployment.
 
+## 2026-11-24 — Task-first front-page portal implementation
+- Replace the brand-slogan H1 with “Loc care in Eldoret.” while retaining “Beautiful Roots. Sovereign Systems.” as the supporting signature.
+- Bring all three exact published service prices into the first-screen price panel.
+- Replace the five-row hero identity taxonomy with a concise commercial price panel; retain the wider practice explanation in the page body.
+- Keep English/Kiswahili controls, NAKEBUSEN enquiry routes, WARENA scope caveat and manual payment/booking boundaries.
+- Consolidate the CSS by removing historical hero override layers and add a non-fixed floating-dock fallback at 380 CSS px and below.
+- Update canonical website copy and regression tests; browser/device, screen-reader, translation and live deployment checks remain release gates.
+
 ## 2026-11-24 — Consolidated front-page portal design and standards research
 - Reconcile the current page source, previous page proposals, copy standards, source facts and recent repository history.
 - Recommend retaining one static page as the public portal while making the loc-care offer, Eldoret location, exact service prices and enquiry path the first-screen priority.
