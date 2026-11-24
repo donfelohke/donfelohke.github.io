@@ -634,3 +634,8 @@ html{scroll-padding-bottom:calc(var(--dock) + 2rem + env(safe-area-inset-bottom)
   .hero-identity .pillar-domain{font-size:.62rem}
   .hero-identity .pillar-detail{font-size:.72rem}
 }
+
+
+/* Five-identity architecture: stack identity names and domain descriptors clearly. */
+.hero-identity .hero-pillar{grid-template-columns:minmax(0,1fr);gap:.16rem;padding:.72rem 0}
+.hero-identity .pillar-name{grid-row:auto}
