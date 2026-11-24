@@ -1,3 +1,15 @@
+# Changelog
+
+This file records material changes to the published website and its operating documentation. Detailed implementation history, review discussion and exact diffs remain in Git commits and pull requests. A merged source change is not, by itself, proof of live deployment.
+
+## 2026-11-24 — Consolidated front-page portal design and standards research
+- Reconcile the current page source, previous page proposals, copy standards, source facts and recent repository history.
+- Recommend retaining one static page as the public portal while making the loc-care offer, Eldoret location, exact service prices and enquiry path the first-screen priority.
+- Consolidate Hook / Line / Sinker and Top / Middle / Footer into one information architecture; retain LOCS / DIGITAL / CONNECT floating navigation with narrow/zoom fallback and focus-obstruction tests.
+- Define a consistent source-note approach: operational disclosures inline; research references contextual and dated; avoid print-style footnotes in ordinary web copy.
+- Record WCAG 2.2, W3C WAI, GOV.UK content design, Google Search Central and Core Web Vitals references and explicit research limitations.
+- Proposed H1 and copy direction are documented for implementation; no production HTML/CSS or service facts changed in this documentation-only update.
+
 ## 2026-11-24 — Design and copy research baseline
 - Add a source-grounded design audit covering user tasks, page hierarchy, WCAG 2.2, fixed navigation, glass fallbacks and performance.
 - Add a copy/content audit covering user needs, English/Kiswahili consistency, service facts, enquiry boundaries and research maturity.
@@ -21,10 +33,6 @@
 - Add regression coverage for all five canonical research destinations.
 - Align the README with the same research index and state clearly that research protocols are not implementation, deployment, certification or compliance claims.
 - Preserve the single-page static HTML/CSS architecture, existing anchors, bilingual controls, commercial boundaries, approved prices and payment safeguards.
-
-# Changelog
-
-This file records material changes to the published website and its operating documentation. Detailed implementation history, review discussion and exact diffs remain in Git commits and pull requests. A merged source change is not, by itself, proof of live deployment.
 
 ## 2026-11-24 — Editorial, brand and service-fact reconciliation
 - Consolidate the public identity around **NAKEBUSEN · WARENA POWERED**, **GRACE · GRIT · GLORY**, **BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**, and **@donfelohke · #HisGenjeness**.
