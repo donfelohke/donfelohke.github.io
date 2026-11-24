@@ -12,7 +12,7 @@
 4. About — concise founder introduction and NAKEBUSEN's Lodwar-to-Eldoret history.
 5. Research & Creative Practice — IKAI, GENJE, FELOH Corpus and Gallery.
 6. Visit & Contact — map, directions, home-visit conditions and direct contact details.
-7. Footer — canonical brand signature, NAKEBUSEN transaction boundary, manual M-PESA instructions and separate voluntary support.
+7. Footer — canonical brand signature, founder mark, NAKEBUSEN transaction boundary, manual M-PESA instructions and separate voluntary support.
 
 ## Hero
 
@@ -22,6 +22,8 @@
 **Primary CTA:** Enquire on WhatsApp  
 **Secondary CTA:** See service details  
 **Location line:** King's Square · Kisumu Road · Eldoret Town
+
+The header presents NAKEBUSEN as the primary name and WARENA POWERED as a restrained technical endorsement. The hero remains commercial-first; the master positioning is expressed through the page's visual language and the full footer signature, not as a competing hero headline.
 
 The hero price panel is a quick-reference summary. The service cards repeat the prices beside their descriptions so visitors who jump directly to the services section still see the amount. This is intentional functional repetition; do not add another price list elsewhere.
 
@@ -47,6 +49,14 @@ The hero price panel is a quick-reference summary. The service cards repeat the 
 NAKEBUSEN does not offer braiding or shaving. The founder does not cut clients’ natural hair.
 
 **Booking:** Tell us which service interests you; share the condition of your locs or installation preferences; then agree suitability, availability, scope and final price. An enquiry does not confirm a booking. Availability and final terms are agreed directly.
+
+## GRACE · GRIT · GLORY brand architecture
+
+- **GRACE — NAKEBUSEN:** the enterprise; loc care, beauty, craft, heritage, dignity and professional service.
+- **GRIT — WARENA:** the infrastructure; libre computing, GNU/Linux, networks, engineering and digital sovereignty.
+- **GLORY — DON FELOH / #HisGenjeness:** the founder's creative expression through GENJE, sound, movement, livecoding and creative technology.
+
+These identities are explained after the primary service and technical sections. They clarify the relationship without creating competing storefronts or new transaction points.
 
 ## WARENA · Digital
 
@@ -100,8 +110,9 @@ Home visits may be arranged across the wider Eldoret Town service area. Confirm 
 ## Footer, payment and support
 
 Keep one canonical brand lockup:
-- NAKEBUSEN · WARENA · F3L0H / DON FELOH
+- NAKEBUSEN · WARENA POWERED
 - GRACE · GRIT · GLORY
+- Founder signature: @donfelohke · #HisGenjeness
 - GENJE ZA WARENA
 - BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.
 - HERITAGE · BLACK EXCELLENCE · SOVEREIGN FUTURES

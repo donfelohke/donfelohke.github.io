@@ -430,3 +430,20 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
   .hero-price-list>div{align-items:flex-start}
   .hero-price-list dt{max-width:60%}
 }
+
+
+/* Brand architecture: one commercial lead, three connected expressions. */
+.brand-powered{margin-top:.18rem;color:#E8C77D;font:800 .58rem/1.2 var(--mono);letter-spacing:.15em}
+.brand-sub{margin-top:.18rem}
+.brand-architecture{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9rem;margin-top:3.5rem}
+.brand-pillar{min-width:0;padding:clamp(1.2rem,2.5vw,1.7rem);border:1px solid var(--line);border-top:4px solid var(--brand-ochre);border-radius:1rem;background:var(--surface)}
+.brand-pillar-label{margin:0;color:var(--ochre);font:800 .64rem/1.45 var(--mono);letter-spacing:.075em}
+.brand-pillar h3{margin:1.5rem 0 .55rem;font:500 clamp(1.55rem,2.4vw,2.1rem)/1.05 var(--serif);letter-spacing:-.035em}
+.brand-pillar p:last-child{margin:.3rem 0 0;color:var(--muted);font-size:.84rem;line-height:1.55}
+.brand-grit{border-top-color:var(--forest)}
+.brand-grit .brand-pillar-label{color:var(--forest)}
+.brand-glory{border-top-color:var(--brand-terracotta)}
+.brand-glory .brand-pillar-label{color:var(--clay)}
+.footer-founder{display:inline-block;margin-top:1rem;color:#F0C477;font:800 .68rem/1.4 var(--mono);letter-spacing:.08em}
+@media(prefers-color-scheme:dark){.brand-grit .brand-pillar-label{color:#9BC49A}.brand-glory .brand-pillar-label{color:#F09A85}}
+@media(max-width:760px){.brand-architecture{grid-template-columns:1fr;gap:.7rem;margin-top:2.5rem}.brand-pillar{padding:1.25rem}.brand-pillar h3{margin-top:1rem}}
