@@ -1,6 +1,6 @@
 # Website Proposal and Discrepancy Disposition — 24 November 2026
 
-**Status:** Current reconciliation record  
+**Status:** Current reconciliation record; PR #195 merged  
 **Website source baseline:** `main` after PR #194, merge commit `d81be18102fa1a9c2806504d8174e84924472933`  
 **Design authority:** [Front-Page Portal — Consolidated Design, Copy and Standards Research](FRONT-PAGE-PORTAL-DESIGN-COPY-AND-STANDARDS-2026-11-24.md)  
 **Factual authority:** `docs/PUBLIC-FACTS-REGISTER.md`, `docs/SERVICE-CATALOG.md`, NAKEBUSEN source catalogue  
@@ -30,7 +30,7 @@ The website is the only repository among the ten checked with a root `CHANGELOG.
 | Research and creative work | Separate research landing page; generic portfolio cards | Contextual IKAI / GENJE / Corpus pathways and dated records on single page | Current |
 | Navigation | Icon-only selector; extra top-level destinations; duplicate desktop/mobile navigation | LOCS / DIGITAL / CONNECT floating dock; no competing second nav | Current |
 | Small-screen navigation | Fixed dock at all sizes | Floating dock retained; static fallback at ≤380 CSS px | Implemented in PR #194 |
-| Glass treatment | Glass across hero, content cards and controls | Glass only on navigation surfaces; readable content and prices remain opaque | Being enforced in PR #195 |
+| Glass treatment | Glass across hero, content cards and controls | Glass only on navigation surfaces; readable content and prices remain opaque | Implemented in PR #195 |
 | Hero decoration | Radial gradients and non-functional circular artwork | Remove decorative hero circles/radial effects; retain restrained forest surface | Being enforced in PR #195 |
 | Footnotes | Print-style numbered notes across public page | Operational disclosures inline; contextual dated sources in research sections | Current |
 | Images | Hero image, stock photography, AI imagery, gallery | Text-first; no page image without specific rights, consent, provenance and approval | Current |
@@ -58,7 +58,7 @@ The original [Website Audit Discrepancy Register](../docs/WEBSITE-AUDIT-DISCREPA
 | WADR-002 — overview of practice domains | Reconciled in structure | Page retains separate WARENA, IKAI, GENJE and Corpus sections; no additional hero taxonomy is needed. |
 | WADR-003 — Connect/footer ownership | Retained | Connect remains the contact directory; footer retains manual payment, support distinction, signature and source links. Recheck rendered duplication manually. |
 | WADR-004 — CSS override accumulation | Partially resolved | PR #194 removes historical hero override layers and reduces stylesheet from 642 to 463 lines. PR #195 further removes decorative hero rules; full token/component audit remains open. |
-| WADR-005 — decorative hero gradients/circles and glass on content | Being resolved in PR #195 | Remove hero radial circles; keep price panel and brand lockup opaque; glass remains a navigation treatment. Verify rendered contrast and reduced-transparency behaviour. |
+| WADR-005 — decorative hero gradients/circles and glass on content | Implemented in PR #195 | Remove hero radial circles; keep price panel and brand lockup opaque; glass remains a navigation treatment. Verify rendered contrast and reduced-transparency behaviour. |
 | WADR-006 — stale sage tokens | Not observed in current active stylesheet | Current stylesheet does not contain cited blue-sage token values. Full palette/contrast matrix remains open. |
 | WADR-007 — theme-toggle accessible name | Not applicable to current architecture | There is no theme toggle; the site follows `prefers-color-scheme`. |
 | WADR-008 — Kiswahili metadata and indexability | Documented single-URL behaviour | EN/SW is a presentation/language switch on one canonical URL; metadata remains English. A separately indexable Kiswahili route is not implemented. |
@@ -82,20 +82,19 @@ The original [Website Audit Discrepancy Register](../docs/WEBSITE-AUDIT-DISCREPA
 - PR #194 merged the task-first hero, first-screen price panel, CSS hero-layer cleanup, canonical copy updates and regression-test updates.
 - The PR #194 GitHub Actions validation workflow completed successfully. The `validate` job passed; Pages build/deploy jobs were skipped because this was a pull request.
 - Static source checks after PR #194 confirmed one H1, unique IDs, valid fragment targets, three dock destinations, exact prices, one transaction statement, no script tags and a static-dock fallback at narrow widths.
-- PR #195 is the opaque-content / decorative-hero refinement. Its checks and merge state must be verified separately.
+- PR #195 merged the opaque-content / decorative-hero refinement. Its GitHub Actions validation completed successfully; Pages build/deploy jobs were skipped on the pull request.
 - A successful PR validation does not prove a GitHub Pages deployment. The exact post-merge Pages run and deployed commit still require verification.
 
 ## 5. Remaining work
 
-1. Complete PR #195 validation and merge only after its tests pass.
-2. Verify the push-to-main Pages build/deployment after merge.
-3. Inspect the deployed page at 320, 360, 390, 430, 760, 1024 and desktop widths.
-4. Test 200%/400% zoom, keyboard focus, screen-reader structure, EN/SW switching, light/dark and reduced-motion/transparency.
-5. Complete human Kiswahili review.
-6. Run a rendered contrast matrix for text, links, controls and focus states.
-7. Validate title, canonical metadata, social metadata and structured data externally.
-8. Recheck payment merchant authority before any payment-detail change or campaign.
-9. Review remaining historical design docs for stale claims before treating them as current.
+1. Verify the push-to-main Pages build/deployment after merge.
+2. Inspect the deployed page at 320, 360, 390, 430, 760, 1024 and desktop widths.
+3. Test 200%/400% zoom, keyboard focus, screen-reader structure, EN/SW switching, light/dark and reduced-motion/transparency.
+4. Complete human Kiswahili review.
+5. Run a rendered contrast matrix for text, links, controls and focus states.
+6. Validate title, canonical metadata, social metadata and structured data externally.
+7. Recheck payment merchant authority before any payment-detail change or campaign.
+8. Review remaining historical design docs for stale claims before treating them as current.
 
 ## 6. Authority and change control
 
