@@ -115,8 +115,13 @@ See the [NAKEBUSEN × WARENA Brand Platform](https://github.com/donfelohke/feloh
 
 The active implementation is being developed on `feat/editorial-brand-led-website-2026-11`; the live `main` branch is not changed by this work. The current public platform is:
 
-**NAKEBUSEN × WARENA POWERED** · **GRACE · GRIT · GLORY** · **BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**
+**NAKEBUSEN · WARENA POWERED** · **GRACE · GRIT · GLORY** · **BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**
 
 NAKEBUSEN remains the sole customer-facing transaction and booking point. WARENA is a distinct technical capability domain; GENJE is creative practice; IKAI is research / work in progress; FELOH is the human author. Existing services, prices, contact routes, language controls and payment safeguards remain publication constraints.
 
 See [the editorial website improvement specification](docs/EDITORIAL-WEBSITE-IMPROVEMENT-2026-11-24.md) for the information architecture, design and technical constraints, and release gates.
+
+
+## Copy system — 24 November 2026
+
+The website's web, design, campaign and technical messaging is governed by the [FELOH Corpus Copy System](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-COPY-SYSTEM-2026-11-24.md). This repository also maintains the [campaign and technical copy pack](docs/AD-COPY-AND-TECHNICAL-MESSAGING-2026-11-24.md), [website copy](docs/WEBCOPY.md) and [editorial design and page plan](docs/WEBSITE-EDITORIAL-DESIGN-COPY-AND-PAGE-PLAN-2026-11-24.md).
