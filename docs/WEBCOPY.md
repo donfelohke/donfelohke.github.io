@@ -18,10 +18,12 @@
 
 **Eyebrow:** NAKEBUSEN · LOC CARE  
 **H1:** Loc care in Eldoret.  
-**Proposition:** Maintenance for existing locs, Sisterlocs retie and artificial loc installation. See each price upfront; agree any additional work or materials before work begins.  
-**Primary CTA:** Enquire on WhatsApp  
-**Secondary CTA:** See service details  
-**Location line:** King's Square · Kisumu Road · Eldoret Town
+**Proposition:** Retouch & Styling, Sisterlocs Retie and Artificial Locs Installation—with published prices and direct WhatsApp enquiries.
+
+**Supporting line:** Need GNU/Linux, computer or network support? Explore WARENA. Technical work is assessed and agreed separately.  
+**Primary CTA:** Enquire about loc care  
+**Secondary CTA:** Compare services & prices  
+**Location line:** Beside King's Square · Kisumu Road · Eldoret Town
 
 The header presents NAKEBUSEN as the primary name and WARENA POWERED as a restrained technical endorsement. The hero remains commercial-first; the master positioning is expressed through the page's visual language and the full footer signature, not as a competing hero headline.
 
@@ -42,17 +44,19 @@ The hero price panel is a quick-reference summary. The service cards repeat the 
 | Sisterlocs Retie | KES 1,500 |
 | Artificial Locs Installation | KES 3,500 |
 
-- **Retouch & Styling:** Maintenance and styling for existing locs. Final scope depends on their condition and the work required.
-- **Sisterlocs Retie:** Retightening for established Sisterlocs. Share their current condition when enquiring.
-- **Artificial Locs Installation:** Agree the preferred style, materials and installation requirements before work begins.
+- **Retouch & Styling:** For maintenance and styling of locs you already have. We’ll discuss their condition and the work needed before agreeing the scope.
+- **Sisterlocs Retie:** For retightening an established Sisterlocs installation. This is maintenance—not a new installation.
+- **Artificial Locs Installation:** For a new artificial-loc installation. Agree the preferred look, materials and exact work before starting.
 
 NAKEBUSEN does not offer braiding or shaving. The founder does not cut clients’ natural hair.
 
-**Booking:** Tell us which service interests you; share the condition of your locs or installation preferences; then agree suitability, availability, scope and final price. An enquiry does not confirm a booking. Availability and final terms are agreed directly.
+**Booking:** Choose a service if you know which one; describe your current locs or preferred artificial-loc look; then agree suitability, exact work, additional materials, total price, timing and location.
+
+**Booking boundary:** An enquiry does not confirm a booking. Availability and final terms are agreed directly.
 
 ## Service decision guide and enquiry preparation
 
-The homepage now distinguishes the three approved loc-care services by the customer's current situation without inventing technical inclusions:
+The homepage uses a short service comparison to help customers identify the closest starting point without asking them to diagnose their own locs:
 
 - **Retouch & Styling** is for maintenance or styling of existing locs.
 - **Sisterlocs Retie** is retightening for an established Sisterlocs installation; it is not a new installation.
@@ -103,7 +107,7 @@ These identities are explained after the primary service and technical sections.
 **Kicker:** FREEDOM IS A SYSTEM · COMPUTING · INFRASTRUCTURE
 **Heading:** GNU/Linux, computers and networks.
 
-WARENA provides practical support for individuals, homes, businesses and organisations. Work centres on libre-first, local-first and maintainable computing and networked systems.
+Practical GNU/Linux, computer and network support for individuals, homes, businesses and organisations. Start with the problem; agree the scope, cost and access before work begins.
 
 **Principle:** Reuse first · Adapt second · Implement last. Human decisions remain authoritative.
 
@@ -122,9 +126,9 @@ Availability, scope, feasibility, schedule and cost are agreed per engagement th
 **Felix Lwova · Don Feloh**  
 **Founder, NAKEBUSEN · Founder & CTO, WARENA · Loctician · Creative Technologist**
 
-I am Kenyan. I’m Felix Lwova, known as Don Feloh. My work spans loc care, GNU/Linux systems and creative technology.
+I’m Felix Lwova, known as Don Feloh. I founded NAKEBUSEN and WARENA; my work spans loc care, GNU/Linux systems and creative technology.
 
-My practice is grounded in craft, human authorship and technology that strengthens human agency. NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret.
+NAKEBUSEN began in Lodwar, Turkana County, and its loc-care practice continues in Eldoret. NAKEBUSEN leads customer work; WARENA provides technical capability. IKAI remains research; GENJE remains creative practice.
 
 ## Research & creative practice
 
@@ -137,6 +141,7 @@ WARENA is described in its own Digital section and is not repeated in this proje
 
 ## Visit & contact
 
+**Heading:** Find us in Eldoret.  
 **Location:** Beside King's Square · Kisumu Road · Eldoret Town, Uasin Gishu County, Kenya.  
 **Plus Code:** F743+R35, Eldoret, Kenya.  
 **WhatsApp:** +254 719 635 415  
@@ -227,3 +232,12 @@ The public page links directly to three current specialist records while preserv
 - **GENJE — Movement Notation and Interoperability Validation (24 November 2026):** proposed validation protocol; no parser, converter, motion-capture pipeline or round-trip benchmark is claimed. https://github.com/donfelohke/Genje/blob/main/docs/GENJE-MOVEMENT-NOTATION-AND-INTEROPERABILITY-VALIDATION-2026-11-24.md
 
 These links make the research inspectable; they are not testimonials, completed client case studies or proof of a released product. Keep the full research catalogue in the specialist repositories, not on the commercial homepage.
+
+
+## Approved implementation · 24 November 2026
+
+The owner approved the Rooted Editorial Service Portal direction and the first production refinement. The live source now uses the revised service-first hero, a separate WARENA pathway, shorter service and founder copy, the CONNECT dock label, and a more consistent editorial visual hierarchy.
+
+The English changes are reflected in the published page. Existing Kiswahili copy remains the current authored baseline; it has not been represented as newly human-reviewed or translated in this change. The three published prices, service boundaries, enquiry/booking terms, location, contact details and footer payment/support wording remain unchanged.
+
+The footer is deliberately outside the redesign scope. No payment automation, new runtime, remote font, analytics or new imagery was introduced. Browser/device, TalkBack/screen-reader, human Kiswahili and WCAG conformance checks remain outstanding and must not be described as completed.
