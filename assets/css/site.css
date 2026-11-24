@@ -488,3 +488,19 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 .footer-founder{display:inline-block;margin-top:1rem;color:#F0C477;font:800 .68rem/1.4 var(--mono);letter-spacing:.08em}
 @media(prefers-color-scheme:dark){.brand-grit .brand-pillar-label{color:#9BC49A}.brand-glory .brand-pillar-label{color:#F09A85}}
 @media(max-width:760px){.brand-architecture{grid-template-columns:1fr;gap:.7rem;margin-top:2.5rem}.brand-pillar{padding:1.25rem}.brand-pillar h3{margin-top:1rem}}
+
+/* Customer FAQ, privacy and professional-boundary modules. */
+.service-faq{margin-top:3rem;padding-top:2.8rem;border-top:1px solid var(--line)}
+.faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
+.faq-item{min-width:0;padding:1rem 1.15rem;border:1px solid var(--line);border-radius:.85rem;background:var(--surface)}
+.faq-item summary{position:relative;padding-right:1.5rem;cursor:pointer;font-size:.9rem;font-weight:700;line-height:1.45;list-style:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:after{content:"+";position:absolute;right:0;top:0;color:var(--clay);font:700 1.2rem/1 var(--mono)}
+.faq-item[open] summary:after{content:"−"}
+.faq-item p{margin:.8rem 0 .1rem;color:var(--muted);font-size:.82rem}
+.customer-care{margin-top:1.2rem;padding:1.4rem;border:1px solid var(--line);border-radius:1rem;background:var(--soft)}
+.customer-care-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.customer-care-grid article{padding-top:.6rem;border-top:2px solid var(--ochre)}
+.customer-care-grid h4{margin:.5rem 0;font:650 1rem/1.3 var(--sans)}
+.customer-care-grid p{margin:.35rem 0;color:var(--muted);font-size:.8rem}
+@media(max-width:760px){.faq-grid,.customer-care-grid{grid-template-columns:1fr}}
