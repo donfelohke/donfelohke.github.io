@@ -30,9 +30,9 @@ One human author; distinct practices. NAKEBUSEN leads the commercial experience,
 ## Experience hierarchy
 
 1. Hero: master identity and positioning, plain-language loc-care and technical proposition, direct loc-care enquiry and service-price navigation.
-2. NAKEBUSEN LOCS: primary commercial path, approved services and published prices, scope note and enquiry boundary.
-3. DIGITAL / WARENA: practical technical capability, scoped per engagement.
-4. About and the distinct IKAI, GENJE and FELOH Corpus research/creative paths.
+2. NAKEBUSEN LOCS: primary commercial path, approved services and prices, decision guide, enquiry preparation and booking boundary.
+3. DIGITAL / WARENA: candidate technical capability areas, discovery-to-handover method, data/access safeguards and per-engagement scope.
+4. Founder context and the distinct IKAI research, GENJE creative practice and FELOH Corpus governance/provenance paths.
 5. Connect and footer: location, contact, manual service-payment safeguards and voluntary support kept separate.
 
 ## Business and editorial invariants
@@ -40,7 +40,10 @@ One human author; distinct practices. NAKEBUSEN leads the commercial experience,
 - ONLY NAKEBUSEN TRANSACTS.
 - Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Installation — KES 3,500.
 - An enquiry does not confirm a booking. Availability and final terms are agreed directly.
-- No braiding or shaving claims. Do not invent availability, hours, credentials, testimonials, service inclusions or guarantees.
+- No braiding or shaving claims. Do not invent availability, hours, credentials, testimonials, service inclusions, durations, preparation requirements or guarantees.
+- Distinguish Retouch & Styling (existing loc maintenance/styling), Sisterlocs Retie (retightening an established installation) and Artificial Locs Installation (new artificial loc installation); do not imply unapproved inclusions.
+- WARENA candidate capabilities must remain qualified by individual feasibility, availability, scope, price and support confirmation. Never request passwords, private keys, PINs or one-time codes in an enquiry; client-data access requires permission.
+- IKAI must remain labelled RESEARCH / WORK IN PROGRESS; GENJE remains creative practice/research; FELOH Corpus remains governance and provenance. A repository or research note is not proof of a deployed product or validated implementation.
 - Service payments and voluntary support are distinct. Preserve approved payment facts and manual verification safeguards.
 - Current location wording: Beside King's Square · Kisumu Road · Eldoret Town · Uasin Gishu · Kenya. F743+R35 is a directions reference, not a street-address claim.
 - English is the default; Kiswahili is available through native controls. Mark language changes with correct lang attributes.
