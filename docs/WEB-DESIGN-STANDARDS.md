@@ -3,40 +3,56 @@
 **Status:** Current implementation standard · 24 November 2026
 
 ## Design thesis
+
 One human author; distinct practices. NAKEBUSEN leads the commercial experience, with loc care as the primary customer journey. WARENA communicates technical capability. IKAI remains research / work in progress. GENJE is creative practice. FELOH Corpus is the shared knowledge and provenance record.
 
+## Brand hierarchy
+
+- Master lockup: **NAKEBUSEN · WARENA POWERED**.
+- Brand constitution: **GRACE · GRIT · GLORY**.
+- Master positioning: **BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**
+- WARENA technical line: **FREEDOM IS A SYSTEM.**
+- Supporting horizon language may use **SOVEREIGN FUTURES**, but must not replace the master positioning.
+- Founder signature: **@donfelohke · #HisGenjeness**.
+
 ## Visual system
-- Editorial Rooted Glass: warm ivory reading canvas, forest-green technical surfaces, terracotta and ochre accents.
+
+- Editorial Rooted Glass: forest-green hero and navigation, warm ivory reading surfaces, terracotta and ochre accents.
 - Cormorant Garamond for expressive headings; Inter/system sans-serif for reading; JetBrains Mono/system monospace for technical labels.
-- Expressive glass is reserved for functional navigation. The hero identity panel, service cards, prices, contact and payment instructions use opaque surfaces for legibility and predictable contrast.
-- The hero uses the editorial canvas with ink-coloured display type; its emphasis colour adapts between light and dark system themes.
-- Text-first publication. No rendered images, SVG artwork, graphic favicons, CSS image assets, social-preview images, stock imagery or unapproved customer photography.
-- No external fonts, analytics, trackers, JavaScript runtime, CMS or external runtime dependencies.
+- The hero uses a balanced two-column desktop composition and a single-column mobile layout. Its dark forest surface carries the master identity; ochre is the primary emphasis.
+- Restrained glass is used for the hero identity lockup, practice-architecture panel, topbar and floating dock. Solid opaque fallbacks are mandatory.
+- Service cards, prices, booking information, contact details, payment instructions and support information remain opaque and readable.
+- Text-first publication. No rendered images, SVG artwork, ornamental image assets, stock imagery, unapproved customer photography, remote fonts, analytics, trackers, JavaScript runtime, CMS or external runtime dependencies.
 
 ## Experience hierarchy
-1. Hero: Don Feloh authorship and GRACE · GRIT · GLORY, with the plain-language proposition “Natural loc care in Eldoret.”
-2. NAKEBUSEN LOCS: the primary commercial path, approved services and prices, enquiry boundary.
+
+1. Hero: master identity and positioning, plain-language loc-care and technical proposition, direct loc-care enquiry and service-price navigation.
+2. NAKEBUSEN LOCS: primary commercial path, approved services and published prices, scope note and enquiry boundary.
 3. DIGITAL / WARENA: practical technical capability, scoped per engagement.
 4. About and the distinct IKAI, GENJE and FELOH Corpus research/creative paths.
-5. Connect and footer: contact, manual service-payment safeguards and voluntary support kept separate.
+5. Connect and footer: location, contact, manual service-payment safeguards and voluntary support kept separate.
 
 ## Business and editorial invariants
+
 - ONLY NAKEBUSEN TRANSACTS.
-- Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Installation — KES 3,500. The first two are published prices without a plus sign.
+- Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Installation — KES 3,500.
 - An enquiry does not confirm a booking. Availability and final terms are agreed directly.
-- No braiding or shaving claims. Do not invent availability, credentials, testimonials, service inclusions or guarantees.
+- No braiding or shaving claims. Do not invent availability, hours, credentials, testimonials, service inclusions or guarantees.
 - Service payments and voluntary support are distinct. Preserve approved payment facts and manual verification safeguards.
 - Current location wording: Beside King's Square · Kisumu Road · Eldoret Town · Uasin Gishu · Kenya. F743+R35 is a directions reference, not a street-address claim.
 - English is the default; Kiswahili is available through native controls. Mark language changes with correct lang attributes.
+- NAKEBUSEN's business history must remain distinct from the founder's personal biography.
 
 ## Accessibility and responsive behaviour
+
 - One descriptive H1, logical heading hierarchy, semantic landmarks and skip navigation.
-- Keyboard access and visible focus; primary targets at least 44 × 44 CSS pixels.
-- Reflow at 320 CSS pixels without horizontal scrolling; fixed navigation must not obscure focused content.
+- Keyboard access and visible focus; primary controls at least 44 × 44 CSS pixels.
+- Reflow at 320 CSS pixels without horizontal scrolling; fixed navigation must not obscure focused content or anchor destinations.
 - Respect system colour scheme, reduced motion and reduced transparency.
-- Test both languages, light/dark modes, zoom/reflow, keyboard flow, contrast and screen-reader landmarks. Automated tests are not a WCAG conformance claim.
+- Test both languages, light/dark modes, zoom/reflow, keyboard flow, contrast, screen-reader landmarks and actual glass surfaces. Automated source tests are not a WCAG conformance claim.
 
 ## Architecture and publication
+
 - One static HTML page and one authored CSS stylesheet; no client-side script.
 - GitHub Pages workflow stages an explicit public allowlist: index.html, assets/css/site.css, and optional robots.txt, sitemap.xml, CNAME, .nojekyll.
 - Tests, internal documentation, repository metadata and unapproved assets are not included in the Pages artifact.
