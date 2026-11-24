@@ -384,5 +384,34 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("keep distinct from founder biography", register)
 
 
+    def test_content_depth_and_operational_boundaries(self):
+        for phrase in (
+            "Choose by the work", "Retightening", "existing Sisterlocs installation",
+            "What to include in your message", "Agree the details before work",
+            "The published prices are not a substitute for an agreed scope.",
+            "A responsible technical engagement", "Discover", "Change &amp; verify",
+            "Handover", "Do not send passwords, private keys, PINs or one-time codes",
+            "Permission is required before anyone accesses, copies, moves or deletes client data.",
+            "IKAI · MIRROR · RESEARCH / WORK IN PROGRESS", "A mirror, not a judge.",
+            "No released mirror, validated sensor pipeline or deployed beauty-tech system is claimed.",
+            "GENJE · EXPRESSION · CREATIVE PRACTICE", "Choreohacking",
+            "FELOH CORPUS · GOVERNANCE · PROVENANCE", "One corpus. Many views.",
+        ):
+            self.assertIn(phrase, HTML)
+        self.assertIn("Huhitaji kujitambua mwenyewe", HTML)
+        self.assertIn("Usitume nywila, funguo za siri, PIN", HTML)
+        self.assertIn("Hakuna kazi au gharama ya ziada inayopaswa kudhaniwa.", HTML)
+        self.assertIn(".service-guide{", CSS)
+        self.assertIn(".digital-method{", CSS)
+        self.assertIn(".research-detail-grid{", CSS)
+        self.assertIn("grid-template-columns:repeat(4,minmax(0,1fr))", CSS)
+        self.assertNotIn("KES 400", HTML)
+        self.assertNotIn("Manicure &amp; pedicure", HTML)
+        self.assertNotIn("guaranteed outcome", HTML)
+        self.assertNotIn("motion-capture pipeline", HTML)
+        self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
+
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
