@@ -59,7 +59,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("Beautiful", HTML)
         self.assertIn("Sovereign", HTML)
         self.assertIn("GRACE · GRIT · GLORY", HTML)
-        self.assertIn("professional loc care and practical technology services in Eldoret Town, Kenya", HTML)
+        self.assertIn("Professional loc care in Eldoret. Practical computing and network support.", HTML)
         self.assertIn("NAKEBUSEN inaunganisha huduma za kitaalamu za loc", HTML)
         self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
         self.assertIn("Founder, NAKEBUSEN · Founder &amp; CTO, WARENA · Loctician · Creative Technologist", HTML)
@@ -266,21 +266,25 @@ class PublicationTests(unittest.TestCase):
         for phrase in (
             'property="og:type" content="website"',
             'property="og:site_name" content="NAKEBUSEN · DON FELOH"',
-            'property="og:title" content="NAKEBUSEN · WARENA POWERED · Beautiful Roots. Sovereign Systems."',
-            'name="twitter:title" content="NAKEBUSEN · WARENA POWERED · Beautiful Roots. Sovereign Systems."',
+            'property="og:title" content="NAKEBUSEN | Loc Care in Eldoret · WARENA Powered"',
+            'name="twitter:title" content="NAKEBUSEN | Loc Care in Eldoret · WARENA Powered"',
             'property="og:url" content="https://donfelohke.github.io/"',
             'property="og:locale" content="en_KE"',
             'property="og:locale:alternate" content="sw_KE"',
             'name="twitter:card" content="summary"',
-            'name="twitter:description" content="Professional loc care and practical technology services in Eldoret Town, Kenya. Enquire directly with NAKEBUSEN."',
+            'name="twitter:description" content="Loc care in Eldoret Town: published prices, service details and direct WhatsApp enquiries with NAKEBUSEN."',
             'name="description"',
         ):
             self.assertIn(phrase, HTML)
         self.assertNotIn('property="og:image"', HTML)
         self.assertNotIn('name="twitter:image"', HTML)
-        self.assertIn("NAKEBUSEN · WARENA POWERED | Beautiful Roots. Sovereign Systems.", HTML)
+        self.assertIn("<title>NAKEBUSEN | Loc Care in Eldoret · WARENA Powered</title>", HTML)
         self.assertIn("Sisterlocs Retie", HTML)
         self.assertIn("Artificial Locs Installation", HTML)
+        self.assertIn("Enquire about loc care", HTML)
+        self.assertIn("View services &amp; prices", HTML)
+        self.assertIn("Ulizia utunzaji wa loc", HTML)
+        self.assertIn("Tazama huduma na bei", HTML)
         self.assertIn('media="(prefers-color-scheme: light)"', HTML)
         self.assertIn('media="(prefers-color-scheme: dark)"', HTML)
         self.assertNotIn('rel="icon"', HTML)
