@@ -201,3 +201,18 @@ A photo shared to discuss a service is not permission to publish it. Identifiabl
 
 Keep payment instructions customer-facing: pay only after the service and total amount are agreed directly, verify the merchant name and amount before entering a PIN, never share a PIN or one-time code, and retain the M-PESA confirmation. The website does not confirm a booking or payment; no implementation or payment-processor details belong in public copy.
 
+
+## Page hierarchy and customer journey revision
+
+The page order is intentionally commercial-first and task-oriented:
+
+1. **Hero:** identify NAKEBUSEN, the Eldoret loc-care offer, published prices and direct enquiry action.
+2. **Page index:** give visitors direct paths to loc-care prices, WARENA Digital, Visit & Contact, and Founder & Work.
+3. **NAKEBUSEN loc care:** service choices, prices, service distinctions, enquiry preparation, agreement process, FAQ, consent and professional boundaries.
+4. **WARENA Digital:** practical technical engagement areas, individual feasibility and the discovery-to-handover method.
+5. **Visit & Contact:** bring the location, directions, home-call conditions and contact methods immediately after the two service paths.
+6. **Founder & Work:** explain authorship and brand architecture, followed by separate IKAI research, GENJE creative practice and FELOH Corpus governance/provenance.
+7. **Footer:** keep manual service-payment instructions and voluntary support separate.
+
+The appointment path is expressed as four explicit stages: Choose, Describe, Agree and Confirm. The final stage requires direct agreement by both sides; an enquiry, proposed date or estimate is not a booking confirmation. The floating dock remains limited to Locs, Digital and Visit; the in-page index provides the additional Founder & Work route without overloading the fixed mobile controls.
+
