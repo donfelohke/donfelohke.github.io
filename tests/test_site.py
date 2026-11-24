@@ -169,7 +169,7 @@ class PublicationTests(unittest.TestCase):
 
     def test_public_research_and_creative_work_are_described_plainly(self):
         for phrase in (
-            "Freedom", "WARENA", "IKAI", "proposed Turkana association with “home”",
+            "Freedom", "WARENA", "IKAI", "IKAI is a Turkana female name meaning “home”",\n            "IKAI ni jina la kike la Kiturkana lenye maana ya “nyumbani”",
             "GENJE", "Genge-rooted creative practice", "livecoding",
             "FELOH Corpus", "Research &amp;<br><em>records.</em>",
         ):
