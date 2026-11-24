@@ -305,6 +305,11 @@ class PublicationTests(unittest.TestCase):
         self.assertIn('class="lang-en" lang="en"', HTML)
         self.assertIn('class="lang-sw" lang="sw"', HTML)
         self.assertEqual(2, HTML.count("<dd>3511456</dd>"))
+        footer = HTML.split('<footer class="site-footer"', 1)[1].split("</footer>", 1)[0]
+        self.assertNotIn("Beside King's Square", footer)
+        self.assertNotIn("F743+R35", footer)
+        self.assertEqual(1, footer.count('href="https://github.com/donfelohke"'))
+        self.assertIn("grid-template-columns:repeat(2,minmax(0,1fr))", CSS)
         self.assertIn("separate from NAKEBUSEN service payments", HTML)
         self.assertIn("Ni tofauti na malipo ya huduma za NAKEBUSEN", HTML)
 
