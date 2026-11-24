@@ -1,8 +1,8 @@
 # NAKEBUSEN — Public Facts Register
 
 **Document ID:** NB-PFR-01  
-**Version:** M8 · 23 November 2026  
-**Status:** Publication control · aligned to current F3L0H constitution  
+**Version:** M9 · 24 November 2026  
+**Status:** Publication control · aligned to current FELOH identity constitution  
 **Authority:** @donfelohke
 
 **Shared constitutional authority:** [F3L0H Sovereign Master Corpus](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-SOVEREIGN-MASTER-CORPUS-2026-11-20.md). This register controls approved public facts; it does not redefine the four practice domains.
@@ -21,29 +21,29 @@ This register controls factual claims used on the website, service catalogue, pr
 
 | ID | Claim | Class | Publication rule |
 |---|---|---|---|
-| PF-001 | NAKEBUSEN is the ROOT domain: grounded physical practice, beauty, heritage, craft and enterprise; it is the only live commercial practice | F2 | Canonical under the 2026-11-20 F3L0H constitution; not a parent of the other practice domains |
+| PF-001 | NAKEBUSEN is the grounded ROOT practice: beauty, heritage, craft, dignity and enterprise; it is the only live commercial practice | F2 | Canonical; it is not the parent of the other practice domains |
 | PF-002 | ONLY NAKEBUSEN TRANSACTS | F2 | Canonical commercial boundary |
-| PF-003 | NAKEBUSEN may present LOCS and DIGITAL service paths; all commercial enquiries, agreements and transactions remain through NAKEBUSEN | F2 | Canonical commercial boundary; WARENA is a separate capability domain, not a NAKEBUSEN sub-brand |
-| PF-004 | Historical lockup: NAKEBUSEN Locs ° Powered by WARENA | F2 | Superseded as the master hero lockup on 23 November 2026; retain only where NAKEBUSEN-specific context calls for it |
+| PF-003 | NAKEBUSEN presents LOCS and DIGITAL service paths; all commercial enquiries, agreements and transactions remain through NAKEBUSEN | F2 | WARENA remains a distinct capability domain, not a NAKEBUSEN sub-brand or separate checkout |
+| PF-004 | Historical lockup: NAKEBUSEN Locs ° Powered by WARENA | F2 | Superseded as master lockup on 23 November 2026; retain only in historical or specifically relevant context |
 | PF-005 | Supporting signature: @donfelohke · #HisGenjeness | F2 | Use where appropriate |
-| PF-006 | NAKEBUSEN brand line: Your Beauty ° Your Way. | F2 | Retained as the NAKEBUSEN brand line; no longer the master homepage H1 |
-| PF-007 | Homepage supporting statement: NAKEBUSEN is the ROOT practice for natural loc care and grounded enterprise; practical technology services, where offered, are provided through NAKEBUSEN with WARENA capability. | F2 | Current public-copy direction; preserve founder attribution separately and do not imply WARENA is a sub-brand |
-| PF-008 | NAKEBUSEN adopted meaning “Beautiful” in Turkana | F4 | Attribute as founder-supplied interpretation pending linguistic verification |
-| PF-009 | GENJE ZA WARENA interpreted as “THE FIRE OF THE FORMIDABLE” | F4 | Brand interpretation only; not verified etymology |
-| PF-010 | GENJE is not a separate commercial division | F2 | Canonical |
-| PF-011 | WARENA is the distinct CAPABILITY domain; it may provide technical capability for NAKEBUSEN digital-service engagements | F2 | Not a NAKEBUSEN subdomain, parent enterprise or separate checkout; all commercial transactions remain through NAKEBUSEN |
-| PF-012 | IKAI is research, not a released product | F2 | Label research / WIP |
-| PF-013 | Current loc-care locality: Beside King's Square on Kisumu Road · Eldoret Town · Uasin Gishu · Kenya | F1 | Founder-supplied location description; pair with the supplied Plus Code and map pin for directions. Do not invent a street address or coordinates |
+| PF-006 | NAKEBUSEN brand line: Your Beauty ° Your Way. | F2 | Retained as the NAKEBUSEN brand line; not the master homepage H1 |
+| PF-007 | Current master public platform: NAKEBUSEN · WARENA POWERED; GRACE · GRIT · GLORY; BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.; GENJE ZA WARENA; @donfelohke · #HisGenjeness | F2 | Preserve NAKEBUSEN-first hierarchy and the distinct practice roles |
+| PF-008 | NAKEBUSEN adopted meaning “Beautiful” in Turkana | F4 | Attribute as founder-supplied interpretation; do not claim independent linguistic verification |
+| PF-009 | GENJE ZA WARENA interpreted as “THE FIRE OF THE FORMIDABLE” | F4 | Adopted creative interpretation only; not verified etymology |
+| PF-010 | GENJE is creative and embodied practice, not a separate commercial division | F2 | Canonical |
+| PF-011 | WARENA is the distinct capability domain | F2 | Technical capability may support engagements; it is not a NAKEBUSEN sub-brand, parent enterprise or separate checkout |
+| PF-012 | IKAI is reflective-computing research / work in progress, not a released product | F2 | Label research / WIP; no purchase, booking or availability claim |
+| PF-013 | Loc-care locality: Beside King's Square on Kisumu Road · Eldoret Town · Uasin Gishu · Kenya | F1 | Founder-supplied location description; pair with supplied Plus Code and map pin. Do not invent a street address or coordinates |
 | PF-014 | Phone: +254 719 635 415 | F1 | Verify before campaigns |
 | PF-015 | WhatsApp: https://wa.me/254719635415 | F1 | Enquiry channel |
 | PF-016 | Email: mela9ine@proton.me | F1 | Verify before campaigns |
-| PF-017 | Retouch & Styling starting price KES 700+ | F1 | Approved starting price; final scope and amount are agreed directly; matches the NAKEBUSEN service catalogue |
-| PF-018 | Sisterlocs Retie starting price KES 1,500+ | F1 | Approved starting price; final scope and amount are agreed directly; canonical public service label approved 9 November 2026; matches the NAKEBUSEN service catalogue |
-| PF-019 | Artificial Locs Installation KES 3,500 | F1 | Approved price; do not append a plus sign |
-| PF-020 | Final LOCS cost depends on scope, loc condition and materials | F1 | Publish with prices |
+| PF-017 | Retouch & Styling published price KES 700 | F1 | Current approved public price; do not append “+” |
+| PF-018 | Sisterlocs Retie published price KES 1,500 | F1 | Current approved public price; do not append “+”; canonical service label |
+| PF-019 | Artificial Locs Installation published price KES 3,500 | F1 | Current approved public price; do not append “+” |
+| PF-020 | Additional work, materials or changes in scope may affect the final amount | F1 | Discuss and agree any additional work and final scope directly before work begins; do not mislabel the three published prices as starting prices |
 | PF-021 | No braiding | F1 | Do not advertise braiding |
 | PF-022 | No shaving | F1 | Do not advertise shaving |
-| PF-023 | Loc-care home calls across the wider Eldoret Town service area | F1 | Founder-supplied current service mode; confirm the exact customer location, suitability, availability and any travel costs directly. Do not imply a fixed kilometre radius or universal coverage. |
+| PF-023 | Loc-care home calls across the wider Eldoret Town service area | F1 | Confirm exact location, suitability, availability and travel costs directly; no fixed kilometre radius or universal coverage |
 | PF-024 | DIGITAL service areas include GNU/Linux, computer maintenance and networking | F3 | Scope and availability must be confirmed |
 | PF-025 | Local-first and offline-capable systems | F3 | Describe as service area; no blanket guarantees |
 | PF-026 | Reproducible development environments | F3 | Do not claim verified reproducibility without evidence |
@@ -51,23 +51,21 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-028 | Copyright holder | F4 | Confirm before changing legal attribution |
 | PF-029 | Opening hours and street address | F5 | Do not invent |
 | PF-030 | Appointment availability | F5 | An enquiry is not a confirmed booking |
-| PF-031 | Public role line: Founder, NAKEBUSEN · Founder & CTO, WARENA · Loctician · Creative Technologist | F2 | Approved explicit role attribution for public presentation 23 November 2026; not a certification claim |
-| PF-032 | M-PESA Buy Goods Till: 3511456; account / merchant name: FELIX LWOVA | F1 | Published payment details restored from the previously published verified record on 10 November 2026; changes require re-verification of merchant authority and payment purpose |
-| PF-033 | Payment is due only after the service and total amount are agreed directly with NAKEBUSEN | F1 | Customer must confirm the displayed merchant name and amount before entering a PIN; never request or share a PIN or one-time code |
-
-
-| PF-034 | NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret | F1 | Founder-supplied business-history fact. Keep distinct from founder biography, birthplace and ancestry. |
-| PF-035 | Public directions reference: F743+R35, Eldoret, Kenya; supplied Google Maps pin: https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6 | F1 | Owner-supplied map reference. Publish the short Plus Code with Eldoret locality. Do not claim an independently verified street address, entrance, coordinates or transit stage. |
-| PF-036 | Loc-care home calls may be arranged across the wider Eldoret Town service area | F1 | Confirm exact location, service suitability, availability and any travel costs directly before confirming a visit. Coverage is assessed by location; no fixed kilometre radius or universal coverage is promised. |
-
-| PF-037 | Master identity: DON FELOH / @donfelohke · GRACE · GRIT · GLORY · GENJE ZA WARENA | NAKEBUSEN | F2 | Canonical identity system approved 23 November 2026; see FELOH Corpus identity constitution |
+| PF-031 | Public role line: Founder, NAKEBUSEN · Founder & CTO, WARENA · Loctician · Creative Technologist | F2 | Approved role attribution; not a certification claim |
+| PF-032 | M-PESA Buy Goods Till: 3511456; account / merchant name: FELIX LWOVA | F1 | Published payment details; changes require re-verification of merchant authority and payment purpose |
+| PF-033 | Payment is due only after the service and total amount are agreed directly with NAKEBUSEN | F1 | Confirm displayed merchant name and amount before entering a PIN; never request or share a PIN or one-time code |
+| PF-034 | NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret | F1 | Founder-supplied business-history fact; keep distinct from founder biography, birthplace and ancestry |
+| PF-035 | Public directions reference: F743+R35, Eldoret, Kenya; supplied Google Maps pin: https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6 | F1 | Owner-supplied map reference; do not claim an independently verified street address, entrance, coordinates or transit stage |
+| PF-036 | Loc-care home calls may be arranged across the wider Eldoret Town service area | F1 | Confirm exact location, suitability, availability and travel costs directly before confirming a visit |
+| PF-037 | Master identity: DON FELOH / @donfelohke · GRACE · GRIT · GLORY · GENJE ZA WARENA | F2 | Canonical identity system; see FELOH Corpus identity constitution |
 | PF-038 | GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → DON FELOH | F2 | Governing philosophy; distinct practices remain independently described and governed |
+| PF-039 | IKAI is a Turkana female name meaning “home” | F2 | Founder-approved canonical name/identity meaning. This records the adopted identity; it is not a claim that independent linguistic research or community usage has been verified |
 
 ## Publication controls
 
 1. Prices, contact details and published M-PESA payment details must match this register and SERVICE-CATALOG. Re-verify the Till/merchant pairing before any change or paid campaign.
 2. Digital capability must be labelled according to actual availability.
-3. Linguistic interpretations must retain their qualifications.
+3. Linguistic interpretations must retain their evidence class and qualification. PF-039 is a founder-approved naming decision, not independent linguistic certification.
 4. Founder display-name and copyright attribution must not be silently changed; PF-027 and PF-028 remain subject to their stated evidence classes.
 5. The approved public role line does not establish external certification, registration or professional accreditation.
 6. No testimonials, customer names, portfolio claims or certifications without evidence and permission.
@@ -76,12 +74,16 @@ This register controls factual claims used on the website, service catalogue, pr
 
 **Evidence discipline:** F1 means supplied by the operator, not independently verified.
 
-
 ## Constitutional alignment — 2026-11-20
 
-The four practice domains are NAKEBUSEN / ROOT, IKAI / MIRROR, GENJE / EXPRESSION and WARENA / CAPABILITY. F3L0H is the overarching human authorship identity, not a fifth domain. **ONLY NAKEBUSEN TRANSACTS.** Historical claims in this register that describe NAKEBUSEN as the parent enterprise or WARENA as a sub-brand are superseded by PF-001, PF-003 and PF-011 above. This register remains the source of record for approved public facts such as service prices, contact details and payment wording.
-
+The four practice domains are NAKEBUSEN / ROOT, IKAI / MIRROR, GENJE / EXPRESSION and WARENA / CAPABILITY. F3L0H is the overarching human authorship identity, not a fifth domain. **ONLY NAKEBUSEN TRANSACTS.** Historical descriptions of NAKEBUSEN as the parent enterprise or WARENA as a sub-brand are superseded by PF-001, PF-003 and PF-011.
 
 ## Master identity update — 2026-11-23
 
-The master homepage hero is **DON FELOH / @donfelohke · GRACE · GRIT · GLORY · GENJE ZA WARENA | NAKEBUSEN**. GRACE maps to NAKEBUSEN; GRIT maps to WARENA; GLORY expresses DON FELOH's human authorship. GENJE remains embodied creative practice and IKAI remains reflective research. **ONLY NAKEBUSEN TRANSACTS.** The master identity does not change the service catalogue or payment boundary.
+The master homepage hero is **DON FELOH / @donfelohke · GRACE · GRIT · GLORY · GENJE ZA WARENA | NAKEBUSEN**. GRACE maps to NAKEBUSEN; GRIT maps to WARENA; GLORY expresses DON FELOH's human authorship. GENJE remains embodied creative practice and IKAI remains reflective research. **ONLY NAKEBUSEN TRANSACTS.**
+
+## Source precedence and conflict resolution — 2026-11-24
+
+For service names, prices and scope, the current [NAKEBUSEN service catalogue](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/service-catalogue.md) is the service-specific source of record. This register mirrors the approved public facts for publication. The current location description is King's Square / Kisumu Road; older references to Karibu Mdosi in this website repository are stale and must not be used as the current public location wording. The supplied Plus Code and map pin remain directions references, not proof of a street address.
+
+The live website and this register must be reconciled together when a source-of-record fact changes. A source merge or successful CI run does not alone prove that GitHub Pages has deployed or that a public-facing detail has been inspected live.
