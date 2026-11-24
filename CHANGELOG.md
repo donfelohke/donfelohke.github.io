@@ -11,6 +11,12 @@
 - Document dated local competitor, brand, search and accessibility research with explicit evidence limitations.
 - No service price, payment detail, booking boundary, contact path, runtime dependency or transaction model changed.
 
+## 2026-11-24 — Cross-repository research integration
+- Surface the latest NAKEBUSEN, WARENA, IKAI, GENJE and FELOH Corpus research records together in the homepage Knowledge section, with English and Kiswahili link labels.
+- Add regression coverage for all five canonical research destinations.
+- Align the README with the same research index and state clearly that research protocols are not implementation, deployment, certification or compliance claims.
+- Preserve the single-page static HTML/CSS architecture, existing anchors, bilingual controls, commercial boundaries, approved prices and payment safeguards.
+
 # Changelog
 
 This file records material changes to the published website and its operating documentation. Detailed implementation history, review discussion and exact diffs remain in Git commits and pull requests. A merged source change is not, by itself, proof of live deployment.
