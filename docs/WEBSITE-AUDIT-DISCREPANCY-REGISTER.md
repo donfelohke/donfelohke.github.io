@@ -152,3 +152,31 @@ The remediation does not change the global palette, service-card design, prices,
 ## Current service-fact reconciliation — 2026-11-22
 
 The current NAKEBUSEN source of record confirms Retouch & Styling KES 700 and Sisterlocs Retie KES 1,500 as published prices; Artificial Locs Installation remains KES 3,500 without a plus sign. Older values in this dated audit are historical snapshots and are superseded for current publication by the [NAKEBUSEN service catalogue](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/service-catalogue.md) and the current [public facts register](PUBLIC-FACTS-REGISTER.md).
+
+
+---
+
+## Current-state reconciliation — 24 November 2026
+
+This section supersedes older findings wherever they conflict with the current main-branch implementation or approved source records. Earlier audit rows remain as historical evidence of what was observed at their recorded baseline; do not treat them as current defects without rechecking the present source.
+
+### Resolved or superseded findings
+
+- The public architecture is now a single bilingual, text-first page with section anchors. The earlier four-destination proposal is historical.
+- The current public identity is **NAKEBUSEN · WARENA POWERED**, **GRACE · GRIT · GLORY**, **BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**, and **@donfelohke · #HisGenjeness**. Do not revive older lockups or homepage headlines from historical audit rows.
+- Current LOCS prices are Retouch & Styling **KES 700**, Sisterlocs Retie **KES 1,500**, and Artificial Locs Installation **KES 3,500**. The first two are published prices without a plus sign. The NAKEBUSEN source catalogue is the service-specific source of record.
+- Current location wording is **Beside King's Square · Kisumu Road · Eldoret Town · Uasin Gishu · Kenya**. F743+R35 and the supplied map pin are directions references, not an independently verified street address. Older Karibu Mdosi wording in this repository's service catalogue is superseded.
+- IKAI's founder-approved identity meaning is “home”, described as a Turkana female name. This is an approved identity statement; it must not be inflated into independent linguistic certification.
+- WARENA remains a distinct technical capability domain; GENJE remains creative and embodied practice; IKAI remains research/WIP; FELOH Corpus remains knowledge governance. **ONLY NAKEBUSEN TRANSACTS.**
+- The current Pages workflow deploys on pushes to `main` and supports manual workflow dispatch. Pull-request checks validate source but do not publish. The old checklist instruction requiring a separate manual deployment authorisation after merge was incorrect and is superseded.
+
+### Remaining verification, not assumed complete
+
+- Verify the exact live Pages deployment commit and inspect the deployed page after the latest merge.
+- Complete manual screen-reader, keyboard, physical-device, zoom/reflow, reduced-transparency and real-world contact handoff checks.
+- Independently verify the public payment merchant pairing before changing it or using it in a paid campaign.
+- Review historical branches for unique unmerged work before any deletion. No branch has been deleted as part of this reconciliation.
+
+### Current evidence and related records
+
+See [CHANGELOG.md](../CHANGELOG.md), [PUBLIC-FACTS-REGISTER.md](PUBLIC-FACTS-REGISTER.md), [SERVICE-CATALOG.md](SERVICE-CATALOG.md), [WEBCOPY.md](WEBCOPY.md), [ROADMAP.md](ROADMAP.md) and [RELEASE-CHECKLIST.md](RELEASE-CHECKLIST.md). Current source changes are grouped in the pull request titled “Reconcile website documentation, changelog and release governance”.
