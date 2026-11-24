@@ -21,7 +21,11 @@ The homepage leads with the loc-care offer in Eldoret and a direct service-enqui
 - **IKAI:** reflective computing and research / work in progress. The founder-approved name meaning is “home”.
 - **FELOH Corpus:** shared knowledge, governance and provenance record; not a fifth practice.
 
-> FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
+**FELOH** — Authorship · Intellectual work · Creative direction  
+**NAKEBUSEN** — Beauty · Heritage · Craft · Enterprise  
+**IKAI** — Reflective computing · Perception · Memory · Human experience  
+**WARENA** — Libre technology · Infrastructure · Systems engineering · Digital sovereignty  
+**GENJE** — Music · Movement · Performance · Creative expression
 
 **ONLY NAKEBUSEN TRANSACTS.** Keep service enquiries, availability, agreements and payment within NAKEBUSEN.
 
