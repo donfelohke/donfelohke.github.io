@@ -12,14 +12,14 @@
 
 The current site already has the right structural foundation: a NAKEBUSEN-led hero, LOCS, DIGITAL / WARENA, ABOUT, IKAI, GENJE, FELOH CORPUS and CONNECT. A second top-level page would add navigation and maintenance cost without solving a demonstrated user problem.
 
-Use the existing About section as the human and philosophical centre. Link from it to the longer FELOH Foundational Case in the Corpus. Keep the home page focused on discovery, clear service information and credible introductions to the research and creative domains.
+Use the existing About section as the human and philosophical centre. Link from it to the [F3L0H Sovereign Master Corpus](https://github.com/donfelohke/feloh-corpus/blob/main/docs/F3L0H-SOVEREIGN-MASTER-CORPUS-2026-11-20.md). Keep the home page focused on discovery, clear service information and credible introductions to the research and creative domains.
 
 ### Proposed reading order
 
 1. **Hero — NAKEBUSEN · WARENA POWERED**  
    Immediate identity, concise proposition, location and primary NAKEBUSEN enquiry.
 2. **LOCS — ROOT / GRACE**  
-   Services, starting prices, scope, location, enquiry process and booking disclosure.
+   Services, published prices, scope, location, enquiry process and booking disclosure.
 3. **DIGITAL — WARENA / CAPABILITY**  
    Customer problems, potential outcomes, reuse/adapt/implement principle and per-engagement scope.
 4. **ABOUT — DON FELOH / F3L0H**  
@@ -161,5 +161,5 @@ Use the same accurate title and description for Open Graph and Twitter metadata.
 - [Publication register](PUBLICATION-REGISTER.md)
 - [Navigation contract](NAV-STRUCTURE.md)
 - [Editorial website improvement specification](EDITORIAL-WEBSITE-IMPROVEMENT-2026-11-24.md)
-- [FELOH Foundational Case and Evidence Programme](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-FOUNDATIONAL-CASE-AND-EVIDENCE-PROGRAMME-2026-11-24.md)
+- [F3L0H Sovereign Master Corpus](https://github.com/donfelohke/feloh-corpus/blob/main/docs/F3L0H-SOVEREIGN-MASTER-CORPUS-2026-11-20.md)
 - [NAKEBUSEN campaign copy playbook](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/NAKEBUSEN-LOC-AD-COPY-AND-CAMPAIGN-PLAYBOOK-2026-11-24.md)
