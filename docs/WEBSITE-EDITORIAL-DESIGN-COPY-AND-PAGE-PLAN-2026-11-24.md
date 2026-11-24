@@ -16,7 +16,7 @@ Use the existing About section as the human and philosophical centre. Link from 
 
 ### Proposed reading order
 
-1. **Hero — NAKEBUSEN × WARENA POWERED**  
+1. **Hero — NAKEBUSEN · WARENA POWERED**  
    Immediate identity, concise proposition, location and primary NAKEBUSEN enquiry.
 2. **LOCS — ROOT / GRACE**  
    Services, starting prices, scope, location, enquiry process and booking disclosure.
@@ -37,7 +37,7 @@ Use the existing About section as the human and philosophical centre. Link from 
 
 ### Master lockup
 
-**NAKEBUSEN × WARENA POWERED**  
+**NAKEBUSEN · WARENA POWERED**  
 **GRACE · GRIT · GLORY**  
 **BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**  
 **GENJE ZA WARENA**  
@@ -121,7 +121,7 @@ The newer forest/canopy, sage and clay tokens may be used where already defined 
 
 ## 5. Search and social metadata
 
-**Title:** NAKEBUSEN × WARENA POWERED | Beautiful Roots. Sovereign Systems.
+**Title:** NAKEBUSEN · WARENA POWERED | Beautiful Roots. Sovereign Systems.
 
 **Description:** Professional loc care and practical technology services in Eldoret Town, Kenya. Enquire directly with NAKEBUSEN; availability and final terms are agreed before booking.
 
