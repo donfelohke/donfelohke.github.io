@@ -117,7 +117,10 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("KES 700+", HTML + webcopy)
         self.assertNotIn("KES 1,500+", HTML + webcopy)
         self.assertNotIn("KES 3,500+", HTML + webcopy)
-        self.assertIn("Published prices", HTML)
+        self.assertIn("approved service prices", HTML)
+        self.assertIn("bei zilizoidhinishwa za huduma", HTML)
+        self.assertNotIn("Published prices are indicative", HTML)
+        self.assertNotIn("Bei zilizochapishwa ni za kuanzia", HTML)
         self.assertIn("the final amount is agreed before work begins", HTML)
 
     def test_biography_and_business_history_are_separate(self):
