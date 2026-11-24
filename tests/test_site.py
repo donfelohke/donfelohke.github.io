@@ -209,13 +209,23 @@ class PublicationTests(unittest.TestCase):
         ):
             self.assertNotIn(removed_phrase, HTML)
 
-    def test_current_research_register_is_kept_off_the_business_homepage(self):
+    def test_selected_research_records_are_linked_with_maturity_boundaries(self):
         self.assertIn("https://github.com/donfelohke/feloh-corpus", HTML)
         self.assertIn("Research notes, sources and documented decisions", HTML)
         self.assertNotIn("CURRENT RESEARCH · 24 NOVEMBER 2026", HTML)
         self.assertNotIn("UTAFITI WA SASA · 24 NOVEMBA 2026", HTML)
         self.assertNotIn("ELDORET-LOC-CARE-OPERATIONS-AND-REGULATORY-VERIFICATION-2026-11-24.md", HTML)
-        self.assertNotIn("REPRODUCIBLE-SYSTEMS-AND-REALTIME-IO-VALIDATION-2026-11-24.md", HTML)
+        self.assertIn("REPRODUCIBLE-SYSTEMS-AND-REALTIME-IO-VALIDATION-2026-11-24.md", HTML)
+        self.assertIn("IKAI-M1-OPTICAL-AND-DISPLAY-BENCH-ADDENDUM-2026-11-24.md", HTML)
+        self.assertIn("GENJE-MOVEMENT-NOTATION-AND-INTEROPERABILITY-VALIDATION-2026-11-24.md", HTML)
+        self.assertIn("no completed benchmark is claimed", HTML)
+        self.assertIn("no mirror assembly or optical measurements are claimed", HTML)
+        self.assertIn("no parser, converter or round-trip benchmark is claimed", HTML)
+
+    def test_language_control_has_visible_keyboard_focus(self):
+        self.assertIn("#language-en:focus-visible~header label[for=language-en]", CSS)
+        self.assertIn("#language-sw:focus-visible~header label[for=language-sw]", CSS)
+        self.assertIn("min-width:2.75rem;min-height:2.75rem", CSS)
 
     def test_homepage_avoids_repeated_identity_publications_and_contact_copy(self):
         self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
