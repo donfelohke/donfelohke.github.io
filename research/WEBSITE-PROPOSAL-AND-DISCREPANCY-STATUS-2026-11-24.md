@@ -31,7 +31,7 @@ The website is the only repository among the ten checked with a root `CHANGELOG.
 | Navigation | Icon-only selector; extra top-level destinations; duplicate desktop/mobile navigation | LOCS / DIGITAL / CONNECT floating dock; no competing second nav | Current |
 | Small-screen navigation | Fixed dock at all sizes | Floating dock retained; static fallback at ≤380 CSS px | Implemented in PR #194 |
 | Glass treatment | Glass across hero, content cards and controls | Glass only on navigation surfaces; readable content and prices remain opaque | Implemented in PR #195 |
-| Hero decoration | Radial gradients and non-functional circular artwork | Remove decorative hero circles/radial effects; retain restrained forest surface | Being enforced in PR #195 |
+| Hero decoration | Radial gradients and non-functional circular artwork | Remove decorative hero circles/radial effects; retain restrained forest surface | Implemented in PRs #195 and #198 |
 | Footnotes | Print-style numbered notes across public page | Operational disclosures inline; contextual dated sources in research sections | Current |
 | Images | Hero image, stock photography, AI imagery, gallery | Text-first; no page image without specific rights, consent, provenance and approval | Current |
 | Language | English default plus Kiswahili; machine-mirrored copy | English default; Kiswahili is a separate authored state and requires human review | Current; translation review pending |
