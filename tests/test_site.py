@@ -281,6 +281,8 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("<title>NAKEBUSEN | Loc Care in Eldoret · WARENA Powered</title>", HTML)
         self.assertIn("Sisterlocs Retie", HTML)
         self.assertIn("Artificial Locs Installation", HTML)
+        self.assertIn("https://github.com/donfelohke/feloh-corpus/blob/main/docs/F3L0H-SOVEREIGN-MASTER-CORPUS-2026-11-20.md", HTML)
+        self.assertNotIn("FELOH-FOUNDATIONAL-CASE-AND-EVIDENCE-PROGRAMME", HTML)
         self.assertIn("Enquire about loc care", HTML)
         self.assertIn("View services &amp; prices", HTML)
         self.assertIn("Ulizia utunzaji wa loc", HTML)

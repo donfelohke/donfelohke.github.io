@@ -7,6 +7,10 @@
 - Document dated local competitor, brand, search and accessibility research with explicit evidence limitations.
 - No service price, payment detail, booking boundary, contact path, runtime dependency or transaction model changed.
 
+## 2026-11-24 — Phase 2 link-integrity correction
+- Replace the obsolete FELOH foundational-case URL with the verified current F3L0H Sovereign Master Corpus document in both language states.
+- Add a source test for the canonical repository document link.
+
 # Changelog
 
 This file records material changes to the published website and its operating documentation. Detailed implementation history, review discussion and exact diffs remain in Git commits and pull requests. A merged source change is not, by itself, proof of live deployment.
