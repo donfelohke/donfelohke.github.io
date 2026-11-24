@@ -29,11 +29,15 @@ One human author; distinct practices. NAKEBUSEN leads the commercial experience,
 
 ## Experience hierarchy
 
-1. Hero: master identity and positioning, plain-language loc-care and technical proposition, direct loc-care enquiry and service-price navigation.
-2. NAKEBUSEN LOCS: primary commercial path, approved services and prices, decision guide, enquiry preparation, customer FAQ, image-consent and health boundaries.
-3. DIGITAL / WARENA: candidate technical capability areas, discovery-to-handover method, data/access safeguards and per-engagement scope.
-4. Founder context and the distinct IKAI research, GENJE creative practice and FELOH Corpus governance/provenance paths.
-5. Connect and footer: location, contact, manual service-payment safeguards and voluntary support kept separate.
+1. Hero: NAKEBUSEN proposition, Eldoret loc-care offer, published price preview and direct enquiry action.
+2. In-page index: clear routes to Loc Care & Prices, Digital / WARENA, Visit & Contact, and Founder & Work.
+3. NAKEBUSEN LOCS: approved services and prices, service decision guide, four-stage appointment agreement, customer FAQ, image-consent and health boundaries.
+4. DIGITAL / WARENA: practical technical engagements, individual feasibility, discovery-to-handover method and data/access safeguards.
+5. Visit & Contact: location, directions, home-call conditions and contact methods directly after the commercial service paths.
+6. Founder & Work: founder biography and brand architecture, followed by distinct IKAI research, GENJE creative practice and FELOH Corpus governance/provenance.
+7. Footer: manual service-payment safeguards and voluntary support kept separate.
+
+The fixed mobile dock remains three items: Locs, Digital and Visit. The in-page index carries secondary navigation without adding a second fixed navigation system.
 
 ## Business and editorial invariants
 
