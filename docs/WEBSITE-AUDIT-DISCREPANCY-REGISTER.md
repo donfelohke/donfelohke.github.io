@@ -190,6 +190,6 @@ Key source changes since the earlier audit:
 - PR #193 consolidated the front-page research and normalised the changelog.
 - PR #194 made the hero task-first, surfaced exact published prices, updated canonical copy and removed historical hero override layers. Its Python static validation passed.
 - PR #195 merged the opaque-content treatment: decorative hero circles were removed and glass is reserved for navigation surfaces. Its Python static validation passed; manual rendered contrast/accessibility review remains.
-- PR #198 reconciles the Connect/footer boundary: Connect is the sole contact directory; footer is limited to payment, support, signature/copyright and one repository link.
+- PR #198 reconciles the Connect/footer boundary: Connect is the sole contact directory; footer is limited to payment, support, signature/copyright and one repository link. Its Python static validation passed; manual rendered checks remain.
 
 The historical rows above remain evidence of earlier baselines. Current defects must be determined from the current `main` source and the current disposition record, not from an older row read in isolation.
