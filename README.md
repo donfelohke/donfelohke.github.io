@@ -29,6 +29,16 @@ The homepage leads with the loc-care offer in Eldoret and a direct service-enqui
 
 **ONLY NAKEBUSEN TRANSACTS.** Keep service enquiries, availability, agreements and payment within NAKEBUSEN.
 
+## Current research integration · 2026-11-24
+
+The latest specialist research is maintained in its owning repositories and surfaced together in the homepage Knowledge section. These are research records and proposed validation protocols, not claims of completed implementation, deployment, certification or compliance.
+
+- [NAKEBUSEN — Eldoret Loc-Care Operations and Regulatory Verification](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/ELDORET-LOC-CARE-OPERATIONS-AND-REGULATORY-VERIFICATION-2026-11-24.md).
+- [WARENA — Reproducible Systems and Real-Time I/O Validation](https://github.com/donfelohke/WARENA/blob/main/docs/REPRODUCIBLE-SYSTEMS-AND-REALTIME-IO-VALIDATION-2026-11-24.md).
+- [IKAI — M1 Optical and Display Bench Addendum](https://github.com/donfelohke/Ikai/blob/main/docs/IKAI-M1-OPTICAL-AND-DISPLAY-BENCH-ADDENDUM-2026-11-24.md).
+- [GENJE — Movement Notation and Interoperability Validation](https://github.com/donfelohke/Genje/blob/main/docs/GENJE-MOVEMENT-NOTATION-AND-INTEROPERABILITY-VALIDATION-2026-11-24.md).
+- [FELOH Corpus — Research Programme: Standards, Evidence, Benchmarks and Local Solutions](https://github.com/donfelohke/feloh-corpus/blob/main/docs/RESEARCH-PROGRAMME-STANDARDS-EVIDENCE-BENCHMARKS-LOCAL-SOLUTIONS-2026-11-24.md).
+
 ## Public structure
 
 | Destination | Anchor | Purpose |

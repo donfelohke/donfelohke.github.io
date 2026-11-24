@@ -196,6 +196,19 @@ class PublicationTests(unittest.TestCase):
         ):
             self.assertNotIn(removed_phrase, HTML)
 
+    def test_current_research_links_match_specialist_repository_updates(self):
+        research_links = (
+            "https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/ELDORET-LOC-CARE-OPERATIONS-AND-REGULATORY-VERIFICATION-2026-11-24.md",
+            "https://github.com/donfelohke/WARENA/blob/main/docs/REPRODUCIBLE-SYSTEMS-AND-REALTIME-IO-VALIDATION-2026-11-24.md",
+            "https://github.com/donfelohke/Ikai/blob/main/docs/IKAI-M1-OPTICAL-AND-DISPLAY-BENCH-ADDENDUM-2026-11-24.md",
+            "https://github.com/donfelohke/Genje/blob/main/docs/GENJE-MOVEMENT-NOTATION-AND-INTEROPERABILITY-VALIDATION-2026-11-24.md",
+            "https://github.com/donfelohke/feloh-corpus/blob/main/docs/RESEARCH-PROGRAMME-STANDARDS-EVIDENCE-BENCHMARKS-LOCAL-SOLUTIONS-2026-11-24.md",
+        )
+        for link in research_links:
+            self.assertIn(link, HTML)
+        self.assertIn("CURRENT RESEARCH · 24 NOVEMBER 2026", HTML)
+        self.assertIn("UTAFITI WA SASA · 24 NOVEMBA 2026", HTML)
+
     def test_homepage_avoids_repeated_identity_publications_and_contact_copy(self):
         self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
         self.assertNotIn("I am Don Feloh, the human author behind these distinct practices.", HTML)
