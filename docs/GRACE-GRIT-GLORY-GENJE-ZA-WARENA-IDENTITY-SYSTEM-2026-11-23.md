@@ -1,6 +1,12 @@
-# Public hero implementation specification
+# Public hero implementation specification · historical baseline
 
-Canonical identity: [FELOH Corpus — GRACE · GRIT · GLORY identity system](https://github.com/donfelohke/feloh-corpus/blob/main/docs/GRACE-GRIT-GLORY-GENJE-ZA-WARENA-IDENTITY-SYSTEM-2026-11-23.md).
+Current copy authority: [FELOH Five-Identity Architecture & Copy Standard](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-FIVE-IDENTITY-ARCHITECTURE-AND-COPY-STANDARD-2026-11-24.md). This 23 November implementation specification is retained for design provenance; its former verb-led identity line is superseded.
+
+**FELOH** — Authorship · Intellectual work · Creative direction  
+**NAKEBUSEN** — Beauty · Heritage · Craft · Enterprise  
+**IKAI** — Reflective computing · Perception · Memory · Human experience  
+**WARENA** — Libre technology · Infrastructure · Systems engineering · Digital sovereignty  
+**GENJE** — Music · Movement · Performance · Creative expression
 
 ## Website-specific decisions
 
@@ -18,7 +24,7 @@ Canonical identity: [FELOH Corpus — GRACE · GRIT · GLORY identity system](ht
 3. GENJE ZA WARENA | NAKEBUSEN.
 4. Human-author introduction and concise cross-domain statement.
 5. Three pillar identities: GRACE / NAKEBUSEN, GRIT / WARENA, GLORY / DON FELOH.
-6. GENJE embodies; IKAI reflects; FELOH generates; WARENA enables.
+6. Five identities: FELOH / AUTHORSHIP; NAKEBUSEN / ROOT; IKAI / REFLECTION; WARENA / CAPABILITY; GENJE / EXPRESSION.
 7. NAKEBUSEN-only commercial action.
 
 ## Visual direction
