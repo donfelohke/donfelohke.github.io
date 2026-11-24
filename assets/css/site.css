@@ -639,3 +639,140 @@ html{scroll-padding-bottom:calc(var(--dock) + 2rem + env(safe-area-inset-bottom)
 /* Five-identity architecture: stack identity names and domain descriptors clearly. */
 .hero-identity .hero-pillar{grid-template-columns:minmax(0,1fr);gap:.16rem;padding:.72rem 0}
 .hero-identity .pillar-name{grid-row:auto}
+
+
+/* Front-page portal revamp — task-first hero and early service-price discovery. */
+.hero-portal{
+  padding-block:clamp(8.5rem,13vw,10.5rem) clamp(4rem,7vw,6rem);
+  background:
+    radial-gradient(ellipse at 88% 12%,rgba(212,175,55,.15),transparent 34%),
+    radial-gradient(ellipse at 8% 88%,rgba(226,114,91,.12),transparent 38%),
+    linear-gradient(128deg,#102D25 0%,#123B2D 58%,#214B3B 100%);
+  color:#F2EFEA;
+}
+.hero-portal-grid{
+  grid-template-columns:minmax(0,1.15fr) minmax(18rem,.85fr);
+  gap:clamp(2rem,5vw,5rem);
+  align-items:center;
+}
+.hero-portal .hero-main{max-width:52rem}
+.hero-portal .eyebrow{color:#E8C77D}
+.hero-portal h1{
+  max-width:10ch;
+  margin:1.1rem 0 .8rem;
+  color:#F2EFEA;
+  font:500 clamp(4.3rem,9vw,7.8rem)/.88 var(--serif);
+  letter-spacing:-.075em;
+}
+.hero-portal h1 em{color:#E8C77D;font-weight:400}
+.hero-portal .hero-proposition{
+  max-width:42rem;
+  margin:1.1rem 0 .45rem;
+  color:#F2EFEA;
+  font:500 clamp(1.25rem,2.2vw,1.8rem)/1.2 var(--serif);
+  letter-spacing:-.02em;
+}
+.hero-portal .hero-intro{max-width:42rem;color:rgba(242,239,234,.86);font-size:.94rem}
+.hero-portal .button-primary{background:#D4AF37;color:#172A21}
+.hero-portal .button-primary:hover{background:#E8C77D}
+.hero-portal .text-link{color:#F2EFEA}
+.hero-portal .location{color:rgba(242,239,234,.8)}
+.hero-signature{
+  margin:2rem 0 .25rem;
+  color:#F2EFEA;
+  font:500 clamp(1.1rem,2vw,1.45rem)/1.2 var(--serif);
+}
+.hero-signature span{
+  display:inline-block;
+  color:#E8C77D;
+  font:750 .65rem/1.5 var(--mono);
+  letter-spacing:.08em;
+}
+.hero-practice-line{
+  margin:.55rem 0 0;
+  color:rgba(242,239,234,.75);
+  font:650 .68rem/1.6 var(--mono);
+  letter-spacing:.035em;
+}
+.hero-practice-line strong{color:#E8C77D}
+.hero-practice-line span{display:block;color:rgba(242,239,234,.65);font:400 .72rem/1.5 var(--sans);letter-spacing:0}
+.hero-price-panel{
+  min-width:0;
+  padding:clamp(1.4rem,3vw,2.2rem);
+  border:1px solid rgba(242,239,234,.24);
+  border-radius:1.35rem;
+  background:#0B241B;
+  color:#F2EFEA;
+  box-shadow:0 22px 55px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,255,255,.08);
+}
+.hero-price-panel .aside-index{color:#E8C77D}
+.hero-price-panel h2{
+  margin:1rem 0 1.3rem;
+  color:#F2EFEA;
+  font:500 clamp(2.3rem,4vw,3.8rem)/.96 var(--serif);
+  letter-spacing:-.055em;
+}
+.hero-price-panel h2 em{color:#E8C77D;font-weight:400}
+.hero-price-list{margin:0;border-top:1px solid rgba(242,239,234,.2)}
+.hero-price-list>div{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:.8rem;
+  padding:.95rem 0;
+  border-bottom:1px solid rgba(242,239,234,.16);
+}
+.hero-price-list dt{color:rgba(242,239,234,.88);font-size:.84rem}
+.hero-price-list dd{
+  margin:0;
+  color:#E8C77D;
+  font:750 clamp(.9rem,1.5vw,1.05rem)/1.3 var(--mono);
+  white-space:nowrap;
+}
+.hero-price-note{
+  margin:1.15rem 0 .6rem;
+  color:rgba(242,239,234,.76);
+  font-size:.78rem;
+  line-height:1.55;
+}
+.hero-panel-link{
+  display:inline-flex;
+  min-height:44px;
+  align-items:center;
+  gap:.6rem;
+  margin-top:.45rem;
+  color:#E8C77D;
+  font-size:.82rem;
+  font-weight:750;
+}
+.hero-portal .lang-sw .hero-price-list dt{font-size:.8rem}
+@media(prefers-color-scheme:dark){
+  .hero-portal{background:radial-gradient(ellipse at 88% 12%,rgba(212,175,55,.11),transparent 34%),radial-gradient(ellipse at 8% 88%,rgba(226,114,91,.08),transparent 38%),linear-gradient(128deg,#050706 0%,#0B1B13 58%,#123B2D 100%)}
+  .hero-price-panel{background:#050F0A;border-color:rgba(242,239,234,.2)}
+}
+@media(max-width:900px){
+  .hero-portal-grid{grid-template-columns:minmax(0,1fr) minmax(16rem,.82fr);gap:1.6rem}
+  .hero-portal h1{font-size:clamp(3.8rem,8vw,6.2rem)}
+}
+@media(max-width:760px){
+  .hero-portal{padding-top:8.7rem;padding-bottom:3.8rem}
+  .hero-portal-grid{grid-template-columns:1fr;gap:2rem}
+  .hero-portal h1{max-width:9ch;font-size:clamp(3.8rem,14vw,5.8rem)}
+  .hero-price-panel{max-width:none}
+  .hero-portal .hero-actions{align-items:stretch;flex-direction:column}
+  .hero-portal .hero-actions .button{width:100%}
+  .hero-portal .text-link{justify-content:center}
+}
+@media(max-width:380px){
+  .hero-portal h1{font-size:clamp(3.35rem,13.4vw,4.5rem)}
+  .hero-price-panel{padding:1.15rem}
+  .hero-price-list>div{gap:.45rem}
+  .hero-price-list dt{font-size:.77rem}
+  .hero-price-list dd{font-size:.83rem}
+}
+@media(prefers-reduced-transparency:reduce){
+  .hero-price-panel{background:#0B241B;backdrop-filter:none;-webkit-backdrop-filter:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-portal *{transition:none!important;animation:none!important}
+}
