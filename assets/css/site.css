@@ -516,3 +516,145 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
 .booking-panel li strong{color:var(--ink)}
 @media(max-width:760px){.page-index{padding:0 .6rem;margin-bottom:.7rem}.page-index-inner{justify-content:flex-start;gap:.25rem;padding:.55rem}.page-index-label{width:100%;padding:.25rem .55rem}.page-index a{flex:1 1 calc(50% - .3rem);justify-content:center;text-align:center;font-size:.72rem}}
 @media(max-width:380px){.page-index a{flex-basis:100%;justify-content:flex-start}}
+
+
+/* 24 Nov 2026 · approved Rooted Editorial Service Portal refinement */
+:root{
+  --canvas:#F4F0E8;
+  --surface:#FFFCF6;
+  --soft:#EAE1D2;
+  --ink:#18211B;
+  --muted:#566258;
+  --forest:#123B2D;
+  --forest-deep:#0B2B20;
+  --clay:#8A4636;
+  --ochre:#80540F;
+  --line:rgba(24,44,34,.18);
+  --content:80rem;
+  --gutter:clamp(1rem,4.2vw,3rem);
+  --section:clamp(4.5rem,8vw,7.5rem);
+}
+.topbar{
+  background-color:#123B2D;
+  background-image:linear-gradient(112deg,rgba(255,255,255,.10),transparent 42%,rgba(212,175,55,.15));
+  border-color:rgba(242,239,234,.32);
+  backdrop-filter:blur(22px) saturate(150%);
+  -webkit-backdrop-filter:blur(22px) saturate(150%);
+}
+.topbar-inner{min-height:4.25rem}
+.author-mark{display:inline-flex;align-items:center;min-height:2.75rem;color:#F0D99C;font-size:.62rem;letter-spacing:.04em}
+.brand-powered{font-size:.6rem;letter-spacing:.16em}
+.hero{
+  padding-block:clamp(9.6rem,13vw,12rem) clamp(4rem,7vw,6rem);
+  background:
+    radial-gradient(ellipse at 88% 12%,rgba(212,175,55,.15),transparent 32%),
+    linear-gradient(128deg,#102D25 0%,#123B2D 58%,#1D4938 100%);
+}
+.hero-grid{gap:clamp(2rem,5.5vw,5.5rem)}
+.hero h1{max-width:8.5ch;font-size:clamp(4.1rem,8.8vw,8rem);line-height:.88}
+.hero .hero-proposition{max-width:42rem;font-size:clamp(1.35rem,2.25vw,1.8rem);line-height:1.2}
+.hero-technical-note{max-width:39rem;margin:1.15rem 0 0;color:rgba(242,239,234,.78);font-size:.82rem;line-height:1.55}
+.hero-technical-note a{color:#F0D99C;font-weight:750;text-underline-offset:.2em}
+.hero .location{margin-top:1.4rem;color:rgba(242,239,234,.9);font:650 .72rem/1.45 var(--mono);letter-spacing:.025em}
+.hero-price-panel{
+  border:1px solid rgba(242,239,234,.25);
+  border-left:3px solid #D4AF37;
+  border-radius:1.15rem;
+  background:rgba(255,255,255,.09);
+  box-shadow:0 22px 52px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,255,255,.15);
+  backdrop-filter:blur(18px) saturate(125%);
+  -webkit-backdrop-filter:blur(18px) saturate(125%);
+}
+.hero-price-panel h2{font-size:clamp(2.5rem,4.3vw,3.6rem)}
+.hero .button-primary{background:#D4AF37;color:#14271E}
+.hero .button-primary:hover{background:#E6C96E}
+.hero .text-link{color:#F2EFEA}
+.page-index{margin-block:0 1.5rem}
+.page-index-inner{max-width:80rem;border-radius:.8rem;background:rgba(255,252,246,.92);box-shadow:0 10px 28px rgba(23,39,30,.045)}
+.page-index a{min-height:44px;border-radius:.55rem}
+.locs-section{
+  background:
+    radial-gradient(ellipse at 3% 5%,rgba(226,114,91,.09),transparent 30%),
+    linear-gradient(180deg,#EEE6D8 0%,#F4F0E8 100%);
+}
+.section-heading{margin-bottom:2.2rem}
+.service-grid{gap:1.15rem}
+.service-card{
+  min-height:22rem;
+  padding:clamp(1.35rem,2.5vw,2.1rem);
+  border-radius:1.05rem;
+  box-shadow:0 16px 38px rgba(23,39,30,.065),inset 0 1px 0 rgba(255,255,255,.9);
+}
+.service-card-featured{
+  border-color:rgba(128,84,15,.32);
+  background:linear-gradient(155deg,#F8EEDB,#F1E3C9);
+}
+.service-card h3{margin-top:2rem;font-size:clamp(1.8rem,2.65vw,2.35rem)}
+.service-link{padding-top:1.1rem}
+.booking-panel{border-radius:1rem}
+.service-guide{margin-top:3.5rem}
+.service-guide-heading{gap:2.5rem}
+.service-guide-heading>div>p:not(.section-label){max-width:38rem}
+.enquiry-detail-grid{grid-template-columns:minmax(0,1fr);max-width:56rem}
+.enquiry-detail{padding:1.35rem 0;border-top:1px solid var(--line)}
+.digital-panel{border-radius:1.1rem}
+.digital-capabilities li{border-radius:.55rem}
+.digital-method{margin-top:3.5rem}
+.connect-section{background:linear-gradient(180deg,var(--canvas),var(--soft))}
+.connect-grid{gap:clamp(2rem,6vw,6rem)}
+.connect-grid>div:last-child{max-width:48rem}
+.contact-list a{min-height:3.5rem}
+.author-section{background:linear-gradient(135deg,#EEE6D8 0%,#F4F0E8 65%,#E7DDCB 100%)}
+.author-biography{max-width:46rem}
+.author-lead{font:500 clamp(1.2rem,2vw,1.55rem)/1.4 var(--serif)}
+.brand-architecture{gap:1rem}
+.brand-pillar{border-radius:.75rem}
+.research-detail-card{border-radius:.75rem}
+.floating-dock{
+  background-color:rgba(17,31,24,.94);
+  background-image:linear-gradient(110deg,rgba(226,114,91,.12),transparent 42%,rgba(212,175,55,.18));
+  backdrop-filter:blur(22px) saturate(150%);
+  -webkit-backdrop-filter:blur(22px) saturate(150%);
+}
+.floating-dock a{min-height:3.15rem;padding-inline:1.2rem}
+:where(a,button,input,summary,label):focus-visible{scroll-margin-block:7.5rem}
+@media(prefers-color-scheme:dark){
+  :root{
+    --canvas:#080D0A;--surface:#151B16;--soft:#111812;--ink:#F2EFEA;--muted:#C6CFC5;
+    --line:rgba(242,239,234,.18);--clay:#F09A85;--ochre:#E7C76D;--action:#D4AF37;--action-ink:#172A21;
+  }
+  .hero{background:radial-gradient(ellipse at 88% 12%,rgba(212,175,55,.12),transparent 32%),linear-gradient(128deg,#022900 0%,#033500 58%,#10430D 100%)}
+  .hero-price-panel{background:rgba(2,25,12,.72)}
+  .page-index-inner{background:rgba(21,27,22,.96)}
+  .locs-section{background:linear-gradient(180deg,#101610,#080D0A)}
+  .service-card,.service-card-featured{background:var(--surface);border-color:var(--line)}
+  .connect-section,.author-section{background:linear-gradient(135deg,#111812,#080D0A)}
+  .brand-pillar{background:var(--surface)}
+}
+@media(max-width:760px){
+  .author-mark{display:none}
+  .hero{padding-top:8.8rem}
+  .hero h1{font-size:clamp(3.8rem,14vw,6.2rem)}
+  .hero .hero-proposition{font-size:1.35rem}
+  .service-card{min-height:0}
+  .page-index-inner{gap:.2rem}
+  .floating-dock{width:min(calc(100% - 1.2rem),34rem)}
+  .floating-dock a{flex:1;padding-inline:.6rem}
+}
+@media(max-width:480px){
+  .topbar{top:.4rem}
+  .topbar-inner{min-height:3.8rem}
+  .hero{padding-top:8.2rem}
+  .hero .hero-actions{gap:.55rem}
+  .hero .button-primary{min-height:3.2rem}
+  .hero-technical-note{font-size:.78rem}
+  .hero-price-panel{padding:1.15rem}
+  .service-card h3{margin-top:1.2rem}
+  .floating-dock a{font-size:.62rem}
+}
+@media(prefers-reduced-transparency:reduce){
+  .topbar,.floating-dock,.hero-price-panel{backdrop-filter:none;-webkit-backdrop-filter:none}
+  .topbar{background:#123B2D}
+  .floating-dock{background:#111F18}
+  .hero-price-panel{background:#214B3B}
+}
