@@ -148,8 +148,8 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("My roots are in Lodwar", HTML)
         self.assertIn("NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret.", HTML)
         self.assertIn("NAKEBUSEN ilianza Lodwar", HTML)
-        self.assertIn("I am Kenyan. I’m Felix Lwova, known as Don Feloh.", HTML)
-        self.assertIn("Mimi ni Mkenya. Ninaitwa Felix Lwova, Don Feloh.", HTML)
+        self.assertIn("I am Kenyan. I’m Felix Lwova, known as Don Feloh. My work spans loc care, GNU/Linux systems and creative technology.", HTML)
+        self.assertIn("Mimi ni Mkenya. Ninaitwa Felix Lwova, Don Feloh. Kazi yangu inahusisha utunzaji wa loc, mifumo ya GNU/Linux na teknolojia ya ubunifu.", HTML)
         self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
 
     def test_service_scope_has_no_unapproved_inclusions(self):
