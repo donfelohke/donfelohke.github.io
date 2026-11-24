@@ -147,7 +147,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("BEI ZILIZOCHAPISHWA", HTML)
         self.assertNotIn("Published prices are indicative", HTML)
         self.assertNotIn("Bei zilizochapishwa ni za kuanzia", HTML)
-        self.assertIn("See each price upfront; agree any additional work or materials before work begins.", HTML)
+        self.assertIn("published prices and direct WhatsApp enquiries.", HTML)
 
     def test_biography_and_business_history_are_separate(self):
         self.assertNotIn("My roots are in Kanamkemer", HTML)
@@ -155,12 +155,12 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("My roots are in Lodwar", HTML)
         self.assertIn("NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret.", HTML)
         self.assertIn("NAKEBUSEN ilianza Lodwar", HTML)
-        self.assertIn("I am Kenyan. I’m Felix Lwova, known as Don Feloh. My work spans loc care, GNU/Linux systems and creative technology.", HTML)
+        self.assertIn("I’m Felix Lwova, known as Don Feloh. I founded NAKEBUSEN and WARENA; my work spans loc care, GNU/Linux systems and creative technology.", HTML)
         self.assertIn("Mimi ni Mkenya. Ninaitwa Felix Lwova, Don Feloh. Kazi yangu inahusisha utunzaji wa loc, mifumo ya GNU/Linux na teknolojia ya ubunifu.", HTML)
         self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
 
     def test_service_scope_has_no_unapproved_inclusions(self):
-        self.assertIn("Maintenance and styling for existing locs", HTML)
+        self.assertIn("For maintenance and styling of locs you already have.", HTML)
         self.assertIn("For retightening an established Sisterlocs installation.", HTML)
         self.assertNotIn("Onyesha upya", HTML)
         self.assertIn("Matengenezo na upangaji wa loc", HTML)
