@@ -177,3 +177,27 @@ Voluntary Support Us is separate from NAKEBUSEN service payments. Contact Don Fe
 - Do not add braiding, shaving, washing, crochet or other services without an approved catalogue change.
 - Do not publish unapproved client images, testimonials, credentials, guarantees or availability.
 - Preserve the static HTML/CSS implementation, existing navigation anchors and no-tracking policy.
+
+## Expanded customer information and FAQ
+
+The service guide distinguishes existing-loc maintenance, established Sisterlocs retightening and artificial-loc installation without inventing procedure inclusions. The enquiry checklist requests only the information needed to understand the work and the customer's general location.
+
+Before work begins, clarify suitability, exact scope, any additional work or materials, total amount, timing and location. No standard service duration is published. Home calls require direct confirmation of location, suitability, availability and any travel cost.
+
+Public FAQ answers:
+- An enquiry is not an appointment confirmation.
+- Additional work or materials are not assumed; agree the total amount first.
+- Sisterlocs Retie is retightening for an established installation, not a new installation.
+- NAKEBUSEN does not offer braiding or shaving; the founder does not cut clients' natural hair.
+- Home calls may be arranged within the wider Eldoret Town service area after direct confirmation.
+- No standard service duration is published; estimate timing after the scope is discussed.
+- The public catalogue lists only the three approved loc-care services; no additional nail-care offer is advertised.
+
+## Customer dignity, image consent and health boundaries
+
+A photo shared to discuss a service is not permission to publish it. Identifiable client images require separate, explicit permission before publication. Customers should communicate discomfort during service. NAKEBUSEN does not diagnose scalp or medical conditions; persistent pain, inflammation or sudden shedding should be referred to a qualified health professional.
+
+## Public payment wording
+
+Keep payment instructions customer-facing: pay only after the service and total amount are agreed directly, verify the merchant name and amount before entering a PIN, never share a PIN or one-time code, and retain the M-PESA confirmation. The website does not confirm a booking or payment; no implementation or payment-processor details belong in public copy.
+
