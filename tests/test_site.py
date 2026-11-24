@@ -62,12 +62,12 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("Loc care", HTML)
         self.assertIn("in Eldoret.", HTML)
         self.assertIn("Retouch &amp; Styling, Sisterlocs Retie and Artificial Locs Installation.", HTML)
-        self.assertIn("Practical GNU/Linux, computer and network support through WARENA.", HTML)
+        self.assertIn("Practical GNU/Linux, computer and network support is also available through WARENA.", HTML)
         self.assertIn("Published", HTML)
         self.assertIn("KES 700", HTML)
         self.assertIn("KES 1,500", HTML)
         self.assertIn("KES 3,500", HTML)
-        self.assertIn("Huduma za loc ndizo zinazoongoza.", HTML)
+        self.assertIn("Msaada wa GNU/Linux, kompyuta na mitandao unapatikana pia kupitia WARENA.", HTML)
         self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
         self.assertIn("Founder, NAKEBUSEN · Founder &amp; CTO, WARENA · Loctician · Creative Technologist", HTML)
         self.assertIn("ONLY NAKEBUSEN TRANSACTS.", HTML)
@@ -151,6 +151,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("NAKEBUSEN ilianza Lodwar", HTML)
         self.assertIn("I am Kenyan", HTML)
         self.assertIn("Mimi ni Mkenya", HTML)
+        self.assertIn("only commercial transaction point", HTML)
 
     def test_service_scope_has_no_unapproved_inclusions(self):
         self.assertIn("Refresh and maintain existing locs", HTML)
@@ -189,10 +190,10 @@ class PublicationTests(unittest.TestCase):
 
     def test_public_research_and_creative_work_are_described_plainly(self):
         for phrase in (
-            "Freedom", "WARENA", "IKAI", "IKAI is a Turkana female name meaning “home”",
-            "IKAI ni jina la kike la Kiturkana lenye maana ya “nyumbani”",
-            "GENJE", "Genge-rooted creative practice", "livecoding",
-            "FELOH Corpus", "Research &amp;<br><em>records.</em>",
+            "Freedom", "WARENA", "IKAI", "a Turkana female name meaning “home”",
+            "jina la kike la Kiturkana lenye maana ya “nyumbani”",
+            "GENJE", "Genge-rooted creative practice", "E-Genge", "livecoding",
+            "FELOH Corpus", "PROJECTS &amp; RESEARCH", "Connected<br><em>practices.</em>",
         ):
             self.assertIn(phrase, HTML)
         for removed_phrase in (
@@ -203,18 +204,13 @@ class PublicationTests(unittest.TestCase):
         ):
             self.assertNotIn(removed_phrase, HTML)
 
-    def test_current_research_links_match_specialist_repository_updates(self):
-        research_links = (
-            "https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/ELDORET-LOC-CARE-OPERATIONS-AND-REGULATORY-VERIFICATION-2026-11-24.md",
-            "https://github.com/donfelohke/WARENA/blob/main/docs/REPRODUCIBLE-SYSTEMS-AND-REALTIME-IO-VALIDATION-2026-11-24.md",
-            "https://github.com/donfelohke/Ikai/blob/main/docs/IKAI-M1-OPTICAL-AND-DISPLAY-BENCH-ADDENDUM-2026-11-24.md",
-            "https://github.com/donfelohke/Genje/blob/main/docs/GENJE-MOVEMENT-NOTATION-AND-INTEROPERABILITY-VALIDATION-2026-11-24.md",
-            "https://github.com/donfelohke/feloh-corpus/blob/main/docs/RESEARCH-PROGRAMME-STANDARDS-EVIDENCE-BENCHMARKS-LOCAL-SOLUTIONS-2026-11-24.md",
-        )
-        for link in research_links:
-            self.assertIn(link, HTML)
-        self.assertIn("CURRENT RESEARCH · 24 NOVEMBER 2026", HTML)
-        self.assertIn("UTAFITI WA SASA · 24 NOVEMBA 2026", HTML)
+    def test_current_research_register_is_kept_off_the_business_homepage(self):
+        self.assertIn("https://github.com/donfelohke/feloh-corpus", HTML)
+        self.assertIn("Research notes, references, standards and documented decisions", HTML)
+        self.assertNotIn("CURRENT RESEARCH · 24 NOVEMBER 2026", HTML)
+        self.assertNotIn("UTAFITI WA SASA · 24 NOVEMBA 2026", HTML)
+        self.assertNotIn("ELDORET-LOC-CARE-OPERATIONS-AND-REGULATORY-VERIFICATION-2026-11-24.md", HTML)
+        self.assertNotIn("REPRODUCIBLE-SYSTEMS-AND-REALTIME-IO-VALIDATION-2026-11-24.md", HTML)
 
     def test_homepage_avoids_repeated_identity_publications_and_contact_copy(self):
         self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
