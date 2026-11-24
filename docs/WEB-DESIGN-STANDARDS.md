@@ -1,6 +1,6 @@
 # Don Feloh Website — Design and Publication Standards
 
-**Status:** Current implementation standard · 23 November 2026
+**Status:** Current implementation standard · 24 November 2026
 
 ## Design thesis
 One human author; distinct practices. NAKEBUSEN leads the commercial experience, with loc care as the primary customer journey. WARENA communicates technical capability. IKAI remains research / work in progress. GENJE is creative practice. FELOH Corpus is the shared knowledge and provenance record.
@@ -22,10 +22,11 @@ One human author; distinct practices. NAKEBUSEN leads the commercial experience,
 
 ## Business and editorial invariants
 - ONLY NAKEBUSEN TRANSACTS.
-- Retouch & Styling — KES 700+; Sisterlocs Retie — KES 1,500+; Artificial Locs Installation — KES 3,500.
+- Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Installation — KES 3,500. The first two are published prices without a plus sign.
 - An enquiry does not confirm a booking. Availability and final terms are agreed directly.
 - No braiding or shaving claims. Do not invent availability, credentials, testimonials, service inclusions or guarantees.
 - Service payments and voluntary support are distinct. Preserve approved payment facts and manual verification safeguards.
+- Current location wording: Beside King's Square · Kisumu Road · Eldoret Town · Uasin Gishu · Kenya. F743+R35 is a directions reference, not a street-address claim.
 - English is the default; Kiswahili is available through native controls. Mark language changes with correct lang attributes.
 
 ## Accessibility and responsive behaviour
