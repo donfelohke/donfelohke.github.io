@@ -1,4 +1,4 @@
-> **Current constitutional alignment — 2026-11-21:** This document is retained as a dated historical baseline. Its earlier enterprise hierarchy and brand architecture are superseded by the four-domain constitution: F3L0H is the overarching human authorship identity; NAKEBUSEN / ROOT, IKAI / MIRROR, GENJE / EXPRESSION and WARENA / CAPABILITY are the four practice domains. **ONLY NAKEBUSEN TRANSACTS.** Use the [F3L0H Sovereign Master Corpus](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-SOVEREIGN-MASTER-CORPUS-2026-11-20.md) for shared architecture, the [Public Facts Register](PUBLIC-FACTS-REGISTER.md) for public factual claims and the [Service Catalogue](SERVICE-CATALOG.md) for current service names and prices. Historical wording below is preserved for provenance, not as current policy.
+> **Current constitutional alignment — 2026-11-24:** This dated baseline is retained for provenance. The current identity architecture is five identities: FELOH / AUTHORSHIP; NAKEBUSEN / ROOT; IKAI / REFLECTION; WARENA / CAPABILITY; GENJE / EXPRESSION. FELOH is the human author, not a fifth practice business. GRACE maps to NAKEBUSEN; GRIT maps to WARENA; GLORY maps to DON FELOH. **ONLY NAKEBUSEN TRANSACTS.** The current authority is the [FELOH Five-Identity Architecture & Copy Standard](https://github.com/donfelohke/feloh-corpus/blob/main/docs/FELOH-FIVE-IDENTITY-ARCHITECTURE-AND-COPY-STANDARD-2026-11-24.md). Historical wording below is preserved for provenance, not as current policy.
 
 # FELOH / NAKEBUSEN ecosystem map
 
@@ -44,5 +44,9 @@ Signature: **GRACE · GRIT · GLORY**
 Internal governance phrases (e.g. transaction-boundary slogans) stay out of customer-facing HTML. Customer copy uses enquiry / confirmation language.
 
 ```text
-FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.
+**FELOH** — Authorship · Intellectual work · Creative direction  
+**NAKEBUSEN** — Beauty · Heritage · Craft · Enterprise  
+**IKAI** — Reflective computing · Perception · Memory · Human experience  
+**WARENA** — Libre technology · Infrastructure · Systems engineering · Digital sovereignty  
+**GENJE** — Music · Movement · Performance · Creative expression
 ```
