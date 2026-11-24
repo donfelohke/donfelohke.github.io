@@ -1,7 +1,7 @@
 # Front-Page Portal — Consolidated Design, Copy and Standards Research
 
 **Date:** 24 November 2026  
-**Status:** Consolidated research and design direction; implementation proposal, not yet deployed  
+**Status:** Consolidated research and design direction; task-first page implementation merged to main; live deployment and manual verification pending  
 **Repository:** `donfelohke/donfelohke.github.io`  
 **Programme:** [FELOH Corpus issue #78](https://github.com/donfelohke/feloh-corpus/issues/78)  
 **Scope:** Public front page / portal, information architecture, visual system, copy, navigation, source notes and international accessibility/search standards
@@ -288,6 +288,27 @@ Measure real performance rather than infer it from a small static source tree. U
 - CLS ≤ 0.1
 
 Do not claim current performance targets are met without measurements.
+
+
+
+### Source-level contrast samples
+
+The following WCAG contrast ratios are calculated from the current opaque source colour pairs. They are useful design checks, not a complete rendered-page conformance result.
+
+| Foreground / background | Ratio |
+|---|---:|
+| Hero ivory #F2EFEA / darkest forest #102D25 | 12.86:1 |
+| Hero ivory #F2EFEA / lightest forest #214B3B | 8.58:1 |
+| Hero ochre #E8C77D / darkest forest #102D25 | 9.06:1 |
+| Price gold #F0C477 / opaque panel #214B3B | 6.03:1 |
+| Body ink #111111 / canvas #F2EFEA | 16.46:1 |
+| Muted text #596252 / canvas #F2EFEA | 5.56:1 |
+| Clay #87402F / surface #FFFEFA | 7.42:1 |
+| Ochre #80540F / surface #FFFEFA | 6.52:1 |
+| Dark muted #C6C0B4 / dark canvas #050706 | 11.16:1 |
+| Dark clay #E2725B / dark surface #151815 | 5.79:1 |
+
+Alpha-composited text, gradient extremes, focus rings, buttons, language controls, the glass topbar/dock and actual browser rendering still require sampling. These figures do not establish WCAG conformance.
 
 ### Primary references
 

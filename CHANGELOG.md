@@ -8,6 +8,7 @@ This file records material changes to the published website and its operating do
 - Keep the footer focused on the brand signature, manual service-payment safeguards, separate voluntary Support Us and one GitHub repositories link.
 - Remove the remaining dark-mode hero radial gradients; keep the hero price panel opaque in both themes.
 - Add regression checks for the Connect/footer boundary and dark-mode hero surface.
+- PR #198 merged after the dependency-free Python validation passed; pull-request Pages build/deploy jobs were skipped.
 
 ## 2026-11-24 — Opaque content surfaces and proposal reconciliation
 - Remove decorative radial hero circles and keep the hero background to a restrained forest gradient.
