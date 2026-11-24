@@ -50,6 +50,7 @@ NAKEBUSEN does not offer braiding or shaving. The founder does not cut clients�
 
 ## WARENA · Digital
 
+**Kicker:** FREEDOM IS A SYSTEM · COMPUTING · INFRASTRUCTURE
 **Heading:** GNU/Linux, computers and networks.
 
 WARENA provides practical support for individuals, homes, businesses and organisations. Work centres on libre-first, local-first and maintainable computing and networked systems.
