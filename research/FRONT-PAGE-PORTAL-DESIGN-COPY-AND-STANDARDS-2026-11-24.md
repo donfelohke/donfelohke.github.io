@@ -138,12 +138,18 @@ An enquiry does not confirm a booking. Availability, scope and final terms are a
 5. Four-practice map.
 6. IKAI research, GENJE creative practice and FELOH Corpus/source index.
 
+**Connect section — sole contact directory**
+1. Eldoret location, Plus Code/map pin and directions.
+2. Conditional home-call information.
+3. WhatsApp, phone and email.
+4. Technical and service enquiry routing.
+
 **Footer**
-1. Connect, location and directions.
-2. WhatsApp, phone and email.
-3. Manual service-payment instructions and safety warning.
-4. Separate voluntary Support Us.
-5. Repository/source credits and copyright.
+1. Brand signature and copyright.
+2. Manual service-payment instructions and safety warning.
+3. Separate voluntary Support Us.
+4. One clearly labelled GitHub repositories link.
+5. No duplicated location, directions, phone or email.
 
 ## 5. Copy direction
 
