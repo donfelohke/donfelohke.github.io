@@ -7,6 +7,7 @@ This file records material changes to the published website and its operating do
 - Make the hero brand lockup and first-screen price panel opaque; reserve glass for the topbar and floating dock.
 - Add a consolidated proposal/discrepancy disposition for the historical website briefs and WADR findings.
 - Record that the standalone research-page proposal is superseded; current research is surfaced contextually from the one-page portal.
+- PR #195 merged this refinement after its Python static validation passed; pull-request Pages build/deploy jobs were correctly skipped.
 - Keep rendered contrast, manual accessibility, Kiswahili review and post-merge Pages verification as outstanding release gates.
 
 ## 2026-11-24 — Task-first front-page portal implementation
