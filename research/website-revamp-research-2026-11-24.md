@@ -84,3 +84,8 @@ References:
 This desk research does not establish NAKEBUSEN's customer demand, conversion rate, market share or customer satisfaction; competitor quality or exact service equivalence; visitor understanding of the brand line; trademark availability; or actual Core Web Vitals and screen-reader conformance.
 
 Next validation should use real enquiries and voluntary customer interviews, without adding analytics or tracking unless separately approved. Record enquiry source, requested service, questions asked and confirmed outcomes in a privacy-conscious operational record. Do not publish customer stories or photographs without explicit permission.
+
+
+## 6. Phase 2 — Repository link integrity
+
+A source audit found that the homepage's About link pointed to a FELOH foundational-case filename that does not exist in the current FELOH Corpus repository tree. The current published authority is the [F3L0H Sovereign Master Corpus](https://github.com/donfelohke/feloh-corpus/blob/main/docs/F3L0H-SOVEREIGN-MASTER-CORPUS-2026-11-20.md). Both English and Kiswahili link labels and destinations were corrected. Other checked repository entry points (NAKEBUSEN, WARENA, IKAI, GENJE and Gallery) resolved to existing repositories or documents. This is a source-path check, not a complete external-link availability audit.
