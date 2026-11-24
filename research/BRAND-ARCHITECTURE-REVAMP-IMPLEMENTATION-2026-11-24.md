@@ -3,7 +3,7 @@
 **Date:** 24 November 2026  
 **Repository:** `donfelohke/donfelohke.github.io`  
 **Scope:** Homepage brand system, visual hierarchy, bilingual presentation, commercial conversion and publication safeguards  
-**Status:** Implemented on a feature branch; release evidence pending merge and Pages verification
+**Status:** Merged to `main` and deployed through GitHub Pages on 24 November 2026; visual/browser inspection remains separate.
 
 ## Executive decision
 
@@ -26,7 +26,7 @@ The gap was not a missing logo. It was the weak expression of the approved brand
 - The header showed NAKEBUSEN but omitted the WARENA POWERED endorsement.
 - GRACE, GRIT and GLORY were not mapped to their respective identities in the visible page.
 - The footer used an older combined name line rather than the approved NAKEBUSEN · WARENA POWERED lockup.
-- Founder authorship remained in the About section but was absent from the visible header and the canonical footer signature.
+- Founder authorship appeared in the About section and legacy footer name line, but the footer did not carry the approved public handle signature **@donfelohke · #HisGenjeness**.
 
 ## Brand architecture applied
 
@@ -81,9 +81,9 @@ This is desk research and source audit, not participant testing, trademark clear
 
 ## Release evidence
 
-- Feature branch: `revamp/brand-architecture-2026-11-24`
-- Source tests: pending CI.
-- Pull request: pending.
-- Merge: pending.
-- GitHub Pages deployment: pending.
-- Live-site inspection: pending.
+- Implementation PR: [#205](https://github.com/donfelohke/donfelohke.github.io/pull/205), merged.
+- Production commit: `7c6bab7739f3c7c43af06d1a65615c167100aa22`.
+- Static-site validation: passed on the PR and production push.
+- GitHub Pages build: passed; approved public files staged and artifact uploaded.
+- GitHub Pages deployment workflow: completed successfully (run [#601](https://github.com/donfelohke/donfelohke.github.io/actions/runs/45343442149)).
+- Direct browser screenshot, contrast sampling and screen-reader inspection: not performed in this deployment pass.
