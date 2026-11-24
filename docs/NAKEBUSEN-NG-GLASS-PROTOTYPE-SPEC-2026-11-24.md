@@ -20,7 +20,7 @@ Improve the existing single-page website through evidence-led copy, hierarchy an
 
 ## Decisions implemented
 
-- Preserve the existing one-page information architecture, all authored English and Kiswahili content, existing IDs, contact links and service enquiry paths.
+- Preserve the existing one-page information architecture, existing IDs, service catalogue, contact links and service enquiry paths while refining the hero copy in both languages.
 - Retain the balanced forest-green hero with editorial typography and restrained glass framing.
 - Keep service cards, prices, booking terms, payment details and voluntary support on opaque, readable surfaces.
 - Retain the three-item mobile dock: LOCS, DIGITAL, CONNECT.
