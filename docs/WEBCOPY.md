@@ -50,6 +50,46 @@ NAKEBUSEN does not offer braiding or shaving. The founder does not cut clients�
 
 **Booking:** Tell us which service interests you; share the condition of your locs or installation preferences; then agree suitability, availability, scope and final price. An enquiry does not confirm a booking. Availability and final terms are agreed directly.
 
+## Service decision guide and enquiry preparation
+
+The homepage now distinguishes the three approved loc-care services by the customer's current situation without inventing technical inclusions:
+
+- **Retouch & Styling** is for maintenance or styling of existing locs.
+- **Sisterlocs Retie** is retightening for an established Sisterlocs installation; it is not a new installation.
+- **Artificial Locs Installation** is for a requested artificial loc installation; preferred appearance, material preferences and installation requirements are discussed before work is agreed.
+
+The enquiry guide asks customers to share the service of interest, whether they have existing locs or want a new artificial installation, the current condition and desired work, any artificial-loc style/material preferences, and their general location. It does not require a photo or invite customers to send sensitive information.
+
+Before confirming an appointment, the parties clarify suitability, exact scope, any additional work or materials, the total amount, timing and location. Home calls additionally require coverage and travel-cost confirmation. No duration, preparation requirement, product inclusion or guaranteed outcome is published without owner approval.
+
+**Kiswahili direction:** distinguish matengenezo/upangaji wa loc zilizopo, kukaza upya Sisterlocs zilizowekwa, and uwekaji wa loc za bandia. Ask for the same decision-making details as the English version; preserve the same booking and price boundaries.
+
+## WARENA engagement method and safeguards
+
+The public technical section now explains the proposed path from problem to handover, based on the NAKEBUSEN DIGITAL service playbook:
+
+1. **Discover:** desired outcome or fault, devices/software, recent changes and operating constraints.
+2. **Scope:** tasks and exclusions, assumptions, risks, data handling, backup/rollback, deliverables and acceptance checks.
+3. **Change and verify:** authorised, minimal changes; tests against agreed criteria; report results and unresolved uncertainty.
+4. **Handover:** explain changes, operation, maintenance, limitations, recovery and any separately agreed support boundary.
+
+This is an engagement method, not a claim that every candidate capability is currently available. The public page explicitly says availability, feasibility, deliverables, price and support are confirmed individually. No DIGITAL price list is published.
+
+Security guidance: do not send passwords, private keys, PINs or one-time codes in an enquiry. Client permission is required before accessing, copying, moving or deleting data. A backup is not described as reliable until restoration has been tested.
+
+## Founder and research depth
+
+The founder biography explains the distinct domains without merging them into one service:
+- NAKEBUSEN — loc care, beauty, craft and enterprise.
+- WARENA — GNU/Linux, computing, networks and systems engineering.
+- IKAI — reflective-computing research into optics, displays and human-directed interaction.
+- GENJE — Genge-rooted sound, livecoding, movement and choreography.
+
+The research cards distinguish:
+- **IKAI — RESEARCH / WORK IN PROGRESS:** reflective optics, displays, sensing, local computation and human-directed interaction. No released mirror, validated sensor pipeline or deployed beauty-tech system is claimed.
+- **GENJE — CREATIVE PRACTICE / RESEARCH:** Genge-rooted sound, E-Genge, algorithmic club music, livecoding, audiovisual experimentation, movement and choreohacking. Research records are not evidence of a released motion-capture or performance system.
+- **FELOH Corpus — GOVERNANCE / PROVENANCE:** shared identity constitution, terminology, evidence standards, source routing and decision provenance. Specialist repositories retain ownership of their detailed work; Gallery publication remains subject to rights and approval.
+
 ## GRACE · GRIT · GLORY brand architecture
 
 - **GRACE — NAKEBUSEN:** the enterprise; loc care, beauty, craft, heritage, dignity and professional service.
