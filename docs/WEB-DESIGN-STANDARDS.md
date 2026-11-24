@@ -48,6 +48,7 @@ The fixed mobile dock remains three items: Locs, Digital and Visit. The in-page 
 - Distinguish Retouch & Styling (existing loc maintenance/styling), Sisterlocs Retie (retightening an established installation) and Artificial Locs Installation (new artificial loc installation); do not imply unapproved inclusions.
 - WARENA candidate capabilities must remain qualified by individual feasibility, availability, scope, price and support confirmation. Never request passwords, private keys, PINs or one-time codes in an enquiry; client-data access requires permission.
 - IKAI must remain labelled RESEARCH / WORK IN PROGRESS; GENJE remains creative practice/research; FELOH Corpus remains governance and provenance. A repository or research note is not proof of a deployed product or validated implementation.
+- Where a current, specific research record materially supports a public explanation, link the dated artefact directly and state its maturity beside the link. Proposed protocols must not be presented as completed tests, benchmarks or deployments. Keep the homepage selective; specialist repositories remain the full record.
 - Service payments and voluntary support are distinct. Preserve approved payment facts and manual verification safeguards; public payment copy must explain customer actions, not internal implementation.
 - Current location wording: Beside King's Square · Kisumu Road · Eldoret Town · Uasin Gishu · Kenya. F743+R35 is a directions reference, not a street-address claim.
 - English is the default; Kiswahili is available through native controls. Mark language changes with correct lang attributes.
@@ -56,7 +57,7 @@ The fixed mobile dock remains three items: Locs, Digital and Visit. The in-page 
 ## Accessibility and responsive behaviour
 
 - One descriptive H1, logical heading hierarchy, semantic landmarks and skip navigation.
-- Keyboard access and visible focus; primary controls at least 44 × 44 CSS pixels.
+- Keyboard access and visible focus; primary controls at least 44 × 44 CSS pixels. The clipped native language radio controls must retain a visible focus indicator on their visible EN/SW labels.
 - Reflow at 320 CSS pixels without horizontal scrolling; fixed navigation must not obscure focused content or anchor destinations.
 - Respect system colour scheme, reduced motion and reduced transparency.
 - Test both languages, light/dark modes, zoom/reflow, keyboard flow, contrast, screen-reader landmarks and actual glass surfaces. Automated source tests are not a WCAG conformance claim.
