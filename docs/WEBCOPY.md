@@ -41,11 +41,11 @@ Considered loc maintenance and installation in Eldoret Town. Share your requirem
 
 | Service | Published price |
 |---|---:|
-| Retouch & Styling | KES 700+ |
-| Sisterlocs Retie | KES 1,500+ |
+| Retouch & Styling | KES 700 |
+| Sisterlocs Retie | KES 1,500 |
 | Artificial Locs Installation | KES 3,500 |
 
-Prices are indicative where marked as starting prices. Final scope and price depend on loc condition, materials and work required; the final amount is agreed before work begins. NAKEBUSEN does not offer braiding or shaving. The founder does not cut clients' natural hair.
+These are the approved public prices. Any additional work, materials or changes in scope are discussed and agreed before work begins. Final scope and price depend on loc condition, materials and work required; the final amount is agreed before work begins. NAKEBUSEN does not offer braiding or shaving. The founder does not cut clients' natural hair.
 
 **Enquiry boundary:** An enquiry does not confirm a booking. Availability and final terms are agreed directly.
 
