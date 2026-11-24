@@ -72,7 +72,7 @@ Availability, scope, feasibility, schedule and cost are agreed per engagement th
 **Felix Lwova · Don Feloh**  
 **Founder, NAKEBUSEN · Founder & CTO, WARENA · Loctician · Creative Technologist**
 
-I’m Felix Lwova, a Kenyan known as Don Feloh. I founded NAKEBUSEN and WARENA, and work across loc care, GNU/Linux systems and creative technology.
+I am Kenyan. I’m Felix Lwova, known as Don Feloh. I founded NAKEBUSEN and WARENA, and work across loc care, GNU/Linux systems and creative technology.
 
 My practice is grounded in craft, human authorship and technology that strengthens human agency. NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret.
 
