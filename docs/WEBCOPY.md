@@ -18,7 +18,7 @@
 
 **Eyebrow:** NAKEBUSEN · LOC CARE  
 **H1:** Loc care in Eldoret.  
-**Proposition:** Retouch & Styling, Sisterlocs Retie and Artificial Locs Installation. Any additional work or materials are agreed before work begins.  
+**Proposition:** Maintenance for existing locs, Sisterlocs retie and artificial loc installation. See each price upfront; agree any additional work or materials before work begins.  
 **Primary CTA:** Enquire on WhatsApp  
 **Secondary CTA:** See service details  
 **Location line:** King's Square · Kisumu Road · Eldoret Town
@@ -26,7 +26,7 @@
 The hero price panel is a quick-reference summary. The service cards repeat the prices beside their descriptions so visitors who jump directly to the services section still see the amount. This is intentional functional repetition; do not add another price list elsewhere.
 
 **Kiswahili H1:** Utunzaji wa loc mjini Eldoret.  
-**Kiswahili proposition:** Matengenezo na upangaji wa loc, kukaza upya Sisterlocs na uwekaji wa loc za bandia. Kazi au vifaa vya ziada hukubaliwa kabla ya kuanza.  
+**Kiswahili proposition:** Matengenezo ya loc zilizopo, kukaza upya Sisterlocs na uwekaji wa loc za bandia. Angalia bei za kila huduma mapema; kazi au vifaa vya ziada hukubaliwa kabla ya kuanza.  
 **Primary CTA:** Ulizia kupitia WhatsApp  
 **Secondary CTA:** Tazama maelezo ya huduma
 
