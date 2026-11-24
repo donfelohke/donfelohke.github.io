@@ -431,5 +431,25 @@ class PublicationTests(unittest.TestCase):
         self.assertNotIn("STK push", HTML)
 
 
+    def test_page_hierarchy_and_customer_journey(self):
+        self.assertIn('class="page-index"', HTML)
+        for target in ("#services", "#code", "#connect", "#don-feloh"):
+            self.assertIn(f'href="{target}"', HTML)
+        self.assertIn("Loc care &amp; prices", HTML)
+        self.assertIn("Visit &amp; contact", HTML)
+        self.assertIn("How an appointment", HTML)
+        self.assertIn("<strong>Choose:</strong>", HTML)
+        self.assertIn("<strong>Describe:</strong>", HTML)
+        self.assertIn("<strong>Agree:</strong>", HTML)
+        self.assertIn("<strong>Confirm:</strong>", HTML)
+        self.assertIn("Do not treat a date, price estimate or message as confirmation", HTML)
+        order = [HTML.index('id="services"'), HTML.index('id="code"'), HTML.index('id="connect"'), HTML.index('id="don-feloh"'), HTML.index('id="projects"')]
+        self.assertEqual(order, sorted(order))
+        self.assertIn("Research &amp;<br><em>creative practice.</em>", HTML)
+        self.assertIn("Utafiti na<br><em>ubunifu.</em>", HTML)
+        self.assertIn(".page-index-inner{", CSS)
+        self.assertIn("page-index a:focus-visible", CSS)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
