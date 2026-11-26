@@ -16,12 +16,12 @@ The homepage leads with the loc-care offer in Eldoret and a direct service-enqui
 
 - **GRACE → NAKEBUSEN:** beauty, heritage, craft, dignity and grounded enterprise.
 - **GRIT → WARENA:** libre-first systems, technology and infrastructure. **Freedom Is a System.**
-- **GLORY → DON FELOH:** human authorship, creative expression and becoming.
+- **GLORY → GENJE / GENJENESS:** creative greatness through Genge-rooted sound, music, livecoding, movement and authored expression.
 - **GENJE:** Genge-rooted sound, livecoding, movement, choreography and embodied creative practice.
 - **IKAI:** reflective computing and research / work in progress. The founder-approved name meaning is “home”.
 - **FELOH Corpus:** shared knowledge, governance and provenance record; not a fifth practice.
 
-**FELOH** — Authorship · Intellectual work · Creative direction  
+**FELOH** — Human authorship · Founder · Intellectual work · Creative direction  
 **NAKEBUSEN** — Beauty · Heritage · Craft · Enterprise  
 **IKAI** — Reflective computing · Perception · Memory · Human experience  
 **WARENA** — Libre technology · Infrastructure · Systems engineering · Digital sovereignty  
@@ -30,6 +30,8 @@ The homepage leads with the loc-care offer in Eldoret and a direct service-enqui
 **ONLY NAKEBUSEN TRANSACTS.** Keep service enquiries, availability, agreements and payment within NAKEBUSEN.
 
 ## Current research integration · 2026-11-24
+
+Current pillar clarification: **GRACE → NAKEBUSEN · GRIT → WARENA · GLORY → GENJE / GENJENESS**. FELOH remains the human author. See [the 26 November identity clarification](docs/IDENTITY-CANONICAL-CLARIFICATION-2026-11-26.md).
 
 The latest specialist research is maintained in its owning repositories and surfaced together in the homepage Knowledge section. These are research records and proposed validation protocols, not claims of completed implementation, deployment, certification or compliance.
 
