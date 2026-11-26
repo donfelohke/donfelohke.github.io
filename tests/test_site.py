@@ -468,7 +468,7 @@ class PublicationTests(unittest.TestCase):
         catalogue = (ROOT / "docs/SERVICE-CATALOG.md").read_text(encoding="utf-8")
         facts = (ROOT / "docs/PUBLIC-FACTS-REGISTER.md").read_text(encoding="utf-8")
         webcopy = (ROOT / "docs/WEBCOPY.md").read_text(encoding="utf-8")
-        publication_records = "\\n".join((HTML, catalogue, facts, webcopy))
+        publication_records = "\n".join((HTML, catalogue, facts, webcopy))
 
         for service, amount in (
             ("Retouch & Styling", "700"),
@@ -488,7 +488,7 @@ class PublicationTests(unittest.TestCase):
         for amount in ("KES 700", "KES 1,500", "KES 3,500"):
             self.assertIn(amount, publication_records)
         self.assertIsNone(
-            re.search(r"KES\\s+(?:700|1,500|3,500)\\+", publication_records),
+            re.search(r"KES\s+(?:700|1,500|3,500)\+", publication_records),
             "Fixed public prices must never be represented as starting prices.",
         )
 
