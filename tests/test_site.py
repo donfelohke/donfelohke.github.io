@@ -463,5 +463,34 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("page-index a:focus-visible", CSS)
 
 
+
+    def test_fixed_public_prices_match_all_authoritative_publication_records(self):
+        catalogue = (ROOT / "docs/SERVICE-CATALOG.md").read_text(encoding="utf-8")
+        facts = (ROOT / "docs/PUBLIC-FACTS-REGISTER.md").read_text(encoding="utf-8")
+        webcopy = (ROOT / "docs/WEBCOPY.md").read_text(encoding="utf-8")
+        publication_records = "\\n".join((HTML, catalogue, facts, webcopy))
+
+        for service, amount in (
+            ("Retouch & Styling", "700"),
+            ("Sisterlocs Retie", "1,500"),
+            ("Artificial Locs Installation", "3,500"),
+        ):
+            self.assertIn(service, catalogue)
+            self.assertIn(f"| {service} | **{amount}** |", catalogue)
+
+        for fact in (
+            "| PF-017 | Retouch & Styling published price KES 700",
+            "| PF-018 | Sisterlocs Retie published price KES 1,500",
+            "| PF-019 | Artificial Locs Installation published price KES 3,500",
+        ):
+            self.assertIn(fact, facts)
+
+        for amount in ("KES 700", "KES 1,500", "KES 3,500"):
+            self.assertIn(amount, publication_records)
+        self.assertIsNone(
+            re.search(r"KES\\s+(?:700|1,500|3,500)\\+", publication_records),
+            "Fixed public prices must never be represented as starting prices.",
+        )
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
