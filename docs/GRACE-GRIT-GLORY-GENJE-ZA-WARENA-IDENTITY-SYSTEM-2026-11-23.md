@@ -38,3 +38,8 @@ Liquid Glass Terminal × Editorial Hybrid. Forest-green technical surfaces, ivor
 - Check mobile and desktop layouts, keyboard focus, reduced motion and reduced transparency.
 - Perform manual browser and screen-reader review.
 - Verify GitHub Pages deployment separately; source changes do not prove publication.
+
+
+## Founder-directed clarification — 2026-11-26
+
+This 23 November edition is retained as a historical record. For current public-facing identity, the founder-directed pillar mapping is **GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → GENJE / GENJENESS**. **FELOH / DON FELOH / @donfelohke / #HisGenjeness** remains the human author, founder and creative/technical decision-maker; it is not displaced by the pillar mapping. The governing relationship remains **FELOH generates. NAKEBUSEN grounds. IKAI reflects. WARENA enables. GENJE embodies.** The current source is the [26 November identity clarification](IDENTITY-CANONICAL-CLARIFICATION-2026-11-26.md) and the [shared FELOH Corpus record](https://github.com/donfelohke/feloh-corpus/blob/main/docs/IDENTITY-CANONICAL-CLARIFICATION-2026-11-26.md). **ONLY NAKEBUSEN TRANSACTS.**

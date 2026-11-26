@@ -163,4 +163,4 @@ Specification, implementation, testing, verification and deployment are separate
 
 ## Shared master identity — 2026-11-23
 
-DON FELOH is the human author. GRACE → NAKEBUSEN (beauty, heritage, craft, dignity); GRIT → WARENA (freedom, technology, infrastructure); GLORY → DON FELOH (authorship, expression, becoming). GENJE is embodied creative practice; IKAI is reflective research. Signature: **GENJE ZA WARENA | NAKEBUSEN**. Commercial boundary: **ONLY NAKEBUSEN TRANSACTS.**
+DON FELOH is the human author. GRACE → NAKEBUSEN (beauty, heritage, craft, dignity); GRIT → WARENA (freedom, technology, infrastructure); GLORY → GENJE / GENJENESS (creative greatness, expression and excellence). FELOH remains the human author; IKAI is reflective research. Signature: **GENJE ZA WARENA | NAKEBUSEN**. Commercial boundary: **ONLY NAKEBUSEN TRANSACTS.**

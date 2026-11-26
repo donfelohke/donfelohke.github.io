@@ -58,7 +58,7 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-035 | Public directions reference: F743+R35, Eldoret, Kenya; supplied Google Maps pin: https://maps.app.goo.gl/QE9MTjQAUSx4DXGe6 | F1 | Owner-supplied map reference; do not claim an independently verified street address, entrance, coordinates or transit stage |
 | PF-036 | Loc-care home calls may be arranged across the wider Eldoret Town service area | F1 | Confirm exact location, suitability, availability and travel costs directly before confirming a visit |
 | PF-037 | Master identity: DON FELOH / @donfelohke · GRACE · GRIT · GLORY · GENJE ZA WARENA | F2 | Canonical identity system; see FELOH Corpus identity constitution |
-| PF-038 | GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → DON FELOH | F2 | Governing philosophy; distinct practices remain independently described and governed |
+| PF-038 | GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → GENJE / GENJENESS | F2 | Current founder-directed pillar mapping; FELOH remains the human author and decision-maker |
 | PF-039 | IKAI is a Turkana female name meaning “home” | F2 | Founder-approved canonical name/identity meaning. This records the adopted identity; it is not a claim that independent linguistic research or community usage has been verified |
 
 ## Publication controls
@@ -80,7 +80,11 @@ The four practice domains are NAKEBUSEN / ROOT, IKAI / MIRROR, GENJE / EXPRESSIO
 
 ## Master identity update — 2026-11-23
 
-The master homepage hero is **DON FELOH / @donfelohke · GRACE · GRIT · GLORY · GENJE ZA WARENA | NAKEBUSEN**. GRACE maps to NAKEBUSEN; GRIT maps to WARENA; GLORY expresses DON FELOH's human authorship. GENJE remains embodied creative practice and IKAI remains reflective research. **ONLY NAKEBUSEN TRANSACTS.**
+The master public identity is **NAKEBUSEN · WARENA POWERED · GRACE · GRIT · GLORY | GENJE ZA WARENA**. GRACE maps to NAKEBUSEN; GRIT maps to WARENA; GLORY maps to GENJE / GENJENESS as creative expression and greatness. FELOH remains the human author and decision-maker. IKAI remains reflective research. **ONLY NAKEBUSEN TRANSACTS.**
+
+## Current identity clarification — 2026-11-26
+
+The current founder-directed mapping is **GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → GENJE / GENJENESS**. FELOH remains the human author and creative/technical decision-maker. Older GLORY → DON FELOH wording is retained as historical provenance, not current pillar mapping. See the [current identity clarification](IDENTITY-CANONICAL-CLARIFICATION-2026-11-26.md) and the [shared FELOH Corpus clarification](https://github.com/donfelohke/feloh-corpus/blob/main/docs/IDENTITY-CANONICAL-CLARIFICATION-2026-11-26.md).
 
 ## Source precedence and conflict resolution — 2026-11-24
 
