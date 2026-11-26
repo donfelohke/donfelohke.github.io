@@ -29,6 +29,10 @@ The homepage leads with the loc-care offer in Eldoret and a direct service-enqui
 
 **ONLY NAKEBUSEN TRANSACTS.** Keep service enquiries, availability, agreements and payment within NAKEBUSEN.
 
+## Current identity and price clarification · 2026-11-26
+
+The current pillar mapping is **GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → GENJE / GENJENESS**. FELOH remains the human author and decision-maker. Published loc-care prices are fixed amounts: Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Installation — KES 3,500. None is a starting-price estimate.
+
 ## Current research integration · 2026-11-24
 
 Current pillar clarification: **GRACE → NAKEBUSEN · GRIT → WARENA · GLORY → GENJE / GENJENESS**. FELOH remains the human author. See [the 26 November identity clarification](docs/IDENTITY-CANONICAL-CLARIFICATION-2026-11-26.md).
