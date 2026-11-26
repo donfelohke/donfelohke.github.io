@@ -9,7 +9,7 @@ One human author; distinct practices. NAKEBUSEN leads the commercial experience,
 ## Brand hierarchy
 
 - Master lockup: **NAKEBUSEN · WARENA POWERED**; NAKEBUSEN is the primary name and WARENA is a restrained technical endorsement.
-- Brand constitution: **GRACE · GRIT · GLORY**, expressed across the page: GRACE / NAKEBUSEN for the enterprise; GRIT / WARENA for infrastructure; GLORY / Don Feloh / #HisGenjeness for creative expression.
+- Brand constitution: **GRACE · GRIT · GLORY**, expressed across the page: GRACE / NAKEBUSEN for the enterprise; GRIT / WARENA for infrastructure; GLORY / GENJE / GENJENESS for creative expression and greatness; FELOH remains the human author.
 - Founder signature: **@donfelohke · #HisGenjeness**.
 - Master positioning: **BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**
 - WARENA technical line: **FREEDOM IS A SYSTEM.**
