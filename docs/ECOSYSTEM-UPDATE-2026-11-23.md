@@ -43,11 +43,11 @@ FELOH Corpus remains the shared constitutional source of record. Gallery and the
 
 The NAKEBUSEN repository's [service catalogue](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/service-catalogue.md) and README are the current service-price authority:
 
-- Retouch & Styling — **KES 700+**.
-- Sisterlocs Retie — **KES 1,500+**.
+- Retouch & Styling — **KES 700**.
+- Sisterlocs Retie — **KES 1,500**.
 - Artificial Locs Installation — **KES 3,500** (no plus sign).
 
-The website repository contained unqualified KES 700 and KES 1,500 values in its README, HTML service cards and several current-facing specifications. This update aligns the website publication surface and active controls to the NAKEBUSEN source of record.
+The website repository contained unqualified KES 700 and KES 1,500 values in its README, HTML service cards and several current-facing specifications. This update aligns the website publication surface and active controls to the NAKEBUSEN source of record. The approved public prices are fixed published figures: KES 700, KES 1,500 and KES 3,500; do not append a plus sign or describe them as starting prices.
 
 Updated in this release branch:
 - `README.md`
@@ -73,6 +73,10 @@ Older dated audit records and historical specifications are retained as provenan
 - GENJE remains creative and embodied practice; no unverified performance or motion-capture implementation is claimed.
 - Gallery remains approval-controlled; public availability does not establish rights or consent.
 - The Guile forks retain upstream attribution and licence obligations; their documentation does not claim a successful build, installed session or deployment.
+
+## Price notation correction — 2026-11-26
+
+The founder reconfirmed that the first two published prices are fixed figures, not starting prices. Current public amounts are **KES 700**, **KES 1,500** and **KES 3,500**. This supersedes the two plus-sign values recorded in this historical update. The service catalogue and Public Facts Register remain the authorities.
 
 ## Verification status
 
