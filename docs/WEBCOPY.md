@@ -98,9 +98,9 @@ The research cards distinguish:
 
 - **GRACE — NAKEBUSEN:** the enterprise; loc care, beauty, craft, heritage, dignity and professional service.
 - **GRIT — WARENA:** the infrastructure; libre computing, GNU/Linux, networks, engineering and digital sovereignty.
-- **GLORY — DON FELOH / #HisGenjeness:** the founder's creative expression through GENJE, sound, movement, livecoding and creative technology.
+- **GLORY — GENJE / GENJENESS:** creative greatness through Genge-rooted sound, movement, livecoding, choreography and creative technology. FELOH remains the human author.
 
-These identities are explained after the primary service and technical sections. They clarify the relationship without creating competing storefronts or new transaction points.
+The founder is introduced separately under **AUTHORSHIP · DON FELOH**. These identities are explained after the primary service and technical sections. They clarify the relationship without creating competing storefronts or new transaction points.
 
 ## WARENA · Digital
 
