@@ -12,7 +12,7 @@ Status meanings: APPROVED = decision approved; IMPLEMENTED = code changed; TESTE
 - [x] Pillar line: **GRACE · GRIT · GLORY**.
 - [x] Public statement: **BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**
 - [x] Supporting signature: **GENJE ZA WARENA** and **@donfelohke · #HisGenjeness**.
-- [x] GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → DON FELOH.
+- [x] GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → GENJE / GENJENESS; FELOH remains the human author.
 - [x] NAKEBUSEN is the primary customer-facing commercial entry and the only transaction point.
 - [x] WARENA is a distinct technical capability domain, not a NAKEBUSEN sub-brand or separate checkout.
 - [x] GENJE is creative and embodied practice, not a separate commercial division.
