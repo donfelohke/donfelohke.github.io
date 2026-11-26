@@ -102,6 +102,9 @@ Source checks do not replace manual browser, keyboard, screen-reader, real-devic
 
 ## Repository authority and documentation
 
+- [Documentation index](docs/README.md) — navigation across current public facts, service copy, design, architecture, research and release records.
+- [Current identity clarification](docs/IDENTITY-CANONICAL-CLARIFICATION-2026-11-26.md) — current GRACE / GRIT / GLORY mapping and the separate FELOH authorship role.
+
 - [NAKEBUSEN Page Design, Copy and Experience Research](research/NAKEBUSEN-PAGE-DESIGN-COPY-RESEARCH-2026-11-24.md) — approved source-based design direction, English copy rationale, page composition, navigation recommendation, content budget and validation plan. Production refinement is implemented in `index.html` and `assets/css/site.css`; remaining manual verification is tracked in the release record.
 - [Front-Page Portal — Initial Consolidated Research](research/FRONT-PAGE-PORTAL-DESIGN-COPY-AND-STANDARDS-2026-11-24.md) — earlier research record; its older hero-copy direction is superseded by the current source and the new proposal.
 - [Website Proposal and Discrepancy Disposition](research/WEBSITE-PROPOSAL-AND-DISCREPANCY-STATUS-2026-11-24.md) — current decisions, superseded proposals, discrepancy status and remaining verification.
