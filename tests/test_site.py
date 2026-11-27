@@ -473,11 +473,11 @@ class PublicationTests(unittest.TestCase):
 
 
     def test_static_delivery_has_no_javascript_or_remote_embeds(self):
-        self.assertNotRegex(HTML, r"(?is)<script\\b")
-        self.assertNotRegex(HTML, r"(?i)\\son[a-z]+\\s*=")
-        self.assertNotRegex(HTML, r"(?i)href\\s*=\\s*['\\\"]javascript:")
-        self.assertNotRegex(HTML, r"(?is)<iframe\\b")
-        self.assertNotRegex(CSS, r"(?i)@import\\s+url")
+        self.assertNotRegex(HTML, r"(?is)<script\b")
+        self.assertNotRegex(HTML, r"(?i)\son[a-z]+\s*=")
+        self.assertNotRegex(HTML, r"(?i)href\s*=\s*['\"]javascript:")
+        self.assertNotRegex(HTML, r"(?is)<iframe\b")
+        self.assertNotRegex(CSS, r"(?i)@import\s+url")
 
     def test_fixed_public_prices_match_all_authoritative_publication_records(self):
         catalogue = (ROOT / "docs/SERVICE-CATALOG.md").read_text(encoding="utf-8")
