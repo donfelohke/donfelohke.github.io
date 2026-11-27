@@ -116,7 +116,9 @@ Do not publish unsupported certifications, fixed prices, warranties, service-lev
 
 **The root becomes the runtime.**
 
-**GENJE ZA WARENA — THE FIRE OF THE FORMIDABLE.**
+**GENJE ZA WARENA.**  
+**GENJE = GREATNESS · WARENA = THE POWERFUL.**  
+Distinct authored interpretations; not a literal translation.
 
 The GENJE expression is an adopted brand interpretation, not verified linguistic etymology.
 
