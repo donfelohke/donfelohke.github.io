@@ -167,4 +167,4 @@ Use the same accurate title and description for Open Graph and Twitter metadata.
 - [Navigation contract](NAV-STRUCTURE.md)
 - [Editorial website improvement specification](EDITORIAL-WEBSITE-IMPROVEMENT-2026-11-24.md)
 - [F3L0H Sovereign Master Corpus](https://github.com/donfelohke/feloh-corpus/blob/main/docs/F3L0H-SOVEREIGN-MASTER-CORPUS-2026-11-20.md)
-- [NAKEBUSEN campaign copy playbook](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/NAKEBUSEN-LOC-AD-COPY-AND-CAMPAIGN-PLAYBOOK-2026-11-24.md)
+- [NAKEBUSEN campaign copy playbook](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/COPY-APPLICATION-2026-11-24.md)
