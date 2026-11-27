@@ -79,6 +79,8 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("Need GNU/Linux, computer or network support?", HTML)
         self.assertNotIn("Practical GNU/Linux, computer and network support is also available through WARENA.", HTML)
         self.assertIn("PUBLISHED PRICES", HTML)
+        self.assertIn("Retouch &amp; Styling and Sisterlocs Retie are starting prices.", HTML)
+        self.assertIn("Bei za Retouch &amp; Styling na Sisterlocs Retie ni za kuanzia.", HTML)
         self.assertIn("KES 700", HTML)
         self.assertIn("KES 1,500", HTML)
         self.assertIn("KES 3,500", HTML)
