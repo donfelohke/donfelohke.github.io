@@ -15,7 +15,7 @@
 7. **FELOH Corpus:** shared identity, governance, evidence and provenance; not another practice domain.
 8. **Contact and footer:** NAKEBUSEN service enquiries, clear confirmation boundary, manual payment safeguards and separate voluntary support.
 
-## Hero — current implementation direction
+## Hero — commercial-first, balanced identity direction
 
 **Eyebrow:** FELOH · GRACE · GRIT · GLORY  
 **H1:** Beautiful roots. Sovereign systems.  
@@ -32,7 +32,9 @@
 
 **WARENA supporting line:** Need GNU/Linux, computer or network support? Explore WARENA. Technical work is assessed and agreed separately.
 
-The primary hero action introduces the complete body of work; the NAKEBUSEN service route remains explicit and prominent. This is not a transfer of commercial authority to FELOH, WARENA, IKAI or GENJE. **ONLY NAKEBUSEN TRANSACTS.**
+The hero keeps the master identity and connected-practices proposition, while its first action leads directly to NAKEBUSEN services and prices. The wider body of work remains one clear secondary route. This is not a transfer of commercial authority to FELOH, WARENA, IKAI or GENJE. **ONLY NAKEBUSEN TRANSACTS.**
+
+**NAKEBUSEN supporting line:** YOUR BEAUTY ° YOUR WAY. Use within the Locs section; it does not replace the master H1 or umbrella positioning.
 
 **Kiswahili H1:** Mizizi mizuri. Mifumo ya kujitawala.  
 **Kiswahili proposition:** Mwandishi mmoja. Shughuli zinazounganisha biashara, uhandisi wa mifumo, utafiti wa kompyuta tafakari na ubunifu wa kisanaa.  

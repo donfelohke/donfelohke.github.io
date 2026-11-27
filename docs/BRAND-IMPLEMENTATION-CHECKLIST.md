@@ -51,9 +51,10 @@ Status meanings: APPROVED = decision approved; IMPLEMENTED = code changed; TESTE
 ## 4. Navigation, language and interaction
 
 - [x] Primary anchor destinations and floating dock are implemented.
-- [x] Language control updates authored content and document language.
-- [x] Theme control follows system preference and supports user preference.
-- [x] Language and theme controls have storage-failure fallbacks.
+- [x] CSS-only language control switches between authored English and Kiswahili content states.
+- [ ] Document-level html lang remains en in the static implementation; assess whether this limitation is acceptable for assistive technology or requires a separately approved language-routing solution.
+- [x] Light/dark presentation follows the operating-system prefers-color-scheme setting.
+- [x] No user-controlled theme toggle or preference storage is implemented; do not describe one as present.
 - [x] WhatsApp enquiry messages are language-aware.
 - [ ] Complete manual keyboard-only review on current desktop and mobile browsers.
 - [ ] Complete TalkBack and at least one desktop screen-reader review.
@@ -62,14 +63,16 @@ Status meanings: APPROVED = decision approved; IMPLEMENTED = code changed; TESTE
 ## 5. Automated verification
 
 - [x] Static HTML/source validation workflow passed for the latest recorded main candidate.
-- [x] Browser quality workflow passed for the latest recorded main candidate.
+- [ ] No browser-automation workflow is configured on current main; current automated checks are dependency-free Python source tests.
 - [x] GitHub Pages build/deploy workflow passed for the latest recorded main candidate.
 - [ ] Re-run and record source/browser workflows for this documentation-only pull request.
 - [ ] Confirm the Pages deployment commit and inspect the live page after merge.
 
-Latest recorded workflow evidence at the audit snapshot:
-- Static validation: https://github.com/donfelohke/donfelohke.github.io/actions/runs/45310391052
-- GitHub Pages build/deploy: https://github.com/donfelohke/donfelohke.github.io/actions/runs/45310391092
+Latest recorded workflow evidence before this revamp:
+- Static validation: https://github.com/donfelohke/donfelohke.github.io/actions/runs/46066203895
+- GitHub Pages build/deploy: https://github.com/donfelohke/donfelohke.github.io/actions/runs/46066203873
+
+These runs relate to the 27 November 2026 main commit, not to this revamp branch. Update this evidence only after the new pull request and deployment workflows complete.
 
 Automated browser and accessibility checks do not replace manual screen-reader, physical-device, real-network handoff or live-page review.
 
