@@ -418,3 +418,35 @@ A homepage commit or a passing pull-request workflow is not, by itself, proof of
 The work is complete when the existing website communicates the full FELOH practice architecture clearly, NAKEBUSEN's services and enquiry path are easy to find, WARENA and the research/creative domains remain distinct, public facts and payment safeguards are intact, the experience is usable across devices and languages, and the deployed site has been verified.
 
 **The goal is not a new website. The goal is a clearer, more coherent and more trustworthy FELOH digital home built on the infrastructure that already exists.**
+
+
+## 11. Implementation record — 27 November 2026
+
+**Owner approval:** Explicit approval received on 27 November 2026.  
+**Final implementation commit:** `33cf40e92e40ce0d7ce6c86aa62ee226a290d005`  
+**Implementation sequence:** `1cda62d86ec4e252cf54e83f3c8c2dc7ce9d097b` (main content and documentation change), followed by `33cf40e92e40ce0d7ce6c86aa62ee226a290d005` (two bilingual copy corrections found by CI).
+
+### Exact files changed
+
+- `index.html` — reduced the research/creative area to three concise, bilingual, status-labelled cards for IKAI, GENJE and FELOH Corpus; each links to its owning repository. Gallery is no longer represented as a practice or homepage research card.
+- `docs/WEBCOPY.md` — aligned canonical copy to the three-entry research index and removed duplicated founder/research exposition.
+- `README.md` — aligned repository orientation with the Research & Creative Practice section and Gallery boundary.
+- `tests/test_site.py` — asserted the three-card structure, maturity labels, owning-repository links and exclusion of Gallery and detailed protocol links from the homepage research index.
+- `docs/WEBSITE-ACCEPTANCE-CHECKLIST.md` — added the research-index and Gallery-boundary acceptance criteria.
+- `docs/WEBSITE-AUDIT-DISCREPANCY-REGISTER.md` — corrected PR #217 merge status and recorded implementation/deployment evidence and remaining verification.
+- `docs/FELOH-HOMEPAGE-IMPLEMENTATION-SPEC-2026-11-27.md` — updated approval status and recorded this implementation.
+
+**Inspected but unchanged:** `assets/css/site.css`. The existing responsive three-card grid and opaque content-card treatment already supported the refined content; no CSS override removal or visual change was necessary. The active cascade was preserved rather than cleaned up without computed-style/browser evidence.
+
+### Protected invariants
+
+No change to published service names or prices, location, contact details, booking boundaries, M-PESA Till/account details, payment safety language, Support Us placement or separation, the English-default/Kiswahili toggle, the three-destination mobile dock, static HTML/CSS architecture or repository structure. No new dependencies, repositories, scripts, analytics, images or payment/booking integrations were added.
+
+### Automated and deployment evidence
+
+- [Static site validation](https://github.com/donfelohke/donfelohke.github.io/actions/runs/46057101234) — passed; **29 tests** completed.
+- [GitHub Pages workflow](https://github.com/donfelohke/donfelohke.github.io/actions/runs/46057101225) — validation, build, upload and deploy jobs all passed for the final implementation commit.
+
+### Verification still outstanding
+
+An external text retrieval of the public URL still surfaced the previous research copy after the successful deployment workflow. This may be a cached retrieval snapshot; it is not sufficient to establish a deployment defect or to prove the refreshed page. A direct browser inspection on desktop and mobile, 320px reflow, keyboard/screen-reader review, contrast review, reduced-motion/transparency review and fluent human Kiswahili editorial review remain outstanding. Do not describe these as passed.

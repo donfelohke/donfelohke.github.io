@@ -170,58 +170,19 @@ This section supersedes older findings wherever they conflict with the current m
 - WARENA remains a distinct technical capability domain; GENJE remains creative and embodied practice; IKAI remains research/WIP; FELOH Corpus remains knowledge governance. **ONLY NAKEBUSEN TRANSACTS.**
 - The current Pages workflow deploys on pushes to `main` and supports manual workflow dispatch. Pull-request checks validate source but do not publish. The old checklist instruction requiring a separate manual deployment authorisation after merge was incorrect and is superseded.
 
-### Remaining verification, not assumed complete
+### Implementation and deployment evidence
 
-- Verify the exact live Pages deployment commit and inspect the deployed page after the latest merge.
-- Complete manual screen-reader, keyboard, physical-device, zoom/reflow, reduced-transparency and real-world contact handoff checks.
-- Independently verify the public payment merchant pairing before changing it or using it in a paid campaign.
-- Review historical branches for unique unmerged work before any deletion. No branch has been deleted as part of this reconciliation.
-
-### Current evidence and related records
-
-See [CHANGELOG.md](../CHANGELOG.md), [PUBLIC-FACTS-REGISTER.md](PUBLIC-FACTS-REGISTER.md), [SERVICE-CATALOG.md](SERVICE-CATALOG.md), [WEBCOPY.md](WEBCOPY.md), [ROADMAP.md](ROADMAP.md) and [RELEASE-CHECKLIST.md](RELEASE-CHECKLIST.md). Current source changes are grouped in the pull request titled “Reconcile website documentation, changelog and release governance”.
-
-
-## 9. Current portal proposal and discrepancy disposition — 24 November 2026
-
-The current proposal decisions, historical proposal dispositions and WADR-001–WADR-022 status assessment are consolidated in [Website Proposal and Discrepancy Disposition](../research/WEBSITE-PROPOSAL-AND-DISCREPANCY-STATUS-2026-11-24.md).
-
-Key source changes since the earlier audit:
-- PR #193 consolidated the front-page research and normalised the changelog.
-- PR #194 made the hero task-first, surfaced exact published prices, updated canonical copy and removed historical hero override layers. Its Python static validation passed.
-- PR #195 merged the opaque-content treatment: decorative hero circles were removed and glass is reserved for navigation surfaces. Its Python static validation passed; manual rendered contrast/accessibility review remains.
-- PR #198 reconciles the Connect/footer boundary: Connect is the sole contact directory; footer is limited to payment, support, signature/copyright and one repository link. Its Python static validation passed; manual rendered checks remain.
-- PR #200 standardises opaque content surfaces across service, booking, founder and WARENA capability sections. Its Python static validation passed; rendered contrast review remains.
-
-The historical rows above remain evidence of earlier baselines. Current defects must be determined from the current `main` source and the current disposition record, not from an older row read in isolation.
-
-
-## Current direction and disposition — 27 November 2026
-
-This register remains a historical audit baseline, with the following verified current direction and release evidence.
-
-- **Current umbrella:** Don Feloh · GRACE · GRIT · GLORY · BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.
-- **GRACE / NAKEBUSEN:** primary enterprise and sole commercial transaction interface; loc-care prices remain Retouch & Styling KES 700, Sisterlocs Retie KES 1,500 and Artificial Locs Installation KES 3,500.
-- **GRIT / WARENA:** technical capability and systems engineering; not a separate checkout.
-- **IKAI:** reflective-computing research / work in progress.
-- **GLORY / GENJE:** creative and embodied practice.
-- **FELOH Corpus:** shared governance, evidence and provenance; not a fifth practice domain.
-
-Website PR [#217](https://github.com/donfelohke/donfelohke.github.io/pull/217) is **merged**. GitHub reports merge commit `fe3daddbd205b3d185ec8546027af30894f4c9d1` at 2026-11-27 15:02:40 UTC. The earlier statement that it remained unmerged is superseded.
-
-The subsequent documentation commit `4ee80ba19bb7e7c5413d5773ce828623a6d59812` passed:
-- [Static site validation](https://github.com/donfelohke/donfelohke.github.io/actions/runs/46049741386) — success.
-- [GitHub Pages workflow](https://github.com/donfelohke/donfelohke.github.io/actions/runs/46049741427) — validate, build, upload and deploy jobs all succeeded. This is deployment-workflow evidence for that commit, not a visual or accessibility inspection.
-
-The approved homepage specification is `docs/FELOH-HOMEPAGE-IMPLEMENTATION-SPEC-2026-11-27.md`. The implementation reduces the homepage research index to three source-linked entries—IKAI, GENJE and FELOH Corpus—while preserving Gallery as a separately governed archive. WARENA remains in the Digital section.
+- Final implementation source commit: `33cf40e92e40ce0d7ce6c86aa62ee226a290d005`.
+- [Static site validation](https://github.com/donfelohke/donfelohke.github.io/actions/runs/46057101234) passed; 29 tests completed.
+- [GitHub Pages workflow](https://github.com/donfelohke/donfelohke.github.io/actions/runs/46057101225) completed successfully. Validation, build, upload and deploy jobs all passed for that source commit.
+- The deployed artifact workflow is confirmed. An external text retrieval snapshot of the public URL nevertheless returned the previous research section. This may be stale retrieval/cache data; live browser refresh is not independently confirmed.
 
 ### Remaining verification, not assumed complete
 
-- Inspect the deployed page visually at mobile and desktop widths, including 320px reflow.
+- Inspect the current live page in a browser at desktop and mobile widths, including 320px reflow.
 - Complete keyboard, screen-reader, reduced-motion, reduced-transparency and contrast review on actual browsers/devices.
 - Review English/Kiswahili content parity; Kiswahili naturalness still requires fluent human editorial review.
 - Check live map, WhatsApp, telephone, email and repository handoffs.
 - Payment facts remain unchanged; merchant authority and transaction settlement are not independently verified by source inspection.
-- Verify the Pages workflow for the implementation commit and record its exact result below.
 
 Do not close a discrepancy as fully **Released and manually verified** until the live page has been inspected after deployment. Automated source checks and successful deployment jobs are not accessibility certification.
