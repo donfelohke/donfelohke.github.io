@@ -42,6 +42,12 @@ This index is the navigation layer for the public website's source, design, cont
 - [FELOH Corpus](https://github.com/donfelohke/feloh-corpus) — shared canon, governance, evidence and provenance.
 - [Gallery](https://github.com/donfelohke/Gallery) — asset rights, consent and approval.
 
+## Current cross-project research · 27 November 2026
+
+- [FELOH canonical alignment](FELOH-CANONICAL-ALIGNMENT-2026-11-27.md) — current founder-approved practice relationships, authored interpretations and public-content boundaries.
+- [WARENA real-time bidirectional I/O standards update](https://github.com/donfelohke/WARENA/blob/main/docs/research/REALTIME-BIDIRECTIONAL-IO-REFERENCE-UPDATE-2026-11-27.md) — V4L2, DMA-BUF, DRM/KMS, PipeWire and conditional OpenXR interface research.
+- [FELOH cooperative, federated computing and embodied interaction synthesis](https://github.com/donfelohke/feloh-corpus/blob/main/docs/research/COOPERATIVE-FEDERATED-COMPUTING-AND-EMBODIED-INTERACTION-SYNTHESIS-2026-11-27.md) — cross-domain context; specialist repositories remain authoritative.
+
 ## Publication rules
 
 - NAKEBUSEN is the primary commercial entry and the only transaction interface.
