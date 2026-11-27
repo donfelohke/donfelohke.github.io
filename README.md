@@ -37,7 +37,7 @@ The current pillar mapping is **GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → 
 
 Current pillar clarification: **GRACE → NAKEBUSEN · GRIT → WARENA · GLORY → GENJE / GENJENESS**. FELOH remains the human author. See [the 26 November identity clarification](docs/IDENTITY-CANONICAL-CLARIFICATION-2026-11-26.md).
 
-The latest specialist research is maintained in its owning repositories and surfaced together in the homepage Knowledge section. These are research records and proposed validation protocols, not claims of completed implementation, deployment, certification or compliance.
+The homepage Research & Creative Practice section contains three concise entries: IKAI, GENJE and FELOH Corpus. Detailed protocols remain in their owning repositories. These records do not imply completed implementation, deployment, certification or compliance. Gallery remains a separately governed archive, not a practice domain.
 
 - [NAKEBUSEN — Eldoret Loc-Care Operations and Regulatory Verification](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/ELDORET-LOC-CARE-OPERATIONS-AND-REGULATORY-VERIFICATION-2026-11-24.md).
 - [WARENA — Reproducible Systems and Real-Time I/O Validation](https://github.com/donfelohke/WARENA/blob/main/docs/REPRODUCIBLE-SYSTEMS-AND-REALTIME-IO-VALIDATION-2026-11-24.md).

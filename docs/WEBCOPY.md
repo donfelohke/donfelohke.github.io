@@ -89,19 +89,6 @@ This is an engagement method, not a claim that every candidate capability is cur
 
 Security guidance: do not send passwords, private keys, PINs or one-time codes in an enquiry. Client permission is required before accessing, copying, moving or deleting data. A backup is not described as reliable until restoration has been tested.
 
-## Founder and research depth
-
-The founder biography explains the distinct domains without merging them into one service:
-- NAKEBUSEN — loc care, beauty, craft and enterprise.
-- WARENA — GNU/Linux, computing, networks and systems engineering.
-- IKAI — reflective-computing research into optics, displays and human-directed interaction.
-- GENJE — Genge-rooted sound, livecoding, movement and choreography.
-
-The research cards distinguish:
-- **IKAI — RESEARCH / WORK IN PROGRESS:** reflective optics, displays, sensing, local computation and human-directed interaction. No released mirror, validated sensor pipeline or deployed beauty-tech system is claimed.
-- **GENJE — CREATIVE PRACTICE / RESEARCH:** Genge-rooted sound, E-Genge, algorithmic club music, livecoding, audiovisual experimentation, movement and choreohacking. Research records are not evidence of a released motion-capture or performance system.
-- **FELOH Corpus — GOVERNANCE / PROVENANCE:** shared identity constitution, terminology, evidence standards, source routing and decision provenance. Specialist repositories retain ownership of their detailed work; Gallery publication remains subject to rights and approval.
-
 ## GRACE · GRIT · GLORY brand architecture
 
 - **GRACE — NAKEBUSEN:** the enterprise; loc care, beauty, craft, heritage, dignity and professional service.
@@ -140,12 +127,13 @@ NAKEBUSEN began in Lodwar, Turkana County, and its loc-care practice continues i
 
 ## Research & creative practice
 
-- **IKAI** — a Turkana female name meaning “home” in the founder-provided naming context; reflective-computing research into optics, displays and human-directed interaction. Independent linguistic and community validation remains a research question.
-- **GENJE** — Genge-rooted creative practice exploring E-Genge, livecoding, sound, code and movement.
-- **FELOH Corpus** — research notes, sources and documented decisions.
-- **Gallery** — an archive published only with the necessary rights, attribution and explicit approval.
+The homepage presents three concise, source-linked entries. Detailed protocols and technical records remain in their specialist repositories.
 
-WARENA is described in its own Digital section and is not repeated in this project list. Dated research registers and detailed protocols belong in FELOH Corpus and specialist project repositories, not the business homepage.
+- **IKAI — RESEARCH / WORK IN PROGRESS:** reflective-computing research into optics, displays, local computation and human-directed interaction. Its adopted Turkana name meaning, “home,” is founder-provided; independent linguistic and community validation remains a research question. No released mirror, validated sensor pipeline or deployed beauty-tech system is claimed. [IKAI research](https://github.com/donfelohke/Ikai).
+- **GENJE — CREATIVE PRACTICE / RESEARCH:** Genge-rooted creative practice across E-Genge, sound, livecoding, movement, choreography and choreohacking. Research records are not proof of a released performance system, motion-capture pipeline or completed work. [GENJE creative practice](https://github.com/donfelohke/Genje).
+- **FELOH Corpus — GOVERNANCE / PROVENANCE:** shared identity constitution, terminology, governance, evidence standards, source routing and decision provenance. It is not a fifth practice domain. [FELOH Corpus](https://github.com/donfelohke/feloh-corpus).
+
+WARENA remains in the Digital section. Gallery remains a separately governed archive and is not presented as a practice domain or homepage research card.
 
 ## Visit & contact
 

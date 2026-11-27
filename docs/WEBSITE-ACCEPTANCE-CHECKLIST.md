@@ -33,7 +33,9 @@ Mark an item only after the check is performed against a named commit.
 - [ ] No JavaScript runtime, inline handlers, Node, generator or package-manager dependency.
 - [ ] No broken internal links or anchor targets.
 - [ ] No horizontal overflow at 320px.
-- [ ] Floating dock does not obscure content or footer.
+- [ ] Floating dock has exactly three destinations and does not obscure content or footer.
+- [ ] Research & Creative Practice contains only IKAI, GENJE and FELOH Corpus, each with a clear status and one authoritative repository link.
+- [ ] Gallery is not presented as a practice domain or homepage research card.
 
 ## Accessibility
 - [ ] Semantic landmarks and one H1.

@@ -2,7 +2,7 @@
 
 **Document ID:** DF-WEB-IS-01  
 **Version:** 1.0 · 27 November 2026  
-**Status:** Implementation specification · approval required before production edits  
+**Status:** Owner-approved implementation specification · 27 November 2026  
 **Repository:** `donfelohke/donfelohke.github.io`  
 **Public site:** https://donfelohke.github.io/  
 **Baseline:** Current `main` source inspected 27 November 2026  
@@ -311,7 +311,7 @@ Do not add a dependency or new repository to solve a problem that can be address
 
 ## 9. Exact implementation file map
 
-This is the anticipated change map for a future approved implementation. It is not a claim that these files have already been changed.
+This file map defines the approved implementation boundary. Actual changed files and verification evidence are recorded in the dated implementation record.
 
 | File | Expected treatment | Change condition |
 |---|---|---|

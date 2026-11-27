@@ -198,17 +198,30 @@ The historical rows above remain evidence of earlier baselines. Current defects 
 
 ## Current direction and disposition — 27 November 2026
 
-This register remains a historical Phase 1 audit baseline. The 27 November homepage decision is a balanced FELOH ecosystem introduction, not the older NAKEBUSEN-only hero direction recorded in several original recommendations.
+This register remains a historical audit baseline, with the following verified current direction and release evidence.
 
 - **Current umbrella:** Don Feloh · GRACE · GRIT · GLORY · BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.
 - **GRACE / NAKEBUSEN:** primary enterprise and sole commercial transaction interface; loc-care prices remain Retouch & Styling KES 700, Sisterlocs Retie KES 1,500 and Artificial Locs Installation KES 3,500.
 - **GRIT / WARENA:** technical capability and systems engineering; not a separate checkout.
 - **IKAI:** reflective-computing research / work in progress.
 - **GLORY / GENJE:** creative and embodied practice.
-- **FELOH Corpus:** shared governance, evidence and provenance.
+- **FELOH Corpus:** shared governance, evidence and provenance; not a fifth practice domain.
 
-Website PR [#217](https://github.com/donfelohke/donfelohke.github.io/pull/217) updates the hero, masthead, metadata, canonical copy and related documentation. Its current head has passed static site validation and GitHub Pages pull-request validation. It remains unmerged and is not production deployment evidence.
+Website PR [#217](https://github.com/donfelohke/donfelohke.github.io/pull/217) is **merged**. GitHub reports merge commit `fe3daddbd205b3d185ec8546027af30894f4c9d1` at 2026-11-27 15:02:40 UTC. The earlier statement that it remained unmerged is superseded.
 
-The old WADR-001 / WADR-002 proposed service-first and subordinate-ecosystem recommendations must be read as historical. The new hero keeps NAKEBUSEN commercially prominent while introducing the full practice architecture. Remaining release evidence is manual: visual hierarchy, 320px reflow, mobile navigation, keyboard and screen-reader behaviour, contrast, reduced-motion/transparency, bilingual editorial review, payment-section preservation and deployed-page verification.
+The subsequent documentation commit `4ee80ba19bb7e7c5413d5773ce828623a6d59812` passed:
+- [Static site validation](https://github.com/donfelohke/donfelohke.github.io/actions/runs/46049741386) — success.
+- [GitHub Pages workflow](https://github.com/donfelohke/donfelohke.github.io/actions/runs/46049741427) — validate, build, upload and deploy jobs all succeeded. This is deployment-workflow evidence for that commit, not a visual or accessibility inspection.
 
-Do not close a discrepancy as **Released** until the relevant merged commit is verified on the live site. Automated source checks are not a substitute for these release gates.
+The approved homepage specification is `docs/FELOH-HOMEPAGE-IMPLEMENTATION-SPEC-2026-11-27.md`. The implementation reduces the homepage research index to three source-linked entries—IKAI, GENJE and FELOH Corpus—while preserving Gallery as a separately governed archive. WARENA remains in the Digital section.
+
+### Remaining verification, not assumed complete
+
+- Inspect the deployed page visually at mobile and desktop widths, including 320px reflow.
+- Complete keyboard, screen-reader, reduced-motion, reduced-transparency and contrast review on actual browsers/devices.
+- Review English/Kiswahili content parity; Kiswahili naturalness still requires fluent human editorial review.
+- Check live map, WhatsApp, telephone, email and repository handoffs.
+- Payment facts remain unchanged; merchant authority and transaction settlement are not independently verified by source inspection.
+- Verify the Pages workflow for the implementation commit and record its exact result below.
+
+Do not close a discrepancy as fully **Released and manually verified** until the live page has been inspected after deployment. Automated source checks and successful deployment jobs are not accessibility certification.
