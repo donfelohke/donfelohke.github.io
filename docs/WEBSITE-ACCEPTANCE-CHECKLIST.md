@@ -17,9 +17,9 @@ Mark an item only after the check is performed against a named commit.
 - [ ] English default; Kiswahili content is complete, readable and reviewed against canonical copy.
 
 ## Services and trust
-- [ ] Retouch & Styling — KES 700 (no plus sign).
-- [ ] Sisterlocs Retie — KES 1,500 (no plus sign).
-- [ ] Artificial Locs Installation — KES 3,500.
+- [ ] Retouch & Styling — KES 700+ (starting price).
+- [ ] Sisterlocs Retie — KES 1,500+ (starting price).
+- [ ] Artificial Locs Installation — KES 3,500 (fixed price).
 - [ ] Location matches the facts register.
 - [ ] Enquiry-not-booking disclosure is visible.
 - [ ] Digital feasibility, scope and availability are qualified.
