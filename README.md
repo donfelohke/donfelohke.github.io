@@ -29,7 +29,7 @@ The homepage opens with the complete FELOH universe and routes visitors into its
 
 **ONLY NAKEBUSEN TRANSACTS.** Keep service enquiries, availability, agreements and payment within NAKEBUSEN.
 
-## Current identity and price clarification · 2026-11-26
+## Current identity and price clarification · 2026-11-27
 
 The current pillar mapping is **GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → GENJE / GENJENESS**. FELOH remains the human author and decision-maker. Published loc-care prices: Retouch & Styling starts at KES 700+; Sisterlocs Retie starts at KES 1,500+; Artificial Locs Installation is fixed at KES 3,500. Final scope and any additional costs are agreed directly. GENJE's authored English interpretation is **GREATNESS**; WARENA's is **THE POWERFUL**. These are distinct authored interpretations, not literal translations or interchangeable synonyms.
 
