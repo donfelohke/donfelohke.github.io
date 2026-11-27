@@ -1,14 +1,19 @@
 # Website Acceptance Checklist
 
+**Updated:** 27 November 2026 · current FELOH ecosystem homepage direction
+
 Mark an item only after the check is performed against a named commit.
 
 ## Brand and copy
-- [ ] NAKEBUSEN and loc care are immediately clear.
-- [ ] Approved headline and brand lockup are retained.
-- [ ] Locs is primary; Digital is secondary.
-- [ ] WARENA is a distinct capability domain, not a separate checkout.
-- [ ] IKAI is labelled research / WIP; GENJE creative practice.
-- [ ] English default; Kiswahili disclosure is complete, readable and consistent with canonical web copy.
+- [ ] Don Feloh is the human-author masthead; GRACE · GRIT · GLORY is the public practice signature.
+- [ ] The umbrella headline reads **Beautiful roots. Sovereign systems.**
+- [ ] The hero introduces the connected FELOH practices without collapsing their roles.
+- [ ] NAKEBUSEN is the primary enterprise and sole transaction interface; its loc-care route and prices remain prominent.
+- [ ] WARENA is technical capability, not a separate checkout.
+- [ ] IKAI is labelled reflective-computing research / work in progress, not a released product.
+- [ ] GENJE is labelled creative / embodied practice, not a separate checkout.
+- [ ] FELOH Corpus is described as shared governance, evidence and provenance.
+- [ ] English default; Kiswahili content is complete, readable and reviewed against canonical copy.
 
 ## Services and trust
 - [ ] Retouch & Styling — KES 700 (no plus sign).
@@ -18,12 +23,13 @@ Mark an item only after the check is performed against a named commit.
 - [ ] Enquiry-not-booking disclosure is visible.
 - [ ] Digital feasibility, scope and availability are qualified.
 - [ ] Payment details and safety instructions match the register.
-- [ ] Support Us remains separate from service payment.
+- [ ] Support Us remains in the footer and separate from service payment.
+- [ ] The visible rule **ONLY NAKEBUSEN TRANSACTS** remains clear.
 
 ## Architecture and mobile
 - [ ] Exactly one public HTML document.
 - [ ] One primary CSS stylesheet.
-- [ ] No JavaScript, Node, generator or package-manager dependency.
+- [ ] No JavaScript runtime, inline handlers, Node, generator or package-manager dependency.
 - [ ] No broken internal links or anchor targets.
 - [ ] No horizontal overflow at 320px.
 - [ ] Floating dock does not obscure content or footer.

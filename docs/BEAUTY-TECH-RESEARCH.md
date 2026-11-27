@@ -1,6 +1,6 @@
 # Beauty + Technology: NAKEBUSEN Research and Implementation Brief
 
-**Revision:** 2026-10-26  
+**Revision:** 2026-10-26 · current facts reconciled 2026-11-27  
 **Status:** Research synthesis and implementation guidance; not a claim of completed market validation.  
 **Scope:** NAKEBUSEN Locs, NAKEBUSEN Digital / WARENA, the public GitHub Pages site, and customer booking workflows.
 
@@ -32,14 +32,14 @@ Do not place a long founder biography, ecosystem manifesto, or research project 
 
 ## 2. Beauty offer and booking experience
 
-### Verified published-price catalogue
-| Service | Starting price |
+### Current published-price catalogue — 27 November 2026
+| Service | Published price |
 | --- | ---: |
 | Retouch & Styling | KES 700 |
 | Sisterlocs Retie | KES 1,500 |
-| Artificial Locs Install | KES 3,500 |
+| Artificial Locs Installation | KES 3,500 |
 
-Prices are starting points. Confirm scope, loc condition, materials, final quote and appointment timing directly. Do not advertise braiding, home visits, same-day availability, fixed completion times or free extras unless separately verified and approved.
+These are fixed published prices, not starting-price estimates. Discuss any additional work, materials or scope changes directly and agree them before work begins. An enquiry does not confirm a booking; availability and appointment details are agreed directly. Do not advertise braiding, home visits, same-day availability, fixed completion times or free extras unless separately verified and approved.
 
 ### Booking journey
 1. Visitor sees the service, published price and service area.

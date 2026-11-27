@@ -1,3 +1,5 @@
+> **Supersession notice — 27 November 2026:** This 21 November upgrade plan is retained as historical planning context. Its loc-care-first hero and “starting price” wording are superseded by the balanced FELOH ecosystem introduction and the fixed published prices: Retouch & Styling KES 700; Sisterlocs Retie KES 1,500; Artificial Locs Installation KES 3,500. Current requirements are governed by [UI-UX-PRODUCT-SPEC.md](UI-UX-PRODUCT-SPEC.md), [WEBCOPY.md](WEBCOPY.md), [PUBLIC-FACTS-REGISTER.md](PUBLIC-FACTS-REGISTER.md) and [SERVICE-CATALOG.md](SERVICE-CATALOG.md). Preserve the historical implementation record below; do not treat it as a current task list without revalidation.
+
 # Repository upgrade plan — 2026-11-21
 
 **Repository:** `donfelohke.github.io`  

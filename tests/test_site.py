@@ -54,6 +54,13 @@ class PublicationTests(unittest.TestCase):
         self.assertIn('<html lang="en">', HTML)
         self.assertIn('<main id="main">', HTML)
         self.assertEqual(1, self.parser.h1)
+        self.assertIn('<span class="brand-name">DON FELOH</span>', HTML)
+        self.assertIn('<span class="brand-powered">GRACE · GRIT · GLORY</span>', HTML)
+        self.assertIn("One human author. Connected practices in enterprise, systems engineering, reflective research and creative expression.", HTML)
+        self.assertIn("NAKEBUSEN is the commercial home.", HTML)
+        self.assertIn("WARENA enables the technical work.", HTML)
+        self.assertIn("IKAI investigates reflective computing.", HTML)
+        self.assertIn("GENJE brings sound, code and movement together.", HTML)
         self.assertIn("NAKEBUSEN · WARENA POWERED", HTML)
         self.assertIn("WARENA POWERED", HTML)
         self.assertIn("GRACE — NAKEBUSEN", HTML)
@@ -65,8 +72,9 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("GENJE ZA WARENA", HTML)
         self.assertIn("BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.", HTML)
         self.assertIn("GRACE · GRIT · GLORY", HTML)
-        self.assertIn("Loc care", HTML)
-        self.assertIn("in Eldoret.", HTML)
+        self.assertIn("Beautiful roots.", HTML)
+        self.assertIn("Sovereign systems.", HTML)
+        self.assertIn("Loc care in Eldoret", HTML)
         self.assertIn("Retouch &amp; Styling, Sisterlocs Retie and Artificial Locs Installation—with published prices and direct WhatsApp enquiries.", HTML)
         self.assertIn("Need GNU/Linux, computer or network support?", HTML)
         self.assertNotIn("Practical GNU/Linux, computer and network support is also available through WARENA.", HTML)
@@ -74,7 +82,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("KES 700", HTML)
         self.assertIn("KES 1,500", HTML)
         self.assertIn("KES 3,500", HTML)
-        self.assertIn("Angalia bei za kila huduma mapema; kazi au vifaa vya ziada hukubaliwa kabla ya kuanza.", HTML)
+        self.assertIn("Mwandishi mmoja. Shughuli zinazounganisha biashara, uhandisi wa mifumo, utafiti wa kompyuta tafakari na ubunifu wa kisanaa.", HTML)
         self.assertIn("Practical GNU/Linux, computer and network support for individuals, homes, businesses and organisations.", HTML)
         self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
         self.assertIn("Founder, NAKEBUSEN · Founder &amp; CTO, WARENA · Loctician · Creative Technologist", HTML)
@@ -344,28 +352,28 @@ class PublicationTests(unittest.TestCase):
     def test_social_metadata_is_accurate_and_has_no_unapproved_image(self):
         for phrase in (
             'property="og:type" content="website"',
-            'property="og:site_name" content="NAKEBUSEN · DON FELOH"',
-            'property="og:title" content="NAKEBUSEN | Loc Care in Eldoret · WARENA Powered"',
-            'name="twitter:title" content="NAKEBUSEN | Loc Care in Eldoret · WARENA Powered"',
+            'property="og:site_name" content="DON FELOH · FELOH ECOSYSTEM"',
+            'property="og:title" content="Don Feloh | Grace · Grit · Glory"',
+            'name="twitter:title" content="Don Feloh | Grace · Grit · Glory"',
             'property="og:url" content="https://donfelohke.github.io/"',
             'property="og:locale" content="en_KE"',
             'property="og:locale:alternate" content="sw_KE"',
             'name="twitter:card" content="summary"',
-            'name="twitter:description" content="Retouch & Styling, Sisterlocs Retie and Artificial Locs Installation in Eldoret. See prices and enquire directly with NAKEBUSEN."',
+            'name="twitter:description" content="The public home of Don Feloh: NAKEBUSEN, WARENA, IKAI, GENJE and FELOH Corpus. Explore enterprise, systems engineering, research and creative practice."',
             'name="description"',
         ):
             self.assertIn(phrase, HTML)
         self.assertNotIn('property="og:image"', HTML)
         self.assertNotIn('name="twitter:image"', HTML)
-        self.assertIn("<title>NAKEBUSEN | Loc Care in Eldoret · WARENA Powered</title>", HTML)
+        self.assertIn("<title>Don Feloh · Grace · Grit · Glory</title>", HTML)
         self.assertIn("Sisterlocs Retie", HTML)
         self.assertIn("Artificial Locs Installation", HTML)
         self.assertIn("https://github.com/donfelohke/feloh-corpus", HTML)
         self.assertNotIn("FELOH-FOUNDATIONAL-CASE-AND-EVIDENCE-PROGRAMME", HTML)
-        self.assertIn("Enquire about loc care", HTML)
-        self.assertIn("Compare services &amp; prices", HTML)
-        self.assertIn("Ulizia kupitia WhatsApp", HTML)
-        self.assertIn("Tazama maelezo ya huduma", HTML)
+        self.assertIn("Explore the whole work", HTML)
+        self.assertIn("NAKEBUSEN · Loc care in Eldoret", HTML)
+        self.assertIn("Chunguza kazi zote", HTML)
+        self.assertIn("NAKEBUSEN · Utunzaji wa loc Eldoret", HTML)
         self.assertIn('media="(prefers-color-scheme: light)"', HTML)
         self.assertIn('media="(prefers-color-scheme: dark)"', HTML)
         self.assertNotIn('rel="icon"', HTML)
@@ -463,6 +471,13 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("page-index a:focus-visible", CSS)
 
 
+
+    def test_static_delivery_has_no_javascript_or_remote_embeds(self):
+        self.assertNotRegex(HTML, r"(?is)<script\b")
+        self.assertNotRegex(HTML, r"(?i)\son[a-z]+\s*=")
+        self.assertNotRegex(HTML, r"(?i)href\s*=\s*['\"]javascript:")
+        self.assertNotRegex(HTML, r"(?is)<iframe\b")
+        self.assertNotRegex(CSS, r"(?i)@import\s+url")
 
     def test_fixed_public_prices_match_all_authoritative_publication_records(self):
         catalogue = (ROOT / "docs/SERVICE-CATALOG.md").read_text(encoding="utf-8")

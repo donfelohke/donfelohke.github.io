@@ -1,3 +1,5 @@
+> **Historical remediation record — 27 November 2026:** This document records fixes to the 20 November source baseline and remains useful for their provenance. It is not the current homepage design specification. The current public hierarchy is the balanced FELOH ecosystem introduction with NAKEBUSEN as the primary enterprise and sole transaction interface. Current exact prices and copy are governed by [PUBLIC-FACTS-REGISTER.md](PUBLIC-FACTS-REGISTER.md), [SERVICE-CATALOG.md](SERVICE-CATALOG.md) and [WEBCOPY.md](WEBCOPY.md). No live visual or accessibility verification is implied by the earlier workflow results.
+
 # Website Quality Remediation — 20 November 2026
 
 ## Scope
