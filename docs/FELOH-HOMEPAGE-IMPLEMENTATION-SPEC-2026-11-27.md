@@ -116,13 +116,13 @@ Keep exactly three currently approved public services:
 
 | Service | Published price | Required scope distinction |
 |---|---:|---|
-| Retouch & Styling | KES 700 | Maintenance and styling of existing locs |
-| Sisterlocs Retie | KES 1,500 | Retightening an established Sisterlocs installation; not a new installation |
+| Retouch & Styling | From KES 700+ | Maintenance and styling of existing locs |
+| Sisterlocs Retie | From KES 1,500+ | Retightening an established Sisterlocs installation; not a new installation |
 | Artificial Locs Installation | KES 3,500 | New artificial-loc installation; style, materials and scope agreed before work |
 
 Price rules:
-- These are fixed published prices, not starting prices.
-- Do not append a plus sign.
+- Retouch & Styling and Sisterlocs Retie are starting prices; final scope and additional work are agreed directly.
+- Artificial Locs Installation is fixed at KES 3,500; do not append a plus sign.
 - Do not add unapproved services, duration estimates, product inclusions or outcome guarantees.
 - No braiding or shaving.
 - The founder does not cut clients' natural hair.
@@ -345,7 +345,8 @@ A change is not accepted until the following are checked against the exact candi
 ### Content and factual integrity
 - [ ] Balanced ecosystem headline and Don Feloh authorship remain.
 - [ ] NAKEBUSEN is immediately discoverable and remains the sole transaction interface.
-- [ ] All three published prices are exact and contain no plus sign.
+- [ ] Retouch & Styling starts at KES 700+ and Sisterlocs Retie starts at KES 1,500+.
+- [ ] Artificial Locs Installation is fixed at KES 3,500 without a plus sign.
 - [ ] Service names and scope match the current service catalogue.
 - [ ] No braiding, shaving or unapproved service appears.
 - [ ] Enquiry-not-booking disclosure remains visible.
