@@ -139,7 +139,7 @@ Use the same accurate title and description for Open Graph and Twitter metadata.
 - IKAI is research / work in progress; no released mirror product is implied.
 - GENJE is creative practice; no commercial product or performance system is implied without evidence.
 - The proposed IKAI association with “home” remains linguistically unverified; do not state it as settled etymology.
-- “The Fire of the Formidable” is an adopted GENJE creative interpretation, not a universal etymology.
+- GENJE's authored English interpretation is GREATNESS; WARENA's is THE POWERFUL. Keep them distinct and do not present either as a literal translation or verified dictionary gloss.
 - Separate NAKEBUSEN's business history from the founder's personal biography.
 - Do not invent credentials, testimonials, client outcomes, availability or guarantees.
 - Do not publish braiding or shaving services.
