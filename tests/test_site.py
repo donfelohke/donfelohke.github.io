@@ -65,8 +65,9 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("GENJE ZA WARENA", HTML)
         self.assertIn("BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.", HTML)
         self.assertIn("GRACE · GRIT · GLORY", HTML)
-        self.assertIn("Loc care", HTML)
-        self.assertIn("in Eldoret.", HTML)
+        self.assertIn("Beautiful roots.", HTML)
+        self.assertIn("Sovereign systems.", HTML)
+        self.assertIn("Loc care in Eldoret", HTML)
         self.assertIn("Retouch &amp; Styling, Sisterlocs Retie and Artificial Locs Installation—with published prices and direct WhatsApp enquiries.", HTML)
         self.assertIn("Need GNU/Linux, computer or network support?", HTML)
         self.assertNotIn("Practical GNU/Linux, computer and network support is also available through WARENA.", HTML)
@@ -344,9 +345,9 @@ class PublicationTests(unittest.TestCase):
     def test_social_metadata_is_accurate_and_has_no_unapproved_image(self):
         for phrase in (
             'property="og:type" content="website"',
-            'property="og:site_name" content="NAKEBUSEN · DON FELOH"',
-            'property="og:title" content="NAKEBUSEN | Loc Care in Eldoret · WARENA Powered"',
-            'name="twitter:title" content="NAKEBUSEN | Loc Care in Eldoret · WARENA Powered"',
+            'property="og:site_name" content="DON FELOH · FELOH ECOSYSTEM"',
+            'property="og:title" content="Don Feloh | Grace · Grit · Glory"',
+            'name="twitter:title" content="Don Feloh | Grace · Grit · Glory"',
             'property="og:url" content="https://donfelohke.github.io/"',
             'property="og:locale" content="en_KE"',
             'property="og:locale:alternate" content="sw_KE"',
@@ -357,15 +358,15 @@ class PublicationTests(unittest.TestCase):
             self.assertIn(phrase, HTML)
         self.assertNotIn('property="og:image"', HTML)
         self.assertNotIn('name="twitter:image"', HTML)
-        self.assertIn("<title>NAKEBUSEN | Loc Care in Eldoret · WARENA Powered</title>", HTML)
+        self.assertIn("<title>Don Feloh · Grace · Grit · Glory</title>", HTML)
         self.assertIn("Sisterlocs Retie", HTML)
         self.assertIn("Artificial Locs Installation", HTML)
         self.assertIn("https://github.com/donfelohke/feloh-corpus", HTML)
         self.assertNotIn("FELOH-FOUNDATIONAL-CASE-AND-EVIDENCE-PROGRAMME", HTML)
-        self.assertIn("Enquire about loc care", HTML)
-        self.assertIn("Compare services &amp; prices", HTML)
-        self.assertIn("Ulizia kupitia WhatsApp", HTML)
-        self.assertIn("Tazama maelezo ya huduma", HTML)
+        self.assertIn("Explore the whole work", HTML)
+        self.assertIn("NAKEBUSEN · Loc care in Eldoret", HTML)
+        self.assertIn("Chunguza kazi zote", HTML)
+        self.assertIn("NAKEBUSEN · Utunzaji wa loc Eldoret", HTML)
         self.assertIn('media="(prefers-color-scheme: light)"', HTML)
         self.assertIn('media="(prefers-color-scheme: dark)"', HTML)
         self.assertNotIn('rel="icon"', HTML)
