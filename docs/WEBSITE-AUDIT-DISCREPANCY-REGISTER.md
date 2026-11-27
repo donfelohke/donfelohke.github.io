@@ -151,7 +151,7 @@ The remediation does not change the global palette, service-card design, prices,
 
 ## Current service-fact reconciliation — 2026-11-22
 
-The current NAKEBUSEN source of record confirms Retouch & Styling KES 700 and Sisterlocs Retie KES 1,500 as published prices; Artificial Locs Installation remains KES 3,500 without a plus sign. Older values in this dated audit are historical snapshots and are superseded for current publication by the [NAKEBUSEN service catalogue](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/service-catalogue.md) and the current [public facts register](PUBLIC-FACTS-REGISTER.md).
+The current NAKEBUSEN source of record confirms Retouch & Styling from KES 700+ and Sisterlocs Retie from KES 1,500+ as starting prices; Artificial Locs Installation remains fixed at KES 3,500. Older values in this dated audit are historical snapshots and are superseded for current publication by the [NAKEBUSEN service catalogue](https://github.com/donfelohke/NAKEBUSEN/blob/main/docs/service-catalogue.md) and the current [public facts register](PUBLIC-FACTS-REGISTER.md).
 
 
 ---
@@ -164,7 +164,7 @@ This section supersedes older findings wherever they conflict with the current m
 
 - The public architecture is now a single bilingual, text-first page with section anchors. The earlier four-destination proposal is historical.
 - The current public identity is **NAKEBUSEN · WARENA POWERED**, **GRACE · GRIT · GLORY**, **BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**, and **@donfelohke · #HisGenjeness**. Do not revive older lockups or homepage headlines from historical audit rows.
-- Current LOCS prices are Retouch & Styling **KES 700**, Sisterlocs Retie **KES 1,500**, and Artificial Locs Installation **KES 3,500**. The first two are published prices without a plus sign. The NAKEBUSEN source catalogue is the service-specific source of record.
+- Current LOCS prices are Retouch & Styling **from KES 700+**, Sisterlocs Retie **from KES 1,500+**, and Artificial Locs Installation **KES 3,500 fixed**. The NAKEBUSEN source catalogue is the service-specific source of record.
 - Current location wording is **Beside King's Square · Kisumu Road · Eldoret Town · Uasin Gishu · Kenya**. F743+R35 and the supplied map pin are directions references, not an independently verified street address. Older Karibu Mdosi wording in this repository's service catalogue is superseded.
 - IKAI's founder-approved identity meaning is “home”, described as a Turkana female name. This is an approved identity statement; it must not be inflated into independent linguistic certification.
 - WARENA remains a distinct technical capability domain; GENJE remains creative and embodied practice; IKAI remains research/WIP; FELOH Corpus remains knowledge governance. **ONLY NAKEBUSEN TRANSACTS.**
