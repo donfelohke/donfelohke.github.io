@@ -130,7 +130,7 @@ NAKEBUSEN began in Lodwar, Turkana County, and its loc-care practice continues i
 The homepage presents three concise, source-linked entries. Detailed protocols and technical records remain in their specialist repositories.
 
 - **IKAI — RESEARCH / WORK IN PROGRESS:** reflective-computing research into optics, displays, local computation and human-directed interaction. Its adopted Turkana name meaning, “home,” is founder-provided; independent linguistic and community validation remains a research question. No released mirror, validated sensor pipeline or deployed beauty-tech system is claimed. [IKAI research](https://github.com/donfelohke/Ikai).
-- **GENJE — CREATIVE PRACTICE / RESEARCH:** Genge-rooted creative practice across E-Genge, sound, livecoding, movement, choreography and choreohacking. Research records are not proof of a released performance system, motion-capture pipeline or completed work. [GENJE creative practice](https://github.com/donfelohke/Genje).
+- **GENJE — CREATIVE PRACTICE / RESEARCH:** Genge-rooted creative practice across E-Genge, sound, livecoding, movement, choreography and Choreohacking. Research records are not proof of a released performance system, motion-capture pipeline or completed work. [GENJE creative practice](https://github.com/donfelohke/Genje).
 - **FELOH Corpus — GOVERNANCE / PROVENANCE:** shared identity constitution, terminology, governance, evidence standards, source routing and decision provenance. It is not a fifth practice domain. [FELOH Corpus](https://github.com/donfelohke/feloh-corpus).
 
 WARENA remains in the Digital section. Gallery remains a separately governed archive and is not presented as a practice domain or homepage research card.
