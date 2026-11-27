@@ -38,7 +38,7 @@ Preserve the degree sign `°`. Do not substitute a bullet or middle dot.
 
 **Philosophy:** We believe human capability, cultural heritage and technical ingenuity belong together.
 
-**Identity expression:** GENJE ZA WARENA — THE FIRE OF THE FORMIDABLE. This is an adopted brand interpretation, not verified linguistic etymology.
+**Identity expression:** GENJE ZA WARENA. GENJE's authored English interpretation is GREATNESS; WARENA's is THE POWERFUL. These are distinct brand interpretations, not a literal translation.
 
 **Community:** Watu ndio mali. Heshima idumu.
 
