@@ -140,7 +140,7 @@ NAKEBUSEN began in Lodwar, Turkana County, and its loc-care practice continues i
 
 ## Research & creative practice
 
-- **IKAI** — a Turkana female name meaning “home”; reflective-computing research into optics, displays and human-directed interaction. This is the founder-approved identity meaning, not a claim of independent linguistic certification.
+- **IKAI** — a Turkana female name meaning “home” in the founder-provided naming context; reflective-computing research into optics, displays and human-directed interaction. Independent linguistic and community validation remains a research question.
 - **GENJE** — Genge-rooted creative practice exploring E-Genge, livecoding, sound, code and movement.
 - **FELOH Corpus** — research notes, sources and documented decisions.
 - **Gallery** — an archive published only with the necessary rights, attribution and explicit approval.
