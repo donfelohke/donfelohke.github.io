@@ -1,38 +1,46 @@
-# Website Copy — NAKEBUSEN · WARENA POWERED
+# Website Copy — Don Feloh · Grace · Grit · Glory
 
-**Review date:** 24 November 2026  
-**Publication architecture:** One-page static website · English / Kiswahili  
-**Editorial direction:** Loc-care service first; research and creative work secondary.
+**Review date:** 27 November 2026  
+**Publication architecture:** One-page, text-first static website · English default / Kiswahili option  
+**Editorial direction:** Balanced introduction to the complete FELOH practice architecture. NAKEBUSEN remains the primary commercial entry and sole transaction interface; WARENA, IKAI and GENJE retain distinct technical, research and creative roles.
 
-## Page hierarchy
+## Public hierarchy
 
-1. Hero — loc-care proposition, published prices, WhatsApp enquiry and Eldoret location.
-2. Services — scope and restrictions for each loc-care service; booking conditions.
-3. WARENA — practical GNU/Linux, computer and network engagements.
-4. About — concise founder introduction and NAKEBUSEN's Lodwar-to-Eldoret history.
-5. Research & Creative Practice — IKAI, GENJE, FELOH Corpus and Gallery.
-6. Visit & Contact — map, directions, home-visit conditions and direct contact details.
-7. Footer — canonical brand signature, founder mark, NAKEBUSEN transaction boundary, manual M-PESA instructions and separate voluntary support.
+1. **Human author:** Felix Lwova · Don Feloh · @donfelohke · #HisGenjeness.
+2. **Umbrella positioning:** BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS. · GRACE · GRIT · GLORY.
+3. **NAKEBUSEN / GRACE:** natural loc care, beauty, heritage, craft and grounded enterprise; the only commercial transaction path.
+4. **WARENA / GRIT:** libre-first systems engineering, GNU/Linux, infrastructure and technical enablement; not a separate checkout.
+5. **IKAI / MIRROR:** reflective-computing research / work in progress, not a released product.
+6. **GENJE / GLORY:** Genge-rooted sound, livecoding, movement, choreography and embodied creative practice.
+7. **FELOH Corpus:** shared identity, governance, evidence and provenance; not another practice domain.
+8. **Contact and footer:** NAKEBUSEN service enquiries, clear confirmation boundary, manual payment safeguards and separate voluntary support.
 
-## Hero
+## Hero — current implementation direction
 
-**Eyebrow:** NAKEBUSEN · LOC CARE  
-**H1:** Loc care in Eldoret.  
-**Proposition:** Retouch & Styling, Sisterlocs Retie and Artificial Locs Installation—with published prices and direct WhatsApp enquiries.
+**Eyebrow:** FELOH · GRACE · GRIT · GLORY  
+**H1:** Beautiful roots. Sovereign systems.  
+**Proposition:** One human author. Connected practices in enterprise, systems engineering, reflective research and creative expression.
 
-**Supporting line:** Need GNU/Linux, computer or network support? Explore WARENA. Technical work is assessed and agreed separately.  
-**Primary CTA:** Enquire about loc care  
-**Secondary CTA:** Compare services & prices  
-**Location line:** Beside King's Square · Kisumu Road · Eldoret Town
+**Practice summary:** NAKEBUSEN is the commercial home. WARENA enables the technical work. IKAI investigates reflective computing. GENJE brings sound, code and movement together.
 
-The header presents NAKEBUSEN as the primary name and WARENA POWERED as a restrained technical endorsement. The hero remains commercial-first; the master positioning is expressed through the page's visual language and the full footer signature, not as a competing hero headline.
+**Primary CTA:** Explore the whole work  
+**Secondary CTA:** NAKEBUSEN · Loc care in Eldoret
 
-The hero price panel is a quick-reference summary. The service cards repeat the prices beside their descriptions so visitors who jump directly to the services section still see the amount. This is intentional functional repetition; do not add another price list elsewhere.
+**Founder line:** Felix Lwova · Don Feloh · @donfelohke · #HisGenjeness
 
-**Kiswahili H1:** Utunzaji wa loc mjini Eldoret.  
-**Kiswahili proposition:** Matengenezo ya loc zilizopo, kukaza upya Sisterlocs na uwekaji wa loc za bandia. Angalia bei za kila huduma mapema; kazi au vifaa vya ziada hukubaliwa kabla ya kuanza.  
-**Primary CTA:** Ulizia kupitia WhatsApp  
-**Secondary CTA:** Tazama maelezo ya huduma
+**Commercial detail:** NAKEBUSEN loc care: Retouch & Styling, Sisterlocs Retie and Artificial Locs Installation—with published prices and direct WhatsApp enquiries.
+
+**WARENA supporting line:** Need GNU/Linux, computer or network support? Explore WARENA. Technical work is assessed and agreed separately.
+
+The primary hero action introduces the complete body of work; the NAKEBUSEN service route remains explicit and prominent. This is not a transfer of commercial authority to FELOH, WARENA, IKAI or GENJE. **ONLY NAKEBUSEN TRANSACTS.**
+
+**Kiswahili H1:** Mizizi mizuri. Mifumo ya kujitawala.  
+**Kiswahili proposition:** Mwandishi mmoja. Shughuli zinazounganisha biashara, uhandisi wa mifumo, utafiti wa kompyuta tafakari na ubunifu wa kisanaa.  
+**Kiswahili practice summary:** NAKEBUSEN ndiyo biashara na njia ya huduma. WARENA huwezesha kazi za teknolojia. IKAI huchunguza kompyuta tafakari. GENJE huunganisha sauti, msimbo na mwendo.  
+**Primary CTA:** Chunguza kazi zote  
+**Secondary CTA:** NAKEBUSEN · Utunzaji wa loc Eldoret
+
+The Kiswahili hero is the current authored draft and remains subject to human editorial review; do not describe it as independently linguistically verified.
 
 ## Services & prices
 
