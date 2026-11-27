@@ -37,10 +37,10 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-014 | Phone: +254 719 635 415 | F1 | Verify before campaigns |
 | PF-015 | WhatsApp: https://wa.me/254719635415 | F1 | Enquiry channel |
 | PF-016 | Email: mela9ine@proton.me | F1 | Verify before campaigns |
-| PF-017 | Retouch & Styling published price KES 700 | F1 | Current approved public price; do not append “+” |
-| PF-018 | Sisterlocs Retie published price KES 1,500 | F1 | Current approved public price; do not append “+”; canonical service label |
+| PF-017 | Retouch & Styling starting price KES 700+ | F1 | Current approved public starting price; final amount depends on agreed scope |
+| PF-018 | Sisterlocs Retie starting price KES 1,500+ | F1 | Current approved public starting price; final amount depends on agreed scope; canonical service label |
 | PF-019 | Artificial Locs Installation published price KES 3,500 | F1 | Current approved public price; do not append “+” |
-| PF-020 | Additional work, materials or changes in scope may affect the final amount | F1 | Discuss and agree any additional work and final scope directly before work begins; do not mislabel the three published prices as starting prices |
+| PF-020 | Additional work, materials or changes in scope may affect the final amount | F1 | Discuss and agree any additional work and final scope directly before work begins; first two published prices are starting prices; Artificial Locs Installation is fixed |
 | PF-021 | No braiding | F1 | Do not advertise braiding |
 | PF-022 | No shaving | F1 | Do not advertise shaving |
 | PF-023 | Loc-care home calls across the wider Eldoret Town service area | F1 | Confirm exact location, suitability, availability and travel costs directly; no fixed kilometre radius or universal coverage |
@@ -63,7 +63,7 @@ This register controls factual claims used on the website, service catalogue, pr
 
 ## Publication controls
 
-1. Prices, contact details and published M-PESA payment details must match this register and SERVICE-CATALOG. Re-verify the Till/merchant pairing before any change or paid campaign.
+1. Prices, contact details and published M-PESA payment details must match this register and SERVICE-CATALOG. Retouch & Styling and Sisterlocs Retie are starting prices; Artificial Locs Installation is fixed at KES 3,500. Re-verify the Till/merchant pairing before any change or paid campaign.
 2. Digital capability must be labelled according to actual availability.
 3. Linguistic interpretations must retain their evidence class and qualification. PF-039 is a founder-approved naming decision, not independent linguistic certification.
 4. Founder display-name and copyright attribution must not be silently changed; PF-027 and PF-028 remain subject to their stated evidence classes.
