@@ -52,6 +52,10 @@ The Kiswahili hero is the current authored draft and remains subject to human ed
 | Sisterlocs Retie | KES 1,500+ |
 | Artificial Locs Installation | KES 3,500 |
 
+Retouch & Styling and Sisterlocs Retie are starting prices. Artificial Locs Installation is fixed at KES 3,500. Final scope and any additional costs are agreed directly before work begins.
+
+**Kiswahili:** Bei za Retouch & Styling na Sisterlocs Retie ni za kuanzia. Uwekaji wa Loc za Bandia una bei maalum ya KES 3,500. Kazi ya mwisho na gharama zozote za ziada hukubaliwa moja kwa moja kabla ya kuanza.
+
 - **Retouch & Styling:** For maintenance and styling of locs you already have. We’ll discuss their condition and the work needed before agreeing the scope.
 - **Sisterlocs Retie:** For retightening an established Sisterlocs installation. This is maintenance—not a new installation.
 - **Artificial Locs Installation:** For a new artificial-loc installation. Agree the preferred look, materials and exact work before starting.
