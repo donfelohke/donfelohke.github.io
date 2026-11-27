@@ -61,7 +61,7 @@ F3L0H / FELOH WARENA is the overarching human authorship and practice identity. 
 ## Adopted language
 
 - NAKEBUSEN is used with the founder-supplied interpretation “Beautiful” in Turkana; formal linguistic verification remains open.
-- GENJE ZA WARENA is adopted as “THE FIRE OF THE FORMIDABLE”; this is a brand interpretation, not verified etymology.
+- GENJE's central authored English interpretation is **GREATNESS**; WARENA's is **THE POWERFUL**. These are distinct authored brand interpretations, not literal translations or interchangeable synonyms. **GENJE ZA WARENA** expresses the creative/technical relationship.
 
 ## Founder
 
