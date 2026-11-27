@@ -11,7 +11,7 @@ This repository publishes one bilingual, text-first static page. **NAKEBUSEN is 
 **GRACE · GRIT · GLORY | GENJE ZA WARENA**  
 **BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.**
 
-The homepage leads with the loc-care offer in Eldoret and a direct service-enquiry path; WARENA's practical technical capability remains clearly separate. “Sovereign Futures” is supporting horizon language, not a replacement for the master positioning.  
+The homepage opens with the complete FELOH universe and routes visitors into its distinct practices. NAKEBUSEN remains the primary commercial entry and sole transaction point; WARENA provides technical capability, IKAI is research, GENJE is creative practice, and FELOH Corpus governs shared knowledge and provenance. Loc-care services and direct enquiry remain prominent within the page. “Sovereign Futures” is supporting horizon language, not a replacement for the master positioning.  
 **@donfelohke · #HisGenjeness**
 
 - **GRACE → NAKEBUSEN:** beauty, heritage, craft, dignity and grounded enterprise.
