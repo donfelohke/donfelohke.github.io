@@ -42,7 +42,7 @@ The fixed mobile dock remains three items: Locs, Digital and Visit. The in-page 
 ## Business and editorial invariants
 
 - ONLY NAKEBUSEN TRANSACTS.
-- Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Installation — KES 3,500.
+- Retouch & Styling — starts at KES 700+; Sisterlocs Retie — starts at KES 1,500+; Artificial Locs Installation — fixed at KES 3,500.
 - An enquiry does not confirm a booking. Availability and final terms are agreed directly.
 - No braiding or shaving claims. Do not invent availability, hours, credentials, testimonials, service inclusions, durations, preparation requirements or guarantees.
 - Distinguish Retouch & Styling (existing loc maintenance/styling), Sisterlocs Retie (retightening an established installation) and Artificial Locs Installation (new artificial loc installation); do not imply unapproved inclusions.
