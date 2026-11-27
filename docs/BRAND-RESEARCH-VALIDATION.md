@@ -15,7 +15,7 @@
 - Supporting statement: **Craft, technology and culture rooted in African ingenuity.**
 - Canonical lockup: **NAKEBUSEN Locs ° Powered by WARENA**.
 - Customer paths: **NAKEBUSEN LOCS · CROWN** and **NAKEBUSEN DIGITAL · WARENA**.
-- Governing identity: **GENJE ZA WARENA — THE FIRE OF THE FORMIDABLE.**
+- Governing identity: **GENJE ZA WARENA**. GENJE = **GREATNESS**; WARENA = **THE POWERFUL** (distinct authored interpretations, not literal translation).
 - Commercial boundary: **ONLY NAKEBUSEN TRANSACTS**.
 - Research boundary: IKAI Mirror is research, not a released product.
 
@@ -26,7 +26,7 @@ These are approved brand decisions. They are not, by themselves, evidence of mar
 | Topic | Current position | Evidence still required |
 |---|---|---|
 | NAKEBUSEN meaning | Founder-supplied interpretation: “Beautiful” in Turkana | Independent linguistic review and contextual usage |
-| GENJE ZA WARENA | Adopted brand interpretation: “The Fire of the Formidable” | Do not present as verified etymology without linguistic evidence |
+| GENJE / WARENA | Authored English interpretations: **GREATNESS** / **THE POWERFUL** | Keep distinct; do not present as dictionary meanings or literal translation |
 | LOCS prices | Operator-supplied starting prices | Reconfirm before campaigns and material price changes |
 | DIGITAL capabilities | Defined service areas | Confirm current availability, tools, delivery scope and capacity |
 | Customer demand | Not established by brand documents | Customer interviews, enquiry records and paid conversion evidence |
