@@ -90,9 +90,9 @@ Added `research/index.html` at `/research/`, with:
 - WARENA is technical capability within NAKEBUSEN, not a separate checkout.
 - IKAI remains research / work in progress; GENJE remains creative practice.
 
-## Price notation correction — 2026-11-26
+## Price notation supersession — 2026-11-27
 
-The founder reconfirmed fixed public prices: Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Installation — KES 3,500. None is a starting-price claim. Do not append a plus sign.
+The 26 November fixed-price notation was superseded by the latest owner-approved public presentation: Retouch & Styling starts at KES 700+; Sisterlocs Retie starts at KES 1,500+; Artificial Locs Installation is fixed at KES 3,500. The historical correction below is retained as a dated record, not current publication guidance.
 
 ## Verification still required
 
