@@ -1,4 +1,4 @@
-> **Historical PR queue notice — 27 November 2026:** This 25 October reconciliation is a closed historical snapshot. Its “from KES” price labels and proposed Kiswahili-first direction are superseded. Current published prices are Retouch & Styling KES 700; Sisterlocs Retie KES 1,500; Artificial Locs Installation KES 3,500. The current website is English-default with a Kiswahili option and a balanced FELOH ecosystem introduction. Do not use this old queue to infer current open PR state; inspect GitHub before acting.
+> **Historical PR queue notice — 27 November 2026:** This 25 October reconciliation is a closed historical snapshot. Its “from KES” price labels and proposed Kiswahili-first direction are superseded. Current published pricing is Retouch & Styling from KES 700+; Sisterlocs Retie from KES 1,500+; Artificial Locs Installation fixed at KES 3,500. The current website is English-default with a Kiswahili option and a balanced FELOH ecosystem introduction. Do not use this old queue to infer current open PR state; inspect GitHub before acting.
 
 # PR reconciliation — 25 October 2026
 
