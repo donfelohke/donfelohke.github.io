@@ -42,7 +42,7 @@ Reviewed the current `index.html` and `README.md` in this repository. Existing a
 
 - Public identity: **NAKEBUSEN @donfelohke — WARENA powered**.
 - Primary local market phrase: **Eldoret Town / Karibu Mdosi**. Lodwar/Turkana can remain secondary context, but current service availability must be confirmed directly.
-- Loc-care published prices: **Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Installation — KES 3,500**.
+- Loc-care published prices: **Retouch & Styling from KES 700+; Sisterlocs Retie from KES 1,500+; Artificial Locs Installation fixed at KES 3,500**.
 - Contact: **+254 719 635 415**, WhatsApp and telephone.
 - Technical offer includes GNU/Linux support, computer maintenance, networking, routers/servers, small-office and lab systems, and local-first/offline-capable environments.
 - IKAI is research and development, not a released product.
