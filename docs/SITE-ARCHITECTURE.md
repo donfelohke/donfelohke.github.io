@@ -64,9 +64,9 @@ The four-practice map is an orientation layer, not a replacement for the detaile
 
 ## Publication invariants
 
-- Retouch & Styling — KES 700 (approved published price; no plus sign).
-- Sisterlocs Retie — KES 1,500 (approved published price; no plus sign).
-- Artificial Locs Installation — KES 3,500.
+- Retouch & Styling — starts at KES 700+.
+- Sisterlocs Retie — starts at KES 1,500+.
+- Artificial Locs Installation — fixed at KES 3,500.
 - Location: Beside King's Square · Kisumu Road · Eldoret Town · Uasin Gishu · Kenya. F743+R35 is a directions reference, not a street-address claim.
 - No braiding, shaving, invented street address, opening hours, appointment availability, testimonials or credentials.
 - DIGITAL areas are GNU/Linux, computer diagnostics/recovery/maintenance, Wi-Fi/router/LAN, small-office infrastructure, learning-space systems and local-first/reproducible environments where appropriate. They are not guaranteed availability or fixed-price offers.
