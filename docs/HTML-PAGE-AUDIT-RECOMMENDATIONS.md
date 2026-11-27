@@ -1,3 +1,5 @@
+> **Historical audit notice — 27 November 2026:** This 25 October proposal is retained for source-inspection provenance, not as the current design or implementation instruction. Its service-first hero and starting-price recommendations are superseded by the balanced FELOH ecosystem direction and exact published-price catalogue. Its scope mentions inline JavaScript; the current page source contains no script elements or inline event handlers. Use [UI-UX-PRODUCT-SPEC.md](UI-UX-PRODUCT-SPEC.md), [WEBCOPY.md](WEBCOPY.md), [PUBLIC-FACTS-REGISTER.md](PUBLIC-FACTS-REGISTER.md) and [SERVICE-CATALOG.md](SERVICE-CATALOG.md) for current direction. Manual rendered-browser checks remain outstanding.
+
 # NAKEBUSEN HTML Page Audit and Step-by-Step Recommendations
 
 Status: proposal based on source inspection; live browser behavior is not yet verified.
