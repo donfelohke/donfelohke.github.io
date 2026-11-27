@@ -1,3 +1,12 @@
+## 2026-11-28 — Commercial-first homepage refinement
+- Make the primary English and Kiswahili hero actions lead directly to NAKEBUSEN loc services and published prices; retain the wider body-of-work route as the secondary action.
+- Preserve “Beautiful roots. Sovereign systems.” as the master H1 and the balanced introduction to the connected practices.
+- Apply “YOUR BEAUTY ° YOUR WAY.” within the NAKEBUSEN Locs section, without replacing the umbrella positioning.
+- Align canonical website copy and regression tests with the new hierarchy.
+- Correct the implementation checklist: the current language switch is CSS-only, document-level html lang remains English, theme follows the operating-system preference, and no browser automation workflow is configured on current main.
+- Preserve all service prices, booking and payment boundaries, contact details, WARENA scope, IKAI research status, GENJE creative status and FELOH Corpus governance role.
+- This change is prepared on a review branch; it is not released until pull-request checks, merge, Pages deployment and live smoke checks succeed.
+
 ## 2026-11-27 — Public-facts and ecosystem documentation alignment
 - Reconcile Retouch & Styling (from KES 700+) and Sisterlocs Retie (from KES 1,500+) as starting prices; Artificial Locs Installation remains fixed at KES 3,500.
 - Align the bilingual page's visible English and Kiswahili price labels with the NAKEBUSEN source catalogue.
