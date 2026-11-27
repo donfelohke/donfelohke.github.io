@@ -48,8 +48,8 @@ The Kiswahili hero is the current authored draft and remains subject to human ed
 
 | Service | Published price |
 |---|---:|
-| Retouch & Styling | KES 700 |
-| Sisterlocs Retie | KES 1,500 |
+| Retouch & Styling | KES 700+ |
+| Sisterlocs Retie | KES 1,500+ |
 | Artificial Locs Installation | KES 3,500 |
 
 - **Retouch & Styling:** For maintenance and styling of locs you already have. We’ll discuss their condition and the work needed before agreeing the scope.
