@@ -106,6 +106,15 @@ class PublicationTests(unittest.TestCase):
             if href.startswith("#"):
                 self.assertIn(href[1:], ids, f"Unresolved fragment: {href}")
 
+    def test_hero_prioritises_loc_care_and_preserves_the_wider_work_route(self):
+        self.assertIn('class="button button-primary" href="#services">See loc services &amp; prices', HTML)
+        self.assertIn('class="text-link" href="#projects">Explore the whole work', HTML)
+        self.assertIn('class="button button-primary" href="#services">Tazama huduma za loc na bei', HTML)
+        self.assertIn('class="text-link" href="#projects">Chunguza kazi zote', HTML)
+        self.assertIn("Beautiful roots.", HTML)
+        self.assertIn("Sovereign systems.", HTML)
+        self.assertIn("YOUR BEAUTY ° YOUR WAY.", HTML)
+
     def test_nakebusen_anchor_targets_the_commercial_section(self):
         self.assertIn('<section class="hero section hero-identity" id="home">', HTML)
         self.assertIn('<section class="section locs-section" id="services">', HTML)
@@ -379,10 +388,11 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("Artificial Locs Installation", HTML)
         self.assertIn("https://github.com/donfelohke/feloh-corpus", HTML)
         self.assertNotIn("FELOH-FOUNDATIONAL-CASE-AND-EVIDENCE-PROGRAMME", HTML)
-        self.assertIn("Explore the whole work", HTML)
-        self.assertIn("NAKEBUSEN · Loc care in Eldoret", HTML)
-        self.assertIn("Chunguza kazi zote", HTML)
-        self.assertIn("NAKEBUSEN · Utunzaji wa loc Eldoret", HTML)
+        self.assertIn('class="button button-primary" href="#services">See loc services &amp; prices', HTML)
+        self.assertIn('class="text-link" href="#projects">Explore the whole work', HTML)
+        self.assertIn('class="button button-primary" href="#services">Tazama huduma za loc na bei', HTML)
+        self.assertIn('class="text-link" href="#projects">Chunguza kazi zote', HTML)
+        self.assertIn("YOUR BEAUTY ° YOUR WAY.", HTML)
         self.assertIn('media="(prefers-color-scheme: light)"', HTML)
         self.assertIn('media="(prefers-color-scheme: dark)"', HTML)
         self.assertNotIn('rel="icon"', HTML)
