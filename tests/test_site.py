@@ -104,6 +104,12 @@ class PublicationTests(unittest.TestCase):
             if href.startswith("#"):
                 self.assertIn(href[1:], ids, f"Unresolved fragment: {href}")
 
+    def test_nakebusen_anchor_targets_the_commercial_section(self):
+        self.assertIn('<section class="hero section hero-identity" id="home">', HTML)
+        self.assertIn('<section class="section locs-section" id="services">', HTML)
+        self.assertIn('<span id="nakebusen" class="anchor-point" aria-hidden="true"></span>', HTML)
+        self.assertGreater(HTML.index('id="nakebusen"'), HTML.index('id="services"'))
+
     def test_mobile_navigation_is_exactly_three_items(self):
         self.assertTrue(self.parser.dock)
         self.assertEqual(["#crown", "#code", "#connect"], self.parser.dock_links)
