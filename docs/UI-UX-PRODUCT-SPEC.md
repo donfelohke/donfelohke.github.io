@@ -1,29 +1,28 @@
-# NAKEBUSEN — UI/UX Product Specification
+# Don Feloh — FELOH Ecosystem UI/UX Product Specification
 
 **Document ID:** NB-UX-01  
-**Version:** 1.2 · 24 November 2026  
-**Status:** Strategy baseline · current publication facts reconciled 24 November 2026  
+**Version:** 1.3 · 27 November 2026  
+**Status:** Current strategy baseline · implementation and manual release verification remain separate  
 **Product:** https://donfelohke.github.io/  
 **Repository:** `donfelohke/donfelohke.github.io`  
 **Authority:** @donfelohke
 
 ## 1. Product intent
 
-NAKEBUSEN is a beauty-first, trust-led public service website with a technically credible digital-services layer and a contextual route into the founder's open-source work.
+The public website is the human-author home of Don Feloh and the front door to the connected FELOH practice architecture. It introduces enterprise, systems engineering, reflective-computing research and creative expression without collapsing them into one product or commercial offer.
 
-The experience must make it easy to understand the offer, establish trust, choose a service and make a direct enquiry. Technical and creative work should be discoverable without obstructing the primary loc-care journey.
+The page must make the whole body of work understandable while keeping NAKEBUSEN's loc-care offer, published prices and direct enquiry path clear. NAKEBUSEN remains the primary enterprise and sole transaction interface. WARENA is technical capability; IKAI is research / work in progress; GENJE is creative practice; FELOH Corpus is shared governance and provenance.
 
-**Product principle:** conversion clarity is the functional foundation; editorial design is the visual foundation; technical transparency is the credibility foundation.
+**Product principle:** coherent authorship first; distinct practice boundaries; clear commercial action; evidence-led technical and research claims.
 
 ## 2. Brand and commercial hierarchy
 
-- **NAKEBUSEN** is the public-facing enterprise and the only commercial transaction destination.
-- **LOCS · CROWN** is the primary customer service path.
-- **DIGITAL · WARENA** is the secondary technical service path.
-- **Don Feloh** establishes human authorship, professional accountability and the direct customer relationship.
-- **WARENA** is the technical foundation and endorsement for Digital services, not a separate consumer checkout.
-- **IKAI** is reflective-compute research, not a released product or checkout destination.
-- **GENJE** is creative research and practice, not a separate checkout destination.
+- **Don Feloh / FELOH** is the human author, founder and creative/technical decision-maker.
+- **GRACE → NAKEBUSEN** is the primary enterprise: beauty, heritage, loc care, craft and grounded commercial activity. It is the only transaction interface.
+- **GRIT → WARENA** is systems engineering, GNU/Linux, infrastructure, reproducibility and technical enablement; it is not a separate checkout.
+- **GLORY → GENJE / GENJENESS** is creative expression through Genge-rooted sound, livecoding, music, movement and choreography.
+- **IKAI · MIRROR** is reflective-computing research / work in progress, not a released product.
+- **FELOH Corpus** governs shared identity, terminology, evidence, provenance and cross-project navigation; it is not another practice domain.
 - **GitHub** is the technical evidence layer: source code, documentation, specifications and project history.
 
 Preserve the governing boundary: **ONLY NAKEBUSEN TRANSACTS.**
@@ -46,12 +45,13 @@ Needs to understand the relationship between NAKEBUSEN, WARENA and the founder, 
 
 Retain the existing lightweight single-page architecture and section anchors:
 
-1. **Top / Hero** — NAKEBUSEN identity, value proposition, location and primary enquiry route.
-2. **LOCS · CROWN** — service scope, published prices and contextual enquiry actions.
-3. **DIGITAL · WARENA** — practical technical service categories, assessment-to-quote workflow and GitHub bridge.
-4. **Connect** — founder identity, direct contact, location and footer information.
+1. **Top / Hero** — Don Feloh masthead, GRACE · GRIT · GLORY, umbrella positioning and clear practice summary.
+2. **NAKEBUSEN · LOCS** — service scope, exact published prices and direct enquiry actions.
+3. **WARENA / DIGITAL** — practical technical capability, assessment-to-quote workflow and source links.
+4. **About / IKAI / GENJE / FELOH Corpus** — human authorship, reflective-computing research, creative practice and shared knowledge governance.
+5. **Connect / Footer** — direct contact, location, manual payment safeguards and separate voluntary support.
 
-The existing floating dock remains the primary section navigation: **Locs · Digital · Connect**. Do not introduce a fourth primary navigation item for GitHub, IKAI or GENJE. Link to those destinations contextually from Digital, founder or Connect content.
+The existing floating dock remains the primary section navigation: **Locs · Digital · Connect**. Contextual links lead to IKAI, GENJE, FELOH Corpus and supporting repositories. Do not create separate checkout paths for any practice other than NAKEBUSEN.
 
 Do not add sections or pages solely to accommodate brand language. Expand the information architecture only where evidence from visitor tasks requires it.
 
@@ -100,14 +100,15 @@ The first viewport must answer, without requiring deep scrolling:
 
 Recommended content order:
 
-1. NAKEBUSEN brand lockup.
-2. Approved homepage headline: **Your Beauty ° Your Way.**
-3. Approved supporting statement.
-4. Clear LOCS and DIGITAL entry points, with LOCS receiving primary visual emphasis.
-5. Primary WhatsApp enquiry action.
-6. Location and compact language/theme controls.
+1. Don Feloh masthead with **GRACE · GRIT · GLORY**.
+2. Umbrella headline: **Beautiful roots. Sovereign systems.**
+3. Concise statement introducing one human author and connected practices.
+4. Practice summary that distinguishes NAKEBUSEN, WARENA, IKAI and GENJE.
+5. Primary action to explore the whole work and a clear secondary route to NAKEBUSEN loc care.
+6. Published NAKEBUSEN prices remain visible in the adjacent service panel.
+7. Founder identity and compact language controls.
 
-Do not put repository lists, extended founder biography or brand philosophy ahead of service orientation.
+Do not turn the hero into a dense manifesto or bury the service offer. The introduction is ecosystem-wide; commercial authority remains with NAKEBUSEN.
 
 ### LOCS · CROWN
 
@@ -194,7 +195,7 @@ Target WCAG 2.2 AA.
 - Reduced-motion support.
 - Correct document language after language switching.
 - Responsive layout for small Android devices and larger screens.
-- Lightweight HTML, CSS and JavaScript; no unnecessary frameworks.
+- Lightweight static HTML and CSS; no JavaScript runtime, framework or application dependency.
 - No autoplay media or essential information hidden behind animation.
 - Defer non-essential assets and avoid large images before they are needed.
 - Test on a real mobile viewport and a constrained network.
@@ -263,7 +264,7 @@ Review the diff and acceptance results before production update. After release, 
 
 ## 13. Non-goals and anti-patterns
 
-- Do not turn the homepage into a GitHub README.
+- Do not collapse the site into a NAKEBUSEN-only landing page or turn it into a GitHub README.
 - Do not give WARENA equal commercial prominence to NAKEBUSEN.
 - Do not present IKAI or GENJE as released checkout products.
 - Do not duplicate navigation across header, dock and footer.
@@ -292,3 +293,18 @@ The experience is ready for release when:
 ## Master identity hero — 2026-11-23
 
 Lead with DON FELOH / @donfelohke, GRACE · GRIT · GLORY, and **GENJE ZA WARENA | NAKEBUSEN**. Keep the hero balanced while the customer-facing commercial path remains NAKEBUSEN LOCS. WARENA is technical capability; GENJE is embodied creative practice; IKAI is research. Preserve native HTML/CSS, bilingual content, accessibility and the three-item mobile dock. This addendum supersedes older first-viewport copy that placed the NAKEBUSEN-only headline ahead of the master identity.
+
+
+## Current implementation direction — 27 November 2026
+
+The website PR [#217](https://github.com/donfelohke/donfelohke.github.io/pull/217) implements the balanced ecosystem introduction described above. Its current head is under review; automated static-site and Pages validation have passed, but the branch has not been merged or deployed.
+
+The existing page remains a single, bilingual, text-first static document. The current source contains no script elements or inline event handlers. Language selection and theme behaviour are implemented with native HTML/CSS controls and browser preferences; do not introduce JavaScript merely to reproduce those behaviours.
+
+Release review must verify:
+- the umbrella hero and practice summary at 320px through desktop widths;
+- NAKEBUSEN service cards, exact prices and direct enquiry destinations;
+- English/Kiswahili parity and human editorial review of newly introduced Kiswahili wording;
+- keyboard navigation, focus visibility, zoom/reflow, reduced motion and reduced transparency;
+- preservation of the manual M-PESA instructions and separate voluntary Support Us section;
+- the merged commit and actual GitHub Pages deployment, checked independently of PR CI.
