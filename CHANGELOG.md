@@ -1,6 +1,7 @@
 ## 2026-11-27 — Public-facts and ecosystem documentation alignment
 - Reconcile Retouch & Styling (from KES 700+) and Sisterlocs Retie (from KES 1,500+) as starting prices; Artificial Locs Installation remains fixed at KES 3,500.
 - Align the bilingual page's visible English and Kiswahili price labels with the NAKEBUSEN source catalogue.
+- Add explicit English/Kiswahili disclosure that Retouch & Styling and Sisterlocs Retie are starting prices while Artificial Locs Installation is fixed at KES 3,500.
 - Update the Public Facts Register, Service Catalogue, Website Copy, canonical alignment, information hierarchy, design/interaction specifications and acceptance checklist.
 - Add cross-project research navigation and clarify the distinction between research briefs and implemented systems.
 - Preserve the one-page static publication architecture, text-first content, accessibility constraints, manual payment safeguards and NAKEBUSEN-only transaction boundary.
