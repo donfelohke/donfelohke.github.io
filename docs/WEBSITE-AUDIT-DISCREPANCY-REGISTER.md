@@ -194,3 +194,21 @@ Key source changes since the earlier audit:
 - PR #200 standardises opaque content surfaces across service, booking, founder and WARENA capability sections. Its Python static validation passed; rendered contrast review remains.
 
 The historical rows above remain evidence of earlier baselines. Current defects must be determined from the current `main` source and the current disposition record, not from an older row read in isolation.
+
+
+## Current direction and disposition — 27 November 2026
+
+This register remains a historical Phase 1 audit baseline. The 27 November homepage decision is a balanced FELOH ecosystem introduction, not the older NAKEBUSEN-only hero direction recorded in several original recommendations.
+
+- **Current umbrella:** Don Feloh · GRACE · GRIT · GLORY · BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.
+- **GRACE / NAKEBUSEN:** primary enterprise and sole commercial transaction interface; loc-care prices remain Retouch & Styling KES 700, Sisterlocs Retie KES 1,500 and Artificial Locs Installation KES 3,500.
+- **GRIT / WARENA:** technical capability and systems engineering; not a separate checkout.
+- **IKAI:** reflective-computing research / work in progress.
+- **GLORY / GENJE:** creative and embodied practice.
+- **FELOH Corpus:** shared governance, evidence and provenance.
+
+Website PR [#217](https://github.com/donfelohke/donfelohke.github.io/pull/217) updates the hero, masthead, metadata, canonical copy and related documentation. Its current head has passed static site validation and GitHub Pages pull-request validation. It remains unmerged and is not production deployment evidence.
+
+The old WADR-001 / WADR-002 proposed service-first and subordinate-ecosystem recommendations must be read as historical. The new hero keeps NAKEBUSEN commercially prominent while introducing the full practice architecture. Remaining release evidence is manual: visual hierarchy, 320px reflow, mobile navigation, keyboard and screen-reader behaviour, contrast, reduced-motion/transparency, bilingual editorial review, payment-section preservation and deployed-page verification.
+
+Do not close a discrepancy as **Released** until the relevant merged commit is verified on the live site. Automated source checks are not a substitute for these release gates.
