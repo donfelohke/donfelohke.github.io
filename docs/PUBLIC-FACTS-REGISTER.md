@@ -29,7 +29,7 @@ This register controls factual claims used on the website, service catalogue, pr
 | PF-006 | NAKEBUSEN brand line: Your Beauty ° Your Way. | F2 | Retained as the NAKEBUSEN brand line; not the master homepage H1 |
 | PF-007 | Current master public platform: NAKEBUSEN · WARENA POWERED; GRACE · GRIT · GLORY; BEAUTIFUL ROOTS. SOVEREIGN SYSTEMS.; GENJE ZA WARENA; @donfelohke · #HisGenjeness | F2 | Preserve NAKEBUSEN-first hierarchy and the distinct practice roles |
 | PF-008 | NAKEBUSEN adopted meaning “Beautiful” in Turkana | F4 | Attribute as founder-supplied interpretation; do not claim independent linguistic verification |
-| PF-009 | GENJE ZA WARENA interpreted as “THE FIRE OF THE FORMIDABLE” | F4 | Adopted creative interpretation only; not verified etymology |
+| PF-009 | GENJE = GREATNESS; WARENA = THE POWERFUL; GENJE ZA WARENA expresses their creative/technical relationship | F4 | Distinct authored interpretations; not literal translation or verified dictionary meanings |
 | PF-010 | GENJE is creative and embodied practice, not a separate commercial division | F2 | Canonical |
 | PF-011 | WARENA is the distinct capability domain | F2 | Technical capability may support engagements; it is not a NAKEBUSEN sub-brand, parent enterprise or separate checkout |
 | PF-012 | IKAI is reflective-computing research / work in progress, not a released product | F2 | Label research / WIP; no purchase, booking or availability claim |
