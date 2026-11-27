@@ -92,13 +92,13 @@ No external font CDN. Self-hosted font files may be used only after their files 
 
 Services and approved published prices:
 
-| Service | Starting price |
+| Service | Published price |
 |---|---:|
-| Retouch & Styling | KES 700+ |
-| Sisterlocs Retie | KES 1,500+ |
-| Artificial Locs Installation | KES 3,500 |
+| Retouch & Styling | From KES 700+ |
+| Sisterlocs Retie | From KES 1,500+ |
+| Artificial Locs Installation | KES 3,500 fixed |
 
-Prices are starting points. Final cost depends on service scope, loc condition and materials. No braiding or shaving. Do not promise unverified home visits or appointment availability.
+Retouch & Styling and Sisterlocs Retie are starting prices. Artificial Locs Installation is fixed at KES 3,500. Final scope and any additional costs are agreed directly before work begins. No braiding or shaving. Do not promise unverified home visits or appointment availability.
 
 Primary enquiry: WhatsApp. Secondary: telephone.
 
