@@ -75,7 +75,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("KES 700", HTML)
         self.assertIn("KES 1,500", HTML)
         self.assertIn("KES 3,500", HTML)
-        self.assertIn("Angalia bei za kila huduma mapema; kazi au vifaa vya ziada hukubaliwa kabla ya kuanza.", HTML)
+        self.assertIn("Mwandishi mmoja. Shughuli zinazounganisha biashara, uhandisi wa mifumo, utafiti wa kompyuta tafakari na ubunifu wa kisanaa.", HTML)
         self.assertIn("Practical GNU/Linux, computer and network support for individuals, homes, businesses and organisations.", HTML)
         self.assertEqual(1, HTML.count("ONLY NAKEBUSEN TRANSACTS."))
         self.assertIn("Founder, NAKEBUSEN · Founder &amp; CTO, WARENA · Loctician · Creative Technologist", HTML)
