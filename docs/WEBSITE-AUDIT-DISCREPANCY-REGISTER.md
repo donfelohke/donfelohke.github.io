@@ -71,7 +71,7 @@ Historical briefs and superseded brand documents remain useful for provenance bu
 - Two commercial paths: **LOCS · CROWN** and **DIGITAL · WARENA**.
 - Canonical lockup: **NAKEBUSEN Locs ° Powered by WARENA**.
 - Homepage H1: **Your Beauty ° Your Way.**
-- LOCS: Retouch & Styling **KES 700**; Sisterlocs Retie **KES 1,500**; Artificial Locs Installation **KES 3,500**.
+- LOCS: Retouch & Styling **from KES 700+**; Sisterlocs Retie **from KES 1,500+**; Artificial Locs Installation **KES 3,500 fixed**.
 - No braiding or shaving claims.
 - An enquiry is not a confirmed booking.
 - Digital services are scoped per engagement; no blanket availability, security, uptime or warranty claims.
