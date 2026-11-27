@@ -148,15 +148,15 @@ class PublicationTests(unittest.TestCase):
         )
         self.assertNotIn("FELOH-FOUNDATIONAL-CASE-AND-EVIDENCE-PROGRAMME", HTML)
 
-    def test_service_prices_match_exact_published_amounts(self):
+    def test_service_prices_match_current_starting_and_fixed_prices(self):
         webcopy = (ROOT / "docs/WEBCOPY.md").read_text(encoding="utf-8")
         for amount in ("KES 700", "KES 1,500", "KES 3,500"):
             self.assertIn(amount, HTML)
             self.assertIn(amount, webcopy)
         self.assertIn("KES 700", HTML + webcopy)
         self.assertIn("KES 1,500", HTML + webcopy)
-        self.assertNotIn("KES 700+", HTML + webcopy)
-        self.assertNotIn("KES 1,500+", HTML + webcopy)
+        self.assertIn("KES 700+", HTML + webcopy)
+        self.assertIn("KES 1,500+", HTML + webcopy)
         self.assertNotIn("KES 3,500+", HTML + webcopy)
         self.assertIn("PUBLISHED PRICES", HTML)
         self.assertIn("BEI ZILIZOCHAPISHWA", HTML)
@@ -486,23 +486,23 @@ class PublicationTests(unittest.TestCase):
         self.assertNotRegex(HTML, r"(?is)<iframe\b")
         self.assertNotRegex(CSS, r"(?i)@import\s+url")
 
-    def test_fixed_public_prices_match_all_authoritative_publication_records(self):
+    def test_starting_and_fixed_public_prices_match_all_authoritative_publication_records(self):
         catalogue = (ROOT / "docs/SERVICE-CATALOG.md").read_text(encoding="utf-8")
         facts = (ROOT / "docs/PUBLIC-FACTS-REGISTER.md").read_text(encoding="utf-8")
         webcopy = (ROOT / "docs/WEBCOPY.md").read_text(encoding="utf-8")
         publication_records = "\n".join((HTML, catalogue, facts, webcopy))
 
         for service, amount in (
-            ("Retouch & Styling", "700"),
-            ("Sisterlocs Retie", "1,500"),
+            ("Retouch & Styling", "700+"),
+            ("Sisterlocs Retie", "1,500+"),
             ("Artificial Locs Installation", "3,500"),
         ):
             self.assertIn(service, catalogue)
             self.assertIn(f"| {service} | **{amount}** |", catalogue)
 
         for fact in (
-            "| PF-017 | Retouch & Styling published price KES 700",
-            "| PF-018 | Sisterlocs Retie published price KES 1,500",
+            "| PF-017 | Retouch & Styling starting price KES 700+",
+            "| PF-018 | Sisterlocs Retie starting price KES 1,500+",
             "| PF-019 | Artificial Locs Installation published price KES 3,500",
         ):
             self.assertIn(fact, facts)
@@ -511,7 +511,7 @@ class PublicationTests(unittest.TestCase):
             self.assertIn(amount, publication_records)
         self.assertIsNone(
             re.search(r"KES\s+(?:700|1,500|3,500)\+", publication_records),
-            "Fixed public prices must never be represented as starting prices.",
+            "Artificial Locs Installation is fixed and must not carry a plus sign.",
         )
 
 if __name__ == "__main__":
