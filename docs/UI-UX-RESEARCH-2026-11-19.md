@@ -1,3 +1,5 @@
+> **Decision supersession — 27 November 2026:** This dated research record remains useful for its evidence review and mobile/accessibility test criteria. Its recommendation for a loc-care-first homepage and secondary treatment of the wider practice architecture is superseded. The current direction is a balanced FELOH ecosystem introduction with NAKEBUSEN remaining the primary commercial entry and sole transaction interface. See [current website copy](WEBCOPY.md) and the [current identity clarification](https://github.com/donfelohke/feloh-corpus/blob/main/docs/IDENTITY-CANONICAL-CLARIFICATION-2026-11-26.md). Published prices remain Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Installation — KES 3,500.
+
 # NAKEBUSEN — UI/UX Research and Design Decision Record
 
 **Document ID:** NB-UXR-2026-11-19  
