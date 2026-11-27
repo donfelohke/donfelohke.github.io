@@ -33,7 +33,7 @@ Improve the existing single-page website through evidence-led copy, hierarchy an
 
 - NAKEBUSEN leads the commercial relationship; WARENA supplies distinct technical capability.
 - **ONLY NAKEBUSEN TRANSACTS.**
-- Published loc-care prices remain Retouch & Styling — KES 700; Sisterlocs Retie — KES 1,500; Artificial Locs Installation — KES 3,500.
+- Published loc-care prices remain Retouch & Styling — from KES 700+; Sisterlocs Retie — from KES 1,500+; Artificial Locs Installation — KES 3,500 fixed.
 - No braiding or shaving claims are introduced.
 - An enquiry does not confirm a booking.
 - Manual M-PESA service-payment information and separate Support Us language remain unchanged.
