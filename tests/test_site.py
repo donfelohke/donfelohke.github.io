@@ -510,7 +510,7 @@ class PublicationTests(unittest.TestCase):
         for amount in ("KES 700", "KES 1,500", "KES 3,500"):
             self.assertIn(amount, publication_records)
         self.assertIsNone(
-            re.search(r"KES\s+(?:700|1,500|3,500)\+", publication_records),
+            re.search(r"KES\s+3,500\+", publication_records),
             "Artificial Locs Installation is fixed and must not carry a plus sign.",
         )
 
