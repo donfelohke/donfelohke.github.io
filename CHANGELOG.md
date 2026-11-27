@@ -1,3 +1,11 @@
+## 2026-11-27 — Public-facts and ecosystem documentation alignment
+- Reconcile Retouch & Styling (from KES 700+) and Sisterlocs Retie (from KES 1,500+) as starting prices; Artificial Locs Installation remains fixed at KES 3,500.
+- Align the bilingual page's visible English and Kiswahili price labels with the NAKEBUSEN source catalogue.
+- Update the Public Facts Register, Service Catalogue, Website Copy, canonical alignment, information hierarchy, design/interaction specifications and acceptance checklist.
+- Add cross-project research navigation and clarify the distinction between research briefs and implemented systems.
+- Preserve the one-page static publication architecture, text-first content, accessibility constraints, manual payment safeguards and NAKEBUSEN-only transaction boundary.
+- This source update does not itself establish a successful Pages deployment or live-browser QA.
+
 # Changelog
 
 This file records material changes to the published website and its operating documentation. Detailed implementation history, review discussion and exact diffs remain in Git commits and pull requests. A merged source change is not, by itself, proof of live deployment.
