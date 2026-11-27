@@ -352,7 +352,7 @@ class PublicationTests(unittest.TestCase):
             'property="og:locale" content="en_KE"',
             'property="og:locale:alternate" content="sw_KE"',
             'name="twitter:card" content="summary"',
-            'name="twitter:description" content="Retouch & Styling, Sisterlocs Retie and Artificial Locs Installation in Eldoret. See prices and enquire directly with NAKEBUSEN."',
+            'name="twitter:description" content="The public home of Don Feloh: NAKEBUSEN, WARENA, IKAI, GENJE and FELOH Corpus. Explore enterprise, systems engineering, research and creative practice."',
             'name="description"',
         ):
             self.assertIn(phrase, HTML)
