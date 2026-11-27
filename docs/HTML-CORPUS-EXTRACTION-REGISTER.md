@@ -36,9 +36,9 @@ A newer timestamp does not overrule a constitutional invariant by itself. Keep h
 | Field | Current source-of-truth value | Publication rule |
 |---|---|---|
 | Primary service area | Eldoret Town / Karibu Mdosi, Uasin Gishu, Kenya | Do not imply a verified street address |
-| Retouch & Styling | Starting at KES 700 | Confirm scope and final quote |
-| Sisterlocs Retie | Starting at KES 1,500 | Confirm scope and final quote |
-| Artificial Locs Installation | Starting at KES 3,500 | Confirm scope and final quote |
+| Retouch & Styling | Published price KES 700 | Discuss any additional work or scope changes before agreement |
+| Sisterlocs Retie | Published price KES 1,500 | Discuss any additional work or scope changes before agreement |
+| Artificial Locs Installation | Published price KES 3,500 | Discuss any additional work or scope changes before agreement |
 | WhatsApp / phone | +254 719 635 415; https://wa.me/254719635415 | Direct human enquiry |
 | Email | mela9ine@proton.me | Use only where appropriate |
 | Social identity | @donfelohke | Do not imply platform verification |
