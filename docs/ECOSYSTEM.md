@@ -21,7 +21,7 @@ Signature: **GRACE · GRIT · GLORY**
 
 | Item | Value |
 |------|--------|
-| Loc published prices | KES 700 · From 1,500 · 3,500 |
+| Loc-care published prices | Retouch & Styling — KES 700 · Sisterlocs Retie — KES 1,500 · Artificial Locs Installation — KES 3,500 |
 | Primary loc messaging location | Eldoret Town / Karibu Mdosi |
 | Contact | WhatsApp +254 719 635 415 |
 | Boundary | Enquiry ≠ confirmed booking |
