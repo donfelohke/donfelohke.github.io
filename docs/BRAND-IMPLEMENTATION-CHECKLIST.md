@@ -22,10 +22,10 @@ Status meanings: APPROVED = decision approved; IMPLEMENTED = code changed; TESTE
 
 ## 2. Public offer and factual invariants
 
-- [x] Retouch & Styling — **KES 700**.
-- [x] Sisterlocs Retie — **KES 1,500**.
+- [x] Retouch & Styling — **from KES 700+**.
+- [x] Sisterlocs Retie — **from KES 1,500+**.
 - [x] Artificial Locs Installation — **KES 3,500**.
-- [x] The first two prices are published amounts without a plus sign; do not describe them as starting prices.
+- [x] The first two prices are starting prices; Artificial Locs Installation remains fixed at KES 3,500.
 - [x] No braiding or shaving.
 - [x] The founder does not cut clients' natural hair.
 - [x] An enquiry does not confirm a booking; availability and final terms are agreed directly.
