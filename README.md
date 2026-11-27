@@ -31,7 +31,7 @@ The homepage opens with the complete FELOH universe and routes visitors into its
 
 ## Current identity and price clarification · 2026-11-26
 
-The current pillar mapping is **GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → GENJE / GENJENESS**. FELOH remains the human author and decision-maker. Published loc-care prices are fixed amounts: Retouch & Styling — KES 700+; Sisterlocs Retie — KES 1,500+; Artificial Locs Installation — KES 3,500 (fixed price). The first two are starting prices; final scope and any additional costs are agreed directly. GENJE's authored English interpretation is **GREATNESS**; WARENA's is **THE POWERFUL**. These are distinct authored interpretations, not literal translations or interchangeable synonyms.
+The current pillar mapping is **GRACE → NAKEBUSEN; GRIT → WARENA; GLORY → GENJE / GENJENESS**. FELOH remains the human author and decision-maker. Published loc-care prices: Retouch & Styling starts at KES 700+; Sisterlocs Retie starts at KES 1,500+; Artificial Locs Installation is fixed at KES 3,500. Final scope and any additional costs are agreed directly. GENJE's authored English interpretation is **GREATNESS**; WARENA's is **THE POWERFUL**. These are distinct authored interpretations, not literal translations or interchangeable synonyms.
 
 ## Current research integration · 2026-11-24
 
@@ -65,8 +65,8 @@ The mobile dock has three destinations: LOCS, DIGITAL and CONNECT. English is th
 
 | Service | Published price |
 |---|---:|
-| Retouch & Styling | KES 700 |
-| Sisterlocs Retie | KES 1,500 |
+| Retouch & Styling | KES 700+ |
+| Sisterlocs Retie | KES 1,500+ |
 | Artificial Locs Installation | KES 3,500 |
 
 These are the approved public prices. Any additional work, materials or scope changes are discussed and agreed before work begins. No braiding or shaving is offered. The founder does not cut clients' natural hair. An enquiry does not confirm a booking.
