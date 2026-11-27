@@ -50,7 +50,7 @@ F3L0H / FELOH WARENA is the overarching human authorship and practice identity. 
 1. Human authority remains central.
 2. Cultural heritage and technical ingenuity belong together.
 3. Public claims must be evidence-led.
-4. Starting prices must match the service catalogue.
+4. Published prices must match the current service catalogue; do not describe them as starting prices unless the approved offer changes.
 5. An enquiry is not a confirmed booking.
 6. No braiding or shaving is advertised.
 7. Do not imply unverified availability, street address or opening hours.
