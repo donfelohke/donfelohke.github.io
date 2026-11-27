@@ -130,3 +130,7 @@ The README is an orientation document, not a competing specification. Use these 
 Historical briefs and audit recommendations are retained for provenance; they must not override current approved records. The earlier four-destination proposal was superseded by the single-page architecture on 22 November 2026.
 
 NAKEBUSEN began in Lodwar, Turkana County, Kenya; its loc-care practice continues in Eldoret. This is business history, not a claim about the founder's birthplace, ancestry or personal roots.
+
+## Canonical alignment · 27 November 2026
+
+See [Canonical identity alignment](docs/FELOH-CANONICAL-ALIGNMENT-2026-11-27.md) for the dated cross-project definitions, evidence boundaries and repository-specific responsibilities.
