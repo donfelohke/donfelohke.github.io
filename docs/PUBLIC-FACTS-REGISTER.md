@@ -63,7 +63,7 @@ This register controls factual claims used on the website, service catalogue, pr
 
 ## Publication controls
 
-1. Prices, contact details and published M-PESA payment details must match this register and SERVICE-CATALOG. Retouch & Styling and Sisterlocs Retie are starting prices; Artificial Locs Installation is fixed at KES 3,500. Re-verify the Till/merchant pairing before any change or paid campaign.
+1. Prices, contact details and published M-PESA payment details must match this register and SERVICE-CATALOG. Re-verify the Till/merchant pairing before any change or paid campaign.
 2. Digital capability must be labelled according to actual availability.
 3. Linguistic interpretations must retain their evidence class and qualification. PF-039 is a founder-approved naming decision, not independent linguistic certification.
 4. Founder display-name and copyright attribution must not be silently changed; PF-027 and PF-028 remain subject to their stated evidence classes.
