@@ -35,7 +35,7 @@ FELOH / Don Feloh is the human author and decision-maker.
 - WARENA's current expansion is **Warena Architecture Re Network/ed Artefact**. Preserve the slash. “Power-full” is an attributed interpretive Sheng resonance, not a universal lexical definition.
 - GENJENESS is an authored -ness construction. SHENGE as “great(-ness)” remains founder-supplied interpretation pending speaker validation. “The Fire of the Formidable” is creative brand language, not literal etymology.
 - IKAI's “home” meaning is the founder-provided Turkana naming context, not independently validated dictionary etymology.
-- Fixed approved loc-care prices: Retouch & Styling KES 700; Sisterlocs Retie KES 1,500; Artificial Locs Installation KES 3,500. No “from” pricing. No braiding or shaving.
+- Approved loc-care pricing: Retouch & Styling starts at KES 700+; Sisterlocs Retie starts at KES 1,500+; Artificial Locs Installation is fixed at KES 3,500. No braiding or shaving.
 - An enquiry does not confirm a booking. Do not invent availability, guarantees, discounts, testimonials or deployment claims.
 
 ## Design and implementation boundary
