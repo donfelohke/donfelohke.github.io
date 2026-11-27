@@ -11,6 +11,7 @@ Mark an item only after the check is performed against a named commit.
 - [ ] NAKEBUSEN is the primary enterprise and sole transaction interface; its loc-care route and prices remain prominent.
 - [ ] WARENA is technical capability, not a separate checkout.
 - [ ] IKAI is labelled reflective-computing research / work in progress, not a released product.
+- [ ] IKAI's name meaning is attributed to the founder-provided Turkana naming context; independent linguistic/community validation is not implied.
 - [ ] GENJE is labelled creative / embodied practice, not a separate checkout.
 - [ ] FELOH Corpus is described as shared governance, evidence and provenance.
 - [ ] English default; Kiswahili content is complete, readable and reviewed against canonical copy.
