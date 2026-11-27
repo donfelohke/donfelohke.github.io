@@ -64,7 +64,7 @@ Do not use palette membership as proof of contrast. Verify every actual foregrou
 ## 5. Native interaction patterns
 
 ### Locs
-- Service cards retain the approved names and published prices: Retouch & Styling KES 700; Sisterlocs Retie KES 1,500; Artificial Locs Installation KES 3,500. No plus sign is appended to the first two prices.
+- Service cards retain the approved names and published prices: Retouch & Styling from KES 700+; Sisterlocs Retie from KES 1,500+; Artificial Locs Installation fixed at KES 3,500.
 - Service-specific enquiry links retain language-aware prefilled messages.
 - The enquiry boundary remains visible.
 - No simulated booking calendar, checkout or availability claim.
