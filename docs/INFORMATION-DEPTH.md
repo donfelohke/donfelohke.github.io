@@ -28,6 +28,6 @@ Depth standard: https://github.com/donfelohke/feloh-corpus/blob/main/docs/INFORM
 ## Live public facts
 
 - Hero: Your beauty. Your way.  
-- Prices KES 700 / 1,500 / 3,500  
+- Prices from KES 700+ / 1,500+; Artificial Locs Installation KES 3,500 fixed  
 - ONLY NAKEBUSEN TRANSACTS  
 - English default · Kiswahili toggle  
