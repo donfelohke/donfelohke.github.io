@@ -54,13 +54,13 @@ class PublicationTests(unittest.TestCase):
         self.assertIn('<html lang="en">', HTML)
         self.assertIn('<main id="main">', HTML)
         self.assertEqual(1, self.parser.h1)
-        self.assertIn('<span class="brand-name">DON FELOH</span>', HTML)
-        self.assertIn('<span class="brand-powered">GRACE · GRIT · GLORY</span>', HTML)
-        self.assertIn("One human author. Connected practices in enterprise, systems engineering, reflective research and creative expression.", HTML)
-        self.assertIn("NAKEBUSEN is the commercial home.", HTML)
-        self.assertIn("WARENA enables the technical work.", HTML)
-        self.assertIn("IKAI investigates reflective computing.", HTML)
-        self.assertIn("GENJE brings sound, code and movement together.", HTML)
+        self.assertIn('<span class="brand-name">NAKEBUSEN</span>', HTML)
+        self.assertIn('<span class="brand-powered">WARENA POWERED</span>', HTML)
+        self.assertIn('<span class="brand-sub lang-en" lang="en">GRACE · GRIT · GLORY</span>', HTML)
+        self.assertIn("One human author. A connected practice spanning loc care, practical systems engineering, reflective-computing research and creative expression.", HTML)
+        self.assertIn("NAKEBUSEN leads the enterprise.", HTML)
+        self.assertIn("WARENA provides technical capability.", HTML)
+        self.assertIn("IKAI is reflective-computing research; GENJE is creative practice.", HTML)
         self.assertIn("NAKEBUSEN · WARENA POWERED", HTML)
         self.assertIn("WARENA POWERED", HTML)
         self.assertIn("GRACE — NAKEBUSEN", HTML)
@@ -75,7 +75,8 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("Beautiful roots.", HTML)
         self.assertIn("Sovereign systems.", HTML)
         self.assertIn("Loc care in Eldoret", HTML)
-        self.assertIn("Retouch &amp; Styling, Sisterlocs Retie and Artificial Locs Installation—with published prices and direct WhatsApp enquiries.", HTML)
+        self.assertIn("Enquire directly with NAKEBUSEN", HTML)
+        self.assertIn("Retouch &amp; Styling and Sisterlocs Retie are starting prices;", HTML)
         self.assertIn("Need GNU/Linux, computer or network support?", HTML)
         self.assertNotIn("Practical GNU/Linux, computer and network support is also available through WARENA.", HTML)
         self.assertIn("PUBLISHED PRICES", HTML)
@@ -114,6 +115,13 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("Beautiful roots.", HTML)
         self.assertIn("Sovereign systems.", HTML)
         self.assertIn("YOUR BEAUTY ° YOUR WAY.", HTML)
+        self.assertIn('<title>NAKEBUSEN | Loc Care in Eldoret · WARENA Powered</title>', HTML)
+        self.assertIn('<meta property="og:title" content="NAKEBUSEN | Loc Care in Eldoret · WARENA Powered">', HTML)
+        self.assertIn('<span class="brand-name">NAKEBUSEN</span>', HTML)
+        self.assertIn('<span class="brand-powered">WARENA POWERED</span>', HTML)
+        self.assertIn("Technical work is scoped and agreed through NAKEBUSEN.", HTML)
+        self.assertIn("Artificial Locs Installation is fixed at KES 3,500.", HTML)
+        self.assertIn('href="https://wa.me/254719635415"', HTML)
 
     def test_nakebusen_anchor_targets_the_commercial_section(self):
         self.assertIn('<section class="hero section hero-identity" id="home">', HTML)
@@ -173,7 +181,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("BEI ZILIZOCHAPISHWA", HTML)
         self.assertNotIn("Published prices are indicative", HTML)
         self.assertNotIn("Bei zilizochapishwa ni za kuanzia", HTML)
-        self.assertIn("published prices and direct WhatsApp enquiries.", HTML)
+        self.assertIn("Enquire directly with NAKEBUSEN", HTML)
 
     def test_biography_and_business_history_are_separate(self):
         self.assertNotIn("My roots are in Kanamkemer", HTML)
@@ -370,20 +378,20 @@ class PublicationTests(unittest.TestCase):
     def test_social_metadata_is_accurate_and_has_no_unapproved_image(self):
         for phrase in (
             'property="og:type" content="website"',
-            'property="og:site_name" content="DON FELOH · FELOH ECOSYSTEM"',
-            'property="og:title" content="Don Feloh | Grace · Grit · Glory"',
-            'name="twitter:title" content="Don Feloh | Grace · Grit · Glory"',
+            'property="og:site_name" content="NAKEBUSEN · WARENA POWERED"',
+            'property="og:title" content="NAKEBUSEN | Loc Care in Eldoret · WARENA Powered"',
+            'name="twitter:title" content="NAKEBUSEN | Loc Care in Eldoret · WARENA Powered"',
             'property="og:url" content="https://donfelohke.github.io/"',
             'property="og:locale" content="en_KE"',
             'property="og:locale:alternate" content="sw_KE"',
             'name="twitter:card" content="summary"',
-            'name="twitter:description" content="The public home of Don Feloh: NAKEBUSEN, WARENA, IKAI, GENJE and FELOH Corpus. Explore enterprise, systems engineering, research and creative practice."',
+            'name="twitter:description" content="Loc care in Eldoret from NAKEBUSEN, with published prices and direct enquiries. WARENA enables practical technical work."',
             'name="description"',
         ):
             self.assertIn(phrase, HTML)
         self.assertNotIn('property="og:image"', HTML)
         self.assertNotIn('name="twitter:image"', HTML)
-        self.assertIn("<title>Don Feloh · Grace · Grit · Glory</title>", HTML)
+        self.assertIn("<title>NAKEBUSEN | Loc Care in Eldoret · WARENA Powered</title>", HTML)
         self.assertIn("Sisterlocs Retie", HTML)
         self.assertIn("Artificial Locs Installation", HTML)
         self.assertIn("https://github.com/donfelohke/feloh-corpus", HTML)
@@ -474,7 +482,7 @@ class PublicationTests(unittest.TestCase):
         for target in ("#services", "#code", "#connect", "#don-feloh"):
             self.assertIn(f'href="{target}"', HTML)
         self.assertIn("Loc care &amp; prices", HTML)
-        self.assertIn("Visit &amp; contact", HTML)
+        self.assertIn("Contact &amp; location", HTML)
         self.assertIn("How an appointment", HTML)
         self.assertIn("<strong>Choose:</strong>", HTML)
         self.assertIn("<strong>Describe:</strong>", HTML)
