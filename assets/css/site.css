@@ -469,7 +469,7 @@ h2 em,h3 em{color:var(--clay);font-weight:400}
   .author-mark{display:none}
   .topbar-inner{gap:.55rem}
   .brand-name{font-size:.9rem;letter-spacing:.13em}
-  .brand-powered{font-size:.54rem}
+  .topbar .brand-powered{font-size:.54rem;letter-spacing:.1em}
   .brand-sub{font-size:.58rem}
 }
 
