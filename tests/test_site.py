@@ -378,14 +378,14 @@ class PublicationTests(unittest.TestCase):
     def test_social_metadata_is_accurate_and_has_no_unapproved_image(self):
         for phrase in (
             'property="og:type" content="website"',
-            'property="og:site_name" content="DON FELOH · FELOH ECOSYSTEM"',
-            'property="og:title" content="Don Feloh | Grace · Grit · Glory"',
-            'name="twitter:title" content="Don Feloh | Grace · Grit · Glory"',
+            'property="og:site_name" content="NAKEBUSEN · WARENA POWERED"',
+            'property="og:title" content="NAKEBUSEN | Loc Care in Eldoret · WARENA Powered"',
+            'name="twitter:title" content="NAKEBUSEN | Loc Care in Eldoret · WARENA Powered"',
             'property="og:url" content="https://donfelohke.github.io/"',
             'property="og:locale" content="en_KE"',
             'property="og:locale:alternate" content="sw_KE"',
             'name="twitter:card" content="summary"',
-            'name="twitter:description" content="The public home of Don Feloh: NAKEBUSEN, WARENA, IKAI, GENJE and FELOH Corpus. Explore enterprise, systems engineering, research and creative practice."',
+            'name="twitter:description" content="Loc care in Eldoret from NAKEBUSEN, with published prices and direct enquiries. WARENA enables practical technical work."',
             'name="description"',
         ):
             self.assertIn(phrase, HTML)
