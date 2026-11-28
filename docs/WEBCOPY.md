@@ -17,30 +17,37 @@
 
 ## Hero — commercial-first, balanced identity direction
 
-**Eyebrow:** FELOH · GRACE · GRIT · GLORY  
+**Header lockup:** NAKEBUSEN · WARENA POWERED, with GRACE · GRIT · GLORY beneath it and Don Feloh retained as the visible human author.
+
+**Eyebrow:** NAKEBUSEN · WARENA POWERED  
 **H1:** Beautiful roots. Sovereign systems.  
-**Proposition:** One human author. Connected practices in enterprise, systems engineering, reflective research and creative expression.
+**Proposition:** One human author. A connected practice spanning loc care, practical systems engineering, reflective-computing research and creative expression.
 
-**Practice summary:** NAKEBUSEN is the commercial home. WARENA enables the technical work. IKAI investigates reflective computing. GENJE brings sound, code and movement together.
+**Practice summary:** NAKEBUSEN leads the enterprise. WARENA provides technical capability. IKAI is reflective-computing research; GENJE is creative practice.
 
-**Primary CTA:** Explore the whole work  
-**Secondary CTA:** NAKEBUSEN · Loc care in Eldoret
+**Primary CTA:** See loc services & prices  
+**Secondary CTA:** Explore the whole work
 
 **Founder line:** Felix Lwova · Don Feloh · @donfelohke · #HisGenjeness
 
-**Commercial detail:** NAKEBUSEN loc care: Retouch & Styling, Sisterlocs Retie and Artificial Locs Installation—with published prices and direct WhatsApp enquiries.
+**First-screen price panel:** Retouch & Styling — KES 700+; Sisterlocs Retie — KES 1,500+; Artificial Locs Installation — KES 3,500.
 
-**WARENA supporting line:** Need GNU/Linux, computer or network support? Explore WARENA. Technical work is assessed and agreed separately.
+**Price note:** Retouch & Styling and Sisterlocs Retie are starting prices; Artificial Locs Installation is fixed at KES 3,500.
 
-The hero keeps the master identity and connected-practices proposition, while its first action leads directly to NAKEBUSEN services and prices. The wider body of work remains one clear secondary route. This is not a transfer of commercial authority to FELOH, WARENA, IKAI or GENJE. **ONLY NAKEBUSEN TRANSACTS.**
+**Direct enquiry CTA:** Enquire directly with NAKEBUSEN (WhatsApp).
+
+**WARENA supporting line:** Need GNU/Linux, computer or network support? Explore WARENA. Technical work is scoped and agreed through NAKEBUSEN.
+
+The hero keeps the umbrella positioning and introduces the connected practices without displacing the commercial path. The first action takes visitors to NAKEBUSEN services and published prices; the wider body of work remains the secondary route. The price panel gives a direct enquiry path. This does not transfer commercial authority to FELOH, WARENA, IKAI or GENJE. **ONLY NAKEBUSEN TRANSACTS.**
 
 **NAKEBUSEN supporting line:** YOUR BEAUTY ° YOUR WAY. Use within the Locs section; it does not replace the master H1 or umbrella positioning.
 
 **Kiswahili H1:** Mizizi mizuri. Mifumo ya kujitawala.  
 **Kiswahili proposition:** Mwandishi mmoja. Shughuli zinazounganisha biashara, uhandisi wa mifumo, utafiti wa kompyuta tafakari na ubunifu wa kisanaa.  
 **Kiswahili practice summary:** NAKEBUSEN ndiyo biashara na njia ya huduma. WARENA huwezesha kazi za teknolojia. IKAI huchunguza kompyuta tafakari. GENJE huunganisha sauti, msimbo na mwendo.  
-**Primary CTA:** Chunguza kazi zote  
-**Secondary CTA:** NAKEBUSEN · Utunzaji wa loc Eldoret
+**Primary CTA:** Tazama huduma za loc na bei  
+**Secondary CTA:** Chunguza kazi zote  
+**Direct enquiry CTA:** Ulizia NAKEBUSEN moja kwa moja.
 
 The Kiswahili hero is the current authored draft and remains subject to human editorial review; do not describe it as independently linguistically verified.
 
