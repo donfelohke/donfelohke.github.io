@@ -181,7 +181,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("BEI ZILIZOCHAPISHWA", HTML)
         self.assertNotIn("Published prices are indicative", HTML)
         self.assertNotIn("Bei zilizochapishwa ni za kuanzia", HTML)
-        self.assertIn("published prices and direct WhatsApp enquiries.", HTML)
+        self.assertIn("Enquire directly with NAKEBUSEN", HTML)
 
     def test_biography_and_business_history_are_separate(self):
         self.assertNotIn("My roots are in Kanamkemer", HTML)
@@ -391,7 +391,7 @@ class PublicationTests(unittest.TestCase):
             self.assertIn(phrase, HTML)
         self.assertNotIn('property="og:image"', HTML)
         self.assertNotIn('name="twitter:image"', HTML)
-        self.assertIn("<title>Don Feloh · Grace · Grit · Glory</title>", HTML)
+        self.assertIn("<title>NAKEBUSEN | Loc Care in Eldoret · WARENA Powered</title>", HTML)
         self.assertIn("Sisterlocs Retie", HTML)
         self.assertIn("Artificial Locs Installation", HTML)
         self.assertIn("https://github.com/donfelohke/feloh-corpus", HTML)
