@@ -57,7 +57,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn('<span class="brand-name">NAKEBUSEN</span>', HTML)
         self.assertIn('<span class="brand-powered">WARENA POWERED</span>', HTML)
         self.assertIn('<span class="brand-sub lang-en" lang="en">GRACE · GRIT · GLORY</span>', HTML)
-        self.assertIn("One human author. Connected practices in enterprise, systems engineering, reflective research and creative expression.", HTML)
+        self.assertIn("One human author. A connected practice spanning loc care, practical systems engineering, reflective-computing research and creative expression.", HTML)
         self.assertIn("NAKEBUSEN leads the enterprise.", HTML)
         self.assertIn("WARENA provides technical capability.", HTML)
         self.assertIn("IKAI is reflective-computing research; GENJE is creative practice.", HTML)
@@ -123,7 +123,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("Artificial Locs Installation is fixed at KES 3,500.", HTML)
         self.assertIn('href="https://wa.me/254719635415"', HTML)
 
-    def test_nakebusen_anchor_targets_the_commercial_section):
+    def test_nakebusen_anchor_targets_the_commercial_section(self):
         self.assertIn('<section class="hero section hero-identity" id="home">', HTML)
         self.assertIn('<section class="section locs-section" id="services">', HTML)
         self.assertIn('<span id="nakebusen" class="anchor-point" aria-hidden="true"></span>', HTML)
